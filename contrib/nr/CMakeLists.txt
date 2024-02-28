@@ -1,0 +1,1962 @@
+# Copyright (c) 2022 Centre Tecnologic de Telecomunicacions de Catalunya (CTTC)
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_C_STANDARD 11)
+
+set(source_files
+    helper/nr-helper.cc
+    helper/nr-phy-rx-trace.cc
+    helper/nr-mac-rx-trace.cc
+    helper/nr-point-to-point-epc-helper.cc
+    helper/nr-bearer-stats-calculator.cc
+    helper/nr-bearer-stats-simple.cc
+    helper/nr-bearer-stats-connector.cc
+    helper/beamforming-helper-base.cc
+    helper/ideal-beamforming-helper.cc
+    helper/realistic-beamforming-helper.cc
+    helper/node-distribution-scenario-interface.cc
+    helper/grid-scenario-helper.cc
+    helper/hexagonal-grid-scenario-helper.cc
+    helper/file-scenario-helper.cc
+    helper/cc-bwp-helper.cc
+    helper/nr-radio-environment-map-helper.cc
+    helper/nr-spectrum-value-helper.cc
+    helper/scenario-parameters.cc
+    helper/three-gpp-ftp-m1-helper.cc
+    helper/nr-stats-calculator.cc
+    helper/nr-mac-scheduling-stats.cc
+    model/nr-net-device.cc
+    model/nr-gnb-net-device.cc
+    model/nr-ue-net-device.cc
+    model/nr-phy.cc
+    model/nr-gnb-phy.cc
+    model/nr-ue-phy.cc
+    model/nr-spectrum-phy.cc
+    model/nr-interference.cc
+    model/nr-mac-scheduler.cc
+    model/nr-mac-scheduler-tdma-rr.cc
+    model/nr-mac-scheduler-tdma-pf.cc
+    model/nr-mac-scheduler-ofdma-rr.cc
+    model/nr-mac-scheduler-ofdma-pf.cc
+    model/nr-mac-scheduler-tdma-qos.cc
+    model/nr-mac-scheduler-ofdma-qos.cc
+    model/nr-control-messages.cc
+    model/nr-spectrum-signal-parameters.cc
+    model/nr-radio-bearer-tag.cc
+    model/nr-amc.cc
+    model/nr-phy-mac-common.cc
+    model/nr-mac-sched-sap.cc
+    model/nr-phy-sap.cc
+    model/nr-lte-mi-error-model.cc
+    model/nr-gnb-mac.cc
+    model/nr-ue-mac.cc
+    model/nr-rrc-protocol-ideal.cc
+    model/nr-mac-header-vs.cc
+    model/nr-mac-header-vs-ul.cc
+    model/nr-mac-header-vs-dl.cc
+    model/nr-mac-header-fs.cc
+    model/nr-mac-header-fs-ul.cc
+    model/nr-mac-header-fs-dl.cc
+    model/nr-mac-short-bsr-ce.cc
+    model/nr-harq-phy.cc
+    model/bandwidth-part-gnb.cc
+    model/bandwidth-part-ue.cc
+    model/bwp-manager-gnb.cc
+    model/bwp-manager-ue.cc
+    model/bwp-manager-algorithm.cc
+    model/nr-mac-harq-vector.cc
+    model/nr-mac-scheduler-harq-rr.cc
+    model/nr-mac-scheduler-cqi-management.cc
+    model/nr-mac-scheduler-lcg.cc
+    model/nr-mac-scheduler-ns3.cc
+    model/nr-mac-scheduler-tdma.cc
+    model/nr-mac-scheduler-ofdma.cc
+    model/nr-mac-scheduler-ofdma-mr.cc
+    model/nr-mac-scheduler-tdma-mr.cc
+    model/nr-mac-scheduler-ue-info-qos.cc
+    model/nr-mac-scheduler-ue-info.cc
+    model/nr-mac-scheduler-ue-info-pf.cc
+    model/nr-mac-scheduler-lc-alg.cc
+    model/nr-mac-scheduler-lc-rr.cc
+    model/nr-mac-scheduler-lc-qos.cc
+    model/nr-eesm-error-model.cc
+    model/nr-eesm-t1.cc
+    model/nr-eesm-t2.cc
+    model/nr-eesm-ir.cc
+    model/nr-eesm-cc.cc
+    model/nr-eesm-ir-t1.cc
+    model/nr-eesm-ir-t2.cc
+    model/nr-eesm-cc-t1.cc
+    model/nr-eesm-cc-t2.cc
+    model/nr-error-model.cc
+    model/nr-ch-access-manager.cc
+    model/beam-id.cc
+    model/beamforming-vector.cc
+    model/beam-manager.cc
+    model/ideal-beamforming-algorithm.cc
+    model/realistic-beamforming-algorithm.cc
+    model/sfnsf.cc
+    model/lena-error-model.cc
+    model/nr-mac-scheduler-srs-default.cc
+    model/nr-ue-power-control.cc
+    model/realistic-bf-manager.cc
+    model/beam-conf-id.cc
+    utils/three-gpp-channel-model-param.cc
+    utils/distance-based-three-gpp-spectrum-propagation-loss-model.cc
+    utils/traffic-generators/helper/traffic-generator-helper.cc
+    utils/traffic-generators/model/traffic-generator.cc
+    utils/traffic-generators/model/traffic-generator-ftp-single.cc
+    utils/traffic-generators/model/traffic-generator-ngmn-ftp-multi.cc
+    utils/traffic-generators/model/traffic-generator-ngmn-video.cc
+    utils/traffic-generators/model/traffic-generator-ngmn-gaming.cc
+    utils/traffic-generators/model/traffic-generator-ngmn-voip.cc
+    utils/traffic-generators/model/traffic-generator-3gpp-pose-control.cc
+    utils/traffic-generators/model/traffic-generator-3gpp-audio-data.cc
+    utils/traffic-generators/model/traffic-generator-3gpp-generic-video.cc
+    utils/traffic-generators/helper/xr-traffic-mixer-helper.cc    
+    
+    helper/annex/gnb/gnb.cpp
+    helper/annex/gnb/types.cpp
+    
+    helper/annex/gnb/app/cmd_handler.cpp
+    helper/annex/gnb/app/task.cpp
+            
+    helper/annex/gnb/ngap/nas.cpp
+    helper/annex/gnb/ngap/task.cpp
+    helper/annex/gnb/ngap/radio.cpp
+    helper/annex/gnb/ngap/management.cpp
+    helper/annex/gnb/ngap/context.cpp
+    helper/annex/gnb/ngap/encode.cpp
+    helper/annex/gnb/ngap/interface.cpp
+    helper/annex/gnb/ngap/nnsf.cpp
+    helper/annex/gnb/ngap/session.cpp
+    helper/annex/gnb/ngap/transport.cpp
+    helper/annex/gnb/ngap/utils.cpp
+    
+    
+    helper/annex/gnb/rrc/handler.cpp    
+    helper/annex/gnb/rrc/task.cpp
+    helper/annex/gnb/rrc/channel.cpp
+    helper/annex/gnb/rrc/sap.cpp
+    helper/annex/gnb/rrc/management.cpp
+    helper/annex/gnb/rrc/broadcast.cpp
+    helper/annex/gnb/rrc/connection.cpp
+    helper/annex/gnb/rrc/ues.cpp
+    
+    
+    helper/annex/gnb/sctp/task.cpp
+    
+    
+    helper/annex/gnb/gtp/task.cpp
+    helper/annex/gnb/gtp/utils.cpp
+    helper/annex/gnb/gtp/proto.cpp
+    
+    helper/annex/gnb/rls/task.cpp
+    helper/annex/gnb/rls/udp_task.cpp
+    helper/annex/gnb/rls/ctl_task.cpp
+    
+    helper/annex/lib/rls/rls_base.cpp
+    helper/annex/lib/rls/rls_pdu.cpp
+    
+    helper/annex/lib/sctp/client.cpp
+    helper/annex/lib/sctp/server.cpp
+    helper/annex/lib/sctp/types.cpp
+    helper/annex/lib/sctp/sctp.cpp              
+    helper/annex/lib/sctp/internal.cpp
+    
+    helper/annex/lib/udp/server_task.cpp
+    helper/annex/lib/udp/server.cpp
+    
+    helper/annex/lib/app/cli_base.cpp
+    helper/annex/lib/app/cli_cmd.cpp
+    helper/annex/lib/app/base_app.cpp    
+    helper/annex/lib/app/monitor.cpp
+    helper/annex/lib/app/proc_table.cpp
+    helper/annex/lib/app/ue_ctl.cpp
+    
+    
+    
+    
+    helper/annex/utils/nts.cpp
+    helper/annex/utils/network.cpp    
+    
+    helper/annex/utils/bit_buffer.cpp
+    helper/annex/utils/options.cpp
+    helper/annex/utils/octet_view.cpp
+    helper/annex/utils/octet.cpp
+    helper/annex/utils/libc_error.cpp
+    helper/annex/utils/locked.cpp
+    helper/annex/utils/logger.cpp
+    helper/annex/utils/bit_string.cpp
+    helper/annex/utils/bits.cpp
+    helper/annex/utils/io.cpp
+    helper/annex/utils/light_sync.cpp
+    helper/annex/utils/common_types.cpp
+    #helper/annex/utils/yaml_utils.cpp
+    helper/annex/utils/unique_buffer.cpp
+    helper/annex/utils/time_stamp.cpp
+    helper/annex/utils/octet_string.cpp
+    helper/annex/utils/random.cpp
+    helper/annex/utils/printer.cpp
+
+    helper/annex/utils/json.cpp
+    helper/annex/utils/scoped_thread.cpp
+    helper/annex/utils/common.cpp
+    helper/annex/utils/ordered_map.cpp
+    helper/annex/utils/concurrent_map.cpp
+    helper/annex/utils/linked_list.cpp
+    
+    helper/annex/lib/sctp/sendmsg.cc
+    helper/annex/lib/sctp/recvmsg.cc
+    helper/annex/lib/sctp/bindx.cc
+    
+    helper/annex/lib/asn/ngap.cpp
+    helper/annex/lib/asn/rrc.cpp
+    helper/annex/lib/asn/utils.cpp
+
+    
+    #helper/annex/asn/ngap/ASN_NGAP_CauseRadioNetwork.cc
+    #helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceSetupResponseTransfer.cc
+    #helper/annex/asn/ngap/ASN_NGAP_UE-NGAP-IDs.cc  
+    #helper/annex/asn/ngap/ASN_NGAP_ProtocolExtensionContainer.cc
+    
+    #################################################    
+    helper/annex/asn/asn1c/per_support.cc
+    
+    helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceSetupResponseTransfer.cc
+    helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceSetupUnsuccessfulTransfer.cc
+
+    helper/annex/asn/rrc/ASN_RRC_TAG.cc
+ 
+
+    
+    #helper/annex/asn/rrc/ASN_RRC_UL-CCCH-Message.cc
+    #helper/annex/asn/rrc/ASN_RRC_UL-CCCH-MessageType.cc
+    
+    #helper/annex/ext/yaml-cpp/memory.cpp
+    #helper/annex/ext/yaml-cpp/node_data.cpp
+    #helper/annex/ext/yaml-cpp/node.cpp
+    
+    #helper/annex/ext/yaml-cpp/emitterutils.cpp
+    #helper/annex/ext/yaml-cpp/null.cpp
+    #helper/annex/ext/yaml-cpp/tag.cpp
+    #helper/annex/ext/yaml-cpp/convert.cpp
+    #helper/annex/ext/yaml-cpp/simplekey.cpp
+    #helper/annex/ext/yaml-cpp/depthguard.cpp
+    #helper/annex/ext/yaml-cpp/ostream_wrapper.cpp
+    #helper/annex/ext/yaml-cpp/scanner.cpp
+    #helper/annex/ext/yaml-cpp/scantoken.cpp
+
+    #helper/annex/ext/yaml-cpp/regex_yaml.cpp
+    #helper/annex/ext/yaml-cpp/exceptions.cpp
+    #helper/annex/ext/yaml-cpp/scantag.cpp
+    #helper/annex/ext/yaml-cpp/binary.cpp
+    #helper/annex/ext/yaml-cpp/parser.cpp    
+    #helper/annex/ext/yaml-cpp/singledocparser.cpp
+    #helper/annex/ext/yaml-cpp/nodeevents.cpp
+    #helper/annex/ext/yaml-cpp/emitterstate.cpp
+    #helper/annex/ext/yaml-cpp/stream.cpp
+    #helper/annex/ext/yaml-cpp/emitter.cpp
+    #helper/annex/ext/yaml-cpp/directives.cpp
+    #helper/annex/ext/yaml-cpp/exp.cpp
+    #helper/annex/ext/yaml-cpp/scanscalar.cpp
+    #helper/annex/ext/yaml-cpp/emit.cpp
+    #helper/annex/ext/yaml-cpp/emitfromevents.cpp
+    #helper/annex/ext/yaml-cpp/parse.cpp
+    #helper/annex/ext/yaml-cpp/nodebuilder.cpp    
+)
+
+set(header_files
+    helper/annex/gnb/gnb.hpp
+    helper/annex/gnb/types.hpp
+    
+
+    
+    helper/annex/lib/app/monitor.hpp
+    
+    helper/annex/lib/asn/ngap.hpp 
+    helper/annex/lib/asn/ngap_msg.hpp 
+    helper/annex/lib/asn/rrc.hpp
+    helper/annex/lib/asn/utils.hpp   
+   
+    
+    helper/annex/lib/app/cli_cmd.hpp    
+    helper/annex/lib/app/cli_base.hpp
+    helper/annex/lib/app/proc_table.hpp
+    helper/annex/lib/app/base_app.hpp
+    helper/annex/lib/app/ue_ctl.hpp
+    
+    helper/annex/lib/rls/rls_base.hpp
+    helper/annex/lib/rls/rls_pdu.hpp
+    
+    helper/annex/lib/rrc/rrc.hpp
+    helper/annex/lib/rrc/encode.hpp
+    
+    
+    helper/annex/lib/sctp/sctp.hpp  
+    
+    helper/annex/gnb/gtp/proto.hpp
+   
+
+
+    
+    helper/annex/lib/udp/server.hpp   
+    helper/annex/lib/udp/server_task.hpp     
+      
+    helper/annex/utils/bit_buffer.hpp
+    helper/annex/utils/octet.hpp
+    helper/annex/utils/octet_view.hpp
+    helper/annex/utils/common_types.hpp    
+    helper/annex/utils/logger.hpp
+    helper/annex/utils/network.hpp
+    helper/annex/utils/nts.hpp
+    helper/annex/utils/octet_string.hpp
+    helper/annex/utils/constants.hpp    
+    helper/annex/utils/light_sync.hpp
+    helper/annex/utils/linked_list.hpp
+    helper/annex/utils/concurrent_map.hpp
+    helper/annex/utils/random.hpp
+    helper/annex/utils/io.hpp
+    helper/annex/utils/options.hpp
+    helper/annex/utils/libc_error.hpp
+    helper/annex/utils/bits.hpp
+    helper/annex/utils/time_stamp.hpp
+    helper/annex/utils/scoped_thread.hpp
+    helper/annex/utils/json.hpp
+    helper/annex/utils/printer.hpp
+    helper/annex/utils/bit_string.hpp
+    helper/annex/utils/common.hpp
+    helper/annex/utils/ordered_map.hpp
+    helper/annex/utils/unique_buffer.hpp
+    helper/annex/utils/yaml_utils.hpp
+    helper/annex/utils/locked.hpp
+
+    helper/annex/ext/spdlog/sinks/basic_file_sink.h
+    #helper/annex/ext/spdlog/sinks/base_sink.h
+    helper/annex/ext/spdlog/sinks/sink.h
+    helper/annex/ext/spdlog/sinks/ansicolor_sink.h
+    helper/annex/ext/spdlog/sinks/stdout_color_sinks.h
+    
+       
+    
+    helper/annex/ext/spdlog/details/null_mutex.h
+    helper/annex/ext/spdlog/details/log_msg.h
+    helper/annex/ext/spdlog/details/os.h
+    helper/annex/ext/spdlog/details/fmt_helper.h   
+    helper/annex/ext/spdlog/details/file_helper.h
+    helper/annex/ext/spdlog/details/synchronous_factory.h    
+    helper/annex/ext/spdlog/details/backtracer.h
+
+    helper/annex/ext/spdlog/details/console_globals.h
+    
+
+
+
+
+    helper/annex/ext/spdlog/common.h
+    helper/annex/ext/spdlog/fwd.h
+    helper/annex/ext/spdlog/formatter.h
+    helper/annex/ext/spdlog/logger.h
+    helper/annex/ext/spdlog/pattern_formatter.h
+    
+    
+    helper/annex/ext/spdlog/fmt/fmt.h
+    
+    helper/annex/ext/spdlog/fmt/bundled/core.h
+    helper/annex/ext/spdlog/fmt/bundled/format.h
+    
+    #helper/annex/ext/yaml-cpp/yaml.h  
+    #helper/annex/ext/yaml-cpp/parser.h  
+    #helper/annex/ext/yaml-cpp/dll.h   
+    #helper/annex/ext/yaml-cpp/emitter.h
+    #helper/annex/ext/yaml-cpp/emitterstyle.h
+    #helper/annex/ext/yaml-cpp/stlemitter.h
+    #helper/annex/ext/yaml-cpp/exceptions.h    
+    #helper/annex/ext/yaml-cpp/binary.h
+    #helper/annex/ext/yaml-cpp/emitterdef.h
+    #helper/annex/ext/yaml-cpp/emittermanip.h
+    #helper/annex/ext/yaml-cpp/null.h
+    #helper/annex/ext/yaml-cpp/ostream_wrapper.h    
+    #helper/annex/ext/yaml-cpp/mark.h
+    #helper/annex/ext/yaml-cpp/noexcept.h
+    #helper/annex/ext/yaml-cpp/traits.h
+    
+    #helper/annex/ext/yaml-cpp/node/node.h
+    #helper/annex/ext/yaml-cpp/node/impl.h
+    #helper/annex/ext/yaml-cpp/node/convert.h
+    #helper/annex/ext/yaml-cpp/node/iterator.h
+    #helper/annex/ext/yaml-cpp/node/parse.h
+    #helper/annex/ext/yaml-cpp/node/emit.h
+    #helper/annex/ext/yaml-cpp/node/ptr.h   
+    #helper/annex/ext/yaml-cpp/node/type.h   
+    
+    #helper/annex/ext/yaml-cpp/node/detail/memory.h
+    #helper/annex/ext/yaml-cpp/node/detail/node_iterator.h
+    #helper/annex/ext/yaml-cpp/node/detail/iterator_fwd.h
+    #helper/annex/ext/yaml-cpp/node/detail/node_ref.h
+    #helper/annex/ext/yaml-cpp/node/detail/node_data.h
+
+         
+    
+    
+helper/annex/asn/ngap/ASN_NGAP_PagingAttemptCount.h
+helper/annex/asn/ngap/ASN_NGAP_XnTLAs.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceFailedToSetupItemSURes.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceModifyListModReq.h
+helper/annex/asn/ngap/ASN_NGAP_LocationReportingAdditionalInfo.h
+helper/annex/asn/ngap/ASN_NGAP_BroadcastCompletedAreaList.h
+helper/annex/asn/ngap/ASN_NGAP_QosFlowSetupRequestItem.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceSetupRequestTransfer.h
+helper/annex/asn/ngap/ASN_NGAP_LocationReportingRequestType.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceSetupItemCxtReq.h
+helper/annex/asn/ngap/ASN_NGAP_QosFlowSetupResponseListSURes.h
+helper/annex/asn/ngap/ASN_NGAP_NGRAN-CGI.h
+helper/annex/asn/ngap/ASN_NGAP_InitiatingMessage.h
+helper/annex/asn/ngap/ASN_NGAP_N3IWF-ID.h
+helper/annex/asn/ngap/ASN_NGAP_QosFlowAddOrModifyResponseList.h
+helper/annex/asn/ngap/ASN_NGAP_NGRAN-TNLAssociationToRemoveList.h
+helper/annex/asn/ngap/ASN_NGAP_TraceFailureIndication.h
+helper/annex/asn/ngap/ASN_NGAP_CancelledCellsInEAI-EUTRA-Item.h
+helper/annex/asn/ngap/ASN_NGAP_XnExtTLAs.h
+helper/annex/asn/ngap/ASN_NGAP_PWSCancelResponse.h
+helper/annex/asn/ngap/ASN_NGAP_PathSwitchRequestTransfer.h
+helper/annex/asn/ngap/ASN_NGAP_TAICancelledEUTRA.h
+helper/annex/asn/ngap/ASN_NGAP_UE-associatedLogicalNG-connectionList.h
+helper/annex/asn/ngap/ASN_NGAP_PWSCancelRequest.h
+helper/annex/asn/ngap/ASN_NGAP_EmergencyAreaID.h
+helper/annex/asn/ngap/ASN_NGAP_E-RAB-ID.h
+helper/annex/asn/ngap/ASN_NGAP_ProtocolExtensionContainer.h
+helper/annex/asn/ngap/ASN_NGAP_UEAggregateMaximumBitRate.h
+helper/annex/asn/ngap/ASN_NGAP_GNB-ID.h
+helper/annex/asn/ngap/ASN_NGAP_DRBsSubjectToStatusTransferItem.h
+helper/annex/asn/ngap/ASN_NGAP_HandoverCommand.h
+helper/annex/asn/ngap/ASN_NGAP_CellType.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceSwitchedList.h
+helper/annex/asn/ngap/ASN_NGAP_AMFRegionID.h
+helper/annex/asn/ngap/ASN_NGAP_TAIBroadcastNR.h
+helper/annex/asn/ngap/ASN_NGAP_EndpointIPAddressAndPort.h
+helper/annex/asn/ngap/ASN_NGAP_ProtocolIE-FieldPair.h
+helper/annex/asn/ngap/ASN_NGAP_AssociatedQosFlowList.h
+helper/annex/asn/ngap/ASN_NGAP_ErrorIndication.h
+helper/annex/asn/ngap/ASN_NGAP_ResetAll.h
+helper/annex/asn/ngap/ASN_NGAP_ULForwarding.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceInformationList.h
+helper/annex/asn/ngap/ASN_NGAP_S-NSSAI.h
+helper/annex/asn/ngap/ASN_NGAP_XnTNLConfigurationInfo.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceSetupRequest.h
+helper/annex/asn/ngap/ASN_NGAP_AMF-TNLAssociationToAddList.h
+helper/annex/asn/ngap/ASN_NGAP_RANNodeName.h
+helper/annex/asn/ngap/ASN_NGAP_CellIDBroadcastEUTRA.h
+helper/annex/asn/ngap/ASN_NGAP_EmergencyAreaIDCancelledNR-Item.h
+helper/annex/asn/ngap/ASN_NGAP_AMFConfigurationUpdate.h
+helper/annex/asn/ngap/ASN_NGAP_QosFlowListWithCause.h
+helper/annex/asn/ngap/ASN_NGAP_RATRestrictions.h
+helper/annex/asn/ngap/ASN_NGAP_CellIDCancelledNR-Item.h
+helper/annex/asn/ngap/ASN_NGAP_TrafficLoadReductionIndication.h
+helper/annex/asn/ngap/ASN_NGAP_SliceSupportItem.h
+helper/annex/asn/ngap/ASN_NGAP_QosFlowNotifyItem.h
+helper/annex/asn/ngap/ASN_NGAP_NumberOfBroadcastsRequested.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceSetupListHOReq.h
+helper/annex/asn/ngap/ASN_NGAP_CancelledCellsInEAI-NR.h
+helper/annex/asn/ngap/ASN_NGAP_UE-associatedLogicalNG-connectionItem.h
+helper/annex/asn/ngap/ASN_NGAP_QosFlowToBeForwardedItem.h
+helper/annex/asn/ngap/ASN_NGAP_FiveQI.h
+helper/annex/asn/ngap/ASN_NGAP_RecommendedRANNodesForPaging.h
+helper/annex/asn/ngap/ASN_NGAP_NGSetupRequest.h
+helper/annex/asn/ngap/ASN_NGAP_LocationReportingReferenceID.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceAdmittedItem.h
+helper/annex/asn/ngap/ASN_NGAP_UEContextModificationResponse.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceModifyItemModInd.h
+helper/annex/asn/ngap/ASN_NGAP_CancelledCellsInTAI-NR-Item.h
+helper/annex/asn/ngap/ASN_NGAP_NetworkInstance.h
+helper/annex/asn/ngap/ASN_NGAP_MaskedIMEISV.h
+helper/annex/asn/ngap/ASN_NGAP_HandoverResourceAllocationUnsuccessfulTransfer.h
+helper/annex/asn/ngap/ASN_NGAP_EmergencyAreaIDCancelledNR.h
+helper/annex/asn/ngap/ASN_NGAP_ExpectedUEMovingTrajectoryItem.h
+helper/annex/asn/ngap/ASN_NGAP_RejectedNSSAIinPLMN.h
+helper/annex/asn/ngap/ASN_NGAP_QosFlowSetupResponseItemSURes.h
+helper/annex/asn/ngap/ASN_NGAP_WriteReplaceWarningRequest.h
+helper/annex/asn/ngap/ASN_NGAP_RATRestrictions-Item.h
+helper/annex/asn/ngap/ASN_NGAP_HandoverRequestAcknowledgeTransfer.h
+helper/annex/asn/ngap/ASN_NGAP_QosFlowPerTNLInformationList.h
+helper/annex/asn/ngap/ASN_NGAP_Pre-emptionCapability.h
+helper/annex/asn/ngap/ASN_NGAP_UserLocationInformationN3IWF.h
+helper/annex/asn/ngap/ASN_NGAP_SecurityResult.h
+helper/annex/asn/ngap/ASN_NGAP_DataCodingScheme.h
+helper/annex/asn/ngap/ASN_NGAP_WarningMessageContents.h
+helper/annex/asn/ngap/ASN_NGAP_DRBsToQosFlowsMappingItem.h
+helper/annex/asn/ngap/ASN_NGAP_BroadcastPLMNItem.h
+helper/annex/asn/ngap/ASN_NGAP_ReportArea.h
+helper/annex/asn/ngap/ASN_NGAP_DataForwardingNotPossible.h
+helper/annex/asn/ngap/ASN_NGAP_RANPagingPriority.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceAdmittedList.h
+helper/annex/asn/ngap/ASN_NGAP_CNTypeRestrictionsForEquivalent.h
+helper/annex/asn/ngap/ASN_NGAP_CompletedCellsInTAI-NR-Item.h
+helper/annex/asn/ngap/ASN_NGAP_UL-NGU-UP-TNLModifyList.h
+helper/annex/asn/ngap/ASN_NGAP_SONInformation.h
+helper/annex/asn/ngap/ASN_NGAP_EmergencyAreaIDCancelledEUTRA-Item.h
+helper/annex/asn/ngap/ASN_NGAP_CommonNetworkInstance.h
+helper/annex/asn/ngap/ASN_NGAP_TAICancelledNR-Item.h
+helper/annex/asn/ngap/ASN_NGAP_XnGTP-TLAs.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceModifyIndicationTransfer.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceReleaseCommandTransfer.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceListCxtRelReq.h
+helper/annex/asn/ngap/ASN_NGAP_ForbiddenTACs.h
+helper/annex/asn/ngap/ASN_NGAP_UPTransportLayerInformationPairItem.h
+helper/annex/asn/ngap/ASN_NGAP_SONInformationReply.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceModifyResponse.h
+helper/annex/asn/ngap/ASN_NGAP_TargetToSource-TransparentContainer.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceToReleaseListRelCmd.h
+helper/annex/asn/ngap/ASN_NGAP_EUTRAintegrityProtectionAlgorithms.h
+helper/annex/asn/ngap/ASN_NGAP_AMFPagingTarget.h
+helper/annex/asn/ngap/ASN_NGAP_TimeUEStayedInCellEnhancedGranularity.h
+helper/annex/asn/ngap/ASN_NGAP_RepetitionPeriod.h
+helper/annex/asn/ngap/ASN_NGAP_CriticalityDiagnostics-IE-Item.h
+helper/annex/asn/ngap/ASN_NGAP_HandoverPreparationUnsuccessfulTransfer.h
+helper/annex/asn/ngap/ASN_NGAP_RRCContainer.h
+helper/annex/asn/ngap/ASN_NGAP_MaximumDataBurstVolume.h
+helper/annex/asn/ngap/ASN_NGAP_UERadioCapabilityForPagingOfEUTRA.h
+helper/annex/asn/ngap/ASN_NGAP_CriticalityDiagnostics.h
+helper/annex/asn/ngap/ASN_NGAP_EPS-TAC.h
+helper/annex/asn/ngap/ASN_NGAP_PrivateMessage.h
+helper/annex/asn/ngap/ASN_NGAP_UnsuccessfulOutcome.h
+helper/annex/asn/ngap/ASN_NGAP_DRBStatusUL.h
+helper/annex/asn/ngap/ASN_NGAP_CompletedCellsInEAI-EUTRA-Item.h
+helper/annex/asn/ngap/ASN_NGAP_NotificationCause.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceReleaseResponseTransfer.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceToReleaseItemRelCmd.h
+helper/annex/asn/ngap/ASN_NGAP_SecondaryRATDataUsageReportTransfer.h
+helper/annex/asn/ngap/ASN_NGAP_CoreNetworkAssistanceInformationForInactive.h
+helper/annex/asn/ngap/ASN_NGAP_TargetRANNodeID.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceSecondaryRATUsageItem.h
+helper/annex/asn/ngap/ASN_NGAP_NRPPa-PDU.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceSetupListSURes.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceModifyRequestTransfer.h
+helper/annex/asn/ngap/ASN_NGAP_EUTRACellIdentity.h
+helper/annex/asn/ngap/ASN_NGAP_ProtocolIE-Container.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceSetupListCxtRes.h
+helper/annex/asn/ngap/ASN_NGAP_SourceToTarget-AMFInformationReroute.h
+helper/annex/asn/ngap/ASN_NGAP_ServiceAreaInformation.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceItemHORqd.h
+helper/annex/asn/ngap/ASN_NGAP_TargetNGRANNode-ToSourceNGRANNode-TransparentContainer.h
+helper/annex/asn/ngap/ASN_NGAP_RecommendedRANNodeList.h
+helper/annex/asn/ngap/ASN_NGAP_LastVisitedUTRANCellInformation.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceFailedToSetupListCxtRes.h
+helper/annex/asn/ngap/ASN_NGAP_AMFPointer.h
+helper/annex/asn/ngap/ASN_NGAP_SecurityContext.h
+helper/annex/asn/ngap/ASN_NGAP_Paging.h
+helper/annex/asn/ngap/ASN_NGAP_UEContextModificationFailure.h
+helper/annex/asn/ngap/ASN_NGAP_NotificationControl.h
+helper/annex/asn/ngap/ASN_NGAP_IntegrityProtectionResult.h
+helper/annex/asn/ngap/ASN_NGAP_UEContextReleaseRequest.h
+helper/annex/asn/ngap/ASN_NGAP_PathSwitchRequestUnsuccessfulTransfer.h
+helper/annex/asn/ngap/ASN_NGAP_NotAllowedTACs.h
+helper/annex/asn/ngap/ASN_NGAP_QosCharacteristics.h
+helper/annex/asn/ngap/ASN_NGAP_UL-NGU-UP-TNLModifyItem.h
+helper/annex/asn/ngap/ASN_NGAP_LastVisitedCellItem.h
+helper/annex/asn/ngap/ASN_NGAP_SecurityIndication.h
+helper/annex/asn/ngap/ASN_NGAP_EN-DCSONConfigurationTransfer.h
+helper/annex/asn/ngap/ASN_NGAP_ProtocolIE-ContainerList.h
+helper/annex/asn/ngap/ASN_NGAP_COUNTValueForPDCP-SN18.h
+helper/annex/asn/ngap/ASN_NGAP_TAIListForInactiveItem.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceSetupListCxtReq.h
+helper/annex/asn/ngap/ASN_NGAP_LocationReport.h
+helper/annex/asn/ngap/ASN_NGAP_UplinkNASTransport.h
+helper/annex/asn/ngap/ASN_NGAP_Dynamic5QIDescriptor.h
+helper/annex/asn/ngap/ASN_NGAP_InterfacesToTrace.h
+helper/annex/asn/ngap/ASN_NGAP_HandoverFailure.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceSetupListSUReq.h
+helper/annex/asn/ngap/ASN_NGAP_UEContextRequest.h
+helper/annex/asn/ngap/ASN_NGAP_CNAssistedRANTuning.h
+helper/annex/asn/ngap/ASN_NGAP_ExpectedUEMobility.h
+helper/annex/asn/ngap/ASN_NGAP_MessageIdentifier.h
+helper/annex/asn/ngap/ASN_NGAP_SST.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceToBeSwitchedDLItem.h
+helper/annex/asn/ngap/ASN_NGAP_PathSwitchRequestAcknowledge.h
+helper/annex/asn/ngap/ASN_NGAP_TransportLayerAddress.h
+helper/annex/asn/ngap/ASN_NGAP_UERadioCapabilityCheckRequest.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceSetupItemSUReq.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceNotifyTransfer.h
+helper/annex/asn/ngap/ASN_NGAP_AssistanceDataForRecommendedCells.h
+helper/annex/asn/ngap/ASN_NGAP_CancelledCellsInEAI-EUTRA.h
+helper/annex/asn/ngap/ASN_NGAP_AllowedTACs.h
+helper/annex/asn/ngap/ASN_NGAP_UERadioCapabilityForPaging.h
+helper/annex/asn/ngap/ASN_NGAP_CancelAllWarningMessages.h
+helper/annex/asn/ngap/ASN_NGAP_GlobalNgENB-ID.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceSetupItemCxtRes.h
+helper/annex/asn/ngap/ASN_NGAP_TAIListForPaging.h
+helper/annex/asn/ngap/ASN_NGAP_AreaOfInterestCellItem.h
+helper/annex/asn/ngap/ASN_NGAP_CompletedCellsInTAI-EUTRA-Item.h
+helper/annex/asn/ngap/ASN_NGAP_PWSFailureIndication.h
+helper/annex/asn/ngap/ASN_NGAP_ProtocolIE-ContainerPair.h
+helper/annex/asn/ngap/ASN_NGAP_SliceSupportList.h
+helper/annex/asn/ngap/ASN_NGAP_EPS-TAI.h
+helper/annex/asn/ngap/ASN_NGAP_RRCInactiveTransitionReportRequest.h
+helper/annex/asn/ngap/ASN_NGAP_DownlinkNASTransport.h
+helper/annex/asn/ngap/ASN_NGAP_TAIListForInactive.h
+helper/annex/asn/ngap/ASN_NGAP_TargeteNB-ID.h
+helper/annex/asn/ngap/ASN_NGAP_SupportedTAList.h
+helper/annex/asn/ngap/ASN_NGAP_RRCInactiveTransitionReport.h
+helper/annex/asn/ngap/ASN_NGAP_AllocationAndRetentionPriority.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceModifyListModRes.h
+helper/annex/asn/ngap/ASN_NGAP_CellIDBroadcastNR.h
+helper/annex/asn/ngap/ASN_NGAP_CompletedCellsInTAI-EUTRA.h
+helper/annex/asn/ngap/ASN_NGAP_TimeUEStayedInCell.h
+helper/annex/asn/ngap/ASN_NGAP_DRBStatusUL18.h
+helper/annex/asn/ngap/ASN_NGAP_NonDynamic5QIDescriptor.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceNotifyItem.h
+helper/annex/asn/ngap/ASN_NGAP_PrivateIE-ID.h
+helper/annex/asn/ngap/ASN_NGAP_CellIDCancelledNR.h
+helper/annex/asn/ngap/ASN_NGAP_SerialNumber.h
+helper/annex/asn/ngap/ASN_NGAP_TAIListForWarning.h
+helper/annex/asn/ngap/ASN_NGAP_UEContextReleaseCommand.h
+helper/annex/asn/ngap/ASN_NGAP_QosFlowAddOrModifyRequestList.h
+helper/annex/asn/ngap/ASN_NGAP_AllowedNSSAI.h
+helper/annex/asn/ngap/ASN_NGAP_NumberOfBroadcasts.h
+helper/annex/asn/ngap/ASN_NGAP_ProcedureCode.h
+helper/annex/asn/ngap/ASN_NGAP_PathSwitchRequestSetupFailedTransfer.h
+helper/annex/asn/ngap/ASN_NGAP_AMF-TNLAssociationToAddItem.h
+helper/annex/asn/ngap/ASN_NGAP_SuccessfulOutcome.h
+helper/annex/asn/ngap/ASN_NGAP_RRCState.h
+helper/annex/asn/ngap/ASN_NGAP_RecommendedRANNodeItem.h
+helper/annex/asn/ngap/ASN_NGAP_UEContextModificationRequest.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceSetupResponseTransfer.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceListCxtRelCpl.h
+helper/annex/asn/ngap/ASN_NGAP_DirectForwardingPathAvailability.h
+helper/annex/asn/ngap/ASN_NGAP_RANConfigurationUpdate.h
+helper/annex/asn/ngap/ASN_NGAP_CellTrafficTrace.h
+helper/annex/asn/ngap/ASN_NGAP_WarningType.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceModifyIndicationUnsuccessfulTransfer.h
+helper/annex/asn/ngap/ASN_NGAP_UEPagingIdentity.h
+helper/annex/asn/ngap/ASN_NGAP_QosFlowNotifyList.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceModifyItemModRes.h
+helper/annex/asn/ngap/ASN_NGAP_UERadioCapabilityCheckResponse.h
+helper/annex/asn/ngap/ASN_NGAP_DRBStatusDL18.h
+helper/annex/asn/ngap/ASN_NGAP_CauseMisc.h
+helper/annex/asn/ngap/ASN_NGAP_UserLocationInformationEUTRA.h
+helper/annex/asn/ngap/ASN_NGAP_EUTRA-CGIListForWarning.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceFailedToSetupListCxtFail.h
+helper/annex/asn/ngap/ASN_NGAP_QosFlowWithCauseItem.h
+helper/annex/asn/ngap/ASN_NGAP_DownlinkNonUEAssociatedNRPPaTransport.h
+helper/annex/asn/ngap/ASN_NGAP_ExpectedIdlePeriod.h
+helper/annex/asn/ngap/ASN_NGAP_AMFSetID.h
+helper/annex/asn/ngap/ASN_NGAP_NR-CGIList.h
+helper/annex/asn/ngap/ASN_NGAP_WarningAreaList.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceReleaseCommand.h
+helper/annex/asn/ngap/ASN_NGAP_AreaOfInterestRANNodeList.h
+helper/annex/asn/ngap/ASN_NGAP_QosFlowAcceptedList.h
+helper/annex/asn/ngap/ASN_NGAP_ConfidentialityProtectionResult.h
+helper/annex/asn/ngap/ASN_NGAP_CriticalityDiagnostics-IE-List.h
+helper/annex/asn/ngap/ASN_NGAP_GlobalN3IWF-ID.h
+helper/annex/asn/ngap/ASN_NGAP_NgENB-ID.h
+helper/annex/asn/ngap/ASN_NGAP_CPTransportLayerInformation.h
+helper/annex/asn/ngap/ASN_NGAP_EmergencyAreaIDList.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceFailedToModifyItemModCfm.h
+helper/annex/asn/ngap/ASN_NGAP_CNTypeRestrictionsForServing.h
+helper/annex/asn/ngap/ASN_NGAP_QosFlowAddOrModifyRequestItem.h
+helper/annex/asn/ngap/ASN_NGAP_DRBsToQosFlowsMappingList.h
+helper/annex/asn/ngap/ASN_NGAP_OverloadResponse.h
+helper/annex/asn/ngap/ASN_NGAP_Criticality.h
+helper/annex/asn/ngap/ASN_NGAP_AreaOfInterestTAIList.h
+helper/annex/asn/ngap/ASN_NGAP_AMF-TNLAssociationToRemoveList.h
+helper/annex/asn/ngap/ASN_NGAP_PathSwitchRequestAcknowledgeTransfer.h
+helper/annex/asn/ngap/ASN_NGAP_QosFlowToBeForwardedList.h
+helper/annex/asn/ngap/ASN_NGAP_PLMNIdentity.h
+helper/annex/asn/ngap/ASN_NGAP_HandoverRequest.h
+helper/annex/asn/ngap/ASN_NGAP_DataForwardingResponseDRBItem.h
+helper/annex/asn/ngap/ASN_NGAP_NASNonDeliveryIndication.h
+helper/annex/asn/ngap/ASN_NGAP_QoSFlowsUsageReport-Item.h
+helper/annex/asn/ngap/ASN_NGAP_UERetentionInformation.h
+helper/annex/asn/ngap/ASN_NGAP_OverloadStop.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceSetupResponse.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceReleasedListPSAck.h
+helper/annex/asn/ngap/ASN_NGAP_GUAMI.h
+helper/annex/asn/ngap/ASN_NGAP_AMF-TNLAssociationToUpdateItem.h
+helper/annex/asn/ngap/ASN_NGAP_NGSetupFailure.h
+helper/annex/asn/ngap/ASN_NGAP_HandoverCancel.h
+helper/annex/asn/ngap/ASN_NGAP_TypeOfError.h
+helper/annex/asn/ngap/ASN_NGAP_ConfiguredNSSAI.h
+helper/annex/asn/ngap/ASN_NGAP_DataForwardingResponseDRBList.h
+helper/annex/asn/ngap/ASN_NGAP_QosFlowSetupRequestList.h
+helper/annex/asn/ngap/ASN_NGAP_TimeStamp.h
+helper/annex/asn/ngap/ASN_NGAP_COUNTValueForPDCP-SN12.h
+helper/annex/asn/ngap/ASN_NGAP_PLMNSupportItem.h
+helper/annex/asn/ngap/ASN_NGAP_AllowedNSSAI-Item.h
+helper/annex/asn/ngap/ASN_NGAP_TNLAssociationItem.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceFailedToSetupItemCxtFail.h
+helper/annex/asn/ngap/ASN_NGAP_UERadioCapability.h
+helper/annex/asn/ngap/ASN_NGAP_PriorityLevelQos.h
+helper/annex/asn/ngap/ASN_NGAP_PLMNSupportList.h
+helper/annex/asn/ngap/ASN_NGAP_DownlinkRANConfigurationTransfer.h
+helper/annex/asn/ngap/ASN_NGAP_QoSFlowsUsageReportList.h
+helper/annex/asn/ngap/ASN_NGAP_GBR-QosInformation.h
+helper/annex/asn/ngap/ASN_NGAP_ConcurrentWarningMessageInd.h
+helper/annex/asn/ngap/ASN_NGAP_DRBStatusDL12.h
+helper/annex/asn/ngap/ASN_NGAP_GTPTunnel.h
+helper/annex/asn/ngap/ASN_NGAP_QosFlowAddOrModifyResponseItem.h
+helper/annex/asn/ngap/ASN_NGAP_AreaOfInterestCellList.h
+helper/annex/asn/ngap/ASN_NGAP_TAIListForRestart.h
+helper/annex/asn/ngap/ASN_NGAP_PrivateIE-Field.h
+helper/annex/asn/ngap/ASN_NGAP_RerouteNASRequest.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceFailedToModifyItemModRes.h
+helper/annex/asn/ngap/ASN_NGAP_TAIListForPagingItem.h
+helper/annex/asn/ngap/ASN_NGAP_NASSecurityParametersFromNGRAN.h
+helper/annex/asn/ngap/ASN_NGAP_HandoverRequestAcknowledge.h
+helper/annex/asn/ngap/ASN_NGAP_CompletedCellsInTAI-NR.h
+helper/annex/asn/ngap/ASN_NGAP_OverloadStart.h
+helper/annex/asn/ngap/ASN_NGAP_HandoverFlag.h
+helper/annex/asn/ngap/ASN_NGAP_AveragingWindow.h
+helper/annex/asn/ngap/ASN_NGAP_QosFlowIdentifier.h
+helper/annex/asn/ngap/ASN_NGAP_TNLAssociationList.h
+helper/annex/asn/ngap/ASN_NGAP_FiveG-S-TMSI.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceFailedToSetupListHOAck.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceModifyUnsuccessfulTransfer.h
+helper/annex/asn/ngap/ASN_NGAP_UplinkRANStatusTransfer.h
+helper/annex/asn/ngap/ASN_NGAP_SourceNGRANNode-ToTargetNGRANNode-TransparentContainer.h
+helper/annex/asn/ngap/ASN_NGAP_RoutingID.h
+helper/annex/asn/ngap/ASN_NGAP_CellSize.h
+helper/annex/asn/ngap/ASN_NGAP_EventType.h
+helper/annex/asn/ngap/ASN_NGAP_BroadcastCancelledAreaList.h
+helper/annex/asn/ngap/ASN_NGAP_ConfidentialityProtectionIndication.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceReleaseResponse.h
+helper/annex/asn/ngap/ASN_NGAP_ReflectiveQosAttribute.h
+helper/annex/asn/ngap/ASN_NGAP_HandoverNotify.h
+helper/annex/asn/ngap/ASN_NGAP_PortNumber.h
+helper/annex/asn/ngap/ASN_NGAP_CauseNas.h
+helper/annex/asn/ngap/ASN_NGAP_AMF-UE-NGAP-ID.h
+helper/annex/asn/ngap/ASN_NGAP_SliceOverloadItem.h
+helper/annex/asn/ngap/ASN_NGAP_GlobalRANNodeID.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionType.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceReleasedItemPSFail.h
+helper/annex/asn/ngap/ASN_NGAP_HandoverCommandTransfer.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceSetupUnsuccessfulTransfer.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceModifyResponseTransfer.h
+helper/annex/asn/ngap/ASN_NGAP_NRCellIdentity.h
+helper/annex/asn/ngap/ASN_NGAP_LastVisitedGERANCellInformation.h
+helper/annex/asn/ngap/ASN_NGAP_TAC.h
+helper/annex/asn/ngap/ASN_NGAP_LastVisitedEUTRANCellInformation.h
+helper/annex/asn/ngap/ASN_NGAP_PeriodicRegistrationUpdateTimer.h
+helper/annex/asn/ngap/ASN_NGAP_TraceStart.h
+helper/annex/asn/ngap/ASN_NGAP_AMF-TNLAssociationSetupItem.h
+helper/annex/asn/ngap/ASN_NGAP_InitialUEMessage.h
+helper/annex/asn/ngap/ASN_NGAP_QosFlowPerTNLInformation.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceItemCxtRelCpl.h
+helper/annex/asn/ngap/ASN_NGAP_QosFlowModifyConfirmList.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceFailedToSetupItemHOAck.h
+helper/annex/asn/ngap/ASN_NGAP_TimeToWait.h
+helper/annex/asn/ngap/ASN_NGAP_ExpectedUEActivityBehaviour.h
+helper/annex/asn/ngap/ASN_NGAP_BitRate.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceHandoverList.h
+helper/annex/asn/ngap/ASN_NGAP_DelayCritical.h
+helper/annex/asn/ngap/ASN_NGAP_NGRANTraceID.h
+helper/annex/asn/ngap/ASN_NGAP_DRBStatusDL.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceModifyItemModCfm.h
+helper/annex/asn/ngap/ASN_NGAP_CancelledCellsInTAI-EUTRA.h
+helper/annex/asn/ngap/ASN_NGAP_PagingOrigin.h
+helper/annex/asn/ngap/ASN_NGAP_NewSecurityContextInd.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceSetupItemSURes.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceFailedToModifyListModRes.h
+helper/annex/asn/ngap/ASN_NGAP_CompletedCellsInEAI-EUTRA.h
+helper/annex/asn/ngap/ASN_NGAP_EUTRA-CGI.h
+helper/annex/asn/ngap/ASN_NGAP_UE-NGAP-IDs.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceItemCxtRelReq.h
+helper/annex/asn/ngap/ASN_NGAP_IntendedNumberOfPagingAttempts.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceInformationItem.h
+helper/annex/asn/ngap/ASN_NGAP_ProtocolIE-ID.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceReleasedItemPSAck.h
+helper/annex/asn/ngap/ASN_NGAP_OverloadStartNSSAIList.h
+helper/annex/asn/ngap/ASN_NGAP_UnavailableGUAMIList.h
+helper/annex/asn/ngap/ASN_NGAP_WriteReplaceWarningResponse.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceFailedToSetupItemCxtRes.h
+helper/annex/asn/ngap/ASN_NGAP_QosFlowPerTNLInformationItem.h
+helper/annex/asn/ngap/ASN_NGAP_UserPlaneSecurityInformation.h
+helper/annex/asn/ngap/ASN_NGAP_PathSwitchRequest.h
+helper/annex/asn/ngap/ASN_NGAP_Presence.h
+helper/annex/asn/ngap/ASN_NGAP_AMFConfigurationUpdateFailure.h
+helper/annex/asn/ngap/ASN_NGAP_LocationReportingFailureIndication.h
+helper/annex/asn/ngap/ASN_NGAP_PriorityLevelARP.h
+helper/annex/asn/ngap/ASN_NGAP_RedirectionVoiceFallback.h
+helper/annex/asn/ngap/ASN_NGAP_OverloadStartNSSAIItem.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceModifyIndication.h
+helper/annex/asn/ngap/ASN_NGAP_QosFlowInformationItem.h
+helper/annex/asn/ngap/ASN_NGAP_ProtocolExtensionID.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionUsageReport.h
+helper/annex/asn/ngap/ASN_NGAP_CellIDBroadcastEUTRA-Item.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceNotifyReleasedTransfer.h
+helper/annex/asn/ngap/ASN_NGAP_InitialContextSetupResponse.h
+helper/annex/asn/ngap/ASN_NGAP_RecommendedCellItem.h
+helper/annex/asn/ngap/ASN_NGAP_AMFName.h
+helper/annex/asn/ngap/ASN_NGAP_EUTRA-CGIList.h
+helper/annex/asn/ngap/ASN_NGAP_IMSVoiceSupportIndicator.h
+helper/annex/asn/ngap/ASN_NGAP_GlobalGNB-ID.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceFailedToSetupListPSReq.h
+helper/annex/asn/ngap/ASN_NGAP_HandoverType.h
+helper/annex/asn/ngap/ASN_NGAP_EUTRAencryptionAlgorithms.h
+helper/annex/asn/ngap/ASN_NGAP_ForbiddenAreaInformation-Item.h
+helper/annex/asn/ngap/ASN_NGAP_TNLAssociationUsage.h
+helper/annex/asn/ngap/ASN_NGAP_EmergencyFallbackIndicator.h
+helper/annex/asn/ngap/ASN_NGAP_AdditionalDLUPTNLInformationForHOList.h
+helper/annex/asn/ngap/ASN_NGAP_CellIDListForRestart.h
+helper/annex/asn/ngap/ASN_NGAP_InitialContextSetupFailure.h
+helper/annex/asn/ngap/ASN_NGAP_UserLocationInformation.h
+helper/annex/asn/ngap/ASN_NGAP_ProtocolIE-ContainerPairList.h
+helper/annex/asn/ngap/ASN_NGAP_OverloadAction.h
+helper/annex/asn/ngap/ASN_NGAP_UnavailableGUAMIItem.h
+helper/annex/asn/ngap/ASN_NGAP_CNTypeRestrictionsForEquivalentItem.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceReleasedItemNot.h
+helper/annex/asn/ngap/ASN_NGAP_DownlinkRANStatusTransfer.h
+helper/annex/asn/ngap/ASN_NGAP_AreaOfInterestList.h
+helper/annex/asn/ngap/ASN_NGAP_QosFlowAcceptedItem.h
+helper/annex/asn/ngap/ASN_NGAP_QosFlowItemWithDataForwarding.h
+helper/annex/asn/ngap/ASN_NGAP_NR-CGIListForWarning.h
+helper/annex/asn/ngap/ASN_NGAP_EmergencyAreaIDListForRestart.h
+helper/annex/asn/ngap/ASN_NGAP_UETNLABindingReleaseRequest.h
+helper/annex/asn/ngap/ASN_NGAP_Cause.h
+helper/annex/asn/ngap/ASN_NGAP_UplinkNonUEAssociatedNRPPaTransport.h
+helper/annex/asn/ngap/ASN_NGAP_AMFConfigurationUpdateAcknowledge.h
+helper/annex/asn/ngap/ASN_NGAP_RRCEstablishmentCause.h
+helper/annex/asn/ngap/ASN_NGAP_SupportedTAItem.h
+helper/annex/asn/ngap/ASN_NGAP_WarningSecurityInfo.h
+helper/annex/asn/ngap/ASN_NGAP_InfoOnRecommendedCellsAndRANNodesForPaging.h
+helper/annex/asn/ngap/ASN_NGAP_NextHopChainingCount.h
+helper/annex/asn/ngap/ASN_NGAP_AreaOfInterestRANNodeItem.h
+helper/annex/asn/ngap/ASN_NGAP_DeactivateTrace.h
+helper/annex/asn/ngap/ASN_NGAP_CauseTransport.h
+helper/annex/asn/ngap/ASN_NGAP_RecommendedCellsForPaging.h
+helper/annex/asn/ngap/ASN_NGAP_WarningAreaCoordinates.h
+helper/annex/asn/ngap/ASN_NGAP_DL-NGU-TNLInformationReused.h
+helper/annex/asn/ngap/ASN_NGAP_SONConfigurationTransfer.h
+helper/annex/asn/ngap/ASN_NGAP_TAICancelledNR.h
+helper/annex/asn/ngap/ASN_NGAP_UPTransportLayerInformation.h
+helper/annex/asn/ngap/ASN_NGAP_TAIBroadcastEUTRA-Item.h
+helper/annex/asn/ngap/ASN_NGAP_SourceToTarget-TransparentContainer.h
+helper/annex/asn/ngap/ASN_NGAP_ServedGUAMIList.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceToReleaseListHOCmd.h
+helper/annex/asn/ngap/ASN_NGAP_UEPresenceInAreaOfInterestItem.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceListHORqd.h
+helper/annex/asn/ngap/ASN_NGAP_RANConfigurationUpdateAcknowledge.h
+helper/annex/asn/ngap/ASN_NGAP_ResetType.h
+helper/annex/asn/ngap/ASN_NGAP_QosFlowListWithDataForwarding.h
+helper/annex/asn/ngap/ASN_NGAP_ReferenceID.h
+helper/annex/asn/ngap/ASN_NGAP_UPTransportLayerInformationPairList.h
+helper/annex/asn/ngap/ASN_NGAP_UEContextReleaseComplete.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceModifyListModInd.h
+helper/annex/asn/ngap/ASN_NGAP_AreaOfInterest.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceModifyItemModReq.h
+helper/annex/asn/ngap/ASN_NGAP_RANConfigurationUpdateFailure.h
+helper/annex/asn/ngap/ASN_NGAP_NGResetAcknowledge.h
+helper/annex/asn/ngap/ASN_NGAP_PacketDelayBudget.h
+helper/annex/asn/ngap/ASN_NGAP_EmergencyAreaIDCancelledEUTRA.h
+helper/annex/asn/ngap/ASN_NGAP_HandoverCancelAcknowledge.h
+helper/annex/asn/ngap/ASN_NGAP_CauseProtocol.h
+helper/annex/asn/ngap/ASN_NGAP_HandoverRequiredTransfer.h
+helper/annex/asn/ngap/ASN_NGAP_SecondaryRATUsageInformation.h
+helper/annex/asn/ngap/ASN_NGAP_NGReset.h
+helper/annex/asn/ngap/ASN_NGAP_NRencryptionAlgorithms.h
+helper/annex/asn/ngap/ASN_NGAP_CancelledCellsInEAI-NR-Item.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionAggregateMaximumBitRate.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceToBeSwitchedDLList.h
+helper/annex/asn/ngap/ASN_NGAP_PagingDRX.h
+helper/annex/asn/ngap/ASN_NGAP_UserLocationInformationNR.h
+helper/annex/asn/ngap/ASN_NGAP_MobilityRestrictionList.h
+helper/annex/asn/ngap/ASN_NGAP_PWSFailedCellIDList.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceModifyConfirmTransfer.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceNotifyList.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceSecondaryRATUsageList.h
+helper/annex/asn/ngap/ASN_NGAP_SCTP-TLAs.h
+helper/annex/asn/ngap/ASN_NGAP_NRintegrityProtectionAlgorithms.h
+helper/annex/asn/ngap/ASN_NGAP_ExpectedUEMovingTrajectory.h
+helper/annex/asn/ngap/ASN_NGAP_MaximumIntegrityProtectedDataRate.h
+helper/annex/asn/ngap/ASN_NGAP_RANStatusTransfer-TransparentContainer.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceSwitchedItem.h
+helper/annex/asn/ngap/ASN_NGAP_CellIDCancelledEUTRA-Item.h
+helper/annex/asn/ngap/ASN_NGAP_TraceActivation.h
+helper/annex/asn/ngap/ASN_NGAP_SONInformationRequest.h
+helper/annex/asn/ngap/ASN_NGAP_DLForwarding.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceReleasedListPSFail.h
+helper/annex/asn/ngap/ASN_NGAP_GTP-TEID.h
+helper/annex/asn/ngap/ASN_NGAP_NR-CGI.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceHandoverItem.h
+helper/annex/asn/ngap/ASN_NGAP_QosFlowInformationList.h
+helper/annex/asn/ngap/ASN_NGAP_UPTransportLayerInformationItem.h
+helper/annex/asn/ngap/ASN_NGAP_MICOModeIndication.h
+helper/annex/asn/ngap/ASN_NGAP_SecurityKey.h
+helper/annex/asn/ngap/ASN_NGAP_TAI.h
+helper/annex/asn/ngap/ASN_NGAP_SourceOfUEActivityBehaviourInformation.h
+helper/annex/asn/ngap/ASN_NGAP_NGSetupResponse.h
+helper/annex/asn/ngap/ASN_NGAP_VolumeTimedReportList.h
+helper/annex/asn/ngap/ASN_NGAP_DataForwardingAccepted.h
+helper/annex/asn/ngap/ASN_NGAP_HandoverPreparationFailure.h
+helper/annex/asn/ngap/ASN_NGAP_UERadioCapabilityInfoIndication.h
+helper/annex/asn/ngap/ASN_NGAP_UEPresence.h
+helper/annex/asn/ngap/ASN_NGAP_RecommendedCellList.h
+helper/annex/asn/ngap/ASN_NGAP_EmergencyAreaIDBroadcastNR.h
+helper/annex/asn/ngap/ASN_NGAP_SecondaryRATDataUsageReport.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceToReleaseItemHOCmd.h
+helper/annex/asn/ngap/ASN_NGAP_E-RABInformationList.h
+helper/annex/asn/ngap/ASN_NGAP_EmergencyFallbackRequestIndicator.h
+helper/annex/asn/ngap/ASN_NGAP_LastVisitedNGRANCellInformation.h
+helper/annex/asn/ngap/ASN_NGAP_E-RABInformationItem.h
+helper/annex/asn/ngap/ASN_NGAP_LastVisitedCellInformation.h
+helper/annex/asn/ngap/ASN_NGAP_XnExtTLA-Item.h
+helper/annex/asn/ngap/ASN_NGAP_NextPagingAreaScope.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionID.h
+helper/annex/asn/ngap/ASN_NGAP_UE-NGAP-ID-pair.h
+helper/annex/asn/ngap/ASN_NGAP_EquivalentPLMNs.h
+helper/annex/asn/ngap/ASN_NGAP_AssociatedQosFlowItem.h
+helper/annex/asn/ngap/ASN_NGAP_TAIBroadcastEUTRA.h
+helper/annex/asn/ngap/ASN_NGAP_TraceDepth.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceSetupItemHOReq.h
+helper/annex/asn/ngap/ASN_NGAP_Pre-emptionVulnerability.h
+helper/annex/asn/ngap/ASN_NGAP_AMF-TNLAssociationToRemoveItem.h
+helper/annex/asn/ngap/ASN_NGAP_RejectedNSSAIinTA.h
+helper/annex/asn/ngap/ASN_NGAP_BroadcastPLMNList.h
+helper/annex/asn/ngap/ASN_NGAP_CellIDBroadcastNR-Item.h
+helper/annex/asn/ngap/ASN_NGAP_DRBsSubjectToStatusTransferList.h
+helper/annex/asn/ngap/ASN_NGAP_TNLAddressWeightFactor.h
+helper/annex/asn/ngap/ASN_NGAP_TAICancelledEUTRA-Item.h
+helper/annex/asn/ngap/ASN_NGAP_CauseRadioNetwork.h
+helper/annex/asn/ngap/ASN_NGAP_CancelledCellsInTAI-NR.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceModifyListModCfm.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceModifyConfirm.h
+helper/annex/asn/ngap/ASN_NGAP_AMF-TNLAssociationSetupList.h
+helper/annex/asn/ngap/ASN_NGAP_AMF-TNLAssociationToUpdateList.h
+helper/annex/asn/ngap/ASN_NGAP_RelativeAMFCapacity.h
+helper/annex/asn/ngap/ASN_NGAP_ForbiddenAreaInformation.h
+helper/annex/asn/ngap/ASN_NGAP_EmergencyAreaIDBroadcastEUTRA.h
+helper/annex/asn/ngap/ASN_NGAP_UESecurityCapabilities.h
+helper/annex/asn/ngap/ASN_NGAP_ProtocolIE-Field.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceNotify.h
+helper/annex/asn/ngap/ASN_NGAP_QosFlowLevelQosParameters.h
+helper/annex/asn/ngap/ASN_NGAP_CancelledCellsInTAI-EUTRA-Item.h
+helper/annex/asn/ngap/ASN_NGAP_asn_constant.h
+helper/annex/asn/ngap/ASN_NGAP_SliceOverloadList.h
+helper/annex/asn/ngap/ASN_NGAP_InitialContextSetupRequest.h
+helper/annex/asn/ngap/ASN_NGAP_NGRAN-TNLAssociationToRemoveItem.h
+helper/annex/asn/ngap/ASN_NGAP_UplinkUEAssociatedNRPPaTransport.h
+helper/annex/asn/ngap/ASN_NGAP_CompletedCellsInEAI-NR.h
+helper/annex/asn/ngap/ASN_NGAP_NGAP-PDU.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceFailedToModifyListModCfm.h
+helper/annex/asn/ngap/ASN_NGAP_ServiceAreaInformation-Item.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceFailedToSetupListSURes.h
+helper/annex/asn/ngap/ASN_NGAP_PacketErrorRate.h
+helper/annex/asn/ngap/ASN_NGAP_RATRestrictionInformation.h
+helper/annex/asn/ngap/ASN_NGAP_UPTransportLayerInformationList.h
+helper/annex/asn/ngap/ASN_NGAP_PagingPriority.h
+helper/annex/asn/ngap/ASN_NGAP_UEHistoryInformation.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceReleasedListNot.h
+helper/annex/asn/ngap/ASN_NGAP_FiveG-TMSI.h
+helper/annex/asn/ngap/ASN_NGAP_CompletedCellsInEAI-NR-Item.h
+helper/annex/asn/ngap/ASN_NGAP_PacketLossRate.h
+helper/annex/asn/ngap/ASN_NGAP_LocationReportingControl.h
+helper/annex/asn/ngap/ASN_NGAP_DRB-ID.h
+helper/annex/asn/ngap/ASN_NGAP_ExpectedUEBehaviour.h
+helper/annex/asn/ngap/ASN_NGAP_IntegrityProtectionIndication.h
+helper/annex/asn/ngap/ASN_NGAP_DRBStatusUL12.h
+helper/annex/asn/ngap/ASN_NGAP_UEPresenceInAreaOfInterestList.h
+helper/annex/asn/ngap/ASN_NGAP_HandoverRequired.h
+helper/annex/asn/ngap/ASN_NGAP_PrivateIE-Container.h
+helper/annex/asn/ngap/ASN_NGAP_SourceRANNodeID.h
+helper/annex/asn/ngap/ASN_NGAP_ProtocolIE-SingleContainer.h
+helper/annex/asn/ngap/ASN_NGAP_CellIDCancelledEUTRA.h
+helper/annex/asn/ngap/ASN_NGAP_PathSwitchRequestFailure.h
+helper/annex/asn/ngap/ASN_NGAP_TAIBroadcastNR-Item.h
+helper/annex/asn/ngap/ASN_NGAP_AreaOfInterestItem.h
+helper/annex/asn/ngap/ASN_NGAP_ServedGUAMIItem.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceFailedToSetupItemPSReq.h
+helper/annex/asn/ngap/ASN_NGAP_AreaOfInterestTAIItem.h
+helper/annex/asn/ngap/ASN_NGAP_ExpectedHOInterval.h
+helper/annex/asn/ngap/ASN_NGAP_TriggeringMessage.h
+helper/annex/asn/ngap/ASN_NGAP_IndexToRFSP.h
+helper/annex/asn/ngap/ASN_NGAP_PWSRestartIndication.h
+helper/annex/asn/ngap/ASN_NGAP_AssistanceDataForPaging.h
+helper/annex/asn/ngap/ASN_NGAP_ExpectedActivityPeriod.h
+helper/annex/asn/ngap/ASN_NGAP_AdditionalDLUPTNLInformationForHOItem.h
+helper/annex/asn/ngap/ASN_NGAP_UERadioCapabilityForPagingOfNR.h
+helper/annex/asn/ngap/ASN_NGAP_TargetID.h
+helper/annex/asn/ngap/ASN_NGAP_VolumeTimedReport-Item.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceReleasedListRelRes.h
+helper/annex/asn/ngap/ASN_NGAP_UplinkRANConfigurationTransfer.h
+helper/annex/asn/ngap/ASN_NGAP_QosFlowModifyConfirmItem.h
+helper/annex/asn/ngap/ASN_NGAP_AdditionalQosFlowInformation.h
+helper/annex/asn/ngap/ASN_NGAP_DownlinkUEAssociatedNRPPaTransport.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceModifyRequest.h
+helper/annex/asn/ngap/ASN_NGAP_SD.h
+helper/annex/asn/ngap/ASN_NGAP_RAN-UE-NGAP-ID.h
+helper/annex/asn/ngap/ASN_NGAP_EmergencyAreaIDBroadcastEUTRA-Item.h
+helper/annex/asn/ngap/ASN_NGAP_PagingAttemptInformation.h
+helper/annex/asn/ngap/ASN_NGAP_TimerApproachForGUAMIRemoval.h
+helper/annex/asn/ngap/ASN_NGAP_ProtocolExtensionField.h
+helper/annex/asn/ngap/ASN_NGAP_UEIdentityIndexValue.h
+helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceReleasedItemRelRes.h
+helper/annex/asn/ngap/ASN_NGAP_EmergencyServiceTargetCN.h
+helper/annex/asn/ngap/ASN_NGAP_AMFStatusIndication.h
+helper/annex/asn/ngap/ASN_NGAP_EmergencyAreaIDBroadcastNR-Item.h
+helper/annex/asn/ngap/ASN_NGAP_NAS-PDU.h
+
+helper/annex/asn/rrc/ASN_RRC_MeasAndMobParametersFRX-Diff.h
+helper/annex/asn/rrc/ASN_RRC_ReconfigurationWithSync.h
+helper/annex/asn/rrc/ASN_RRC_SIB1.h
+helper/annex/asn/rrc/ASN_RRC_ReportConfigToAddMod.h
+helper/annex/asn/rrc/ASN_RRC_CSI-ReportConfig.h
+helper/annex/asn/rrc/ASN_RRC_T-Reselection.h
+helper/annex/asn/rrc/ASN_RRC_DelayBudgetReport.h
+helper/annex/asn/rrc/ASN_RRC_CGI-InfoNR.h
+helper/annex/asn/rrc/ASN_RRC_BWP-Uplink.h
+helper/annex/asn/rrc/ASN_RRC_EUTRA-Parameters.h
+helper/annex/asn/rrc/ASN_RRC_SS-RSSI-Measurement.h
+helper/annex/asn/rrc/ASN_RRC_FreqPriorityNR.h
+helper/annex/asn/rrc/ASN_RRC_RejectWaitTime.h
+helper/annex/asn/rrc/ASN_RRC_SpatialRelations.h
+helper/annex/asn/rrc/ASN_RRC_PRACH-ResourceDedicatedBFR.h
+helper/annex/asn/rrc/ASN_RRC_BeamManagementSSB-CSI-RS.h
+helper/annex/asn/rrc/ASN_RRC_FailureInformation.h
+helper/annex/asn/rrc/ASN_RRC_RRCSetupComplete.h
+helper/annex/asn/rrc/ASN_RRC_FreqSeparationClass.h
+helper/annex/asn/rrc/ASN_RRC_SIB3.h
+helper/annex/asn/rrc/ASN_RRC_HandoverPreparationInformation-IEs.h
+helper/annex/asn/rrc/ASN_RRC_UERadioPagingInformation-IEs.h
+helper/annex/asn/rrc/ASN_RRC_DummyH.h
+helper/annex/asn/rrc/ASN_RRC_TAG-Id.h
+helper/annex/asn/rrc/ASN_RRC_NZP-CSI-RS-ResourceId.h
+helper/annex/asn/rrc/ASN_RRC_ControlResourceSetZero.h
+helper/annex/asn/rrc/ASN_RRC_SubcarrierSpacing.h
+helper/annex/asn/rrc/ASN_RRC_ULInformationTransfer.h
+helper/annex/asn/rrc/ASN_RRC_SSB-Index.h
+helper/annex/asn/rrc/ASN_RRC_CandidateServingFreqListEUTRA.h
+helper/annex/asn/rrc/ASN_RRC_PDCCH-ConfigCommon.h
+helper/annex/asn/rrc/ASN_RRC_CSI-RS-Resource-Mobility.h
+helper/annex/asn/rrc/ASN_RRC_BandCombinationList-v1540.h
+helper/annex/asn/rrc/ASN_RRC_OverheatingAssistanceConfig.h
+helper/annex/asn/rrc/ASN_RRC_CSI-SemiPersistentOnPUSCH-TriggerState.h
+helper/annex/asn/rrc/ASN_RRC_IMS-ParametersFRX-Diff.h
+helper/annex/asn/rrc/ASN_RRC_ResultsPerSSB-Index.h
+helper/annex/asn/rrc/ASN_RRC_SIB7.h
+helper/annex/asn/rrc/ASN_RRC_RRCResumeRequest.h
+helper/annex/asn/rrc/ASN_RRC_MRDC-AssistanceInfo.h
+helper/annex/asn/rrc/ASN_RRC_SRS-CarrierSwitching.h
+helper/annex/asn/rrc/ASN_RRC_MeasResultCellListSFTD-NR.h
+helper/annex/asn/rrc/ASN_RRC_DummyF.h
+helper/annex/asn/rrc/ASN_RRC_UE-NR-CapabilityAddXDD-Mode-v1530.h
+helper/annex/asn/rrc/ASN_RRC_MeasIdToAddModList.h
+helper/annex/asn/rrc/ASN_RRC_CSI-SemiPersistentOnPUSCH-TriggerStateList.h
+helper/annex/asn/rrc/ASN_RRC_PDCCH-ServingCellConfig.h
+helper/annex/asn/rrc/ASN_RRC_MeasAndMobParametersMRDC-XDD-Diff-v1560.h
+helper/annex/asn/rrc/ASN_RRC_DRB-Identity.h
+helper/annex/asn/rrc/ASN_RRC_PUCCH-FormatConfig.h
+helper/annex/asn/rrc/ASN_RRC_SecurityAlgorithmConfig.h
+helper/annex/asn/rrc/ASN_RRC_SystemInformation.h
+helper/annex/asn/rrc/ASN_RRC_MeasResultFreqList.h
+helper/annex/asn/rrc/ASN_RRC_ShortMAC-I.h
+helper/annex/asn/rrc/ASN_RRC_InterFreqCarrierFreqInfo.h
+helper/annex/asn/rrc/ASN_RRC_MCC-MNC-Digit.h
+helper/annex/asn/rrc/ASN_RRC_SINR-Range.h
+helper/annex/asn/rrc/ASN_RRC_CellAccessRelatedInfo-EUTRA-EPC.h
+helper/annex/asn/rrc/ASN_RRC_RRCReconfiguration-v1530-IEs.h
+helper/annex/asn/rrc/ASN_RRC_UE-NR-CapabilityAddFRX-Mode-v1540.h
+helper/annex/asn/rrc/ASN_RRC_TDD-UL-DL-Pattern.h
+helper/annex/asn/rrc/ASN_RRC_CG-ConfigInfo.h
+helper/annex/asn/rrc/ASN_RRC_RRCReconfigurationComplete-IEs.h
+helper/annex/asn/rrc/ASN_RRC_ReportConfigId.h
+helper/annex/asn/rrc/ASN_RRC_AggregatedBandwidth.h
+helper/annex/asn/rrc/ASN_RRC_VarMeasReportList.h
+helper/annex/asn/rrc/ASN_RRC_MultiFrequencyBandListNR-SIB.h
+helper/annex/asn/rrc/ASN_RRC_NZP-CSI-RS-ResourceSet.h
+helper/annex/asn/rrc/ASN_RRC_EventTriggerConfig.h
+helper/annex/asn/rrc/ASN_RRC_MeasObjectToAddMod.h
+helper/annex/asn/rrc/ASN_RRC_TDD-UL-DL-ConfigDedicated.h
+helper/annex/asn/rrc/ASN_RRC_FreqPriorityListNR.h
+helper/annex/asn/rrc/ASN_RRC_SN-FieldLengthAM.h
+helper/annex/asn/rrc/ASN_RRC_UCI-OnPUSCH.h
+helper/annex/asn/rrc/ASN_RRC_NAICS-Capability-Entry.h
+helper/annex/asn/rrc/ASN_RRC_UE-NR-Capability.h
+helper/annex/asn/rrc/ASN_RRC_Hysteresis.h
+helper/annex/asn/rrc/ASN_RRC_FilterConfig.h
+helper/annex/asn/rrc/ASN_RRC_MAC-Parameters.h
+helper/annex/asn/rrc/ASN_RRC_DRX-Config.h
+helper/annex/asn/rrc/ASN_RRC_PortIndex2.h
+helper/annex/asn/rrc/ASN_RRC_MultiBandInfoListEUTRA.h
+helper/annex/asn/rrc/ASN_RRC_PUCCH-PowerControl.h
+helper/annex/asn/rrc/ASN_RRC_FeatureSetDownlinkPerCC.h
+helper/annex/asn/rrc/ASN_RRC_EUTRA-CellIndex.h
+helper/annex/asn/rrc/ASN_RRC_CG-ConfigInfo-v1540-IEs.h
+helper/annex/asn/rrc/ASN_RRC_MeasurementTimingConfiguration.h
+helper/annex/asn/rrc/ASN_RRC_RRCReconfiguration-v1540-IEs.h
+helper/annex/asn/rrc/ASN_RRC_MeasResultCellListSFTD-EUTRA.h
+helper/annex/asn/rrc/ASN_RRC_PLMN-IdentityList-EUTRA-EPC.h
+helper/annex/asn/rrc/ASN_RRC_QCL-Info.h
+helper/annex/asn/rrc/ASN_RRC_DRB-ToReleaseList.h
+helper/annex/asn/rrc/ASN_RRC_Q-OffsetRange.h
+helper/annex/asn/rrc/ASN_RRC_PDSCH-CodeBlockGroupTransmission.h
+helper/annex/asn/rrc/ASN_RRC_RRCReestablishmentRequest.h
+helper/annex/asn/rrc/ASN_RRC_SI-RequestConfig.h
+helper/annex/asn/rrc/ASN_RRC_DLInformationTransfer-IEs.h
+helper/annex/asn/rrc/ASN_RRC_MultiFrequencyBandListNR.h
+helper/annex/asn/rrc/ASN_RRC_ServingCellConfigCommon.h
+helper/annex/asn/rrc/ASN_RRC_ControlResourceSet.h
+helper/annex/asn/rrc/ASN_RRC_UERadioAccessCapabilityInformation-IEs.h
+helper/annex/asn/rrc/ASN_RRC_CSI-FrequencyOccupation.h
+helper/annex/asn/rrc/ASN_RRC_BSR-Config.h
+helper/annex/asn/rrc/ASN_RRC_SN-FieldLengthUM.h
+helper/annex/asn/rrc/ASN_RRC_InterFreqBlackCellList.h
+helper/annex/asn/rrc/ASN_RRC_DataInactivityTimer.h
+helper/annex/asn/rrc/ASN_RRC_UplinkConfigCommonSIB.h
+helper/annex/asn/rrc/ASN_RRC_RRCResume-v1560-IEs.h
+helper/annex/asn/rrc/ASN_RRC_CounterCheckResponse.h
+helper/annex/asn/rrc/ASN_RRC_CA-ParametersNR-v1540.h
+helper/annex/asn/rrc/ASN_RRC_FilterCoefficient.h
+helper/annex/asn/rrc/ASN_RRC_SRS-TPC-CommandConfig.h
+helper/annex/asn/rrc/ASN_RRC_PUSCH-ServingCellConfig.h
+helper/annex/asn/rrc/ASN_RRC_RRCRelease-v1540-IEs.h
+helper/annex/asn/rrc/ASN_RRC_PhysicalCellGroupConfig.h
+helper/annex/asn/rrc/ASN_RRC_FeatureSets.h
+helper/annex/asn/rrc/ASN_RRC_P0-PUCCH.h
+helper/annex/asn/rrc/ASN_RRC_ARFCN-ValueNR.h
+helper/annex/asn/rrc/ASN_RRC_SRS-CC-SetIndex.h
+helper/annex/asn/rrc/ASN_RRC_UL-CCCH1-Message.h
+helper/annex/asn/rrc/ASN_RRC_MeasGapSharingScheme.h
+helper/annex/asn/rrc/ASN_RRC_PTRS-DownlinkConfig.h
+helper/annex/asn/rrc/ASN_RRC_MeasResult2NR.h
+helper/annex/asn/rrc/ASN_RRC_FeatureSetEUTRA-UplinkId.h
+helper/annex/asn/rrc/ASN_RRC_TimeToTrigger.h
+helper/annex/asn/rrc/ASN_RRC_CellReselectionPriorities.h
+helper/annex/asn/rrc/ASN_RRC_RRCReconfiguration.h
+helper/annex/asn/rrc/ASN_RRC_CG-ConfigInfo-IEs.h
+helper/annex/asn/rrc/ASN_RRC_ConfiguredGrantConfig.h
+helper/annex/asn/rrc/ASN_RRC_CSI-AperiodicTriggerStateList.h
+helper/annex/asn/rrc/ASN_RRC_CellAccessRelatedInfo-EUTRA-5GC.h
+helper/annex/asn/rrc/ASN_RRC_SCGFailureInformationEUTRA.h
+helper/annex/asn/rrc/ASN_RRC_QFI.h
+helper/annex/asn/rrc/ASN_RRC_CellIdentity-EUTRA-5GC.h
+helper/annex/asn/rrc/ASN_RRC_UE-NR-CapabilityAddFRX-Mode.h
+helper/annex/asn/rrc/ASN_RRC_RSRP-RangeEUTRA.h
+helper/annex/asn/rrc/ASN_RRC_FreqPriorityEUTRA.h
+helper/annex/asn/rrc/ASN_RRC_FreqBandInformationEUTRA.h
+helper/annex/asn/rrc/ASN_RRC_MobilityFromNRCommand-IEs.h
+helper/annex/asn/rrc/ASN_RRC_BWP-DownlinkCommon.h
+helper/annex/asn/rrc/ASN_RRC_AMF-Identifier.h
+helper/annex/asn/rrc/ASN_RRC_ReportCGI.h
+helper/annex/asn/rrc/ASN_RRC_ShortI-RNTI-Value.h
+helper/annex/asn/rrc/ASN_RRC_T-PollRetransmit.h
+helper/annex/asn/rrc/ASN_RRC_CGI-InfoEUTRA.h
+helper/annex/asn/rrc/ASN_RRC_PLMN-RAN-AreaCell.h
+helper/annex/asn/rrc/ASN_RRC_MIMO-ParametersPerBand.h
+helper/annex/asn/rrc/ASN_RRC_CandidateServingFreqListNR.h
+helper/annex/asn/rrc/ASN_RRC_UplinkConfigCommon.h
+helper/annex/asn/rrc/ASN_RRC_RA-Prioritization.h
+helper/annex/asn/rrc/ASN_RRC_PH-UplinkCarrierSCG.h
+helper/annex/asn/rrc/ASN_RRC_BandCombinationIndex.h
+helper/annex/asn/rrc/ASN_RRC_AccessStratumRelease.h
+helper/annex/asn/rrc/ASN_RRC_DummyC.h
+helper/annex/asn/rrc/ASN_RRC_UAC-BarringPerCatList.h
+helper/annex/asn/rrc/ASN_RRC_SRB-ToAddModList.h
+helper/annex/asn/rrc/ASN_RRC_MeasurementReport.h
+helper/annex/asn/rrc/ASN_RRC_DownlinkConfigCommonSIB.h
+helper/annex/asn/rrc/ASN_RRC_NR-NS-PmaxValue.h
+helper/annex/asn/rrc/ASN_RRC_FrequencyInfoDL-SIB.h
+helper/annex/asn/rrc/ASN_RRC_ServingCellConfig.h
+helper/annex/asn/rrc/ASN_RRC_PTRS-DensityRecommendationDL.h
+helper/annex/asn/rrc/ASN_RRC_MeasIdToAddMod.h
+helper/annex/asn/rrc/ASN_RRC_TCI-StateId.h
+helper/annex/asn/rrc/ASN_RRC_SRS-ResourceId.h
+helper/annex/asn/rrc/ASN_RRC_SchedulingRequestToAddMod.h
+helper/annex/asn/rrc/ASN_RRC_ReportSFTD-NR.h
+helper/annex/asn/rrc/ASN_RRC_SI-RequestResources.h
+helper/annex/asn/rrc/ASN_RRC_VarMeasReport.h
+helper/annex/asn/rrc/ASN_RRC_BandCombinationList-v1550.h
+helper/annex/asn/rrc/ASN_RRC_NR-RS-Type.h
+helper/annex/asn/rrc/ASN_RRC_PUCCH-PathlossReferenceRS.h
+helper/annex/asn/rrc/ASN_RRC_T-StatusProhibit.h
+helper/annex/asn/rrc/ASN_RRC_MeasAndMobParametersMRDC-FRX-Diff.h
+helper/annex/asn/rrc/ASN_RRC_CipheringAlgorithm.h
+helper/annex/asn/rrc/ASN_RRC_UAC-BarringInfoSetList.h
+helper/annex/asn/rrc/ASN_RRC_UE-CapabilityRequestFilterNR-v1540.h
+helper/annex/asn/rrc/ASN_RRC_SecurityModeCommand.h
+helper/annex/asn/rrc/ASN_RRC_DummyE.h
+helper/annex/asn/rrc/ASN_RRC_DL-CCCH-Message.h
+helper/annex/asn/rrc/ASN_RRC_PH-InfoMCG.h
+helper/annex/asn/rrc/ASN_RRC_Alpha.h
+helper/annex/asn/rrc/ASN_RRC_CFRA.h
+helper/annex/asn/rrc/ASN_RRC_RAN-AreaCode.h
+helper/annex/asn/rrc/ASN_RRC_UE-NR-Capability-v1540.h
+helper/annex/asn/rrc/ASN_RRC_RadioLinkMonitoringRS.h
+helper/annex/asn/rrc/ASN_RRC_SRS-ResourceSet.h
+helper/annex/asn/rrc/ASN_RRC_PeriodicalReportConfigInterRAT.h
+helper/annex/asn/rrc/ASN_RRC_PUCCH-Resource.h
+helper/annex/asn/rrc/ASN_RRC_CSI-ResourceConfigId.h
+helper/annex/asn/rrc/ASN_RRC_PagingRecord.h
+helper/annex/asn/rrc/ASN_RRC_SystemInformation-IEs.h
+helper/annex/asn/rrc/ASN_RRC_BCCH-BCH-Message.h
+helper/annex/asn/rrc/ASN_RRC_CellGroupId.h
+helper/annex/asn/rrc/ASN_RRC_UE-MRDC-CapabilityAddFRX-Mode.h
+helper/annex/asn/rrc/ASN_RRC_RRCReconfiguration-v1560-IEs.h
+helper/annex/asn/rrc/ASN_RRC_MeasResultList2NR.h
+helper/annex/asn/rrc/ASN_RRC_SIB4.h
+helper/annex/asn/rrc/ASN_RRC_RRM-Config.h
+helper/annex/asn/rrc/ASN_RRC_SlotFormatCombinationsPerCell.h
+helper/annex/asn/rrc/ASN_RRC_SearchSpace.h
+helper/annex/asn/rrc/ASN_RRC_FeatureSetUplinkPerCC-v1540.h
+helper/annex/asn/rrc/ASN_RRC_IMS-ParametersCommon.h
+helper/annex/asn/rrc/ASN_RRC_CounterCheck-IEs.h
+helper/annex/asn/rrc/ASN_RRC_RAT-Type.h
+helper/annex/asn/rrc/ASN_RRC_CG-UCI-OnPUSCH.h
+helper/annex/asn/rrc/ASN_RRC_SSB-ConfigMobility.h
+helper/annex/asn/rrc/ASN_RRC_PLMN-Identity-EUTRA-5GC.h
+helper/annex/asn/rrc/ASN_RRC_LogicalChannelIdentity.h
+helper/annex/asn/rrc/ASN_RRC_PDCP-ParametersMRDC.h
+helper/annex/asn/rrc/ASN_RRC_RedirectedCarrierInfo.h
+helper/annex/asn/rrc/ASN_RRC_RRCReject.h
+helper/annex/asn/rrc/ASN_RRC_ResultsPerCSI-RS-IndexList.h
+helper/annex/asn/rrc/ASN_RRC_PDSCH-ConfigCommon.h
+helper/annex/asn/rrc/ASN_RRC_DummyB.h
+helper/annex/asn/rrc/ASN_RRC_CA-ParametersEUTRA.h
+helper/annex/asn/rrc/ASN_RRC_Phy-ParametersMRDC.h
+helper/annex/asn/rrc/ASN_RRC_MeasResultServFreqListEUTRA-SCG.h
+helper/annex/asn/rrc/ASN_RRC_AdditionalSpectrumEmission.h
+helper/annex/asn/rrc/ASN_RRC_MeasConfigMN.h
+helper/annex/asn/rrc/ASN_RRC_NR-MultiBandInfo.h
+helper/annex/asn/rrc/ASN_RRC_IntraFreqNeighCellInfo.h
+helper/annex/asn/rrc/ASN_RRC_PUSCH-PathlossReferenceRS-Id.h
+helper/annex/asn/rrc/ASN_RRC_MeasGapSharingConfig.h
+helper/annex/asn/rrc/ASN_RRC_ResultsPerSSB-IndexList.h
+helper/annex/asn/rrc/ASN_RRC_DummyI.h
+helper/annex/asn/rrc/ASN_RRC_PUCCH-ResourceSetId.h
+helper/annex/asn/rrc/ASN_RRC_RACH-ConfigCommon.h
+helper/annex/asn/rrc/ASN_RRC_EstablishmentCause.h
+helper/annex/asn/rrc/ASN_RRC_MeasQuantityResultsEUTRA.h
+helper/annex/asn/rrc/ASN_RRC_MeasObjectNR.h
+helper/annex/asn/rrc/ASN_RRC_BandCombinationInfoSN.h
+helper/annex/asn/rrc/ASN_RRC_BWP-Id.h
+helper/annex/asn/rrc/ASN_RRC_MIMO-LayersDL.h
+helper/annex/asn/rrc/ASN_RRC_RRCSetup.h
+helper/annex/asn/rrc/ASN_RRC_ZP-CSI-RS-Resource.h
+helper/annex/asn/rrc/ASN_RRC_Phy-ParametersXDD-Diff.h
+helper/annex/asn/rrc/ASN_RRC_BWP-UplinkDedicated.h
+helper/annex/asn/rrc/ASN_RRC_SINR-RangeEUTRA.h
+helper/annex/asn/rrc/ASN_RRC_ReportConfigInterRAT.h
+helper/annex/asn/rrc/ASN_RRC_MeasResultEUTRA.h
+helper/annex/asn/rrc/ASN_RRC_UEAssistanceInformation.h
+helper/annex/asn/rrc/ASN_RRC_DLInformationTransfer.h
+helper/annex/asn/rrc/ASN_RRC_RRCReestablishment.h
+helper/annex/asn/rrc/ASN_RRC_RNTI-Value.h
+helper/annex/asn/rrc/ASN_RRC_FeatureSetEntryIndex.h
+helper/annex/asn/rrc/ASN_RRC_ULInformationTransferMRDC.h
+helper/annex/asn/rrc/ASN_RRC_RateMatchPattern.h
+helper/annex/asn/rrc/ASN_RRC_SPS-Config.h
+helper/annex/asn/rrc/ASN_RRC_DRB-CountMSB-InfoList.h
+helper/annex/asn/rrc/ASN_RRC_FeatureSetCombinationId.h
+helper/annex/asn/rrc/ASN_RRC_RRCReconfigurationComplete.h
+helper/annex/asn/rrc/ASN_RRC_CSI-IM-ResourceSet.h
+helper/annex/asn/rrc/ASN_RRC_VarPendingRNA-Update.h
+helper/annex/asn/rrc/ASN_RRC_PUSCH-PowerControl.h
+helper/annex/asn/rrc/ASN_RRC_PUSCH-Config.h
+helper/annex/asn/rrc/ASN_RRC_SchedulingRequestId.h
+helper/annex/asn/rrc/ASN_RRC_CarrierFreqListEUTRA.h
+helper/annex/asn/rrc/ASN_RRC_PUCCH-ConfigCommon.h
+helper/annex/asn/rrc/ASN_RRC_SlotFormatIndicator.h
+helper/annex/asn/rrc/ASN_RRC_MeasAndMobParametersMRDC-XDD-Diff.h
+helper/annex/asn/rrc/ASN_RRC_TAG-Config.h
+helper/annex/asn/rrc/ASN_RRC_UL-CCCH-MessageType.h
+helper/annex/asn/rrc/ASN_RRC_BFR-SSB-Resource.h
+helper/annex/asn/rrc/ASN_RRC_SCellConfig.h
+helper/annex/asn/rrc/ASN_RRC_MeasObjectToRemoveList.h
+helper/annex/asn/rrc/ASN_RRC_SupportedCSI-RS-Resource.h
+helper/annex/asn/rrc/ASN_RRC_Q-QualMin.h
+helper/annex/asn/rrc/ASN_RRC_QuantityConfigNR.h
+helper/annex/asn/rrc/ASN_RRC_PCI-Range.h
+helper/annex/asn/rrc/ASN_RRC_UL-UM-RLC.h
+helper/annex/asn/rrc/ASN_RRC_CFRA-SSB-Resource.h
+helper/annex/asn/rrc/ASN_RRC_UE-MRDC-Capability-v1560.h
+helper/annex/asn/rrc/ASN_RRC_DRB-CountInfo.h
+helper/annex/asn/rrc/ASN_RRC_PHR-Config.h
+helper/annex/asn/rrc/ASN_RRC_MIMO-LayersUL.h
+helper/annex/asn/rrc/ASN_RRC_PollPDU.h
+helper/annex/asn/rrc/ASN_RRC_DRB-CountMSB-Info.h
+helper/annex/asn/rrc/ASN_RRC_MeasAndMobParameters.h
+helper/annex/asn/rrc/ASN_RRC_IntraFreqNeighCellList.h
+helper/annex/asn/rrc/ASN_RRC_PeriodicalReportConfig.h
+helper/annex/asn/rrc/ASN_RRC_BandCombination.h
+helper/annex/asn/rrc/ASN_RRC_FR-Info.h
+helper/annex/asn/rrc/ASN_RRC_ULInformationTransferMRDC-IEs.h
+helper/annex/asn/rrc/ASN_RRC_CSI-RS-ProcFrameworkForSRS.h
+helper/annex/asn/rrc/ASN_RRC_MNC.h
+helper/annex/asn/rrc/ASN_RRC_RegisteredAMF.h
+helper/annex/asn/rrc/ASN_RRC_BandCombination-v1560.h
+helper/annex/asn/rrc/ASN_RRC_UE-NR-Capability-v1550.h
+helper/annex/asn/rrc/ASN_RRC_RACH-ConfigDedicated.h
+helper/annex/asn/rrc/ASN_RRC_CA-ParametersEUTRA-v1560.h
+helper/annex/asn/rrc/ASN_RRC_P0-PUSCH-AlphaSetId.h
+helper/annex/asn/rrc/ASN_RRC_NR-FreqInfo.h
+helper/annex/asn/rrc/ASN_RRC_RRCResumeRequest1.h
+helper/annex/asn/rrc/ASN_RRC_UL-AM-RLC.h
+helper/annex/asn/rrc/ASN_RRC_PH-TypeListMCG.h
+helper/annex/asn/rrc/ASN_RRC_QuantityConfigRS.h
+helper/annex/asn/rrc/ASN_RRC_CSI-SSB-ResourceSetId.h
+helper/annex/asn/rrc/ASN_RRC_PCI-RangeElement.h
+helper/annex/asn/rrc/ASN_RRC_PDCP-Config.h
+helper/annex/asn/rrc/ASN_RRC_ZP-CSI-RS-ResourceSetId.h
+helper/annex/asn/rrc/ASN_RRC_CSI-IM-ResourceSetId.h
+helper/annex/asn/rrc/ASN_RRC_UEAssistanceInformation-v1540-IEs.h
+helper/annex/asn/rrc/ASN_RRC_PCI-RangeIndex.h
+helper/annex/asn/rrc/ASN_RRC_RRCReestablishmentComplete.h
+helper/annex/asn/rrc/ASN_RRC_Phy-ParametersFR2.h
+helper/annex/asn/rrc/ASN_RRC_SK-Counter.h
+helper/annex/asn/rrc/ASN_RRC_SI-SchedulingInfo.h
+helper/annex/asn/rrc/ASN_RRC_DMRS-DownlinkConfig.h
+helper/annex/asn/rrc/ASN_RRC_RateMatchPatternGroup.h
+helper/annex/asn/rrc/ASN_RRC_RRCSystemInfoRequest.h
+helper/annex/asn/rrc/ASN_RRC_EUTRA-MBSFN-SubframeConfig.h
+helper/annex/asn/rrc/ASN_RRC_DL-AM-RLC.h
+helper/annex/asn/rrc/ASN_RRC_UECapabilityEnquiry-v1560-IEs.h
+helper/annex/asn/rrc/ASN_RRC_CodebookConfig.h
+helper/annex/asn/rrc/ASN_RRC_CSI-RS-ForTracking.h
+helper/annex/asn/rrc/ASN_RRC_RAN-NotificationAreaInfo.h
+helper/annex/asn/rrc/ASN_RRC_INT-ConfigurationPerServingCell.h
+helper/annex/asn/rrc/ASN_RRC_NRDC-Parameters.h
+helper/annex/asn/rrc/ASN_RRC_RRCResumeRequest1-IEs.h
+helper/annex/asn/rrc/ASN_RRC_TDD-UL-DL-SlotConfig.h
+helper/annex/asn/rrc/ASN_RRC_MeasResultSFTD-EUTRA.h
+helper/annex/asn/rrc/ASN_RRC_RRCResume.h
+helper/annex/asn/rrc/ASN_RRC_PUCCH-Config.h
+helper/annex/asn/rrc/ASN_RRC_BandCombination-v1550.h
+helper/annex/asn/rrc/ASN_RRC_PUCCH-SpatialRelationInfo.h
+helper/annex/asn/rrc/ASN_RRC_UE-NR-CapabilityAddXDD-Mode.h
+helper/annex/asn/rrc/ASN_RRC_PUCCH-format4.h
+helper/annex/asn/rrc/ASN_RRC_CrossCarrierSchedulingConfig.h
+helper/annex/asn/rrc/ASN_RRC_DummyA.h
+helper/annex/asn/rrc/ASN_RRC_MRDC-SecondaryCellGroupConfig.h
+helper/annex/asn/rrc/ASN_RRC_DownlinkPreemption.h
+helper/annex/asn/rrc/ASN_RRC_PDSCH-ServingCellConfig.h
+helper/annex/asn/rrc/ASN_RRC_RadioLinkMonitoringRS-Id.h
+helper/annex/asn/rrc/ASN_RRC_PCI-List.h
+helper/annex/asn/rrc/ASN_RRC_CG-Config-v1560-IEs.h
+helper/annex/asn/rrc/ASN_RRC_RRCRelease.h
+helper/annex/asn/rrc/ASN_RRC_FeatureSetUplinkPerCC.h
+helper/annex/asn/rrc/ASN_RRC_DL-DCCH-MessageType.h
+helper/annex/asn/rrc/ASN_RRC_SRS-SwitchingTimeEUTRA.h
+helper/annex/asn/rrc/ASN_RRC_MeasAndMobParametersMRDC-v1560.h
+helper/annex/asn/rrc/ASN_RRC_BCCH-Config.h
+helper/annex/asn/rrc/ASN_RRC_SCGFailureInformation.h
+helper/annex/asn/rrc/ASN_RRC_DRB-ToAddModList.h
+helper/annex/asn/rrc/ASN_RRC_FeatureSetDownlinkPerCC-Id.h
+helper/annex/asn/rrc/ASN_RRC_UAC-BarringInfoSet.h
+helper/annex/asn/rrc/ASN_RRC_EUTRA-FreqNeighCellInfo.h
+helper/annex/asn/rrc/ASN_RRC_UL-DCCH-Message.h
+helper/annex/asn/rrc/ASN_RRC_BandCombinationList-v1560.h
+helper/annex/asn/rrc/ASN_RRC_UL-CCCH1-MessageType.h
+helper/annex/asn/rrc/ASN_RRC_FreqBandInformationNR.h
+helper/annex/asn/rrc/ASN_RRC_MAC-ParametersXDD-Diff.h
+helper/annex/asn/rrc/ASN_RRC_CSI-RS-CellMobility.h
+helper/annex/asn/rrc/ASN_RRC_MeasResultListNR.h
+helper/annex/asn/rrc/ASN_RRC_SRS-SwitchingTimeNR.h
+helper/annex/asn/rrc/ASN_RRC_UERadioPagingInformation.h
+helper/annex/asn/rrc/ASN_RRC_PUSCH-TimeDomainResourceAllocationList.h
+helper/annex/asn/rrc/ASN_RRC_ARFCN-ValueEUTRA.h
+helper/annex/asn/rrc/ASN_RRC_RACH-ConfigGeneric.h
+helper/annex/asn/rrc/ASN_RRC_EUTRA-PhysCellId.h
+helper/annex/asn/rrc/ASN_RRC_MeasurementTimingConfiguration-v1550-IEs.h
+helper/annex/asn/rrc/ASN_RRC_RRCReconfigurationComplete-v1560-IEs.h
+helper/annex/asn/rrc/ASN_RRC_SRI-PUSCH-PowerControlId.h
+helper/annex/asn/rrc/ASN_RRC_MeasResultNR.h
+helper/annex/asn/rrc/ASN_RRC_CellIdentity.h
+helper/annex/asn/rrc/ASN_RRC_BandCombinationList.h
+helper/annex/asn/rrc/ASN_RRC_MAC-ParametersCommon.h
+helper/annex/asn/rrc/ASN_RRC_PDSCH-Config.h
+helper/annex/asn/rrc/ASN_RRC_SupportedBandwidth.h
+helper/annex/asn/rrc/ASN_RRC_SCGFailureInformationEUTRA-IEs.h
+helper/annex/asn/rrc/ASN_RRC_T-Reassembly.h
+helper/annex/asn/rrc/ASN_RRC_ResumeCause.h
+helper/annex/asn/rrc/ASN_RRC_RadioBearerConfig.h
+helper/annex/asn/rrc/ASN_RRC_TDD-UL-DL-SlotIndex.h
+helper/annex/asn/rrc/ASN_RRC_MCC.h
+helper/annex/asn/rrc/ASN_RRC_CA-ParametersNR-v1560.h
+helper/annex/asn/rrc/ASN_RRC_RF-Parameters.h
+helper/annex/asn/rrc/ASN_RRC_UAC-BarringInfoSetIndex.h
+helper/annex/asn/rrc/ASN_RRC_SRS-Resource.h
+helper/annex/asn/rrc/ASN_RRC_SSB-ToMeasure.h
+helper/annex/asn/rrc/ASN_RRC_RRCReject-IEs.h
+helper/annex/asn/rrc/ASN_RRC_IntegrityProtAlgorithm.h
+helper/annex/asn/rrc/ASN_RRC_P0-PUCCH-Id.h
+helper/annex/asn/rrc/ASN_RRC_DRX-Info.h
+helper/annex/asn/rrc/ASN_RRC_ZP-CSI-RS-ResourceSet.h
+helper/annex/asn/rrc/ASN_RRC_SIB6.h
+helper/annex/asn/rrc/ASN_RRC_MeasConfig.h
+helper/annex/asn/rrc/ASN_RRC_RRCResume-IEs.h
+helper/annex/asn/rrc/ASN_RRC_AS-Config.h
+helper/annex/asn/rrc/ASN_RRC_CA-ParametersNRDC.h
+helper/annex/asn/rrc/ASN_RRC_SpCellConfig.h
+helper/annex/asn/rrc/ASN_RRC_UAC-BarringPerPLMN.h
+helper/annex/asn/rrc/ASN_RRC_UplinkTxDirectCurrentCell.h
+helper/annex/asn/rrc/ASN_RRC_PUSCH-TPC-CommandConfig.h
+helper/annex/asn/rrc/ASN_RRC_SlotFormatCombination.h
+helper/annex/asn/rrc/ASN_RRC_PTRS-DensityRecommendationUL.h
+helper/annex/asn/rrc/ASN_RRC_SIB5.h
+helper/annex/asn/rrc/ASN_RRC_PDSCH-TimeDomainResourceAllocation.h
+helper/annex/asn/rrc/ASN_RRC_MIB.h
+helper/annex/asn/rrc/ASN_RRC_SRS-SpatialRelationInfo.h
+helper/annex/asn/rrc/ASN_RRC_FeatureSetUplink.h
+helper/annex/asn/rrc/ASN_RRC_CSI-SSB-ResourceSet.h
+helper/annex/asn/rrc/ASN_RRC_BandCombination-v1540.h
+helper/annex/asn/rrc/ASN_RRC_SRS-Config.h
+helper/annex/asn/rrc/ASN_RRC_MeasId.h
+helper/annex/asn/rrc/ASN_RRC_S-NSSAI.h
+helper/annex/asn/rrc/ASN_RRC_SRS-TPC-PDCCH-Config.h
+helper/annex/asn/rrc/ASN_RRC_RLC-Config.h
+helper/annex/asn/rrc/ASN_RRC_ReestabNCellInfoList.h
+helper/annex/asn/rrc/ASN_RRC_EUTRA-RSTD-InfoList.h
+helper/annex/asn/rrc/ASN_RRC_UL-DCCH-MessageType.h
+helper/annex/asn/rrc/ASN_RRC_FreqPriorityListEUTRA.h
+helper/annex/asn/rrc/ASN_RRC_ReselectionThresholdQ.h
+helper/annex/asn/rrc/ASN_RRC_EUTRA-ParametersXDD-Diff.h
+helper/annex/asn/rrc/ASN_RRC_EUTRA-NS-PmaxValue.h
+helper/annex/asn/rrc/ASN_RRC_MeasAndMobParametersMRDC.h
+helper/annex/asn/rrc/ASN_RRC_P0-PUSCH-AlphaSet.h
+helper/annex/asn/rrc/ASN_RRC_ReportConfigToAddModList.h
+helper/annex/asn/rrc/ASN_RRC_SCGFailureInformation-IEs.h
+helper/annex/asn/rrc/ASN_RRC_CSI-ReportPeriodicityAndOffset.h
+helper/annex/asn/rrc/ASN_RRC_AffectedCarrierFreqCombEUTRA.h
+helper/annex/asn/rrc/ASN_RRC_FeatureSetsPerBand.h
+helper/annex/asn/rrc/ASN_RRC_CSI-RS-ResourceMapping.h
+helper/annex/asn/rrc/ASN_RRC_RRCResumeComplete-IEs.h
+helper/annex/asn/rrc/ASN_RRC_InterRAT-Parameters.h
+helper/annex/asn/rrc/ASN_RRC_PDCCH-Config.h
+helper/annex/asn/rrc/ASN_RRC_SSB-MTC2.h
+helper/annex/asn/rrc/ASN_RRC_UE-MRDC-CapabilityAddXDD-Mode.h
+helper/annex/asn/rrc/ASN_RRC_EUTRA-ParametersCommon.h
+helper/annex/asn/rrc/ASN_RRC_FeatureSetUplink-v1540.h
+helper/annex/asn/rrc/ASN_RRC_UplinkTxDirectCurrentBWP.h
+helper/annex/asn/rrc/ASN_RRC_RRCReestablishmentRequest-IEs.h
+helper/annex/asn/rrc/ASN_RRC_RRC-TransactionIdentifier.h
+helper/annex/asn/rrc/ASN_RRC_RSRP-Range.h
+helper/annex/asn/rrc/ASN_RRC_EUTRA-RSTD-Info.h
+helper/annex/asn/rrc/ASN_RRC_MRDC-Parameters.h
+helper/annex/asn/rrc/ASN_RRC_LocationMeasurementIndication.h
+helper/annex/asn/rrc/ASN_RRC_VarResumeMAC-Input.h
+helper/annex/asn/rrc/ASN_RRC_PagingCycle.h
+helper/annex/asn/rrc/ASN_RRC_ReestabNCellInfo.h
+helper/annex/asn/rrc/ASN_RRC_UL-CCCH-Message.h
+helper/annex/asn/rrc/ASN_RRC_SIB-Mapping.h
+helper/annex/asn/rrc/ASN_RRC_TCI-State.h
+helper/annex/asn/rrc/ASN_RRC_UECapabilityEnquiry.h
+helper/annex/asn/rrc/ASN_RRC_NextHopChainingCount.h
+helper/annex/asn/rrc/ASN_RRC_SRS-ResourceSetId.h
+helper/annex/asn/rrc/ASN_RRC_FrequencyInfoUL.h
+helper/annex/asn/rrc/ASN_RRC_BCCH-BCH-MessageType.h
+helper/annex/asn/rrc/ASN_RRC_RAN-AreaConfig.h
+helper/annex/asn/rrc/ASN_RRC_UERadioAccessCapabilityInformation.h
+helper/annex/asn/rrc/ASN_RRC_PCI-RangeIndexList.h
+helper/annex/asn/rrc/ASN_RRC_CSI-AssociatedReportConfigInfo.h
+helper/annex/asn/rrc/ASN_RRC_PDCCH-ConfigSIB1.h
+helper/annex/asn/rrc/ASN_RRC_EUTRA-Cell.h
+helper/annex/asn/rrc/ASN_RRC_DownlinkConfigCommon.h
+helper/annex/asn/rrc/ASN_RRC_BandParameters-v1540.h
+helper/annex/asn/rrc/ASN_RRC_InitialUE-Identity.h
+helper/annex/asn/rrc/ASN_RRC_PortIndexFor8Ranks.h
+helper/annex/asn/rrc/ASN_RRC_SecurityModeFailure-IEs.h
+helper/annex/asn/rrc/ASN_RRC_UplinkTxDirectCurrentList.h
+helper/annex/asn/rrc/ASN_RRC_CG-Config-v1540-IEs.h
+helper/annex/asn/rrc/ASN_RRC_EUTRA-PhysCellIdRange.h
+helper/annex/asn/rrc/ASN_RRC_FreqBandIndicatorNR.h
+helper/annex/asn/rrc/ASN_RRC_Q-OffsetRangeList.h
+helper/annex/asn/rrc/ASN_RRC_FreqBandList.h
+helper/annex/asn/rrc/ASN_RRC_BWP.h
+helper/annex/asn/rrc/ASN_RRC_MeasObjectEUTRA.h
+helper/annex/asn/rrc/ASN_RRC_SearchSpaceZero.h
+helper/annex/asn/rrc/ASN_RRC_RLF-TimersAndConstants.h
+helper/annex/asn/rrc/ASN_RRC_EUTRA-AllowedMeasBandwidth.h
+helper/annex/asn/rrc/ASN_RRC_CG-ConfigInfo-v1560-IEs.h
+helper/annex/asn/rrc/ASN_RRC_SecurityConfig.h
+helper/annex/asn/rrc/ASN_RRC_PeriodicRNAU-TimerValue.h
+helper/annex/asn/rrc/ASN_RRC_CG-Config.h
+helper/annex/asn/rrc/ASN_RRC_UECapabilityInformation.h
+helper/annex/asn/rrc/ASN_RRC_SDAP-Config.h
+helper/annex/asn/rrc/ASN_RRC_UEAssistanceInformation-IEs.h
+helper/annex/asn/rrc/ASN_RRC_PhysCellId.h
+helper/annex/asn/rrc/ASN_RRC_AffectedCarrierFreqCombInfoMRDC.h
+helper/annex/asn/rrc/ASN_RRC_BCCH-DL-SCH-MessageType.h
+helper/annex/asn/rrc/ASN_RRC_RRCSystemInfoRequest-r15-IEs.h
+helper/annex/asn/rrc/ASN_RRC_NumberOfCarriers.h
+helper/annex/asn/rrc/ASN_RRC_UECapabilityEnquiry-IEs.h
+helper/annex/asn/rrc/ASN_RRC_SRB-ToAddMod.h
+helper/annex/asn/rrc/ASN_RRC_AffectedCarrierFreqCombNR.h
+helper/annex/asn/rrc/ASN_RRC_MeasGapConfig.h
+helper/annex/asn/rrc/ASN_RRC_UAC-AccessCategory1-SelectionAssistanceInfo.h
+helper/annex/asn/rrc/ASN_RRC_PH-UplinkCarrierMCG.h
+helper/annex/asn/rrc/ASN_RRC_MeasTriggerQuantityOffset.h
+helper/annex/asn/rrc/ASN_RRC_RedirectedCarrierInfo-EUTRA.h
+helper/annex/asn/rrc/ASN_RRC_RSRQ-Range.h
+helper/annex/asn/rrc/ASN_RRC_VarShortMAC-Input.h
+helper/annex/asn/rrc/ASN_RRC_CarrierInfoNR.h
+helper/annex/asn/rrc/ASN_RRC_P-Max.h
+helper/annex/asn/rrc/ASN_RRC_RRCResumeComplete.h
+helper/annex/asn/rrc/ASN_RRC_FailureInfoRLC-Bearer.h
+helper/annex/asn/rrc/ASN_RRC_UE-MRDC-CapabilityAddXDD-Mode-v1560.h
+helper/annex/asn/rrc/ASN_RRC_PortIndex4.h
+helper/annex/asn/rrc/ASN_RRC_FreqBandIndicatorEUTRA.h
+helper/annex/asn/rrc/ASN_RRC_CarrierFreqEUTRA.h
+helper/annex/asn/rrc/ASN_RRC_MeasResultCellSFTD-NR.h
+helper/annex/asn/rrc/ASN_RRC_MobilityFromNRCommand.h
+helper/annex/asn/rrc/ASN_RRC_NZP-CSI-RS-ResourceSetId.h
+helper/annex/asn/rrc/ASN_RRC_ProcessingParameters.h
+helper/annex/asn/rrc/ASN_RRC_EUTRA-CellIndexList.h
+helper/annex/asn/rrc/ASN_RRC_Phy-ParametersCommon.h
+helper/annex/asn/rrc/ASN_RRC_PTRS-UplinkConfig.h
+helper/annex/asn/rrc/ASN_RRC_SlotFormatCombinationId.h
+helper/annex/asn/rrc/ASN_RRC_ModulationOrder.h
+helper/annex/asn/rrc/ASN_RRC_SCellIndex.h
+helper/annex/asn/rrc/ASN_RRC_QuantityConfig.h
+helper/annex/asn/rrc/ASN_RRC_TDD-UL-DL-ConfigCommon.h
+helper/annex/asn/rrc/ASN_RRC_RSRQ-RangeEUTRA.h
+helper/annex/asn/rrc/ASN_RRC_UAC-BarringPerCat.h
+helper/annex/asn/rrc/ASN_RRC_ReferenceSignalConfig.h
+helper/annex/asn/rrc/ASN_RRC_DRB-CountInfoList.h
+helper/annex/asn/rrc/ASN_RRC_PUCCH-ResourceId.h
+helper/annex/asn/rrc/ASN_RRC_NG-5G-S-TMSI.h
+helper/annex/asn/rrc/ASN_RRC_CSI-IM-Resource.h
+helper/annex/asn/rrc/ASN_RRC_ReportConfigNR.h
+helper/annex/asn/rrc/ASN_RRC_PUCCH-PathlossReferenceRS-Id.h
+helper/annex/asn/rrc/ASN_RRC_UE-CapabilityRAT-ContainerList.h
+helper/annex/asn/rrc/ASN_RRC_PRB-Id.h
+helper/annex/asn/rrc/ASN_RRC_SchedulingRequestResourceId.h
+helper/annex/asn/rrc/ASN_RRC_NR-NS-PmaxList.h
+helper/annex/asn/rrc/ASN_RRC_SSB-MTC.h
+helper/annex/asn/rrc/ASN_RRC_UE-MRDC-Capability.h
+helper/annex/asn/rrc/ASN_RRC_ConfigRestrictModReqSCG.h
+helper/annex/asn/rrc/ASN_RRC_MeasObjectToAddModList.h
+helper/annex/asn/rrc/ASN_RRC_PagingRecordList.h
+helper/annex/asn/rrc/ASN_RRC_CSI-AperiodicTriggerState.h
+helper/annex/asn/rrc/ASN_RRC_PUCCH-format1.h
+helper/annex/asn/rrc/ASN_RRC_BetaOffsets.h
+helper/annex/asn/rrc/ASN_RRC_FeatureSetUplinkPerCC-Id.h
+helper/annex/asn/rrc/ASN_RRC_asn_constant.h
+helper/annex/asn/rrc/ASN_RRC_RangeToBestCell.h
+helper/annex/asn/rrc/ASN_RRC_PDU-SessionID.h
+helper/annex/asn/rrc/ASN_RRC_CounterCheckResponse-IEs.h
+helper/annex/asn/rrc/ASN_RRC_EUTRA-MultiBandInfoList.h
+helper/annex/asn/rrc/ASN_RRC_CellAccessRelatedInfo.h
+helper/annex/asn/rrc/ASN_RRC_InterFreqCarrierFreqList.h
+helper/annex/asn/rrc/ASN_RRC_UECapabilityInformation-IEs.h
+helper/annex/asn/rrc/ASN_RRC_FailureReportSCG-EUTRA.h
+helper/annex/asn/rrc/ASN_RRC_SecurityModeComplete.h
+helper/annex/asn/rrc/ASN_RRC_CounterCheck.h
+helper/annex/asn/rrc/ASN_RRC_SearchSpaceId.h
+helper/annex/asn/rrc/ASN_RRC_InterFreqNeighCellList.h
+helper/annex/asn/rrc/ASN_RRC_ReportConfigToRemoveList.h
+helper/annex/asn/rrc/ASN_RRC_UL-DataSplitThreshold.h
+helper/annex/asn/rrc/ASN_RRC_RadioLinkMonitoringConfig.h
+helper/annex/asn/rrc/ASN_RRC_IMS-Parameters.h
+helper/annex/asn/rrc/ASN_RRC_MeasurementReport-IEs.h
+helper/annex/asn/rrc/ASN_RRC_PLMN-RAN-AreaConfigList.h
+helper/annex/asn/rrc/ASN_RRC_MeasurementTimingConfiguration-IEs.h
+helper/annex/asn/rrc/ASN_RRC_VarMeasConfig.h
+helper/annex/asn/rrc/ASN_RRC_MeasAndMobParametersMRDC-Common.h
+helper/annex/asn/rrc/ASN_RRC_MeasResultListEUTRA.h
+helper/annex/asn/rrc/ASN_RRC_PCCH-Config.h
+helper/annex/asn/rrc/ASN_RRC_MeasTimingList.h
+helper/annex/asn/rrc/ASN_RRC_ReportCGI-EUTRA.h
+helper/annex/asn/rrc/ASN_RRC_EUTRA-FreqNeighCellList.h
+helper/annex/asn/rrc/ASN_RRC_FeatureSet.h
+helper/annex/asn/rrc/ASN_RRC_FreqBandInformation.h
+helper/annex/asn/rrc/ASN_RRC_UAC-BarringPerPLMN-List.h
+helper/annex/asn/rrc/ASN_RRC_DL-CCCH-MessageType.h
+helper/annex/asn/rrc/ASN_RRC_CG-Config-IEs.h
+helper/annex/asn/rrc/ASN_RRC_MeasResultSCG-Failure.h
+helper/annex/asn/rrc/ASN_RRC_PDCP-Parameters.h
+helper/annex/asn/rrc/ASN_RRC_PUSCH-CodeBlockGroupTransmission.h
+helper/annex/asn/rrc/ASN_RRC_HandoverCommand-IEs.h
+helper/annex/asn/rrc/ASN_RRC_CSI-RS-IM-ReceptionForFeedback.h
+helper/annex/asn/rrc/ASN_RRC_SDAP-Parameters.h
+helper/annex/asn/rrc/ASN_RRC_PUCCH-TPC-CommandConfig.h
+helper/annex/asn/rrc/ASN_RRC_PUSCH-PathlossReferenceRS.h
+helper/annex/asn/rrc/ASN_RRC_SRB-Identity.h
+helper/annex/asn/rrc/ASN_RRC_LocationMeasurementIndication-IEs.h
+helper/annex/asn/rrc/ASN_RRC_PDSCH-TimeDomainResourceAllocationList.h
+helper/annex/asn/rrc/ASN_RRC_BandEntryIndex.h
+helper/annex/asn/rrc/ASN_RRC_MeasResultServMOList.h
+helper/annex/asn/rrc/ASN_RRC_FeatureSetUplinkId.h
+helper/annex/asn/rrc/ASN_RRC_SecurityModeCommand-IEs.h
+helper/annex/asn/rrc/ASN_RRC_CSI-MeasConfig.h
+helper/annex/asn/rrc/ASN_RRC_CellReselectionPriority.h
+helper/annex/asn/rrc/ASN_RRC_LogicalChannelConfig.h
+helper/annex/asn/rrc/ASN_RRC_SCS-SpecificCarrier.h
+helper/annex/asn/rrc/ASN_RRC_RRCReestablishment-IEs.h
+helper/annex/asn/rrc/ASN_RRC_RRCReestablishmentComplete-IEs.h
+helper/annex/asn/rrc/ASN_RRC_SIB-TypeInfo.h
+helper/annex/asn/rrc/ASN_RRC_ReestablishmentCause.h
+helper/annex/asn/rrc/ASN_RRC_CSI-ResourcePeriodicityAndOffset.h
+helper/annex/asn/rrc/ASN_RRC_PortIndex8.h
+helper/annex/asn/rrc/ASN_RRC_EventTriggerConfigInterRAT.h
+helper/annex/asn/rrc/ASN_RRC_RRCSetupComplete-IEs.h
+helper/annex/asn/rrc/ASN_RRC_RRCRelease-IEs.h
+helper/annex/asn/rrc/ASN_RRC_PLMN-RAN-AreaCellList.h
+helper/annex/asn/rrc/ASN_RRC_UE-CapabilityRAT-RequestList.h
+helper/annex/asn/rrc/ASN_RRC_OtherConfig.h
+helper/annex/asn/rrc/ASN_RRC_SchedulingRequestResourceConfig.h
+helper/annex/asn/rrc/ASN_RRC_PLMN-IdentityInfo.h
+helper/annex/asn/rrc/ASN_RRC_RRCSetupRequest.h
+helper/annex/asn/rrc/ASN_RRC_TimeAlignmentTimer.h
+helper/annex/asn/rrc/ASN_RRC_MeasResults.h
+helper/annex/asn/rrc/ASN_RRC_UE-CapabilityRAT-Container.h
+helper/annex/asn/rrc/ASN_RRC_Phy-ParametersFR1.h
+helper/annex/asn/rrc/ASN_RRC_CellsToAddMod.h
+helper/annex/asn/rrc/ASN_RRC_ServCellIndex.h
+helper/annex/asn/rrc/ASN_RRC_OverheatingAssistance.h
+helper/annex/asn/rrc/ASN_RRC_SuspendConfig.h
+helper/annex/asn/rrc/ASN_RRC_FeatureSetCombination.h
+helper/annex/asn/rrc/ASN_RRC_PUCCH-CSI-Resource.h
+helper/annex/asn/rrc/ASN_RRC_MeasResult2EUTRA.h
+helper/annex/asn/rrc/ASN_RRC_BandParameters.h
+helper/annex/asn/rrc/ASN_RRC_CSI-IM-ResourceId.h
+helper/annex/asn/rrc/ASN_RRC_MasterKeyUpdate.h
+helper/annex/asn/rrc/ASN_RRC_DMRS-UplinkConfig.h
+helper/annex/asn/rrc/ASN_RRC_ControlResourceSetId.h
+helper/annex/asn/rrc/ASN_RRC_SRS-PeriodicityAndOffset.h
+helper/annex/asn/rrc/ASN_RRC_FeatureSetDownlinkId.h
+helper/annex/asn/rrc/ASN_RRC_RLC-BearerConfig.h
+helper/annex/asn/rrc/ASN_RRC_PUCCH-ResourceSet.h
+helper/annex/asn/rrc/ASN_RRC_ZP-CSI-RS-ResourceId.h
+helper/annex/asn/rrc/ASN_RRC_SetupRelease.h
+helper/annex/asn/rrc/ASN_RRC_RF-ParametersMRDC.h
+helper/annex/asn/rrc/ASN_RRC_SRI-PUSCH-PowerControl.h
+helper/annex/asn/rrc/ASN_RRC_MeasIdToRemoveList.h
+helper/annex/asn/rrc/ASN_RRC_MeasResultServMO.h
+helper/annex/asn/rrc/ASN_RRC_MeasTriggerQuantityEUTRA.h
+helper/annex/asn/rrc/ASN_RRC_PH-InfoSCG.h
+helper/annex/asn/rrc/ASN_RRC_PUCCH-format2.h
+helper/annex/asn/rrc/ASN_RRC_PUCCH-format3.h
+helper/annex/asn/rrc/ASN_RRC_UE-CapabilityRequestFilterNR.h
+helper/annex/asn/rrc/ASN_RRC_BandNR.h
+helper/annex/asn/rrc/ASN_RRC_UE-TimersAndConstants.h
+helper/annex/asn/rrc/ASN_RRC_PLMN-IdentityInfoList.h
+helper/annex/asn/rrc/ASN_RRC_CellReselectionSubPriority.h
+helper/annex/asn/rrc/ASN_RRC_PH-TypeListSCG.h
+helper/annex/asn/rrc/ASN_RRC_BWP-DownlinkDedicated.h
+helper/annex/asn/rrc/ASN_RRC_CSI-ResourceConfig.h
+helper/annex/asn/rrc/ASN_RRC_NZP-CSI-RS-Resource.h
+helper/annex/asn/rrc/ASN_RRC_ReportSFTD-EUTRA.h
+helper/annex/asn/rrc/ASN_RRC_CA-BandwidthClassEUTRA.h
+helper/annex/asn/rrc/ASN_RRC_MeasAndMobParametersCommon.h
+helper/annex/asn/rrc/ASN_RRC_BeamFailureRecoveryConfig.h
+helper/annex/asn/rrc/ASN_RRC_Q-RxLevMin.h
+helper/annex/asn/rrc/ASN_RRC_TAG.h
+helper/annex/asn/rrc/ASN_RRC_RRCSetupRequest-IEs.h
+helper/annex/asn/rrc/ASN_RRC_EUTRA-MBSFN-SubframeConfigList.h
+helper/annex/asn/rrc/ASN_RRC_FrequencyInfoUL-SIB.h
+helper/annex/asn/rrc/ASN_RRC_CA-BandwidthClassNR.h
+helper/annex/asn/rrc/ASN_RRC_Paging.h
+helper/annex/asn/rrc/ASN_RRC_LocationMeasurementInfo.h
+helper/annex/asn/rrc/ASN_RRC_CSI-RS-ResourceConfigMobility.h
+helper/annex/asn/rrc/ASN_RRC_FeatureSetDownlink-v1540.h
+helper/annex/asn/rrc/ASN_RRC_UE-NR-Capability-v1530.h
+helper/annex/asn/rrc/ASN_RRC_SecurityModeComplete-IEs.h
+helper/annex/asn/rrc/ASN_RRC_PLMN-IdentityList-EUTRA-5GC.h
+helper/annex/asn/rrc/ASN_RRC_PUCCH-format0.h
+helper/annex/asn/rrc/ASN_RRC_SchedulingRequestConfig.h
+helper/annex/asn/rrc/ASN_RRC_PLMN-RAN-AreaConfig.h
+helper/annex/asn/rrc/ASN_RRC_MeasConfigSN.h
+helper/annex/asn/rrc/ASN_RRC_CA-ParametersNR-v1550.h
+helper/annex/asn/rrc/ASN_RRC_SIB9.h
+helper/annex/asn/rrc/ASN_RRC_CA-ParametersNR.h
+helper/annex/asn/rrc/ASN_RRC_DL-UM-RLC.h
+helper/annex/asn/rrc/ASN_RRC_ThresholdNR.h
+helper/annex/asn/rrc/ASN_RRC_BCCH-DL-SCH-Message.h
+helper/annex/asn/rrc/ASN_RRC_EUTRA-PresenceAntennaPort1.h
+helper/annex/asn/rrc/ASN_RRC_DummyG.h
+helper/annex/asn/rrc/ASN_RRC_AS-Context.h
+helper/annex/asn/rrc/ASN_RRC_DummyD.h
+helper/annex/asn/rrc/ASN_RRC_ConfigRestrictInfoSCG.h
+helper/annex/asn/rrc/ASN_RRC_ReestabUE-Identity.h
+helper/annex/asn/rrc/ASN_RRC_Phy-Parameters.h
+helper/annex/asn/rrc/ASN_RRC_OtherConfig-v1540.h
+helper/annex/asn/rrc/ASN_RRC_CSI-RS-Index.h
+helper/annex/asn/rrc/ASN_RRC_RRCReconfiguration-IEs.h
+helper/annex/asn/rrc/ASN_RRC_CFRA-CSIRS-Resource.h
+helper/annex/asn/rrc/ASN_RRC_UplinkConfig.h
+helper/annex/asn/rrc/ASN_RRC_CellsTriggeredList.h
+helper/annex/asn/rrc/ASN_RRC_EUTRA-BlackCell.h
+helper/annex/asn/rrc/ASN_RRC_DL-DCCH-Message.h
+helper/annex/asn/rrc/ASN_RRC_RLC-Parameters.h
+helper/annex/asn/rrc/ASN_RRC_ReselectionThreshold.h
+helper/annex/asn/rrc/ASN_RRC_GapConfig.h
+helper/annex/asn/rrc/ASN_RRC_SpeedStateScaleFactors.h
+helper/annex/asn/rrc/ASN_RRC_MeasAndMobParametersXDD-Diff.h
+helper/annex/asn/rrc/ASN_RRC_UE-CapabilityRequestFilterCommon.h
+helper/annex/asn/rrc/ASN_RRC_I-RNTI-Value.h
+helper/annex/asn/rrc/ASN_RRC_MeasTiming.h
+helper/annex/asn/rrc/ASN_RRC_Phy-ParametersFRX-Diff.h
+helper/annex/asn/rrc/ASN_RRC_SIB8.h
+helper/annex/asn/rrc/ASN_RRC_TrackingAreaCode.h
+helper/annex/asn/rrc/ASN_RRC_IntraFreqBlackCellList.h
+helper/annex/asn/rrc/ASN_RRC_SIB2.h
+helper/annex/asn/rrc/ASN_RRC_EUTRA-Q-OffsetRange.h
+helper/annex/asn/rrc/ASN_RRC_CSI-ReportFramework.h
+helper/annex/asn/rrc/ASN_RRC_SRS-Resources.h
+helper/annex/asn/rrc/ASN_RRC_BWP-Downlink.h
+helper/annex/asn/rrc/ASN_RRC_ULInformationTransfer-IEs.h
+helper/annex/asn/rrc/ASN_RRC_SchedulingInfo.h
+helper/annex/asn/rrc/ASN_RRC_PDCCH-BlindDetection.h
+helper/annex/asn/rrc/ASN_RRC_MAC-CellGroupConfig.h
+helper/annex/asn/rrc/ASN_RRC_PCCH-Message.h
+helper/annex/asn/rrc/ASN_RRC_ConnEstFailureControl.h
+helper/annex/asn/rrc/ASN_RRC_DRB-ToAddMod.h
+helper/annex/asn/rrc/ASN_RRC_FeatureSetEUTRA-DownlinkId.h
+helper/annex/asn/rrc/ASN_RRC_ReestablishmentInfo.h
+helper/annex/asn/rrc/ASN_RRC_ReducedAggregatedBandwidth.h
+helper/annex/asn/rrc/ASN_RRC_DedicatedNAS-Message.h
+helper/annex/asn/rrc/ASN_RRC_MeasObjectId.h
+helper/annex/asn/rrc/ASN_RRC_RateMatchPatternId.h
+helper/annex/asn/rrc/ASN_RRC_EUTRA-MultiBandInfo.h
+helper/annex/asn/rrc/ASN_RRC_MeasQuantityResults.h
+helper/annex/asn/rrc/ASN_RRC_UE-NR-Capability-v1560.h
+helper/annex/asn/rrc/ASN_RRC_MeasResultServFreqListNR-SCG.h
+helper/annex/asn/rrc/ASN_RRC_MeasReportQuantity.h
+helper/annex/asn/rrc/ASN_RRC_PUCCH-SpatialRelationInfoId.h
+helper/annex/asn/rrc/ASN_RRC_PagingUE-Identity.h
+helper/annex/asn/rrc/ASN_RRC_SecurityConfigSMC.h
+helper/annex/asn/rrc/ASN_RRC_EUTRA-NS-PmaxList.h
+helper/annex/asn/rrc/ASN_RRC_RRCSetup-IEs.h
+helper/annex/asn/rrc/ASN_RRC_CodebookParameters.h
+helper/annex/asn/rrc/ASN_RRC_HandoverPreparationInformation.h
+helper/annex/asn/rrc/ASN_RRC_UE-CapabilityRAT-Request.h
+helper/annex/asn/rrc/ASN_RRC_PUSCH-TimeDomainResourceAllocation.h
+helper/annex/asn/rrc/ASN_RRC_RRCReconfigurationComplete-v1530-IEs.h
+helper/annex/asn/rrc/ASN_RRC_FR-InfoList.h
+helper/annex/asn/rrc/ASN_RRC_RateMatchPatternLTE-CRS.h
+helper/annex/asn/rrc/ASN_RRC_ServingCellConfigCommonSIB.h
+helper/annex/asn/rrc/ASN_RRC_MeasResultFreqListFailMRDC.h
+helper/annex/asn/rrc/ASN_RRC_PUSCH-ConfigCommon.h
+helper/annex/asn/rrc/ASN_RRC_BFR-CSIRS-Resource.h
+helper/annex/asn/rrc/ASN_RRC_GeneralParametersMRDC-XDD-Diff.h
+helper/annex/asn/rrc/ASN_RRC_ResultsPerCSI-RS-Index.h
+helper/annex/asn/rrc/ASN_RRC_ReportInterval.h
+helper/annex/asn/rrc/ASN_RRC_FrequencyInfoDL.h
+helper/annex/asn/rrc/ASN_RRC_SecurityModeFailure.h
+helper/annex/asn/rrc/ASN_RRC_FeatureSetDownlink.h
+helper/annex/asn/rrc/ASN_RRC_CellsToAddModList.h
+helper/annex/asn/rrc/ASN_RRC_BWP-UplinkCommon.h
+helper/annex/asn/rrc/ASN_RRC_FailureInformation-IEs.h
+helper/annex/asn/rrc/ASN_RRC_RRCResumeRequest-IEs.h
+helper/annex/asn/rrc/ASN_RRC_FailureReportSCG.h
+helper/annex/asn/rrc/ASN_RRC_VictimSystemType.h
+helper/annex/asn/rrc/ASN_RRC_PUCCH-MaxCodeRate.h
+helper/annex/asn/rrc/ASN_RRC_MobilityStateParameters.h
+helper/annex/asn/rrc/ASN_RRC_BandCombinationInfo.h
+helper/annex/asn/rrc/ASN_RRC_ScramblingId.h
+helper/annex/asn/rrc/ASN_RRC_CellGroupConfig.h
+helper/annex/asn/rrc/ASN_RRC_PollByte.h
+helper/annex/asn/rrc/ASN_RRC_PLMN-Identity.h
+helper/annex/asn/rrc/ASN_RRC_PCCH-MessageType.h
+helper/annex/asn/rrc/ASN_RRC_InterFreqNeighCellInfo.h
+helper/annex/asn/rrc/ASN_RRC_BandCombinationInfoList.h
+helper/annex/asn/rrc/ASN_RRC_MeasTriggerQuantity.h
+helper/annex/asn/rrc/ASN_RRC_HandoverCommand.h
+helper/annex/asn/rrc/ASN_RRC_CSI-ReportConfigId.h
+helper/annex/asn/rrc/ASN_RRC_EUTRA-FreqBlackCellList.h
+    
+   
+    
+    
+    helper/annex/asn/asn1c/ANY.h
+    helper/annex/asn/asn1c/BIT_STRING.h
+    helper/annex/asn/asn1c/BOOLEAN.h    
+    helper/annex/asn/asn1c/OCTET_STRING.h
+    helper/annex/asn/asn1c/asn_application.h
+    helper/annex/asn/asn1c/ber_tlv_length.h
+    helper/annex/asn/asn1c/ber_tlv_tag.h
+    helper/annex/asn/asn1c/ber_decoder.h
+    helper/annex/asn/asn1c/der_encoder.h
+    helper/annex/asn/asn1c/xer_decoder.h
+    helper/annex/asn/asn1c/xer_encoder.h
+    helper/annex/asn/asn1c/xer_support.h
+    helper/annex/asn/asn1c/per_decoder.h
+    helper/annex/asn/asn1c/per_encoder.h
+    helper/annex/asn/asn1c/per_support.h
+    helper/annex/asn/asn1c/per_opentype.h
+    helper/annex/asn/asn1c/asn_system.h
+    helper/annex/asn/asn1c/asn_bit_data.h
+    helper/annex/asn/asn1c/constraints.h
+    helper/annex/asn/asn1c/asn_random_fill.h    
+    helper/annex/asn/asn1c/NativeEnumerated.h
+    helper/annex/asn/asn1c/NativeInteger.h
+    helper/annex/asn/asn1c/INTEGER.h
+    helper/annex/asn/asn1c/asn_codecs_prim.h 
+    helper/annex/asn/asn1c/NULL.h
+    helper/annex/asn/asn1c/OBJECT_IDENTIFIER.h
+    helper/annex/asn/asn1c/OPEN_TYPE.h
+    helper/annex/asn/asn1c/PrintableString.h
+    helper/annex/asn/asn1c/asn_SEQUENCE_OF.h
+    helper/annex/asn/asn1c/asn_SET_OF.h
+    helper/annex/asn/asn1c/asn_codecs.h    
+    helper/annex/asn/asn1c/asn_internal.h
+    helper/annex/asn/asn1c/asn_ioc.h    
+    helper/annex/asn/asn1c/constr_CHOICE.h
+    helper/annex/asn/asn1c/constr_SEQUENCE.h
+    helper/annex/asn/asn1c/constr_SEQUENCE_OF.h
+    helper/annex/asn/asn1c/constr_SET_OF.h
+    helper/annex/asn/asn1c/constr_TYPE.h
+    
+        
+    helper/annex/asn/asn1c/skeletons/oer_decoder.h
+    helper/annex/asn/asn1c/skeletons/oer_encoder.h
+    helper/annex/asn/asn1c/skeletons/oer_support.h
+          
+    helper/nr-helper.h
+    helper/nr-phy-rx-trace.h
+    helper/nr-mac-rx-trace.h
+    helper/nr-point-to-point-epc-helper.h
+    helper/nr-bearer-stats-calculator.h
+    helper/nr-bearer-stats-connector.h
+    helper/nr-bearer-stats-simple.h
+    helper/beamforming-helper-base.h
+    helper/ideal-beamforming-helper.h
+    helper/realistic-beamforming-helper.h
+    helper/node-distribution-scenario-interface.h
+    helper/grid-scenario-helper.h
+    helper/hexagonal-grid-scenario-helper.h
+    helper/file-scenario-helper.h
+    helper/cc-bwp-helper.h
+    helper/nr-radio-environment-map-helper.h
+    helper/nr-spectrum-value-helper.h
+    helper/scenario-parameters.h
+    helper/three-gpp-ftp-m1-helper.h
+    helper/nr-stats-calculator.h
+    helper/nr-mac-scheduling-stats.h
+    model/nr-net-device.h
+    model/nr-gnb-net-device.h
+    model/nr-ue-net-device.h
+    model/nr-phy.h
+    model/nr-gnb-phy.h
+    model/nr-ue-phy.h
+    model/nr-spectrum-phy.h
+    model/nr-interference.h
+    model/nr-mac-pdu-info.h
+    model/nr-mac-header-vs.h
+    model/nr-mac-header-vs-ul.h
+    model/nr-mac-header-vs-dl.h
+    model/nr-mac-header-fs.h
+    model/nr-mac-header-fs-ul.h
+    model/nr-mac-header-fs-dl.h
+    model/nr-mac-short-bsr-ce.h
+    model/nr-phy-mac-common.h
+    model/nr-mac-scheduler.h
+    model/nr-mac-scheduler-tdma-rr.h
+    model/nr-mac-scheduler-tdma-pf.h
+    model/nr-mac-scheduler-ofdma-rr.h
+    model/nr-mac-scheduler-ofdma-pf.h
+    model/nr-mac-scheduler-tdma-qos.h
+    model/nr-mac-scheduler-ofdma-qos.h
+    model/nr-control-messages.h
+    model/nr-spectrum-signal-parameters.h
+    model/nr-radio-bearer-tag.h
+    model/nr-amc.h
+    model/nr-mac-sched-sap.h
+    model/nr-mac-csched-sap.h
+    model/nr-phy-sap.h
+    model/nr-lte-mi-error-model.h
+    model/nr-gnb-mac.h
+    model/nr-ue-mac.h
+    model/nr-rrc-protocol-ideal.h
+    model/nr-harq-phy.h
+    model/bandwidth-part-gnb.h
+    model/bandwidth-part-ue.h
+    model/bwp-manager-gnb.h
+    model/bwp-manager-ue.h
+    model/bwp-manager-algorithm.h
+    model/nr-mac-harq-process.h
+    model/nr-mac-harq-vector.h
+    model/nr-mac-scheduler-harq-rr.h
+    model/nr-mac-scheduler-cqi-management.h
+    model/nr-mac-scheduler-lcg.h
+    model/nr-mac-scheduler-ns3.h
+    model/nr-mac-scheduler-tdma.h
+    model/nr-mac-scheduler-ofdma.h
+    model/nr-mac-scheduler-ofdma-mr.h
+    model/nr-mac-scheduler-tdma-mr.h
+    model/nr-mac-scheduler-ue-info.h
+    model/nr-mac-scheduler-ue-info-mr.h
+    model/nr-mac-scheduler-ue-info-rr.h
+    model/nr-mac-scheduler-ue-info-pf.h
+    model/nr-mac-scheduler-ue-info-qos.h
+    model/nr-mac-scheduler-lc-alg.h
+    model/nr-mac-scheduler-lc-rr.h
+    model/nr-mac-scheduler-lc-qos.h
+    model/nr-eesm-error-model.h
+    model/nr-eesm-t1.h
+    model/nr-eesm-t2.h
+    model/nr-eesm-ir.h
+    model/nr-eesm-cc.h
+    model/nr-eesm-ir-t1.h
+    model/nr-eesm-ir-t2.h
+    model/nr-eesm-cc-t1.h
+    model/nr-eesm-cc-t2.h
+    model/nr-error-model.h
+    model/nr-ch-access-manager.h
+    model/beam-id.h
+    model/beamforming-vector.h
+    model/beam-manager.h
+    model/ideal-beamforming-algorithm.h
+    model/realistic-beamforming-algorithm.h
+    model/sfnsf.h
+    model/lena-error-model.h
+    model/nr-mac-scheduler-srs.h
+    model/nr-mac-scheduler-srs-default.h
+    model/nr-ue-power-control.h
+    model/realistic-bf-manager.h
+    model/beam-conf-id.h
+    utils/three-gpp-channel-model-param.h
+    utils/distance-based-three-gpp-spectrum-propagation-loss-model.h
+    utils/traffic-generators/model/traffic-generator.h
+    utils/traffic-generators/model/traffic-generator-ftp-single.h
+    utils/traffic-generators/model/traffic-generator-ngmn-ftp-multi.h
+    utils/traffic-generators/model/traffic-generator-ngmn-video.h
+    utils/traffic-generators/model/traffic-generator-ngmn-gaming.h
+    utils/traffic-generators/model/traffic-generator-ngmn-voip.h
+    utils/traffic-generators/model/traffic-generator-3gpp-pose-control.h
+    utils/traffic-generators/model/traffic-generator-3gpp-audio-data.h
+    utils/traffic-generators/model/traffic-generator-3gpp-generic-video.h
+    utils/traffic-generators/helper/traffic-generator-helper.h
+    utils/traffic-generators/helper/xr-traffic-mixer-helper.h
+)
+
+
+set(test_sources
+    test/nr-system-test-configurations.cc
+    test/nr-test-numerology-delay.cc
+    test/nr-test-fdm-of-numerologies.cc
+    test/nr-test-sched.cc
+    test/nr-system-test-schedulers-tdma-rr.cc
+    test/nr-system-test-schedulers-tdma-pf.cc
+    test/nr-system-test-schedulers-tdma-mr.cc
+    test/nr-system-test-schedulers-ofdma-rr.cc
+    test/nr-system-test-schedulers-ofdma-pf.cc
+    test/nr-system-test-schedulers-ofdma-mr.cc
+    test/nr-antenna-3gpp-model-conf.cc
+    test/nr-test-l2sm-eesm.cc
+    test/nr-lte-pattern-generation.cc
+    test/nr-phy-patterns.cc
+    test/nr-test-sfnsf.cc
+    test/nr-test-timings.cc
+    test/nr-spectrum-phy-test.cc
+    test/nr-lte-cc-bwp-configuration.cc
+    test/system-scheduler-test.cc
+    test/nr-mac-short-bsr-ce-test.cc
+    test/nr-test-notching.cc
+    test/nr-realistic-beamforming-test.cc
+    test/nr-uplink-power-control-test.cc
+    test/nr-power-allocation.cc
+    test/nr-test-harq.cc
+    utils/traffic-generators/test/traffic-generator-test.cc
+    test/system-scheduler-test-qos.cc
+)
+
+build_lib(
+  LIBNAME nr
+  SOURCE_FILES ${source_files}
+  HEADER_FILES ${header_files}
+  LIBRARIES_TO_LINK
+    ${liblte}
+    ${libinternet-apps}
+  TEST_SOURCES ${test_sources}
+)
