@@ -98,68 +98,68 @@ memb_ASN_RRC_maxCID_constraint_42(const asn_TYPE_descriptor_t *td, const void *s
  * so here we adjust the DEF accordingly.
  */
 static asn_per_constraints_t asn_PER_type_ASN_RRC_discardTimer_constr_3 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 4,  4,  0,  15 }	/* (0..15) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 4,  4,  0,  15 }	/* (0..15) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_type_ASN_RRC_pdcp_SN_SizeUL_constr_20 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 1,  1,  0,  1 }	/* (0..1) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 1,  1,  0,  1 }	/* (0..1) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_type_ASN_RRC_pdcp_SN_SizeDL_constr_23 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 1,  1,  0,  1 }	/* (0..1) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 1,  1,  0,  1 }	/* (0..1) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_type_ASN_RRC_drb_ContinueROHC_constr_40 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 0,  0,  0,  0 }	/* (0..0) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 0,  0,  0,  0 }	/* (0..0) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_maxCID_constr_29 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 14,  14,  1,  16383 }	/* (1..16383) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 14,  14,  1,  16383 }	/* (1..16383) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_type_ASN_RRC_drb_ContinueROHC_constr_46 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 0,  0,  0,  0 }	/* (0..0) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 0,  0,  0,  0 }	/* (0..0) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_maxCID_constr_43 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 14,  14,  1,  16383 }	/* (1..16383) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 14,  14,  1,  16383 }	/* (1..16383) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_type_ASN_RRC_headerCompression_constr_26 CC_NOTUSED = {
-	{ APC_CONSTRAINED | APC_EXTENSIBLE,  2,  2,  0,  2 }	/* (0..2,...) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED | asn_per_constraint_t::APC_EXTENSIBLE,  2,  2,  0,  2 }	/* (0..2,...) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_type_ASN_RRC_integrityProtection_constr_49 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 0,  0,  0,  0 }	/* (0..0) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 0,  0,  0,  0 }	/* (0..0) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_type_ASN_RRC_statusReportRequired_constr_51 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 0,  0,  0,  0 }	/* (0..0) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 0,  0,  0,  0 }	/* (0..0) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_type_ASN_RRC_outOfOrderDelivery_constr_53 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 0,  0,  0,  0 }	/* (0..0) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 0,  0,  0,  0 }	/* (0..0) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_type_ASN_RRC_t_Reordering_constr_61 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 6,  6,  0,  63 }	/* (0..63) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 6,  6,  0,  63 }	/* (0..63) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_type_ASN_RRC_cipheringDisabled_constr_128 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 0,  0,  0,  0 }	/* (0..0) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 0,  0,  0,  0 }	/* (0..0) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static const asn_INTEGER_enum_map_t asn_MAP_ASN_RRC_discardTimer_value2enum_3[] = {

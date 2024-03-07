@@ -24,23 +24,23 @@
  * so here we adjust the DEF accordingly.
  */
 static asn_per_constraints_t asn_PER_type_ASN_RRC_t310_constr_2 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 4,  4,  0,  8 }	/* (0..8) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 4,  4,  0,  8 }	/* (0..8) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_type_ASN_RRC_n310_constr_12 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 3,  3,  0,  7 }	/* (0..7) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 3,  3,  0,  7 }	/* (0..7) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_type_ASN_RRC_n311_constr_21 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 3,  3,  0,  7 }	/* (0..7) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 3,  3,  0,  7 }	/* (0..7) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_type_ASN_RRC_t311_v1530_constr_32 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 3,  3,  0,  6 }	/* (0..6) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 3,  3,  0,  6 }	/* (0..6) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static const asn_INTEGER_enum_map_t asn_MAP_ASN_RRC_t310_value2enum_2[] = {

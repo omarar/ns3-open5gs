@@ -58,13 +58,13 @@ memb_ASN_RRC_additionalSpectrumEmission_constraint_1(const asn_TYPE_descriptor_t
 }
 
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_additionalPmax_constr_2 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 6,  6, -30,  33 }	/* (-30..33) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 6,  6, -30,  33 }	/* (-30..33) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_additionalSpectrumEmission_constr_3 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 9,  9,  1,  288 }	/* (1..288) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 9,  9,  1,  288 }	/* (1..288) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 asn_TYPE_member_t asn_MBR_ASN_RRC_EUTRA_NS_PmaxValue_1[] = {

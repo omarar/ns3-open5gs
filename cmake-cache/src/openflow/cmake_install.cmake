@@ -1,4 +1,4 @@
-# Install script for directory: /home/omar/ns-3-dev/src/openflow
+# Install script for directory: /home/omar/Desktop/git_repo/ns3-open5gs/src/openflow
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

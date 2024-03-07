@@ -1,6 +1,6 @@
-#include <asn_application.h>
-#include <asn_internal.h>
-#include <per_decoder.h>
+#include <ns3/asn_application.h>
+#include <ns3/asn_internal.h>
+#include <ns3/per_decoder.h>
 
 /*
  * Decode a "Production of a complete encoding", X.691#10.1.

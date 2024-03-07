@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/omar/ns-3-dev/src/netanim/model/animation-interface.cc" "src/netanim/CMakeFiles/libnetanim-obj.dir/model/animation-interface.cc.o" "gcc" "src/netanim/CMakeFiles/libnetanim-obj.dir/model/animation-interface.cc.o.d"
-  "/home/omar/ns-3-dev/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx" "src/netanim/CMakeFiles/libnetanim-obj.dir/model/animation-interface.cc.o" "gcc" "src/netanim/CMakeFiles/libnetanim-obj.dir/model/animation-interface.cc.o.d"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/src/netanim/model/animation-interface.cc" "src/netanim/CMakeFiles/libnetanim-obj.dir/model/animation-interface.cc.o" "gcc" "src/netanim/CMakeFiles/libnetanim-obj.dir/model/animation-interface.cc.o.d"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx" "src/netanim/CMakeFiles/libnetanim-obj.dir/model/animation-interface.cc.o" "gcc" "src/netanim/CMakeFiles/libnetanim-obj.dir/model/animation-interface.cc.o.d"
   )
 
 # Targets to which this target links.

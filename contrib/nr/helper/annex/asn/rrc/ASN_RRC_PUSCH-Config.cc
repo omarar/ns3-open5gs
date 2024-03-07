@@ -151,78 +151,78 @@ memb_ASN_RRC_maxRank_constraint_1(const asn_TYPE_descriptor_t *td, const void *s
 }
 
 static asn_per_constraints_t asn_PER_type_ASN_RRC_txConfig_constr_3 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 1,  1,  0,  1 }	/* (0..1) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 1,  1,  0,  1 }	/* (0..1) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_type_ASN_RRC_frequencyHopping_constr_9 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 1,  1,  0,  1 }	/* (0..1) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 1,  1,  0,  1 }	/* (0..1) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_Member_constr_13 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 9,  9,  1,  274 }	/* (1..274) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 9,  9,  1,  274 }	/* (1..274) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_type_ASN_RRC_frequencyHoppingOffsetLists_constr_12 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_CONSTRAINED,	 2,  2,  1,  4 }	/* (SIZE(1..4)) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  1,  4 }	/* (SIZE(1..4)) */,
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_type_ASN_RRC_resourceAllocation_constr_14 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_type_ASN_RRC_pusch_AggregationFactor_constr_19 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_type_ASN_RRC_mcs_Table_constr_23 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 1,  1,  0,  1 }	/* (0..1) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 1,  1,  0,  1 }	/* (0..1) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_type_ASN_RRC_mcs_TableTransformPrecoder_constr_26 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 1,  1,  0,  1 }	/* (0..1) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 1,  1,  0,  1 }	/* (0..1) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_type_ASN_RRC_transformPrecoder_constr_29 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 1,  1,  0,  1 }	/* (0..1) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 1,  1,  0,  1 }	/* (0..1) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_type_ASN_RRC_codebookSubset_constr_32 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_type_ASN_RRC_rbg_Size_constr_37 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 0,  0,  0,  0 }	/* (0..0) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 0,  0,  0,  0 }	/* (0..0) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_type_ASN_RRC_tp_pi2BPSK_constr_40 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 0,  0,  0,  0 }	/* (0..0) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 0,  0,  0,  0 }	/* (0..0) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_dataScramblingIdentityPUSCH_constr_2 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 10,  10,  0,  1023 }	/* (0..1023) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 10,  10,  0,  1023 }	/* (0..1023) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_frequencyHoppingOffsetLists_constr_12 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_CONSTRAINED,	 2,  2,  1,  4 }	/* (SIZE(1..4)) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  1,  4 }	/* (SIZE(1..4)) */,
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_maxRank_constr_36 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  1,  4 }	/* (1..4) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  1,  4 }	/* (1..4) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static const asn_INTEGER_enum_map_t asn_MAP_ASN_RRC_txConfig_value2enum_3[] = {

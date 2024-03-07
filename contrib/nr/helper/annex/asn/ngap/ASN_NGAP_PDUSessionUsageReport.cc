@@ -13,8 +13,8 @@
  * so here we adjust the DEF accordingly.
  */
 static asn_per_constraints_t asn_PER_type_ASN_NGAP_rATType_constr_2 CC_NOTUSED = {
-	{ APC_CONSTRAINED | APC_EXTENSIBLE,  1,  1,  0,  1 }	/* (0..1,...) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED | asn_per_constraint_t::APC_EXTENSIBLE,  1,  1,  0,  1 }	/* (0..1,...) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static const asn_INTEGER_enum_map_t asn_MAP_ASN_NGAP_rATType_value2enum_2[] = {

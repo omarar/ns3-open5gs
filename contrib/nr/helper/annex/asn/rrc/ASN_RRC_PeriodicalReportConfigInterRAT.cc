@@ -37,13 +37,13 @@ memb_ASN_RRC_maxReportCells_constraint_1(const asn_TYPE_descriptor_t *td, const 
 }
 
 static asn_per_constraints_t asn_PER_type_ASN_RRC_reportAmount_constr_3 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 3,  3,  0,  7 }	/* (0..7) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 3,  3,  0,  7 }	/* (0..7) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_maxReportCells_constr_13 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 3,  3,  1,  8 }	/* (1..8) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 3,  3,  1,  8 }	/* (1..8) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static const asn_INTEGER_enum_map_t asn_MAP_ASN_RRC_reportAmount_value2enum_3[] = {

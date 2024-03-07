@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omar/ns-3-dev
+CMAKE_SOURCE_DIR = /home/omar/Desktop/git_repo/ns3-open5gs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omar/ns-3-dev/cmake-cache
+CMAKE_BINARY_DIR = /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache
 
 # Include any dependencies generated for this target.
 include src/olsr/CMakeFiles/libolsr-obj.dir/depend.make
@@ -74,64 +74,64 @@ src/olsr/CMakeFiles/libolsr-obj.dir/helper/olsr-helper.cc.o: ../src/olsr/helper/
 src/olsr/CMakeFiles/libolsr-obj.dir/helper/olsr-helper.cc.o: CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx
 src/olsr/CMakeFiles/libolsr-obj.dir/helper/olsr-helper.cc.o: CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx.gch
 src/olsr/CMakeFiles/libolsr-obj.dir/helper/olsr-helper.cc.o: src/olsr/CMakeFiles/libolsr-obj.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omar/ns-3-dev/cmake-cache/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/olsr/CMakeFiles/libolsr-obj.dir/helper/olsr-helper.cc.o"
-	cd /home/omar/ns-3-dev/cmake-cache/src/olsr && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/ns-3-dev/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx -MD -MT src/olsr/CMakeFiles/libolsr-obj.dir/helper/olsr-helper.cc.o -MF CMakeFiles/libolsr-obj.dir/helper/olsr-helper.cc.o.d -o CMakeFiles/libolsr-obj.dir/helper/olsr-helper.cc.o -c /home/omar/ns-3-dev/src/olsr/helper/olsr-helper.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/olsr/CMakeFiles/libolsr-obj.dir/helper/olsr-helper.cc.o"
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/olsr && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx -MD -MT src/olsr/CMakeFiles/libolsr-obj.dir/helper/olsr-helper.cc.o -MF CMakeFiles/libolsr-obj.dir/helper/olsr-helper.cc.o.d -o CMakeFiles/libolsr-obj.dir/helper/olsr-helper.cc.o -c /home/omar/Desktop/git_repo/ns3-open5gs/src/olsr/helper/olsr-helper.cc
 
 src/olsr/CMakeFiles/libolsr-obj.dir/helper/olsr-helper.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/libolsr-obj.dir/helper/olsr-helper.cc.i"
-	cd /home/omar/ns-3-dev/cmake-cache/src/olsr && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/ns-3-dev/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx -E /home/omar/ns-3-dev/src/olsr/helper/olsr-helper.cc > CMakeFiles/libolsr-obj.dir/helper/olsr-helper.cc.i
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/olsr && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx -E /home/omar/Desktop/git_repo/ns3-open5gs/src/olsr/helper/olsr-helper.cc > CMakeFiles/libolsr-obj.dir/helper/olsr-helper.cc.i
 
 src/olsr/CMakeFiles/libolsr-obj.dir/helper/olsr-helper.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/libolsr-obj.dir/helper/olsr-helper.cc.s"
-	cd /home/omar/ns-3-dev/cmake-cache/src/olsr && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/ns-3-dev/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx -S /home/omar/ns-3-dev/src/olsr/helper/olsr-helper.cc -o CMakeFiles/libolsr-obj.dir/helper/olsr-helper.cc.s
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/olsr && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx -S /home/omar/Desktop/git_repo/ns3-open5gs/src/olsr/helper/olsr-helper.cc -o CMakeFiles/libolsr-obj.dir/helper/olsr-helper.cc.s
 
 src/olsr/CMakeFiles/libolsr-obj.dir/model/olsr-header.cc.o: src/olsr/CMakeFiles/libolsr-obj.dir/flags.make
 src/olsr/CMakeFiles/libolsr-obj.dir/model/olsr-header.cc.o: ../src/olsr/model/olsr-header.cc
 src/olsr/CMakeFiles/libolsr-obj.dir/model/olsr-header.cc.o: CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx
 src/olsr/CMakeFiles/libolsr-obj.dir/model/olsr-header.cc.o: CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx.gch
 src/olsr/CMakeFiles/libolsr-obj.dir/model/olsr-header.cc.o: src/olsr/CMakeFiles/libolsr-obj.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omar/ns-3-dev/cmake-cache/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/olsr/CMakeFiles/libolsr-obj.dir/model/olsr-header.cc.o"
-	cd /home/omar/ns-3-dev/cmake-cache/src/olsr && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/ns-3-dev/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx -MD -MT src/olsr/CMakeFiles/libolsr-obj.dir/model/olsr-header.cc.o -MF CMakeFiles/libolsr-obj.dir/model/olsr-header.cc.o.d -o CMakeFiles/libolsr-obj.dir/model/olsr-header.cc.o -c /home/omar/ns-3-dev/src/olsr/model/olsr-header.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/olsr/CMakeFiles/libolsr-obj.dir/model/olsr-header.cc.o"
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/olsr && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx -MD -MT src/olsr/CMakeFiles/libolsr-obj.dir/model/olsr-header.cc.o -MF CMakeFiles/libolsr-obj.dir/model/olsr-header.cc.o.d -o CMakeFiles/libolsr-obj.dir/model/olsr-header.cc.o -c /home/omar/Desktop/git_repo/ns3-open5gs/src/olsr/model/olsr-header.cc
 
 src/olsr/CMakeFiles/libolsr-obj.dir/model/olsr-header.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/libolsr-obj.dir/model/olsr-header.cc.i"
-	cd /home/omar/ns-3-dev/cmake-cache/src/olsr && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/ns-3-dev/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx -E /home/omar/ns-3-dev/src/olsr/model/olsr-header.cc > CMakeFiles/libolsr-obj.dir/model/olsr-header.cc.i
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/olsr && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx -E /home/omar/Desktop/git_repo/ns3-open5gs/src/olsr/model/olsr-header.cc > CMakeFiles/libolsr-obj.dir/model/olsr-header.cc.i
 
 src/olsr/CMakeFiles/libolsr-obj.dir/model/olsr-header.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/libolsr-obj.dir/model/olsr-header.cc.s"
-	cd /home/omar/ns-3-dev/cmake-cache/src/olsr && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/ns-3-dev/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx -S /home/omar/ns-3-dev/src/olsr/model/olsr-header.cc -o CMakeFiles/libolsr-obj.dir/model/olsr-header.cc.s
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/olsr && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx -S /home/omar/Desktop/git_repo/ns3-open5gs/src/olsr/model/olsr-header.cc -o CMakeFiles/libolsr-obj.dir/model/olsr-header.cc.s
 
 src/olsr/CMakeFiles/libolsr-obj.dir/model/olsr-routing-protocol.cc.o: src/olsr/CMakeFiles/libolsr-obj.dir/flags.make
 src/olsr/CMakeFiles/libolsr-obj.dir/model/olsr-routing-protocol.cc.o: ../src/olsr/model/olsr-routing-protocol.cc
 src/olsr/CMakeFiles/libolsr-obj.dir/model/olsr-routing-protocol.cc.o: CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx
 src/olsr/CMakeFiles/libolsr-obj.dir/model/olsr-routing-protocol.cc.o: CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx.gch
 src/olsr/CMakeFiles/libolsr-obj.dir/model/olsr-routing-protocol.cc.o: src/olsr/CMakeFiles/libolsr-obj.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omar/ns-3-dev/cmake-cache/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/olsr/CMakeFiles/libolsr-obj.dir/model/olsr-routing-protocol.cc.o"
-	cd /home/omar/ns-3-dev/cmake-cache/src/olsr && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/ns-3-dev/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx -MD -MT src/olsr/CMakeFiles/libolsr-obj.dir/model/olsr-routing-protocol.cc.o -MF CMakeFiles/libolsr-obj.dir/model/olsr-routing-protocol.cc.o.d -o CMakeFiles/libolsr-obj.dir/model/olsr-routing-protocol.cc.o -c /home/omar/ns-3-dev/src/olsr/model/olsr-routing-protocol.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/olsr/CMakeFiles/libolsr-obj.dir/model/olsr-routing-protocol.cc.o"
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/olsr && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx -MD -MT src/olsr/CMakeFiles/libolsr-obj.dir/model/olsr-routing-protocol.cc.o -MF CMakeFiles/libolsr-obj.dir/model/olsr-routing-protocol.cc.o.d -o CMakeFiles/libolsr-obj.dir/model/olsr-routing-protocol.cc.o -c /home/omar/Desktop/git_repo/ns3-open5gs/src/olsr/model/olsr-routing-protocol.cc
 
 src/olsr/CMakeFiles/libolsr-obj.dir/model/olsr-routing-protocol.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/libolsr-obj.dir/model/olsr-routing-protocol.cc.i"
-	cd /home/omar/ns-3-dev/cmake-cache/src/olsr && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/ns-3-dev/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx -E /home/omar/ns-3-dev/src/olsr/model/olsr-routing-protocol.cc > CMakeFiles/libolsr-obj.dir/model/olsr-routing-protocol.cc.i
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/olsr && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx -E /home/omar/Desktop/git_repo/ns3-open5gs/src/olsr/model/olsr-routing-protocol.cc > CMakeFiles/libolsr-obj.dir/model/olsr-routing-protocol.cc.i
 
 src/olsr/CMakeFiles/libolsr-obj.dir/model/olsr-routing-protocol.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/libolsr-obj.dir/model/olsr-routing-protocol.cc.s"
-	cd /home/omar/ns-3-dev/cmake-cache/src/olsr && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/ns-3-dev/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx -S /home/omar/ns-3-dev/src/olsr/model/olsr-routing-protocol.cc -o CMakeFiles/libolsr-obj.dir/model/olsr-routing-protocol.cc.s
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/olsr && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx -S /home/omar/Desktop/git_repo/ns3-open5gs/src/olsr/model/olsr-routing-protocol.cc -o CMakeFiles/libolsr-obj.dir/model/olsr-routing-protocol.cc.s
 
 src/olsr/CMakeFiles/libolsr-obj.dir/model/olsr-state.cc.o: src/olsr/CMakeFiles/libolsr-obj.dir/flags.make
 src/olsr/CMakeFiles/libolsr-obj.dir/model/olsr-state.cc.o: ../src/olsr/model/olsr-state.cc
 src/olsr/CMakeFiles/libolsr-obj.dir/model/olsr-state.cc.o: CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx
 src/olsr/CMakeFiles/libolsr-obj.dir/model/olsr-state.cc.o: CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx.gch
 src/olsr/CMakeFiles/libolsr-obj.dir/model/olsr-state.cc.o: src/olsr/CMakeFiles/libolsr-obj.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omar/ns-3-dev/cmake-cache/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/olsr/CMakeFiles/libolsr-obj.dir/model/olsr-state.cc.o"
-	cd /home/omar/ns-3-dev/cmake-cache/src/olsr && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/ns-3-dev/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx -MD -MT src/olsr/CMakeFiles/libolsr-obj.dir/model/olsr-state.cc.o -MF CMakeFiles/libolsr-obj.dir/model/olsr-state.cc.o.d -o CMakeFiles/libolsr-obj.dir/model/olsr-state.cc.o -c /home/omar/ns-3-dev/src/olsr/model/olsr-state.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/olsr/CMakeFiles/libolsr-obj.dir/model/olsr-state.cc.o"
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/olsr && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx -MD -MT src/olsr/CMakeFiles/libolsr-obj.dir/model/olsr-state.cc.o -MF CMakeFiles/libolsr-obj.dir/model/olsr-state.cc.o.d -o CMakeFiles/libolsr-obj.dir/model/olsr-state.cc.o -c /home/omar/Desktop/git_repo/ns3-open5gs/src/olsr/model/olsr-state.cc
 
 src/olsr/CMakeFiles/libolsr-obj.dir/model/olsr-state.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/libolsr-obj.dir/model/olsr-state.cc.i"
-	cd /home/omar/ns-3-dev/cmake-cache/src/olsr && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/ns-3-dev/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx -E /home/omar/ns-3-dev/src/olsr/model/olsr-state.cc > CMakeFiles/libolsr-obj.dir/model/olsr-state.cc.i
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/olsr && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx -E /home/omar/Desktop/git_repo/ns3-open5gs/src/olsr/model/olsr-state.cc > CMakeFiles/libolsr-obj.dir/model/olsr-state.cc.i
 
 src/olsr/CMakeFiles/libolsr-obj.dir/model/olsr-state.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/libolsr-obj.dir/model/olsr-state.cc.s"
-	cd /home/omar/ns-3-dev/cmake-cache/src/olsr && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/ns-3-dev/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx -S /home/omar/ns-3-dev/src/olsr/model/olsr-state.cc -o CMakeFiles/libolsr-obj.dir/model/olsr-state.cc.s
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/olsr && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx -S /home/omar/Desktop/git_repo/ns3-open5gs/src/olsr/model/olsr-state.cc -o CMakeFiles/libolsr-obj.dir/model/olsr-state.cc.s
 
 libolsr-obj: src/olsr/CMakeFiles/libolsr-obj.dir/helper/olsr-helper.cc.o
 libolsr-obj: src/olsr/CMakeFiles/libolsr-obj.dir/model/olsr-header.cc.o
@@ -145,10 +145,10 @@ src/olsr/CMakeFiles/libolsr-obj.dir/build: libolsr-obj
 .PHONY : src/olsr/CMakeFiles/libolsr-obj.dir/build
 
 src/olsr/CMakeFiles/libolsr-obj.dir/clean:
-	cd /home/omar/ns-3-dev/cmake-cache/src/olsr && $(CMAKE_COMMAND) -P CMakeFiles/libolsr-obj.dir/cmake_clean.cmake
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/olsr && $(CMAKE_COMMAND) -P CMakeFiles/libolsr-obj.dir/cmake_clean.cmake
 .PHONY : src/olsr/CMakeFiles/libolsr-obj.dir/clean
 
 src/olsr/CMakeFiles/libolsr-obj.dir/depend:
-	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omar/ns-3-dev /home/omar/ns-3-dev/src/olsr /home/omar/ns-3-dev/cmake-cache /home/omar/ns-3-dev/cmake-cache/src/olsr /home/omar/ns-3-dev/cmake-cache/src/olsr/CMakeFiles/libolsr-obj.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omar/Desktop/git_repo/ns3-open5gs /home/omar/Desktop/git_repo/ns3-open5gs/src/olsr /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/olsr /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/olsr/CMakeFiles/libolsr-obj.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/olsr/CMakeFiles/libolsr-obj.dir/depend
 

@@ -9,8 +9,8 @@
 
 #include "ASN_RRC_EUTRA-RSTD-InfoList.h"
 asn_per_constraints_t asn_PER_type_ASN_RRC_LocationMeasurementInfo_constr_1 CC_NOTUSED = {
-	{ APC_CONSTRAINED | APC_EXTENSIBLE,  0,  0,  0,  0 }	/* (0..0,...) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED | asn_per_constraint_t::APC_EXTENSIBLE,  0,  0,  0,  0 }	/* (0..0,...) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 asn_TYPE_member_t asn_MBR_ASN_RRC_LocationMeasurementInfo_1[] = {

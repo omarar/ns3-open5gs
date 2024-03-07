@@ -64,18 +64,18 @@ memb_ASN_RRC_cellId_index_constraint_1(const asn_TYPE_descriptor_t *td, const vo
 }
 
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_cellIdentity_EUTRA_constr_2 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_CONSTRAINED,	 0,  0,  28,  28 }	/* (SIZE(28..28)) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 0,  0,  28,  28 }	/* (SIZE(28..28)) */,
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_cellId_index_constr_3 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 4,  4,  1,  12 }	/* (1..12) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 4,  4,  1,  12 }	/* (1..12) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 asn_per_constraints_t asn_PER_type_ASN_RRC_CellIdentity_EUTRA_5GC_constr_1 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 1,  1,  0,  1 }	/* (0..1) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 1,  1,  0,  1 }	/* (0..1) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 asn_TYPE_member_t asn_MBR_ASN_RRC_CellIdentity_EUTRA_5GC_1[] = {

@@ -33,8 +33,8 @@ memb_ASN_RRC_txDirectCurrentLocation_constraint_1(const asn_TYPE_descriptor_t *t
 }
 
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_txDirectCurrentLocation_constr_4 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 12,  12,  0,  3301 }	/* (0..3301) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 12,  12,  0,  3301 }	/* (0..3301) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 asn_TYPE_member_t asn_MBR_ASN_RRC_UplinkTxDirectCurrentBWP_1[] = {

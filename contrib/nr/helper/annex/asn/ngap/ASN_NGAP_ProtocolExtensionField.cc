@@ -11,10 +11,10 @@ static const long asn_VAL_1_ASN_NGAP_id_TNLAssociationTransportLayerAddressNGRAN
 static const long asn_VAL_1_ASN_NGAP_reject = 0;
 static const long asn_VAL_1_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_AMF_TNLAssociationToRemoveItem_ExtIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_1_ASN_NGAP_id_TNLAssociationTransportLayerAddressNGRAN },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_1_ASN_NGAP_reject },
-	{ "&Extension", aioc__type, &asn_DEF_ASN_NGAP_CPTransportLayerInformation },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_1_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_1_ASN_NGAP_id_TNLAssociationTransportLayerAddressNGRAN },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_1_ASN_NGAP_reject },
+	{ "&Extension", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CPTransportLayerInformation },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_1_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_AMF_TNLAssociationToRemoveItem_ExtIEs_1[] = {
 	{ 1, 4, asn_IOS_ASN_NGAP_AMF_TNLAssociationToRemoveItem_ExtIEs_1_rows }
@@ -23,10 +23,10 @@ static const long asn_VAL_2_ASN_NGAP_id_OldAssociatedQosFlowList_ULendmarkerexpe
 static const long asn_VAL_2_ASN_NGAP_reject = 0;
 static const long asn_VAL_2_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_DRBsSubjectToStatusTransferItem_ExtIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_2_ASN_NGAP_id_OldAssociatedQosFlowList_ULendmarkerexpected },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_2_ASN_NGAP_reject },
-	{ "&Extension", aioc__type, &asn_DEF_ASN_NGAP_AssociatedQosFlowList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_2_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_2_ASN_NGAP_id_OldAssociatedQosFlowList_ULendmarkerexpected },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_2_ASN_NGAP_reject },
+	{ "&Extension", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AssociatedQosFlowList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_2_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_DRBsSubjectToStatusTransferItem_ExtIEs_1[] = {
 	{ 1, 4, asn_IOS_ASN_NGAP_DRBsSubjectToStatusTransferItem_ExtIEs_1_rows }
@@ -41,18 +41,18 @@ static const long asn_VAL_5_ASN_NGAP_id_AdditionalULForwardingUPTNLInformation =
 static const long asn_VAL_5_ASN_NGAP_reject = 0;
 static const long asn_VAL_5_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_HandoverCommandTransfer_ExtIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_3_ASN_NGAP_id_AdditionalDLForwardingUPTNLInformation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_3_ASN_NGAP_ignore },
-	{ "&Extension", aioc__type, &asn_DEF_ASN_NGAP_QosFlowPerTNLInformationList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_3_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_4_ASN_NGAP_id_ULForwardingUP_TNLInformation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_4_ASN_NGAP_reject },
-	{ "&Extension", aioc__type, &asn_DEF_ASN_NGAP_UPTransportLayerInformation },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_4_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_5_ASN_NGAP_id_AdditionalULForwardingUPTNLInformation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_5_ASN_NGAP_reject },
-	{ "&Extension", aioc__type, &asn_DEF_ASN_NGAP_UPTransportLayerInformationList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_5_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_3_ASN_NGAP_id_AdditionalDLForwardingUPTNLInformation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_3_ASN_NGAP_ignore },
+	{ "&Extension", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_QosFlowPerTNLInformationList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_3_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_4_ASN_NGAP_id_ULForwardingUP_TNLInformation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_4_ASN_NGAP_reject },
+	{ "&Extension", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UPTransportLayerInformation },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_4_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_5_ASN_NGAP_id_AdditionalULForwardingUPTNLInformation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_5_ASN_NGAP_reject },
+	{ "&Extension", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UPTransportLayerInformationList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_5_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_HandoverCommandTransfer_ExtIEs_1[] = {
 	{ 3, 4, asn_IOS_ASN_NGAP_HandoverCommandTransfer_ExtIEs_1_rows }
@@ -67,18 +67,18 @@ static const long asn_VAL_8_ASN_NGAP_id_AdditionalULForwardingUPTNLInformation =
 static const long asn_VAL_8_ASN_NGAP_reject = 0;
 static const long asn_VAL_8_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_HandoverRequestAcknowledgeTransfer_ExtIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_6_ASN_NGAP_id_AdditionalDLUPTNLInformationForHOList },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_6_ASN_NGAP_ignore },
-	{ "&Extension", aioc__type, &asn_DEF_ASN_NGAP_AdditionalDLUPTNLInformationForHOList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_6_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_7_ASN_NGAP_id_ULForwardingUP_TNLInformation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_7_ASN_NGAP_reject },
-	{ "&Extension", aioc__type, &asn_DEF_ASN_NGAP_UPTransportLayerInformation },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_7_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_8_ASN_NGAP_id_AdditionalULForwardingUPTNLInformation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_8_ASN_NGAP_reject },
-	{ "&Extension", aioc__type, &asn_DEF_ASN_NGAP_UPTransportLayerInformationList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_8_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_6_ASN_NGAP_id_AdditionalDLUPTNLInformationForHOList },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_6_ASN_NGAP_ignore },
+	{ "&Extension", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AdditionalDLUPTNLInformationForHOList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_6_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_7_ASN_NGAP_id_ULForwardingUP_TNLInformation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_7_ASN_NGAP_reject },
+	{ "&Extension", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UPTransportLayerInformation },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_7_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_8_ASN_NGAP_id_AdditionalULForwardingUPTNLInformation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_8_ASN_NGAP_reject },
+	{ "&Extension", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UPTransportLayerInformationList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_8_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_HandoverRequestAcknowledgeTransfer_ExtIEs_1[] = {
 	{ 3, 4, asn_IOS_ASN_NGAP_HandoverRequestAcknowledgeTransfer_ExtIEs_1_rows }
@@ -87,10 +87,10 @@ static const long asn_VAL_9_ASN_NGAP_id_LocationReportingAdditionalInfo = 170;
 static const long asn_VAL_9_ASN_NGAP_ignore = 1;
 static const long asn_VAL_9_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_LocationReportingRequestType_ExtIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_9_ASN_NGAP_id_LocationReportingAdditionalInfo },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_9_ASN_NGAP_ignore },
-	{ "&Extension", aioc__type, &asn_DEF_ASN_NGAP_LocationReportingAdditionalInfo },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_9_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_9_ASN_NGAP_id_LocationReportingAdditionalInfo },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_9_ASN_NGAP_ignore },
+	{ "&Extension", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_LocationReportingAdditionalInfo },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_9_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_LocationReportingRequestType_ExtIEs_1[] = {
 	{ 1, 4, asn_IOS_ASN_NGAP_LocationReportingRequestType_ExtIEs_1_rows }
@@ -105,18 +105,18 @@ static const long asn_VAL_12_ASN_NGAP_id_CNTypeRestrictionsForEquivalent = 160;
 static const long asn_VAL_12_ASN_NGAP_ignore = 1;
 static const long asn_VAL_12_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_MobilityRestrictionList_ExtIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_10_ASN_NGAP_id_LastEUTRAN_PLMNIdentity },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_10_ASN_NGAP_ignore },
-	{ "&Extension", aioc__type, &asn_DEF_ASN_NGAP_PLMNIdentity },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_10_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_11_ASN_NGAP_id_CNTypeRestrictionsForServing },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_11_ASN_NGAP_ignore },
-	{ "&Extension", aioc__type, &asn_DEF_ASN_NGAP_CNTypeRestrictionsForServing },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_11_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_12_ASN_NGAP_id_CNTypeRestrictionsForEquivalent },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_12_ASN_NGAP_ignore },
-	{ "&Extension", aioc__type, &asn_DEF_ASN_NGAP_CNTypeRestrictionsForEquivalent },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_12_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_10_ASN_NGAP_id_LastEUTRAN_PLMNIdentity },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_10_ASN_NGAP_ignore },
+	{ "&Extension", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PLMNIdentity },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_10_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_11_ASN_NGAP_id_CNTypeRestrictionsForServing },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_11_ASN_NGAP_ignore },
+	{ "&Extension", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CNTypeRestrictionsForServing },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_11_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_12_ASN_NGAP_id_CNTypeRestrictionsForEquivalent },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_12_ASN_NGAP_ignore },
+	{ "&Extension", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CNTypeRestrictionsForEquivalent },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_12_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_MobilityRestrictionList_ExtIEs_1[] = {
 	{ 3, 4, asn_IOS_ASN_NGAP_MobilityRestrictionList_ExtIEs_1_rows }
@@ -125,10 +125,10 @@ static const long asn_VAL_13_ASN_NGAP_id_AdditionalNGU_UP_TNLInformation = 154;
 static const long asn_VAL_13_ASN_NGAP_ignore = 1;
 static const long asn_VAL_13_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_PathSwitchRequestAcknowledgeTransfer_ExtIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_13_ASN_NGAP_id_AdditionalNGU_UP_TNLInformation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_13_ASN_NGAP_ignore },
-	{ "&Extension", aioc__type, &asn_DEF_ASN_NGAP_UPTransportLayerInformationPairList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_13_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_13_ASN_NGAP_id_AdditionalNGU_UP_TNLInformation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_13_ASN_NGAP_ignore },
+	{ "&Extension", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UPTransportLayerInformationPairList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_13_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_PathSwitchRequestAcknowledgeTransfer_ExtIEs_1[] = {
 	{ 1, 4, asn_IOS_ASN_NGAP_PathSwitchRequestAcknowledgeTransfer_ExtIEs_1_rows }
@@ -137,10 +137,10 @@ static const long asn_VAL_14_ASN_NGAP_id_AdditionalDLQosFlowPerTNLInformation = 
 static const long asn_VAL_14_ASN_NGAP_ignore = 1;
 static const long asn_VAL_14_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_PathSwitchRequestTransfer_ExtIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_14_ASN_NGAP_id_AdditionalDLQosFlowPerTNLInformation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_14_ASN_NGAP_ignore },
-	{ "&Extension", aioc__type, &asn_DEF_ASN_NGAP_QosFlowPerTNLInformationList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_14_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_14_ASN_NGAP_id_AdditionalDLQosFlowPerTNLInformation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_14_ASN_NGAP_ignore },
+	{ "&Extension", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_QosFlowPerTNLInformationList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_14_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_PathSwitchRequestTransfer_ExtIEs_1[] = {
 	{ 1, 4, asn_IOS_ASN_NGAP_PathSwitchRequestTransfer_ExtIEs_1_rows }
@@ -149,10 +149,10 @@ static const long asn_VAL_15_ASN_NGAP_id_PDUSessionResourceReleaseResponseTransf
 static const long asn_VAL_15_ASN_NGAP_ignore = 1;
 static const long asn_VAL_15_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_PDUSessionResourceItemCxtRelCpl_ExtIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_15_ASN_NGAP_id_PDUSessionResourceReleaseResponseTransfer },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_15_ASN_NGAP_ignore },
-	{ "&Extension", aioc__type, &asn_DEF_OCTET_STRING },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_15_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_15_ASN_NGAP_id_PDUSessionResourceReleaseResponseTransfer },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_15_ASN_NGAP_ignore },
+	{ "&Extension", asn_ioc_cell_t::aioc__type, &asn_DEF_OCTET_STRING },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_15_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_PDUSessionResourceItemCxtRelCpl_ExtIEs_1[] = {
 	{ 1, 4, asn_IOS_ASN_NGAP_PDUSessionResourceItemCxtRelCpl_ExtIEs_1_rows }
@@ -161,10 +161,10 @@ static const long asn_VAL_16_ASN_NGAP_id_AdditionalNGU_UP_TNLInformation = 154;
 static const long asn_VAL_16_ASN_NGAP_ignore = 1;
 static const long asn_VAL_16_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_PDUSessionResourceModifyResponseTransfer_ExtIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_16_ASN_NGAP_id_AdditionalNGU_UP_TNLInformation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_16_ASN_NGAP_ignore },
-	{ "&Extension", aioc__type, &asn_DEF_ASN_NGAP_UPTransportLayerInformationPairList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_16_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_16_ASN_NGAP_id_AdditionalNGU_UP_TNLInformation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_16_ASN_NGAP_ignore },
+	{ "&Extension", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UPTransportLayerInformationPairList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_16_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_PDUSessionResourceModifyResponseTransfer_ExtIEs_1[] = {
 	{ 1, 4, asn_IOS_ASN_NGAP_PDUSessionResourceModifyResponseTransfer_ExtIEs_1_rows }
@@ -176,14 +176,14 @@ static const long asn_VAL_18_ASN_NGAP_id_SecurityResult = 156;
 static const long asn_VAL_18_ASN_NGAP_ignore = 1;
 static const long asn_VAL_18_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_PDUSessionResourceModifyIndicationTransfer_ExtIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_17_ASN_NGAP_id_SecondaryRATUsageInformation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_17_ASN_NGAP_ignore },
-	{ "&Extension", aioc__type, &asn_DEF_ASN_NGAP_SecondaryRATUsageInformation },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_17_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_18_ASN_NGAP_id_SecurityResult },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_18_ASN_NGAP_ignore },
-	{ "&Extension", aioc__type, &asn_DEF_ASN_NGAP_SecurityResult },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_18_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_17_ASN_NGAP_id_SecondaryRATUsageInformation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_17_ASN_NGAP_ignore },
+	{ "&Extension", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_SecondaryRATUsageInformation },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_17_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_18_ASN_NGAP_id_SecurityResult },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_18_ASN_NGAP_ignore },
+	{ "&Extension", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_SecurityResult },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_18_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_PDUSessionResourceModifyIndicationTransfer_ExtIEs_1[] = {
 	{ 2, 4, asn_IOS_ASN_NGAP_PDUSessionResourceModifyIndicationTransfer_ExtIEs_1_rows }
@@ -192,10 +192,10 @@ static const long asn_VAL_19_ASN_NGAP_id_S_NSSAI = 148;
 static const long asn_VAL_19_ASN_NGAP_reject = 0;
 static const long asn_VAL_19_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_PDUSessionResourceModifyItemModReq_ExtIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_19_ASN_NGAP_id_S_NSSAI },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_19_ASN_NGAP_reject },
-	{ "&Extension", aioc__type, &asn_DEF_ASN_NGAP_S_NSSAI },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_19_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_19_ASN_NGAP_id_S_NSSAI },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_19_ASN_NGAP_reject },
+	{ "&Extension", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_S_NSSAI },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_19_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_PDUSessionResourceModifyItemModReq_ExtIEs_1[] = {
 	{ 1, 4, asn_IOS_ASN_NGAP_PDUSessionResourceModifyItemModReq_ExtIEs_1_rows }
@@ -204,10 +204,10 @@ static const long asn_VAL_20_ASN_NGAP_id_SecondaryRATUsageInformation = 144;
 static const long asn_VAL_20_ASN_NGAP_ignore = 1;
 static const long asn_VAL_20_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_PDUSessionResourceNotifyReleasedTransfer_ExtIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_20_ASN_NGAP_id_SecondaryRATUsageInformation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_20_ASN_NGAP_ignore },
-	{ "&Extension", aioc__type, &asn_DEF_ASN_NGAP_SecondaryRATUsageInformation },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_20_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_20_ASN_NGAP_id_SecondaryRATUsageInformation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_20_ASN_NGAP_ignore },
+	{ "&Extension", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_SecondaryRATUsageInformation },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_20_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_PDUSessionResourceNotifyReleasedTransfer_ExtIEs_1[] = {
 	{ 1, 4, asn_IOS_ASN_NGAP_PDUSessionResourceNotifyReleasedTransfer_ExtIEs_1_rows }
@@ -216,10 +216,10 @@ static const long asn_VAL_21_ASN_NGAP_id_SecondaryRATUsageInformation = 144;
 static const long asn_VAL_21_ASN_NGAP_ignore = 1;
 static const long asn_VAL_21_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_PDUSessionResourceNotifyTransfer_ExtIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_21_ASN_NGAP_id_SecondaryRATUsageInformation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_21_ASN_NGAP_ignore },
-	{ "&Extension", aioc__type, &asn_DEF_ASN_NGAP_SecondaryRATUsageInformation },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_21_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_21_ASN_NGAP_id_SecondaryRATUsageInformation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_21_ASN_NGAP_ignore },
+	{ "&Extension", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_SecondaryRATUsageInformation },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_21_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_PDUSessionResourceNotifyTransfer_ExtIEs_1[] = {
 	{ 1, 4, asn_IOS_ASN_NGAP_PDUSessionResourceNotifyTransfer_ExtIEs_1_rows }
@@ -228,10 +228,10 @@ static const long asn_VAL_22_ASN_NGAP_id_SecondaryRATUsageInformation = 144;
 static const long asn_VAL_22_ASN_NGAP_ignore = 1;
 static const long asn_VAL_22_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_PDUSessionResourceReleaseResponseTransfer_ExtIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_22_ASN_NGAP_id_SecondaryRATUsageInformation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_22_ASN_NGAP_ignore },
-	{ "&Extension", aioc__type, &asn_DEF_ASN_NGAP_SecondaryRATUsageInformation },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_22_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_22_ASN_NGAP_id_SecondaryRATUsageInformation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_22_ASN_NGAP_ignore },
+	{ "&Extension", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_SecondaryRATUsageInformation },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_22_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_PDUSessionResourceReleaseResponseTransfer_ExtIEs_1[] = {
 	{ 1, 4, asn_IOS_ASN_NGAP_PDUSessionResourceReleaseResponseTransfer_ExtIEs_1_rows }
@@ -240,10 +240,10 @@ static const long asn_VAL_23_ASN_NGAP_id_ULForwarding = 163;
 static const long asn_VAL_23_ASN_NGAP_reject = 0;
 static const long asn_VAL_23_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_QosFlowInformationItem_ExtIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_23_ASN_NGAP_id_ULForwarding },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_23_ASN_NGAP_reject },
-	{ "&Extension", aioc__type, &asn_DEF_ASN_NGAP_ULForwarding },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_23_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_23_ASN_NGAP_id_ULForwarding },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_23_ASN_NGAP_reject },
+	{ "&Extension", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_ULForwarding },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_23_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_QosFlowInformationItem_ExtIEs_1[] = {
 	{ 1, 4, asn_IOS_ASN_NGAP_QosFlowInformationItem_ExtIEs_1_rows }
@@ -252,10 +252,10 @@ static const long asn_VAL_24_ASN_NGAP_id_MaximumIntegrityProtectedDataRate_DL = 
 static const long asn_VAL_24_ASN_NGAP_ignore = 1;
 static const long asn_VAL_24_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_SecurityIndication_ExtIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_24_ASN_NGAP_id_MaximumIntegrityProtectedDataRate_DL },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_24_ASN_NGAP_ignore },
-	{ "&Extension", aioc__type, &asn_DEF_ASN_NGAP_MaximumIntegrityProtectedDataRate },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_24_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_24_ASN_NGAP_id_MaximumIntegrityProtectedDataRate_DL },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_24_ASN_NGAP_ignore },
+	{ "&Extension", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_MaximumIntegrityProtectedDataRate },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_24_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_SecurityIndication_ExtIEs_1[] = {
 	{ 1, 4, asn_IOS_ASN_NGAP_SecurityIndication_ExtIEs_1_rows }
@@ -264,10 +264,10 @@ static const long asn_VAL_25_ASN_NGAP_id_PSCellInformation = 149;
 static const long asn_VAL_25_ASN_NGAP_ignore = 1;
 static const long asn_VAL_25_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_UserLocationInformationEUTRA_ExtIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_25_ASN_NGAP_id_PSCellInformation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_25_ASN_NGAP_ignore },
-	{ "&Extension", aioc__type, &asn_DEF_ASN_NGAP_NGRAN_CGI },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_25_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_25_ASN_NGAP_id_PSCellInformation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_25_ASN_NGAP_ignore },
+	{ "&Extension", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_NGRAN_CGI },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_25_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_UserLocationInformationEUTRA_ExtIEs_1[] = {
 	{ 1, 4, asn_IOS_ASN_NGAP_UserLocationInformationEUTRA_ExtIEs_1_rows }
@@ -276,10 +276,10 @@ static const long asn_VAL_26_ASN_NGAP_id_PSCellInformation = 149;
 static const long asn_VAL_26_ASN_NGAP_ignore = 1;
 static const long asn_VAL_26_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_UserLocationInformationNR_ExtIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_26_ASN_NGAP_id_PSCellInformation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_26_ASN_NGAP_ignore },
-	{ "&Extension", aioc__type, &asn_DEF_ASN_NGAP_NGRAN_CGI },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_26_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_26_ASN_NGAP_id_PSCellInformation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_26_ASN_NGAP_ignore },
+	{ "&Extension", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_NGRAN_CGI },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_26_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_UserLocationInformationNR_ExtIEs_1[] = {
 	{ 1, 4, asn_IOS_ASN_NGAP_UserLocationInformationNR_ExtIEs_1_rows }
@@ -288,10 +288,10 @@ static const long asn_VAL_27_ASN_NGAP_id_SCTP_TLAs = 173;
 static const long asn_VAL_27_ASN_NGAP_ignore = 1;
 static const long asn_VAL_27_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_XnExtTLA_Item_ExtIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_27_ASN_NGAP_id_SCTP_TLAs },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_27_ASN_NGAP_ignore },
-	{ "&Extension", aioc__type, &asn_DEF_ASN_NGAP_SCTP_TLAs },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_27_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolExtensionID, &asn_VAL_27_ASN_NGAP_id_SCTP_TLAs },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_27_ASN_NGAP_ignore },
+	{ "&Extension", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_SCTP_TLAs },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_27_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_XnExtTLA_Item_ExtIEs_1[] = {
 	{ 1, 4, asn_IOS_ASN_NGAP_XnExtTLA_Item_ExtIEs_1_rows }
@@ -649,7 +649,7 @@ select_AMF_TNLAssociationToRemoveItem_ExtIEs_ASN_NGAP_criticality_type(const asn
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -695,7 +695,7 @@ select_AMF_TNLAssociationToRemoveItem_ExtIEs_ASN_NGAP_extensionValue_type(const 
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -2719,7 +2719,7 @@ select_DRBsSubjectToStatusTransferItem_ExtIEs_ASN_NGAP_criticality_type(const as
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -2765,7 +2765,7 @@ select_DRBsSubjectToStatusTransferItem_ExtIEs_ASN_NGAP_extensionValue_type(const
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -4474,7 +4474,7 @@ select_HandoverCommandTransfer_ExtIEs_ASN_NGAP_criticality_type(const asn_TYPE_d
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -4520,7 +4520,7 @@ select_HandoverCommandTransfer_ExtIEs_ASN_NGAP_extensionValue_type(const asn_TYP
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -4654,7 +4654,7 @@ select_HandoverRequestAcknowledgeTransfer_ExtIEs_ASN_NGAP_criticality_type(const
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -4700,7 +4700,7 @@ select_HandoverRequestAcknowledgeTransfer_ExtIEs_ASN_NGAP_extensionValue_type(co
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -5086,7 +5086,7 @@ select_LocationReportingRequestType_ExtIEs_ASN_NGAP_criticality_type(const asn_T
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -5132,7 +5132,7 @@ select_LocationReportingRequestType_ExtIEs_ASN_NGAP_extensionValue_type(const as
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -5203,7 +5203,7 @@ select_MobilityRestrictionList_ExtIEs_ASN_NGAP_criticality_type(const asn_TYPE_d
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -5249,7 +5249,7 @@ select_MobilityRestrictionList_ExtIEs_ASN_NGAP_extensionValue_type(const asn_TYP
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -5698,7 +5698,7 @@ select_PathSwitchRequestAcknowledgeTransfer_ExtIEs_ASN_NGAP_criticality_type(con
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -5744,7 +5744,7 @@ select_PathSwitchRequestAcknowledgeTransfer_ExtIEs_ASN_NGAP_extensionValue_type(
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -5878,7 +5878,7 @@ select_PathSwitchRequestTransfer_ExtIEs_ASN_NGAP_criticality_type(const asn_TYPE
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -5924,7 +5924,7 @@ select_PathSwitchRequestTransfer_ExtIEs_ASN_NGAP_extensionValue_type(const asn_T
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -6772,7 +6772,7 @@ select_PDUSessionResourceItemCxtRelCpl_ExtIEs_ASN_NGAP_criticality_type(const as
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -6818,7 +6818,7 @@ select_PDUSessionResourceItemCxtRelCpl_ExtIEs_ASN_NGAP_extensionValue_type(const
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -7141,7 +7141,7 @@ select_PDUSessionResourceModifyResponseTransfer_ExtIEs_ASN_NGAP_criticality_type
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -7187,7 +7187,7 @@ select_PDUSessionResourceModifyResponseTransfer_ExtIEs_ASN_NGAP_extensionValue_t
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -7258,7 +7258,7 @@ select_PDUSessionResourceModifyIndicationTransfer_ExtIEs_ASN_NGAP_criticality_ty
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -7304,7 +7304,7 @@ select_PDUSessionResourceModifyIndicationTransfer_ExtIEs_ASN_NGAP_extensionValue
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -7501,7 +7501,7 @@ select_PDUSessionResourceModifyItemModReq_ExtIEs_ASN_NGAP_criticality_type(const
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -7547,7 +7547,7 @@ select_PDUSessionResourceModifyItemModReq_ExtIEs_ASN_NGAP_extensionValue_type(co
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -7807,7 +7807,7 @@ select_PDUSessionResourceNotifyReleasedTransfer_ExtIEs_ASN_NGAP_criticality_type
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -7853,7 +7853,7 @@ select_PDUSessionResourceNotifyReleasedTransfer_ExtIEs_ASN_NGAP_extensionValue_t
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -7924,7 +7924,7 @@ select_PDUSessionResourceNotifyTransfer_ExtIEs_ASN_NGAP_criticality_type(const a
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -7970,7 +7970,7 @@ select_PDUSessionResourceNotifyTransfer_ExtIEs_ASN_NGAP_extensionValue_type(cons
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -8356,7 +8356,7 @@ select_PDUSessionResourceReleaseResponseTransfer_ExtIEs_ASN_NGAP_criticality_typ
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -8402,7 +8402,7 @@ select_PDUSessionResourceReleaseResponseTransfer_ExtIEs_ASN_NGAP_extensionValue_
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -9544,7 +9544,7 @@ select_QosFlowInformationItem_ExtIEs_ASN_NGAP_criticality_type(const asn_TYPE_de
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -9590,7 +9590,7 @@ select_QosFlowInformationItem_ExtIEs_ASN_NGAP_extensionValue_type(const asn_TYPE
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -10921,7 +10921,7 @@ select_SecurityIndication_ExtIEs_ASN_NGAP_criticality_type(const asn_TYPE_descri
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -10967,7 +10967,7 @@ select_SecurityIndication_ExtIEs_ASN_NGAP_extensionValue_type(const asn_TYPE_des
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -13180,7 +13180,7 @@ select_UserLocationInformationEUTRA_ExtIEs_ASN_NGAP_criticality_type(const asn_T
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -13226,7 +13226,7 @@ select_UserLocationInformationEUTRA_ExtIEs_ASN_NGAP_extensionValue_type(const as
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -13360,7 +13360,7 @@ select_UserLocationInformationNR_ExtIEs_ASN_NGAP_criticality_type(const asn_TYPE
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -13406,7 +13406,7 @@ select_UserLocationInformationNR_ExtIEs_ASN_NGAP_extensionValue_type(const asn_T
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -13603,7 +13603,7 @@ select_XnExtTLA_Item_ExtIEs_ASN_NGAP_criticality_type(const asn_TYPE_descriptor_
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -13649,7 +13649,7 @@ select_XnExtTLA_Item_ExtIEs_ASN_NGAP_extensionValue_type(const asn_TYPE_descript
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -13746,2955 +13746,2955 @@ memb_ASN_NGAP_extensionValue_constraint_781(const asn_TYPE_descriptor_t *td, con
 }
 
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_2 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_3 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_4 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_6 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_7 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_8 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_10 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_11 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_12 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_14 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_15 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_16 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_18 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_19 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_20 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_22 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_23 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_24 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_26 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_27 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_28 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_30 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_31 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_32 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_34 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_35 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_36 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_38 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_39 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_40 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_42 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_43 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_44 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_46 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_47 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_48 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_50 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_51 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_52 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_54 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_55 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_56 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_58 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_59 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_60 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_62 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_63 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_64 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_66 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_67 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_68 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_70 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_71 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_72 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_74 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_75 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_76 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_78 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_79 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_80 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_82 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_83 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_84 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_86 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_87 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_88 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_90 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_91 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_92 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_94 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_95 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_96 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_98 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_99 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_100 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_102 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_103 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_104 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_106 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_107 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_108 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_110 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_111 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_112 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_114 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_115 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_116 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_118 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_119 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_120 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_122 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_123 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_124 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_126 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_127 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_128 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_130 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_131 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_132 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_134 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_135 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_136 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_138 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_139 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_140 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_142 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_143 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_144 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_146 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_147 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_148 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_150 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_151 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_152 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_154 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_155 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_156 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_158 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_159 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_160 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_162 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_163 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_164 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_166 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_167 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_168 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_170 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_171 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_172 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_174 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_175 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_176 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_178 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_179 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_180 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_182 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_183 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_184 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_186 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_187 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_188 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_190 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_191 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_192 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_194 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_195 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_196 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_198 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_199 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_200 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_202 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_203 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_204 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_206 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_207 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_208 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_210 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_211 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_212 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_214 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_215 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_216 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_218 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_219 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_220 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_222 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_223 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_224 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_226 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_227 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_228 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_230 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_231 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_232 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_234 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_235 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_236 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_238 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_239 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_240 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_242 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_243 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_244 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_246 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_247 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_248 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_250 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_251 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_252 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_254 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_255 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_256 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_258 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_259 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_260 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_262 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_263 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_264 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_266 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_267 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_268 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_270 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_271 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_272 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_274 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_275 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_276 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_278 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_279 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_280 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_282 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_283 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_284 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_286 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_287 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_288 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_290 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_291 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_292 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_294 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_295 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_296 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_298 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_299 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_300 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_302 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_303 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_304 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_306 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_307 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_308 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_310 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_311 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_312 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_314 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_315 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_316 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_318 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_319 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_320 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_322 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_323 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_324 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_326 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_327 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_328 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_330 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_331 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_332 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_334 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_335 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_336 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_338 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_339 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_340 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_342 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_343 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_344 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_346 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_347 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_348 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_350 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_351 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_352 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_354 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_355 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_356 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_358 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_359 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_360 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_362 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_363 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_364 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_366 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_367 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_368 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_370 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_371 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_372 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_374 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_375 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_376 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_378 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_379 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_380 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_OCTET_STRING_CONTAINING_PDUSessionResourceReleaseResponseTransfer__constr_15 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_SEMI_CONSTRAINED,	-1, -1,  0,  0 }	/* (SIZE(0..MAX)) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_SEMI_CONSTRAINED,	-1, -1,  0,  0 }	/* (SIZE(0..MAX)) */,
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_382 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_383 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_384 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_386 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_387 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_388 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_390 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_391 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_392 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_394 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_395 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_396 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_398 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_399 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_400 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_402 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_403 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_404 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_406 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_407 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_408 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_410 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_411 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_412 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_414 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_415 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_416 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_418 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_419 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_420 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_422 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_423 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_424 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_426 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_427 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_428 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_430 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_431 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_432 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_434 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_435 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_436 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_438 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_439 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_440 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_442 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_443 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_444 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_446 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_447 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_448 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_450 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_451 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_452 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_454 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_455 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_456 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_458 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_459 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_460 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_462 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_463 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_464 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_466 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_467 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_468 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_470 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_471 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_472 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_474 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_475 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_476 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_478 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_479 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_480 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_482 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_483 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_484 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_486 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_487 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_488 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_490 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_491 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_492 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_494 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_495 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_496 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_498 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_499 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_500 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_502 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_503 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_504 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_506 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_507 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_508 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_510 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_511 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_512 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_514 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_515 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_516 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_518 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_519 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_520 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_522 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_523 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_524 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_526 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_527 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_528 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_530 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_531 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_532 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_534 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_535 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_536 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_538 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_539 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_540 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_542 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_543 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_544 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_546 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_547 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_548 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_550 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_551 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_552 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_554 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_555 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_556 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_558 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_559 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_560 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_562 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_563 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_564 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_566 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_567 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_568 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_570 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_571 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_572 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_574 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_575 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_576 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_578 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_579 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_580 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_582 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_583 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_584 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_586 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_587 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_588 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_590 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_591 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_592 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_594 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_595 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_596 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_598 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_599 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_600 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_602 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_603 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_604 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_606 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_607 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_608 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_610 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_611 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_612 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_614 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_615 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_616 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_618 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_619 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_620 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_622 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_623 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_624 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_626 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_627 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_628 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_630 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_631 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_632 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_634 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_635 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_636 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_638 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_639 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_640 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_642 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_643 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_644 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_646 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_647 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_648 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_650 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_651 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_652 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_654 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_655 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_656 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_658 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_659 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_660 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_662 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_663 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_664 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_666 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_667 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_668 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_670 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_671 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_672 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_674 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_675 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_676 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_678 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_679 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_680 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_682 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_683 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_684 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_686 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_687 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_688 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_690 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_691 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_692 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_694 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_695 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_696 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_698 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_699 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_700 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_702 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_703 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_704 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_706 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_707 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_708 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_710 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_711 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_712 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_714 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_715 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_716 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_718 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_719 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_720 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_722 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_723 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_724 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_726 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_727 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_728 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_730 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_731 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_732 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_734 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_735 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_736 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_738 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_739 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_740 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_742 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_743 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_744 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_746 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_747 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_748 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_750 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_751 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_752 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_754 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_755 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_756 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_758 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_759 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_760 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_762 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_763 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_764 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_766 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_767 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_768 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_770 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_771 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_772 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_774 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_775 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_776 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_778 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_779 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_780 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_782 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_783 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_extensionValue_constr_784 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_4 = {
-	sizeof(struct ASN_NGAP_AdditionalDLUPTNLInformationForHOItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_AdditionalDLUPTNLInformationForHOItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_AdditionalDLUPTNLInformationForHOItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_AdditionalDLUPTNLInformationForHOItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_AdditionalDLUPTNLInformationForHOItem_ExtIEs_t::ASN_NGAP_AdditionalDLUPTNLInformationForHOItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_AdditionalDLUPTNLInformationForHOItem_ExtIEs_t::ASN_NGAP_AdditionalDLUPTNLInformationForHOItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_AdditionalDLUPTNLInformationForHOItem_ExtIEs_t::ASN_NGAP_AdditionalDLUPTNLInformationForHOItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_AdditionalDLUPTNLInformationForHOItem_ExtIEs_t::ASN_NGAP_AdditionalDLUPTNLInformationForHOItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -16776,10 +16776,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_AdditionalDLUPTNLInformationForHOItem_Ext
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_8 = {
-	sizeof(struct ASN_NGAP_AllocationAndRetentionPriority_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_AllocationAndRetentionPriority_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_AllocationAndRetentionPriority_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_AllocationAndRetentionPriority_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_AllocationAndRetentionPriority_ExtIEs_t::ASN_NGAP_AllocationAndRetentionPriority_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_AllocationAndRetentionPriority_ExtIEs_t::ASN_NGAP_AllocationAndRetentionPriority_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_AllocationAndRetentionPriority_ExtIEs_t::ASN_NGAP_AllocationAndRetentionPriority_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_AllocationAndRetentionPriority_ExtIEs_t::ASN_NGAP_AllocationAndRetentionPriority_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -16861,10 +16861,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_AllocationAndRetentionPriority_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_12 = {
-	sizeof(struct ASN_NGAP_AllowedNSSAI_Item_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_AllowedNSSAI_Item_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_AllowedNSSAI_Item_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_AllowedNSSAI_Item_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_AllowedNSSAI_Item_ExtIEs_t::ASN_NGAP_AllowedNSSAI_Item_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_AllowedNSSAI_Item_ExtIEs_t::ASN_NGAP_AllowedNSSAI_Item_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_AllowedNSSAI_Item_ExtIEs_t::ASN_NGAP_AllowedNSSAI_Item_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_AllowedNSSAI_Item_ExtIEs_t::ASN_NGAP_AllowedNSSAI_Item_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -16946,10 +16946,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_AllowedNSSAI_Item_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_16 = {
-	sizeof(struct ASN_NGAP_AMF_TNLAssociationSetupItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_AMF_TNLAssociationSetupItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_AMF_TNLAssociationSetupItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_AMF_TNLAssociationSetupItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_AMF_TNLAssociationSetupItem_ExtIEs_t::ASN_NGAP_AMF_TNLAssociationSetupItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_AMF_TNLAssociationSetupItem_ExtIEs_t::ASN_NGAP_AMF_TNLAssociationSetupItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_AMF_TNLAssociationSetupItem_ExtIEs_t::ASN_NGAP_AMF_TNLAssociationSetupItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_AMF_TNLAssociationSetupItem_ExtIEs_t::ASN_NGAP_AMF_TNLAssociationSetupItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -17031,10 +17031,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_AMF_TNLAssociationSetupItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_20 = {
-	sizeof(struct ASN_NGAP_AMF_TNLAssociationToAddItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_AMF_TNLAssociationToAddItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_AMF_TNLAssociationToAddItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_AMF_TNLAssociationToAddItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_AMF_TNLAssociationToAddItem_ExtIEs_t::ASN_NGAP_AMF_TNLAssociationToAddItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_AMF_TNLAssociationToAddItem_ExtIEs_t::ASN_NGAP_AMF_TNLAssociationToAddItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_AMF_TNLAssociationToAddItem_ExtIEs_t::ASN_NGAP_AMF_TNLAssociationToAddItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_AMF_TNLAssociationToAddItem_ExtIEs_t::ASN_NGAP_AMF_TNLAssociationToAddItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -17116,7 +17116,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_AMF_TNLAssociationToAddItem_ExtIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_extensionValue_24[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_AMF_TNLAssociationToRemoveItem_ExtIEs__extensionValue, choice.CPTransportLayerInformation),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_AMF_TNLAssociationToRemoveItem_ExtIEs_t::ASN_NGAP_AMF_TNLAssociationToRemoveItem_ExtIEs__extensionValue, choice.CPTransportLayerInformation),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_CPTransportLayerInformation,
@@ -17131,10 +17131,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_extensionValue_tag2el_24[] =
     { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 0, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_24 = {
-	sizeof(struct ASN_NGAP_AMF_TNLAssociationToRemoveItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_AMF_TNLAssociationToRemoveItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_AMF_TNLAssociationToRemoveItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_AMF_TNLAssociationToRemoveItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_AMF_TNLAssociationToRemoveItem_ExtIEs_t::ASN_NGAP_AMF_TNLAssociationToRemoveItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_AMF_TNLAssociationToRemoveItem_ExtIEs_t::ASN_NGAP_AMF_TNLAssociationToRemoveItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_AMF_TNLAssociationToRemoveItem_ExtIEs_t::ASN_NGAP_AMF_TNLAssociationToRemoveItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_AMF_TNLAssociationToRemoveItem_ExtIEs_t::ASN_NGAP_AMF_TNLAssociationToRemoveItem_ExtIEs__extensionValue *)0)->present),
 	asn_MAP_ASN_NGAP_extensionValue_tag2el_24,
 	2,	/* Count of tags in the map */
 	0, 0,
@@ -17217,10 +17217,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_AMF_TNLAssociationToRemoveItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_28 = {
-	sizeof(struct ASN_NGAP_AMF_TNLAssociationToUpdateItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_AMF_TNLAssociationToUpdateItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_AMF_TNLAssociationToUpdateItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_AMF_TNLAssociationToUpdateItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_AMF_TNLAssociationToUpdateItem_ExtIEs_t::ASN_NGAP_AMF_TNLAssociationToUpdateItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_AMF_TNLAssociationToUpdateItem_ExtIEs_t::ASN_NGAP_AMF_TNLAssociationToUpdateItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_AMF_TNLAssociationToUpdateItem_ExtIEs_t::ASN_NGAP_AMF_TNLAssociationToUpdateItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_AMF_TNLAssociationToUpdateItem_ExtIEs_t::ASN_NGAP_AMF_TNLAssociationToUpdateItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -17302,10 +17302,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_AMF_TNLAssociationToUpdateItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_32 = {
-	sizeof(struct ASN_NGAP_AreaOfInterest_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_AreaOfInterest_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_AreaOfInterest_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_AreaOfInterest_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_AreaOfInterest_ExtIEs_t::ASN_NGAP_AreaOfInterest_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_AreaOfInterest_ExtIEs_t::ASN_NGAP_AreaOfInterest_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_AreaOfInterest_ExtIEs_t::ASN_NGAP_AreaOfInterest_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_AreaOfInterest_ExtIEs_t::ASN_NGAP_AreaOfInterest_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -17387,10 +17387,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_AreaOfInterest_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_36 = {
-	sizeof(struct ASN_NGAP_AreaOfInterestCellItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_AreaOfInterestCellItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_AreaOfInterestCellItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_AreaOfInterestCellItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_AreaOfInterestCellItem_ExtIEs_t::ASN_NGAP_AreaOfInterestCellItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_AreaOfInterestCellItem_ExtIEs_t::ASN_NGAP_AreaOfInterestCellItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_AreaOfInterestCellItem_ExtIEs_t::ASN_NGAP_AreaOfInterestCellItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_AreaOfInterestCellItem_ExtIEs_t::ASN_NGAP_AreaOfInterestCellItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -17472,10 +17472,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_AreaOfInterestCellItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_40 = {
-	sizeof(struct ASN_NGAP_AreaOfInterestItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_AreaOfInterestItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_AreaOfInterestItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_AreaOfInterestItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_AreaOfInterestItem_ExtIEs_t::ASN_NGAP_AreaOfInterestItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_AreaOfInterestItem_ExtIEs_t::ASN_NGAP_AreaOfInterestItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_AreaOfInterestItem_ExtIEs_t::ASN_NGAP_AreaOfInterestItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_AreaOfInterestItem_ExtIEs_t::ASN_NGAP_AreaOfInterestItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -17557,10 +17557,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_AreaOfInterestItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_44 = {
-	sizeof(struct ASN_NGAP_AreaOfInterestRANNodeItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_AreaOfInterestRANNodeItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_AreaOfInterestRANNodeItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_AreaOfInterestRANNodeItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_AreaOfInterestRANNodeItem_ExtIEs_t::ASN_NGAP_AreaOfInterestRANNodeItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_AreaOfInterestRANNodeItem_ExtIEs_t::ASN_NGAP_AreaOfInterestRANNodeItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_AreaOfInterestRANNodeItem_ExtIEs_t::ASN_NGAP_AreaOfInterestRANNodeItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_AreaOfInterestRANNodeItem_ExtIEs_t::ASN_NGAP_AreaOfInterestRANNodeItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -17642,10 +17642,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_AreaOfInterestRANNodeItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_48 = {
-	sizeof(struct ASN_NGAP_AreaOfInterestTAIItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_AreaOfInterestTAIItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_AreaOfInterestTAIItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_AreaOfInterestTAIItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_AreaOfInterestTAIItem_ExtIEs_t::ASN_NGAP_AreaOfInterestTAIItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_AreaOfInterestTAIItem_ExtIEs_t::ASN_NGAP_AreaOfInterestTAIItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_AreaOfInterestTAIItem_ExtIEs_t::ASN_NGAP_AreaOfInterestTAIItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_AreaOfInterestTAIItem_ExtIEs_t::ASN_NGAP_AreaOfInterestTAIItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -17727,10 +17727,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_AreaOfInterestTAIItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_52 = {
-	sizeof(struct ASN_NGAP_AssistanceDataForPaging_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_AssistanceDataForPaging_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_AssistanceDataForPaging_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_AssistanceDataForPaging_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_AssistanceDataForPaging_ExtIEs_t::ASN_NGAP_AssistanceDataForPaging_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_AssistanceDataForPaging_ExtIEs_t::ASN_NGAP_AssistanceDataForPaging_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_AssistanceDataForPaging_ExtIEs_t::ASN_NGAP_AssistanceDataForPaging_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_AssistanceDataForPaging_ExtIEs_t::ASN_NGAP_AssistanceDataForPaging_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -17812,10 +17812,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_AssistanceDataForPaging_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_56 = {
-	sizeof(struct ASN_NGAP_AssistanceDataForRecommendedCells_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_AssistanceDataForRecommendedCells_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_AssistanceDataForRecommendedCells_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_AssistanceDataForRecommendedCells_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_AssistanceDataForRecommendedCells_ExtIEs_t::ASN_NGAP_AssistanceDataForRecommendedCells_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_AssistanceDataForRecommendedCells_ExtIEs_t::ASN_NGAP_AssistanceDataForRecommendedCells_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_AssistanceDataForRecommendedCells_ExtIEs_t::ASN_NGAP_AssistanceDataForRecommendedCells_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_AssistanceDataForRecommendedCells_ExtIEs_t::ASN_NGAP_AssistanceDataForRecommendedCells_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -17897,10 +17897,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_AssistanceDataForRecommendedCells_ExtIEs 
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_60 = {
-	sizeof(struct ASN_NGAP_AssociatedQosFlowItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_AssociatedQosFlowItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_AssociatedQosFlowItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_AssociatedQosFlowItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_AssociatedQosFlowItem_ExtIEs_t::ASN_NGAP_AssociatedQosFlowItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_AssociatedQosFlowItem_ExtIEs_t::ASN_NGAP_AssociatedQosFlowItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_AssociatedQosFlowItem_ExtIEs_t::ASN_NGAP_AssociatedQosFlowItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_AssociatedQosFlowItem_ExtIEs_t::ASN_NGAP_AssociatedQosFlowItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -17982,10 +17982,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_AssociatedQosFlowItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_64 = {
-	sizeof(struct ASN_NGAP_BroadcastPLMNItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_BroadcastPLMNItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_BroadcastPLMNItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_BroadcastPLMNItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_BroadcastPLMNItem_ExtIEs_t::ASN_NGAP_BroadcastPLMNItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_BroadcastPLMNItem_ExtIEs_t::ASN_NGAP_BroadcastPLMNItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_BroadcastPLMNItem_ExtIEs_t::ASN_NGAP_BroadcastPLMNItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_BroadcastPLMNItem_ExtIEs_t::ASN_NGAP_BroadcastPLMNItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -18067,10 +18067,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_BroadcastPLMNItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_68 = {
-	sizeof(struct ASN_NGAP_CancelledCellsInEAI_EUTRA_Item_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_CancelledCellsInEAI_EUTRA_Item_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_CancelledCellsInEAI_EUTRA_Item_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_CancelledCellsInEAI_EUTRA_Item_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_CancelledCellsInEAI_EUTRA_Item_ExtIEs_t::ASN_NGAP_CancelledCellsInEAI_EUTRA_Item_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_CancelledCellsInEAI_EUTRA_Item_ExtIEs_t::ASN_NGAP_CancelledCellsInEAI_EUTRA_Item_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_CancelledCellsInEAI_EUTRA_Item_ExtIEs_t::ASN_NGAP_CancelledCellsInEAI_EUTRA_Item_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_CancelledCellsInEAI_EUTRA_Item_ExtIEs_t::ASN_NGAP_CancelledCellsInEAI_EUTRA_Item_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -18152,10 +18152,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_CancelledCellsInEAI_EUTRA_Item_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_72 = {
-	sizeof(struct ASN_NGAP_CancelledCellsInEAI_NR_Item_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_CancelledCellsInEAI_NR_Item_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_CancelledCellsInEAI_NR_Item_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_CancelledCellsInEAI_NR_Item_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_CancelledCellsInEAI_NR_Item_ExtIEs_t::ASN_NGAP_CancelledCellsInEAI_NR_Item_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_CancelledCellsInEAI_NR_Item_ExtIEs_t::ASN_NGAP_CancelledCellsInEAI_NR_Item_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_CancelledCellsInEAI_NR_Item_ExtIEs_t::ASN_NGAP_CancelledCellsInEAI_NR_Item_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_CancelledCellsInEAI_NR_Item_ExtIEs_t::ASN_NGAP_CancelledCellsInEAI_NR_Item_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -18237,10 +18237,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_CancelledCellsInEAI_NR_Item_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_76 = {
-	sizeof(struct ASN_NGAP_CancelledCellsInTAI_EUTRA_Item_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_CancelledCellsInTAI_EUTRA_Item_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_CancelledCellsInTAI_EUTRA_Item_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_CancelledCellsInTAI_EUTRA_Item_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_CancelledCellsInTAI_EUTRA_Item_ExtIEs_t::ASN_NGAP_CancelledCellsInTAI_EUTRA_Item_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_CancelledCellsInTAI_EUTRA_Item_ExtIEs_t::ASN_NGAP_CancelledCellsInTAI_EUTRA_Item_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_CancelledCellsInTAI_EUTRA_Item_ExtIEs_t::ASN_NGAP_CancelledCellsInTAI_EUTRA_Item_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_CancelledCellsInTAI_EUTRA_Item_ExtIEs_t::ASN_NGAP_CancelledCellsInTAI_EUTRA_Item_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -18322,10 +18322,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_CancelledCellsInTAI_EUTRA_Item_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_80 = {
-	sizeof(struct ASN_NGAP_CancelledCellsInTAI_NR_Item_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_CancelledCellsInTAI_NR_Item_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_CancelledCellsInTAI_NR_Item_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_CancelledCellsInTAI_NR_Item_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_CancelledCellsInTAI_NR_Item_ExtIEs_t::ASN_NGAP_CancelledCellsInTAI_NR_Item_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_CancelledCellsInTAI_NR_Item_ExtIEs_t::ASN_NGAP_CancelledCellsInTAI_NR_Item_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_CancelledCellsInTAI_NR_Item_ExtIEs_t::ASN_NGAP_CancelledCellsInTAI_NR_Item_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_CancelledCellsInTAI_NR_Item_ExtIEs_t::ASN_NGAP_CancelledCellsInTAI_NR_Item_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -18407,10 +18407,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_CancelledCellsInTAI_NR_Item_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_84 = {
-	sizeof(struct ASN_NGAP_CellIDBroadcastEUTRA_Item_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_CellIDBroadcastEUTRA_Item_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_CellIDBroadcastEUTRA_Item_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_CellIDBroadcastEUTRA_Item_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_CellIDBroadcastEUTRA_Item_ExtIEs_t::ASN_NGAP_CellIDBroadcastEUTRA_Item_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_CellIDBroadcastEUTRA_Item_ExtIEs_t::ASN_NGAP_CellIDBroadcastEUTRA_Item_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_CellIDBroadcastEUTRA_Item_ExtIEs_t::ASN_NGAP_CellIDBroadcastEUTRA_Item_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_CellIDBroadcastEUTRA_Item_ExtIEs_t::ASN_NGAP_CellIDBroadcastEUTRA_Item_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -18492,10 +18492,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_CellIDBroadcastEUTRA_Item_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_88 = {
-	sizeof(struct ASN_NGAP_CellIDBroadcastNR_Item_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_CellIDBroadcastNR_Item_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_CellIDBroadcastNR_Item_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_CellIDBroadcastNR_Item_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_CellIDBroadcastNR_Item_ExtIEs_t::ASN_NGAP_CellIDBroadcastNR_Item_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_CellIDBroadcastNR_Item_ExtIEs_t::ASN_NGAP_CellIDBroadcastNR_Item_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_CellIDBroadcastNR_Item_ExtIEs_t::ASN_NGAP_CellIDBroadcastNR_Item_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_CellIDBroadcastNR_Item_ExtIEs_t::ASN_NGAP_CellIDBroadcastNR_Item_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -18577,10 +18577,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_CellIDBroadcastNR_Item_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_92 = {
-	sizeof(struct ASN_NGAP_CellIDCancelledEUTRA_Item_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_CellIDCancelledEUTRA_Item_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_CellIDCancelledEUTRA_Item_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_CellIDCancelledEUTRA_Item_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_CellIDCancelledEUTRA_Item_ExtIEs_t::ASN_NGAP_CellIDCancelledEUTRA_Item_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_CellIDCancelledEUTRA_Item_ExtIEs_t::ASN_NGAP_CellIDCancelledEUTRA_Item_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_CellIDCancelledEUTRA_Item_ExtIEs_t::ASN_NGAP_CellIDCancelledEUTRA_Item_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_CellIDCancelledEUTRA_Item_ExtIEs_t::ASN_NGAP_CellIDCancelledEUTRA_Item_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -18662,10 +18662,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_CellIDCancelledEUTRA_Item_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_96 = {
-	sizeof(struct ASN_NGAP_CellIDCancelledNR_Item_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_CellIDCancelledNR_Item_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_CellIDCancelledNR_Item_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_CellIDCancelledNR_Item_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_CellIDCancelledNR_Item_ExtIEs_t::ASN_NGAP_CellIDCancelledNR_Item_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_CellIDCancelledNR_Item_ExtIEs_t::ASN_NGAP_CellIDCancelledNR_Item_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_CellIDCancelledNR_Item_ExtIEs_t::ASN_NGAP_CellIDCancelledNR_Item_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_CellIDCancelledNR_Item_ExtIEs_t::ASN_NGAP_CellIDCancelledNR_Item_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -18747,10 +18747,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_CellIDCancelledNR_Item_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_100 = {
-	sizeof(struct ASN_NGAP_CellType_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_CellType_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_CellType_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_CellType_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_CellType_ExtIEs_t::ASN_NGAP_CellType_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_CellType_ExtIEs_t::ASN_NGAP_CellType_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_CellType_ExtIEs_t::ASN_NGAP_CellType_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_CellType_ExtIEs_t::ASN_NGAP_CellType_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -18832,10 +18832,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_CellType_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_104 = {
-	sizeof(struct ASN_NGAP_CNAssistedRANTuning_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_CNAssistedRANTuning_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_CNAssistedRANTuning_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_CNAssistedRANTuning_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_CNAssistedRANTuning_ExtIEs_t::ASN_NGAP_CNAssistedRANTuning_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_CNAssistedRANTuning_ExtIEs_t::ASN_NGAP_CNAssistedRANTuning_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_CNAssistedRANTuning_ExtIEs_t::ASN_NGAP_CNAssistedRANTuning_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_CNAssistedRANTuning_ExtIEs_t::ASN_NGAP_CNAssistedRANTuning_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -18917,10 +18917,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_CNAssistedRANTuning_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_108 = {
-	sizeof(struct ASN_NGAP_CNTypeRestrictionsForEquivalentItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_CNTypeRestrictionsForEquivalentItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_CNTypeRestrictionsForEquivalentItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_CNTypeRestrictionsForEquivalentItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_CNTypeRestrictionsForEquivalentItem_ExtIEs_t::ASN_NGAP_CNTypeRestrictionsForEquivalentItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_CNTypeRestrictionsForEquivalentItem_ExtIEs_t::ASN_NGAP_CNTypeRestrictionsForEquivalentItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_CNTypeRestrictionsForEquivalentItem_ExtIEs_t::ASN_NGAP_CNTypeRestrictionsForEquivalentItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_CNTypeRestrictionsForEquivalentItem_ExtIEs_t::ASN_NGAP_CNTypeRestrictionsForEquivalentItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -19002,10 +19002,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_CNTypeRestrictionsForEquivalentItem_ExtIE
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_112 = {
-	sizeof(struct ASN_NGAP_CompletedCellsInEAI_EUTRA_Item_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_CompletedCellsInEAI_EUTRA_Item_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_CompletedCellsInEAI_EUTRA_Item_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_CompletedCellsInEAI_EUTRA_Item_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_CompletedCellsInEAI_EUTRA_Item_ExtIEs_t::ASN_NGAP_CompletedCellsInEAI_EUTRA_Item_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_CompletedCellsInEAI_EUTRA_Item_ExtIEs_t::ASN_NGAP_CompletedCellsInEAI_EUTRA_Item_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_CompletedCellsInEAI_EUTRA_Item_ExtIEs_t::ASN_NGAP_CompletedCellsInEAI_EUTRA_Item_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_CompletedCellsInEAI_EUTRA_Item_ExtIEs_t::ASN_NGAP_CompletedCellsInEAI_EUTRA_Item_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -19087,10 +19087,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_CompletedCellsInEAI_EUTRA_Item_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_116 = {
-	sizeof(struct ASN_NGAP_CompletedCellsInEAI_NR_Item_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_CompletedCellsInEAI_NR_Item_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_CompletedCellsInEAI_NR_Item_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_CompletedCellsInEAI_NR_Item_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_CompletedCellsInEAI_NR_Item_ExtIEs_t::ASN_NGAP_CompletedCellsInEAI_NR_Item_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_CompletedCellsInEAI_NR_Item_ExtIEs_t::ASN_NGAP_CompletedCellsInEAI_NR_Item_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_CompletedCellsInEAI_NR_Item_ExtIEs_t::ASN_NGAP_CompletedCellsInEAI_NR_Item_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_CompletedCellsInEAI_NR_Item_ExtIEs_t::ASN_NGAP_CompletedCellsInEAI_NR_Item_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -19172,10 +19172,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_CompletedCellsInEAI_NR_Item_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_120 = {
-	sizeof(struct ASN_NGAP_CompletedCellsInTAI_EUTRA_Item_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_CompletedCellsInTAI_EUTRA_Item_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_CompletedCellsInTAI_EUTRA_Item_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_CompletedCellsInTAI_EUTRA_Item_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_CompletedCellsInTAI_EUTRA_Item_ExtIEs_t::ASN_NGAP_CompletedCellsInTAI_EUTRA_Item_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_CompletedCellsInTAI_EUTRA_Item_ExtIEs_t::ASN_NGAP_CompletedCellsInTAI_EUTRA_Item_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_CompletedCellsInTAI_EUTRA_Item_ExtIEs_t::ASN_NGAP_CompletedCellsInTAI_EUTRA_Item_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_CompletedCellsInTAI_EUTRA_Item_ExtIEs_t::ASN_NGAP_CompletedCellsInTAI_EUTRA_Item_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -19257,10 +19257,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_CompletedCellsInTAI_EUTRA_Item_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_124 = {
-	sizeof(struct ASN_NGAP_CompletedCellsInTAI_NR_Item_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_CompletedCellsInTAI_NR_Item_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_CompletedCellsInTAI_NR_Item_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_CompletedCellsInTAI_NR_Item_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_CompletedCellsInTAI_NR_Item_ExtIEs_t::ASN_NGAP_CompletedCellsInTAI_NR_Item_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_CompletedCellsInTAI_NR_Item_ExtIEs_t::ASN_NGAP_CompletedCellsInTAI_NR_Item_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_CompletedCellsInTAI_NR_Item_ExtIEs_t::ASN_NGAP_CompletedCellsInTAI_NR_Item_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_CompletedCellsInTAI_NR_Item_ExtIEs_t::ASN_NGAP_CompletedCellsInTAI_NR_Item_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -19342,10 +19342,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_CompletedCellsInTAI_NR_Item_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_128 = {
-	sizeof(struct ASN_NGAP_CoreNetworkAssistanceInformationForInactive_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_CoreNetworkAssistanceInformationForInactive_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_CoreNetworkAssistanceInformationForInactive_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_CoreNetworkAssistanceInformationForInactive_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_CoreNetworkAssistanceInformationForInactive_ExtIEs_t::ASN_NGAP_CoreNetworkAssistanceInformationForInactive_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_CoreNetworkAssistanceInformationForInactive_ExtIEs_t::ASN_NGAP_CoreNetworkAssistanceInformationForInactive_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_CoreNetworkAssistanceInformationForInactive_ExtIEs_t::ASN_NGAP_CoreNetworkAssistanceInformationForInactive_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_CoreNetworkAssistanceInformationForInactive_ExtIEs_t::ASN_NGAP_CoreNetworkAssistanceInformationForInactive_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -19427,10 +19427,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_CoreNetworkAssistanceInformationForInacti
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_132 = {
-	sizeof(struct ASN_NGAP_COUNTValueForPDCP_SN12_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_COUNTValueForPDCP_SN12_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_COUNTValueForPDCP_SN12_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_COUNTValueForPDCP_SN12_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_COUNTValueForPDCP_SN12_ExtIEs_t::ASN_NGAP_COUNTValueForPDCP_SN12_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_COUNTValueForPDCP_SN12_ExtIEs_t::ASN_NGAP_COUNTValueForPDCP_SN12_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_COUNTValueForPDCP_SN12_ExtIEs_t::ASN_NGAP_COUNTValueForPDCP_SN12_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_COUNTValueForPDCP_SN12_ExtIEs_t::ASN_NGAP_COUNTValueForPDCP_SN12_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -19512,10 +19512,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_COUNTValueForPDCP_SN12_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_136 = {
-	sizeof(struct ASN_NGAP_COUNTValueForPDCP_SN18_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_COUNTValueForPDCP_SN18_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_COUNTValueForPDCP_SN18_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_COUNTValueForPDCP_SN18_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_COUNTValueForPDCP_SN18_ExtIEs_t::ASN_NGAP_COUNTValueForPDCP_SN18_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_COUNTValueForPDCP_SN18_ExtIEs_t::ASN_NGAP_COUNTValueForPDCP_SN18_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_COUNTValueForPDCP_SN18_ExtIEs_t::ASN_NGAP_COUNTValueForPDCP_SN18_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_COUNTValueForPDCP_SN18_ExtIEs_t::ASN_NGAP_COUNTValueForPDCP_SN18_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -19597,10 +19597,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_COUNTValueForPDCP_SN18_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_140 = {
-	sizeof(struct ASN_NGAP_CriticalityDiagnostics_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_CriticalityDiagnostics_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_CriticalityDiagnostics_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_CriticalityDiagnostics_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_CriticalityDiagnostics_ExtIEs_t::ASN_NGAP_CriticalityDiagnostics_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_CriticalityDiagnostics_ExtIEs_t::ASN_NGAP_CriticalityDiagnostics_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_CriticalityDiagnostics_ExtIEs_t::ASN_NGAP_CriticalityDiagnostics_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_CriticalityDiagnostics_ExtIEs_t::ASN_NGAP_CriticalityDiagnostics_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -19682,10 +19682,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_CriticalityDiagnostics_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_144 = {
-	sizeof(struct ASN_NGAP_CriticalityDiagnostics_IE_Item_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_CriticalityDiagnostics_IE_Item_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_CriticalityDiagnostics_IE_Item_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_CriticalityDiagnostics_IE_Item_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_CriticalityDiagnostics_IE_Item_ExtIEs_t::ASN_NGAP_CriticalityDiagnostics_IE_Item_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_CriticalityDiagnostics_IE_Item_ExtIEs_t::ASN_NGAP_CriticalityDiagnostics_IE_Item_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_CriticalityDiagnostics_IE_Item_ExtIEs_t::ASN_NGAP_CriticalityDiagnostics_IE_Item_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_CriticalityDiagnostics_IE_Item_ExtIEs_t::ASN_NGAP_CriticalityDiagnostics_IE_Item_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -19767,10 +19767,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_CriticalityDiagnostics_IE_Item_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_148 = {
-	sizeof(struct ASN_NGAP_DataForwardingResponseDRBItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_DataForwardingResponseDRBItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_DataForwardingResponseDRBItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_DataForwardingResponseDRBItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_DataForwardingResponseDRBItem_ExtIEs_t::ASN_NGAP_DataForwardingResponseDRBItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_DataForwardingResponseDRBItem_ExtIEs_t::ASN_NGAP_DataForwardingResponseDRBItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_DataForwardingResponseDRBItem_ExtIEs_t::ASN_NGAP_DataForwardingResponseDRBItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_DataForwardingResponseDRBItem_ExtIEs_t::ASN_NGAP_DataForwardingResponseDRBItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -19852,7 +19852,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_DataForwardingResponseDRBItem_ExtIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_extensionValue_152[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DRBsSubjectToStatusTransferItem_ExtIEs__extensionValue, choice.AssociatedQosFlowList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DRBsSubjectToStatusTransferItem_ExtIEs_t::ASN_NGAP_DRBsSubjectToStatusTransferItem_ExtIEs__extensionValue, choice.AssociatedQosFlowList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AssociatedQosFlowList,
@@ -19866,10 +19866,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_extensionValue_tag2el_152[] 
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 0, 0, 0 } /* AssociatedQosFlowList */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_152 = {
-	sizeof(struct ASN_NGAP_DRBsSubjectToStatusTransferItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_DRBsSubjectToStatusTransferItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_DRBsSubjectToStatusTransferItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_DRBsSubjectToStatusTransferItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_DRBsSubjectToStatusTransferItem_ExtIEs_t::ASN_NGAP_DRBsSubjectToStatusTransferItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_DRBsSubjectToStatusTransferItem_ExtIEs_t::ASN_NGAP_DRBsSubjectToStatusTransferItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_DRBsSubjectToStatusTransferItem_ExtIEs_t::ASN_NGAP_DRBsSubjectToStatusTransferItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_DRBsSubjectToStatusTransferItem_ExtIEs_t::ASN_NGAP_DRBsSubjectToStatusTransferItem_ExtIEs__extensionValue *)0)->present),
 	asn_MAP_ASN_NGAP_extensionValue_tag2el_152,
 	1,	/* Count of tags in the map */
 	0, 0,
@@ -19952,10 +19952,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_DRBsSubjectToStatusTransferItem_ExtIEs = 
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_156 = {
-	sizeof(struct ASN_NGAP_DRBStatusDL12_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_DRBStatusDL12_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_DRBStatusDL12_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_DRBStatusDL12_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_DRBStatusDL12_ExtIEs_t::ASN_NGAP_DRBStatusDL12_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_DRBStatusDL12_ExtIEs_t::ASN_NGAP_DRBStatusDL12_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_DRBStatusDL12_ExtIEs_t::ASN_NGAP_DRBStatusDL12_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_DRBStatusDL12_ExtIEs_t::ASN_NGAP_DRBStatusDL12_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -20037,10 +20037,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_DRBStatusDL12_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_160 = {
-	sizeof(struct ASN_NGAP_DRBStatusDL18_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_DRBStatusDL18_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_DRBStatusDL18_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_DRBStatusDL18_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_DRBStatusDL18_ExtIEs_t::ASN_NGAP_DRBStatusDL18_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_DRBStatusDL18_ExtIEs_t::ASN_NGAP_DRBStatusDL18_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_DRBStatusDL18_ExtIEs_t::ASN_NGAP_DRBStatusDL18_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_DRBStatusDL18_ExtIEs_t::ASN_NGAP_DRBStatusDL18_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -20122,10 +20122,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_DRBStatusDL18_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_164 = {
-	sizeof(struct ASN_NGAP_DRBStatusUL12_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_DRBStatusUL12_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_DRBStatusUL12_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_DRBStatusUL12_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_DRBStatusUL12_ExtIEs_t::ASN_NGAP_DRBStatusUL12_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_DRBStatusUL12_ExtIEs_t::ASN_NGAP_DRBStatusUL12_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_DRBStatusUL12_ExtIEs_t::ASN_NGAP_DRBStatusUL12_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_DRBStatusUL12_ExtIEs_t::ASN_NGAP_DRBStatusUL12_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -20207,10 +20207,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_DRBStatusUL12_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_168 = {
-	sizeof(struct ASN_NGAP_DRBStatusUL18_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_DRBStatusUL18_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_DRBStatusUL18_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_DRBStatusUL18_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_DRBStatusUL18_ExtIEs_t::ASN_NGAP_DRBStatusUL18_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_DRBStatusUL18_ExtIEs_t::ASN_NGAP_DRBStatusUL18_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_DRBStatusUL18_ExtIEs_t::ASN_NGAP_DRBStatusUL18_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_DRBStatusUL18_ExtIEs_t::ASN_NGAP_DRBStatusUL18_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -20292,10 +20292,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_DRBStatusUL18_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_172 = {
-	sizeof(struct ASN_NGAP_DRBsToQosFlowsMappingItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_DRBsToQosFlowsMappingItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_DRBsToQosFlowsMappingItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_DRBsToQosFlowsMappingItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_DRBsToQosFlowsMappingItem_ExtIEs_t::ASN_NGAP_DRBsToQosFlowsMappingItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_DRBsToQosFlowsMappingItem_ExtIEs_t::ASN_NGAP_DRBsToQosFlowsMappingItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_DRBsToQosFlowsMappingItem_ExtIEs_t::ASN_NGAP_DRBsToQosFlowsMappingItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_DRBsToQosFlowsMappingItem_ExtIEs_t::ASN_NGAP_DRBsToQosFlowsMappingItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -20377,10 +20377,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_DRBsToQosFlowsMappingItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_176 = {
-	sizeof(struct ASN_NGAP_Dynamic5QIDescriptor_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_Dynamic5QIDescriptor_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_Dynamic5QIDescriptor_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_Dynamic5QIDescriptor_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_Dynamic5QIDescriptor_ExtIEs_t::ASN_NGAP_Dynamic5QIDescriptor_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_Dynamic5QIDescriptor_ExtIEs_t::ASN_NGAP_Dynamic5QIDescriptor_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_Dynamic5QIDescriptor_ExtIEs_t::ASN_NGAP_Dynamic5QIDescriptor_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_Dynamic5QIDescriptor_ExtIEs_t::ASN_NGAP_Dynamic5QIDescriptor_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -20462,10 +20462,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_Dynamic5QIDescriptor_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_180 = {
-	sizeof(struct ASN_NGAP_EmergencyAreaIDBroadcastEUTRA_Item_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_EmergencyAreaIDBroadcastEUTRA_Item_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_EmergencyAreaIDBroadcastEUTRA_Item_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_EmergencyAreaIDBroadcastEUTRA_Item_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_EmergencyAreaIDBroadcastEUTRA_Item_ExtIEs_t::ASN_NGAP_EmergencyAreaIDBroadcastEUTRA_Item_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_EmergencyAreaIDBroadcastEUTRA_Item_ExtIEs_t::ASN_NGAP_EmergencyAreaIDBroadcastEUTRA_Item_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_EmergencyAreaIDBroadcastEUTRA_Item_ExtIEs_t::ASN_NGAP_EmergencyAreaIDBroadcastEUTRA_Item_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_EmergencyAreaIDBroadcastEUTRA_Item_ExtIEs_t::ASN_NGAP_EmergencyAreaIDBroadcastEUTRA_Item_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -20547,10 +20547,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_EmergencyAreaIDBroadcastEUTRA_Item_ExtIEs
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_184 = {
-	sizeof(struct ASN_NGAP_EmergencyAreaIDBroadcastNR_Item_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_EmergencyAreaIDBroadcastNR_Item_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_EmergencyAreaIDBroadcastNR_Item_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_EmergencyAreaIDBroadcastNR_Item_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_EmergencyAreaIDBroadcastNR_Item_ExtIEs_t::ASN_NGAP_EmergencyAreaIDBroadcastNR_Item_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_EmergencyAreaIDBroadcastNR_Item_ExtIEs_t::ASN_NGAP_EmergencyAreaIDBroadcastNR_Item_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_EmergencyAreaIDBroadcastNR_Item_ExtIEs_t::ASN_NGAP_EmergencyAreaIDBroadcastNR_Item_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_EmergencyAreaIDBroadcastNR_Item_ExtIEs_t::ASN_NGAP_EmergencyAreaIDBroadcastNR_Item_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -20632,10 +20632,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_EmergencyAreaIDBroadcastNR_Item_ExtIEs = 
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_188 = {
-	sizeof(struct ASN_NGAP_EmergencyAreaIDCancelledEUTRA_Item_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_EmergencyAreaIDCancelledEUTRA_Item_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_EmergencyAreaIDCancelledEUTRA_Item_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_EmergencyAreaIDCancelledEUTRA_Item_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_EmergencyAreaIDCancelledEUTRA_Item_ExtIEs_t::ASN_NGAP_EmergencyAreaIDCancelledEUTRA_Item_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_EmergencyAreaIDCancelledEUTRA_Item_ExtIEs_t::ASN_NGAP_EmergencyAreaIDCancelledEUTRA_Item_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_EmergencyAreaIDCancelledEUTRA_Item_ExtIEs_t::ASN_NGAP_EmergencyAreaIDCancelledEUTRA_Item_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_EmergencyAreaIDCancelledEUTRA_Item_ExtIEs_t::ASN_NGAP_EmergencyAreaIDCancelledEUTRA_Item_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -20717,10 +20717,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_EmergencyAreaIDCancelledEUTRA_Item_ExtIEs
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_192 = {
-	sizeof(struct ASN_NGAP_EmergencyAreaIDCancelledNR_Item_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_EmergencyAreaIDCancelledNR_Item_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_EmergencyAreaIDCancelledNR_Item_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_EmergencyAreaIDCancelledNR_Item_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_EmergencyAreaIDCancelledNR_Item_ExtIEs_t::ASN_NGAP_EmergencyAreaIDCancelledNR_Item_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_EmergencyAreaIDCancelledNR_Item_ExtIEs_t::ASN_NGAP_EmergencyAreaIDCancelledNR_Item_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_EmergencyAreaIDCancelledNR_Item_ExtIEs_t::ASN_NGAP_EmergencyAreaIDCancelledNR_Item_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_EmergencyAreaIDCancelledNR_Item_ExtIEs_t::ASN_NGAP_EmergencyAreaIDCancelledNR_Item_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -20802,10 +20802,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_EmergencyAreaIDCancelledNR_Item_ExtIEs = 
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_196 = {
-	sizeof(struct ASN_NGAP_EmergencyFallbackIndicator_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_EmergencyFallbackIndicator_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_EmergencyFallbackIndicator_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_EmergencyFallbackIndicator_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_EmergencyFallbackIndicator_ExtIEs_t::ASN_NGAP_EmergencyFallbackIndicator_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_EmergencyFallbackIndicator_ExtIEs_t::ASN_NGAP_EmergencyFallbackIndicator_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_EmergencyFallbackIndicator_ExtIEs_t::ASN_NGAP_EmergencyFallbackIndicator_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_EmergencyFallbackIndicator_ExtIEs_t::ASN_NGAP_EmergencyFallbackIndicator_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -20887,10 +20887,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_EmergencyFallbackIndicator_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_200 = {
-	sizeof(struct ASN_NGAP_EndpointIPAddressAndPort_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_EndpointIPAddressAndPort_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_EndpointIPAddressAndPort_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_EndpointIPAddressAndPort_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_EndpointIPAddressAndPort_ExtIEs_t::ASN_NGAP_EndpointIPAddressAndPort_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_EndpointIPAddressAndPort_ExtIEs_t::ASN_NGAP_EndpointIPAddressAndPort_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_EndpointIPAddressAndPort_ExtIEs_t::ASN_NGAP_EndpointIPAddressAndPort_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_EndpointIPAddressAndPort_ExtIEs_t::ASN_NGAP_EndpointIPAddressAndPort_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -20972,10 +20972,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_EndpointIPAddressAndPort_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_204 = {
-	sizeof(struct ASN_NGAP_EPS_TAI_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_EPS_TAI_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_EPS_TAI_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_EPS_TAI_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_EPS_TAI_ExtIEs_t::ASN_NGAP_EPS_TAI_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_EPS_TAI_ExtIEs_t::ASN_NGAP_EPS_TAI_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_EPS_TAI_ExtIEs_t::ASN_NGAP_EPS_TAI_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_EPS_TAI_ExtIEs_t::ASN_NGAP_EPS_TAI_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -21057,10 +21057,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_EPS_TAI_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_208 = {
-	sizeof(struct ASN_NGAP_E_RABInformationItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_E_RABInformationItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_E_RABInformationItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_E_RABInformationItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_E_RABInformationItem_ExtIEs_t::ASN_NGAP_E_RABInformationItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_E_RABInformationItem_ExtIEs_t::ASN_NGAP_E_RABInformationItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_E_RABInformationItem_ExtIEs_t::ASN_NGAP_E_RABInformationItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_E_RABInformationItem_ExtIEs_t::ASN_NGAP_E_RABInformationItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -21142,10 +21142,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_E_RABInformationItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_212 = {
-	sizeof(struct ASN_NGAP_EUTRA_CGI_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_EUTRA_CGI_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_EUTRA_CGI_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_EUTRA_CGI_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_EUTRA_CGI_ExtIEs_t::ASN_NGAP_EUTRA_CGI_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_EUTRA_CGI_ExtIEs_t::ASN_NGAP_EUTRA_CGI_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_EUTRA_CGI_ExtIEs_t::ASN_NGAP_EUTRA_CGI_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_EUTRA_CGI_ExtIEs_t::ASN_NGAP_EUTRA_CGI_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -21227,10 +21227,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_EUTRA_CGI_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_216 = {
-	sizeof(struct ASN_NGAP_ExpectedUEActivityBehaviour_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_ExpectedUEActivityBehaviour_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_ExpectedUEActivityBehaviour_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_ExpectedUEActivityBehaviour_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_ExpectedUEActivityBehaviour_ExtIEs_t::ASN_NGAP_ExpectedUEActivityBehaviour_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_ExpectedUEActivityBehaviour_ExtIEs_t::ASN_NGAP_ExpectedUEActivityBehaviour_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_ExpectedUEActivityBehaviour_ExtIEs_t::ASN_NGAP_ExpectedUEActivityBehaviour_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_ExpectedUEActivityBehaviour_ExtIEs_t::ASN_NGAP_ExpectedUEActivityBehaviour_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -21312,10 +21312,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_ExpectedUEActivityBehaviour_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_220 = {
-	sizeof(struct ASN_NGAP_ExpectedUEBehaviour_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_ExpectedUEBehaviour_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_ExpectedUEBehaviour_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_ExpectedUEBehaviour_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_ExpectedUEBehaviour_ExtIEs_t::ASN_NGAP_ExpectedUEBehaviour_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_ExpectedUEBehaviour_ExtIEs_t::ASN_NGAP_ExpectedUEBehaviour_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_ExpectedUEBehaviour_ExtIEs_t::ASN_NGAP_ExpectedUEBehaviour_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_ExpectedUEBehaviour_ExtIEs_t::ASN_NGAP_ExpectedUEBehaviour_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -21397,10 +21397,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_ExpectedUEBehaviour_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_224 = {
-	sizeof(struct ASN_NGAP_ExpectedUEMovingTrajectoryItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_ExpectedUEMovingTrajectoryItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_ExpectedUEMovingTrajectoryItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_ExpectedUEMovingTrajectoryItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_ExpectedUEMovingTrajectoryItem_ExtIEs_t::ASN_NGAP_ExpectedUEMovingTrajectoryItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_ExpectedUEMovingTrajectoryItem_ExtIEs_t::ASN_NGAP_ExpectedUEMovingTrajectoryItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_ExpectedUEMovingTrajectoryItem_ExtIEs_t::ASN_NGAP_ExpectedUEMovingTrajectoryItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_ExpectedUEMovingTrajectoryItem_ExtIEs_t::ASN_NGAP_ExpectedUEMovingTrajectoryItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -21482,10 +21482,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_ExpectedUEMovingTrajectoryItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_228 = {
-	sizeof(struct ASN_NGAP_FiveG_S_TMSI_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_FiveG_S_TMSI_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_FiveG_S_TMSI_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_FiveG_S_TMSI_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_FiveG_S_TMSI_ExtIEs_t::ASN_NGAP_FiveG_S_TMSI_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_FiveG_S_TMSI_ExtIEs_t::ASN_NGAP_FiveG_S_TMSI_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_FiveG_S_TMSI_ExtIEs_t::ASN_NGAP_FiveG_S_TMSI_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_FiveG_S_TMSI_ExtIEs_t::ASN_NGAP_FiveG_S_TMSI_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -21567,10 +21567,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_FiveG_S_TMSI_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_232 = {
-	sizeof(struct ASN_NGAP_ForbiddenAreaInformation_Item_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_ForbiddenAreaInformation_Item_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_ForbiddenAreaInformation_Item_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_ForbiddenAreaInformation_Item_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_ForbiddenAreaInformation_Item_ExtIEs_t::ASN_NGAP_ForbiddenAreaInformation_Item_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_ForbiddenAreaInformation_Item_ExtIEs_t::ASN_NGAP_ForbiddenAreaInformation_Item_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_ForbiddenAreaInformation_Item_ExtIEs_t::ASN_NGAP_ForbiddenAreaInformation_Item_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_ForbiddenAreaInformation_Item_ExtIEs_t::ASN_NGAP_ForbiddenAreaInformation_Item_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -21652,10 +21652,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_ForbiddenAreaInformation_Item_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_236 = {
-	sizeof(struct ASN_NGAP_GBR_QosInformation_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_GBR_QosInformation_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_GBR_QosInformation_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_GBR_QosInformation_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_GBR_QosInformation_ExtIEs_t::ASN_NGAP_GBR_QosInformation_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_GBR_QosInformation_ExtIEs_t::ASN_NGAP_GBR_QosInformation_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_GBR_QosInformation_ExtIEs_t::ASN_NGAP_GBR_QosInformation_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_GBR_QosInformation_ExtIEs_t::ASN_NGAP_GBR_QosInformation_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -21737,10 +21737,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_GBR_QosInformation_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_240 = {
-	sizeof(struct ASN_NGAP_GlobalGNB_ID_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_GlobalGNB_ID_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_GlobalGNB_ID_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_GlobalGNB_ID_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_GlobalGNB_ID_ExtIEs_t::ASN_NGAP_GlobalGNB_ID_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_GlobalGNB_ID_ExtIEs_t::ASN_NGAP_GlobalGNB_ID_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_GlobalGNB_ID_ExtIEs_t::ASN_NGAP_GlobalGNB_ID_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_GlobalGNB_ID_ExtIEs_t::ASN_NGAP_GlobalGNB_ID_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -21822,10 +21822,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_GlobalGNB_ID_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_244 = {
-	sizeof(struct ASN_NGAP_GlobalN3IWF_ID_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_GlobalN3IWF_ID_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_GlobalN3IWF_ID_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_GlobalN3IWF_ID_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_GlobalN3IWF_ID_ExtIEs_t::ASN_NGAP_GlobalN3IWF_ID_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_GlobalN3IWF_ID_ExtIEs_t::ASN_NGAP_GlobalN3IWF_ID_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_GlobalN3IWF_ID_ExtIEs_t::ASN_NGAP_GlobalN3IWF_ID_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_GlobalN3IWF_ID_ExtIEs_t::ASN_NGAP_GlobalN3IWF_ID_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -21907,10 +21907,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_GlobalN3IWF_ID_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_248 = {
-	sizeof(struct ASN_NGAP_GlobalNgENB_ID_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_GlobalNgENB_ID_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_GlobalNgENB_ID_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_GlobalNgENB_ID_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_GlobalNgENB_ID_ExtIEs_t::ASN_NGAP_GlobalNgENB_ID_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_GlobalNgENB_ID_ExtIEs_t::ASN_NGAP_GlobalNgENB_ID_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_GlobalNgENB_ID_ExtIEs_t::ASN_NGAP_GlobalNgENB_ID_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_GlobalNgENB_ID_ExtIEs_t::ASN_NGAP_GlobalNgENB_ID_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -21992,10 +21992,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_GlobalNgENB_ID_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_252 = {
-	sizeof(struct ASN_NGAP_GTPTunnel_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_GTPTunnel_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_GTPTunnel_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_GTPTunnel_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_GTPTunnel_ExtIEs_t::ASN_NGAP_GTPTunnel_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_GTPTunnel_ExtIEs_t::ASN_NGAP_GTPTunnel_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_GTPTunnel_ExtIEs_t::ASN_NGAP_GTPTunnel_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_GTPTunnel_ExtIEs_t::ASN_NGAP_GTPTunnel_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -22077,10 +22077,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_GTPTunnel_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_256 = {
-	sizeof(struct ASN_NGAP_GUAMI_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_GUAMI_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_GUAMI_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_GUAMI_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_GUAMI_ExtIEs_t::ASN_NGAP_GUAMI_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_GUAMI_ExtIEs_t::ASN_NGAP_GUAMI_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_GUAMI_ExtIEs_t::ASN_NGAP_GUAMI_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_GUAMI_ExtIEs_t::ASN_NGAP_GUAMI_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -22162,7 +22162,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_GUAMI_ExtIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_extensionValue_260[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverCommandTransfer_ExtIEs__extensionValue, choice.QosFlowPerTNLInformationList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverCommandTransfer_ExtIEs_t::ASN_NGAP_HandoverCommandTransfer_ExtIEs__extensionValue, choice.QosFlowPerTNLInformationList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_QosFlowPerTNLInformationList,
@@ -22171,7 +22171,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_extensionValue_260[] = {
 		0, 0, /* No default value */
 		"QosFlowPerTNLInformationList"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverCommandTransfer_ExtIEs__extensionValue, choice.UPTransportLayerInformation),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverCommandTransfer_ExtIEs_t::ASN_NGAP_HandoverCommandTransfer_ExtIEs__extensionValue, choice.UPTransportLayerInformation),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_UPTransportLayerInformation,
@@ -22180,7 +22180,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_extensionValue_260[] = {
 		0, 0, /* No default value */
 		"UPTransportLayerInformation"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverCommandTransfer_ExtIEs__extensionValue, choice.UPTransportLayerInformationList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverCommandTransfer_ExtIEs_t::ASN_NGAP_HandoverCommandTransfer_ExtIEs__extensionValue, choice.UPTransportLayerInformationList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UPTransportLayerInformationList,
@@ -22199,10 +22199,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_extensionValue_tag2el_260[] 
     { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_260 = {
-	sizeof(struct ASN_NGAP_HandoverCommandTransfer_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_HandoverCommandTransfer_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_HandoverCommandTransfer_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_HandoverCommandTransfer_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_HandoverCommandTransfer_ExtIEs_t::ASN_NGAP_HandoverCommandTransfer_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_HandoverCommandTransfer_ExtIEs_t::ASN_NGAP_HandoverCommandTransfer_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_HandoverCommandTransfer_ExtIEs_t::ASN_NGAP_HandoverCommandTransfer_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_HandoverCommandTransfer_ExtIEs_t::ASN_NGAP_HandoverCommandTransfer_ExtIEs__extensionValue *)0)->present),
 	asn_MAP_ASN_NGAP_extensionValue_tag2el_260,
 	4,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_extensionValue_to_canonical_260,
@@ -22286,10 +22286,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_HandoverCommandTransfer_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_264 = {
-	sizeof(struct ASN_NGAP_HandoverPreparationUnsuccessfulTransfer_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_HandoverPreparationUnsuccessfulTransfer_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_HandoverPreparationUnsuccessfulTransfer_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_HandoverPreparationUnsuccessfulTransfer_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_HandoverPreparationUnsuccessfulTransfer_ExtIEs_t::ASN_NGAP_HandoverPreparationUnsuccessfulTransfer_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_HandoverPreparationUnsuccessfulTransfer_ExtIEs_t::ASN_NGAP_HandoverPreparationUnsuccessfulTransfer_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_HandoverPreparationUnsuccessfulTransfer_ExtIEs_t::ASN_NGAP_HandoverPreparationUnsuccessfulTransfer_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_HandoverPreparationUnsuccessfulTransfer_ExtIEs_t::ASN_NGAP_HandoverPreparationUnsuccessfulTransfer_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -22371,7 +22371,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_HandoverPreparationUnsuccessfulTransfer_E
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_extensionValue_268[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestAcknowledgeTransfer_ExtIEs__extensionValue, choice.AdditionalDLUPTNLInformationForHOList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestAcknowledgeTransfer_ExtIEs_t::ASN_NGAP_HandoverRequestAcknowledgeTransfer_ExtIEs__extensionValue, choice.AdditionalDLUPTNLInformationForHOList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AdditionalDLUPTNLInformationForHOList,
@@ -22380,7 +22380,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_extensionValue_268[] = {
 		0, 0, /* No default value */
 		"AdditionalDLUPTNLInformationForHOList"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestAcknowledgeTransfer_ExtIEs__extensionValue, choice.UPTransportLayerInformation),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestAcknowledgeTransfer_ExtIEs_t::ASN_NGAP_HandoverRequestAcknowledgeTransfer_ExtIEs__extensionValue, choice.UPTransportLayerInformation),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_UPTransportLayerInformation,
@@ -22389,7 +22389,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_extensionValue_268[] = {
 		0, 0, /* No default value */
 		"UPTransportLayerInformation"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestAcknowledgeTransfer_ExtIEs__extensionValue, choice.UPTransportLayerInformationList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestAcknowledgeTransfer_ExtIEs_t::ASN_NGAP_HandoverRequestAcknowledgeTransfer_ExtIEs__extensionValue, choice.UPTransportLayerInformationList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UPTransportLayerInformationList,
@@ -22408,10 +22408,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_extensionValue_tag2el_268[] 
     { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_268 = {
-	sizeof(struct ASN_NGAP_HandoverRequestAcknowledgeTransfer_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_HandoverRequestAcknowledgeTransfer_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_HandoverRequestAcknowledgeTransfer_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_HandoverRequestAcknowledgeTransfer_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_HandoverRequestAcknowledgeTransfer_ExtIEs_t::ASN_NGAP_HandoverRequestAcknowledgeTransfer_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_HandoverRequestAcknowledgeTransfer_ExtIEs_t::ASN_NGAP_HandoverRequestAcknowledgeTransfer_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_HandoverRequestAcknowledgeTransfer_ExtIEs_t::ASN_NGAP_HandoverRequestAcknowledgeTransfer_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_HandoverRequestAcknowledgeTransfer_ExtIEs_t::ASN_NGAP_HandoverRequestAcknowledgeTransfer_ExtIEs__extensionValue *)0)->present),
 	asn_MAP_ASN_NGAP_extensionValue_tag2el_268,
 	4,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_extensionValue_to_canonical_268,
@@ -22495,10 +22495,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_HandoverRequestAcknowledgeTransfer_ExtIEs
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_272 = {
-	sizeof(struct ASN_NGAP_HandoverRequiredTransfer_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_HandoverRequiredTransfer_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_HandoverRequiredTransfer_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_HandoverRequiredTransfer_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_HandoverRequiredTransfer_ExtIEs_t::ASN_NGAP_HandoverRequiredTransfer_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_HandoverRequiredTransfer_ExtIEs_t::ASN_NGAP_HandoverRequiredTransfer_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_HandoverRequiredTransfer_ExtIEs_t::ASN_NGAP_HandoverRequiredTransfer_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_HandoverRequiredTransfer_ExtIEs_t::ASN_NGAP_HandoverRequiredTransfer_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -22580,10 +22580,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_HandoverRequiredTransfer_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_276 = {
-	sizeof(struct ASN_NGAP_HandoverResourceAllocationUnsuccessfulTransfer_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_HandoverResourceAllocationUnsuccessfulTransfer_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_HandoverResourceAllocationUnsuccessfulTransfer_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_HandoverResourceAllocationUnsuccessfulTransfer_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_HandoverResourceAllocationUnsuccessfulTransfer_ExtIEs_t::ASN_NGAP_HandoverResourceAllocationUnsuccessfulTransfer_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_HandoverResourceAllocationUnsuccessfulTransfer_ExtIEs_t::ASN_NGAP_HandoverResourceAllocationUnsuccessfulTransfer_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_HandoverResourceAllocationUnsuccessfulTransfer_ExtIEs_t::ASN_NGAP_HandoverResourceAllocationUnsuccessfulTransfer_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_HandoverResourceAllocationUnsuccessfulTransfer_ExtIEs_t::ASN_NGAP_HandoverResourceAllocationUnsuccessfulTransfer_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -22665,10 +22665,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_HandoverResourceAllocationUnsuccessfulTra
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_280 = {
-	sizeof(struct ASN_NGAP_InfoOnRecommendedCellsAndRANNodesForPaging_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_InfoOnRecommendedCellsAndRANNodesForPaging_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_InfoOnRecommendedCellsAndRANNodesForPaging_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_InfoOnRecommendedCellsAndRANNodesForPaging_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_InfoOnRecommendedCellsAndRANNodesForPaging_ExtIEs_t::ASN_NGAP_InfoOnRecommendedCellsAndRANNodesForPaging_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_InfoOnRecommendedCellsAndRANNodesForPaging_ExtIEs_t::ASN_NGAP_InfoOnRecommendedCellsAndRANNodesForPaging_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_InfoOnRecommendedCellsAndRANNodesForPaging_ExtIEs_t::ASN_NGAP_InfoOnRecommendedCellsAndRANNodesForPaging_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_InfoOnRecommendedCellsAndRANNodesForPaging_ExtIEs_t::ASN_NGAP_InfoOnRecommendedCellsAndRANNodesForPaging_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -22750,10 +22750,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_InfoOnRecommendedCellsAndRANNodesForPagin
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_284 = {
-	sizeof(struct ASN_NGAP_LastVisitedCellItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_LastVisitedCellItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_LastVisitedCellItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_LastVisitedCellItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_LastVisitedCellItem_ExtIEs_t::ASN_NGAP_LastVisitedCellItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_LastVisitedCellItem_ExtIEs_t::ASN_NGAP_LastVisitedCellItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_LastVisitedCellItem_ExtIEs_t::ASN_NGAP_LastVisitedCellItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_LastVisitedCellItem_ExtIEs_t::ASN_NGAP_LastVisitedCellItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -22835,10 +22835,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_LastVisitedCellItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_288 = {
-	sizeof(struct ASN_NGAP_LastVisitedNGRANCellInformation_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_LastVisitedNGRANCellInformation_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_LastVisitedNGRANCellInformation_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_LastVisitedNGRANCellInformation_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_LastVisitedNGRANCellInformation_ExtIEs_t::ASN_NGAP_LastVisitedNGRANCellInformation_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_LastVisitedNGRANCellInformation_ExtIEs_t::ASN_NGAP_LastVisitedNGRANCellInformation_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_LastVisitedNGRANCellInformation_ExtIEs_t::ASN_NGAP_LastVisitedNGRANCellInformation_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_LastVisitedNGRANCellInformation_ExtIEs_t::ASN_NGAP_LastVisitedNGRANCellInformation_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -22920,7 +22920,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_LastVisitedNGRANCellInformation_ExtIEs = 
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_extensionValue_292[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_LocationReportingRequestType_ExtIEs__extensionValue, choice.LocationReportingAdditionalInfo),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_LocationReportingRequestType_ExtIEs_t::ASN_NGAP_LocationReportingRequestType_ExtIEs__extensionValue, choice.LocationReportingAdditionalInfo),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_LocationReportingAdditionalInfo,
@@ -22934,10 +22934,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_extensionValue_tag2el_292[] 
     { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 0, 0, 0 } /* LocationReportingAdditionalInfo */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_292 = {
-	sizeof(struct ASN_NGAP_LocationReportingRequestType_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_LocationReportingRequestType_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_LocationReportingRequestType_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_LocationReportingRequestType_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_LocationReportingRequestType_ExtIEs_t::ASN_NGAP_LocationReportingRequestType_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_LocationReportingRequestType_ExtIEs_t::ASN_NGAP_LocationReportingRequestType_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_LocationReportingRequestType_ExtIEs_t::ASN_NGAP_LocationReportingRequestType_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_LocationReportingRequestType_ExtIEs_t::ASN_NGAP_LocationReportingRequestType_ExtIEs__extensionValue *)0)->present),
 	asn_MAP_ASN_NGAP_extensionValue_tag2el_292,
 	1,	/* Count of tags in the map */
 	0, 0,
@@ -23020,7 +23020,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_LocationReportingRequestType_ExtIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_extensionValue_296[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_MobilityRestrictionList_ExtIEs__extensionValue, choice.PLMNIdentity),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_MobilityRestrictionList_ExtIEs_t::ASN_NGAP_MobilityRestrictionList_ExtIEs__extensionValue, choice.PLMNIdentity),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PLMNIdentity,
@@ -23029,7 +23029,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_extensionValue_296[] = {
 		0, 0, /* No default value */
 		"PLMNIdentity"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_MobilityRestrictionList_ExtIEs__extensionValue, choice.CNTypeRestrictionsForServing),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_MobilityRestrictionList_ExtIEs_t::ASN_NGAP_MobilityRestrictionList_ExtIEs__extensionValue, choice.CNTypeRestrictionsForServing),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CNTypeRestrictionsForServing,
@@ -23038,7 +23038,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_extensionValue_296[] = {
 		0, 0, /* No default value */
 		"CNTypeRestrictionsForServing"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_MobilityRestrictionList_ExtIEs__extensionValue, choice.CNTypeRestrictionsForEquivalent),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_MobilityRestrictionList_ExtIEs_t::ASN_NGAP_MobilityRestrictionList_ExtIEs__extensionValue, choice.CNTypeRestrictionsForEquivalent),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CNTypeRestrictionsForEquivalent,
@@ -23054,10 +23054,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_extensionValue_tag2el_296[] 
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 2, 0, 0 } /* CNTypeRestrictionsForEquivalent */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_296 = {
-	sizeof(struct ASN_NGAP_MobilityRestrictionList_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_MobilityRestrictionList_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_MobilityRestrictionList_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_MobilityRestrictionList_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_MobilityRestrictionList_ExtIEs_t::ASN_NGAP_MobilityRestrictionList_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_MobilityRestrictionList_ExtIEs_t::ASN_NGAP_MobilityRestrictionList_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_MobilityRestrictionList_ExtIEs_t::ASN_NGAP_MobilityRestrictionList_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_MobilityRestrictionList_ExtIEs_t::ASN_NGAP_MobilityRestrictionList_ExtIEs__extensionValue *)0)->present),
 	asn_MAP_ASN_NGAP_extensionValue_tag2el_296,
 	3,	/* Count of tags in the map */
 	0, 0,
@@ -23140,10 +23140,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_MobilityRestrictionList_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_300 = {
-	sizeof(struct ASN_NGAP_NGRAN_TNLAssociationToRemoveItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_NGRAN_TNLAssociationToRemoveItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_NGRAN_TNLAssociationToRemoveItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_NGRAN_TNLAssociationToRemoveItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_NGRAN_TNLAssociationToRemoveItem_ExtIEs_t::ASN_NGAP_NGRAN_TNLAssociationToRemoveItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_NGRAN_TNLAssociationToRemoveItem_ExtIEs_t::ASN_NGAP_NGRAN_TNLAssociationToRemoveItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_NGRAN_TNLAssociationToRemoveItem_ExtIEs_t::ASN_NGAP_NGRAN_TNLAssociationToRemoveItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_NGRAN_TNLAssociationToRemoveItem_ExtIEs_t::ASN_NGAP_NGRAN_TNLAssociationToRemoveItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -23225,10 +23225,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_NGRAN_TNLAssociationToRemoveItem_ExtIEs =
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_304 = {
-	sizeof(struct ASN_NGAP_NonDynamic5QIDescriptor_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_NonDynamic5QIDescriptor_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_NonDynamic5QIDescriptor_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_NonDynamic5QIDescriptor_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_NonDynamic5QIDescriptor_ExtIEs_t::ASN_NGAP_NonDynamic5QIDescriptor_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_NonDynamic5QIDescriptor_ExtIEs_t::ASN_NGAP_NonDynamic5QIDescriptor_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_NonDynamic5QIDescriptor_ExtIEs_t::ASN_NGAP_NonDynamic5QIDescriptor_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_NonDynamic5QIDescriptor_ExtIEs_t::ASN_NGAP_NonDynamic5QIDescriptor_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -23310,10 +23310,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_NonDynamic5QIDescriptor_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_308 = {
-	sizeof(struct ASN_NGAP_NR_CGI_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_NR_CGI_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_NR_CGI_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_NR_CGI_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_NR_CGI_ExtIEs_t::ASN_NGAP_NR_CGI_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_NR_CGI_ExtIEs_t::ASN_NGAP_NR_CGI_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_NR_CGI_ExtIEs_t::ASN_NGAP_NR_CGI_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_NR_CGI_ExtIEs_t::ASN_NGAP_NR_CGI_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -23395,10 +23395,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_NR_CGI_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_312 = {
-	sizeof(struct ASN_NGAP_OverloadStartNSSAIItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_OverloadStartNSSAIItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_OverloadStartNSSAIItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_OverloadStartNSSAIItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_OverloadStartNSSAIItem_ExtIEs_t::ASN_NGAP_OverloadStartNSSAIItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_OverloadStartNSSAIItem_ExtIEs_t::ASN_NGAP_OverloadStartNSSAIItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_OverloadStartNSSAIItem_ExtIEs_t::ASN_NGAP_OverloadStartNSSAIItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_OverloadStartNSSAIItem_ExtIEs_t::ASN_NGAP_OverloadStartNSSAIItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -23480,10 +23480,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_OverloadStartNSSAIItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_316 = {
-	sizeof(struct ASN_NGAP_PacketErrorRate_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PacketErrorRate_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PacketErrorRate_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PacketErrorRate_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PacketErrorRate_ExtIEs_t::ASN_NGAP_PacketErrorRate_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PacketErrorRate_ExtIEs_t::ASN_NGAP_PacketErrorRate_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PacketErrorRate_ExtIEs_t::ASN_NGAP_PacketErrorRate_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PacketErrorRate_ExtIEs_t::ASN_NGAP_PacketErrorRate_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -23565,10 +23565,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PacketErrorRate_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_320 = {
-	sizeof(struct ASN_NGAP_PagingAttemptInformation_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PagingAttemptInformation_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PagingAttemptInformation_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PagingAttemptInformation_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PagingAttemptInformation_ExtIEs_t::ASN_NGAP_PagingAttemptInformation_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PagingAttemptInformation_ExtIEs_t::ASN_NGAP_PagingAttemptInformation_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PagingAttemptInformation_ExtIEs_t::ASN_NGAP_PagingAttemptInformation_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PagingAttemptInformation_ExtIEs_t::ASN_NGAP_PagingAttemptInformation_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -23650,7 +23650,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PagingAttemptInformation_ExtIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_extensionValue_324[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeTransfer_ExtIEs__extensionValue, choice.UPTransportLayerInformationPairList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeTransfer_ExtIEs_t::ASN_NGAP_PathSwitchRequestAcknowledgeTransfer_ExtIEs__extensionValue, choice.UPTransportLayerInformationPairList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UPTransportLayerInformationPairList,
@@ -23664,10 +23664,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_extensionValue_tag2el_324[] 
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 0, 0, 0 } /* UPTransportLayerInformationPairList */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_324 = {
-	sizeof(struct ASN_NGAP_PathSwitchRequestAcknowledgeTransfer_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeTransfer_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeTransfer_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PathSwitchRequestAcknowledgeTransfer_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PathSwitchRequestAcknowledgeTransfer_ExtIEs_t::ASN_NGAP_PathSwitchRequestAcknowledgeTransfer_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeTransfer_ExtIEs_t::ASN_NGAP_PathSwitchRequestAcknowledgeTransfer_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeTransfer_ExtIEs_t::ASN_NGAP_PathSwitchRequestAcknowledgeTransfer_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PathSwitchRequestAcknowledgeTransfer_ExtIEs_t::ASN_NGAP_PathSwitchRequestAcknowledgeTransfer_ExtIEs__extensionValue *)0)->present),
 	asn_MAP_ASN_NGAP_extensionValue_tag2el_324,
 	1,	/* Count of tags in the map */
 	0, 0,
@@ -23750,10 +23750,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PathSwitchRequestAcknowledgeTransfer_ExtI
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_328 = {
-	sizeof(struct ASN_NGAP_PathSwitchRequestSetupFailedTransfer_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PathSwitchRequestSetupFailedTransfer_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PathSwitchRequestSetupFailedTransfer_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PathSwitchRequestSetupFailedTransfer_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PathSwitchRequestSetupFailedTransfer_ExtIEs_t::ASN_NGAP_PathSwitchRequestSetupFailedTransfer_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PathSwitchRequestSetupFailedTransfer_ExtIEs_t::ASN_NGAP_PathSwitchRequestSetupFailedTransfer_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PathSwitchRequestSetupFailedTransfer_ExtIEs_t::ASN_NGAP_PathSwitchRequestSetupFailedTransfer_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PathSwitchRequestSetupFailedTransfer_ExtIEs_t::ASN_NGAP_PathSwitchRequestSetupFailedTransfer_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -23835,7 +23835,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PathSwitchRequestSetupFailedTransfer_ExtI
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_extensionValue_332[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestTransfer_ExtIEs__extensionValue, choice.QosFlowPerTNLInformationList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestTransfer_ExtIEs_t::ASN_NGAP_PathSwitchRequestTransfer_ExtIEs__extensionValue, choice.QosFlowPerTNLInformationList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_QosFlowPerTNLInformationList,
@@ -23849,10 +23849,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_extensionValue_tag2el_332[] 
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 0, 0, 0 } /* QosFlowPerTNLInformationList */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_332 = {
-	sizeof(struct ASN_NGAP_PathSwitchRequestTransfer_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PathSwitchRequestTransfer_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PathSwitchRequestTransfer_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PathSwitchRequestTransfer_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PathSwitchRequestTransfer_ExtIEs_t::ASN_NGAP_PathSwitchRequestTransfer_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PathSwitchRequestTransfer_ExtIEs_t::ASN_NGAP_PathSwitchRequestTransfer_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PathSwitchRequestTransfer_ExtIEs_t::ASN_NGAP_PathSwitchRequestTransfer_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PathSwitchRequestTransfer_ExtIEs_t::ASN_NGAP_PathSwitchRequestTransfer_ExtIEs__extensionValue *)0)->present),
 	asn_MAP_ASN_NGAP_extensionValue_tag2el_332,
 	1,	/* Count of tags in the map */
 	0, 0,
@@ -23935,10 +23935,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PathSwitchRequestTransfer_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_336 = {
-	sizeof(struct ASN_NGAP_PathSwitchRequestUnsuccessfulTransfer_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PathSwitchRequestUnsuccessfulTransfer_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PathSwitchRequestUnsuccessfulTransfer_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PathSwitchRequestUnsuccessfulTransfer_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PathSwitchRequestUnsuccessfulTransfer_ExtIEs_t::ASN_NGAP_PathSwitchRequestUnsuccessfulTransfer_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PathSwitchRequestUnsuccessfulTransfer_ExtIEs_t::ASN_NGAP_PathSwitchRequestUnsuccessfulTransfer_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PathSwitchRequestUnsuccessfulTransfer_ExtIEs_t::ASN_NGAP_PathSwitchRequestUnsuccessfulTransfer_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PathSwitchRequestUnsuccessfulTransfer_ExtIEs_t::ASN_NGAP_PathSwitchRequestUnsuccessfulTransfer_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -24020,10 +24020,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PathSwitchRequestUnsuccessfulTransfer_Ext
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_340 = {
-	sizeof(struct ASN_NGAP_PDUSessionAggregateMaximumBitRate_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionAggregateMaximumBitRate_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionAggregateMaximumBitRate_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionAggregateMaximumBitRate_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionAggregateMaximumBitRate_ExtIEs_t::ASN_NGAP_PDUSessionAggregateMaximumBitRate_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionAggregateMaximumBitRate_ExtIEs_t::ASN_NGAP_PDUSessionAggregateMaximumBitRate_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionAggregateMaximumBitRate_ExtIEs_t::ASN_NGAP_PDUSessionAggregateMaximumBitRate_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionAggregateMaximumBitRate_ExtIEs_t::ASN_NGAP_PDUSessionAggregateMaximumBitRate_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -24105,10 +24105,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionAggregateMaximumBitRate_ExtIEs 
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_344 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceAdmittedItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceAdmittedItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceAdmittedItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceAdmittedItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceAdmittedItem_ExtIEs_t::ASN_NGAP_PDUSessionResourceAdmittedItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceAdmittedItem_ExtIEs_t::ASN_NGAP_PDUSessionResourceAdmittedItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceAdmittedItem_ExtIEs_t::ASN_NGAP_PDUSessionResourceAdmittedItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceAdmittedItem_ExtIEs_t::ASN_NGAP_PDUSessionResourceAdmittedItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -24190,10 +24190,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceAdmittedItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_348 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceFailedToModifyItemModCfm_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceFailedToModifyItemModCfm_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceFailedToModifyItemModCfm_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceFailedToModifyItemModCfm_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceFailedToModifyItemModCfm_ExtIEs_t::ASN_NGAP_PDUSessionResourceFailedToModifyItemModCfm_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceFailedToModifyItemModCfm_ExtIEs_t::ASN_NGAP_PDUSessionResourceFailedToModifyItemModCfm_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceFailedToModifyItemModCfm_ExtIEs_t::ASN_NGAP_PDUSessionResourceFailedToModifyItemModCfm_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceFailedToModifyItemModCfm_ExtIEs_t::ASN_NGAP_PDUSessionResourceFailedToModifyItemModCfm_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -24275,10 +24275,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceFailedToModifyItemModCf
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_352 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceFailedToModifyItemModRes_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceFailedToModifyItemModRes_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceFailedToModifyItemModRes_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceFailedToModifyItemModRes_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceFailedToModifyItemModRes_ExtIEs_t::ASN_NGAP_PDUSessionResourceFailedToModifyItemModRes_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceFailedToModifyItemModRes_ExtIEs_t::ASN_NGAP_PDUSessionResourceFailedToModifyItemModRes_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceFailedToModifyItemModRes_ExtIEs_t::ASN_NGAP_PDUSessionResourceFailedToModifyItemModRes_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceFailedToModifyItemModRes_ExtIEs_t::ASN_NGAP_PDUSessionResourceFailedToModifyItemModRes_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -24360,10 +24360,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceFailedToModifyItemModRe
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_356 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceFailedToSetupItemCxtFail_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceFailedToSetupItemCxtFail_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceFailedToSetupItemCxtFail_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceFailedToSetupItemCxtFail_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceFailedToSetupItemCxtFail_ExtIEs_t::ASN_NGAP_PDUSessionResourceFailedToSetupItemCxtFail_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceFailedToSetupItemCxtFail_ExtIEs_t::ASN_NGAP_PDUSessionResourceFailedToSetupItemCxtFail_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceFailedToSetupItemCxtFail_ExtIEs_t::ASN_NGAP_PDUSessionResourceFailedToSetupItemCxtFail_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceFailedToSetupItemCxtFail_ExtIEs_t::ASN_NGAP_PDUSessionResourceFailedToSetupItemCxtFail_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -24445,10 +24445,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceFailedToSetupItemCxtFai
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_360 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceFailedToSetupItemCxtRes_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceFailedToSetupItemCxtRes_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceFailedToSetupItemCxtRes_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceFailedToSetupItemCxtRes_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceFailedToSetupItemCxtRes_ExtIEs_t::ASN_NGAP_PDUSessionResourceFailedToSetupItemCxtRes_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceFailedToSetupItemCxtRes_ExtIEs_t::ASN_NGAP_PDUSessionResourceFailedToSetupItemCxtRes_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceFailedToSetupItemCxtRes_ExtIEs_t::ASN_NGAP_PDUSessionResourceFailedToSetupItemCxtRes_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceFailedToSetupItemCxtRes_ExtIEs_t::ASN_NGAP_PDUSessionResourceFailedToSetupItemCxtRes_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -24530,10 +24530,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceFailedToSetupItemCxtRes
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_364 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceFailedToSetupItemHOAck_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceFailedToSetupItemHOAck_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceFailedToSetupItemHOAck_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceFailedToSetupItemHOAck_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceFailedToSetupItemHOAck_ExtIEs_t::ASN_NGAP_PDUSessionResourceFailedToSetupItemHOAck_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceFailedToSetupItemHOAck_ExtIEs_t::ASN_NGAP_PDUSessionResourceFailedToSetupItemHOAck_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceFailedToSetupItemHOAck_ExtIEs_t::ASN_NGAP_PDUSessionResourceFailedToSetupItemHOAck_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceFailedToSetupItemHOAck_ExtIEs_t::ASN_NGAP_PDUSessionResourceFailedToSetupItemHOAck_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -24615,10 +24615,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceFailedToSetupItemHOAck_
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_368 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceFailedToSetupItemPSReq_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceFailedToSetupItemPSReq_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceFailedToSetupItemPSReq_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceFailedToSetupItemPSReq_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceFailedToSetupItemPSReq_ExtIEs_t::ASN_NGAP_PDUSessionResourceFailedToSetupItemPSReq_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceFailedToSetupItemPSReq_ExtIEs_t::ASN_NGAP_PDUSessionResourceFailedToSetupItemPSReq_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceFailedToSetupItemPSReq_ExtIEs_t::ASN_NGAP_PDUSessionResourceFailedToSetupItemPSReq_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceFailedToSetupItemPSReq_ExtIEs_t::ASN_NGAP_PDUSessionResourceFailedToSetupItemPSReq_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -24700,10 +24700,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceFailedToSetupItemPSReq_
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_372 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceFailedToSetupItemSURes_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceFailedToSetupItemSURes_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceFailedToSetupItemSURes_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceFailedToSetupItemSURes_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceFailedToSetupItemSURes_ExtIEs_t::ASN_NGAP_PDUSessionResourceFailedToSetupItemSURes_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceFailedToSetupItemSURes_ExtIEs_t::ASN_NGAP_PDUSessionResourceFailedToSetupItemSURes_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceFailedToSetupItemSURes_ExtIEs_t::ASN_NGAP_PDUSessionResourceFailedToSetupItemSURes_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceFailedToSetupItemSURes_ExtIEs_t::ASN_NGAP_PDUSessionResourceFailedToSetupItemSURes_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -24785,10 +24785,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceFailedToSetupItemSURes_
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_376 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceHandoverItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceHandoverItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceHandoverItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceHandoverItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceHandoverItem_ExtIEs_t::ASN_NGAP_PDUSessionResourceHandoverItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceHandoverItem_ExtIEs_t::ASN_NGAP_PDUSessionResourceHandoverItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceHandoverItem_ExtIEs_t::ASN_NGAP_PDUSessionResourceHandoverItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceHandoverItem_ExtIEs_t::ASN_NGAP_PDUSessionResourceHandoverItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -24870,10 +24870,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceHandoverItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_380 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceInformationItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceInformationItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceInformationItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceInformationItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceInformationItem_ExtIEs_t::ASN_NGAP_PDUSessionResourceInformationItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceInformationItem_ExtIEs_t::ASN_NGAP_PDUSessionResourceInformationItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceInformationItem_ExtIEs_t::ASN_NGAP_PDUSessionResourceInformationItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceInformationItem_ExtIEs_t::ASN_NGAP_PDUSessionResourceInformationItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -24955,7 +24955,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceInformationItem_ExtIEs 
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_extensionValue_384[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceItemCxtRelCpl_ExtIEs__extensionValue, choice.OCTET_STRING_CONTAINING_PDUSessionResourceReleaseResponseTransfer_),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceItemCxtRelCpl_ExtIEs_t::ASN_NGAP_PDUSessionResourceItemCxtRelCpl_ExtIEs__extensionValue, choice.OCTET_STRING_CONTAINING_PDUSessionResourceReleaseResponseTransfer_),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_OCTET_STRING,
@@ -24969,10 +24969,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_extensionValue_tag2el_384[] 
     { (ASN_TAG_CLASS_UNIVERSAL | (4 << 2)), 0, 0, 0 } /* OCTET STRING (CONTAINING PDUSessionResourceReleaseResponseTransfer) */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_384 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceItemCxtRelCpl_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceItemCxtRelCpl_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceItemCxtRelCpl_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceItemCxtRelCpl_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceItemCxtRelCpl_ExtIEs_t::ASN_NGAP_PDUSessionResourceItemCxtRelCpl_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceItemCxtRelCpl_ExtIEs_t::ASN_NGAP_PDUSessionResourceItemCxtRelCpl_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceItemCxtRelCpl_ExtIEs_t::ASN_NGAP_PDUSessionResourceItemCxtRelCpl_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceItemCxtRelCpl_ExtIEs_t::ASN_NGAP_PDUSessionResourceItemCxtRelCpl_ExtIEs__extensionValue *)0)->present),
 	asn_MAP_ASN_NGAP_extensionValue_tag2el_384,
 	1,	/* Count of tags in the map */
 	0, 0,
@@ -25055,10 +25055,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceItemCxtRelCpl_ExtIEs = 
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_388 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceItemCxtRelReq_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceItemCxtRelReq_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceItemCxtRelReq_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceItemCxtRelReq_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceItemCxtRelReq_ExtIEs_t::ASN_NGAP_PDUSessionResourceItemCxtRelReq_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceItemCxtRelReq_ExtIEs_t::ASN_NGAP_PDUSessionResourceItemCxtRelReq_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceItemCxtRelReq_ExtIEs_t::ASN_NGAP_PDUSessionResourceItemCxtRelReq_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceItemCxtRelReq_ExtIEs_t::ASN_NGAP_PDUSessionResourceItemCxtRelReq_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -25140,10 +25140,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceItemCxtRelReq_ExtIEs = 
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_392 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceItemHORqd_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceItemHORqd_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceItemHORqd_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceItemHORqd_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceItemHORqd_ExtIEs_t::ASN_NGAP_PDUSessionResourceItemHORqd_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceItemHORqd_ExtIEs_t::ASN_NGAP_PDUSessionResourceItemHORqd_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceItemHORqd_ExtIEs_t::ASN_NGAP_PDUSessionResourceItemHORqd_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceItemHORqd_ExtIEs_t::ASN_NGAP_PDUSessionResourceItemHORqd_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -25225,10 +25225,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceItemHORqd_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_396 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceModifyConfirmTransfer_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceModifyConfirmTransfer_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceModifyConfirmTransfer_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceModifyConfirmTransfer_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceModifyConfirmTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyConfirmTransfer_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceModifyConfirmTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyConfirmTransfer_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceModifyConfirmTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyConfirmTransfer_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceModifyConfirmTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyConfirmTransfer_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -25310,10 +25310,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceModifyConfirmTransfer_E
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_400 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceModifyIndicationUnsuccessfulTransfer_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceModifyIndicationUnsuccessfulTransfer_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceModifyIndicationUnsuccessfulTransfer_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceModifyIndicationUnsuccessfulTransfer_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceModifyIndicationUnsuccessfulTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyIndicationUnsuccessfulTransfer_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceModifyIndicationUnsuccessfulTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyIndicationUnsuccessfulTransfer_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceModifyIndicationUnsuccessfulTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyIndicationUnsuccessfulTransfer_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceModifyIndicationUnsuccessfulTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyIndicationUnsuccessfulTransfer_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -25395,7 +25395,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceModifyIndicationUnsucce
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_extensionValue_404[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyResponseTransfer_ExtIEs__extensionValue, choice.UPTransportLayerInformationPairList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyResponseTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyResponseTransfer_ExtIEs__extensionValue, choice.UPTransportLayerInformationPairList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UPTransportLayerInformationPairList,
@@ -25409,10 +25409,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_extensionValue_tag2el_404[] 
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 0, 0, 0 } /* UPTransportLayerInformationPairList */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_404 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceModifyResponseTransfer_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceModifyResponseTransfer_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceModifyResponseTransfer_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceModifyResponseTransfer_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceModifyResponseTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyResponseTransfer_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceModifyResponseTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyResponseTransfer_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceModifyResponseTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyResponseTransfer_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceModifyResponseTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyResponseTransfer_ExtIEs__extensionValue *)0)->present),
 	asn_MAP_ASN_NGAP_extensionValue_tag2el_404,
 	1,	/* Count of tags in the map */
 	0, 0,
@@ -25495,7 +25495,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceModifyResponseTransfer_
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_extensionValue_408[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyIndicationTransfer_ExtIEs__extensionValue, choice.SecondaryRATUsageInformation),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyIndicationTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyIndicationTransfer_ExtIEs__extensionValue, choice.SecondaryRATUsageInformation),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_SecondaryRATUsageInformation,
@@ -25504,7 +25504,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_extensionValue_408[] = {
 		0, 0, /* No default value */
 		"SecondaryRATUsageInformation"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyIndicationTransfer_ExtIEs__extensionValue, choice.SecurityResult),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyIndicationTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyIndicationTransfer_ExtIEs__extensionValue, choice.SecurityResult),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_SecurityResult,
@@ -25519,10 +25519,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_extensionValue_tag2el_408[] 
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 1, -1, 0 } /* SecurityResult */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_408 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceModifyIndicationTransfer_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceModifyIndicationTransfer_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceModifyIndicationTransfer_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceModifyIndicationTransfer_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceModifyIndicationTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyIndicationTransfer_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceModifyIndicationTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyIndicationTransfer_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceModifyIndicationTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyIndicationTransfer_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceModifyIndicationTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyIndicationTransfer_ExtIEs__extensionValue *)0)->present),
 	asn_MAP_ASN_NGAP_extensionValue_tag2el_408,
 	2,	/* Count of tags in the map */
 	0, 0,
@@ -25605,10 +25605,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceModifyIndicationTransfe
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_412 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceModifyItemModCfm_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceModifyItemModCfm_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceModifyItemModCfm_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceModifyItemModCfm_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceModifyItemModCfm_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyItemModCfm_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceModifyItemModCfm_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyItemModCfm_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceModifyItemModCfm_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyItemModCfm_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceModifyItemModCfm_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyItemModCfm_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -25690,10 +25690,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceModifyItemModCfm_ExtIEs
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_416 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceModifyItemModInd_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceModifyItemModInd_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceModifyItemModInd_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceModifyItemModInd_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceModifyItemModInd_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyItemModInd_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceModifyItemModInd_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyItemModInd_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceModifyItemModInd_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyItemModInd_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceModifyItemModInd_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyItemModInd_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -25775,7 +25775,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceModifyItemModInd_ExtIEs
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_extensionValue_420[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyItemModReq_ExtIEs__extensionValue, choice.S_NSSAI),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyItemModReq_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyItemModReq_ExtIEs__extensionValue, choice.S_NSSAI),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_S_NSSAI,
@@ -25789,10 +25789,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_extensionValue_tag2el_420[] 
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 0, 0, 0 } /* S-NSSAI */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_420 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceModifyItemModReq_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceModifyItemModReq_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceModifyItemModReq_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceModifyItemModReq_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceModifyItemModReq_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyItemModReq_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceModifyItemModReq_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyItemModReq_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceModifyItemModReq_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyItemModReq_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceModifyItemModReq_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyItemModReq_ExtIEs__extensionValue *)0)->present),
 	asn_MAP_ASN_NGAP_extensionValue_tag2el_420,
 	1,	/* Count of tags in the map */
 	0, 0,
@@ -25875,10 +25875,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceModifyItemModReq_ExtIEs
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_424 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceModifyItemModRes_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceModifyItemModRes_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceModifyItemModRes_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceModifyItemModRes_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceModifyItemModRes_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyItemModRes_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceModifyItemModRes_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyItemModRes_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceModifyItemModRes_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyItemModRes_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceModifyItemModRes_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyItemModRes_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -25960,10 +25960,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceModifyItemModRes_ExtIEs
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_428 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceModifyUnsuccessfulTransfer_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceModifyUnsuccessfulTransfer_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceModifyUnsuccessfulTransfer_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceModifyUnsuccessfulTransfer_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceModifyUnsuccessfulTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyUnsuccessfulTransfer_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceModifyUnsuccessfulTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyUnsuccessfulTransfer_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceModifyUnsuccessfulTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyUnsuccessfulTransfer_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceModifyUnsuccessfulTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceModifyUnsuccessfulTransfer_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -26045,10 +26045,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceModifyUnsuccessfulTrans
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_432 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceNotifyItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceNotifyItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceNotifyItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceNotifyItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceNotifyItem_ExtIEs_t::ASN_NGAP_PDUSessionResourceNotifyItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceNotifyItem_ExtIEs_t::ASN_NGAP_PDUSessionResourceNotifyItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceNotifyItem_ExtIEs_t::ASN_NGAP_PDUSessionResourceNotifyItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceNotifyItem_ExtIEs_t::ASN_NGAP_PDUSessionResourceNotifyItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -26130,7 +26130,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceNotifyItem_ExtIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_extensionValue_436[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceNotifyReleasedTransfer_ExtIEs__extensionValue, choice.SecondaryRATUsageInformation),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceNotifyReleasedTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceNotifyReleasedTransfer_ExtIEs__extensionValue, choice.SecondaryRATUsageInformation),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_SecondaryRATUsageInformation,
@@ -26144,10 +26144,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_extensionValue_tag2el_436[] 
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 0, 0, 0 } /* SecondaryRATUsageInformation */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_436 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceNotifyReleasedTransfer_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceNotifyReleasedTransfer_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceNotifyReleasedTransfer_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceNotifyReleasedTransfer_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceNotifyReleasedTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceNotifyReleasedTransfer_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceNotifyReleasedTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceNotifyReleasedTransfer_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceNotifyReleasedTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceNotifyReleasedTransfer_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceNotifyReleasedTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceNotifyReleasedTransfer_ExtIEs__extensionValue *)0)->present),
 	asn_MAP_ASN_NGAP_extensionValue_tag2el_436,
 	1,	/* Count of tags in the map */
 	0, 0,
@@ -26230,7 +26230,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceNotifyReleasedTransfer_
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_extensionValue_440[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceNotifyTransfer_ExtIEs__extensionValue, choice.SecondaryRATUsageInformation),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceNotifyTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceNotifyTransfer_ExtIEs__extensionValue, choice.SecondaryRATUsageInformation),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_SecondaryRATUsageInformation,
@@ -26244,10 +26244,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_extensionValue_tag2el_440[] 
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 0, 0, 0 } /* SecondaryRATUsageInformation */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_440 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceNotifyTransfer_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceNotifyTransfer_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceNotifyTransfer_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceNotifyTransfer_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceNotifyTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceNotifyTransfer_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceNotifyTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceNotifyTransfer_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceNotifyTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceNotifyTransfer_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceNotifyTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceNotifyTransfer_ExtIEs__extensionValue *)0)->present),
 	asn_MAP_ASN_NGAP_extensionValue_tag2el_440,
 	1,	/* Count of tags in the map */
 	0, 0,
@@ -26330,10 +26330,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceNotifyTransfer_ExtIEs =
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_444 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceReleaseCommandTransfer_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceReleaseCommandTransfer_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceReleaseCommandTransfer_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceReleaseCommandTransfer_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceReleaseCommandTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceReleaseCommandTransfer_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceReleaseCommandTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceReleaseCommandTransfer_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceReleaseCommandTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceReleaseCommandTransfer_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceReleaseCommandTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceReleaseCommandTransfer_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -26415,10 +26415,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceReleaseCommandTransfer_
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_448 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceReleasedItemNot_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceReleasedItemNot_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceReleasedItemNot_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceReleasedItemNot_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceReleasedItemNot_ExtIEs_t::ASN_NGAP_PDUSessionResourceReleasedItemNot_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceReleasedItemNot_ExtIEs_t::ASN_NGAP_PDUSessionResourceReleasedItemNot_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceReleasedItemNot_ExtIEs_t::ASN_NGAP_PDUSessionResourceReleasedItemNot_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceReleasedItemNot_ExtIEs_t::ASN_NGAP_PDUSessionResourceReleasedItemNot_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -26500,10 +26500,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceReleasedItemNot_ExtIEs 
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_452 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceReleasedItemPSAck_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceReleasedItemPSAck_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceReleasedItemPSAck_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceReleasedItemPSAck_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceReleasedItemPSAck_ExtIEs_t::ASN_NGAP_PDUSessionResourceReleasedItemPSAck_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceReleasedItemPSAck_ExtIEs_t::ASN_NGAP_PDUSessionResourceReleasedItemPSAck_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceReleasedItemPSAck_ExtIEs_t::ASN_NGAP_PDUSessionResourceReleasedItemPSAck_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceReleasedItemPSAck_ExtIEs_t::ASN_NGAP_PDUSessionResourceReleasedItemPSAck_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -26585,10 +26585,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceReleasedItemPSAck_ExtIE
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_456 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceReleasedItemPSFail_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceReleasedItemPSFail_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceReleasedItemPSFail_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceReleasedItemPSFail_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceReleasedItemPSFail_ExtIEs_t::ASN_NGAP_PDUSessionResourceReleasedItemPSFail_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceReleasedItemPSFail_ExtIEs_t::ASN_NGAP_PDUSessionResourceReleasedItemPSFail_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceReleasedItemPSFail_ExtIEs_t::ASN_NGAP_PDUSessionResourceReleasedItemPSFail_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceReleasedItemPSFail_ExtIEs_t::ASN_NGAP_PDUSessionResourceReleasedItemPSFail_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -26670,10 +26670,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceReleasedItemPSFail_ExtI
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_460 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceReleasedItemRelRes_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceReleasedItemRelRes_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceReleasedItemRelRes_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceReleasedItemRelRes_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceReleasedItemRelRes_ExtIEs_t::ASN_NGAP_PDUSessionResourceReleasedItemRelRes_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceReleasedItemRelRes_ExtIEs_t::ASN_NGAP_PDUSessionResourceReleasedItemRelRes_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceReleasedItemRelRes_ExtIEs_t::ASN_NGAP_PDUSessionResourceReleasedItemRelRes_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceReleasedItemRelRes_ExtIEs_t::ASN_NGAP_PDUSessionResourceReleasedItemRelRes_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -26755,7 +26755,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceReleasedItemRelRes_ExtI
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_extensionValue_464[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceReleaseResponseTransfer_ExtIEs__extensionValue, choice.SecondaryRATUsageInformation),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceReleaseResponseTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceReleaseResponseTransfer_ExtIEs__extensionValue, choice.SecondaryRATUsageInformation),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_SecondaryRATUsageInformation,
@@ -26769,10 +26769,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_extensionValue_tag2el_464[] 
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 0, 0, 0 } /* SecondaryRATUsageInformation */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_464 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceReleaseResponseTransfer_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceReleaseResponseTransfer_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceReleaseResponseTransfer_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceReleaseResponseTransfer_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceReleaseResponseTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceReleaseResponseTransfer_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceReleaseResponseTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceReleaseResponseTransfer_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceReleaseResponseTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceReleaseResponseTransfer_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceReleaseResponseTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceReleaseResponseTransfer_ExtIEs__extensionValue *)0)->present),
 	asn_MAP_ASN_NGAP_extensionValue_tag2el_464,
 	1,	/* Count of tags in the map */
 	0, 0,
@@ -26855,10 +26855,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceReleaseResponseTransfer
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_468 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceSecondaryRATUsageItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceSecondaryRATUsageItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceSecondaryRATUsageItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceSecondaryRATUsageItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceSecondaryRATUsageItem_ExtIEs_t::ASN_NGAP_PDUSessionResourceSecondaryRATUsageItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceSecondaryRATUsageItem_ExtIEs_t::ASN_NGAP_PDUSessionResourceSecondaryRATUsageItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceSecondaryRATUsageItem_ExtIEs_t::ASN_NGAP_PDUSessionResourceSecondaryRATUsageItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceSecondaryRATUsageItem_ExtIEs_t::ASN_NGAP_PDUSessionResourceSecondaryRATUsageItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -26940,10 +26940,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceSecondaryRATUsageItem_E
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_472 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceSetupItemCxtReq_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceSetupItemCxtReq_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceSetupItemCxtReq_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceSetupItemCxtReq_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceSetupItemCxtReq_ExtIEs_t::ASN_NGAP_PDUSessionResourceSetupItemCxtReq_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceSetupItemCxtReq_ExtIEs_t::ASN_NGAP_PDUSessionResourceSetupItemCxtReq_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceSetupItemCxtReq_ExtIEs_t::ASN_NGAP_PDUSessionResourceSetupItemCxtReq_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceSetupItemCxtReq_ExtIEs_t::ASN_NGAP_PDUSessionResourceSetupItemCxtReq_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -27025,10 +27025,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceSetupItemCxtReq_ExtIEs 
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_476 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceSetupItemCxtRes_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceSetupItemCxtRes_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceSetupItemCxtRes_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceSetupItemCxtRes_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceSetupItemCxtRes_ExtIEs_t::ASN_NGAP_PDUSessionResourceSetupItemCxtRes_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceSetupItemCxtRes_ExtIEs_t::ASN_NGAP_PDUSessionResourceSetupItemCxtRes_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceSetupItemCxtRes_ExtIEs_t::ASN_NGAP_PDUSessionResourceSetupItemCxtRes_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceSetupItemCxtRes_ExtIEs_t::ASN_NGAP_PDUSessionResourceSetupItemCxtRes_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -27110,10 +27110,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceSetupItemCxtRes_ExtIEs 
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_480 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceSetupItemHOReq_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceSetupItemHOReq_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceSetupItemHOReq_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceSetupItemHOReq_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceSetupItemHOReq_ExtIEs_t::ASN_NGAP_PDUSessionResourceSetupItemHOReq_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceSetupItemHOReq_ExtIEs_t::ASN_NGAP_PDUSessionResourceSetupItemHOReq_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceSetupItemHOReq_ExtIEs_t::ASN_NGAP_PDUSessionResourceSetupItemHOReq_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceSetupItemHOReq_ExtIEs_t::ASN_NGAP_PDUSessionResourceSetupItemHOReq_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -27195,10 +27195,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceSetupItemHOReq_ExtIEs =
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_484 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceSetupItemSUReq_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceSetupItemSUReq_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceSetupItemSUReq_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceSetupItemSUReq_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceSetupItemSUReq_ExtIEs_t::ASN_NGAP_PDUSessionResourceSetupItemSUReq_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceSetupItemSUReq_ExtIEs_t::ASN_NGAP_PDUSessionResourceSetupItemSUReq_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceSetupItemSUReq_ExtIEs_t::ASN_NGAP_PDUSessionResourceSetupItemSUReq_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceSetupItemSUReq_ExtIEs_t::ASN_NGAP_PDUSessionResourceSetupItemSUReq_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -27280,10 +27280,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceSetupItemSUReq_ExtIEs =
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_488 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceSetupItemSURes_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceSetupItemSURes_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceSetupItemSURes_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceSetupItemSURes_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceSetupItemSURes_ExtIEs_t::ASN_NGAP_PDUSessionResourceSetupItemSURes_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceSetupItemSURes_ExtIEs_t::ASN_NGAP_PDUSessionResourceSetupItemSURes_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceSetupItemSURes_ExtIEs_t::ASN_NGAP_PDUSessionResourceSetupItemSURes_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceSetupItemSURes_ExtIEs_t::ASN_NGAP_PDUSessionResourceSetupItemSURes_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -27365,10 +27365,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceSetupItemSURes_ExtIEs =
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_492 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceSetupResponseTransfer_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceSetupResponseTransfer_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceSetupResponseTransfer_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceSetupResponseTransfer_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceSetupResponseTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceSetupResponseTransfer_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceSetupResponseTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceSetupResponseTransfer_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceSetupResponseTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceSetupResponseTransfer_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceSetupResponseTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceSetupResponseTransfer_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -27450,10 +27450,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceSetupResponseTransfer_E
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_496 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceSetupUnsuccessfulTransfer_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceSetupUnsuccessfulTransfer_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceSetupUnsuccessfulTransfer_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceSetupUnsuccessfulTransfer_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceSetupUnsuccessfulTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceSetupUnsuccessfulTransfer_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceSetupUnsuccessfulTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceSetupUnsuccessfulTransfer_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceSetupUnsuccessfulTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceSetupUnsuccessfulTransfer_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceSetupUnsuccessfulTransfer_ExtIEs_t::ASN_NGAP_PDUSessionResourceSetupUnsuccessfulTransfer_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -27535,10 +27535,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceSetupUnsuccessfulTransf
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_500 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceSwitchedItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceSwitchedItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceSwitchedItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceSwitchedItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceSwitchedItem_ExtIEs_t::ASN_NGAP_PDUSessionResourceSwitchedItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceSwitchedItem_ExtIEs_t::ASN_NGAP_PDUSessionResourceSwitchedItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceSwitchedItem_ExtIEs_t::ASN_NGAP_PDUSessionResourceSwitchedItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceSwitchedItem_ExtIEs_t::ASN_NGAP_PDUSessionResourceSwitchedItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -27620,10 +27620,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceSwitchedItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_504 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceToBeSwitchedDLItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceToBeSwitchedDLItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceToBeSwitchedDLItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceToBeSwitchedDLItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceToBeSwitchedDLItem_ExtIEs_t::ASN_NGAP_PDUSessionResourceToBeSwitchedDLItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceToBeSwitchedDLItem_ExtIEs_t::ASN_NGAP_PDUSessionResourceToBeSwitchedDLItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceToBeSwitchedDLItem_ExtIEs_t::ASN_NGAP_PDUSessionResourceToBeSwitchedDLItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceToBeSwitchedDLItem_ExtIEs_t::ASN_NGAP_PDUSessionResourceToBeSwitchedDLItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -27705,10 +27705,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceToBeSwitchedDLItem_ExtI
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_508 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceToReleaseItemHOCmd_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceToReleaseItemHOCmd_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceToReleaseItemHOCmd_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceToReleaseItemHOCmd_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceToReleaseItemHOCmd_ExtIEs_t::ASN_NGAP_PDUSessionResourceToReleaseItemHOCmd_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceToReleaseItemHOCmd_ExtIEs_t::ASN_NGAP_PDUSessionResourceToReleaseItemHOCmd_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceToReleaseItemHOCmd_ExtIEs_t::ASN_NGAP_PDUSessionResourceToReleaseItemHOCmd_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceToReleaseItemHOCmd_ExtIEs_t::ASN_NGAP_PDUSessionResourceToReleaseItemHOCmd_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -27790,10 +27790,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceToReleaseItemHOCmd_ExtI
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_512 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceToReleaseItemRelCmd_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionResourceToReleaseItemRelCmd_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceToReleaseItemRelCmd_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceToReleaseItemRelCmd_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceToReleaseItemRelCmd_ExtIEs_t::ASN_NGAP_PDUSessionResourceToReleaseItemRelCmd_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionResourceToReleaseItemRelCmd_ExtIEs_t::ASN_NGAP_PDUSessionResourceToReleaseItemRelCmd_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceToReleaseItemRelCmd_ExtIEs_t::ASN_NGAP_PDUSessionResourceToReleaseItemRelCmd_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceToReleaseItemRelCmd_ExtIEs_t::ASN_NGAP_PDUSessionResourceToReleaseItemRelCmd_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -27875,10 +27875,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceToReleaseItemRelCmd_Ext
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_516 = {
-	sizeof(struct ASN_NGAP_PDUSessionUsageReport_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PDUSessionUsageReport_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionUsageReport_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PDUSessionUsageReport_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionUsageReport_ExtIEs_t::ASN_NGAP_PDUSessionUsageReport_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PDUSessionUsageReport_ExtIEs_t::ASN_NGAP_PDUSessionUsageReport_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionUsageReport_ExtIEs_t::ASN_NGAP_PDUSessionUsageReport_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PDUSessionUsageReport_ExtIEs_t::ASN_NGAP_PDUSessionUsageReport_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -27960,10 +27960,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionUsageReport_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_520 = {
-	sizeof(struct ASN_NGAP_PLMNSupportItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_PLMNSupportItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_PLMNSupportItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_PLMNSupportItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_PLMNSupportItem_ExtIEs_t::ASN_NGAP_PLMNSupportItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_PLMNSupportItem_ExtIEs_t::ASN_NGAP_PLMNSupportItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_PLMNSupportItem_ExtIEs_t::ASN_NGAP_PLMNSupportItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_PLMNSupportItem_ExtIEs_t::ASN_NGAP_PLMNSupportItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -28045,10 +28045,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PLMNSupportItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_524 = {
-	sizeof(struct ASN_NGAP_QosFlowAcceptedItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_QosFlowAcceptedItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_QosFlowAcceptedItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_QosFlowAcceptedItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_QosFlowAcceptedItem_ExtIEs_t::ASN_NGAP_QosFlowAcceptedItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_QosFlowAcceptedItem_ExtIEs_t::ASN_NGAP_QosFlowAcceptedItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_QosFlowAcceptedItem_ExtIEs_t::ASN_NGAP_QosFlowAcceptedItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_QosFlowAcceptedItem_ExtIEs_t::ASN_NGAP_QosFlowAcceptedItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -28130,10 +28130,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_QosFlowAcceptedItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_528 = {
-	sizeof(struct ASN_NGAP_QosFlowAddOrModifyRequestItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_QosFlowAddOrModifyRequestItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_QosFlowAddOrModifyRequestItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_QosFlowAddOrModifyRequestItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_QosFlowAddOrModifyRequestItem_ExtIEs_t::ASN_NGAP_QosFlowAddOrModifyRequestItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_QosFlowAddOrModifyRequestItem_ExtIEs_t::ASN_NGAP_QosFlowAddOrModifyRequestItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_QosFlowAddOrModifyRequestItem_ExtIEs_t::ASN_NGAP_QosFlowAddOrModifyRequestItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_QosFlowAddOrModifyRequestItem_ExtIEs_t::ASN_NGAP_QosFlowAddOrModifyRequestItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -28215,10 +28215,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_QosFlowAddOrModifyRequestItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_532 = {
-	sizeof(struct ASN_NGAP_QosFlowAddOrModifyResponseItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_QosFlowAddOrModifyResponseItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_QosFlowAddOrModifyResponseItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_QosFlowAddOrModifyResponseItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_QosFlowAddOrModifyResponseItem_ExtIEs_t::ASN_NGAP_QosFlowAddOrModifyResponseItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_QosFlowAddOrModifyResponseItem_ExtIEs_t::ASN_NGAP_QosFlowAddOrModifyResponseItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_QosFlowAddOrModifyResponseItem_ExtIEs_t::ASN_NGAP_QosFlowAddOrModifyResponseItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_QosFlowAddOrModifyResponseItem_ExtIEs_t::ASN_NGAP_QosFlowAddOrModifyResponseItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -28300,7 +28300,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_QosFlowAddOrModifyResponseItem_ExtIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_extensionValue_536[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_QosFlowInformationItem_ExtIEs__extensionValue, choice.ULForwarding),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_QosFlowInformationItem_ExtIEs_t::ASN_NGAP_QosFlowInformationItem_ExtIEs__extensionValue, choice.ULForwarding),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_ULForwarding,
@@ -28314,10 +28314,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_extensionValue_tag2el_536[] 
     { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 0, 0, 0 } /* ULForwarding */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_536 = {
-	sizeof(struct ASN_NGAP_QosFlowInformationItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_QosFlowInformationItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_QosFlowInformationItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_QosFlowInformationItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_QosFlowInformationItem_ExtIEs_t::ASN_NGAP_QosFlowInformationItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_QosFlowInformationItem_ExtIEs_t::ASN_NGAP_QosFlowInformationItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_QosFlowInformationItem_ExtIEs_t::ASN_NGAP_QosFlowInformationItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_QosFlowInformationItem_ExtIEs_t::ASN_NGAP_QosFlowInformationItem_ExtIEs__extensionValue *)0)->present),
 	asn_MAP_ASN_NGAP_extensionValue_tag2el_536,
 	1,	/* Count of tags in the map */
 	0, 0,
@@ -28400,10 +28400,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_QosFlowInformationItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_540 = {
-	sizeof(struct ASN_NGAP_QosFlowLevelQosParameters_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_QosFlowLevelQosParameters_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_QosFlowLevelQosParameters_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_QosFlowLevelQosParameters_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_QosFlowLevelQosParameters_ExtIEs_t::ASN_NGAP_QosFlowLevelQosParameters_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_QosFlowLevelQosParameters_ExtIEs_t::ASN_NGAP_QosFlowLevelQosParameters_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_QosFlowLevelQosParameters_ExtIEs_t::ASN_NGAP_QosFlowLevelQosParameters_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_QosFlowLevelQosParameters_ExtIEs_t::ASN_NGAP_QosFlowLevelQosParameters_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -28485,10 +28485,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_QosFlowLevelQosParameters_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_544 = {
-	sizeof(struct ASN_NGAP_QosFlowWithCauseItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_QosFlowWithCauseItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_QosFlowWithCauseItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_QosFlowWithCauseItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_QosFlowWithCauseItem_ExtIEs_t::ASN_NGAP_QosFlowWithCauseItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_QosFlowWithCauseItem_ExtIEs_t::ASN_NGAP_QosFlowWithCauseItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_QosFlowWithCauseItem_ExtIEs_t::ASN_NGAP_QosFlowWithCauseItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_QosFlowWithCauseItem_ExtIEs_t::ASN_NGAP_QosFlowWithCauseItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -28570,10 +28570,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_QosFlowWithCauseItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_548 = {
-	sizeof(struct ASN_NGAP_QosFlowModifyConfirmItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_QosFlowModifyConfirmItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_QosFlowModifyConfirmItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_QosFlowModifyConfirmItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_QosFlowModifyConfirmItem_ExtIEs_t::ASN_NGAP_QosFlowModifyConfirmItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_QosFlowModifyConfirmItem_ExtIEs_t::ASN_NGAP_QosFlowModifyConfirmItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_QosFlowModifyConfirmItem_ExtIEs_t::ASN_NGAP_QosFlowModifyConfirmItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_QosFlowModifyConfirmItem_ExtIEs_t::ASN_NGAP_QosFlowModifyConfirmItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -28655,10 +28655,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_QosFlowModifyConfirmItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_552 = {
-	sizeof(struct ASN_NGAP_QosFlowNotifyItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_QosFlowNotifyItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_QosFlowNotifyItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_QosFlowNotifyItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_QosFlowNotifyItem_ExtIEs_t::ASN_NGAP_QosFlowNotifyItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_QosFlowNotifyItem_ExtIEs_t::ASN_NGAP_QosFlowNotifyItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_QosFlowNotifyItem_ExtIEs_t::ASN_NGAP_QosFlowNotifyItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_QosFlowNotifyItem_ExtIEs_t::ASN_NGAP_QosFlowNotifyItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -28740,10 +28740,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_QosFlowNotifyItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_556 = {
-	sizeof(struct ASN_NGAP_QosFlowPerTNLInformation_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_QosFlowPerTNLInformation_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_QosFlowPerTNLInformation_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_QosFlowPerTNLInformation_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_QosFlowPerTNLInformation_ExtIEs_t::ASN_NGAP_QosFlowPerTNLInformation_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_QosFlowPerTNLInformation_ExtIEs_t::ASN_NGAP_QosFlowPerTNLInformation_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_QosFlowPerTNLInformation_ExtIEs_t::ASN_NGAP_QosFlowPerTNLInformation_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_QosFlowPerTNLInformation_ExtIEs_t::ASN_NGAP_QosFlowPerTNLInformation_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -28825,10 +28825,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_QosFlowPerTNLInformation_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_560 = {
-	sizeof(struct ASN_NGAP_QosFlowPerTNLInformationItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_QosFlowPerTNLInformationItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_QosFlowPerTNLInformationItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_QosFlowPerTNLInformationItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_QosFlowPerTNLInformationItem_ExtIEs_t::ASN_NGAP_QosFlowPerTNLInformationItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_QosFlowPerTNLInformationItem_ExtIEs_t::ASN_NGAP_QosFlowPerTNLInformationItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_QosFlowPerTNLInformationItem_ExtIEs_t::ASN_NGAP_QosFlowPerTNLInformationItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_QosFlowPerTNLInformationItem_ExtIEs_t::ASN_NGAP_QosFlowPerTNLInformationItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -28910,10 +28910,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_QosFlowPerTNLInformationItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_564 = {
-	sizeof(struct ASN_NGAP_QosFlowSetupRequestItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_QosFlowSetupRequestItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_QosFlowSetupRequestItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_QosFlowSetupRequestItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_QosFlowSetupRequestItem_ExtIEs_t::ASN_NGAP_QosFlowSetupRequestItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_QosFlowSetupRequestItem_ExtIEs_t::ASN_NGAP_QosFlowSetupRequestItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_QosFlowSetupRequestItem_ExtIEs_t::ASN_NGAP_QosFlowSetupRequestItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_QosFlowSetupRequestItem_ExtIEs_t::ASN_NGAP_QosFlowSetupRequestItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -28995,10 +28995,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_QosFlowSetupRequestItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_568 = {
-	sizeof(struct ASN_NGAP_QosFlowItemWithDataForwarding_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_QosFlowItemWithDataForwarding_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_QosFlowItemWithDataForwarding_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_QosFlowItemWithDataForwarding_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_QosFlowItemWithDataForwarding_ExtIEs_t::ASN_NGAP_QosFlowItemWithDataForwarding_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_QosFlowItemWithDataForwarding_ExtIEs_t::ASN_NGAP_QosFlowItemWithDataForwarding_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_QosFlowItemWithDataForwarding_ExtIEs_t::ASN_NGAP_QosFlowItemWithDataForwarding_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_QosFlowItemWithDataForwarding_ExtIEs_t::ASN_NGAP_QosFlowItemWithDataForwarding_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -29080,10 +29080,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_QosFlowItemWithDataForwarding_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_572 = {
-	sizeof(struct ASN_NGAP_QosFlowSetupResponseItemSURes_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_QosFlowSetupResponseItemSURes_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_QosFlowSetupResponseItemSURes_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_QosFlowSetupResponseItemSURes_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_QosFlowSetupResponseItemSURes_ExtIEs_t::ASN_NGAP_QosFlowSetupResponseItemSURes_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_QosFlowSetupResponseItemSURes_ExtIEs_t::ASN_NGAP_QosFlowSetupResponseItemSURes_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_QosFlowSetupResponseItemSURes_ExtIEs_t::ASN_NGAP_QosFlowSetupResponseItemSURes_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_QosFlowSetupResponseItemSURes_ExtIEs_t::ASN_NGAP_QosFlowSetupResponseItemSURes_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -29165,10 +29165,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_QosFlowSetupResponseItemSURes_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_576 = {
-	sizeof(struct ASN_NGAP_QosFlowToBeForwardedItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_QosFlowToBeForwardedItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_QosFlowToBeForwardedItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_QosFlowToBeForwardedItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_QosFlowToBeForwardedItem_ExtIEs_t::ASN_NGAP_QosFlowToBeForwardedItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_QosFlowToBeForwardedItem_ExtIEs_t::ASN_NGAP_QosFlowToBeForwardedItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_QosFlowToBeForwardedItem_ExtIEs_t::ASN_NGAP_QosFlowToBeForwardedItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_QosFlowToBeForwardedItem_ExtIEs_t::ASN_NGAP_QosFlowToBeForwardedItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -29250,10 +29250,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_QosFlowToBeForwardedItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_580 = {
-	sizeof(struct ASN_NGAP_QoSFlowsUsageReport_Item_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_QoSFlowsUsageReport_Item_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_QoSFlowsUsageReport_Item_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_QoSFlowsUsageReport_Item_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_QoSFlowsUsageReport_Item_ExtIEs_t::ASN_NGAP_QoSFlowsUsageReport_Item_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_QoSFlowsUsageReport_Item_ExtIEs_t::ASN_NGAP_QoSFlowsUsageReport_Item_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_QoSFlowsUsageReport_Item_ExtIEs_t::ASN_NGAP_QoSFlowsUsageReport_Item_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_QoSFlowsUsageReport_Item_ExtIEs_t::ASN_NGAP_QoSFlowsUsageReport_Item_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -29335,10 +29335,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_QoSFlowsUsageReport_Item_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_584 = {
-	sizeof(struct ASN_NGAP_RANStatusTransfer_TransparentContainer_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_RANStatusTransfer_TransparentContainer_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_RANStatusTransfer_TransparentContainer_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_RANStatusTransfer_TransparentContainer_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_RANStatusTransfer_TransparentContainer_ExtIEs_t::ASN_NGAP_RANStatusTransfer_TransparentContainer_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_RANStatusTransfer_TransparentContainer_ExtIEs_t::ASN_NGAP_RANStatusTransfer_TransparentContainer_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_RANStatusTransfer_TransparentContainer_ExtIEs_t::ASN_NGAP_RANStatusTransfer_TransparentContainer_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_RANStatusTransfer_TransparentContainer_ExtIEs_t::ASN_NGAP_RANStatusTransfer_TransparentContainer_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -29420,10 +29420,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_RANStatusTransfer_TransparentContainer_Ex
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_588 = {
-	sizeof(struct ASN_NGAP_RATRestrictions_Item_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_RATRestrictions_Item_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_RATRestrictions_Item_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_RATRestrictions_Item_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_RATRestrictions_Item_ExtIEs_t::ASN_NGAP_RATRestrictions_Item_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_RATRestrictions_Item_ExtIEs_t::ASN_NGAP_RATRestrictions_Item_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_RATRestrictions_Item_ExtIEs_t::ASN_NGAP_RATRestrictions_Item_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_RATRestrictions_Item_ExtIEs_t::ASN_NGAP_RATRestrictions_Item_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -29505,10 +29505,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_RATRestrictions_Item_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_592 = {
-	sizeof(struct ASN_NGAP_RecommendedCellsForPaging_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_RecommendedCellsForPaging_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_RecommendedCellsForPaging_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_RecommendedCellsForPaging_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_RecommendedCellsForPaging_ExtIEs_t::ASN_NGAP_RecommendedCellsForPaging_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_RecommendedCellsForPaging_ExtIEs_t::ASN_NGAP_RecommendedCellsForPaging_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_RecommendedCellsForPaging_ExtIEs_t::ASN_NGAP_RecommendedCellsForPaging_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_RecommendedCellsForPaging_ExtIEs_t::ASN_NGAP_RecommendedCellsForPaging_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -29590,10 +29590,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_RecommendedCellsForPaging_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_596 = {
-	sizeof(struct ASN_NGAP_RecommendedCellItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_RecommendedCellItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_RecommendedCellItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_RecommendedCellItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_RecommendedCellItem_ExtIEs_t::ASN_NGAP_RecommendedCellItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_RecommendedCellItem_ExtIEs_t::ASN_NGAP_RecommendedCellItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_RecommendedCellItem_ExtIEs_t::ASN_NGAP_RecommendedCellItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_RecommendedCellItem_ExtIEs_t::ASN_NGAP_RecommendedCellItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -29675,10 +29675,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_RecommendedCellItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_600 = {
-	sizeof(struct ASN_NGAP_RecommendedRANNodesForPaging_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_RecommendedRANNodesForPaging_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_RecommendedRANNodesForPaging_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_RecommendedRANNodesForPaging_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_RecommendedRANNodesForPaging_ExtIEs_t::ASN_NGAP_RecommendedRANNodesForPaging_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_RecommendedRANNodesForPaging_ExtIEs_t::ASN_NGAP_RecommendedRANNodesForPaging_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_RecommendedRANNodesForPaging_ExtIEs_t::ASN_NGAP_RecommendedRANNodesForPaging_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_RecommendedRANNodesForPaging_ExtIEs_t::ASN_NGAP_RecommendedRANNodesForPaging_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -29760,10 +29760,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_RecommendedRANNodesForPaging_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_604 = {
-	sizeof(struct ASN_NGAP_RecommendedRANNodeItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_RecommendedRANNodeItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_RecommendedRANNodeItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_RecommendedRANNodeItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_RecommendedRANNodeItem_ExtIEs_t::ASN_NGAP_RecommendedRANNodeItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_RecommendedRANNodeItem_ExtIEs_t::ASN_NGAP_RecommendedRANNodeItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_RecommendedRANNodeItem_ExtIEs_t::ASN_NGAP_RecommendedRANNodeItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_RecommendedRANNodeItem_ExtIEs_t::ASN_NGAP_RecommendedRANNodeItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -29845,10 +29845,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_RecommendedRANNodeItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_608 = {
-	sizeof(struct ASN_NGAP_SecondaryRATUsageInformation_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_SecondaryRATUsageInformation_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_SecondaryRATUsageInformation_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_SecondaryRATUsageInformation_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_SecondaryRATUsageInformation_ExtIEs_t::ASN_NGAP_SecondaryRATUsageInformation_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_SecondaryRATUsageInformation_ExtIEs_t::ASN_NGAP_SecondaryRATUsageInformation_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_SecondaryRATUsageInformation_ExtIEs_t::ASN_NGAP_SecondaryRATUsageInformation_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_SecondaryRATUsageInformation_ExtIEs_t::ASN_NGAP_SecondaryRATUsageInformation_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -29930,10 +29930,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_SecondaryRATUsageInformation_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_612 = {
-	sizeof(struct ASN_NGAP_SecondaryRATDataUsageReportTransfer_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_SecondaryRATDataUsageReportTransfer_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_SecondaryRATDataUsageReportTransfer_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_SecondaryRATDataUsageReportTransfer_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_SecondaryRATDataUsageReportTransfer_ExtIEs_t::ASN_NGAP_SecondaryRATDataUsageReportTransfer_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_SecondaryRATDataUsageReportTransfer_ExtIEs_t::ASN_NGAP_SecondaryRATDataUsageReportTransfer_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_SecondaryRATDataUsageReportTransfer_ExtIEs_t::ASN_NGAP_SecondaryRATDataUsageReportTransfer_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_SecondaryRATDataUsageReportTransfer_ExtIEs_t::ASN_NGAP_SecondaryRATDataUsageReportTransfer_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -30015,10 +30015,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_SecondaryRATDataUsageReportTransfer_ExtIE
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_616 = {
-	sizeof(struct ASN_NGAP_SecurityContext_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_SecurityContext_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_SecurityContext_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_SecurityContext_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_SecurityContext_ExtIEs_t::ASN_NGAP_SecurityContext_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_SecurityContext_ExtIEs_t::ASN_NGAP_SecurityContext_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_SecurityContext_ExtIEs_t::ASN_NGAP_SecurityContext_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_SecurityContext_ExtIEs_t::ASN_NGAP_SecurityContext_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -30100,7 +30100,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_SecurityContext_ExtIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_extensionValue_620[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_SecurityIndication_ExtIEs__extensionValue, choice.MaximumIntegrityProtectedDataRate),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_SecurityIndication_ExtIEs_t::ASN_NGAP_SecurityIndication_ExtIEs__extensionValue, choice.MaximumIntegrityProtectedDataRate),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_MaximumIntegrityProtectedDataRate,
@@ -30114,10 +30114,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_extensionValue_tag2el_620[] 
     { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 0, 0, 0 } /* MaximumIntegrityProtectedDataRate */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_620 = {
-	sizeof(struct ASN_NGAP_SecurityIndication_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_SecurityIndication_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_SecurityIndication_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_SecurityIndication_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_SecurityIndication_ExtIEs_t::ASN_NGAP_SecurityIndication_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_SecurityIndication_ExtIEs_t::ASN_NGAP_SecurityIndication_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_SecurityIndication_ExtIEs_t::ASN_NGAP_SecurityIndication_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_SecurityIndication_ExtIEs_t::ASN_NGAP_SecurityIndication_ExtIEs__extensionValue *)0)->present),
 	asn_MAP_ASN_NGAP_extensionValue_tag2el_620,
 	1,	/* Count of tags in the map */
 	0, 0,
@@ -30200,10 +30200,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_SecurityIndication_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_624 = {
-	sizeof(struct ASN_NGAP_SecurityResult_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_SecurityResult_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_SecurityResult_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_SecurityResult_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_SecurityResult_ExtIEs_t::ASN_NGAP_SecurityResult_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_SecurityResult_ExtIEs_t::ASN_NGAP_SecurityResult_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_SecurityResult_ExtIEs_t::ASN_NGAP_SecurityResult_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_SecurityResult_ExtIEs_t::ASN_NGAP_SecurityResult_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -30285,10 +30285,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_SecurityResult_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_628 = {
-	sizeof(struct ASN_NGAP_ServedGUAMIItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_ServedGUAMIItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_ServedGUAMIItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_ServedGUAMIItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_ServedGUAMIItem_ExtIEs_t::ASN_NGAP_ServedGUAMIItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_ServedGUAMIItem_ExtIEs_t::ASN_NGAP_ServedGUAMIItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_ServedGUAMIItem_ExtIEs_t::ASN_NGAP_ServedGUAMIItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_ServedGUAMIItem_ExtIEs_t::ASN_NGAP_ServedGUAMIItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -30370,10 +30370,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_ServedGUAMIItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_632 = {
-	sizeof(struct ASN_NGAP_ServiceAreaInformation_Item_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_ServiceAreaInformation_Item_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_ServiceAreaInformation_Item_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_ServiceAreaInformation_Item_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_ServiceAreaInformation_Item_ExtIEs_t::ASN_NGAP_ServiceAreaInformation_Item_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_ServiceAreaInformation_Item_ExtIEs_t::ASN_NGAP_ServiceAreaInformation_Item_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_ServiceAreaInformation_Item_ExtIEs_t::ASN_NGAP_ServiceAreaInformation_Item_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_ServiceAreaInformation_Item_ExtIEs_t::ASN_NGAP_ServiceAreaInformation_Item_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -30455,10 +30455,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_ServiceAreaInformation_Item_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_636 = {
-	sizeof(struct ASN_NGAP_SliceOverloadItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_SliceOverloadItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_SliceOverloadItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_SliceOverloadItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_SliceOverloadItem_ExtIEs_t::ASN_NGAP_SliceOverloadItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_SliceOverloadItem_ExtIEs_t::ASN_NGAP_SliceOverloadItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_SliceOverloadItem_ExtIEs_t::ASN_NGAP_SliceOverloadItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_SliceOverloadItem_ExtIEs_t::ASN_NGAP_SliceOverloadItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -30540,10 +30540,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_SliceOverloadItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_640 = {
-	sizeof(struct ASN_NGAP_SliceSupportItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_SliceSupportItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_SliceSupportItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_SliceSupportItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_SliceSupportItem_ExtIEs_t::ASN_NGAP_SliceSupportItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_SliceSupportItem_ExtIEs_t::ASN_NGAP_SliceSupportItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_SliceSupportItem_ExtIEs_t::ASN_NGAP_SliceSupportItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_SliceSupportItem_ExtIEs_t::ASN_NGAP_SliceSupportItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -30625,10 +30625,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_SliceSupportItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_644 = {
-	sizeof(struct ASN_NGAP_S_NSSAI_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_S_NSSAI_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_S_NSSAI_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_S_NSSAI_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_S_NSSAI_ExtIEs_t::ASN_NGAP_S_NSSAI_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_S_NSSAI_ExtIEs_t::ASN_NGAP_S_NSSAI_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_S_NSSAI_ExtIEs_t::ASN_NGAP_S_NSSAI_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_S_NSSAI_ExtIEs_t::ASN_NGAP_S_NSSAI_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -30710,10 +30710,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_S_NSSAI_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_648 = {
-	sizeof(struct ASN_NGAP_SONConfigurationTransfer_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_SONConfigurationTransfer_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_SONConfigurationTransfer_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_SONConfigurationTransfer_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_SONConfigurationTransfer_ExtIEs_t::ASN_NGAP_SONConfigurationTransfer_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_SONConfigurationTransfer_ExtIEs_t::ASN_NGAP_SONConfigurationTransfer_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_SONConfigurationTransfer_ExtIEs_t::ASN_NGAP_SONConfigurationTransfer_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_SONConfigurationTransfer_ExtIEs_t::ASN_NGAP_SONConfigurationTransfer_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -30795,10 +30795,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_SONConfigurationTransfer_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_652 = {
-	sizeof(struct ASN_NGAP_SONInformationReply_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_SONInformationReply_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_SONInformationReply_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_SONInformationReply_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_SONInformationReply_ExtIEs_t::ASN_NGAP_SONInformationReply_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_SONInformationReply_ExtIEs_t::ASN_NGAP_SONInformationReply_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_SONInformationReply_ExtIEs_t::ASN_NGAP_SONInformationReply_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_SONInformationReply_ExtIEs_t::ASN_NGAP_SONInformationReply_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -30880,10 +30880,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_SONInformationReply_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_656 = {
-	sizeof(struct ASN_NGAP_SourceNGRANNode_ToTargetNGRANNode_TransparentContainer_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_SourceNGRANNode_ToTargetNGRANNode_TransparentContainer_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_SourceNGRANNode_ToTargetNGRANNode_TransparentContainer_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_SourceNGRANNode_ToTargetNGRANNode_TransparentContainer_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_SourceNGRANNode_ToTargetNGRANNode_TransparentContainer_ExtIEs_t::ASN_NGAP_SourceNGRANNode_ToTargetNGRANNode_TransparentContainer_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_SourceNGRANNode_ToTargetNGRANNode_TransparentContainer_ExtIEs_t::ASN_NGAP_SourceNGRANNode_ToTargetNGRANNode_TransparentContainer_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_SourceNGRANNode_ToTargetNGRANNode_TransparentContainer_ExtIEs_t::ASN_NGAP_SourceNGRANNode_ToTargetNGRANNode_TransparentContainer_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_SourceNGRANNode_ToTargetNGRANNode_TransparentContainer_ExtIEs_t::ASN_NGAP_SourceNGRANNode_ToTargetNGRANNode_TransparentContainer_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -30965,10 +30965,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_SourceNGRANNode_ToTargetNGRANNode_Transpa
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_660 = {
-	sizeof(struct ASN_NGAP_SourceRANNodeID_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_SourceRANNodeID_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_SourceRANNodeID_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_SourceRANNodeID_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_SourceRANNodeID_ExtIEs_t::ASN_NGAP_SourceRANNodeID_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_SourceRANNodeID_ExtIEs_t::ASN_NGAP_SourceRANNodeID_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_SourceRANNodeID_ExtIEs_t::ASN_NGAP_SourceRANNodeID_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_SourceRANNodeID_ExtIEs_t::ASN_NGAP_SourceRANNodeID_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -31050,10 +31050,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_SourceRANNodeID_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_664 = {
-	sizeof(struct ASN_NGAP_SourceToTarget_AMFInformationReroute_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_SourceToTarget_AMFInformationReroute_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_SourceToTarget_AMFInformationReroute_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_SourceToTarget_AMFInformationReroute_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_SourceToTarget_AMFInformationReroute_ExtIEs_t::ASN_NGAP_SourceToTarget_AMFInformationReroute_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_SourceToTarget_AMFInformationReroute_ExtIEs_t::ASN_NGAP_SourceToTarget_AMFInformationReroute_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_SourceToTarget_AMFInformationReroute_ExtIEs_t::ASN_NGAP_SourceToTarget_AMFInformationReroute_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_SourceToTarget_AMFInformationReroute_ExtIEs_t::ASN_NGAP_SourceToTarget_AMFInformationReroute_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -31135,10 +31135,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_SourceToTarget_AMFInformationReroute_ExtI
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_668 = {
-	sizeof(struct ASN_NGAP_SupportedTAItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_SupportedTAItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_SupportedTAItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_SupportedTAItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_SupportedTAItem_ExtIEs_t::ASN_NGAP_SupportedTAItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_SupportedTAItem_ExtIEs_t::ASN_NGAP_SupportedTAItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_SupportedTAItem_ExtIEs_t::ASN_NGAP_SupportedTAItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_SupportedTAItem_ExtIEs_t::ASN_NGAP_SupportedTAItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -31220,10 +31220,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_SupportedTAItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_672 = {
-	sizeof(struct ASN_NGAP_TAI_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_TAI_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_TAI_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_TAI_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_TAI_ExtIEs_t::ASN_NGAP_TAI_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_TAI_ExtIEs_t::ASN_NGAP_TAI_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_TAI_ExtIEs_t::ASN_NGAP_TAI_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_TAI_ExtIEs_t::ASN_NGAP_TAI_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -31305,10 +31305,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_TAI_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_676 = {
-	sizeof(struct ASN_NGAP_TAIBroadcastEUTRA_Item_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_TAIBroadcastEUTRA_Item_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_TAIBroadcastEUTRA_Item_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_TAIBroadcastEUTRA_Item_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_TAIBroadcastEUTRA_Item_ExtIEs_t::ASN_NGAP_TAIBroadcastEUTRA_Item_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_TAIBroadcastEUTRA_Item_ExtIEs_t::ASN_NGAP_TAIBroadcastEUTRA_Item_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_TAIBroadcastEUTRA_Item_ExtIEs_t::ASN_NGAP_TAIBroadcastEUTRA_Item_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_TAIBroadcastEUTRA_Item_ExtIEs_t::ASN_NGAP_TAIBroadcastEUTRA_Item_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -31390,10 +31390,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_TAIBroadcastEUTRA_Item_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_680 = {
-	sizeof(struct ASN_NGAP_TAIBroadcastNR_Item_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_TAIBroadcastNR_Item_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_TAIBroadcastNR_Item_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_TAIBroadcastNR_Item_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_TAIBroadcastNR_Item_ExtIEs_t::ASN_NGAP_TAIBroadcastNR_Item_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_TAIBroadcastNR_Item_ExtIEs_t::ASN_NGAP_TAIBroadcastNR_Item_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_TAIBroadcastNR_Item_ExtIEs_t::ASN_NGAP_TAIBroadcastNR_Item_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_TAIBroadcastNR_Item_ExtIEs_t::ASN_NGAP_TAIBroadcastNR_Item_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -31475,10 +31475,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_TAIBroadcastNR_Item_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_684 = {
-	sizeof(struct ASN_NGAP_TAICancelledEUTRA_Item_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_TAICancelledEUTRA_Item_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_TAICancelledEUTRA_Item_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_TAICancelledEUTRA_Item_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_TAICancelledEUTRA_Item_ExtIEs_t::ASN_NGAP_TAICancelledEUTRA_Item_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_TAICancelledEUTRA_Item_ExtIEs_t::ASN_NGAP_TAICancelledEUTRA_Item_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_TAICancelledEUTRA_Item_ExtIEs_t::ASN_NGAP_TAICancelledEUTRA_Item_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_TAICancelledEUTRA_Item_ExtIEs_t::ASN_NGAP_TAICancelledEUTRA_Item_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -31560,10 +31560,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_TAICancelledEUTRA_Item_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_688 = {
-	sizeof(struct ASN_NGAP_TAICancelledNR_Item_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_TAICancelledNR_Item_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_TAICancelledNR_Item_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_TAICancelledNR_Item_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_TAICancelledNR_Item_ExtIEs_t::ASN_NGAP_TAICancelledNR_Item_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_TAICancelledNR_Item_ExtIEs_t::ASN_NGAP_TAICancelledNR_Item_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_TAICancelledNR_Item_ExtIEs_t::ASN_NGAP_TAICancelledNR_Item_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_TAICancelledNR_Item_ExtIEs_t::ASN_NGAP_TAICancelledNR_Item_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -31645,10 +31645,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_TAICancelledNR_Item_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_692 = {
-	sizeof(struct ASN_NGAP_TAIListForInactiveItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_TAIListForInactiveItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_TAIListForInactiveItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_TAIListForInactiveItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_TAIListForInactiveItem_ExtIEs_t::ASN_NGAP_TAIListForInactiveItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_TAIListForInactiveItem_ExtIEs_t::ASN_NGAP_TAIListForInactiveItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_TAIListForInactiveItem_ExtIEs_t::ASN_NGAP_TAIListForInactiveItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_TAIListForInactiveItem_ExtIEs_t::ASN_NGAP_TAIListForInactiveItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -31730,10 +31730,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_TAIListForInactiveItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_696 = {
-	sizeof(struct ASN_NGAP_TAIListForPagingItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_TAIListForPagingItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_TAIListForPagingItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_TAIListForPagingItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_TAIListForPagingItem_ExtIEs_t::ASN_NGAP_TAIListForPagingItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_TAIListForPagingItem_ExtIEs_t::ASN_NGAP_TAIListForPagingItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_TAIListForPagingItem_ExtIEs_t::ASN_NGAP_TAIListForPagingItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_TAIListForPagingItem_ExtIEs_t::ASN_NGAP_TAIListForPagingItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -31815,10 +31815,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_TAIListForPagingItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_700 = {
-	sizeof(struct ASN_NGAP_TargeteNB_ID_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_TargeteNB_ID_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_TargeteNB_ID_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_TargeteNB_ID_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_TargeteNB_ID_ExtIEs_t::ASN_NGAP_TargeteNB_ID_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_TargeteNB_ID_ExtIEs_t::ASN_NGAP_TargeteNB_ID_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_TargeteNB_ID_ExtIEs_t::ASN_NGAP_TargeteNB_ID_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_TargeteNB_ID_ExtIEs_t::ASN_NGAP_TargeteNB_ID_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -31900,10 +31900,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_TargeteNB_ID_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_704 = {
-	sizeof(struct ASN_NGAP_TargetNGRANNode_ToSourceNGRANNode_TransparentContainer_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_TargetNGRANNode_ToSourceNGRANNode_TransparentContainer_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_TargetNGRANNode_ToSourceNGRANNode_TransparentContainer_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_TargetNGRANNode_ToSourceNGRANNode_TransparentContainer_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_TargetNGRANNode_ToSourceNGRANNode_TransparentContainer_ExtIEs_t::ASN_NGAP_TargetNGRANNode_ToSourceNGRANNode_TransparentContainer_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_TargetNGRANNode_ToSourceNGRANNode_TransparentContainer_ExtIEs_t::ASN_NGAP_TargetNGRANNode_ToSourceNGRANNode_TransparentContainer_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_TargetNGRANNode_ToSourceNGRANNode_TransparentContainer_ExtIEs_t::ASN_NGAP_TargetNGRANNode_ToSourceNGRANNode_TransparentContainer_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_TargetNGRANNode_ToSourceNGRANNode_TransparentContainer_ExtIEs_t::ASN_NGAP_TargetNGRANNode_ToSourceNGRANNode_TransparentContainer_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -31985,10 +31985,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_TargetNGRANNode_ToSourceNGRANNode_Transpa
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_708 = {
-	sizeof(struct ASN_NGAP_TargetRANNodeID_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_TargetRANNodeID_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_TargetRANNodeID_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_TargetRANNodeID_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_TargetRANNodeID_ExtIEs_t::ASN_NGAP_TargetRANNodeID_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_TargetRANNodeID_ExtIEs_t::ASN_NGAP_TargetRANNodeID_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_TargetRANNodeID_ExtIEs_t::ASN_NGAP_TargetRANNodeID_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_TargetRANNodeID_ExtIEs_t::ASN_NGAP_TargetRANNodeID_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -32070,10 +32070,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_TargetRANNodeID_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_712 = {
-	sizeof(struct ASN_NGAP_TNLAssociationItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_TNLAssociationItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_TNLAssociationItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_TNLAssociationItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_TNLAssociationItem_ExtIEs_t::ASN_NGAP_TNLAssociationItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_TNLAssociationItem_ExtIEs_t::ASN_NGAP_TNLAssociationItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_TNLAssociationItem_ExtIEs_t::ASN_NGAP_TNLAssociationItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_TNLAssociationItem_ExtIEs_t::ASN_NGAP_TNLAssociationItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -32155,10 +32155,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_TNLAssociationItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_716 = {
-	sizeof(struct ASN_NGAP_TraceActivation_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_TraceActivation_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_TraceActivation_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_TraceActivation_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_TraceActivation_ExtIEs_t::ASN_NGAP_TraceActivation_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_TraceActivation_ExtIEs_t::ASN_NGAP_TraceActivation_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_TraceActivation_ExtIEs_t::ASN_NGAP_TraceActivation_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_TraceActivation_ExtIEs_t::ASN_NGAP_TraceActivation_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -32240,10 +32240,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_TraceActivation_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_720 = {
-	sizeof(struct ASN_NGAP_UEAggregateMaximumBitRate_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_UEAggregateMaximumBitRate_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_UEAggregateMaximumBitRate_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_UEAggregateMaximumBitRate_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_UEAggregateMaximumBitRate_ExtIEs_t::ASN_NGAP_UEAggregateMaximumBitRate_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_UEAggregateMaximumBitRate_ExtIEs_t::ASN_NGAP_UEAggregateMaximumBitRate_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_UEAggregateMaximumBitRate_ExtIEs_t::ASN_NGAP_UEAggregateMaximumBitRate_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_UEAggregateMaximumBitRate_ExtIEs_t::ASN_NGAP_UEAggregateMaximumBitRate_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -32325,10 +32325,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_UEAggregateMaximumBitRate_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_724 = {
-	sizeof(struct ASN_NGAP_UE_associatedLogicalNG_connectionItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_UE_associatedLogicalNG_connectionItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_UE_associatedLogicalNG_connectionItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_UE_associatedLogicalNG_connectionItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_UE_associatedLogicalNG_connectionItem_ExtIEs_t::ASN_NGAP_UE_associatedLogicalNG_connectionItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_UE_associatedLogicalNG_connectionItem_ExtIEs_t::ASN_NGAP_UE_associatedLogicalNG_connectionItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_UE_associatedLogicalNG_connectionItem_ExtIEs_t::ASN_NGAP_UE_associatedLogicalNG_connectionItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_UE_associatedLogicalNG_connectionItem_ExtIEs_t::ASN_NGAP_UE_associatedLogicalNG_connectionItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -32410,10 +32410,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_UE_associatedLogicalNG_connectionItem_Ext
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_728 = {
-	sizeof(struct ASN_NGAP_UE_NGAP_ID_pair_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_UE_NGAP_ID_pair_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_UE_NGAP_ID_pair_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_UE_NGAP_ID_pair_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_UE_NGAP_ID_pair_ExtIEs_t::ASN_NGAP_UE_NGAP_ID_pair_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_UE_NGAP_ID_pair_ExtIEs_t::ASN_NGAP_UE_NGAP_ID_pair_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_UE_NGAP_ID_pair_ExtIEs_t::ASN_NGAP_UE_NGAP_ID_pair_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_UE_NGAP_ID_pair_ExtIEs_t::ASN_NGAP_UE_NGAP_ID_pair_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -32495,10 +32495,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_UE_NGAP_ID_pair_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_732 = {
-	sizeof(struct ASN_NGAP_UEPresenceInAreaOfInterestItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_UEPresenceInAreaOfInterestItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_UEPresenceInAreaOfInterestItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_UEPresenceInAreaOfInterestItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_UEPresenceInAreaOfInterestItem_ExtIEs_t::ASN_NGAP_UEPresenceInAreaOfInterestItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_UEPresenceInAreaOfInterestItem_ExtIEs_t::ASN_NGAP_UEPresenceInAreaOfInterestItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_UEPresenceInAreaOfInterestItem_ExtIEs_t::ASN_NGAP_UEPresenceInAreaOfInterestItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_UEPresenceInAreaOfInterestItem_ExtIEs_t::ASN_NGAP_UEPresenceInAreaOfInterestItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -32580,10 +32580,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_UEPresenceInAreaOfInterestItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_736 = {
-	sizeof(struct ASN_NGAP_UERadioCapabilityForPaging_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_UERadioCapabilityForPaging_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_UERadioCapabilityForPaging_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_UERadioCapabilityForPaging_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_UERadioCapabilityForPaging_ExtIEs_t::ASN_NGAP_UERadioCapabilityForPaging_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_UERadioCapabilityForPaging_ExtIEs_t::ASN_NGAP_UERadioCapabilityForPaging_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_UERadioCapabilityForPaging_ExtIEs_t::ASN_NGAP_UERadioCapabilityForPaging_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_UERadioCapabilityForPaging_ExtIEs_t::ASN_NGAP_UERadioCapabilityForPaging_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -32665,10 +32665,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_UERadioCapabilityForPaging_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_740 = {
-	sizeof(struct ASN_NGAP_UESecurityCapabilities_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_UESecurityCapabilities_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_UESecurityCapabilities_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_UESecurityCapabilities_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_UESecurityCapabilities_ExtIEs_t::ASN_NGAP_UESecurityCapabilities_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_UESecurityCapabilities_ExtIEs_t::ASN_NGAP_UESecurityCapabilities_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_UESecurityCapabilities_ExtIEs_t::ASN_NGAP_UESecurityCapabilities_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_UESecurityCapabilities_ExtIEs_t::ASN_NGAP_UESecurityCapabilities_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -32750,10 +32750,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_UESecurityCapabilities_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_744 = {
-	sizeof(struct ASN_NGAP_UL_NGU_UP_TNLModifyItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_UL_NGU_UP_TNLModifyItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_UL_NGU_UP_TNLModifyItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_UL_NGU_UP_TNLModifyItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_UL_NGU_UP_TNLModifyItem_ExtIEs_t::ASN_NGAP_UL_NGU_UP_TNLModifyItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_UL_NGU_UP_TNLModifyItem_ExtIEs_t::ASN_NGAP_UL_NGU_UP_TNLModifyItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_UL_NGU_UP_TNLModifyItem_ExtIEs_t::ASN_NGAP_UL_NGU_UP_TNLModifyItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_UL_NGU_UP_TNLModifyItem_ExtIEs_t::ASN_NGAP_UL_NGU_UP_TNLModifyItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -32835,10 +32835,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_UL_NGU_UP_TNLModifyItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_748 = {
-	sizeof(struct ASN_NGAP_UnavailableGUAMIItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_UnavailableGUAMIItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_UnavailableGUAMIItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_UnavailableGUAMIItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_UnavailableGUAMIItem_ExtIEs_t::ASN_NGAP_UnavailableGUAMIItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_UnavailableGUAMIItem_ExtIEs_t::ASN_NGAP_UnavailableGUAMIItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_UnavailableGUAMIItem_ExtIEs_t::ASN_NGAP_UnavailableGUAMIItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_UnavailableGUAMIItem_ExtIEs_t::ASN_NGAP_UnavailableGUAMIItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -32920,10 +32920,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_UnavailableGUAMIItem_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_752 = {
-	sizeof(struct ASN_NGAP_UPTransportLayerInformationItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_UPTransportLayerInformationItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_UPTransportLayerInformationItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_UPTransportLayerInformationItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_UPTransportLayerInformationItem_ExtIEs_t::ASN_NGAP_UPTransportLayerInformationItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_UPTransportLayerInformationItem_ExtIEs_t::ASN_NGAP_UPTransportLayerInformationItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_UPTransportLayerInformationItem_ExtIEs_t::ASN_NGAP_UPTransportLayerInformationItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_UPTransportLayerInformationItem_ExtIEs_t::ASN_NGAP_UPTransportLayerInformationItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -33005,10 +33005,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_UPTransportLayerInformationItem_ExtIEs = 
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_756 = {
-	sizeof(struct ASN_NGAP_UPTransportLayerInformationPairItem_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_UPTransportLayerInformationPairItem_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_UPTransportLayerInformationPairItem_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_UPTransportLayerInformationPairItem_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_UPTransportLayerInformationPairItem_ExtIEs_t::ASN_NGAP_UPTransportLayerInformationPairItem_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_UPTransportLayerInformationPairItem_ExtIEs_t::ASN_NGAP_UPTransportLayerInformationPairItem_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_UPTransportLayerInformationPairItem_ExtIEs_t::ASN_NGAP_UPTransportLayerInformationPairItem_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_UPTransportLayerInformationPairItem_ExtIEs_t::ASN_NGAP_UPTransportLayerInformationPairItem_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -33090,7 +33090,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_UPTransportLayerInformationPairItem_ExtIE
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_extensionValue_760[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UserLocationInformationEUTRA_ExtIEs__extensionValue, choice.NGRAN_CGI),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UserLocationInformationEUTRA_ExtIEs_t::ASN_NGAP_UserLocationInformationEUTRA_ExtIEs__extensionValue, choice.NGRAN_CGI),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_NGRAN_CGI,
@@ -33106,10 +33106,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_extensionValue_tag2el_760[] 
     { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 0, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_760 = {
-	sizeof(struct ASN_NGAP_UserLocationInformationEUTRA_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_UserLocationInformationEUTRA_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_UserLocationInformationEUTRA_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_UserLocationInformationEUTRA_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_UserLocationInformationEUTRA_ExtIEs_t::ASN_NGAP_UserLocationInformationEUTRA_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_UserLocationInformationEUTRA_ExtIEs_t::ASN_NGAP_UserLocationInformationEUTRA_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_UserLocationInformationEUTRA_ExtIEs_t::ASN_NGAP_UserLocationInformationEUTRA_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_UserLocationInformationEUTRA_ExtIEs_t::ASN_NGAP_UserLocationInformationEUTRA_ExtIEs__extensionValue *)0)->present),
 	asn_MAP_ASN_NGAP_extensionValue_tag2el_760,
 	3,	/* Count of tags in the map */
 	0, 0,
@@ -33192,10 +33192,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_UserLocationInformationEUTRA_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_764 = {
-	sizeof(struct ASN_NGAP_UserLocationInformationN3IWF_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_UserLocationInformationN3IWF_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_UserLocationInformationN3IWF_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_UserLocationInformationN3IWF_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_UserLocationInformationN3IWF_ExtIEs_t::ASN_NGAP_UserLocationInformationN3IWF_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_UserLocationInformationN3IWF_ExtIEs_t::ASN_NGAP_UserLocationInformationN3IWF_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_UserLocationInformationN3IWF_ExtIEs_t::ASN_NGAP_UserLocationInformationN3IWF_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_UserLocationInformationN3IWF_ExtIEs_t::ASN_NGAP_UserLocationInformationN3IWF_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -33277,7 +33277,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_UserLocationInformationN3IWF_ExtIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_extensionValue_768[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UserLocationInformationNR_ExtIEs__extensionValue, choice.NGRAN_CGI),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UserLocationInformationNR_ExtIEs_t::ASN_NGAP_UserLocationInformationNR_ExtIEs__extensionValue, choice.NGRAN_CGI),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_NGRAN_CGI,
@@ -33293,10 +33293,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_extensionValue_tag2el_768[] 
     { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 0, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_768 = {
-	sizeof(struct ASN_NGAP_UserLocationInformationNR_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_UserLocationInformationNR_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_UserLocationInformationNR_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_UserLocationInformationNR_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_UserLocationInformationNR_ExtIEs_t::ASN_NGAP_UserLocationInformationNR_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_UserLocationInformationNR_ExtIEs_t::ASN_NGAP_UserLocationInformationNR_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_UserLocationInformationNR_ExtIEs_t::ASN_NGAP_UserLocationInformationNR_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_UserLocationInformationNR_ExtIEs_t::ASN_NGAP_UserLocationInformationNR_ExtIEs__extensionValue *)0)->present),
 	asn_MAP_ASN_NGAP_extensionValue_tag2el_768,
 	3,	/* Count of tags in the map */
 	0, 0,
@@ -33379,10 +33379,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_UserLocationInformationNR_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_772 = {
-	sizeof(struct ASN_NGAP_UserPlaneSecurityInformation_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_UserPlaneSecurityInformation_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_UserPlaneSecurityInformation_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_UserPlaneSecurityInformation_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_UserPlaneSecurityInformation_ExtIEs_t::ASN_NGAP_UserPlaneSecurityInformation_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_UserPlaneSecurityInformation_ExtIEs_t::ASN_NGAP_UserPlaneSecurityInformation_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_UserPlaneSecurityInformation_ExtIEs_t::ASN_NGAP_UserPlaneSecurityInformation_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_UserPlaneSecurityInformation_ExtIEs_t::ASN_NGAP_UserPlaneSecurityInformation_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -33464,10 +33464,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_UserPlaneSecurityInformation_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_776 = {
-	sizeof(struct ASN_NGAP_VolumeTimedReport_Item_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_VolumeTimedReport_Item_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_VolumeTimedReport_Item_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_VolumeTimedReport_Item_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_VolumeTimedReport_Item_ExtIEs_t::ASN_NGAP_VolumeTimedReport_Item_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_VolumeTimedReport_Item_ExtIEs_t::ASN_NGAP_VolumeTimedReport_Item_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_VolumeTimedReport_Item_ExtIEs_t::ASN_NGAP_VolumeTimedReport_Item_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_VolumeTimedReport_Item_ExtIEs_t::ASN_NGAP_VolumeTimedReport_Item_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -33549,7 +33549,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_VolumeTimedReport_Item_ExtIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_extensionValue_780[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_XnExtTLA_Item_ExtIEs__extensionValue, choice.SCTP_TLAs),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_XnExtTLA_Item_ExtIEs_t::ASN_NGAP_XnExtTLA_Item_ExtIEs__extensionValue, choice.SCTP_TLAs),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_SCTP_TLAs,
@@ -33563,10 +33563,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_extensionValue_tag2el_780[] 
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 0, 0, 0 } /* SCTP-TLAs */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_780 = {
-	sizeof(struct ASN_NGAP_XnExtTLA_Item_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_XnExtTLA_Item_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_XnExtTLA_Item_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_XnExtTLA_Item_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_XnExtTLA_Item_ExtIEs_t::ASN_NGAP_XnExtTLA_Item_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_XnExtTLA_Item_ExtIEs_t::ASN_NGAP_XnExtTLA_Item_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_XnExtTLA_Item_ExtIEs_t::ASN_NGAP_XnExtTLA_Item_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_XnExtTLA_Item_ExtIEs_t::ASN_NGAP_XnExtTLA_Item_ExtIEs__extensionValue *)0)->present),
 	asn_MAP_ASN_NGAP_extensionValue_tag2el_780,
 	1,	/* Count of tags in the map */
 	0, 0,
@@ -33649,10 +33649,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_XnExtTLA_Item_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_extensionValue_specs_784 = {
-	sizeof(struct ASN_NGAP_XnTNLConfigurationInfo_ExtIEs__extensionValue),
-	offsetof(struct ASN_NGAP_XnTNLConfigurationInfo_ExtIEs__extensionValue, _asn_ctx),
-	offsetof(struct ASN_NGAP_XnTNLConfigurationInfo_ExtIEs__extensionValue, present),
-	sizeof(((struct ASN_NGAP_XnTNLConfigurationInfo_ExtIEs__extensionValue *)0)->present),
+	sizeof(struct ASN_NGAP_XnTNLConfigurationInfo_ExtIEs_t::ASN_NGAP_XnTNLConfigurationInfo_ExtIEs__extensionValue),
+	offsetof(struct ASN_NGAP_XnTNLConfigurationInfo_ExtIEs_t::ASN_NGAP_XnTNLConfigurationInfo_ExtIEs__extensionValue, _asn_ctx),
+	offsetof(struct ASN_NGAP_XnTNLConfigurationInfo_ExtIEs_t::ASN_NGAP_XnTNLConfigurationInfo_ExtIEs__extensionValue, present),
+	sizeof(((struct ASN_NGAP_XnTNLConfigurationInfo_ExtIEs_t::ASN_NGAP_XnTNLConfigurationInfo_ExtIEs__extensionValue *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,

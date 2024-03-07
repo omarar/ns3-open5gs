@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omar/ns-3-dev
+CMAKE_SOURCE_DIR = /home/omar/Desktop/git_repo/ns3-open5gs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omar/ns-3-dev/cmake-cache
+CMAKE_BINARY_DIR = /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache
 
 # Include any dependencies generated for this target.
 include src/buildings/CMakeFiles/libbuildings.dir/depend.make
@@ -74,20 +74,20 @@ libbuildings_OBJECTS =
 
 # External object files for target libbuildings
 libbuildings_EXTERNAL_OBJECTS = \
-"/home/omar/ns-3-dev/cmake-cache/src/buildings/CMakeFiles/libbuildings-obj.dir/helper/building-allocator.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/buildings/CMakeFiles/libbuildings-obj.dir/helper/building-container.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/buildings/CMakeFiles/libbuildings-obj.dir/helper/building-position-allocator.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/buildings/CMakeFiles/libbuildings-obj.dir/helper/buildings-helper.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/buildings/CMakeFiles/libbuildings-obj.dir/model/building-list.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/buildings/CMakeFiles/libbuildings-obj.dir/model/building.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/buildings/CMakeFiles/libbuildings-obj.dir/model/buildings-channel-condition-model.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/buildings/CMakeFiles/libbuildings-obj.dir/model/buildings-propagation-loss-model.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/buildings/CMakeFiles/libbuildings-obj.dir/model/hybrid-buildings-propagation-loss-model.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/buildings/CMakeFiles/libbuildings-obj.dir/model/itu-r-1238-propagation-loss-model.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/buildings/CMakeFiles/libbuildings-obj.dir/model/mobility-building-info.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/buildings/CMakeFiles/libbuildings-obj.dir/model/oh-buildings-propagation-loss-model.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/buildings/CMakeFiles/libbuildings-obj.dir/model/random-walk-2d-outdoor-mobility-model.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/buildings/CMakeFiles/libbuildings-obj.dir/model/three-gpp-v2v-channel-condition-model.cc.o"
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/buildings/CMakeFiles/libbuildings-obj.dir/helper/building-allocator.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/buildings/CMakeFiles/libbuildings-obj.dir/helper/building-container.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/buildings/CMakeFiles/libbuildings-obj.dir/helper/building-position-allocator.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/buildings/CMakeFiles/libbuildings-obj.dir/helper/buildings-helper.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/buildings/CMakeFiles/libbuildings-obj.dir/model/building-list.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/buildings/CMakeFiles/libbuildings-obj.dir/model/building.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/buildings/CMakeFiles/libbuildings-obj.dir/model/buildings-channel-condition-model.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/buildings/CMakeFiles/libbuildings-obj.dir/model/buildings-propagation-loss-model.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/buildings/CMakeFiles/libbuildings-obj.dir/model/hybrid-buildings-propagation-loss-model.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/buildings/CMakeFiles/libbuildings-obj.dir/model/itu-r-1238-propagation-loss-model.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/buildings/CMakeFiles/libbuildings-obj.dir/model/mobility-building-info.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/buildings/CMakeFiles/libbuildings-obj.dir/model/oh-buildings-propagation-loss-model.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/buildings/CMakeFiles/libbuildings-obj.dir/model/random-walk-2d-outdoor-mobility-model.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/buildings/CMakeFiles/libbuildings-obj.dir/model/three-gpp-v2v-channel-condition-model.cc.o"
 
 ../build/lib/libns3.39-buildings-default.so: src/buildings/CMakeFiles/libbuildings-obj.dir/helper/building-allocator.cc.o
 ../build/lib/libns3.39-buildings-default.so: src/buildings/CMakeFiles/libbuildings-obj.dir/helper/building-container.cc.o
@@ -108,18 +108,18 @@ libbuildings_EXTERNAL_OBJECTS = \
 ../build/lib/libns3.39-buildings-default.so: /usr/lib/x86_64-linux-gnu/libgslcblas.so
 ../build/lib/libns3.39-buildings-default.so: /usr/lib/x86_64-linux-gnu/libsqlite3.so
 ../build/lib/libns3.39-buildings-default.so: src/buildings/CMakeFiles/libbuildings.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/omar/ns-3-dev/cmake-cache/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Linking CXX shared library ../../../build/lib/libns3.39-buildings-default.so"
-	cd /home/omar/ns-3-dev/cmake-cache/src/buildings && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/libbuildings.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Linking CXX shared library ../../../build/lib/libns3.39-buildings-default.so"
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/buildings && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/libbuildings.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/buildings/CMakeFiles/libbuildings.dir/build: ../build/lib/libns3.39-buildings-default.so
 .PHONY : src/buildings/CMakeFiles/libbuildings.dir/build
 
 src/buildings/CMakeFiles/libbuildings.dir/clean:
-	cd /home/omar/ns-3-dev/cmake-cache/src/buildings && $(CMAKE_COMMAND) -P CMakeFiles/libbuildings.dir/cmake_clean.cmake
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/buildings && $(CMAKE_COMMAND) -P CMakeFiles/libbuildings.dir/cmake_clean.cmake
 .PHONY : src/buildings/CMakeFiles/libbuildings.dir/clean
 
 src/buildings/CMakeFiles/libbuildings.dir/depend:
-	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omar/ns-3-dev /home/omar/ns-3-dev/src/buildings /home/omar/ns-3-dev/cmake-cache /home/omar/ns-3-dev/cmake-cache/src/buildings /home/omar/ns-3-dev/cmake-cache/src/buildings/CMakeFiles/libbuildings.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omar/Desktop/git_repo/ns3-open5gs /home/omar/Desktop/git_repo/ns3-open5gs/src/buildings /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/buildings /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/buildings/CMakeFiles/libbuildings.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/buildings/CMakeFiles/libbuildings.dir/depend
 

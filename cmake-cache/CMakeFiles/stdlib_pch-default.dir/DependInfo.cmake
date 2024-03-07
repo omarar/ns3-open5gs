@@ -8,10 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/omar/ns-3-dev/build-support/empty.cc" "CMakeFiles/stdlib_pch-default.dir/build-support/empty.cc.o" "gcc" "CMakeFiles/stdlib_pch-default.dir/build-support/empty.cc.o.d"
-  "/home/omar/ns-3-dev/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx" "CMakeFiles/stdlib_pch-default.dir/build-support/empty.cc.o" "gcc" "CMakeFiles/stdlib_pch-default.dir/build-support/empty.cc.o.d"
-  "/home/omar/ns-3-dev/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx.cxx" "CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx.gch" "gcc" "CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx.gch.d"
-  "/home/omar/ns-3-dev/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx" "CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx.gch" "gcc" "CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx.gch.d"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/build-support/empty.cc" "CMakeFiles/stdlib_pch-default.dir/build-support/empty.cc.o" "gcc" "CMakeFiles/stdlib_pch-default.dir/build-support/empty.cc.o.d"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx" "CMakeFiles/stdlib_pch-default.dir/build-support/empty.cc.o" "gcc" "CMakeFiles/stdlib_pch-default.dir/build-support/empty.cc.o.d"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx.cxx" "CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx.gch" "gcc" "CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx.gch.d"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx" "CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx.gch" "gcc" "CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx.gch.d"
   )
 
 # Targets to which this target links.

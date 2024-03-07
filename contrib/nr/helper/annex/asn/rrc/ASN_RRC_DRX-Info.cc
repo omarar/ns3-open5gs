@@ -537,118 +537,118 @@ memb_ASN_RRC_drx_ShortCycleTimer_constraint_23(const asn_TYPE_descriptor_t *td, 
 }
 
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_ms10_constr_3 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 4,  4,  0,  9 }	/* (0..9) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 4,  4,  0,  9 }	/* (0..9) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_ms20_constr_4 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 5,  5,  0,  19 }	/* (0..19) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 5,  5,  0,  19 }	/* (0..19) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_ms32_constr_5 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 5,  5,  0,  31 }	/* (0..31) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 5,  5,  0,  31 }	/* (0..31) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_ms40_constr_6 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 6,  6,  0,  39 }	/* (0..39) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 6,  6,  0,  39 }	/* (0..39) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_ms60_constr_7 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 6,  6,  0,  59 }	/* (0..59) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 6,  6,  0,  59 }	/* (0..59) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_ms64_constr_8 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 6,  6,  0,  63 }	/* (0..63) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 6,  6,  0,  63 }	/* (0..63) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_ms70_constr_9 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 7,  7,  0,  69 }	/* (0..69) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 7,  7,  0,  69 }	/* (0..69) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_ms80_constr_10 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 7,  7,  0,  79 }	/* (0..79) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 7,  7,  0,  79 }	/* (0..79) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_ms128_constr_11 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 7,  7,  0,  127 }	/* (0..127) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 7,  7,  0,  127 }	/* (0..127) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_ms160_constr_12 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 8,  8,  0,  159 }	/* (0..159) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 8,  8,  0,  159 }	/* (0..159) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_ms256_constr_13 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 8,  8,  0,  255 }	/* (0..255) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 8,  8,  0,  255 }	/* (0..255) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_ms320_constr_14 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 9,  9,  0,  319 }	/* (0..319) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 9,  9,  0,  319 }	/* (0..319) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_ms512_constr_15 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 9,  9,  0,  511 }	/* (0..511) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 9,  9,  0,  511 }	/* (0..511) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_ms640_constr_16 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 10,  10,  0,  639 }	/* (0..639) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 10,  10,  0,  639 }	/* (0..639) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_ms1024_constr_17 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 10,  10,  0,  1023 }	/* (0..1023) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 10,  10,  0,  1023 }	/* (0..1023) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_ms1280_constr_18 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 11,  11,  0,  1279 }	/* (0..1279) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 11,  11,  0,  1279 }	/* (0..1279) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_ms2048_constr_19 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 11,  11,  0,  2047 }	/* (0..2047) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 11,  11,  0,  2047 }	/* (0..2047) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_ms2560_constr_20 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 12,  12,  0,  2559 }	/* (0..2559) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 12,  12,  0,  2559 }	/* (0..2559) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_ms5120_constr_21 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 13,  13,  0,  5119 }	/* (0..5119) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 13,  13,  0,  5119 }	/* (0..5119) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_ms10240_constr_22 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 14,  14,  0,  10239 }	/* (0..10239) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 14,  14,  0,  10239 }	/* (0..10239) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_type_ASN_RRC_drx_LongCycleStartOffset_constr_2 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 5,  5,  0,  19 }	/* (0..19) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 5,  5,  0,  19 }	/* (0..19) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_type_ASN_RRC_drx_ShortCycle_constr_24 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 5,  5,  0,  31 }	/* (0..31) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 5,  5,  0,  31 }	/* (0..31) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_drx_ShortCycleTimer_constr_57 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 4,  4,  1,  16 }	/* (1..16) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 4,  4,  1,  16 }	/* (1..16) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_TYPE_member_t asn_MBR_ASN_RRC_drx_LongCycleStartOffset_2[] = {

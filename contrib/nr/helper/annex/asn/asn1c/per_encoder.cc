@@ -1,6 +1,6 @@
-#include <asn_application.h>
-#include <asn_internal.h>
-#include <per_encoder.h>
+#include <ns3/asn_application.h>
+#include <ns3/asn_internal.h>
+#include <ns3/per_encoder.h>
 
 static int _uper_encode_flush_outp(asn_per_outp_t *po);
 

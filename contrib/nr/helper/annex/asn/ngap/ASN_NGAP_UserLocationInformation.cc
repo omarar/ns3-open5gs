@@ -12,8 +12,8 @@
 #include "ASN_NGAP_UserLocationInformationN3IWF.h"
 #include "ASN_NGAP_ProtocolIE-SingleContainer.h"
 asn_per_constraints_t asn_PER_type_ASN_NGAP_UserLocationInformation_constr_1 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  3 }	/* (0..3) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  3 }	/* (0..3) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 asn_TYPE_member_t asn_MBR_ASN_NGAP_UserLocationInformation_1[] = {

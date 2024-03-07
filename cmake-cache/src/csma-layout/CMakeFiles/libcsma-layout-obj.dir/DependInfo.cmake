@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/omar/ns-3-dev/src/csma-layout/model/csma-star-helper.cc" "src/csma-layout/CMakeFiles/libcsma-layout-obj.dir/model/csma-star-helper.cc.o" "gcc" "src/csma-layout/CMakeFiles/libcsma-layout-obj.dir/model/csma-star-helper.cc.o.d"
-  "/home/omar/ns-3-dev/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx" "src/csma-layout/CMakeFiles/libcsma-layout-obj.dir/model/csma-star-helper.cc.o" "gcc" "src/csma-layout/CMakeFiles/libcsma-layout-obj.dir/model/csma-star-helper.cc.o.d"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/src/csma-layout/model/csma-star-helper.cc" "src/csma-layout/CMakeFiles/libcsma-layout-obj.dir/model/csma-star-helper.cc.o" "gcc" "src/csma-layout/CMakeFiles/libcsma-layout-obj.dir/model/csma-star-helper.cc.o.d"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx" "src/csma-layout/CMakeFiles/libcsma-layout-obj.dir/model/csma-star-helper.cc.o" "gcc" "src/csma-layout/CMakeFiles/libcsma-layout-obj.dir/model/csma-star-helper.cc.o.d"
   )
 
 # Targets to which this target links.

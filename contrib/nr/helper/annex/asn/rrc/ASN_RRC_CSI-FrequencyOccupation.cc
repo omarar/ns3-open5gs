@@ -58,13 +58,13 @@ memb_ASN_RRC_nrofRBs_constraint_1(const asn_TYPE_descriptor_t *td, const void *s
 }
 
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_startingRB_constr_2 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 9,  9,  0,  274 }	/* (0..274) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 9,  9,  0,  274 }	/* (0..274) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_nrofRBs_constr_3 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 8,  8,  24,  276 }	/* (24..276) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 8,  8,  24,  276 }	/* (24..276) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 asn_TYPE_member_t asn_MBR_ASN_RRC_CSI_FrequencyOccupation_1[] = {

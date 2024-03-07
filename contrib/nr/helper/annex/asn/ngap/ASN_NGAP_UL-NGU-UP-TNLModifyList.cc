@@ -9,8 +9,8 @@
 
 #include "ASN_NGAP_UL-NGU-UP-TNLModifyItem.h"
 asn_per_constraints_t asn_PER_type_ASN_NGAP_UL_NGU_UP_TNLModifyList_constr_1 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_CONSTRAINED,	 2,  2,  1,  4 }	/* (SIZE(1..4)) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  1,  4 }	/* (SIZE(1..4)) */,
 	0, 0	/* No PER value map */
 };
 asn_TYPE_member_t asn_MBR_ASN_NGAP_UL_NGU_UP_TNLModifyList_1[] = {

@@ -9,8 +9,8 @@
 
 #include "ASN_RRC_PLMN-Identity.h"
 asn_per_constraints_t asn_PER_type_ASN_RRC_PLMN_IdentityList_EUTRA_EPC_constr_1 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_CONSTRAINED,	 4,  4,  1,  12 }	/* (SIZE(1..12)) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 4,  4,  1,  12 }	/* (SIZE(1..12)) */,
 	0, 0	/* No PER value map */
 };
 asn_TYPE_member_t asn_MBR_ASN_RRC_PLMN_IdentityList_EUTRA_EPC_1[] = {

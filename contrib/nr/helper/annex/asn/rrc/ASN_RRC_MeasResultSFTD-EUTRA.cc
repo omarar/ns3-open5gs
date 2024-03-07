@@ -58,13 +58,13 @@ memb_ASN_RRC_frameBoundaryOffsetResult_constraint_1(const asn_TYPE_descriptor_t 
 }
 
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_sfn_OffsetResult_constr_3 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 10,  10,  0,  1023 }	/* (0..1023) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 10,  10,  0,  1023 }	/* (0..1023) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_frameBoundaryOffsetResult_constr_4 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16, -30720,  30719 }	/* (-30720..30719) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16, -30720,  30719 }	/* (-30720..30719) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 asn_TYPE_member_t asn_MBR_ASN_RRC_MeasResultSFTD_EUTRA_1[] = {

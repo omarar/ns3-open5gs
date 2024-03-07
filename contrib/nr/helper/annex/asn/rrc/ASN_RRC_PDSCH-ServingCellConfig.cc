@@ -42,18 +42,18 @@ memb_ASN_RRC_maxMIMO_Layers_constraint_16(const asn_TYPE_descriptor_t *td, const
 }
 
 static asn_per_constraints_t asn_PER_type_ASN_RRC_xOverhead_constr_3 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_type_ASN_RRC_nrofHARQ_ProcessesForPDSCH_constr_7 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 3,  3,  0,  5 }	/* (0..5) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 3,  3,  0,  5 }	/* (0..5) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_maxMIMO_Layers_constr_17 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 3,  3,  1,  8 }	/* (1..8) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 3,  3,  1,  8 }	/* (1..8) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static const asn_INTEGER_enum_map_t asn_MAP_ASN_RRC_xOverhead_value2enum_3[] = {

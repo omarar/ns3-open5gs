@@ -9,8 +9,8 @@
 
 #include "ASN_NGAP_AdditionalDLUPTNLInformationForHOItem.h"
 asn_per_constraints_t asn_PER_type_ASN_NGAP_AdditionalDLUPTNLInformationForHOList_constr_1 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_CONSTRAINED,	 2,  2,  1,  3 }	/* (SIZE(1..3)) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  1,  3 }	/* (SIZE(1..3)) */,
 	0, 0	/* No PER value map */
 };
 asn_TYPE_member_t asn_MBR_ASN_NGAP_AdditionalDLUPTNLInformationForHOList_1[] = {

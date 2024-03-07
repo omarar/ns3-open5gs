@@ -187,43 +187,43 @@ memb_ASN_RRC_simultaneousCSI_ReportsPerCC_constraint_1(const asn_TYPE_descriptor
 }
 
 static asn_per_constraints_t asn_PER_type_ASN_RRC_maxNumberAperiodicCSI_triggeringStatePerCC_constr_7 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 3,  3,  0,  5 }	/* (0..5) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 3,  3,  0,  5 }	/* (0..5) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_maxNumberPeriodicCSI_PerBWP_ForCSI_Report_constr_2 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  1,  4 }	/* (1..4) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  1,  4 }	/* (1..4) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_maxNumberAperiodicCSI_PerBWP_ForCSI_Report_constr_3 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  1,  4 }	/* (1..4) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  1,  4 }	/* (1..4) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_maxNumberSemiPersistentCSI_PerBWP_ForCSI_Report_constr_4 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 3,  3,  0,  4 }	/* (0..4) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 3,  3,  0,  4 }	/* (0..4) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_maxNumberPeriodicCSI_PerBWP_ForBeamReport_constr_5 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  1,  4 }	/* (1..4) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  1,  4 }	/* (1..4) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_maxNumberAperiodicCSI_PerBWP_ForBeamReport_constr_6 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  1,  4 }	/* (1..4) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  1,  4 }	/* (1..4) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_maxNumberSemiPersistentCSI_PerBWP_ForBeamReport_constr_14 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 3,  3,  0,  4 }	/* (0..4) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 3,  3,  0,  4 }	/* (0..4) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_simultaneousCSI_ReportsPerCC_constr_15 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 3,  3,  1,  8 }	/* (1..8) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 3,  3,  1,  8 }	/* (1..8) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static const asn_INTEGER_enum_map_t asn_MAP_ASN_RRC_maxNumberAperiodicCSI_triggeringStatePerCC_value2enum_7[] = {

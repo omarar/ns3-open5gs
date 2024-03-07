@@ -8,15 +8,15 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/omar/ns-3-dev/utils/bench-packets.cc" "utils/CMakeFiles/bench-packets.dir/bench-packets.cc.o" "gcc" "utils/CMakeFiles/bench-packets.dir/bench-packets.cc.o.d"
-  "/home/omar/ns-3-dev/cmake-cache/CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx" "utils/CMakeFiles/bench-packets.dir/bench-packets.cc.o" "gcc" "utils/CMakeFiles/bench-packets.dir/bench-packets.cc.o.d"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/utils/bench-packets.cc" "utils/CMakeFiles/bench-packets.dir/bench-packets.cc.o" "gcc" "utils/CMakeFiles/bench-packets.dir/bench-packets.cc.o.d"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx" "utils/CMakeFiles/bench-packets.dir/bench-packets.cc.o" "gcc" "utils/CMakeFiles/bench-packets.dir/bench-packets.cc.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/omar/ns-3-dev/cmake-cache/src/network/CMakeFiles/libnetwork.dir/DependInfo.cmake"
-  "/home/omar/ns-3-dev/cmake-cache/src/stats/CMakeFiles/libstats.dir/DependInfo.cmake"
-  "/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore.dir/DependInfo.cmake"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/network/CMakeFiles/libnetwork.dir/DependInfo.cmake"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/stats/CMakeFiles/libstats.dir/DependInfo.cmake"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

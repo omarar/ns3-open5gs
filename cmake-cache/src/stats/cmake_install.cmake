@@ -1,4 +1,4 @@
-# Install script for directory: /home/omar/ns-3-dev/src/stats
+# Install script for directory: /home/omar/Desktop/git_repo/ns3-open5gs/src/stats
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -49,12 +49,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-stats-default.so"
          RPATH "/usr/local/lib:$ORIGIN/:$ORIGIN/../lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/omar/ns-3-dev/build/lib/libns3.39-stats-default.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/omar/Desktop/git_repo/ns3-open5gs/build/lib/libns3.39-stats-default.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-stats-default.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-stats-default.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-stats-default.so"
-         OLD_RPATH "/home/omar/ns-3-dev/build/lib:::::::::"
+         OLD_RPATH "/home/omar/Desktop/git_repo/ns3-open5gs/build/lib:"
          NEW_RPATH "/usr/local/lib:$ORIGIN/:$ORIGIN/../lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-stats-default.so")
@@ -66,37 +66,37 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/ns3" TYPE FILE FILES "/home/omar/ns-3-dev/src/stats/model/sqlite-output.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/ns3" TYPE FILE FILES "/home/omar/Desktop/git_repo/ns3-open5gs/src/stats/model/sqlite-output.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/ns3" TYPE FILE FILES
-    "/home/omar/ns-3-dev/src/stats/model/sqlite-data-output.h"
-    "/home/omar/ns-3-dev/src/stats/helper/file-helper.h"
-    "/home/omar/ns-3-dev/src/stats/helper/gnuplot-helper.h"
-    "/home/omar/ns-3-dev/src/stats/model/average.h"
-    "/home/omar/ns-3-dev/src/stats/model/basic-data-calculators.h"
-    "/home/omar/ns-3-dev/src/stats/model/boolean-probe.h"
-    "/home/omar/ns-3-dev/src/stats/model/data-calculator.h"
-    "/home/omar/ns-3-dev/src/stats/model/data-collection-object.h"
-    "/home/omar/ns-3-dev/src/stats/model/data-collector.h"
-    "/home/omar/ns-3-dev/src/stats/model/data-output-interface.h"
-    "/home/omar/ns-3-dev/src/stats/model/double-probe.h"
-    "/home/omar/ns-3-dev/src/stats/model/file-aggregator.h"
-    "/home/omar/ns-3-dev/src/stats/model/get-wildcard-matches.h"
-    "/home/omar/ns-3-dev/src/stats/model/gnuplot-aggregator.h"
-    "/home/omar/ns-3-dev/src/stats/model/gnuplot.h"
-    "/home/omar/ns-3-dev/src/stats/model/histogram.h"
-    "/home/omar/ns-3-dev/src/stats/model/omnet-data-output.h"
-    "/home/omar/ns-3-dev/src/stats/model/probe.h"
-    "/home/omar/ns-3-dev/src/stats/model/stats.h"
-    "/home/omar/ns-3-dev/src/stats/model/time-data-calculators.h"
-    "/home/omar/ns-3-dev/src/stats/model/time-probe.h"
-    "/home/omar/ns-3-dev/src/stats/model/time-series-adaptor.h"
-    "/home/omar/ns-3-dev/src/stats/model/uinteger-16-probe.h"
-    "/home/omar/ns-3-dev/src/stats/model/uinteger-32-probe.h"
-    "/home/omar/ns-3-dev/src/stats/model/uinteger-8-probe.h"
-    "/home/omar/ns-3-dev/build/include/ns3/stats-module.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/stats/model/sqlite-data-output.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/stats/helper/file-helper.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/stats/helper/gnuplot-helper.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/stats/model/average.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/stats/model/basic-data-calculators.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/stats/model/boolean-probe.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/stats/model/data-calculator.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/stats/model/data-collection-object.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/stats/model/data-collector.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/stats/model/data-output-interface.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/stats/model/double-probe.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/stats/model/file-aggregator.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/stats/model/get-wildcard-matches.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/stats/model/gnuplot-aggregator.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/stats/model/gnuplot.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/stats/model/histogram.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/stats/model/omnet-data-output.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/stats/model/probe.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/stats/model/stats.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/stats/model/time-data-calculators.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/stats/model/time-probe.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/stats/model/time-series-adaptor.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/stats/model/uinteger-16-probe.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/stats/model/uinteger-32-probe.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/stats/model/uinteger-8-probe.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/build/include/ns3/stats-module.h"
     )
 endif()
 

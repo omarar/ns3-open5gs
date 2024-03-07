@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omar/ns-3-dev
+CMAKE_SOURCE_DIR = /home/omar/Desktop/git_repo/ns3-open5gs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omar/ns-3-dev/cmake-cache
+CMAKE_BINARY_DIR = /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache
 
 # Include any dependencies generated for this target.
 include scratch/CMakeFiles/scratch_cttc-nr-demo.dir/depend.make
@@ -74,16 +74,16 @@ scratch/CMakeFiles/scratch_cttc-nr-demo.dir/cttc-nr-demo.cc.o: ../scratch/cttc-n
 scratch/CMakeFiles/scratch_cttc-nr-demo.dir/cttc-nr-demo.cc.o: CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx
 scratch/CMakeFiles/scratch_cttc-nr-demo.dir/cttc-nr-demo.cc.o: CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx.gch
 scratch/CMakeFiles/scratch_cttc-nr-demo.dir/cttc-nr-demo.cc.o: scratch/CMakeFiles/scratch_cttc-nr-demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omar/ns-3-dev/cmake-cache/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object scratch/CMakeFiles/scratch_cttc-nr-demo.dir/cttc-nr-demo.cc.o"
-	cd /home/omar/ns-3-dev/cmake-cache/scratch && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/ns-3-dev/cmake-cache/CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx -MD -MT scratch/CMakeFiles/scratch_cttc-nr-demo.dir/cttc-nr-demo.cc.o -MF CMakeFiles/scratch_cttc-nr-demo.dir/cttc-nr-demo.cc.o.d -o CMakeFiles/scratch_cttc-nr-demo.dir/cttc-nr-demo.cc.o -c /home/omar/ns-3-dev/scratch/cttc-nr-demo.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object scratch/CMakeFiles/scratch_cttc-nr-demo.dir/cttc-nr-demo.cc.o"
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/scratch && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx -MD -MT scratch/CMakeFiles/scratch_cttc-nr-demo.dir/cttc-nr-demo.cc.o -MF CMakeFiles/scratch_cttc-nr-demo.dir/cttc-nr-demo.cc.o.d -o CMakeFiles/scratch_cttc-nr-demo.dir/cttc-nr-demo.cc.o -c /home/omar/Desktop/git_repo/ns3-open5gs/scratch/cttc-nr-demo.cc
 
 scratch/CMakeFiles/scratch_cttc-nr-demo.dir/cttc-nr-demo.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/scratch_cttc-nr-demo.dir/cttc-nr-demo.cc.i"
-	cd /home/omar/ns-3-dev/cmake-cache/scratch && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/ns-3-dev/cmake-cache/CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx -E /home/omar/ns-3-dev/scratch/cttc-nr-demo.cc > CMakeFiles/scratch_cttc-nr-demo.dir/cttc-nr-demo.cc.i
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/scratch && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx -E /home/omar/Desktop/git_repo/ns3-open5gs/scratch/cttc-nr-demo.cc > CMakeFiles/scratch_cttc-nr-demo.dir/cttc-nr-demo.cc.i
 
 scratch/CMakeFiles/scratch_cttc-nr-demo.dir/cttc-nr-demo.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/scratch_cttc-nr-demo.dir/cttc-nr-demo.cc.s"
-	cd /home/omar/ns-3-dev/cmake-cache/scratch && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/ns-3-dev/cmake-cache/CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx -S /home/omar/ns-3-dev/scratch/cttc-nr-demo.cc -o CMakeFiles/scratch_cttc-nr-demo.dir/cttc-nr-demo.cc.s
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/scratch && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx -S /home/omar/Desktop/git_repo/ns3-open5gs/scratch/cttc-nr-demo.cc -o CMakeFiles/scratch_cttc-nr-demo.dir/cttc-nr-demo.cc.s
 
 # Object files for target scratch_cttc-nr-demo
 scratch_cttc__nr__demo_OBJECTS = \
@@ -99,18 +99,18 @@ scratch_cttc__nr__demo_EXTERNAL_OBJECTS =
 ../build/scratch/ns3.39-cttc-nr-demo-default: /usr/lib/x86_64-linux-gnu/libgsl.so
 ../build/scratch/ns3.39-cttc-nr-demo-default: /usr/lib/x86_64-linux-gnu/libgslcblas.so
 ../build/scratch/ns3.39-cttc-nr-demo-default: scratch/CMakeFiles/scratch_cttc-nr-demo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/omar/ns-3-dev/cmake-cache/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../build/scratch/ns3.39-cttc-nr-demo-default"
-	cd /home/omar/ns-3-dev/cmake-cache/scratch && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/scratch_cttc-nr-demo.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../build/scratch/ns3.39-cttc-nr-demo-default"
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/scratch && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/scratch_cttc-nr-demo.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 scratch/CMakeFiles/scratch_cttc-nr-demo.dir/build: ../build/scratch/ns3.39-cttc-nr-demo-default
 .PHONY : scratch/CMakeFiles/scratch_cttc-nr-demo.dir/build
 
 scratch/CMakeFiles/scratch_cttc-nr-demo.dir/clean:
-	cd /home/omar/ns-3-dev/cmake-cache/scratch && $(CMAKE_COMMAND) -P CMakeFiles/scratch_cttc-nr-demo.dir/cmake_clean.cmake
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/scratch && $(CMAKE_COMMAND) -P CMakeFiles/scratch_cttc-nr-demo.dir/cmake_clean.cmake
 .PHONY : scratch/CMakeFiles/scratch_cttc-nr-demo.dir/clean
 
 scratch/CMakeFiles/scratch_cttc-nr-demo.dir/depend:
-	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omar/ns-3-dev /home/omar/ns-3-dev/scratch /home/omar/ns-3-dev/cmake-cache /home/omar/ns-3-dev/cmake-cache/scratch /home/omar/ns-3-dev/cmake-cache/scratch/CMakeFiles/scratch_cttc-nr-demo.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omar/Desktop/git_repo/ns3-open5gs /home/omar/Desktop/git_repo/ns3-open5gs/scratch /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/scratch /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/scratch/CMakeFiles/scratch_cttc-nr-demo.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : scratch/CMakeFiles/scratch_cttc-nr-demo.dir/depend
 

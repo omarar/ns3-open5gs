@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omar/ns-3-dev
+CMAKE_SOURCE_DIR = /home/omar/Desktop/git_repo/ns3-open5gs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omar/ns-3-dev/cmake-cache
+CMAKE_BINARY_DIR = /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache
 
 # Include any dependencies generated for this target.
 include src/wimax/CMakeFiles/libwimax.dir/depend.make
@@ -74,54 +74,54 @@ libwimax_OBJECTS =
 
 # External object files for target libwimax
 libwimax_EXTERNAL_OBJECTS = \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/helper/wimax-helper.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/cid.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/cid-factory.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/wimax-net-device.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/bs-net-device.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/ss-net-device.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/wimax-mac-header.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/wimax-phy.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/wimax-channel.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/ofdm-downlink-frame-prefix.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/wimax-connection.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/ss-record.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/mac-messages.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/dl-mac-messages.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/ul-mac-messages.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/simple-ofdm-wimax-phy.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/simple-ofdm-wimax-channel.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/send-params.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/ss-manager.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/connection-manager.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/bs-uplink-scheduler.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/bs-uplink-scheduler-simple.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/bs-uplink-scheduler-mbqos.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/bs-uplink-scheduler-rtps.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/bs-scheduler.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/bs-scheduler-simple.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/bs-scheduler-rtps.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/wimax-mac-queue.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/burst-profile-manager.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/ss-scheduler.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/service-flow.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/service-flow-manager.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/service-flow-record.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/ss-link-manager.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/bs-link-manager.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/bandwidth-manager.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/crc8.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/ul-job.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/snr-to-block-error-rate-record.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/snr-to-block-error-rate-manager.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/simple-ofdm-send-param.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/ss-service-flow-manager.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/bs-service-flow-manager.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/ipcs-classifier.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/ipcs-classifier-record.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/wimax-tlv.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/cs-parameters.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/wimax-mac-to-mac-header.cc.o"
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/helper/wimax-helper.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/cid.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/cid-factory.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/wimax-net-device.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/bs-net-device.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/ss-net-device.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/wimax-mac-header.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/wimax-phy.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/wimax-channel.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/ofdm-downlink-frame-prefix.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/wimax-connection.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/ss-record.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/mac-messages.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/dl-mac-messages.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/ul-mac-messages.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/simple-ofdm-wimax-phy.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/simple-ofdm-wimax-channel.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/send-params.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/ss-manager.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/connection-manager.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/bs-uplink-scheduler.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/bs-uplink-scheduler-simple.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/bs-uplink-scheduler-mbqos.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/bs-uplink-scheduler-rtps.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/bs-scheduler.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/bs-scheduler-simple.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/bs-scheduler-rtps.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/wimax-mac-queue.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/burst-profile-manager.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/ss-scheduler.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/service-flow.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/service-flow-manager.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/service-flow-record.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/ss-link-manager.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/bs-link-manager.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/bandwidth-manager.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/crc8.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/ul-job.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/snr-to-block-error-rate-record.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/snr-to-block-error-rate-manager.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/simple-ofdm-send-param.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/ss-service-flow-manager.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/bs-service-flow-manager.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/ipcs-classifier.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/ipcs-classifier-record.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/wimax-tlv.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/cs-parameters.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax-obj.dir/model/wimax-mac-to-mac-header.cc.o"
 
 ../build/lib/libns3.39-wimax-default.so: src/wimax/CMakeFiles/libwimax-obj.dir/helper/wimax-helper.cc.o
 ../build/lib/libns3.39-wimax-default.so: src/wimax/CMakeFiles/libwimax-obj.dir/model/cid.cc.o
@@ -176,18 +176,18 @@ libwimax_EXTERNAL_OBJECTS = \
 ../build/lib/libns3.39-wimax-default.so: /usr/lib/x86_64-linux-gnu/libgslcblas.so
 ../build/lib/libns3.39-wimax-default.so: /usr/lib/x86_64-linux-gnu/libsqlite3.so
 ../build/lib/libns3.39-wimax-default.so: src/wimax/CMakeFiles/libwimax.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/omar/ns-3-dev/cmake-cache/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Linking CXX shared library ../../../build/lib/libns3.39-wimax-default.so"
-	cd /home/omar/ns-3-dev/cmake-cache/src/wimax && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/libwimax.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Linking CXX shared library ../../../build/lib/libns3.39-wimax-default.so"
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/libwimax.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/wimax/CMakeFiles/libwimax.dir/build: ../build/lib/libns3.39-wimax-default.so
 .PHONY : src/wimax/CMakeFiles/libwimax.dir/build
 
 src/wimax/CMakeFiles/libwimax.dir/clean:
-	cd /home/omar/ns-3-dev/cmake-cache/src/wimax && $(CMAKE_COMMAND) -P CMakeFiles/libwimax.dir/cmake_clean.cmake
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax && $(CMAKE_COMMAND) -P CMakeFiles/libwimax.dir/cmake_clean.cmake
 .PHONY : src/wimax/CMakeFiles/libwimax.dir/clean
 
 src/wimax/CMakeFiles/libwimax.dir/depend:
-	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omar/ns-3-dev /home/omar/ns-3-dev/src/wimax /home/omar/ns-3-dev/cmake-cache /home/omar/ns-3-dev/cmake-cache/src/wimax /home/omar/ns-3-dev/cmake-cache/src/wimax/CMakeFiles/libwimax.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omar/Desktop/git_repo/ns3-open5gs /home/omar/Desktop/git_repo/ns3-open5gs/src/wimax /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/wimax/CMakeFiles/libwimax.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/wimax/CMakeFiles/libwimax.dir/depend
 

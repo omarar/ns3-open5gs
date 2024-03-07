@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omar/ns-3-dev
+CMAKE_SOURCE_DIR = /home/omar/Desktop/git_repo/ns3-open5gs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omar/ns-3-dev/cmake-cache
+CMAKE_BINARY_DIR = /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache
 
 # Include any dependencies generated for this target.
 include scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/depend.make
@@ -72,16 +72,16 @@ include scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/flags.mak
 scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/lib/scratch-nested-subdir-library-source.cc.o: scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/flags.make
 scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/lib/scratch-nested-subdir-library-source.cc.o: ../scratch/nested-subdir/lib/scratch-nested-subdir-library-source.cc
 scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/lib/scratch-nested-subdir-library-source.cc.o: scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omar/ns-3-dev/cmake-cache/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/lib/scratch-nested-subdir-library-source.cc.o"
-	cd /home/omar/ns-3-dev/cmake-cache/scratch/nested-subdir && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/lib/scratch-nested-subdir-library-source.cc.o -MF CMakeFiles/scratch-nested-subdir-lib.dir/lib/scratch-nested-subdir-library-source.cc.o.d -o CMakeFiles/scratch-nested-subdir-lib.dir/lib/scratch-nested-subdir-library-source.cc.o -c /home/omar/ns-3-dev/scratch/nested-subdir/lib/scratch-nested-subdir-library-source.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/lib/scratch-nested-subdir-library-source.cc.o"
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/scratch/nested-subdir && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/lib/scratch-nested-subdir-library-source.cc.o -MF CMakeFiles/scratch-nested-subdir-lib.dir/lib/scratch-nested-subdir-library-source.cc.o.d -o CMakeFiles/scratch-nested-subdir-lib.dir/lib/scratch-nested-subdir-library-source.cc.o -c /home/omar/Desktop/git_repo/ns3-open5gs/scratch/nested-subdir/lib/scratch-nested-subdir-library-source.cc
 
 scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/lib/scratch-nested-subdir-library-source.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/scratch-nested-subdir-lib.dir/lib/scratch-nested-subdir-library-source.cc.i"
-	cd /home/omar/ns-3-dev/cmake-cache/scratch/nested-subdir && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omar/ns-3-dev/scratch/nested-subdir/lib/scratch-nested-subdir-library-source.cc > CMakeFiles/scratch-nested-subdir-lib.dir/lib/scratch-nested-subdir-library-source.cc.i
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/scratch/nested-subdir && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omar/Desktop/git_repo/ns3-open5gs/scratch/nested-subdir/lib/scratch-nested-subdir-library-source.cc > CMakeFiles/scratch-nested-subdir-lib.dir/lib/scratch-nested-subdir-library-source.cc.i
 
 scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/lib/scratch-nested-subdir-library-source.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/scratch-nested-subdir-lib.dir/lib/scratch-nested-subdir-library-source.cc.s"
-	cd /home/omar/ns-3-dev/cmake-cache/scratch/nested-subdir && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omar/ns-3-dev/scratch/nested-subdir/lib/scratch-nested-subdir-library-source.cc -o CMakeFiles/scratch-nested-subdir-lib.dir/lib/scratch-nested-subdir-library-source.cc.s
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/scratch/nested-subdir && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omar/Desktop/git_repo/ns3-open5gs/scratch/nested-subdir/lib/scratch-nested-subdir-library-source.cc -o CMakeFiles/scratch-nested-subdir-lib.dir/lib/scratch-nested-subdir-library-source.cc.s
 
 # Object files for target scratch-nested-subdir-lib
 scratch__nested__subdir__lib_OBJECTS = \
@@ -93,19 +93,19 @@ scratch__nested__subdir__lib_EXTERNAL_OBJECTS =
 ../build/lib/libscratch-nested-subdir-lib.a: scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/lib/scratch-nested-subdir-library-source.cc.o
 ../build/lib/libscratch-nested-subdir-lib.a: scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/build.make
 ../build/lib/libscratch-nested-subdir-lib.a: scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/omar/ns-3-dev/cmake-cache/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ../../../build/lib/libscratch-nested-subdir-lib.a"
-	cd /home/omar/ns-3-dev/cmake-cache/scratch/nested-subdir && $(CMAKE_COMMAND) -P CMakeFiles/scratch-nested-subdir-lib.dir/cmake_clean_target.cmake
-	cd /home/omar/ns-3-dev/cmake-cache/scratch/nested-subdir && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/scratch-nested-subdir-lib.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ../../../build/lib/libscratch-nested-subdir-lib.a"
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/scratch/nested-subdir && $(CMAKE_COMMAND) -P CMakeFiles/scratch-nested-subdir-lib.dir/cmake_clean_target.cmake
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/scratch/nested-subdir && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/scratch-nested-subdir-lib.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/build: ../build/lib/libscratch-nested-subdir-lib.a
 .PHONY : scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/build
 
 scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/clean:
-	cd /home/omar/ns-3-dev/cmake-cache/scratch/nested-subdir && $(CMAKE_COMMAND) -P CMakeFiles/scratch-nested-subdir-lib.dir/cmake_clean.cmake
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/scratch/nested-subdir && $(CMAKE_COMMAND) -P CMakeFiles/scratch-nested-subdir-lib.dir/cmake_clean.cmake
 .PHONY : scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/clean
 
 scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/depend:
-	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omar/ns-3-dev /home/omar/ns-3-dev/scratch/nested-subdir /home/omar/ns-3-dev/cmake-cache /home/omar/ns-3-dev/cmake-cache/scratch/nested-subdir /home/omar/ns-3-dev/cmake-cache/scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omar/Desktop/git_repo/ns3-open5gs /home/omar/Desktop/git_repo/ns3-open5gs/scratch/nested-subdir /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/scratch/nested-subdir /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/depend
 

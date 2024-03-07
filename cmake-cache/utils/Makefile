@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omar/ns-3-dev
+CMAKE_SOURCE_DIR = /home/omar/Desktop/git_repo/ns3-open5gs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omar/ns-3-dev/cmake-cache
+CMAKE_BINARY_DIR = /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -E cmake_progress_start /home/omar/ns-3-dev/cmake-cache/CMakeFiles /home/omar/ns-3-dev/cmake-cache/utils//CMakeFiles/progress.marks
-	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/omar/ns-3-dev/cmake-cache/CMakeFiles 0
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -E cmake_progress_start /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/utils//CMakeFiles/progress.marks
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils/clean
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,23 +148,23 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils/preinstall
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils/preinstall
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/ns-3-dev/cmake-cache/CMakeFiles/VerifyGlobs.cmake
-	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/VerifyGlobs.cmake
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 utils/CMakeFiles/bench-scheduler.dir/rule:
-	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils/CMakeFiles/bench-scheduler.dir/rule
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils/CMakeFiles/bench-scheduler.dir/rule
 .PHONY : utils/CMakeFiles/bench-scheduler.dir/rule
 
 # Convenience name for target.
@@ -173,12 +173,12 @@ bench-scheduler: utils/CMakeFiles/bench-scheduler.dir/rule
 
 # fast build rule for target.
 bench-scheduler/fast:
-	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/bench-scheduler.dir/build.make utils/CMakeFiles/bench-scheduler.dir/build
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/bench-scheduler.dir/build.make utils/CMakeFiles/bench-scheduler.dir/build
 .PHONY : bench-scheduler/fast
 
 # Convenience name for target.
 utils/CMakeFiles/bench-packets.dir/rule:
-	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils/CMakeFiles/bench-packets.dir/rule
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils/CMakeFiles/bench-packets.dir/rule
 .PHONY : utils/CMakeFiles/bench-packets.dir/rule
 
 # Convenience name for target.
@@ -187,12 +187,12 @@ bench-packets: utils/CMakeFiles/bench-packets.dir/rule
 
 # fast build rule for target.
 bench-packets/fast:
-	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/bench-packets.dir/build.make utils/CMakeFiles/bench-packets.dir/build
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/bench-packets.dir/build.make utils/CMakeFiles/bench-packets.dir/build
 .PHONY : bench-packets/fast
 
 # Convenience name for target.
 utils/CMakeFiles/print-introspected-doxygen.dir/rule:
-	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils/CMakeFiles/print-introspected-doxygen.dir/rule
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils/CMakeFiles/print-introspected-doxygen.dir/rule
 .PHONY : utils/CMakeFiles/print-introspected-doxygen.dir/rule
 
 # Convenience name for target.
@@ -201,12 +201,12 @@ print-introspected-doxygen: utils/CMakeFiles/print-introspected-doxygen.dir/rule
 
 # fast build rule for target.
 print-introspected-doxygen/fast:
-	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/print-introspected-doxygen.dir/build.make utils/CMakeFiles/print-introspected-doxygen.dir/build
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/print-introspected-doxygen.dir/build.make utils/CMakeFiles/print-introspected-doxygen.dir/build
 .PHONY : print-introspected-doxygen/fast
 
 # Convenience name for target.
 utils/CMakeFiles/perf-io.dir/rule:
-	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils/CMakeFiles/perf-io.dir/rule
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils/CMakeFiles/perf-io.dir/rule
 .PHONY : utils/CMakeFiles/perf-io.dir/rule
 
 # Convenience name for target.
@@ -215,7 +215,7 @@ perf-io: utils/CMakeFiles/perf-io.dir/rule
 
 # fast build rule for target.
 perf-io/fast:
-	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/perf-io.dir/build.make utils/CMakeFiles/perf-io.dir/build
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/perf-io.dir/build.make utils/CMakeFiles/perf-io.dir/build
 .PHONY : perf-io/fast
 
 bench-packets.o: bench-packets.cc.o
@@ -223,7 +223,7 @@ bench-packets.o: bench-packets.cc.o
 
 # target to build an object file
 bench-packets.cc.o:
-	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/bench-packets.dir/build.make utils/CMakeFiles/bench-packets.dir/bench-packets.cc.o
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/bench-packets.dir/build.make utils/CMakeFiles/bench-packets.dir/bench-packets.cc.o
 .PHONY : bench-packets.cc.o
 
 bench-packets.i: bench-packets.cc.i
@@ -231,7 +231,7 @@ bench-packets.i: bench-packets.cc.i
 
 # target to preprocess a source file
 bench-packets.cc.i:
-	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/bench-packets.dir/build.make utils/CMakeFiles/bench-packets.dir/bench-packets.cc.i
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/bench-packets.dir/build.make utils/CMakeFiles/bench-packets.dir/bench-packets.cc.i
 .PHONY : bench-packets.cc.i
 
 bench-packets.s: bench-packets.cc.s
@@ -239,7 +239,7 @@ bench-packets.s: bench-packets.cc.s
 
 # target to generate assembly for a file
 bench-packets.cc.s:
-	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/bench-packets.dir/build.make utils/CMakeFiles/bench-packets.dir/bench-packets.cc.s
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/bench-packets.dir/build.make utils/CMakeFiles/bench-packets.dir/bench-packets.cc.s
 .PHONY : bench-packets.cc.s
 
 bench-scheduler.o: bench-scheduler.cc.o
@@ -247,7 +247,7 @@ bench-scheduler.o: bench-scheduler.cc.o
 
 # target to build an object file
 bench-scheduler.cc.o:
-	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/bench-scheduler.dir/build.make utils/CMakeFiles/bench-scheduler.dir/bench-scheduler.cc.o
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/bench-scheduler.dir/build.make utils/CMakeFiles/bench-scheduler.dir/bench-scheduler.cc.o
 .PHONY : bench-scheduler.cc.o
 
 bench-scheduler.i: bench-scheduler.cc.i
@@ -255,7 +255,7 @@ bench-scheduler.i: bench-scheduler.cc.i
 
 # target to preprocess a source file
 bench-scheduler.cc.i:
-	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/bench-scheduler.dir/build.make utils/CMakeFiles/bench-scheduler.dir/bench-scheduler.cc.i
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/bench-scheduler.dir/build.make utils/CMakeFiles/bench-scheduler.dir/bench-scheduler.cc.i
 .PHONY : bench-scheduler.cc.i
 
 bench-scheduler.s: bench-scheduler.cc.s
@@ -263,7 +263,7 @@ bench-scheduler.s: bench-scheduler.cc.s
 
 # target to generate assembly for a file
 bench-scheduler.cc.s:
-	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/bench-scheduler.dir/build.make utils/CMakeFiles/bench-scheduler.dir/bench-scheduler.cc.s
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/bench-scheduler.dir/build.make utils/CMakeFiles/bench-scheduler.dir/bench-scheduler.cc.s
 .PHONY : bench-scheduler.cc.s
 
 perf/perf-io.o: perf/perf-io.cc.o
@@ -271,7 +271,7 @@ perf/perf-io.o: perf/perf-io.cc.o
 
 # target to build an object file
 perf/perf-io.cc.o:
-	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/perf-io.dir/build.make utils/CMakeFiles/perf-io.dir/perf/perf-io.cc.o
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/perf-io.dir/build.make utils/CMakeFiles/perf-io.dir/perf/perf-io.cc.o
 .PHONY : perf/perf-io.cc.o
 
 perf/perf-io.i: perf/perf-io.cc.i
@@ -279,7 +279,7 @@ perf/perf-io.i: perf/perf-io.cc.i
 
 # target to preprocess a source file
 perf/perf-io.cc.i:
-	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/perf-io.dir/build.make utils/CMakeFiles/perf-io.dir/perf/perf-io.cc.i
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/perf-io.dir/build.make utils/CMakeFiles/perf-io.dir/perf/perf-io.cc.i
 .PHONY : perf/perf-io.cc.i
 
 perf/perf-io.s: perf/perf-io.cc.s
@@ -287,7 +287,7 @@ perf/perf-io.s: perf/perf-io.cc.s
 
 # target to generate assembly for a file
 perf/perf-io.cc.s:
-	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/perf-io.dir/build.make utils/CMakeFiles/perf-io.dir/perf/perf-io.cc.s
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/perf-io.dir/build.make utils/CMakeFiles/perf-io.dir/perf/perf-io.cc.s
 .PHONY : perf/perf-io.cc.s
 
 print-introspected-doxygen.o: print-introspected-doxygen.cc.o
@@ -295,7 +295,7 @@ print-introspected-doxygen.o: print-introspected-doxygen.cc.o
 
 # target to build an object file
 print-introspected-doxygen.cc.o:
-	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/print-introspected-doxygen.dir/build.make utils/CMakeFiles/print-introspected-doxygen.dir/print-introspected-doxygen.cc.o
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/print-introspected-doxygen.dir/build.make utils/CMakeFiles/print-introspected-doxygen.dir/print-introspected-doxygen.cc.o
 .PHONY : print-introspected-doxygen.cc.o
 
 print-introspected-doxygen.i: print-introspected-doxygen.cc.i
@@ -303,7 +303,7 @@ print-introspected-doxygen.i: print-introspected-doxygen.cc.i
 
 # target to preprocess a source file
 print-introspected-doxygen.cc.i:
-	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/print-introspected-doxygen.dir/build.make utils/CMakeFiles/print-introspected-doxygen.dir/print-introspected-doxygen.cc.i
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/print-introspected-doxygen.dir/build.make utils/CMakeFiles/print-introspected-doxygen.dir/print-introspected-doxygen.cc.i
 .PHONY : print-introspected-doxygen.cc.i
 
 print-introspected-doxygen.s: print-introspected-doxygen.cc.s
@@ -311,7 +311,7 @@ print-introspected-doxygen.s: print-introspected-doxygen.cc.s
 
 # target to generate assembly for a file
 print-introspected-doxygen.cc.s:
-	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/print-introspected-doxygen.dir/build.make utils/CMakeFiles/print-introspected-doxygen.dir/print-introspected-doxygen.cc.s
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/print-introspected-doxygen.dir/build.make utils/CMakeFiles/print-introspected-doxygen.dir/print-introspected-doxygen.cc.s
 .PHONY : print-introspected-doxygen.cc.s
 
 # Help Target
@@ -353,7 +353,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/ns-3-dev/cmake-cache/CMakeFiles/VerifyGlobs.cmake
-	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/VerifyGlobs.cmake
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -3,10 +3,10 @@
  * All rights reserved.
  * Redistribution and modifications are permitted subject to BSD license.
  */
-#include <asn_internal.h>
-#include <constr_SEQUENCE.h>
-#include <OPEN_TYPE.h>
-#include <per_opentype.h>
+#include <ns3/asn_internal.h>
+#include <ns3/constr_SEQUENCE.h>
+#include <ns3/OPEN_TYPE.h>
+#include <ns3/per_opentype.h>
 
 /*
  * Number of bytes left for this structure.
@@ -1996,9 +1996,9 @@ SEQUENCE_random_fill(const asn_TYPE_descriptor_t *td, void **sptr,
                    size_t max_length) {
     const asn_SEQUENCE_specifics_t *specs =
         (const asn_SEQUENCE_specifics_t *)td->specifics;
-    asn_random_fill_result_t result_ok = {ARFILL_OK, 0};
-    asn_random_fill_result_t result_failed = {ARFILL_FAILED, 0};
-    asn_random_fill_result_t result_skipped = {ARFILL_SKIPPED, 0};
+    asn_random_fill_result_t result_ok = {asn_random_fill_result_t::ARFILL_OK, 0};
+    asn_random_fill_result_t result_failed = {asn_random_fill_result_t::ARFILL_FAILED, 0};
+    asn_random_fill_result_t result_skipped = {asn_random_fill_result_t::ARFILL_SKIPPED, 0};
     void *st = *sptr;
     size_t edx;
 
@@ -2036,13 +2036,13 @@ SEQUENCE_random_fill(const asn_TYPE_descriptor_t *td, void **sptr,
             elm->type, memb_ptr2, &elm->encoding_constraints,
             max_length > result_ok.length ? max_length - result_ok.length : 0);
         switch(tmpres.code) {
-        case ARFILL_OK:
+        case asn_random_fill_result_t::ARFILL_OK:
             result_ok.length += tmpres.length;
             continue;
-        case ARFILL_SKIPPED:
+        case asn_random_fill_result_t::ARFILL_SKIPPED:
             assert(!(elm->flags & ATF_POINTER) || *memb_ptr2 == NULL);
             continue;
-        case ARFILL_FAILED:
+        case asn_random_fill_result_t::ARFILL_FAILED:
             if(st == *sptr) {
                 ASN_STRUCT_RESET(*td, st);
             } else {

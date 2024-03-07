@@ -2,9 +2,9 @@
  * Copyright (c) 2003, 2004 Lev Walkin <vlm@lionet.info>. All rights reserved.
  * Redistribution and modifications are permitted subject to BSD license.
  */
-#include <asn_internal.h>
-#include <BIT_STRING.h>
-#include <asn_internal.h>
+#include <ns3/asn_internal.h>
+#include <ns3/BIT_STRING.h>
+#include <ns3/asn_internal.h>
 
 /*
  * BIT STRING basic type description.
@@ -15,7 +15,7 @@ static const ber_tlv_tag_t asn_DEF_BIT_STRING_tags[] = {
 asn_OCTET_STRING_specifics_t asn_SPC_BIT_STRING_specs = {
 	sizeof(BIT_STRING_t),
 	offsetof(BIT_STRING_t, _asn_ctx),
-	ASN_OSUBV_BIT
+	asn_OCTET_STRING_specifics_t::ASN_OSUBV_BIT
 };
 asn_TYPE_operation_t asn_OP_BIT_STRING = {
 	OCTET_STRING_free,         /* Implemented in terms of OCTET STRING */
@@ -271,7 +271,7 @@ BIT_STRING_compare(const asn_TYPE_descriptor_t *td, const void *aptr,
     const BIT_STRING_t *b = BIT_STRING__compactify(bptr, &compact_b);
     const asn_OCTET_STRING_specifics_t *specs = td->specifics;
 
-    assert(specs && specs->subvariant == ASN_OSUBV_BIT);
+    assert(specs && specs->subvariant == asn_OCTET_STRING_specifics_t::ASN_OSUBV_BIT);
 
     if(a && b) {
         size_t common_prefix_size = a->size <= b->size ? a->size : b->size;
@@ -316,7 +316,7 @@ BIT_STRING_compare(const asn_TYPE_descriptor_t *td, const void *aptr,
     } while(0)
 
 static asn_per_constraint_t asn_DEF_BIT_STRING_constraint_size = {
-    APC_SEMI_CONSTRAINED, -1, -1, 0, 0};
+    asn_per_constraint_t::APC_SEMI_CONSTRAINED, -1, -1, 0, 0};
 
 asn_dec_rval_t
 BIT_STRING_decode_uper(const asn_codec_ctx_t *opt_codec_ctx,
@@ -342,7 +342,7 @@ BIT_STRING_decode_uper(const asn_codec_ctx_t *opt_codec_ctx,
 		csiz = &asn_DEF_BIT_STRING_constraint_size;
 	}
 
-	if(specs->subvariant != ASN_OSUBV_BIT) {
+	if(specs->subvariant != asn_OCTET_STRING_specifics_t::ASN_OSUBV_BIT) {
 		ASN_DEBUG("Subvariant %d is not BIT OSUBV_BIT", specs->subvariant);
 		RETURN(RC_FAIL);
     }
@@ -356,10 +356,10 @@ BIT_STRING_decode_uper(const asn_codec_ctx_t *opt_codec_ctx,
 	}
 
 	ASN_DEBUG("PER Decoding %s size %ld .. %ld bits %d",
-		csiz->flags & APC_EXTENSIBLE ? "extensible" : "non-extensible",
+		csiz->flags & asn_per_constraint_t::APC_EXTENSIBLE ? "extensible" : "non-extensible",
 		csiz->lower_bound, csiz->upper_bound, csiz->effective_bits);
 
-	if(csiz->flags & APC_EXTENSIBLE) {
+	if(csiz->flags & asn_per_constraint_t::APC_EXTENSIBLE) {
 		int inext = per_get_few_bits(pd, 1);
 		if(inext < 0) RETURN(RC_WMORE);
 		if(inext) {
@@ -444,7 +444,7 @@ BIT_STRING_encode_uper(const asn_TYPE_descriptor_t *td,
 	if(!st || (!st->buf && st->size))
 		ASN__ENCODE_FAILED;
 
-	if(specs->subvariant == ASN_OSUBV_BIT) {
+	if(specs->subvariant == asn_OCTET_STRING_specifics_t::ASN_OSUBV_BIT) {
         if((st->size == 0 && st->bits_unused) || (st->bits_unused & ~7))
             ASN__ENCODE_FAILED;
     } else {
@@ -456,7 +456,7 @@ BIT_STRING_encode_uper(const asn_TYPE_descriptor_t *td,
     } else {
 		csiz = &asn_DEF_BIT_STRING_constraint_size;
 	}
-	ct_extensible = csiz->flags & APC_EXTENSIBLE;
+	ct_extensible = csiz->flags & asn_per_constraint_t::APC_EXTENSIBLE;
 
     /* Figure out the size without the trailing bits */
     st = BIT_STRING__compactify(st, &compact_bstr);
@@ -552,9 +552,9 @@ BIT_STRING_random_fill(const asn_TYPE_descriptor_t *td, void **sptr,
     const asn_OCTET_STRING_specifics_t *specs =
         td->specifics ? (const asn_OCTET_STRING_specifics_t *)td->specifics
                       : &asn_SPC_BIT_STRING_specs;
-    asn_random_fill_result_t result_ok = {ARFILL_OK, 1};
-    asn_random_fill_result_t result_failed = {ARFILL_FAILED, 0};
-    asn_random_fill_result_t result_skipped = {ARFILL_SKIPPED, 0};
+    asn_random_fill_result_t result_ok = {asn_random_fill_result_t::ARFILL_OK, 1};
+    asn_random_fill_result_t result_failed = {asn_random_fill_result_t::ARFILL_FAILED, 0};
+    asn_random_fill_result_t result_skipped = {asn_random_fill_result_t::ARFILL_SKIPPED, 0};
     static unsigned lengths[] = {0,     1,     2,     3,     4,     8,
                                  126,   127,   128,   16383, 16384, 16385,
                                  65534, 65535, 65536, 65537};
@@ -567,9 +567,9 @@ BIT_STRING_random_fill(const asn_TYPE_descriptor_t *td, void **sptr,
     if(max_length == 0) return result_skipped;
 
     switch(specs->subvariant) {
-    case ASN_OSUBV_ANY:
+    case asn_OCTET_STRING_specifics_t::ASN_OSUBV_ANY:
         return result_failed;
-    case ASN_OSUBV_BIT:
+    case asn_OCTET_STRING_specifics_t::ASN_OSUBV_BIT:
         break;
     default:
         break;
@@ -582,14 +582,14 @@ BIT_STRING_random_fill(const asn_TYPE_descriptor_t *td, void **sptr,
         constraints = &td->encoding_constraints;
     if(constraints->per_constraints) {
         const asn_per_constraint_t *pc = &constraints->per_constraints->size;
-        if(pc->flags & APC_CONSTRAINED) {
+        if(pc->flags & asn_per_constraint_t::APC_CONSTRAINED) {
             long suggested_upper_bound = pc->upper_bound < (ssize_t)max_length
                                              ? pc->upper_bound
                                              : (ssize_t)max_length;
             if(max_length < (size_t)pc->lower_bound) {
                 return result_skipped;
             }
-            if(pc->flags & APC_EXTENSIBLE) {
+            if(pc->flags & asn_per_constraint_t::APC_EXTENSIBLE) {
                 switch(asn_random_between(0, 5)) {
                 case 0:
                     if(pc->lower_bound > 0) {

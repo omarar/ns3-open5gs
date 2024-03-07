@@ -39,8 +39,8 @@ memb_ASN_RRC_spare_constraint_1(const asn_TYPE_descriptor_t *td, const void *spt
 }
 
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_spare_constr_4 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_CONSTRAINED,	 0,  0,  1,  1 }	/* (SIZE(1..1)) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 0,  0,  1,  1 }	/* (SIZE(1..1)) */,
 	0, 0	/* No PER value map */
 };
 asn_TYPE_member_t asn_MBR_ASN_RRC_RRCReestablishmentRequest_IEs_1[] = {

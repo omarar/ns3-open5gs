@@ -58,17 +58,17 @@ memb_ASN_RRC_maxNumberSimultaneousSRS_ResourceTx_constraint_2(const asn_TYPE_des
 }
 
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_maxNumberSRS_ResourcePerSet_constr_3 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  1,  4 }	/* (1..4) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  1,  4 }	/* (1..4) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_maxNumberSimultaneousSRS_ResourceTx_constr_4 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  1,  4 }	/* (1..4) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  1,  4 }	/* (1..4) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_TYPE_member_t asn_MBR_ASN_RRC_mimo_NonCB_PUSCH_2[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_RRC_FeatureSetUplinkPerCC_v1540__mimo_NonCB_PUSCH, maxNumberSRS_ResourcePerSet),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_RRC_FeatureSetUplinkPerCC_v1540_t::ASN_RRC_FeatureSetUplinkPerCC_v1540__mimo_NonCB_PUSCH, maxNumberSRS_ResourcePerSet),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
@@ -77,7 +77,7 @@ static asn_TYPE_member_t asn_MBR_ASN_RRC_mimo_NonCB_PUSCH_2[] = {
 		0, 0, /* No default value */
 		"maxNumberSRS-ResourcePerSet"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_RRC_FeatureSetUplinkPerCC_v1540__mimo_NonCB_PUSCH, maxNumberSimultaneousSRS_ResourceTx),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_RRC_FeatureSetUplinkPerCC_v1540_t::ASN_RRC_FeatureSetUplinkPerCC_v1540__mimo_NonCB_PUSCH, maxNumberSimultaneousSRS_ResourceTx),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
@@ -96,8 +96,8 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_RRC_mimo_NonCB_PUSCH_tag2el_2[] =
     { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 } /* maxNumberSimultaneousSRS-ResourceTx */
 };
 static asn_SEQUENCE_specifics_t asn_SPC_ASN_RRC_mimo_NonCB_PUSCH_specs_2 = {
-	sizeof(struct ASN_RRC_FeatureSetUplinkPerCC_v1540__mimo_NonCB_PUSCH),
-	offsetof(struct ASN_RRC_FeatureSetUplinkPerCC_v1540__mimo_NonCB_PUSCH, _asn_ctx),
+	sizeof(struct ASN_RRC_FeatureSetUplinkPerCC_v1540_t::ASN_RRC_FeatureSetUplinkPerCC_v1540__mimo_NonCB_PUSCH),
+	offsetof(struct ASN_RRC_FeatureSetUplinkPerCC_v1540_t::ASN_RRC_FeatureSetUplinkPerCC_v1540__mimo_NonCB_PUSCH, _asn_ctx),
 	asn_MAP_ASN_RRC_mimo_NonCB_PUSCH_tag2el_2,
 	2,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */

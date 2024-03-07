@@ -1,4 +1,4 @@
-# Install script for directory: /home/omar/ns-3-dev/src/energy
+# Install script for directory: /home/omar/Desktop/git_repo/ns3-open5gs/src/energy
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -49,12 +49,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-energy-default.so"
          RPATH "/usr/local/lib:$ORIGIN/:$ORIGIN/../lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/omar/ns-3-dev/build/lib/libns3.39-energy-default.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/omar/Desktop/git_repo/ns3-open5gs/build/lib/libns3.39-energy-default.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-energy-default.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-energy-default.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-energy-default.so"
-         OLD_RPATH "/home/omar/ns-3-dev/build/lib:::::::::"
+         OLD_RPATH "/home/omar/Desktop/git_repo/ns3-open5gs/build/lib:"
          NEW_RPATH "/usr/local/lib:$ORIGIN/:$ORIGIN/../lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-energy-default.so")
@@ -67,24 +67,24 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/ns3" TYPE FILE FILES
-    "/home/omar/ns-3-dev/src/energy/helper/basic-energy-harvester-helper.h"
-    "/home/omar/ns-3-dev/src/energy/helper/basic-energy-source-helper.h"
-    "/home/omar/ns-3-dev/src/energy/helper/energy-harvester-container.h"
-    "/home/omar/ns-3-dev/src/energy/helper/energy-harvester-helper.h"
-    "/home/omar/ns-3-dev/src/energy/helper/energy-model-helper.h"
-    "/home/omar/ns-3-dev/src/energy/helper/energy-source-container.h"
-    "/home/omar/ns-3-dev/src/energy/helper/li-ion-energy-source-helper.h"
-    "/home/omar/ns-3-dev/src/energy/helper/rv-battery-model-helper.h"
-    "/home/omar/ns-3-dev/src/energy/model/basic-energy-harvester.h"
-    "/home/omar/ns-3-dev/src/energy/model/basic-energy-source.h"
-    "/home/omar/ns-3-dev/src/energy/model/device-energy-model-container.h"
-    "/home/omar/ns-3-dev/src/energy/model/device-energy-model.h"
-    "/home/omar/ns-3-dev/src/energy/model/energy-harvester.h"
-    "/home/omar/ns-3-dev/src/energy/model/energy-source.h"
-    "/home/omar/ns-3-dev/src/energy/model/li-ion-energy-source.h"
-    "/home/omar/ns-3-dev/src/energy/model/rv-battery-model.h"
-    "/home/omar/ns-3-dev/src/energy/model/simple-device-energy-model.h"
-    "/home/omar/ns-3-dev/build/include/ns3/energy-module.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/energy/helper/basic-energy-harvester-helper.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/energy/helper/basic-energy-source-helper.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/energy/helper/energy-harvester-container.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/energy/helper/energy-harvester-helper.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/energy/helper/energy-model-helper.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/energy/helper/energy-source-container.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/energy/helper/li-ion-energy-source-helper.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/energy/helper/rv-battery-model-helper.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/energy/model/basic-energy-harvester.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/energy/model/basic-energy-source.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/energy/model/device-energy-model-container.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/energy/model/device-energy-model.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/energy/model/energy-harvester.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/energy/model/energy-source.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/energy/model/li-ion-energy-source.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/energy/model/rv-battery-model.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/energy/model/simple-device-energy-model.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/build/include/ns3/energy-module.h"
     )
 endif()
 

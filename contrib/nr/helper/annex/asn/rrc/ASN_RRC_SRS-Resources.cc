@@ -99,38 +99,38 @@ memb_ASN_RRC_maxNumberSemiPersistentSRS_PerBWP_PerSlot_constraint_1(const asn_TY
 }
 
 static asn_per_constraints_t asn_PER_type_ASN_RRC_maxNumberAperiodicSRS_PerBWP_constr_2 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 3,  3,  0,  4 }	/* (0..4) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 3,  3,  0,  4 }	/* (0..4) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_type_ASN_RRC_maxNumberPeriodicSRS_PerBWP_constr_9 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 3,  3,  0,  4 }	/* (0..4) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 3,  3,  0,  4 }	/* (0..4) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_type_ASN_RRC_maxNumberSemiPersistentSRS_PerBWP_constr_16 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 3,  3,  0,  4 }	/* (0..4) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 3,  3,  0,  4 }	/* (0..4) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_type_ASN_RRC_maxNumberSRS_Ports_PerResource_constr_23 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_maxNumberAperiodicSRS_PerBWP_PerSlot_constr_8 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 3,  3,  1,  6 }	/* (1..6) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 3,  3,  1,  6 }	/* (1..6) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_maxNumberPeriodicSRS_PerBWP_PerSlot_constr_15 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 3,  3,  1,  6 }	/* (1..6) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 3,  3,  1,  6 }	/* (1..6) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_maxNumberSemiPersistentSRS_PerBWP_PerSlot_constr_22 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 3,  3,  1,  6 }	/* (1..6) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 3,  3,  1,  6 }	/* (1..6) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static const asn_INTEGER_enum_map_t asn_MAP_ASN_RRC_maxNumberAperiodicSRS_PerBWP_value2enum_2[] = {

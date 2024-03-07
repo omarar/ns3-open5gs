@@ -10,11 +10,6 @@
 #include <ns3/asn_system.h>		/* Platform-specific types */
 #include <ns3/asn_bit_data.h>
 
-//#define APC_UNCONSTRAINED   0x0 	/* No PER visible constraints */
-//#define APC_SEMI_CONSTRAINED  0x1	/* Constrained at "lb" */
-//#define APC_CONSTRAINED  0x2	/* Fully constrained */
-//#define APC_EXTENSIBLE  0x4	/* May have extension */
-
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -31,11 +26,10 @@ typedef struct asn_per_constraint_s {
 	} flags;
 	int  range_bits;		/* Full number of bits in the range */
 	int  effective_bits;		/* Effective bits */
-	long long lower_bound;		/* "lb" value */
-	long long upper_bound;		/* "ub" value */	
+	long lower_bound;		/* "lb" value */
+	long upper_bound;		/* "ub" value */	
 } asn_per_constraint_t;
-//#define APC_UNCONSTRAINED   0x0
-//#define APC_CONSTRAINED  0x2
+
 typedef struct asn_per_constraints_s {
 	asn_per_constraint_t value;
 	asn_per_constraint_t size;

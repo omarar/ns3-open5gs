@@ -30,8 +30,8 @@ memb_ASN_NGAP_pDUSessionResourceSetupRequestTransfer_constraint_1(const asn_TYPE
 }
 
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_pDUSessionResourceSetupRequestTransfer_constr_5 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_SEMI_CONSTRAINED,	-1, -1,  0,  0 }	/* (SIZE(0..MAX)) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_SEMI_CONSTRAINED,	-1, -1,  0,  0 }	/* (SIZE(0..MAX)) */,
 	0, 0	/* No PER value map */
 };
 asn_TYPE_member_t asn_MBR_ASN_NGAP_PDUSessionResourceSetupItemSUReq_1[] = {

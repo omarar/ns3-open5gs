@@ -37,8 +37,8 @@ ASN_NGAP_PacketDelayBudget_constraint(const asn_TYPE_descriptor_t *td, const voi
  * so here we adjust the DEF accordingly.
  */
 asn_per_constraints_t asn_PER_type_ASN_NGAP_PacketDelayBudget_constr_1 CC_NOTUSED = {
-	{ APC_CONSTRAINED | APC_EXTENSIBLE,  10,  10,  0,  1023 }	/* (0..1023,...) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED | asn_per_constraint_t::APC_EXTENSIBLE,  10,  10,  0,  1023 }	/* (0..1023,...) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static const ber_tlv_tag_t asn_DEF_ASN_NGAP_PacketDelayBudget_tags_1[] = {

@@ -1,4 +1,4 @@
-# Install script for directory: /home/omar/ns-3-dev/src/wimax
+# Install script for directory: /home/omar/Desktop/git_repo/ns3-open5gs/src/wimax
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -49,12 +49,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-wimax-default.so"
          RPATH "/usr/local/lib:$ORIGIN/:$ORIGIN/../lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/omar/ns-3-dev/build/lib/libns3.39-wimax-default.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/omar/Desktop/git_repo/ns3-open5gs/build/lib/libns3.39-wimax-default.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-wimax-default.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-wimax-default.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-wimax-default.so"
-         OLD_RPATH "/home/omar/ns-3-dev/build/lib:::::::::"
+         OLD_RPATH "/home/omar/Desktop/git_repo/ns3-open5gs/build/lib:"
          NEW_RPATH "/usr/local/lib:$ORIGIN/:$ORIGIN/../lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-wimax-default.so")
@@ -67,51 +67,51 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/ns3" TYPE FILE FILES
-    "/home/omar/ns-3-dev/src/wimax/helper/wimax-helper.h"
-    "/home/omar/ns-3-dev/src/wimax/model/wimax-channel.h"
-    "/home/omar/ns-3-dev/src/wimax/model/wimax-net-device.h"
-    "/home/omar/ns-3-dev/src/wimax/model/bs-net-device.h"
-    "/home/omar/ns-3-dev/src/wimax/model/ss-net-device.h"
-    "/home/omar/ns-3-dev/src/wimax/model/cid.h"
-    "/home/omar/ns-3-dev/src/wimax/model/cid-factory.h"
-    "/home/omar/ns-3-dev/src/wimax/model/ofdm-downlink-frame-prefix.h"
-    "/home/omar/ns-3-dev/src/wimax/model/wimax-connection.h"
-    "/home/omar/ns-3-dev/src/wimax/model/ss-record.h"
-    "/home/omar/ns-3-dev/src/wimax/model/mac-messages.h"
-    "/home/omar/ns-3-dev/src/wimax/model/dl-mac-messages.h"
-    "/home/omar/ns-3-dev/src/wimax/model/ul-mac-messages.h"
-    "/home/omar/ns-3-dev/src/wimax/model/wimax-phy.h"
-    "/home/omar/ns-3-dev/src/wimax/model/simple-ofdm-wimax-phy.h"
-    "/home/omar/ns-3-dev/src/wimax/model/simple-ofdm-wimax-channel.h"
-    "/home/omar/ns-3-dev/src/wimax/model/send-params.h"
-    "/home/omar/ns-3-dev/src/wimax/model/service-flow.h"
-    "/home/omar/ns-3-dev/src/wimax/model/ss-manager.h"
-    "/home/omar/ns-3-dev/src/wimax/model/connection-manager.h"
-    "/home/omar/ns-3-dev/src/wimax/model/wimax-mac-header.h"
-    "/home/omar/ns-3-dev/src/wimax/model/wimax-mac-queue.h"
-    "/home/omar/ns-3-dev/src/wimax/model/crc8.h"
-    "/home/omar/ns-3-dev/src/wimax/model/service-flow-manager.h"
-    "/home/omar/ns-3-dev/src/wimax/model/bs-uplink-scheduler.h"
-    "/home/omar/ns-3-dev/src/wimax/model/bs-uplink-scheduler-simple.h"
-    "/home/omar/ns-3-dev/src/wimax/model/bs-uplink-scheduler-mbqos.h"
-    "/home/omar/ns-3-dev/src/wimax/model/bs-uplink-scheduler-rtps.h"
-    "/home/omar/ns-3-dev/src/wimax/model/ul-job.h"
-    "/home/omar/ns-3-dev/src/wimax/model/bs-scheduler.h"
-    "/home/omar/ns-3-dev/src/wimax/model/bs-scheduler-simple.h"
-    "/home/omar/ns-3-dev/src/wimax/model/bs-scheduler-rtps.h"
-    "/home/omar/ns-3-dev/src/wimax/model/service-flow-record.h"
-    "/home/omar/ns-3-dev/src/wimax/model/snr-to-block-error-rate-record.h"
-    "/home/omar/ns-3-dev/src/wimax/model/snr-to-block-error-rate-manager.h"
-    "/home/omar/ns-3-dev/src/wimax/model/simple-ofdm-send-param.h"
-    "/home/omar/ns-3-dev/src/wimax/model/ss-service-flow-manager.h"
-    "/home/omar/ns-3-dev/src/wimax/model/bs-service-flow-manager.h"
-    "/home/omar/ns-3-dev/src/wimax/model/cs-parameters.h"
-    "/home/omar/ns-3-dev/src/wimax/model/ipcs-classifier-record.h"
-    "/home/omar/ns-3-dev/src/wimax/model/wimax-tlv.h"
-    "/home/omar/ns-3-dev/src/wimax/model/ipcs-classifier.h"
-    "/home/omar/ns-3-dev/src/wimax/model/bvec.h"
-    "/home/omar/ns-3-dev/src/wimax/model/wimax-mac-to-mac-header.h"
-    "/home/omar/ns-3-dev/build/include/ns3/wimax-module.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/helper/wimax-helper.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/wimax-channel.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/wimax-net-device.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/bs-net-device.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/ss-net-device.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/cid.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/cid-factory.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/ofdm-downlink-frame-prefix.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/wimax-connection.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/ss-record.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/mac-messages.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/dl-mac-messages.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/ul-mac-messages.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/wimax-phy.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/simple-ofdm-wimax-phy.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/simple-ofdm-wimax-channel.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/send-params.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/service-flow.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/ss-manager.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/connection-manager.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/wimax-mac-header.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/wimax-mac-queue.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/crc8.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/service-flow-manager.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/bs-uplink-scheduler.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/bs-uplink-scheduler-simple.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/bs-uplink-scheduler-mbqos.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/bs-uplink-scheduler-rtps.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/ul-job.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/bs-scheduler.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/bs-scheduler-simple.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/bs-scheduler-rtps.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/service-flow-record.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/snr-to-block-error-rate-record.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/snr-to-block-error-rate-manager.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/simple-ofdm-send-param.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/ss-service-flow-manager.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/bs-service-flow-manager.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/cs-parameters.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/ipcs-classifier-record.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/wimax-tlv.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/ipcs-classifier.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/bvec.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/wimax/model/wimax-mac-to-mac-header.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/build/include/ns3/wimax-module.h"
     )
 endif()
 

@@ -3,64 +3,64 @@
 cmake_policy(SET CMP0009 NEW)
 
 # single_source_file_scratches at scratch/CMakeLists.txt:67 (file)
-file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/omar/ns-3-dev/scratch/[^.]*.cc")
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/omar/Desktop/git_repo/ns3-open5gs/scratch/[^.]*.cc")
 set(OLD_GLOB
-  "/home/omar/ns-3-dev/scratch/cttc-nr-demo.cc"
-  "/home/omar/ns-3-dev/scratch/cttc-nr-mimo-demo.cc"
-  "/home/omar/ns-3-dev/scratch/eNB_open5gs_integration.cc"
-  "/home/omar/ns-3-dev/scratch/first.cc"
-  "/home/omar/ns-3-dev/scratch/lena-simple-epc.cc"
-  "/home/omar/ns-3-dev/scratch/scratch-simulator.cc"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/scratch/cttc-nr-demo.cc"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/scratch/cttc-nr-mimo-demo-open5gs.cc"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/scratch/eNB_open5gs_integration.cc"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/scratch/first.cc"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/scratch/lena-simple-epc.cc"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/scratch/scratch-simulator.cc"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "/home/omar/ns-3-dev/cmake-cache/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/cmake.verify_globs")
 endif()
 
 # scratch_sources at scratch/CMakeLists.txt:98 (file)
-file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/omar/ns-3-dev/scratch/nested-subdir/lib/[^.]*.cc")
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/omar/Desktop/git_repo/ns3-open5gs/scratch/nested-subdir/lib/[^.]*.cc")
 set(OLD_GLOB
-  "/home/omar/ns-3-dev/scratch/nested-subdir/lib/scratch-nested-subdir-library-source.cc"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/scratch/nested-subdir/lib/scratch-nested-subdir-library-source.cc"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "/home/omar/ns-3-dev/cmake-cache/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/cmake.verify_globs")
 endif()
 
 # scratch_sources at scratch/CMakeLists.txt:98 (file)
-file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/omar/ns-3-dev/scratch/subdir/[^.]*.cc")
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/omar/Desktop/git_repo/ns3-open5gs/scratch/subdir/[^.]*.cc")
 set(OLD_GLOB
-  "/home/omar/ns-3-dev/scratch/subdir/scratch-subdir-additional-header.cc"
-  "/home/omar/ns-3-dev/scratch/subdir/scratch-subdir.cc"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/scratch/subdir/scratch-subdir-additional-header.cc"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/scratch/subdir/scratch-subdir.cc"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "/home/omar/ns-3-dev/cmake-cache/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/cmake.verify_globs")
 endif()
 
 # scratch_subdirectories at scratch/CMakeLists.txt:74 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES true "/home/omar/ns-3-dev/scratch/**")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES true "/home/omar/Desktop/git_repo/ns3-open5gs/scratch/**")
 set(OLD_GLOB
-  "/home/omar/ns-3-dev/scratch/.gitignore"
-  "/home/omar/ns-3-dev/scratch/CMakeLists.txt"
-  "/home/omar/ns-3-dev/scratch/cttc-nr-demo.cc"
-  "/home/omar/ns-3-dev/scratch/cttc-nr-mimo-demo.cc"
-  "/home/omar/ns-3-dev/scratch/eNB_open5gs_integration.cc"
-  "/home/omar/ns-3-dev/scratch/first.cc"
-  "/home/omar/ns-3-dev/scratch/lena-simple-epc.cc"
-  "/home/omar/ns-3-dev/scratch/nested-subdir"
-  "/home/omar/ns-3-dev/scratch/nested-subdir/CMakeLists.txt"
-  "/home/omar/ns-3-dev/scratch/nested-subdir/lib"
-  "/home/omar/ns-3-dev/scratch/nested-subdir/lib/scratch-nested-subdir-library-header.h"
-  "/home/omar/ns-3-dev/scratch/nested-subdir/lib/scratch-nested-subdir-library-source.cc"
-  "/home/omar/ns-3-dev/scratch/nested-subdir/scratch-nested-subdir-executable.cc"
-  "/home/omar/ns-3-dev/scratch/scratch-simulator.cc"
-  "/home/omar/ns-3-dev/scratch/subdir"
-  "/home/omar/ns-3-dev/scratch/subdir/scratch-subdir-additional-header.cc"
-  "/home/omar/ns-3-dev/scratch/subdir/scratch-subdir-additional-header.h"
-  "/home/omar/ns-3-dev/scratch/subdir/scratch-subdir.cc"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/scratch/.gitignoreOLD"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/scratch/CMakeLists.txt"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/scratch/cttc-nr-demo.cc"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/scratch/cttc-nr-mimo-demo-open5gs.cc"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/scratch/eNB_open5gs_integration.cc"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/scratch/first.cc"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/scratch/lena-simple-epc.cc"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/scratch/nested-subdir"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/scratch/nested-subdir/CMakeLists.txt"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/scratch/nested-subdir/lib"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/scratch/nested-subdir/lib/scratch-nested-subdir-library-header.h"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/scratch/nested-subdir/lib/scratch-nested-subdir-library-source.cc"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/scratch/nested-subdir/scratch-nested-subdir-executable.cc"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/scratch/scratch-simulator.cc"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/scratch/subdir"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/scratch/subdir/scratch-subdir-additional-header.cc"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/scratch/subdir/scratch-subdir-additional-header.h"
+  "/home/omar/Desktop/git_repo/ns3-open5gs/scratch/subdir/scratch-subdir.cc"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "/home/omar/ns-3-dev/cmake-cache/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/cmake.verify_globs")
 endif()

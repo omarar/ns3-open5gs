@@ -2,10 +2,10 @@
  * Copyright (c) 2003, 2005 Lev Walkin <vlm@lionet.info>. All rights reserved.
  * Redistribution and modifications are permitted subject to BSD license.
  */
-#include <asn_internal.h>
-#include <asn_codecs_prim.h>
-#include <NULL.h>
-#include <BOOLEAN.h>	/* Implemented in terms of BOOLEAN type */
+#include <ns3/asn_internal.h>
+#include <ns3/asn_codecs_prim.h>
+#include <ns3/NULL.h>
+#include <ns3/BOOLEAN.h>	/* Implemented in terms of BOOLEAN type */
 
 /*
  * NULL basic type description.
@@ -277,9 +277,9 @@ asn_random_fill_result_t
 NULL_random_fill(const asn_TYPE_descriptor_t *td, void **sptr,
                     const asn_encoding_constraints_t *constr,
                     size_t max_length) {
-    asn_random_fill_result_t result_ok = {ARFILL_OK, 1};
-    asn_random_fill_result_t result_failed = {ARFILL_FAILED, 0};
-    asn_random_fill_result_t result_skipped = {ARFILL_SKIPPED, 0};
+    asn_random_fill_result_t result_ok = {asn_random_fill_result_t::ARFILL_OK, 1};
+    asn_random_fill_result_t result_failed = {asn_random_fill_result_t::ARFILL_FAILED, 0};
+    asn_random_fill_result_t result_skipped = {asn_random_fill_result_t::ARFILL_SKIPPED, 0};
     NULL_t *st = *sptr;
 
     (void)td;

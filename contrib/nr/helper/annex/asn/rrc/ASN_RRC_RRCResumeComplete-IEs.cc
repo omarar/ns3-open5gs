@@ -34,8 +34,8 @@ memb_ASN_RRC_selectedPLMN_Identity_constraint_1(const asn_TYPE_descriptor_t *td,
 }
 
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_selectedPLMN_Identity_constr_3 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 4,  4,  1,  12 }	/* (1..12) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 4,  4,  1,  12 }	/* (1..12) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static const ber_tlv_tag_t asn_DEF_ASN_RRC_nonCriticalExtension_tags_6[] = {

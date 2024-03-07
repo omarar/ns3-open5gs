@@ -108,23 +108,23 @@ memb_ASN_RRC_timeDomainOCC_constraint_1(const asn_TYPE_descriptor_t *td, const v
 }
 
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_initialCyclicShift_constr_2 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 4,  4,  0,  11 }	/* (0..11) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 4,  4,  0,  11 }	/* (0..11) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_nrofSymbols_constr_3 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 4,  4,  4,  14 }	/* (4..14) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 4,  4,  4,  14 }	/* (4..14) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_startingSymbolIndex_constr_4 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 4,  4,  0,  10 }	/* (0..10) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 4,  4,  0,  10 }	/* (0..10) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_timeDomainOCC_constr_5 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 3,  3,  0,  6 }	/* (0..6) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 3,  3,  0,  6 }	/* (0..6) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 asn_TYPE_member_t asn_MBR_ASN_RRC_PUCCH_format1_1[] = {

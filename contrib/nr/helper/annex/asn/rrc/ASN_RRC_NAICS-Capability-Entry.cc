@@ -37,13 +37,13 @@ memb_ASN_RRC_numberOfNAICS_CapableCC_constraint_1(const asn_TYPE_descriptor_t *t
 }
 
 static asn_per_constraints_t asn_PER_type_ASN_RRC_numberOfAggregatedPRB_constr_3 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 4,  4,  0,  15 }	/* (0..15) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 4,  4,  0,  15 }	/* (0..15) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_numberOfNAICS_CapableCC_constr_2 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 3,  3,  1,  5 }	/* (1..5) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 3,  3,  1,  5 }	/* (1..5) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static const asn_INTEGER_enum_map_t asn_MAP_ASN_RRC_numberOfAggregatedPRB_value2enum_3[] = {

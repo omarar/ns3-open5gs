@@ -37,8 +37,8 @@ ASN_RRC_ScramblingId_constraint(const asn_TYPE_descriptor_t *td, const void *spt
  * so here we adjust the DEF accordingly.
  */
 asn_per_constraints_t asn_PER_type_ASN_RRC_ScramblingId_constr_1 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 10,  10,  0,  1023 }	/* (0..1023) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 10,  10,  0,  1023 }	/* (0..1023) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static const ber_tlv_tag_t asn_DEF_ASN_RRC_ScramblingId_tags_1[] = {

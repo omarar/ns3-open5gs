@@ -9,8 +9,8 @@
 
 #include "ASN_RRC_RRCResumeComplete-IEs.h"
 static asn_per_constraints_t asn_PER_type_ASN_RRC_criticalExtensions_constr_3 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 1,  1,  0,  1 }	/* (0..1) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 1,  1,  0,  1 }	/* (0..1) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static const ber_tlv_tag_t asn_DEF_ASN_RRC_criticalExtensionsFuture_tags_5[] = {
@@ -19,6 +19,7 @@ static const ber_tlv_tag_t asn_DEF_ASN_RRC_criticalExtensionsFuture_tags_5[] = {
 };
 static asn_SEQUENCE_specifics_t asn_SPC_ASN_RRC_criticalExtensionsFuture_specs_5 = {
 	sizeof(struct ASN_RRC_RRCResumeComplete__criticalExtensions__criticalExtensionsFuture),
+	//sizeof(struct ASN_RRC_RRCResumeComplete_t::criticalExtensions::ASN_RRC_RRCResumeComplete__criticalExtensions__criticalExtensionsFuture),
 	offsetof(struct ASN_RRC_RRCResumeComplete__criticalExtensions__criticalExtensionsFuture, _asn_ctx),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
@@ -42,7 +43,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_RRC_criticalExtensionsFuture_5 = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_RRC_criticalExtensions_3[] = {
-	{ ATF_POINTER, 0, offsetof(struct ASN_RRC_RRCResumeComplete__criticalExtensions, choice.rrcResumeComplete),
+	{ ATF_POINTER, 0, offsetof(struct ASN_RRC_RRCResumeComplete_t::ASN_RRC_RRCResumeComplete__criticalExtensions, choice.rrcResumeComplete),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ASN_RRC_RRCResumeComplete_IEs,
@@ -51,7 +52,7 @@ static asn_TYPE_member_t asn_MBR_ASN_RRC_criticalExtensions_3[] = {
 		0, 0, /* No default value */
 		"rrcResumeComplete"
 		},
-	{ ATF_POINTER, 0, offsetof(struct ASN_RRC_RRCResumeComplete__criticalExtensions, choice.criticalExtensionsFuture),
+	{ ATF_POINTER, 0, offsetof(struct ASN_RRC_RRCResumeComplete_t::ASN_RRC_RRCResumeComplete__criticalExtensions, choice.criticalExtensionsFuture),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		0,
 		&asn_DEF_ASN_RRC_criticalExtensionsFuture_5,
@@ -66,10 +67,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_RRC_criticalExtensions_tag2el_3[]
     { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 } /* criticalExtensionsFuture */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_RRC_criticalExtensions_specs_3 = {
-	sizeof(struct ASN_RRC_RRCResumeComplete__criticalExtensions),
-	offsetof(struct ASN_RRC_RRCResumeComplete__criticalExtensions, _asn_ctx),
-	offsetof(struct ASN_RRC_RRCResumeComplete__criticalExtensions, present),
-	sizeof(((struct ASN_RRC_RRCResumeComplete__criticalExtensions *)0)->present),
+	sizeof(struct ASN_RRC_RRCResumeComplete_t::ASN_RRC_RRCResumeComplete__criticalExtensions),
+	offsetof(struct ASN_RRC_RRCResumeComplete_t::ASN_RRC_RRCResumeComplete__criticalExtensions, _asn_ctx),
+	offsetof(struct ASN_RRC_RRCResumeComplete_t::ASN_RRC_RRCResumeComplete__criticalExtensions, present),
+	sizeof(((struct ASN_RRC_RRCResumeComplete_t::ASN_RRC_RRCResumeComplete__criticalExtensions *)0)->present),
 	asn_MAP_ASN_RRC_criticalExtensions_tag2el_3,
 	2,	/* Count of tags in the map */
 	0, 0,

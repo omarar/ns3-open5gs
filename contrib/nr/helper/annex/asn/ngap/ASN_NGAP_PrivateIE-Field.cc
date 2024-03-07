@@ -65,25 +65,25 @@ memb_ASN_NGAP_value_constraint_1(const asn_TYPE_descriptor_t *td, const void *sp
 }
 
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_2 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 1,  1,  0,  1 }	/* (0..1) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 1,  1,  0,  1 }	/* (0..1) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_3 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_4 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_4 = {
-	sizeof(struct ASN_NGAP_PrivateMessageIEs__value),
-	offsetof(struct ASN_NGAP_PrivateMessageIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_PrivateMessageIEs__value, present),
-	sizeof(((struct ASN_NGAP_PrivateMessageIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_PrivateMessageIEs_t::ASN_NGAP_PrivateMessageIEs__value),
+	offsetof(struct ASN_NGAP_PrivateMessageIEs_t::ASN_NGAP_PrivateMessageIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_PrivateMessageIEs_t::ASN_NGAP_PrivateMessageIEs__value, present),
+	sizeof(((struct ASN_NGAP_PrivateMessageIEs_t::ASN_NGAP_PrivateMessageIEs__value *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,

@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omar/ns-3-dev
+CMAKE_SOURCE_DIR = /home/omar/Desktop/git_repo/ns3-open5gs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omar/ns-3-dev/cmake-cache
+CMAKE_BINARY_DIR = /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/omar/ns-3-dev/cmake-cache/CMakeFiles /home/omar/ns-3-dev/cmake-cache//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/omar/ns-3-dev/cmake-cache/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -158,7 +158,7 @@ preinstall/fast:
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -P /home/omar/ns-3-dev/cmake-cache/CMakeFiles/VerifyGlobs.cmake
+	$(CMAKE_COMMAND) -P /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
@@ -1957,17 +1957,17 @@ scratch_cttc-nr-demo/fast:
 .PHONY : scratch_cttc-nr-demo/fast
 
 #=============================================================================
-# Target rules for targets named scratch_cttc-nr-mimo-demo
+# Target rules for targets named scratch_cttc-nr-mimo-demo-open5gs
 
 # Build rule for target.
-scratch_cttc-nr-mimo-demo: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch_cttc-nr-mimo-demo
-.PHONY : scratch_cttc-nr-mimo-demo
+scratch_cttc-nr-mimo-demo-open5gs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch_cttc-nr-mimo-demo-open5gs
+.PHONY : scratch_cttc-nr-mimo-demo-open5gs
 
 # fast build rule for target.
-scratch_cttc-nr-mimo-demo/fast:
-	$(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-mimo-demo.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-mimo-demo.dir/build
-.PHONY : scratch_cttc-nr-mimo-demo/fast
+scratch_cttc-nr-mimo-demo-open5gs/fast:
+	$(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs.dir/build
+.PHONY : scratch_cttc-nr-mimo-demo-open5gs/fast
 
 #=============================================================================
 # Target rules for targets named scratch_eNB_open5gs_integration
@@ -2329,7 +2329,7 @@ help:
 	@echo "... raw-sock-creator"
 	@echo "... scratch-nested-subdir-lib"
 	@echo "... scratch_cttc-nr-demo"
-	@echo "... scratch_cttc-nr-mimo-demo"
+	@echo "... scratch_cttc-nr-mimo-demo-open5gs"
 	@echo "... scratch_eNB_open5gs_integration"
 	@echo "... scratch_first"
 	@echo "... scratch_lena-simple-epc"
@@ -2360,7 +2360,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -P /home/omar/ns-3-dev/cmake-cache/CMakeFiles/VerifyGlobs.cmake
+	$(CMAKE_COMMAND) -P /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

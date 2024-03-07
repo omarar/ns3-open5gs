@@ -33,8 +33,8 @@ memb_ASN_RRC_positionInDCI_constraint_1(const asn_TYPE_descriptor_t *td, const v
 }
 
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_positionInDCI_constr_3 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 7,  7,  0,  125 }	/* (0..125) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 7,  7,  0,  125 }	/* (0..125) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 asn_TYPE_member_t asn_MBR_ASN_RRC_INT_ConfigurationPerServingCell_1[] = {

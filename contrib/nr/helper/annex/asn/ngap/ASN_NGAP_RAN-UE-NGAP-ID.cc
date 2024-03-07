@@ -28,8 +28,8 @@ ASN_NGAP_RAN_UE_NGAP_ID_constraint(const asn_TYPE_descriptor_t *td, const void *
  * so here we adjust the DEF accordingly.
  */
 asn_per_constraints_t asn_PER_type_ASN_NGAP_RAN_UE_NGAP_ID_constr_1 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 32, -1,  0,  4294967295 }	/* (0..4294967295) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 32, -1,  0,  4294967295 }	/* (0..4294967295) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 const asn_INTEGER_specifics_t asn_SPC_ASN_NGAP_RAN_UE_NGAP_ID_specs_1 = {

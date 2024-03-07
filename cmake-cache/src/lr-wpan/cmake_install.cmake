@@ -1,4 +1,4 @@
-# Install script for directory: /home/omar/ns-3-dev/src/lr-wpan
+# Install script for directory: /home/omar/Desktop/git_repo/ns3-open5gs/src/lr-wpan
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -49,12 +49,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-lr-wpan-default.so"
          RPATH "/usr/local/lib:$ORIGIN/:$ORIGIN/../lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/omar/ns-3-dev/build/lib/libns3.39-lr-wpan-default.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/omar/Desktop/git_repo/ns3-open5gs/build/lib/libns3.39-lr-wpan-default.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-lr-wpan-default.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-lr-wpan-default.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-lr-wpan-default.so"
-         OLD_RPATH "/home/omar/ns-3-dev/build/lib:::::::::"
+         OLD_RPATH "/home/omar/Desktop/git_repo/ns3-open5gs/build/lib:"
          NEW_RPATH "/usr/local/lib:$ORIGIN/:$ORIGIN/../lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-lr-wpan-default.so")
@@ -67,22 +67,22 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/ns3" TYPE FILE FILES
-    "/home/omar/ns-3-dev/src/lr-wpan/helper/lr-wpan-helper.h"
-    "/home/omar/ns-3-dev/src/lr-wpan/model/lr-wpan-constants.h"
-    "/home/omar/ns-3-dev/src/lr-wpan/model/lr-wpan-csmaca.h"
-    "/home/omar/ns-3-dev/src/lr-wpan/model/lr-wpan-error-model.h"
-    "/home/omar/ns-3-dev/src/lr-wpan/model/lr-wpan-fields.h"
-    "/home/omar/ns-3-dev/src/lr-wpan/model/lr-wpan-interference-helper.h"
-    "/home/omar/ns-3-dev/src/lr-wpan/model/lr-wpan-lqi-tag.h"
-    "/home/omar/ns-3-dev/src/lr-wpan/model/lr-wpan-mac-header.h"
-    "/home/omar/ns-3-dev/src/lr-wpan/model/lr-wpan-mac-pl-headers.h"
-    "/home/omar/ns-3-dev/src/lr-wpan/model/lr-wpan-mac-trailer.h"
-    "/home/omar/ns-3-dev/src/lr-wpan/model/lr-wpan-mac.h"
-    "/home/omar/ns-3-dev/src/lr-wpan/model/lr-wpan-net-device.h"
-    "/home/omar/ns-3-dev/src/lr-wpan/model/lr-wpan-phy.h"
-    "/home/omar/ns-3-dev/src/lr-wpan/model/lr-wpan-spectrum-signal-parameters.h"
-    "/home/omar/ns-3-dev/src/lr-wpan/model/lr-wpan-spectrum-value-helper.h"
-    "/home/omar/ns-3-dev/build/include/ns3/lr-wpan-module.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/lr-wpan/helper/lr-wpan-helper.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/lr-wpan/model/lr-wpan-constants.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/lr-wpan/model/lr-wpan-csmaca.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/lr-wpan/model/lr-wpan-error-model.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/lr-wpan/model/lr-wpan-fields.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/lr-wpan/model/lr-wpan-interference-helper.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/lr-wpan/model/lr-wpan-lqi-tag.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/lr-wpan/model/lr-wpan-mac-header.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/lr-wpan/model/lr-wpan-mac-pl-headers.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/lr-wpan/model/lr-wpan-mac-trailer.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/lr-wpan/model/lr-wpan-mac.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/lr-wpan/model/lr-wpan-net-device.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/lr-wpan/model/lr-wpan-phy.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/lr-wpan/model/lr-wpan-spectrum-signal-parameters.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/lr-wpan/model/lr-wpan-spectrum-value-helper.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/build/include/ns3/lr-wpan-module.h"
     )
 endif()
 

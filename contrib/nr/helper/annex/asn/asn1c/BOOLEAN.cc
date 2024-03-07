@@ -2,9 +2,9 @@
  * Copyright (c) 2003, 2005 Lev Walkin <vlm@lionet.info>. All rights reserved.
  * Redistribution and modifications are permitted subject to BSD license.
  */
-#include <asn_internal.h>
-#include <asn_codecs_prim.h>
-#include <BOOLEAN.h>
+#include <ns3/asn_internal.h>
+#include <ns3/asn_codecs_prim.h>
+#include <ns3/BOOLEAN.h>
 
 /*
  * BOOLEAN basic type description.
@@ -450,9 +450,9 @@ asn_random_fill_result_t
 BOOLEAN_random_fill(const asn_TYPE_descriptor_t *td, void **sptr,
                     const asn_encoding_constraints_t *constraints,
                     size_t max_length) {
-    asn_random_fill_result_t result_ok = {ARFILL_OK, 1};
-    asn_random_fill_result_t result_failed = {ARFILL_FAILED, 0};
-    asn_random_fill_result_t result_skipped = {ARFILL_SKIPPED, 0};
+    asn_random_fill_result_t result_ok = {asn_random_fill_result_t::ARFILL_OK, 1};
+    asn_random_fill_result_t result_failed = {asn_random_fill_result_t::ARFILL_FAILED, 0};
+    asn_random_fill_result_t result_skipped = {asn_random_fill_result_t::ARFILL_SKIPPED, 0};
     BOOLEAN_t *st = *sptr;
 
     if(max_length == 0) return result_skipped;
@@ -468,7 +468,7 @@ BOOLEAN_random_fill(const asn_TYPE_descriptor_t *td, void **sptr,
         constraints = &td->encoding_constraints;
     if(constraints->per_constraints) {
         const asn_per_constraint_t *pc = &constraints->per_constraints->value;
-        if(pc->flags & APC_CONSTRAINED) {
+        if(pc->flags & asn_per_constraint_t::APC_CONSTRAINED) {
             *st = asn_random_between(pc->lower_bound, pc->upper_bound);
             return result_ok;
         }

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omar/ns-3-dev
+CMAKE_SOURCE_DIR = /home/omar/Desktop/git_repo/ns3-open5gs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omar/ns-3-dev/cmake-cache
+CMAKE_BINARY_DIR = /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache
 
 # Include any dependencies generated for this target.
 include src/energy/CMakeFiles/libenergy.dir/depend.make
@@ -74,23 +74,23 @@ libenergy_OBJECTS =
 
 # External object files for target libenergy
 libenergy_EXTERNAL_OBJECTS = \
-"/home/omar/ns-3-dev/cmake-cache/src/energy/CMakeFiles/libenergy-obj.dir/helper/basic-energy-harvester-helper.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/energy/CMakeFiles/libenergy-obj.dir/helper/basic-energy-source-helper.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/energy/CMakeFiles/libenergy-obj.dir/helper/energy-harvester-container.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/energy/CMakeFiles/libenergy-obj.dir/helper/energy-harvester-helper.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/energy/CMakeFiles/libenergy-obj.dir/helper/energy-model-helper.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/energy/CMakeFiles/libenergy-obj.dir/helper/energy-source-container.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/energy/CMakeFiles/libenergy-obj.dir/helper/li-ion-energy-source-helper.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/energy/CMakeFiles/libenergy-obj.dir/helper/rv-battery-model-helper.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/energy/CMakeFiles/libenergy-obj.dir/model/basic-energy-harvester.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/energy/CMakeFiles/libenergy-obj.dir/model/basic-energy-source.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/energy/CMakeFiles/libenergy-obj.dir/model/device-energy-model-container.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/energy/CMakeFiles/libenergy-obj.dir/model/device-energy-model.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/energy/CMakeFiles/libenergy-obj.dir/model/energy-harvester.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/energy/CMakeFiles/libenergy-obj.dir/model/energy-source.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/energy/CMakeFiles/libenergy-obj.dir/model/li-ion-energy-source.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/energy/CMakeFiles/libenergy-obj.dir/model/rv-battery-model.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/energy/CMakeFiles/libenergy-obj.dir/model/simple-device-energy-model.cc.o"
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/energy/CMakeFiles/libenergy-obj.dir/helper/basic-energy-harvester-helper.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/energy/CMakeFiles/libenergy-obj.dir/helper/basic-energy-source-helper.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/energy/CMakeFiles/libenergy-obj.dir/helper/energy-harvester-container.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/energy/CMakeFiles/libenergy-obj.dir/helper/energy-harvester-helper.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/energy/CMakeFiles/libenergy-obj.dir/helper/energy-model-helper.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/energy/CMakeFiles/libenergy-obj.dir/helper/energy-source-container.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/energy/CMakeFiles/libenergy-obj.dir/helper/li-ion-energy-source-helper.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/energy/CMakeFiles/libenergy-obj.dir/helper/rv-battery-model-helper.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/energy/CMakeFiles/libenergy-obj.dir/model/basic-energy-harvester.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/energy/CMakeFiles/libenergy-obj.dir/model/basic-energy-source.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/energy/CMakeFiles/libenergy-obj.dir/model/device-energy-model-container.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/energy/CMakeFiles/libenergy-obj.dir/model/device-energy-model.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/energy/CMakeFiles/libenergy-obj.dir/model/energy-harvester.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/energy/CMakeFiles/libenergy-obj.dir/model/energy-source.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/energy/CMakeFiles/libenergy-obj.dir/model/li-ion-energy-source.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/energy/CMakeFiles/libenergy-obj.dir/model/rv-battery-model.cc.o" \
+"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/energy/CMakeFiles/libenergy-obj.dir/model/simple-device-energy-model.cc.o"
 
 ../build/lib/libns3.39-energy-default.so: src/energy/CMakeFiles/libenergy-obj.dir/helper/basic-energy-harvester-helper.cc.o
 ../build/lib/libns3.39-energy-default.so: src/energy/CMakeFiles/libenergy-obj.dir/helper/basic-energy-source-helper.cc.o
@@ -114,18 +114,18 @@ libenergy_EXTERNAL_OBJECTS = \
 ../build/lib/libns3.39-energy-default.so: /usr/lib/x86_64-linux-gnu/libgslcblas.so
 ../build/lib/libns3.39-energy-default.so: /usr/lib/x86_64-linux-gnu/libsqlite3.so
 ../build/lib/libns3.39-energy-default.so: src/energy/CMakeFiles/libenergy.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/omar/ns-3-dev/cmake-cache/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Linking CXX shared library ../../../build/lib/libns3.39-energy-default.so"
-	cd /home/omar/ns-3-dev/cmake-cache/src/energy && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/libenergy.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Linking CXX shared library ../../../build/lib/libns3.39-energy-default.so"
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/energy && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/libenergy.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/energy/CMakeFiles/libenergy.dir/build: ../build/lib/libns3.39-energy-default.so
 .PHONY : src/energy/CMakeFiles/libenergy.dir/build
 
 src/energy/CMakeFiles/libenergy.dir/clean:
-	cd /home/omar/ns-3-dev/cmake-cache/src/energy && $(CMAKE_COMMAND) -P CMakeFiles/libenergy.dir/cmake_clean.cmake
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/energy && $(CMAKE_COMMAND) -P CMakeFiles/libenergy.dir/cmake_clean.cmake
 .PHONY : src/energy/CMakeFiles/libenergy.dir/clean
 
 src/energy/CMakeFiles/libenergy.dir/depend:
-	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omar/ns-3-dev /home/omar/ns-3-dev/src/energy /home/omar/ns-3-dev/cmake-cache /home/omar/ns-3-dev/cmake-cache/src/energy /home/omar/ns-3-dev/cmake-cache/src/energy/CMakeFiles/libenergy.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omar/Desktop/git_repo/ns3-open5gs /home/omar/Desktop/git_repo/ns3-open5gs/src/energy /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/energy /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/energy/CMakeFiles/libenergy.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/energy/CMakeFiles/libenergy.dir/depend
 

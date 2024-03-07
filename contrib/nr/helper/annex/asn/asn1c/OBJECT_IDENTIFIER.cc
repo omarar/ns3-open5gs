@@ -2,10 +2,10 @@
  * Copyright (c) 2003, 2004 Lev Walkin <vlm@lionet.info>. All rights reserved.
  * Redistribution and modifications are permitted subject to BSD license.
  */
-#include <asn_internal.h>
-#include <INTEGER.h>
-#include <OBJECT_IDENTIFIER.h>
-#include <OCTET_STRING.h>
+#include <ns3/asn_internal.h>
+#include <ns3/INTEGER.h>
+#include <ns3/OBJECT_IDENTIFIER.h>
+#include <ns3/OCTET_STRING.h>
 #include <limits.h>	/* for CHAR_BIT */
 #include <errno.h>
 
@@ -608,9 +608,9 @@ asn_random_fill_result_t
 OBJECT_IDENTIFIER_random_fill(const asn_TYPE_descriptor_t *td, void **sptr,
                               const asn_encoding_constraints_t *constraints,
                               size_t max_length) {
-    asn_random_fill_result_t result_ok = {ARFILL_OK, 1};
-    asn_random_fill_result_t result_failed = {ARFILL_FAILED, 0};
-    asn_random_fill_result_t result_skipped = {ARFILL_SKIPPED, 0};
+    asn_random_fill_result_t result_ok = {asn_random_fill_result_t::ARFILL_OK, 1};
+    asn_random_fill_result_t result_failed = {asn_random_fill_result_t::ARFILL_FAILED, 0};
+    asn_random_fill_result_t result_skipped = {asn_random_fill_result_t::ARFILL_SKIPPED, 0};
     OBJECT_IDENTIFIER_t *st;
     asn_oid_arc_t arcs[5];
     size_t arcs_len = asn_random_between(2, 5);

@@ -58,13 +58,13 @@ memb_ASN_RRC_tpc_IndexSUL_constraint_1(const asn_TYPE_descriptor_t *td, const vo
 }
 
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_tpc_Index_constr_2 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 4,  4,  1,  15 }	/* (1..15) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 4,  4,  1,  15 }	/* (1..15) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_tpc_IndexSUL_constr_3 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 4,  4,  1,  15 }	/* (1..15) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 4,  4,  1,  15 }	/* (1..15) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 asn_TYPE_member_t asn_MBR_ASN_RRC_PUSCH_TPC_CommandConfig_1[] = {

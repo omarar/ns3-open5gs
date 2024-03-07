@@ -34,8 +34,8 @@ memb_ASN_NGAP_timeStayedInCell_constraint_1(const asn_TYPE_descriptor_t *td, con
 }
 
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_timeStayedInCell_constr_3 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 12,  12,  0,  4095 }	/* (0..4095) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 12,  12,  0,  4095 }	/* (0..4095) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 asn_TYPE_member_t asn_MBR_ASN_NGAP_RecommendedCellItem_1[] = {

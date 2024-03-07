@@ -1,7 +1,7 @@
 scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/lib/scratch-nested-subdir-library-source.cc.o: \
- /home/omar/ns-3-dev/scratch/nested-subdir/lib/scratch-nested-subdir-library-source.cc \
+ /home/omar/Desktop/git_repo/ns3-open5gs/scratch/nested-subdir/lib/scratch-nested-subdir-library-source.cc \
  /usr/include/stdc-predef.h \
- /home/omar/ns-3-dev/scratch/nested-subdir/lib/scratch-nested-subdir-library-header.h \
+ /home/omar/Desktop/git_repo/ns3-open5gs/scratch/nested-subdir/lib/scratch-nested-subdir-library-header.h \
  /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

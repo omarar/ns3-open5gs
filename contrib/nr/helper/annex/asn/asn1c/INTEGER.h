@@ -7,6 +7,7 @@
 
 #include <ns3/asn_application.h>
 #include <ns3/asn_codecs_prim.h>
+#include <ns3/per_support.h>
 
 #ifdef __cplusplus
 extern "C" {

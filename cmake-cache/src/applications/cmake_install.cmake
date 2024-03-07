@@ -1,4 +1,4 @@
-# Install script for directory: /home/omar/ns-3-dev/src/applications
+# Install script for directory: /home/omar/Desktop/git_repo/ns3-open5gs/src/applications
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -49,12 +49,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-applications-default.so"
          RPATH "/usr/local/lib:$ORIGIN/:$ORIGIN/../lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/omar/ns-3-dev/build/lib/libns3.39-applications-default.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/omar/Desktop/git_repo/ns3-open5gs/build/lib/libns3.39-applications-default.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-applications-default.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-applications-default.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-applications-default.so"
-         OLD_RPATH "/home/omar/ns-3-dev/build/lib:::::::::"
+         OLD_RPATH "/home/omar/Desktop/git_repo/ns3-open5gs/build/lib:"
          NEW_RPATH "/usr/local/lib:$ORIGIN/:$ORIGIN/../lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-applications-default.so")
@@ -67,30 +67,30 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/ns3" TYPE FILE FILES
-    "/home/omar/ns-3-dev/src/applications/helper/bulk-send-helper.h"
-    "/home/omar/ns-3-dev/src/applications/helper/on-off-helper.h"
-    "/home/omar/ns-3-dev/src/applications/helper/packet-sink-helper.h"
-    "/home/omar/ns-3-dev/src/applications/helper/three-gpp-http-helper.h"
-    "/home/omar/ns-3-dev/src/applications/helper/udp-client-server-helper.h"
-    "/home/omar/ns-3-dev/src/applications/helper/udp-echo-helper.h"
-    "/home/omar/ns-3-dev/src/applications/model/application-packet-probe.h"
-    "/home/omar/ns-3-dev/src/applications/model/bulk-send-application.h"
-    "/home/omar/ns-3-dev/src/applications/model/onoff-application.h"
-    "/home/omar/ns-3-dev/src/applications/model/packet-loss-counter.h"
-    "/home/omar/ns-3-dev/src/applications/model/packet-sink.h"
-    "/home/omar/ns-3-dev/src/applications/model/seq-ts-echo-header.h"
-    "/home/omar/ns-3-dev/src/applications/model/seq-ts-header.h"
-    "/home/omar/ns-3-dev/src/applications/model/seq-ts-size-header.h"
-    "/home/omar/ns-3-dev/src/applications/model/three-gpp-http-client.h"
-    "/home/omar/ns-3-dev/src/applications/model/three-gpp-http-header.h"
-    "/home/omar/ns-3-dev/src/applications/model/three-gpp-http-server.h"
-    "/home/omar/ns-3-dev/src/applications/model/three-gpp-http-variables.h"
-    "/home/omar/ns-3-dev/src/applications/model/udp-client.h"
-    "/home/omar/ns-3-dev/src/applications/model/udp-echo-client.h"
-    "/home/omar/ns-3-dev/src/applications/model/udp-echo-server.h"
-    "/home/omar/ns-3-dev/src/applications/model/udp-server.h"
-    "/home/omar/ns-3-dev/src/applications/model/udp-trace-client.h"
-    "/home/omar/ns-3-dev/build/include/ns3/applications-module.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/applications/helper/bulk-send-helper.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/applications/helper/on-off-helper.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/applications/helper/packet-sink-helper.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/applications/helper/three-gpp-http-helper.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/applications/helper/udp-client-server-helper.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/applications/helper/udp-echo-helper.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/applications/model/application-packet-probe.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/applications/model/bulk-send-application.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/applications/model/onoff-application.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/applications/model/packet-loss-counter.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/applications/model/packet-sink.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/applications/model/seq-ts-echo-header.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/applications/model/seq-ts-header.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/applications/model/seq-ts-size-header.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/applications/model/three-gpp-http-client.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/applications/model/three-gpp-http-header.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/applications/model/three-gpp-http-server.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/applications/model/three-gpp-http-variables.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/applications/model/udp-client.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/applications/model/udp-echo-client.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/applications/model/udp-echo-server.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/applications/model/udp-server.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/applications/model/udp-trace-client.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/build/include/ns3/applications-module.h"
     )
 endif()
 

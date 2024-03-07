@@ -3,9 +3,9 @@
  * All rights reserved.
  * Redistribution and modifications are permitted subject to BSD license.
  */
-#include <asn_internal.h>
-#include <constr_SEQUENCE_OF.h>
-#include <asn_SEQUENCE_OF.h>
+#include <ns3/asn_internal.h>
+#include <ns3/constr_SEQUENCE_OF.h>
+#include <ns3/asn_SEQUENCE_OF.h>
 
 /*
  * The DER encoder of the SEQUENCE OF type.
@@ -168,8 +168,8 @@ SEQUENCE_OF_encode_uper(const asn_TYPE_descriptor_t *td,
         int not_in_root =
             (list->count < ct->lower_bound || list->count > ct->upper_bound);
         ASN_DEBUG("lb %ld ub %ld %s", ct->lower_bound, ct->upper_bound,
-                  ct->flags & APC_EXTENSIBLE ? "ext" : "fix");
-        if(ct->flags & APC_EXTENSIBLE) {
+                  ct->flags & asn_per_constraint_t::APC_EXTENSIBLE ? "ext" : "fix");
+        if(ct->flags & asn_per_constraint_t::APC_EXTENSIBLE) {
             /* Declare whether size is in extension root */
             if(per_put_few_bits(po, not_in_root, 1)) ASN__ENCODE_FAILED;
             if(not_in_root) ct = 0;
@@ -253,8 +253,8 @@ SEQUENCE_OF_encode_aper(const asn_TYPE_descriptor_t *td,
 				|| list->count > ct->upper_bound);
 		ASN_DEBUG("lb %ld ub %ld %s",
 			ct->lower_bound, ct->upper_bound,
-			ct->flags & APC_EXTENSIBLE ? "ext" : "fix");
-		if(ct->flags & APC_EXTENSIBLE) {
+			ct->flags & asn_per_constraint_t::APC_EXTENSIBLE ? "ext" : "fix");
+		if(ct->flags & asn_per_constraint_t::APC_EXTENSIBLE) {
 			/* Declare whether size is in extension root */
 			if(per_put_few_bits(po, not_in_root, 1))
 				ASN__ENCODE_FAILED;

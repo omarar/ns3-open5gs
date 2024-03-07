@@ -9,8 +9,8 @@
 
 #include "ASN_RRC_FreqBandInformation.h"
 asn_per_constraints_t asn_PER_type_ASN_RRC_FreqBandList_constr_1 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_CONSTRAINED,	 11,  11,  1,  1280 }	/* (SIZE(1..1280)) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 11,  11,  1,  1280 }	/* (SIZE(1..1280)) */,
 	0, 0	/* No PER value map */
 };
 asn_TYPE_member_t asn_MBR_ASN_RRC_FreqBandList_1[] = {

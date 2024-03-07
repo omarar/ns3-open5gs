@@ -2,9 +2,9 @@
  * Copyright (c) 2003-2017 Lev Walkin <vlm@lionet.info>. All rights reserved.
  * Redistribution and modifications are permitted subject to BSD license.
  */
-#include <asn_internal.h>
-#include <constr_CHOICE.h>
-#include <per_opentype.h>
+#include <ns3/asn_internal.h>
+#include <ns3/constr_CHOICE.h>
+#include <ns3/per_opentype.h>
 
 /*
  * Number of bytes left for this structure.
@@ -859,7 +859,7 @@ CHOICE_decode_uper(const asn_codec_ctx_t *opt_codec_ctx,
 	else if(td->encoding_constraints.per_constraints) ct = &td->encoding_constraints.per_constraints->value;
 	else ct = 0;
 
-	if(ct && ct->flags & APC_EXTENSIBLE) {
+	if(ct && ct->flags & asn_per_constraint_t::APC_EXTENSIBLE) {
 		value = per_get_few_bits(pd, 1);
 		if(value < 0) ASN__DECODE_STARVED;
 		if(value) ct = 0;	/* Not restricted */
@@ -958,7 +958,7 @@ CHOICE_encode_uper(const asn_TYPE_descriptor_t *td,
     if(ct && ct->range_bits >= 0) {
 		if(present_enc < ct->lower_bound
 		|| present_enc > ct->upper_bound) {
-			if(ct->flags & APC_EXTENSIBLE) {
+			if(ct->flags & asn_per_constraint_t::APC_EXTENSIBLE) {
                 ASN_DEBUG(
                     "CHOICE member %d (enc %d) is an extension (%ld..%ld)",
                     present, present_enc, ct->lower_bound, ct->upper_bound);
@@ -970,7 +970,7 @@ CHOICE_encode_uper(const asn_TYPE_descriptor_t *td,
 			ct = 0;
 		}
 	}
-	if(ct && ct->flags & APC_EXTENSIBLE) {
+	if(ct && ct->flags & asn_per_constraint_t::APC_EXTENSIBLE) {
         ASN_DEBUG("CHOICE member %d (enc %d) is not an extension (%ld..%ld)",
                   present, present_enc, ct->lower_bound, ct->upper_bound);
         if(per_put_few_bits(po, 0, 1))
@@ -1039,7 +1039,7 @@ CHOICE_decode_aper(const asn_codec_ctx_t *opt_codec_ctx,
 		ct = &td->encoding_constraints.per_constraints->value;
 	else ct = 0;
 
-	if(ct && ct->flags & APC_EXTENSIBLE) {
+	if(ct && ct->flags & asn_per_constraint_t::APC_EXTENSIBLE) {
 		value = per_get_few_bits(pd, 1);
 		if(value < 0) ASN__DECODE_STARVED;
 		if(value) ct = 0;	/* Not restricted */
@@ -1133,7 +1133,7 @@ CHOICE_encode_aper(const asn_TYPE_descriptor_t *td,
 	if(ct && ct->range_bits >= 0) {
 		if(present < ct->lower_bound
 		        || present > ct->upper_bound) {
-			if(ct->flags & APC_EXTENSIBLE) {
+			if(ct->flags & asn_per_constraint_t::APC_EXTENSIBLE) {
 				if(per_put_few_bits(po, 1, 1))
 					ASN__ENCODE_FAILED;
 			} else {
@@ -1142,7 +1142,7 @@ CHOICE_encode_aper(const asn_TYPE_descriptor_t *td,
 			ct = 0;
 		}
 	}
-	if(ct && ct->flags & APC_EXTENSIBLE) {
+	if(ct && ct->flags & asn_per_constraint_t::APC_EXTENSIBLE) {
 		if(per_put_few_bits(po, 0, 1))
 			ASN__ENCODE_FAILED;
 	}
@@ -1431,8 +1431,8 @@ CHOICE_random_fill(const asn_TYPE_descriptor_t *td, void **sptr,
     const asn_CHOICE_specifics_t *specs =
         (const asn_CHOICE_specifics_t *)td->specifics;
     asn_random_fill_result_t res;
-    asn_random_fill_result_t result_failed = {ARFILL_FAILED, 0};
-    asn_random_fill_result_t result_skipped = {ARFILL_SKIPPED, 0};
+    asn_random_fill_result_t result_failed = {asn_random_fill_result_t::ARFILL_FAILED, 0};
+    asn_random_fill_result_t result_skipped = {asn_random_fill_result_t::ARFILL_SKIPPED, 0};
     const asn_TYPE_member_t *elm;
     unsigned present;
     void *memb_ptr;   /* Pointer to the member */
@@ -1464,7 +1464,7 @@ CHOICE_random_fill(const asn_TYPE_descriptor_t *td, void **sptr,
     res = elm->type->op->random_fill(elm->type, memb_ptr2,
                                     &elm->encoding_constraints, max_length);
     _set_present_idx(st, specs->pres_offset, specs->pres_size, present);
-    if(res.code == ARFILL_OK) {
+    if(res.code == asn_random_fill_result_t::ARFILL_OK) {
         *sptr = st;
     } else {
         if(st == *sptr) {

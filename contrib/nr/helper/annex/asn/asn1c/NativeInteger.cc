@@ -10,8 +10,8 @@
  * implementation deals with the standard (machine-specific) representation
  * of them instead of using the platform-independent buffer.
  */
-#include <asn_internal.h>
-#include <NativeInteger.h>
+#include <ns3/asn_internal.h>
+#include <ns3/NativeInteger.h>
 
 /*
  * NativeInteger basic type description.
@@ -481,9 +481,9 @@ NativeInteger_random_fill(const asn_TYPE_descriptor_t *td, void **sptr,
                           size_t max_length) {
     const asn_INTEGER_specifics_t *specs =
         (const asn_INTEGER_specifics_t *)td->specifics;
-    asn_random_fill_result_t result_ok = {ARFILL_OK, 1};
-    asn_random_fill_result_t result_failed = {ARFILL_FAILED, 0};
-    asn_random_fill_result_t result_skipped = {ARFILL_SKIPPED, 0};
+    asn_random_fill_result_t result_ok = {asn_random_fill_result_t::ARFILL_OK, 1};
+    asn_random_fill_result_t result_failed = {asn_random_fill_result_t::ARFILL_FAILED, 0};
+    asn_random_fill_result_t result_skipped = {asn_random_fill_result_t::ARFILL_SKIPPED, 0};
     long *st = *sptr;
     const asn_INTEGER_enum_map_t *emap;
     size_t emap_len;
@@ -536,7 +536,7 @@ NativeInteger_random_fill(const asn_TYPE_descriptor_t *td, void **sptr,
 
         if(!constraints) constraints = &td->encoding_constraints;
         ct = constraints ? constraints->per_constraints : 0;
-        if(ct && (ct->value.flags & APC_CONSTRAINED)) {
+        if(ct && (ct->value.flags & asn_per_constraint_t::APC_CONSTRAINED)) {
             if(value < ct->value.lower_bound || value > ct->value.upper_bound) {
                 value = asn_random_between(ct->value.lower_bound,
                                            ct->value.upper_bound);

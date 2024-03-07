@@ -9,8 +9,8 @@
 
 #include "ASN_RRC_UAC-BarringPerCat.h"
 asn_per_constraints_t asn_PER_type_ASN_RRC_UAC_BarringPerCatList_constr_1 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_CONSTRAINED,	 6,  6,  1,  63 }	/* (SIZE(1..63)) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 6,  6,  1,  63 }	/* (SIZE(1..63)) */,
 	0, 0	/* No PER value map */
 };
 asn_TYPE_member_t asn_MBR_ASN_RRC_UAC_BarringPerCatList_1[] = {

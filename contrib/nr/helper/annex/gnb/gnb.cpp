@@ -11,7 +11,7 @@
 #include "gtp/task.hpp"
 #include "ngap/task.hpp"
 #include "rls/task.hpp"
-#include "rrc/task.hpp"
+//#include "rrc/task.hpp"
 #include "sctp/task.hpp"
 
 #include <ns3/cli_base.hpp>
@@ -30,7 +30,7 @@ GNodeB::GNodeB(GnbConfig *config, app::INodeListener *nodeListener, NtsTask *cli
     base->appTask = new GnbAppTask(base);
     base->sctpTask = new SctpTask(base);
     base->ngapTask = new NgapTask(base);
-    base->rrcTask = new GnbRrcTask(base);
+   // base->rrcTask = new GnbRrcTask(base);
     base->gtpTask = new GtpTask(base);
     base->rlsTask = new GnbRlsTask(base);
 
@@ -42,7 +42,7 @@ GNodeB::~GNodeB()
     taskBase->appTask->quit();
     taskBase->sctpTask->quit();
     taskBase->ngapTask->quit();
-    taskBase->rrcTask->quit();
+    //taskBase->rrcTask->quit();
     taskBase->gtpTask->quit();
     taskBase->rlsTask->quit();
 
@@ -63,7 +63,7 @@ void GNodeB::start()
     taskBase->appTask->start();
     taskBase->sctpTask->start();
     taskBase->ngapTask->start();
-    taskBase->rrcTask->start();
+    //taskBase->rrcTask->start();
     taskBase->rlsTask->start();
     taskBase->gtpTask->start();
 }

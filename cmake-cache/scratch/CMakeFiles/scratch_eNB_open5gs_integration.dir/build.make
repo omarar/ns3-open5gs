@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omar/ns-3-dev
+CMAKE_SOURCE_DIR = /home/omar/Desktop/git_repo/ns3-open5gs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omar/ns-3-dev/cmake-cache
+CMAKE_BINARY_DIR = /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache
 
 # Include any dependencies generated for this target.
 include scratch/CMakeFiles/scratch_eNB_open5gs_integration.dir/depend.make
@@ -74,16 +74,16 @@ scratch/CMakeFiles/scratch_eNB_open5gs_integration.dir/eNB_open5gs_integration.c
 scratch/CMakeFiles/scratch_eNB_open5gs_integration.dir/eNB_open5gs_integration.cc.o: CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx
 scratch/CMakeFiles/scratch_eNB_open5gs_integration.dir/eNB_open5gs_integration.cc.o: CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx.gch
 scratch/CMakeFiles/scratch_eNB_open5gs_integration.dir/eNB_open5gs_integration.cc.o: scratch/CMakeFiles/scratch_eNB_open5gs_integration.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omar/ns-3-dev/cmake-cache/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object scratch/CMakeFiles/scratch_eNB_open5gs_integration.dir/eNB_open5gs_integration.cc.o"
-	cd /home/omar/ns-3-dev/cmake-cache/scratch && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/ns-3-dev/cmake-cache/CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx -MD -MT scratch/CMakeFiles/scratch_eNB_open5gs_integration.dir/eNB_open5gs_integration.cc.o -MF CMakeFiles/scratch_eNB_open5gs_integration.dir/eNB_open5gs_integration.cc.o.d -o CMakeFiles/scratch_eNB_open5gs_integration.dir/eNB_open5gs_integration.cc.o -c /home/omar/ns-3-dev/scratch/eNB_open5gs_integration.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object scratch/CMakeFiles/scratch_eNB_open5gs_integration.dir/eNB_open5gs_integration.cc.o"
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/scratch && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx -MD -MT scratch/CMakeFiles/scratch_eNB_open5gs_integration.dir/eNB_open5gs_integration.cc.o -MF CMakeFiles/scratch_eNB_open5gs_integration.dir/eNB_open5gs_integration.cc.o.d -o CMakeFiles/scratch_eNB_open5gs_integration.dir/eNB_open5gs_integration.cc.o -c /home/omar/Desktop/git_repo/ns3-open5gs/scratch/eNB_open5gs_integration.cc
 
 scratch/CMakeFiles/scratch_eNB_open5gs_integration.dir/eNB_open5gs_integration.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/scratch_eNB_open5gs_integration.dir/eNB_open5gs_integration.cc.i"
-	cd /home/omar/ns-3-dev/cmake-cache/scratch && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/ns-3-dev/cmake-cache/CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx -E /home/omar/ns-3-dev/scratch/eNB_open5gs_integration.cc > CMakeFiles/scratch_eNB_open5gs_integration.dir/eNB_open5gs_integration.cc.i
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/scratch && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx -E /home/omar/Desktop/git_repo/ns3-open5gs/scratch/eNB_open5gs_integration.cc > CMakeFiles/scratch_eNB_open5gs_integration.dir/eNB_open5gs_integration.cc.i
 
 scratch/CMakeFiles/scratch_eNB_open5gs_integration.dir/eNB_open5gs_integration.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/scratch_eNB_open5gs_integration.dir/eNB_open5gs_integration.cc.s"
-	cd /home/omar/ns-3-dev/cmake-cache/scratch && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/ns-3-dev/cmake-cache/CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx -S /home/omar/ns-3-dev/scratch/eNB_open5gs_integration.cc -o CMakeFiles/scratch_eNB_open5gs_integration.dir/eNB_open5gs_integration.cc.s
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/scratch && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx -S /home/omar/Desktop/git_repo/ns3-open5gs/scratch/eNB_open5gs_integration.cc -o CMakeFiles/scratch_eNB_open5gs_integration.dir/eNB_open5gs_integration.cc.s
 
 # Object files for target scratch_eNB_open5gs_integration
 scratch_eNB_open5gs_integration_OBJECTS = \
@@ -99,18 +99,18 @@ scratch_eNB_open5gs_integration_EXTERNAL_OBJECTS =
 ../build/scratch/ns3.39-eNB_open5gs_integration-default: /usr/lib/x86_64-linux-gnu/libgsl.so
 ../build/scratch/ns3.39-eNB_open5gs_integration-default: /usr/lib/x86_64-linux-gnu/libgslcblas.so
 ../build/scratch/ns3.39-eNB_open5gs_integration-default: scratch/CMakeFiles/scratch_eNB_open5gs_integration.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/omar/ns-3-dev/cmake-cache/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../build/scratch/ns3.39-eNB_open5gs_integration-default"
-	cd /home/omar/ns-3-dev/cmake-cache/scratch && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/scratch_eNB_open5gs_integration.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../build/scratch/ns3.39-eNB_open5gs_integration-default"
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/scratch && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/scratch_eNB_open5gs_integration.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 scratch/CMakeFiles/scratch_eNB_open5gs_integration.dir/build: ../build/scratch/ns3.39-eNB_open5gs_integration-default
 .PHONY : scratch/CMakeFiles/scratch_eNB_open5gs_integration.dir/build
 
 scratch/CMakeFiles/scratch_eNB_open5gs_integration.dir/clean:
-	cd /home/omar/ns-3-dev/cmake-cache/scratch && $(CMAKE_COMMAND) -P CMakeFiles/scratch_eNB_open5gs_integration.dir/cmake_clean.cmake
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/scratch && $(CMAKE_COMMAND) -P CMakeFiles/scratch_eNB_open5gs_integration.dir/cmake_clean.cmake
 .PHONY : scratch/CMakeFiles/scratch_eNB_open5gs_integration.dir/clean
 
 scratch/CMakeFiles/scratch_eNB_open5gs_integration.dir/depend:
-	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omar/ns-3-dev /home/omar/ns-3-dev/scratch /home/omar/ns-3-dev/cmake-cache /home/omar/ns-3-dev/cmake-cache/scratch /home/omar/ns-3-dev/cmake-cache/scratch/CMakeFiles/scratch_eNB_open5gs_integration.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omar/Desktop/git_repo/ns3-open5gs /home/omar/Desktop/git_repo/ns3-open5gs/scratch /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/scratch /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/scratch/CMakeFiles/scratch_eNB_open5gs_integration.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : scratch/CMakeFiles/scratch_eNB_open5gs_integration.dir/depend
 

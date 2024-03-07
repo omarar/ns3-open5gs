@@ -83,18 +83,18 @@ memb_ASN_RRC_carrierBandwidth_constraint_1(const asn_TYPE_descriptor_t *td, cons
 }
 
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_txDirectCurrentLocation_v1530_constr_7 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 12,  12,  0,  4095 }	/* (0..4095) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 12,  12,  0,  4095 }	/* (0..4095) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_offsetToCarrier_constr_2 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 12,  12,  0,  2199 }	/* (0..2199) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 12,  12,  0,  2199 }	/* (0..2199) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_carrierBandwidth_constr_4 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 9,  9,  1,  275 }	/* (1..275) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 9,  9,  1,  275 }	/* (1..275) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_TYPE_member_t asn_MBR_ASN_RRC_ext1_6[] = {

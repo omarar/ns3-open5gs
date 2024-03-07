@@ -1,8 +1,8 @@
 contrib/nr/CMakeFiles/libnr-obj.dir/helper/annex/asn/asn1c/per_support.cc.o: \
- /home/omar/ns-3-dev/contrib/nr/helper/annex/asn/asn1c/per_support.cc \
+ /home/omar/Desktop/git_repo/ns3-open5gs/contrib/nr/helper/annex/asn/asn1c/per_support.cc \
  /usr/include/stdc-predef.h \
- /home/omar/ns-3-dev/build/include/ns3/asn_system.h \
- /home/omar/ns-3-dev/contrib/nr/helper/annex/asn/asn1c/asn_system.h \
+ /home/omar/Desktop/git_repo/ns3-open5gs/build/include/ns3/asn_system.h \
+ /home/omar/Desktop/git_repo/ns3-open5gs/contrib/nr/helper/annex/asn/asn1c/asn_system.h \
  /usr/include/stdio.h /usr/include/c++/11/stdlib.h /usr/include/string.h \
  /usr/include/x86_64-linux-gnu/sys/types.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
@@ -45,42 +45,36 @@ contrib/nr/CMakeFiles/libnr-obj.dir/helper/annex/asn/asn1c/per_support.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/in.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
- /home/omar/ns-3-dev/build/include/ns3/asn_internal.h \
- /home/omar/ns-3-dev/contrib/nr/helper/annex/asn/asn1c/asn_internal.h \
- /home/omar/ns-3-dev/contrib/nr/helper/annex/asn/asn1c/asn_application.h \
- /home/omar/ns-3-dev/contrib/nr/helper/annex/asn/asn1c/asn_system.h \
- /home/omar/ns-3-dev/contrib/nr/helper/annex/asn/asn1c/asn_codecs.h \
- /home/omar/ns-3-dev/contrib/nr/helper/annex/asn/asn1c/constr_TYPE.h \
- /home/omar/ns-3-dev/build/include/ns3/ber_tlv_length.h \
- /home/omar/ns-3-dev/contrib/nr/helper/annex/asn/asn1c/ber_tlv_length.h \
- /home/omar/ns-3-dev/build/include/ns3/ber_tlv_tag.h \
- /home/omar/ns-3-dev/contrib/nr/helper/annex/asn/asn1c/ber_tlv_tag.h \
- /home/omar/ns-3-dev/build/include/ns3/ber_decoder.h \
- /home/omar/ns-3-dev/contrib/nr/helper/annex/asn/asn1c/ber_decoder.h \
- /home/omar/ns-3-dev/build/include/ns3/asn_application.h \
- /home/omar/ns-3-dev/contrib/nr/helper/annex/asn/asn1c/asn_application.h \
- /home/omar/ns-3-dev/build/include/ns3/der_encoder.h \
- /home/omar/ns-3-dev/contrib/nr/helper/annex/asn/asn1c/der_encoder.h \
- /home/omar/ns-3-dev/build/include/ns3/xer_decoder.h \
- /home/omar/ns-3-dev/contrib/nr/helper/annex/asn/asn1c/xer_decoder.h \
- /home/omar/ns-3-dev/build/include/ns3/xer_encoder.h \
- /home/omar/ns-3-dev/contrib/nr/helper/annex/asn/asn1c/xer_encoder.h \
- /home/omar/ns-3-dev/build/include/ns3/per_decoder.h \
- /home/omar/ns-3-dev/contrib/nr/helper/annex/asn/asn1c/per_decoder.h \
- /home/omar/ns-3-dev/build/include/ns3/per_support.h \
- /home/omar/ns-3-dev/contrib/nr/helper/annex/asn/asn1c/per_support.h \
- /home/omar/ns-3-dev/build/include/ns3/asn_bit_data.h \
- /home/omar/ns-3-dev/contrib/nr/helper/annex/asn/asn1c/asn_bit_data.h \
- /home/omar/ns-3-dev/build/include/ns3/per_encoder.h \
- /home/omar/ns-3-dev/contrib/nr/helper/annex/asn/asn1c/per_encoder.h \
- /home/omar/ns-3-dev/build/include/ns3/constraints.h \
- /home/omar/ns-3-dev/contrib/nr/helper/annex/asn/asn1c/constraints.h \
- /home/omar/ns-3-dev/build/include/ns3/asn_random_fill.h \
- /home/omar/ns-3-dev/contrib/nr/helper/annex/asn/asn1c/asn_random_fill.h \
- /home/omar/ns-3-dev/build/include/ns3/oer_decoder.h \
- /home/omar/ns-3-dev/contrib/nr/helper/annex/asn/asn1c/skeletons/oer_decoder.h \
- /home/omar/ns-3-dev/build/include/ns3/oer_support.h \
- /home/omar/ns-3-dev/contrib/nr/helper/annex/asn/asn1c/skeletons/oer_support.h \
- /home/omar/ns-3-dev/build/include/ns3/oer_encoder.h \
- /home/omar/ns-3-dev/contrib/nr/helper/annex/asn/asn1c/skeletons/oer_encoder.h \
+ /home/omar/Desktop/git_repo/ns3-open5gs/build/include/ns3/asn_internal.h \
+ /home/omar/Desktop/git_repo/ns3-open5gs/contrib/nr/helper/annex/asn/asn1c/asn_internal.h \
+ /home/omar/Desktop/git_repo/ns3-open5gs/contrib/nr/helper/annex/asn/asn1c/asn_application.h \
+ /home/omar/Desktop/git_repo/ns3-open5gs/contrib/nr/helper/annex/asn/asn1c/asn_system.h \
+ /home/omar/Desktop/git_repo/ns3-open5gs/contrib/nr/helper/annex/asn/asn1c/asn_codecs.h \
+ /home/omar/Desktop/git_repo/ns3-open5gs/contrib/nr/helper/annex/asn/asn1c/constr_TYPE.h \
+ /home/omar/Desktop/git_repo/ns3-open5gs/build/include/ns3/ber_tlv_length.h \
+ /home/omar/Desktop/git_repo/ns3-open5gs/contrib/nr/helper/annex/asn/asn1c/ber_tlv_length.h \
+ /home/omar/Desktop/git_repo/ns3-open5gs/build/include/ns3/ber_tlv_tag.h \
+ /home/omar/Desktop/git_repo/ns3-open5gs/contrib/nr/helper/annex/asn/asn1c/ber_tlv_tag.h \
+ /home/omar/Desktop/git_repo/ns3-open5gs/build/include/ns3/ber_decoder.h \
+ /home/omar/Desktop/git_repo/ns3-open5gs/contrib/nr/helper/annex/asn/asn1c/ber_decoder.h \
+ /home/omar/Desktop/git_repo/ns3-open5gs/build/include/ns3/asn_application.h \
+ /home/omar/Desktop/git_repo/ns3-open5gs/contrib/nr/helper/annex/asn/asn1c/asn_application.h \
+ /home/omar/Desktop/git_repo/ns3-open5gs/build/include/ns3/der_encoder.h \
+ /home/omar/Desktop/git_repo/ns3-open5gs/contrib/nr/helper/annex/asn/asn1c/der_encoder.h \
+ /home/omar/Desktop/git_repo/ns3-open5gs/build/include/ns3/xer_decoder.h \
+ /home/omar/Desktop/git_repo/ns3-open5gs/contrib/nr/helper/annex/asn/asn1c/xer_decoder.h \
+ /home/omar/Desktop/git_repo/ns3-open5gs/build/include/ns3/xer_encoder.h \
+ /home/omar/Desktop/git_repo/ns3-open5gs/contrib/nr/helper/annex/asn/asn1c/xer_encoder.h \
+ /home/omar/Desktop/git_repo/ns3-open5gs/build/include/ns3/per_decoder.h \
+ /home/omar/Desktop/git_repo/ns3-open5gs/contrib/nr/helper/annex/asn/asn1c/per_decoder.h \
+ /home/omar/Desktop/git_repo/ns3-open5gs/build/include/ns3/per_support.h \
+ /home/omar/Desktop/git_repo/ns3-open5gs/contrib/nr/helper/annex/asn/asn1c/per_support.h \
+ /home/omar/Desktop/git_repo/ns3-open5gs/build/include/ns3/asn_bit_data.h \
+ /home/omar/Desktop/git_repo/ns3-open5gs/contrib/nr/helper/annex/asn/asn1c/asn_bit_data.h \
+ /home/omar/Desktop/git_repo/ns3-open5gs/build/include/ns3/per_encoder.h \
+ /home/omar/Desktop/git_repo/ns3-open5gs/contrib/nr/helper/annex/asn/asn1c/per_encoder.h \
+ /home/omar/Desktop/git_repo/ns3-open5gs/build/include/ns3/constraints.h \
+ /home/omar/Desktop/git_repo/ns3-open5gs/contrib/nr/helper/annex/asn/asn1c/constraints.h \
+ /home/omar/Desktop/git_repo/ns3-open5gs/build/include/ns3/asn_random_fill.h \
+ /home/omar/Desktop/git_repo/ns3-open5gs/contrib/nr/helper/annex/asn/asn1c/asn_random_fill.h \
  /usr/include/assert.h

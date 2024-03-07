@@ -11,10 +11,10 @@ static const long asn_VAL_379_ASN_NGAP_id_EndpointIPAddressAndPort = 169;
 static const long asn_VAL_379_ASN_NGAP_reject = 0;
 static const long asn_VAL_379_ASN_NGAP_mandatory = 2;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_CPTransportLayerInformation_ExtIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_379_ASN_NGAP_id_EndpointIPAddressAndPort },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_379_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_EndpointIPAddressAndPort },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_379_ASN_NGAP_mandatory }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_379_ASN_NGAP_id_EndpointIPAddressAndPort },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_379_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_EndpointIPAddressAndPort },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_379_ASN_NGAP_mandatory }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_CPTransportLayerInformation_ExtIEs_1[] = {
 	{ 1, 4, asn_IOS_ASN_NGAP_CPTransportLayerInformation_ExtIEs_1_rows }
@@ -38,30 +38,30 @@ static const long asn_VAL_6_ASN_NGAP_id_UEAggregateMaximumBitRate = 110;
 static const long asn_VAL_6_ASN_NGAP_ignore = 1;
 static const long asn_VAL_6_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_PDUSessionResourceSetupRequestIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_1_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_1_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_1_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_2_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_2_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_2_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_3_ASN_NGAP_id_RANPagingPriority },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_3_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RANPagingPriority },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_3_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_4_ASN_NGAP_id_NAS_PDU },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_4_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_NAS_PDU },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_4_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_5_ASN_NGAP_id_PDUSessionResourceSetupListSUReq },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_5_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceSetupListSUReq },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_5_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_6_ASN_NGAP_id_UEAggregateMaximumBitRate },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_6_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UEAggregateMaximumBitRate },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_6_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_1_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_1_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_1_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_2_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_2_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_2_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_3_ASN_NGAP_id_RANPagingPriority },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_3_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RANPagingPriority },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_3_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_4_ASN_NGAP_id_NAS_PDU },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_4_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_NAS_PDU },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_4_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_5_ASN_NGAP_id_PDUSessionResourceSetupListSUReq },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_5_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceSetupListSUReq },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_5_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_6_ASN_NGAP_id_UEAggregateMaximumBitRate },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_6_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UEAggregateMaximumBitRate },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_6_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_PDUSessionResourceSetupRequestIEs_1[] = {
 	{ 6, 4, asn_IOS_ASN_NGAP_PDUSessionResourceSetupRequestIEs_1_rows }
@@ -82,26 +82,26 @@ static const long asn_VAL_11_ASN_NGAP_id_CriticalityDiagnostics = 19;
 static const long asn_VAL_11_ASN_NGAP_ignore = 1;
 static const long asn_VAL_11_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_PDUSessionResourceSetupResponseIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_7_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_7_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_7_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_8_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_8_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_8_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_9_ASN_NGAP_id_PDUSessionResourceSetupListSURes },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_9_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceSetupListSURes },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_9_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_10_ASN_NGAP_id_PDUSessionResourceFailedToSetupListSURes },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_10_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceFailedToSetupListSURes },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_10_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_11_ASN_NGAP_id_CriticalityDiagnostics },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_11_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_11_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_7_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_7_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_7_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_8_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_8_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_8_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_9_ASN_NGAP_id_PDUSessionResourceSetupListSURes },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_9_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceSetupListSURes },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_9_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_10_ASN_NGAP_id_PDUSessionResourceFailedToSetupListSURes },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_10_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceFailedToSetupListSURes },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_10_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_11_ASN_NGAP_id_CriticalityDiagnostics },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_11_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_11_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_PDUSessionResourceSetupResponseIEs_1[] = {
 	{ 5, 4, asn_IOS_ASN_NGAP_PDUSessionResourceSetupResponseIEs_1_rows }
@@ -122,26 +122,26 @@ static const long asn_VAL_16_ASN_NGAP_id_PDUSessionResourceToReleaseListRelCmd =
 static const long asn_VAL_16_ASN_NGAP_reject = 0;
 static const long asn_VAL_16_ASN_NGAP_mandatory = 2;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_PDUSessionResourceReleaseCommandIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_12_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_12_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_12_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_13_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_13_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_13_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_14_ASN_NGAP_id_RANPagingPriority },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_14_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RANPagingPriority },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_14_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_15_ASN_NGAP_id_NAS_PDU },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_15_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_NAS_PDU },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_15_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_16_ASN_NGAP_id_PDUSessionResourceToReleaseListRelCmd },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_16_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceToReleaseListRelCmd },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_16_ASN_NGAP_mandatory }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_12_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_12_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_12_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_13_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_13_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_13_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_14_ASN_NGAP_id_RANPagingPriority },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_14_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RANPagingPriority },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_14_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_15_ASN_NGAP_id_NAS_PDU },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_15_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_NAS_PDU },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_15_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_16_ASN_NGAP_id_PDUSessionResourceToReleaseListRelCmd },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_16_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceToReleaseListRelCmd },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_16_ASN_NGAP_mandatory }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_PDUSessionResourceReleaseCommandIEs_1[] = {
 	{ 5, 4, asn_IOS_ASN_NGAP_PDUSessionResourceReleaseCommandIEs_1_rows }
@@ -162,26 +162,26 @@ static const long asn_VAL_21_ASN_NGAP_id_CriticalityDiagnostics = 19;
 static const long asn_VAL_21_ASN_NGAP_ignore = 1;
 static const long asn_VAL_21_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_PDUSessionResourceReleaseResponseIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_17_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_17_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_17_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_18_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_18_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_18_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_19_ASN_NGAP_id_PDUSessionResourceReleasedListRelRes },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_19_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceReleasedListRelRes },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_19_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_20_ASN_NGAP_id_UserLocationInformation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_20_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UserLocationInformation },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_20_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_21_ASN_NGAP_id_CriticalityDiagnostics },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_21_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_21_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_17_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_17_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_17_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_18_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_18_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_18_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_19_ASN_NGAP_id_PDUSessionResourceReleasedListRelRes },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_19_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceReleasedListRelRes },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_19_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_20_ASN_NGAP_id_UserLocationInformation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_20_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UserLocationInformation },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_20_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_21_ASN_NGAP_id_CriticalityDiagnostics },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_21_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_21_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_PDUSessionResourceReleaseResponseIEs_1[] = {
 	{ 5, 4, asn_IOS_ASN_NGAP_PDUSessionResourceReleaseResponseIEs_1_rows }
@@ -199,22 +199,22 @@ static const long asn_VAL_25_ASN_NGAP_id_PDUSessionResourceModifyListModReq = 64
 static const long asn_VAL_25_ASN_NGAP_reject = 0;
 static const long asn_VAL_25_ASN_NGAP_mandatory = 2;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_PDUSessionResourceModifyRequestIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_22_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_22_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_22_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_23_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_23_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_23_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_24_ASN_NGAP_id_RANPagingPriority },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_24_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RANPagingPriority },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_24_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_25_ASN_NGAP_id_PDUSessionResourceModifyListModReq },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_25_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceModifyListModReq },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_25_ASN_NGAP_mandatory }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_22_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_22_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_22_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_23_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_23_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_23_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_24_ASN_NGAP_id_RANPagingPriority },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_24_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RANPagingPriority },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_24_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_25_ASN_NGAP_id_PDUSessionResourceModifyListModReq },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_25_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceModifyListModReq },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_25_ASN_NGAP_mandatory }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_PDUSessionResourceModifyRequestIEs_1[] = {
 	{ 4, 4, asn_IOS_ASN_NGAP_PDUSessionResourceModifyRequestIEs_1_rows }
@@ -238,30 +238,30 @@ static const long asn_VAL_31_ASN_NGAP_id_CriticalityDiagnostics = 19;
 static const long asn_VAL_31_ASN_NGAP_ignore = 1;
 static const long asn_VAL_31_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_PDUSessionResourceModifyResponseIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_26_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_26_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_26_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_27_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_27_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_27_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_28_ASN_NGAP_id_PDUSessionResourceModifyListModRes },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_28_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceModifyListModRes },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_28_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_29_ASN_NGAP_id_PDUSessionResourceFailedToModifyListModRes },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_29_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceFailedToModifyListModRes },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_29_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_30_ASN_NGAP_id_UserLocationInformation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_30_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UserLocationInformation },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_30_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_31_ASN_NGAP_id_CriticalityDiagnostics },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_31_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_31_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_26_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_26_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_26_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_27_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_27_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_27_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_28_ASN_NGAP_id_PDUSessionResourceModifyListModRes },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_28_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceModifyListModRes },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_28_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_29_ASN_NGAP_id_PDUSessionResourceFailedToModifyListModRes },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_29_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceFailedToModifyListModRes },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_29_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_30_ASN_NGAP_id_UserLocationInformation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_30_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UserLocationInformation },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_30_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_31_ASN_NGAP_id_CriticalityDiagnostics },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_31_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_31_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_PDUSessionResourceModifyResponseIEs_1[] = {
 	{ 6, 4, asn_IOS_ASN_NGAP_PDUSessionResourceModifyResponseIEs_1_rows }
@@ -282,26 +282,26 @@ static const long asn_VAL_36_ASN_NGAP_id_UserLocationInformation = 121;
 static const long asn_VAL_36_ASN_NGAP_ignore = 1;
 static const long asn_VAL_36_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_PDUSessionResourceNotifyIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_32_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_32_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_32_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_33_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_33_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_33_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_34_ASN_NGAP_id_PDUSessionResourceNotifyList },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_34_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceNotifyList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_34_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_35_ASN_NGAP_id_PDUSessionResourceReleasedListNot },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_35_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceReleasedListNot },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_35_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_36_ASN_NGAP_id_UserLocationInformation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_36_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UserLocationInformation },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_36_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_32_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_32_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_32_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_33_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_33_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_33_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_34_ASN_NGAP_id_PDUSessionResourceNotifyList },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_34_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceNotifyList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_34_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_35_ASN_NGAP_id_PDUSessionResourceReleasedListNot },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_35_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceReleasedListNot },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_35_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_36_ASN_NGAP_id_UserLocationInformation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_36_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UserLocationInformation },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_36_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_PDUSessionResourceNotifyIEs_1[] = {
 	{ 5, 4, asn_IOS_ASN_NGAP_PDUSessionResourceNotifyIEs_1_rows }
@@ -316,18 +316,18 @@ static const long asn_VAL_39_ASN_NGAP_id_PDUSessionResourceModifyListModInd = 63
 static const long asn_VAL_39_ASN_NGAP_reject = 0;
 static const long asn_VAL_39_ASN_NGAP_mandatory = 2;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_PDUSessionResourceModifyIndicationIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_37_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_37_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_37_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_38_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_38_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_38_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_39_ASN_NGAP_id_PDUSessionResourceModifyListModInd },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_39_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceModifyListModInd },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_39_ASN_NGAP_mandatory }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_37_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_37_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_37_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_38_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_38_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_38_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_39_ASN_NGAP_id_PDUSessionResourceModifyListModInd },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_39_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceModifyListModInd },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_39_ASN_NGAP_mandatory }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_PDUSessionResourceModifyIndicationIEs_1[] = {
 	{ 3, 4, asn_IOS_ASN_NGAP_PDUSessionResourceModifyIndicationIEs_1_rows }
@@ -348,26 +348,26 @@ static const long asn_VAL_44_ASN_NGAP_id_CriticalityDiagnostics = 19;
 static const long asn_VAL_44_ASN_NGAP_ignore = 1;
 static const long asn_VAL_44_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_PDUSessionResourceModifyConfirmIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_40_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_40_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_40_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_41_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_41_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_41_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_42_ASN_NGAP_id_PDUSessionResourceModifyListModCfm },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_42_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceModifyListModCfm },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_42_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_43_ASN_NGAP_id_PDUSessionResourceFailedToModifyListModCfm },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_43_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceFailedToModifyListModCfm },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_43_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_44_ASN_NGAP_id_CriticalityDiagnostics },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_44_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_44_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_40_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_40_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_40_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_41_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_41_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_41_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_42_ASN_NGAP_id_PDUSessionResourceModifyListModCfm },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_42_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceModifyListModCfm },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_42_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_43_ASN_NGAP_id_PDUSessionResourceFailedToModifyListModCfm },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_43_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceFailedToModifyListModCfm },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_43_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_44_ASN_NGAP_id_CriticalityDiagnostics },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_44_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_44_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_PDUSessionResourceModifyConfirmIEs_1[] = {
 	{ 5, 4, asn_IOS_ASN_NGAP_PDUSessionResourceModifyConfirmIEs_1_rows }
@@ -439,94 +439,94 @@ static const long asn_VAL_66_ASN_NGAP_id_CNAssistedRANTuning = 165;
 static const long asn_VAL_66_ASN_NGAP_ignore = 1;
 static const long asn_VAL_66_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_InitialContextSetupRequestIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_45_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_45_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_45_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_46_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_46_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_46_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_47_ASN_NGAP_id_OldAMF },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_47_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMFName },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_47_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_48_ASN_NGAP_id_UEAggregateMaximumBitRate },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_48_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UEAggregateMaximumBitRate },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_48_ASN_NGAP_conditional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_49_ASN_NGAP_id_CoreNetworkAssistanceInformationForInactive },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_49_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CoreNetworkAssistanceInformationForInactive },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_49_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_50_ASN_NGAP_id_GUAMI },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_50_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_GUAMI },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_50_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_51_ASN_NGAP_id_PDUSessionResourceSetupListCxtReq },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_51_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceSetupListCxtReq },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_51_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_52_ASN_NGAP_id_AllowedNSSAI },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_52_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AllowedNSSAI },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_52_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_53_ASN_NGAP_id_UESecurityCapabilities },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_53_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UESecurityCapabilities },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_53_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_54_ASN_NGAP_id_SecurityKey },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_54_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_SecurityKey },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_54_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_55_ASN_NGAP_id_TraceActivation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_55_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_TraceActivation },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_55_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_56_ASN_NGAP_id_MobilityRestrictionList },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_56_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_MobilityRestrictionList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_56_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_57_ASN_NGAP_id_UERadioCapability },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_57_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UERadioCapability },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_57_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_58_ASN_NGAP_id_IndexToRFSP },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_58_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_IndexToRFSP },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_58_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_59_ASN_NGAP_id_MaskedIMEISV },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_59_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_MaskedIMEISV },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_59_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_60_ASN_NGAP_id_NAS_PDU },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_60_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_NAS_PDU },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_60_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_61_ASN_NGAP_id_EmergencyFallbackIndicator },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_61_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_EmergencyFallbackIndicator },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_61_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_62_ASN_NGAP_id_RRCInactiveTransitionReportRequest },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_62_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RRCInactiveTransitionReportRequest },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_62_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_63_ASN_NGAP_id_UERadioCapabilityForPaging },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_63_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UERadioCapabilityForPaging },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_63_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_64_ASN_NGAP_id_RedirectionVoiceFallback },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_64_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RedirectionVoiceFallback },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_64_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_65_ASN_NGAP_id_LocationReportingRequestType },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_65_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_LocationReportingRequestType },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_65_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_66_ASN_NGAP_id_CNAssistedRANTuning },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_66_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CNAssistedRANTuning },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_66_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_45_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_45_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_45_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_46_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_46_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_46_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_47_ASN_NGAP_id_OldAMF },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_47_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMFName },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_47_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_48_ASN_NGAP_id_UEAggregateMaximumBitRate },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_48_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UEAggregateMaximumBitRate },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_48_ASN_NGAP_conditional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_49_ASN_NGAP_id_CoreNetworkAssistanceInformationForInactive },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_49_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CoreNetworkAssistanceInformationForInactive },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_49_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_50_ASN_NGAP_id_GUAMI },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_50_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_GUAMI },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_50_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_51_ASN_NGAP_id_PDUSessionResourceSetupListCxtReq },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_51_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceSetupListCxtReq },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_51_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_52_ASN_NGAP_id_AllowedNSSAI },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_52_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AllowedNSSAI },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_52_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_53_ASN_NGAP_id_UESecurityCapabilities },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_53_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UESecurityCapabilities },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_53_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_54_ASN_NGAP_id_SecurityKey },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_54_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_SecurityKey },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_54_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_55_ASN_NGAP_id_TraceActivation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_55_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_TraceActivation },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_55_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_56_ASN_NGAP_id_MobilityRestrictionList },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_56_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_MobilityRestrictionList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_56_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_57_ASN_NGAP_id_UERadioCapability },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_57_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UERadioCapability },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_57_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_58_ASN_NGAP_id_IndexToRFSP },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_58_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_IndexToRFSP },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_58_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_59_ASN_NGAP_id_MaskedIMEISV },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_59_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_MaskedIMEISV },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_59_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_60_ASN_NGAP_id_NAS_PDU },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_60_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_NAS_PDU },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_60_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_61_ASN_NGAP_id_EmergencyFallbackIndicator },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_61_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_EmergencyFallbackIndicator },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_61_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_62_ASN_NGAP_id_RRCInactiveTransitionReportRequest },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_62_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RRCInactiveTransitionReportRequest },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_62_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_63_ASN_NGAP_id_UERadioCapabilityForPaging },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_63_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UERadioCapabilityForPaging },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_63_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_64_ASN_NGAP_id_RedirectionVoiceFallback },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_64_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RedirectionVoiceFallback },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_64_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_65_ASN_NGAP_id_LocationReportingRequestType },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_65_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_LocationReportingRequestType },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_65_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_66_ASN_NGAP_id_CNAssistedRANTuning },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_66_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CNAssistedRANTuning },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_66_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_InitialContextSetupRequestIEs_1[] = {
 	{ 22, 4, asn_IOS_ASN_NGAP_InitialContextSetupRequestIEs_1_rows }
@@ -547,26 +547,26 @@ static const long asn_VAL_71_ASN_NGAP_id_CriticalityDiagnostics = 19;
 static const long asn_VAL_71_ASN_NGAP_ignore = 1;
 static const long asn_VAL_71_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_InitialContextSetupResponseIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_67_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_67_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_67_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_68_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_68_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_68_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_69_ASN_NGAP_id_PDUSessionResourceSetupListCxtRes },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_69_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceSetupListCxtRes },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_69_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_70_ASN_NGAP_id_PDUSessionResourceFailedToSetupListCxtRes },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_70_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceFailedToSetupListCxtRes },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_70_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_71_ASN_NGAP_id_CriticalityDiagnostics },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_71_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_71_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_67_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_67_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_67_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_68_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_68_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_68_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_69_ASN_NGAP_id_PDUSessionResourceSetupListCxtRes },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_69_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceSetupListCxtRes },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_69_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_70_ASN_NGAP_id_PDUSessionResourceFailedToSetupListCxtRes },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_70_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceFailedToSetupListCxtRes },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_70_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_71_ASN_NGAP_id_CriticalityDiagnostics },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_71_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_71_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_InitialContextSetupResponseIEs_1[] = {
 	{ 5, 4, asn_IOS_ASN_NGAP_InitialContextSetupResponseIEs_1_rows }
@@ -587,26 +587,26 @@ static const long asn_VAL_76_ASN_NGAP_id_CriticalityDiagnostics = 19;
 static const long asn_VAL_76_ASN_NGAP_ignore = 1;
 static const long asn_VAL_76_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_InitialContextSetupFailureIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_72_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_72_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_72_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_73_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_73_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_73_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_74_ASN_NGAP_id_PDUSessionResourceFailedToSetupListCxtFail },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_74_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceFailedToSetupListCxtFail },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_74_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_75_ASN_NGAP_id_Cause },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_75_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_Cause },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_75_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_76_ASN_NGAP_id_CriticalityDiagnostics },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_76_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_76_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_72_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_72_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_72_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_73_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_73_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_73_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_74_ASN_NGAP_id_PDUSessionResourceFailedToSetupListCxtFail },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_74_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceFailedToSetupListCxtFail },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_74_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_75_ASN_NGAP_id_Cause },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_75_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_Cause },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_75_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_76_ASN_NGAP_id_CriticalityDiagnostics },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_76_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_76_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_InitialContextSetupFailureIEs_1[] = {
 	{ 5, 4, asn_IOS_ASN_NGAP_InitialContextSetupFailureIEs_1_rows }
@@ -624,22 +624,22 @@ static const long asn_VAL_80_ASN_NGAP_id_Cause = 15;
 static const long asn_VAL_80_ASN_NGAP_ignore = 1;
 static const long asn_VAL_80_ASN_NGAP_mandatory = 2;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_UEContextReleaseRequest_IEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_77_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_77_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_77_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_78_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_78_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_78_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_79_ASN_NGAP_id_PDUSessionResourceListCxtRelReq },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_79_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceListCxtRelReq },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_79_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_80_ASN_NGAP_id_Cause },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_80_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_Cause },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_80_ASN_NGAP_mandatory }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_77_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_77_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_77_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_78_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_78_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_78_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_79_ASN_NGAP_id_PDUSessionResourceListCxtRelReq },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_79_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceListCxtRelReq },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_79_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_80_ASN_NGAP_id_Cause },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_80_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_Cause },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_80_ASN_NGAP_mandatory }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_UEContextReleaseRequest_IEs_1[] = {
 	{ 4, 4, asn_IOS_ASN_NGAP_UEContextReleaseRequest_IEs_1_rows }
@@ -651,14 +651,14 @@ static const long asn_VAL_82_ASN_NGAP_id_Cause = 15;
 static const long asn_VAL_82_ASN_NGAP_ignore = 1;
 static const long asn_VAL_82_ASN_NGAP_mandatory = 2;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_UEContextReleaseCommand_IEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_81_ASN_NGAP_id_UE_NGAP_IDs },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_81_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UE_NGAP_IDs },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_81_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_82_ASN_NGAP_id_Cause },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_82_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_Cause },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_82_ASN_NGAP_mandatory }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_81_ASN_NGAP_id_UE_NGAP_IDs },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_81_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UE_NGAP_IDs },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_81_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_82_ASN_NGAP_id_Cause },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_82_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_Cause },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_82_ASN_NGAP_mandatory }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_UEContextReleaseCommand_IEs_1[] = {
 	{ 2, 4, asn_IOS_ASN_NGAP_UEContextReleaseCommand_IEs_1_rows }
@@ -682,30 +682,30 @@ static const long asn_VAL_88_ASN_NGAP_id_CriticalityDiagnostics = 19;
 static const long asn_VAL_88_ASN_NGAP_ignore = 1;
 static const long asn_VAL_88_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_UEContextReleaseComplete_IEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_83_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_83_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_83_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_84_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_84_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_84_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_85_ASN_NGAP_id_UserLocationInformation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_85_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UserLocationInformation },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_85_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_86_ASN_NGAP_id_InfoOnRecommendedCellsAndRANNodesForPaging },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_86_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_InfoOnRecommendedCellsAndRANNodesForPaging },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_86_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_87_ASN_NGAP_id_PDUSessionResourceListCxtRelCpl },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_87_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceListCxtRelCpl },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_87_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_88_ASN_NGAP_id_CriticalityDiagnostics },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_88_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_88_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_83_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_83_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_83_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_84_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_84_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_84_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_85_ASN_NGAP_id_UserLocationInformation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_85_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UserLocationInformation },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_85_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_86_ASN_NGAP_id_InfoOnRecommendedCellsAndRANNodesForPaging },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_86_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_InfoOnRecommendedCellsAndRANNodesForPaging },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_86_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_87_ASN_NGAP_id_PDUSessionResourceListCxtRelCpl },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_87_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceListCxtRelCpl },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_87_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_88_ASN_NGAP_id_CriticalityDiagnostics },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_88_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_88_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_UEContextReleaseComplete_IEs_1[] = {
 	{ 6, 4, asn_IOS_ASN_NGAP_UEContextReleaseComplete_IEs_1_rows }
@@ -750,58 +750,58 @@ static const long asn_VAL_101_ASN_NGAP_id_CNAssistedRANTuning = 165;
 static const long asn_VAL_101_ASN_NGAP_ignore = 1;
 static const long asn_VAL_101_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_UEContextModificationRequestIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_89_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_89_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_89_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_90_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_90_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_90_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_91_ASN_NGAP_id_RANPagingPriority },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_91_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RANPagingPriority },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_91_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_92_ASN_NGAP_id_SecurityKey },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_92_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_SecurityKey },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_92_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_93_ASN_NGAP_id_IndexToRFSP },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_93_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_IndexToRFSP },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_93_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_94_ASN_NGAP_id_UEAggregateMaximumBitRate },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_94_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UEAggregateMaximumBitRate },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_94_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_95_ASN_NGAP_id_UESecurityCapabilities },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_95_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UESecurityCapabilities },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_95_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_96_ASN_NGAP_id_CoreNetworkAssistanceInformationForInactive },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_96_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CoreNetworkAssistanceInformationForInactive },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_96_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_97_ASN_NGAP_id_EmergencyFallbackIndicator },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_97_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_EmergencyFallbackIndicator },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_97_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_98_ASN_NGAP_id_NewAMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_98_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_98_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_99_ASN_NGAP_id_RRCInactiveTransitionReportRequest },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_99_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RRCInactiveTransitionReportRequest },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_99_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_100_ASN_NGAP_id_NewGUAMI },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_100_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_GUAMI },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_100_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_101_ASN_NGAP_id_CNAssistedRANTuning },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_101_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CNAssistedRANTuning },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_101_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_89_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_89_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_89_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_90_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_90_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_90_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_91_ASN_NGAP_id_RANPagingPriority },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_91_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RANPagingPriority },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_91_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_92_ASN_NGAP_id_SecurityKey },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_92_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_SecurityKey },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_92_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_93_ASN_NGAP_id_IndexToRFSP },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_93_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_IndexToRFSP },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_93_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_94_ASN_NGAP_id_UEAggregateMaximumBitRate },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_94_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UEAggregateMaximumBitRate },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_94_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_95_ASN_NGAP_id_UESecurityCapabilities },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_95_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UESecurityCapabilities },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_95_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_96_ASN_NGAP_id_CoreNetworkAssistanceInformationForInactive },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_96_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CoreNetworkAssistanceInformationForInactive },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_96_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_97_ASN_NGAP_id_EmergencyFallbackIndicator },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_97_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_EmergencyFallbackIndicator },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_97_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_98_ASN_NGAP_id_NewAMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_98_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_98_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_99_ASN_NGAP_id_RRCInactiveTransitionReportRequest },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_99_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RRCInactiveTransitionReportRequest },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_99_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_100_ASN_NGAP_id_NewGUAMI },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_100_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_GUAMI },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_100_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_101_ASN_NGAP_id_CNAssistedRANTuning },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_101_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CNAssistedRANTuning },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_101_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_UEContextModificationRequestIEs_1[] = {
 	{ 13, 4, asn_IOS_ASN_NGAP_UEContextModificationRequestIEs_1_rows }
@@ -822,26 +822,26 @@ static const long asn_VAL_106_ASN_NGAP_id_CriticalityDiagnostics = 19;
 static const long asn_VAL_106_ASN_NGAP_ignore = 1;
 static const long asn_VAL_106_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_UEContextModificationResponseIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_102_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_102_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_102_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_103_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_103_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_103_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_104_ASN_NGAP_id_RRCState },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_104_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RRCState },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_104_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_105_ASN_NGAP_id_UserLocationInformation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_105_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UserLocationInformation },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_105_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_106_ASN_NGAP_id_CriticalityDiagnostics },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_106_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_106_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_102_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_102_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_102_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_103_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_103_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_103_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_104_ASN_NGAP_id_RRCState },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_104_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RRCState },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_104_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_105_ASN_NGAP_id_UserLocationInformation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_105_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UserLocationInformation },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_105_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_106_ASN_NGAP_id_CriticalityDiagnostics },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_106_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_106_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_UEContextModificationResponseIEs_1[] = {
 	{ 5, 4, asn_IOS_ASN_NGAP_UEContextModificationResponseIEs_1_rows }
@@ -859,22 +859,22 @@ static const long asn_VAL_110_ASN_NGAP_id_CriticalityDiagnostics = 19;
 static const long asn_VAL_110_ASN_NGAP_ignore = 1;
 static const long asn_VAL_110_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_UEContextModificationFailureIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_107_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_107_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_107_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_108_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_108_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_108_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_109_ASN_NGAP_id_Cause },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_109_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_Cause },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_109_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_110_ASN_NGAP_id_CriticalityDiagnostics },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_110_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_110_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_107_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_107_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_107_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_108_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_108_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_108_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_109_ASN_NGAP_id_Cause },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_109_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_Cause },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_109_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_110_ASN_NGAP_id_CriticalityDiagnostics },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_110_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_110_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_UEContextModificationFailureIEs_1[] = {
 	{ 4, 4, asn_IOS_ASN_NGAP_UEContextModificationFailureIEs_1_rows }
@@ -892,22 +892,22 @@ static const long asn_VAL_114_ASN_NGAP_id_UserLocationInformation = 121;
 static const long asn_VAL_114_ASN_NGAP_ignore = 1;
 static const long asn_VAL_114_ASN_NGAP_mandatory = 2;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_RRCInactiveTransitionReportIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_111_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_111_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_111_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_112_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_112_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_112_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_113_ASN_NGAP_id_RRCState },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_113_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RRCState },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_113_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_114_ASN_NGAP_id_UserLocationInformation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_114_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UserLocationInformation },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_114_ASN_NGAP_mandatory }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_111_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_111_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_111_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_112_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_112_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_112_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_113_ASN_NGAP_id_RRCState },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_113_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RRCState },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_113_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_114_ASN_NGAP_id_UserLocationInformation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_114_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UserLocationInformation },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_114_ASN_NGAP_mandatory }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_RRCInactiveTransitionReportIEs_1[] = {
 	{ 4, 4, asn_IOS_ASN_NGAP_RRCInactiveTransitionReportIEs_1_rows }
@@ -937,38 +937,38 @@ static const long asn_VAL_122_ASN_NGAP_id_SourceToTarget_TransparentContainer = 
 static const long asn_VAL_122_ASN_NGAP_reject = 0;
 static const long asn_VAL_122_ASN_NGAP_mandatory = 2;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_HandoverRequiredIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_115_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_115_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_115_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_116_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_116_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_116_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_117_ASN_NGAP_id_HandoverType },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_117_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_HandoverType },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_117_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_118_ASN_NGAP_id_Cause },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_118_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_Cause },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_118_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_119_ASN_NGAP_id_TargetID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_119_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_TargetID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_119_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_120_ASN_NGAP_id_DirectForwardingPathAvailability },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_120_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_DirectForwardingPathAvailability },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_120_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_121_ASN_NGAP_id_PDUSessionResourceListHORqd },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_121_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceListHORqd },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_121_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_122_ASN_NGAP_id_SourceToTarget_TransparentContainer },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_122_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_SourceToTarget_TransparentContainer },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_122_ASN_NGAP_mandatory }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_115_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_115_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_115_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_116_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_116_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_116_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_117_ASN_NGAP_id_HandoverType },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_117_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_HandoverType },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_117_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_118_ASN_NGAP_id_Cause },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_118_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_Cause },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_118_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_119_ASN_NGAP_id_TargetID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_119_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_TargetID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_119_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_120_ASN_NGAP_id_DirectForwardingPathAvailability },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_120_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_DirectForwardingPathAvailability },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_120_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_121_ASN_NGAP_id_PDUSessionResourceListHORqd },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_121_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceListHORqd },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_121_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_122_ASN_NGAP_id_SourceToTarget_TransparentContainer },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_122_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_SourceToTarget_TransparentContainer },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_122_ASN_NGAP_mandatory }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_HandoverRequiredIEs_1[] = {
 	{ 8, 4, asn_IOS_ASN_NGAP_HandoverRequiredIEs_1_rows }
@@ -998,38 +998,38 @@ static const long asn_VAL_130_ASN_NGAP_id_CriticalityDiagnostics = 19;
 static const long asn_VAL_130_ASN_NGAP_ignore = 1;
 static const long asn_VAL_130_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_HandoverCommandIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_123_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_123_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_123_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_124_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_124_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_124_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_125_ASN_NGAP_id_HandoverType },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_125_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_HandoverType },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_125_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_126_ASN_NGAP_id_NASSecurityParametersFromNGRAN },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_126_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_NASSecurityParametersFromNGRAN },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_126_ASN_NGAP_conditional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_127_ASN_NGAP_id_PDUSessionResourceHandoverList },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_127_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceHandoverList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_127_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_128_ASN_NGAP_id_PDUSessionResourceToReleaseListHOCmd },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_128_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceToReleaseListHOCmd },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_128_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_129_ASN_NGAP_id_TargetToSource_TransparentContainer },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_129_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_TargetToSource_TransparentContainer },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_129_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_130_ASN_NGAP_id_CriticalityDiagnostics },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_130_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_130_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_123_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_123_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_123_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_124_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_124_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_124_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_125_ASN_NGAP_id_HandoverType },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_125_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_HandoverType },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_125_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_126_ASN_NGAP_id_NASSecurityParametersFromNGRAN },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_126_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_NASSecurityParametersFromNGRAN },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_126_ASN_NGAP_conditional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_127_ASN_NGAP_id_PDUSessionResourceHandoverList },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_127_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceHandoverList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_127_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_128_ASN_NGAP_id_PDUSessionResourceToReleaseListHOCmd },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_128_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceToReleaseListHOCmd },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_128_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_129_ASN_NGAP_id_TargetToSource_TransparentContainer },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_129_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_TargetToSource_TransparentContainer },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_129_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_130_ASN_NGAP_id_CriticalityDiagnostics },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_130_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_130_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_HandoverCommandIEs_1[] = {
 	{ 8, 4, asn_IOS_ASN_NGAP_HandoverCommandIEs_1_rows }
@@ -1047,22 +1047,22 @@ static const long asn_VAL_134_ASN_NGAP_id_CriticalityDiagnostics = 19;
 static const long asn_VAL_134_ASN_NGAP_ignore = 1;
 static const long asn_VAL_134_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_HandoverPreparationFailureIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_131_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_131_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_131_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_132_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_132_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_132_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_133_ASN_NGAP_id_Cause },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_133_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_Cause },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_133_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_134_ASN_NGAP_id_CriticalityDiagnostics },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_134_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_134_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_131_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_131_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_131_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_132_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_132_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_132_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_133_ASN_NGAP_id_Cause },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_133_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_Cause },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_133_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_134_ASN_NGAP_id_CriticalityDiagnostics },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_134_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_134_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_HandoverPreparationFailureIEs_1[] = {
 	{ 4, 4, asn_IOS_ASN_NGAP_HandoverPreparationFailureIEs_1_rows }
@@ -1128,86 +1128,86 @@ static const long asn_VAL_154_ASN_NGAP_id_CNAssistedRANTuning = 165;
 static const long asn_VAL_154_ASN_NGAP_ignore = 1;
 static const long asn_VAL_154_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_HandoverRequestIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_135_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_135_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_135_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_136_ASN_NGAP_id_HandoverType },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_136_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_HandoverType },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_136_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_137_ASN_NGAP_id_Cause },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_137_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_Cause },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_137_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_138_ASN_NGAP_id_UEAggregateMaximumBitRate },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_138_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UEAggregateMaximumBitRate },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_138_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_139_ASN_NGAP_id_CoreNetworkAssistanceInformationForInactive },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_139_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CoreNetworkAssistanceInformationForInactive },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_139_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_140_ASN_NGAP_id_UESecurityCapabilities },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_140_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UESecurityCapabilities },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_140_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_141_ASN_NGAP_id_SecurityContext },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_141_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_SecurityContext },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_141_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_142_ASN_NGAP_id_NewSecurityContextInd },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_142_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_NewSecurityContextInd },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_142_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_143_ASN_NGAP_id_NASC },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_143_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_NAS_PDU },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_143_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_144_ASN_NGAP_id_PDUSessionResourceSetupListHOReq },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_144_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceSetupListHOReq },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_144_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_145_ASN_NGAP_id_AllowedNSSAI },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_145_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AllowedNSSAI },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_145_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_146_ASN_NGAP_id_TraceActivation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_146_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_TraceActivation },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_146_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_147_ASN_NGAP_id_MaskedIMEISV },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_147_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_MaskedIMEISV },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_147_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_148_ASN_NGAP_id_SourceToTarget_TransparentContainer },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_148_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_SourceToTarget_TransparentContainer },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_148_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_149_ASN_NGAP_id_MobilityRestrictionList },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_149_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_MobilityRestrictionList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_149_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_150_ASN_NGAP_id_LocationReportingRequestType },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_150_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_LocationReportingRequestType },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_150_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_151_ASN_NGAP_id_RRCInactiveTransitionReportRequest },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_151_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RRCInactiveTransitionReportRequest },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_151_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_152_ASN_NGAP_id_GUAMI },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_152_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_GUAMI },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_152_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_153_ASN_NGAP_id_RedirectionVoiceFallback },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_153_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RedirectionVoiceFallback },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_153_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_154_ASN_NGAP_id_CNAssistedRANTuning },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_154_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CNAssistedRANTuning },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_154_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_135_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_135_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_135_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_136_ASN_NGAP_id_HandoverType },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_136_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_HandoverType },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_136_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_137_ASN_NGAP_id_Cause },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_137_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_Cause },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_137_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_138_ASN_NGAP_id_UEAggregateMaximumBitRate },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_138_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UEAggregateMaximumBitRate },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_138_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_139_ASN_NGAP_id_CoreNetworkAssistanceInformationForInactive },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_139_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CoreNetworkAssistanceInformationForInactive },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_139_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_140_ASN_NGAP_id_UESecurityCapabilities },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_140_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UESecurityCapabilities },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_140_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_141_ASN_NGAP_id_SecurityContext },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_141_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_SecurityContext },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_141_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_142_ASN_NGAP_id_NewSecurityContextInd },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_142_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_NewSecurityContextInd },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_142_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_143_ASN_NGAP_id_NASC },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_143_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_NAS_PDU },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_143_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_144_ASN_NGAP_id_PDUSessionResourceSetupListHOReq },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_144_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceSetupListHOReq },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_144_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_145_ASN_NGAP_id_AllowedNSSAI },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_145_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AllowedNSSAI },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_145_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_146_ASN_NGAP_id_TraceActivation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_146_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_TraceActivation },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_146_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_147_ASN_NGAP_id_MaskedIMEISV },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_147_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_MaskedIMEISV },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_147_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_148_ASN_NGAP_id_SourceToTarget_TransparentContainer },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_148_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_SourceToTarget_TransparentContainer },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_148_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_149_ASN_NGAP_id_MobilityRestrictionList },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_149_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_MobilityRestrictionList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_149_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_150_ASN_NGAP_id_LocationReportingRequestType },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_150_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_LocationReportingRequestType },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_150_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_151_ASN_NGAP_id_RRCInactiveTransitionReportRequest },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_151_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RRCInactiveTransitionReportRequest },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_151_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_152_ASN_NGAP_id_GUAMI },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_152_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_GUAMI },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_152_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_153_ASN_NGAP_id_RedirectionVoiceFallback },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_153_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RedirectionVoiceFallback },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_153_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_154_ASN_NGAP_id_CNAssistedRANTuning },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_154_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CNAssistedRANTuning },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_154_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_HandoverRequestIEs_1[] = {
 	{ 20, 4, asn_IOS_ASN_NGAP_HandoverRequestIEs_1_rows }
@@ -1231,30 +1231,30 @@ static const long asn_VAL_160_ASN_NGAP_id_CriticalityDiagnostics = 19;
 static const long asn_VAL_160_ASN_NGAP_ignore = 1;
 static const long asn_VAL_160_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_HandoverRequestAcknowledgeIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_155_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_155_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_155_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_156_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_156_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_156_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_157_ASN_NGAP_id_PDUSessionResourceAdmittedList },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_157_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceAdmittedList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_157_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_158_ASN_NGAP_id_PDUSessionResourceFailedToSetupListHOAck },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_158_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceFailedToSetupListHOAck },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_158_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_159_ASN_NGAP_id_TargetToSource_TransparentContainer },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_159_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_TargetToSource_TransparentContainer },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_159_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_160_ASN_NGAP_id_CriticalityDiagnostics },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_160_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_160_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_155_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_155_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_155_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_156_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_156_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_156_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_157_ASN_NGAP_id_PDUSessionResourceAdmittedList },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_157_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceAdmittedList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_157_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_158_ASN_NGAP_id_PDUSessionResourceFailedToSetupListHOAck },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_158_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceFailedToSetupListHOAck },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_158_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_159_ASN_NGAP_id_TargetToSource_TransparentContainer },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_159_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_TargetToSource_TransparentContainer },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_159_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_160_ASN_NGAP_id_CriticalityDiagnostics },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_160_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_160_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_HandoverRequestAcknowledgeIEs_1[] = {
 	{ 6, 4, asn_IOS_ASN_NGAP_HandoverRequestAcknowledgeIEs_1_rows }
@@ -1269,18 +1269,18 @@ static const long asn_VAL_163_ASN_NGAP_id_CriticalityDiagnostics = 19;
 static const long asn_VAL_163_ASN_NGAP_ignore = 1;
 static const long asn_VAL_163_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_HandoverFailureIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_161_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_161_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_161_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_162_ASN_NGAP_id_Cause },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_162_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_Cause },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_162_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_163_ASN_NGAP_id_CriticalityDiagnostics },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_163_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_163_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_161_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_161_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_161_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_162_ASN_NGAP_id_Cause },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_162_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_Cause },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_162_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_163_ASN_NGAP_id_CriticalityDiagnostics },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_163_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_163_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_HandoverFailureIEs_1[] = {
 	{ 3, 4, asn_IOS_ASN_NGAP_HandoverFailureIEs_1_rows }
@@ -1295,18 +1295,18 @@ static const long asn_VAL_166_ASN_NGAP_id_UserLocationInformation = 121;
 static const long asn_VAL_166_ASN_NGAP_ignore = 1;
 static const long asn_VAL_166_ASN_NGAP_mandatory = 2;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_HandoverNotifyIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_164_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_164_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_164_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_165_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_165_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_165_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_166_ASN_NGAP_id_UserLocationInformation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_166_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UserLocationInformation },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_166_ASN_NGAP_mandatory }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_164_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_164_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_164_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_165_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_165_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_165_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_166_ASN_NGAP_id_UserLocationInformation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_166_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UserLocationInformation },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_166_ASN_NGAP_mandatory }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_HandoverNotifyIEs_1[] = {
 	{ 3, 4, asn_IOS_ASN_NGAP_HandoverNotifyIEs_1_rows }
@@ -1330,30 +1330,30 @@ static const long asn_VAL_172_ASN_NGAP_id_PDUSessionResourceFailedToSetupListPSR
 static const long asn_VAL_172_ASN_NGAP_ignore = 1;
 static const long asn_VAL_172_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_PathSwitchRequestIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_167_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_167_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_167_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_168_ASN_NGAP_id_SourceAMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_168_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_168_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_169_ASN_NGAP_id_UserLocationInformation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_169_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UserLocationInformation },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_169_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_170_ASN_NGAP_id_UESecurityCapabilities },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_170_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UESecurityCapabilities },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_170_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_171_ASN_NGAP_id_PDUSessionResourceToBeSwitchedDLList },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_171_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceToBeSwitchedDLList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_171_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_172_ASN_NGAP_id_PDUSessionResourceFailedToSetupListPSReq },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_172_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceFailedToSetupListPSReq },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_172_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_167_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_167_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_167_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_168_ASN_NGAP_id_SourceAMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_168_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_168_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_169_ASN_NGAP_id_UserLocationInformation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_169_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UserLocationInformation },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_169_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_170_ASN_NGAP_id_UESecurityCapabilities },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_170_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UESecurityCapabilities },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_170_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_171_ASN_NGAP_id_PDUSessionResourceToBeSwitchedDLList },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_171_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceToBeSwitchedDLList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_171_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_172_ASN_NGAP_id_PDUSessionResourceFailedToSetupListPSReq },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_172_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceFailedToSetupListPSReq },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_172_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_PathSwitchRequestIEs_1[] = {
 	{ 6, 4, asn_IOS_ASN_NGAP_PathSwitchRequestIEs_1_rows }
@@ -1398,58 +1398,58 @@ static const long asn_VAL_185_ASN_NGAP_id_CNAssistedRANTuning = 165;
 static const long asn_VAL_185_ASN_NGAP_ignore = 1;
 static const long asn_VAL_185_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_PathSwitchRequestAcknowledgeIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_173_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_173_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_173_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_174_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_174_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_174_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_175_ASN_NGAP_id_UESecurityCapabilities },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_175_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UESecurityCapabilities },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_175_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_176_ASN_NGAP_id_SecurityContext },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_176_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_SecurityContext },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_176_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_177_ASN_NGAP_id_NewSecurityContextInd },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_177_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_NewSecurityContextInd },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_177_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_178_ASN_NGAP_id_PDUSessionResourceSwitchedList },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_178_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceSwitchedList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_178_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_179_ASN_NGAP_id_PDUSessionResourceReleasedListPSAck },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_179_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceReleasedListPSAck },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_179_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_180_ASN_NGAP_id_AllowedNSSAI },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_180_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AllowedNSSAI },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_180_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_181_ASN_NGAP_id_CoreNetworkAssistanceInformationForInactive },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_181_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CoreNetworkAssistanceInformationForInactive },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_181_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_182_ASN_NGAP_id_RRCInactiveTransitionReportRequest },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_182_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RRCInactiveTransitionReportRequest },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_182_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_183_ASN_NGAP_id_CriticalityDiagnostics },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_183_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_183_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_184_ASN_NGAP_id_RedirectionVoiceFallback },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_184_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RedirectionVoiceFallback },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_184_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_185_ASN_NGAP_id_CNAssistedRANTuning },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_185_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CNAssistedRANTuning },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_185_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_173_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_173_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_173_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_174_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_174_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_174_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_175_ASN_NGAP_id_UESecurityCapabilities },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_175_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UESecurityCapabilities },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_175_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_176_ASN_NGAP_id_SecurityContext },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_176_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_SecurityContext },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_176_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_177_ASN_NGAP_id_NewSecurityContextInd },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_177_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_NewSecurityContextInd },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_177_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_178_ASN_NGAP_id_PDUSessionResourceSwitchedList },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_178_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceSwitchedList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_178_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_179_ASN_NGAP_id_PDUSessionResourceReleasedListPSAck },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_179_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceReleasedListPSAck },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_179_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_180_ASN_NGAP_id_AllowedNSSAI },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_180_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AllowedNSSAI },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_180_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_181_ASN_NGAP_id_CoreNetworkAssistanceInformationForInactive },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_181_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CoreNetworkAssistanceInformationForInactive },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_181_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_182_ASN_NGAP_id_RRCInactiveTransitionReportRequest },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_182_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RRCInactiveTransitionReportRequest },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_182_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_183_ASN_NGAP_id_CriticalityDiagnostics },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_183_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_183_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_184_ASN_NGAP_id_RedirectionVoiceFallback },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_184_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RedirectionVoiceFallback },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_184_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_185_ASN_NGAP_id_CNAssistedRANTuning },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_185_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CNAssistedRANTuning },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_185_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_PathSwitchRequestAcknowledgeIEs_1[] = {
 	{ 13, 4, asn_IOS_ASN_NGAP_PathSwitchRequestAcknowledgeIEs_1_rows }
@@ -1467,22 +1467,22 @@ static const long asn_VAL_189_ASN_NGAP_id_CriticalityDiagnostics = 19;
 static const long asn_VAL_189_ASN_NGAP_ignore = 1;
 static const long asn_VAL_189_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_PathSwitchRequestFailureIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_186_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_186_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_186_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_187_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_187_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_187_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_188_ASN_NGAP_id_PDUSessionResourceReleasedListPSFail },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_188_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceReleasedListPSFail },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_188_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_189_ASN_NGAP_id_CriticalityDiagnostics },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_189_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_189_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_186_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_186_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_186_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_187_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_187_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_187_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_188_ASN_NGAP_id_PDUSessionResourceReleasedListPSFail },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_188_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceReleasedListPSFail },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_188_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_189_ASN_NGAP_id_CriticalityDiagnostics },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_189_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_189_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_PathSwitchRequestFailureIEs_1[] = {
 	{ 4, 4, asn_IOS_ASN_NGAP_PathSwitchRequestFailureIEs_1_rows }
@@ -1497,18 +1497,18 @@ static const long asn_VAL_192_ASN_NGAP_id_Cause = 15;
 static const long asn_VAL_192_ASN_NGAP_ignore = 1;
 static const long asn_VAL_192_ASN_NGAP_mandatory = 2;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_HandoverCancelIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_190_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_190_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_190_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_191_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_191_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_191_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_192_ASN_NGAP_id_Cause },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_192_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_Cause },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_192_ASN_NGAP_mandatory }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_190_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_190_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_190_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_191_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_191_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_191_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_192_ASN_NGAP_id_Cause },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_192_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_Cause },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_192_ASN_NGAP_mandatory }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_HandoverCancelIEs_1[] = {
 	{ 3, 4, asn_IOS_ASN_NGAP_HandoverCancelIEs_1_rows }
@@ -1523,18 +1523,18 @@ static const long asn_VAL_195_ASN_NGAP_id_CriticalityDiagnostics = 19;
 static const long asn_VAL_195_ASN_NGAP_ignore = 1;
 static const long asn_VAL_195_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_HandoverCancelAcknowledgeIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_193_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_193_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_193_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_194_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_194_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_194_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_195_ASN_NGAP_id_CriticalityDiagnostics },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_195_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_195_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_193_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_193_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_193_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_194_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_194_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_194_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_195_ASN_NGAP_id_CriticalityDiagnostics },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_195_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_195_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_HandoverCancelAcknowledgeIEs_1[] = {
 	{ 3, 4, asn_IOS_ASN_NGAP_HandoverCancelAcknowledgeIEs_1_rows }
@@ -1549,18 +1549,18 @@ static const long asn_VAL_198_ASN_NGAP_id_RANStatusTransfer_TransparentContainer
 static const long asn_VAL_198_ASN_NGAP_reject = 0;
 static const long asn_VAL_198_ASN_NGAP_mandatory = 2;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_UplinkRANStatusTransferIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_196_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_196_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_196_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_197_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_197_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_197_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_198_ASN_NGAP_id_RANStatusTransfer_TransparentContainer },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_198_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RANStatusTransfer_TransparentContainer },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_198_ASN_NGAP_mandatory }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_196_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_196_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_196_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_197_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_197_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_197_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_198_ASN_NGAP_id_RANStatusTransfer_TransparentContainer },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_198_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RANStatusTransfer_TransparentContainer },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_198_ASN_NGAP_mandatory }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_UplinkRANStatusTransferIEs_1[] = {
 	{ 3, 4, asn_IOS_ASN_NGAP_UplinkRANStatusTransferIEs_1_rows }
@@ -1575,18 +1575,18 @@ static const long asn_VAL_201_ASN_NGAP_id_RANStatusTransfer_TransparentContainer
 static const long asn_VAL_201_ASN_NGAP_reject = 0;
 static const long asn_VAL_201_ASN_NGAP_mandatory = 2;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_DownlinkRANStatusTransferIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_199_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_199_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_199_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_200_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_200_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_200_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_201_ASN_NGAP_id_RANStatusTransfer_TransparentContainer },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_201_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RANStatusTransfer_TransparentContainer },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_201_ASN_NGAP_mandatory }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_199_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_199_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_199_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_200_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_200_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_200_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_201_ASN_NGAP_id_RANStatusTransfer_TransparentContainer },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_201_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RANStatusTransfer_TransparentContainer },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_201_ASN_NGAP_mandatory }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_DownlinkRANStatusTransferIEs_1[] = {
 	{ 3, 4, asn_IOS_ASN_NGAP_DownlinkRANStatusTransferIEs_1_rows }
@@ -1613,34 +1613,34 @@ static const long asn_VAL_208_ASN_NGAP_id_AssistanceDataForPaging = 11;
 static const long asn_VAL_208_ASN_NGAP_ignore = 1;
 static const long asn_VAL_208_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_PagingIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_202_ASN_NGAP_id_UEPagingIdentity },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_202_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UEPagingIdentity },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_202_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_203_ASN_NGAP_id_PagingDRX },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_203_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PagingDRX },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_203_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_204_ASN_NGAP_id_TAIListForPaging },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_204_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_TAIListForPaging },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_204_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_205_ASN_NGAP_id_PagingPriority },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_205_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PagingPriority },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_205_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_206_ASN_NGAP_id_UERadioCapabilityForPaging },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_206_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UERadioCapabilityForPaging },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_206_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_207_ASN_NGAP_id_PagingOrigin },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_207_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PagingOrigin },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_207_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_208_ASN_NGAP_id_AssistanceDataForPaging },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_208_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AssistanceDataForPaging },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_208_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_202_ASN_NGAP_id_UEPagingIdentity },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_202_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UEPagingIdentity },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_202_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_203_ASN_NGAP_id_PagingDRX },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_203_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PagingDRX },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_203_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_204_ASN_NGAP_id_TAIListForPaging },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_204_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_TAIListForPaging },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_204_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_205_ASN_NGAP_id_PagingPriority },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_205_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PagingPriority },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_205_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_206_ASN_NGAP_id_UERadioCapabilityForPaging },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_206_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UERadioCapabilityForPaging },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_206_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_207_ASN_NGAP_id_PagingOrigin },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_207_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PagingOrigin },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_207_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_208_ASN_NGAP_id_AssistanceDataForPaging },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_208_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AssistanceDataForPaging },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_208_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_PagingIEs_1[] = {
 	{ 7, 4, asn_IOS_ASN_NGAP_PagingIEs_1_rows }
@@ -1676,46 +1676,46 @@ static const long asn_VAL_218_ASN_NGAP_id_SelectedPLMNIdentity = 174;
 static const long asn_VAL_218_ASN_NGAP_ignore = 1;
 static const long asn_VAL_218_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_InitialUEMessage_IEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_209_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_209_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_209_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_210_ASN_NGAP_id_NAS_PDU },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_210_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_NAS_PDU },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_210_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_211_ASN_NGAP_id_UserLocationInformation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_211_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UserLocationInformation },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_211_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_212_ASN_NGAP_id_RRCEstablishmentCause },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_212_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RRCEstablishmentCause },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_212_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_213_ASN_NGAP_id_FiveG_S_TMSI },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_213_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_FiveG_S_TMSI },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_213_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_214_ASN_NGAP_id_AMFSetID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_214_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMFSetID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_214_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_215_ASN_NGAP_id_UEContextRequest },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_215_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UEContextRequest },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_215_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_216_ASN_NGAP_id_AllowedNSSAI },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_216_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AllowedNSSAI },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_216_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_217_ASN_NGAP_id_SourceToTarget_AMFInformationReroute },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_217_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_SourceToTarget_AMFInformationReroute },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_217_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_218_ASN_NGAP_id_SelectedPLMNIdentity },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_218_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PLMNIdentity },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_218_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_209_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_209_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_209_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_210_ASN_NGAP_id_NAS_PDU },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_210_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_NAS_PDU },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_210_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_211_ASN_NGAP_id_UserLocationInformation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_211_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UserLocationInformation },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_211_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_212_ASN_NGAP_id_RRCEstablishmentCause },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_212_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RRCEstablishmentCause },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_212_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_213_ASN_NGAP_id_FiveG_S_TMSI },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_213_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_FiveG_S_TMSI },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_213_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_214_ASN_NGAP_id_AMFSetID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_214_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMFSetID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_214_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_215_ASN_NGAP_id_UEContextRequest },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_215_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UEContextRequest },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_215_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_216_ASN_NGAP_id_AllowedNSSAI },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_216_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AllowedNSSAI },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_216_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_217_ASN_NGAP_id_SourceToTarget_AMFInformationReroute },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_217_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_SourceToTarget_AMFInformationReroute },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_217_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_218_ASN_NGAP_id_SelectedPLMNIdentity },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_218_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PLMNIdentity },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_218_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_InitialUEMessage_IEs_1[] = {
 	{ 10, 4, asn_IOS_ASN_NGAP_InitialUEMessage_IEs_1_rows }
@@ -1748,42 +1748,42 @@ static const long asn_VAL_227_ASN_NGAP_id_AllowedNSSAI = 0;
 static const long asn_VAL_227_ASN_NGAP_reject = 0;
 static const long asn_VAL_227_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_DownlinkNASTransport_IEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_219_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_219_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_219_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_220_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_220_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_220_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_221_ASN_NGAP_id_OldAMF },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_221_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMFName },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_221_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_222_ASN_NGAP_id_RANPagingPriority },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_222_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RANPagingPriority },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_222_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_223_ASN_NGAP_id_NAS_PDU },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_223_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_NAS_PDU },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_223_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_224_ASN_NGAP_id_MobilityRestrictionList },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_224_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_MobilityRestrictionList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_224_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_225_ASN_NGAP_id_IndexToRFSP },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_225_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_IndexToRFSP },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_225_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_226_ASN_NGAP_id_UEAggregateMaximumBitRate },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_226_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UEAggregateMaximumBitRate },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_226_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_227_ASN_NGAP_id_AllowedNSSAI },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_227_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AllowedNSSAI },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_227_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_219_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_219_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_219_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_220_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_220_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_220_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_221_ASN_NGAP_id_OldAMF },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_221_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMFName },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_221_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_222_ASN_NGAP_id_RANPagingPriority },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_222_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RANPagingPriority },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_222_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_223_ASN_NGAP_id_NAS_PDU },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_223_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_NAS_PDU },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_223_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_224_ASN_NGAP_id_MobilityRestrictionList },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_224_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_MobilityRestrictionList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_224_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_225_ASN_NGAP_id_IndexToRFSP },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_225_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_IndexToRFSP },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_225_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_226_ASN_NGAP_id_UEAggregateMaximumBitRate },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_226_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UEAggregateMaximumBitRate },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_226_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_227_ASN_NGAP_id_AllowedNSSAI },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_227_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AllowedNSSAI },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_227_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_DownlinkNASTransport_IEs_1[] = {
 	{ 9, 4, asn_IOS_ASN_NGAP_DownlinkNASTransport_IEs_1_rows }
@@ -1801,22 +1801,22 @@ static const long asn_VAL_231_ASN_NGAP_id_UserLocationInformation = 121;
 static const long asn_VAL_231_ASN_NGAP_ignore = 1;
 static const long asn_VAL_231_ASN_NGAP_mandatory = 2;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_UplinkNASTransport_IEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_228_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_228_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_228_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_229_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_229_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_229_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_230_ASN_NGAP_id_NAS_PDU },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_230_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_NAS_PDU },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_230_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_231_ASN_NGAP_id_UserLocationInformation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_231_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UserLocationInformation },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_231_ASN_NGAP_mandatory }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_228_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_228_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_228_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_229_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_229_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_229_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_230_ASN_NGAP_id_NAS_PDU },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_230_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_NAS_PDU },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_230_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_231_ASN_NGAP_id_UserLocationInformation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_231_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UserLocationInformation },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_231_ASN_NGAP_mandatory }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_UplinkNASTransport_IEs_1[] = {
 	{ 4, 4, asn_IOS_ASN_NGAP_UplinkNASTransport_IEs_1_rows }
@@ -1834,22 +1834,22 @@ static const long asn_VAL_235_ASN_NGAP_id_Cause = 15;
 static const long asn_VAL_235_ASN_NGAP_ignore = 1;
 static const long asn_VAL_235_ASN_NGAP_mandatory = 2;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_NASNonDeliveryIndication_IEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_232_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_232_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_232_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_233_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_233_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_233_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_234_ASN_NGAP_id_NAS_PDU },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_234_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_NAS_PDU },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_234_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_235_ASN_NGAP_id_Cause },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_235_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_Cause },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_235_ASN_NGAP_mandatory }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_232_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_232_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_232_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_233_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_233_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_233_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_234_ASN_NGAP_id_NAS_PDU },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_234_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_NAS_PDU },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_234_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_235_ASN_NGAP_id_Cause },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_235_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_Cause },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_235_ASN_NGAP_mandatory }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_NASNonDeliveryIndication_IEs_1[] = {
 	{ 4, 4, asn_IOS_ASN_NGAP_NASNonDeliveryIndication_IEs_1_rows }
@@ -1873,30 +1873,30 @@ static const long asn_VAL_241_ASN_NGAP_id_SourceToTarget_AMFInformationReroute =
 static const long asn_VAL_241_ASN_NGAP_ignore = 1;
 static const long asn_VAL_241_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_RerouteNASRequest_IEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_236_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_236_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_236_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_237_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_237_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_237_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_238_ASN_NGAP_id_NGAP_Message },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_238_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_OCTET_STRING },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_238_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_239_ASN_NGAP_id_AMFSetID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_239_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMFSetID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_239_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_240_ASN_NGAP_id_AllowedNSSAI },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_240_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AllowedNSSAI },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_240_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_241_ASN_NGAP_id_SourceToTarget_AMFInformationReroute },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_241_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_SourceToTarget_AMFInformationReroute },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_241_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_236_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_236_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_236_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_237_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_237_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_237_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_238_ASN_NGAP_id_NGAP_Message },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_238_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_OCTET_STRING },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_238_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_239_ASN_NGAP_id_AMFSetID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_239_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMFSetID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_239_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_240_ASN_NGAP_id_AllowedNSSAI },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_240_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AllowedNSSAI },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_240_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_241_ASN_NGAP_id_SourceToTarget_AMFInformationReroute },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_241_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_SourceToTarget_AMFInformationReroute },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_241_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_RerouteNASRequest_IEs_1[] = {
 	{ 6, 4, asn_IOS_ASN_NGAP_RerouteNASRequest_IEs_1_rows }
@@ -1917,26 +1917,26 @@ static const long asn_VAL_246_ASN_NGAP_id_UERetentionInformation = 147;
 static const long asn_VAL_246_ASN_NGAP_ignore = 1;
 static const long asn_VAL_246_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_NGSetupRequestIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_242_ASN_NGAP_id_GlobalRANNodeID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_242_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_GlobalRANNodeID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_242_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_243_ASN_NGAP_id_RANNodeName },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_243_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RANNodeName },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_243_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_244_ASN_NGAP_id_SupportedTAList },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_244_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_SupportedTAList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_244_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_245_ASN_NGAP_id_DefaultPagingDRX },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_245_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PagingDRX },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_245_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_246_ASN_NGAP_id_UERetentionInformation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_246_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UERetentionInformation },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_246_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_242_ASN_NGAP_id_GlobalRANNodeID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_242_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_GlobalRANNodeID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_242_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_243_ASN_NGAP_id_RANNodeName },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_243_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RANNodeName },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_243_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_244_ASN_NGAP_id_SupportedTAList },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_244_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_SupportedTAList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_244_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_245_ASN_NGAP_id_DefaultPagingDRX },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_245_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PagingDRX },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_245_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_246_ASN_NGAP_id_UERetentionInformation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_246_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UERetentionInformation },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_246_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_NGSetupRequestIEs_1[] = {
 	{ 5, 4, asn_IOS_ASN_NGAP_NGSetupRequestIEs_1_rows }
@@ -1960,30 +1960,30 @@ static const long asn_VAL_252_ASN_NGAP_id_UERetentionInformation = 147;
 static const long asn_VAL_252_ASN_NGAP_ignore = 1;
 static const long asn_VAL_252_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_NGSetupResponseIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_247_ASN_NGAP_id_AMFName },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_247_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMFName },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_247_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_248_ASN_NGAP_id_ServedGUAMIList },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_248_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_ServedGUAMIList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_248_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_249_ASN_NGAP_id_RelativeAMFCapacity },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_249_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RelativeAMFCapacity },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_249_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_250_ASN_NGAP_id_PLMNSupportList },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_250_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PLMNSupportList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_250_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_251_ASN_NGAP_id_CriticalityDiagnostics },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_251_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_251_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_252_ASN_NGAP_id_UERetentionInformation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_252_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UERetentionInformation },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_252_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_247_ASN_NGAP_id_AMFName },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_247_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMFName },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_247_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_248_ASN_NGAP_id_ServedGUAMIList },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_248_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_ServedGUAMIList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_248_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_249_ASN_NGAP_id_RelativeAMFCapacity },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_249_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RelativeAMFCapacity },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_249_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_250_ASN_NGAP_id_PLMNSupportList },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_250_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PLMNSupportList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_250_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_251_ASN_NGAP_id_CriticalityDiagnostics },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_251_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_251_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_252_ASN_NGAP_id_UERetentionInformation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_252_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UERetentionInformation },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_252_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_NGSetupResponseIEs_1[] = {
 	{ 6, 4, asn_IOS_ASN_NGAP_NGSetupResponseIEs_1_rows }
@@ -1998,18 +1998,18 @@ static const long asn_VAL_255_ASN_NGAP_id_CriticalityDiagnostics = 19;
 static const long asn_VAL_255_ASN_NGAP_ignore = 1;
 static const long asn_VAL_255_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_NGSetupFailureIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_253_ASN_NGAP_id_Cause },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_253_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_Cause },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_253_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_254_ASN_NGAP_id_TimeToWait },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_254_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_TimeToWait },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_254_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_255_ASN_NGAP_id_CriticalityDiagnostics },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_255_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_255_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_253_ASN_NGAP_id_Cause },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_253_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_Cause },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_253_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_254_ASN_NGAP_id_TimeToWait },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_254_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_TimeToWait },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_254_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_255_ASN_NGAP_id_CriticalityDiagnostics },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_255_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_255_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_NGSetupFailureIEs_1[] = {
 	{ 3, 4, asn_IOS_ASN_NGAP_NGSetupFailureIEs_1_rows }
@@ -2030,26 +2030,26 @@ static const long asn_VAL_260_ASN_NGAP_id_NGRAN_TNLAssociationToRemoveList = 167
 static const long asn_VAL_260_ASN_NGAP_reject = 0;
 static const long asn_VAL_260_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_RANConfigurationUpdateIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_256_ASN_NGAP_id_RANNodeName },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_256_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RANNodeName },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_256_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_257_ASN_NGAP_id_SupportedTAList },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_257_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_SupportedTAList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_257_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_258_ASN_NGAP_id_DefaultPagingDRX },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_258_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PagingDRX },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_258_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_259_ASN_NGAP_id_GlobalRANNodeID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_259_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_GlobalRANNodeID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_259_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_260_ASN_NGAP_id_NGRAN_TNLAssociationToRemoveList },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_260_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_NGRAN_TNLAssociationToRemoveList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_260_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_256_ASN_NGAP_id_RANNodeName },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_256_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RANNodeName },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_256_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_257_ASN_NGAP_id_SupportedTAList },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_257_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_SupportedTAList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_257_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_258_ASN_NGAP_id_DefaultPagingDRX },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_258_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PagingDRX },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_258_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_259_ASN_NGAP_id_GlobalRANNodeID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_259_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_GlobalRANNodeID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_259_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_260_ASN_NGAP_id_NGRAN_TNLAssociationToRemoveList },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_260_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_NGRAN_TNLAssociationToRemoveList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_260_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_RANConfigurationUpdateIEs_1[] = {
 	{ 5, 4, asn_IOS_ASN_NGAP_RANConfigurationUpdateIEs_1_rows }
@@ -2058,10 +2058,10 @@ static const long asn_VAL_261_ASN_NGAP_id_CriticalityDiagnostics = 19;
 static const long asn_VAL_261_ASN_NGAP_ignore = 1;
 static const long asn_VAL_261_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_RANConfigurationUpdateAcknowledgeIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_261_ASN_NGAP_id_CriticalityDiagnostics },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_261_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_261_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_261_ASN_NGAP_id_CriticalityDiagnostics },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_261_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_261_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_RANConfigurationUpdateAcknowledgeIEs_1[] = {
 	{ 1, 4, asn_IOS_ASN_NGAP_RANConfigurationUpdateAcknowledgeIEs_1_rows }
@@ -2076,18 +2076,18 @@ static const long asn_VAL_264_ASN_NGAP_id_CriticalityDiagnostics = 19;
 static const long asn_VAL_264_ASN_NGAP_ignore = 1;
 static const long asn_VAL_264_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_RANConfigurationUpdateFailureIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_262_ASN_NGAP_id_Cause },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_262_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_Cause },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_262_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_263_ASN_NGAP_id_TimeToWait },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_263_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_TimeToWait },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_263_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_264_ASN_NGAP_id_CriticalityDiagnostics },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_264_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_264_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_262_ASN_NGAP_id_Cause },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_262_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_Cause },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_262_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_263_ASN_NGAP_id_TimeToWait },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_263_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_TimeToWait },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_263_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_264_ASN_NGAP_id_CriticalityDiagnostics },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_264_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_264_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_RANConfigurationUpdateFailureIEs_1[] = {
 	{ 3, 4, asn_IOS_ASN_NGAP_RANConfigurationUpdateFailureIEs_1_rows }
@@ -2114,34 +2114,34 @@ static const long asn_VAL_271_ASN_NGAP_id_AMF_TNLAssociationToUpdateList = 8;
 static const long asn_VAL_271_ASN_NGAP_ignore = 1;
 static const long asn_VAL_271_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_AMFConfigurationUpdateIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_265_ASN_NGAP_id_AMFName },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_265_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMFName },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_265_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_266_ASN_NGAP_id_ServedGUAMIList },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_266_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_ServedGUAMIList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_266_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_267_ASN_NGAP_id_RelativeAMFCapacity },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_267_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RelativeAMFCapacity },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_267_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_268_ASN_NGAP_id_PLMNSupportList },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_268_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PLMNSupportList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_268_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_269_ASN_NGAP_id_AMF_TNLAssociationToAddList },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_269_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_TNLAssociationToAddList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_269_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_270_ASN_NGAP_id_AMF_TNLAssociationToRemoveList },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_270_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_TNLAssociationToRemoveList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_270_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_271_ASN_NGAP_id_AMF_TNLAssociationToUpdateList },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_271_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_TNLAssociationToUpdateList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_271_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_265_ASN_NGAP_id_AMFName },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_265_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMFName },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_265_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_266_ASN_NGAP_id_ServedGUAMIList },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_266_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_ServedGUAMIList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_266_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_267_ASN_NGAP_id_RelativeAMFCapacity },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_267_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RelativeAMFCapacity },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_267_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_268_ASN_NGAP_id_PLMNSupportList },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_268_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PLMNSupportList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_268_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_269_ASN_NGAP_id_AMF_TNLAssociationToAddList },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_269_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_TNLAssociationToAddList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_269_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_270_ASN_NGAP_id_AMF_TNLAssociationToRemoveList },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_270_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_TNLAssociationToRemoveList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_270_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_271_ASN_NGAP_id_AMF_TNLAssociationToUpdateList },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_271_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_TNLAssociationToUpdateList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_271_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_AMFConfigurationUpdateIEs_1[] = {
 	{ 7, 4, asn_IOS_ASN_NGAP_AMFConfigurationUpdateIEs_1_rows }
@@ -2156,18 +2156,18 @@ static const long asn_VAL_274_ASN_NGAP_id_CriticalityDiagnostics = 19;
 static const long asn_VAL_274_ASN_NGAP_ignore = 1;
 static const long asn_VAL_274_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_AMFConfigurationUpdateAcknowledgeIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_272_ASN_NGAP_id_AMF_TNLAssociationSetupList },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_272_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_TNLAssociationSetupList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_272_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_273_ASN_NGAP_id_AMF_TNLAssociationFailedToSetupList },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_273_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_TNLAssociationList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_273_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_274_ASN_NGAP_id_CriticalityDiagnostics },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_274_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_274_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_272_ASN_NGAP_id_AMF_TNLAssociationSetupList },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_272_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_TNLAssociationSetupList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_272_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_273_ASN_NGAP_id_AMF_TNLAssociationFailedToSetupList },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_273_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_TNLAssociationList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_273_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_274_ASN_NGAP_id_CriticalityDiagnostics },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_274_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_274_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_AMFConfigurationUpdateAcknowledgeIEs_1[] = {
 	{ 3, 4, asn_IOS_ASN_NGAP_AMFConfigurationUpdateAcknowledgeIEs_1_rows }
@@ -2182,18 +2182,18 @@ static const long asn_VAL_277_ASN_NGAP_id_CriticalityDiagnostics = 19;
 static const long asn_VAL_277_ASN_NGAP_ignore = 1;
 static const long asn_VAL_277_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_AMFConfigurationUpdateFailureIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_275_ASN_NGAP_id_Cause },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_275_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_Cause },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_275_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_276_ASN_NGAP_id_TimeToWait },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_276_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_TimeToWait },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_276_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_277_ASN_NGAP_id_CriticalityDiagnostics },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_277_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_277_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_275_ASN_NGAP_id_Cause },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_275_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_Cause },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_275_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_276_ASN_NGAP_id_TimeToWait },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_276_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_TimeToWait },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_276_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_277_ASN_NGAP_id_CriticalityDiagnostics },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_277_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_277_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_AMFConfigurationUpdateFailureIEs_1[] = {
 	{ 3, 4, asn_IOS_ASN_NGAP_AMFConfigurationUpdateFailureIEs_1_rows }
@@ -2202,10 +2202,10 @@ static const long asn_VAL_278_ASN_NGAP_id_UnavailableGUAMIList = 120;
 static const long asn_VAL_278_ASN_NGAP_reject = 0;
 static const long asn_VAL_278_ASN_NGAP_mandatory = 2;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_AMFStatusIndicationIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_278_ASN_NGAP_id_UnavailableGUAMIList },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_278_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UnavailableGUAMIList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_278_ASN_NGAP_mandatory }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_278_ASN_NGAP_id_UnavailableGUAMIList },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_278_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UnavailableGUAMIList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_278_ASN_NGAP_mandatory }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_AMFStatusIndicationIEs_1[] = {
 	{ 1, 4, asn_IOS_ASN_NGAP_AMFStatusIndicationIEs_1_rows }
@@ -2217,14 +2217,14 @@ static const long asn_VAL_280_ASN_NGAP_id_ResetType = 88;
 static const long asn_VAL_280_ASN_NGAP_reject = 0;
 static const long asn_VAL_280_ASN_NGAP_mandatory = 2;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_NGResetIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_279_ASN_NGAP_id_Cause },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_279_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_Cause },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_279_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_280_ASN_NGAP_id_ResetType },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_280_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_ResetType },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_280_ASN_NGAP_mandatory }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_279_ASN_NGAP_id_Cause },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_279_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_Cause },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_279_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_280_ASN_NGAP_id_ResetType },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_280_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_ResetType },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_280_ASN_NGAP_mandatory }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_NGResetIEs_1[] = {
 	{ 2, 4, asn_IOS_ASN_NGAP_NGResetIEs_1_rows }
@@ -2236,14 +2236,14 @@ static const long asn_VAL_282_ASN_NGAP_id_CriticalityDiagnostics = 19;
 static const long asn_VAL_282_ASN_NGAP_ignore = 1;
 static const long asn_VAL_282_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_NGResetAcknowledgeIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_281_ASN_NGAP_id_UE_associatedLogicalNG_connectionList },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_281_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UE_associatedLogicalNG_connectionList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_281_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_282_ASN_NGAP_id_CriticalityDiagnostics },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_282_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_282_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_281_ASN_NGAP_id_UE_associatedLogicalNG_connectionList },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_281_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UE_associatedLogicalNG_connectionList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_281_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_282_ASN_NGAP_id_CriticalityDiagnostics },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_282_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_282_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_NGResetAcknowledgeIEs_1[] = {
 	{ 2, 4, asn_IOS_ASN_NGAP_NGResetAcknowledgeIEs_1_rows }
@@ -2261,22 +2261,22 @@ static const long asn_VAL_286_ASN_NGAP_id_CriticalityDiagnostics = 19;
 static const long asn_VAL_286_ASN_NGAP_ignore = 1;
 static const long asn_VAL_286_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_ErrorIndicationIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_283_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_283_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_283_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_284_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_284_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_284_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_285_ASN_NGAP_id_Cause },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_285_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_Cause },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_285_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_286_ASN_NGAP_id_CriticalityDiagnostics },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_286_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_286_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_283_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_283_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_283_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_284_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_284_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_284_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_285_ASN_NGAP_id_Cause },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_285_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_Cause },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_285_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_286_ASN_NGAP_id_CriticalityDiagnostics },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_286_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_286_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_ErrorIndicationIEs_1[] = {
 	{ 4, 4, asn_IOS_ASN_NGAP_ErrorIndicationIEs_1_rows }
@@ -2291,18 +2291,18 @@ static const long asn_VAL_289_ASN_NGAP_id_OverloadStartNSSAIList = 49;
 static const long asn_VAL_289_ASN_NGAP_ignore = 1;
 static const long asn_VAL_289_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_OverloadStartIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_287_ASN_NGAP_id_AMFOverloadResponse },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_287_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_OverloadResponse },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_287_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_288_ASN_NGAP_id_AMFTrafficLoadReductionIndication },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_288_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_TrafficLoadReductionIndication },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_288_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_289_ASN_NGAP_id_OverloadStartNSSAIList },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_289_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_OverloadStartNSSAIList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_289_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_287_ASN_NGAP_id_AMFOverloadResponse },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_287_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_OverloadResponse },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_287_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_288_ASN_NGAP_id_AMFTrafficLoadReductionIndication },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_288_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_TrafficLoadReductionIndication },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_288_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_289_ASN_NGAP_id_OverloadStartNSSAIList },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_289_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_OverloadStartNSSAIList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_289_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_OverloadStartIEs_1[] = {
 	{ 3, 4, asn_IOS_ASN_NGAP_OverloadStartIEs_1_rows }
@@ -2314,14 +2314,14 @@ static const long asn_VAL_291_ASN_NGAP_id_ENDC_SONConfigurationTransferUL = 158;
 static const long asn_VAL_291_ASN_NGAP_ignore = 1;
 static const long asn_VAL_291_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_UplinkRANConfigurationTransferIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_290_ASN_NGAP_id_SONConfigurationTransferUL },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_290_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_SONConfigurationTransfer },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_290_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_291_ASN_NGAP_id_ENDC_SONConfigurationTransferUL },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_291_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_EN_DCSONConfigurationTransfer },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_291_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_290_ASN_NGAP_id_SONConfigurationTransferUL },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_290_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_SONConfigurationTransfer },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_290_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_291_ASN_NGAP_id_ENDC_SONConfigurationTransferUL },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_291_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_EN_DCSONConfigurationTransfer },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_291_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_UplinkRANConfigurationTransferIEs_1[] = {
 	{ 2, 4, asn_IOS_ASN_NGAP_UplinkRANConfigurationTransferIEs_1_rows }
@@ -2333,14 +2333,14 @@ static const long asn_VAL_293_ASN_NGAP_id_ENDC_SONConfigurationTransferDL = 157;
 static const long asn_VAL_293_ASN_NGAP_ignore = 1;
 static const long asn_VAL_293_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_DownlinkRANConfigurationTransferIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_292_ASN_NGAP_id_SONConfigurationTransferDL },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_292_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_SONConfigurationTransfer },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_292_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_293_ASN_NGAP_id_ENDC_SONConfigurationTransferDL },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_293_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_EN_DCSONConfigurationTransfer },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_293_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_292_ASN_NGAP_id_SONConfigurationTransferDL },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_292_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_SONConfigurationTransfer },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_292_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_293_ASN_NGAP_id_ENDC_SONConfigurationTransferDL },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_293_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_EN_DCSONConfigurationTransfer },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_293_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_DownlinkRANConfigurationTransferIEs_1[] = {
 	{ 2, 4, asn_IOS_ASN_NGAP_DownlinkRANConfigurationTransferIEs_1_rows }
@@ -2379,50 +2379,50 @@ static const long asn_VAL_304_ASN_NGAP_id_WarningAreaCoordinates = 141;
 static const long asn_VAL_304_ASN_NGAP_ignore = 1;
 static const long asn_VAL_304_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_WriteReplaceWarningRequestIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_294_ASN_NGAP_id_MessageIdentifier },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_294_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_MessageIdentifier },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_294_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_295_ASN_NGAP_id_SerialNumber },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_295_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_SerialNumber },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_295_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_296_ASN_NGAP_id_WarningAreaList },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_296_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_WarningAreaList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_296_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_297_ASN_NGAP_id_RepetitionPeriod },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_297_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RepetitionPeriod },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_297_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_298_ASN_NGAP_id_NumberOfBroadcastsRequested },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_298_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_NumberOfBroadcastsRequested },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_298_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_299_ASN_NGAP_id_WarningType },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_299_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_WarningType },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_299_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_300_ASN_NGAP_id_WarningSecurityInfo },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_300_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_WarningSecurityInfo },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_300_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_301_ASN_NGAP_id_DataCodingScheme },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_301_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_DataCodingScheme },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_301_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_302_ASN_NGAP_id_WarningMessageContents },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_302_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_WarningMessageContents },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_302_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_303_ASN_NGAP_id_ConcurrentWarningMessageInd },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_303_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_ConcurrentWarningMessageInd },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_303_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_304_ASN_NGAP_id_WarningAreaCoordinates },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_304_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_WarningAreaCoordinates },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_304_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_294_ASN_NGAP_id_MessageIdentifier },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_294_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_MessageIdentifier },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_294_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_295_ASN_NGAP_id_SerialNumber },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_295_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_SerialNumber },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_295_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_296_ASN_NGAP_id_WarningAreaList },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_296_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_WarningAreaList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_296_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_297_ASN_NGAP_id_RepetitionPeriod },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_297_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RepetitionPeriod },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_297_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_298_ASN_NGAP_id_NumberOfBroadcastsRequested },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_298_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_NumberOfBroadcastsRequested },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_298_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_299_ASN_NGAP_id_WarningType },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_299_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_WarningType },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_299_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_300_ASN_NGAP_id_WarningSecurityInfo },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_300_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_WarningSecurityInfo },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_300_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_301_ASN_NGAP_id_DataCodingScheme },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_301_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_DataCodingScheme },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_301_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_302_ASN_NGAP_id_WarningMessageContents },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_302_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_WarningMessageContents },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_302_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_303_ASN_NGAP_id_ConcurrentWarningMessageInd },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_303_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_ConcurrentWarningMessageInd },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_303_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_304_ASN_NGAP_id_WarningAreaCoordinates },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_304_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_WarningAreaCoordinates },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_304_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_WriteReplaceWarningRequestIEs_1[] = {
 	{ 11, 4, asn_IOS_ASN_NGAP_WriteReplaceWarningRequestIEs_1_rows }
@@ -2440,22 +2440,22 @@ static const long asn_VAL_308_ASN_NGAP_id_CriticalityDiagnostics = 19;
 static const long asn_VAL_308_ASN_NGAP_ignore = 1;
 static const long asn_VAL_308_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_WriteReplaceWarningResponseIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_305_ASN_NGAP_id_MessageIdentifier },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_305_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_MessageIdentifier },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_305_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_306_ASN_NGAP_id_SerialNumber },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_306_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_SerialNumber },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_306_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_307_ASN_NGAP_id_BroadcastCompletedAreaList },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_307_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_BroadcastCompletedAreaList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_307_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_308_ASN_NGAP_id_CriticalityDiagnostics },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_308_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_308_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_305_ASN_NGAP_id_MessageIdentifier },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_305_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_MessageIdentifier },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_305_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_306_ASN_NGAP_id_SerialNumber },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_306_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_SerialNumber },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_306_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_307_ASN_NGAP_id_BroadcastCompletedAreaList },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_307_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_BroadcastCompletedAreaList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_307_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_308_ASN_NGAP_id_CriticalityDiagnostics },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_308_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_308_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_WriteReplaceWarningResponseIEs_1[] = {
 	{ 4, 4, asn_IOS_ASN_NGAP_WriteReplaceWarningResponseIEs_1_rows }
@@ -2473,22 +2473,22 @@ static const long asn_VAL_312_ASN_NGAP_id_CancelAllWarningMessages = 14;
 static const long asn_VAL_312_ASN_NGAP_reject = 0;
 static const long asn_VAL_312_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_PWSCancelRequestIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_309_ASN_NGAP_id_MessageIdentifier },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_309_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_MessageIdentifier },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_309_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_310_ASN_NGAP_id_SerialNumber },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_310_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_SerialNumber },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_310_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_311_ASN_NGAP_id_WarningAreaList },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_311_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_WarningAreaList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_311_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_312_ASN_NGAP_id_CancelAllWarningMessages },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_312_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CancelAllWarningMessages },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_312_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_309_ASN_NGAP_id_MessageIdentifier },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_309_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_MessageIdentifier },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_309_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_310_ASN_NGAP_id_SerialNumber },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_310_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_SerialNumber },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_310_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_311_ASN_NGAP_id_WarningAreaList },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_311_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_WarningAreaList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_311_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_312_ASN_NGAP_id_CancelAllWarningMessages },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_312_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CancelAllWarningMessages },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_312_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_PWSCancelRequestIEs_1[] = {
 	{ 4, 4, asn_IOS_ASN_NGAP_PWSCancelRequestIEs_1_rows }
@@ -2506,22 +2506,22 @@ static const long asn_VAL_316_ASN_NGAP_id_CriticalityDiagnostics = 19;
 static const long asn_VAL_316_ASN_NGAP_ignore = 1;
 static const long asn_VAL_316_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_PWSCancelResponseIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_313_ASN_NGAP_id_MessageIdentifier },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_313_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_MessageIdentifier },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_313_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_314_ASN_NGAP_id_SerialNumber },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_314_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_SerialNumber },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_314_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_315_ASN_NGAP_id_BroadcastCancelledAreaList },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_315_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_BroadcastCancelledAreaList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_315_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_316_ASN_NGAP_id_CriticalityDiagnostics },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_316_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_316_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_313_ASN_NGAP_id_MessageIdentifier },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_313_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_MessageIdentifier },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_313_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_314_ASN_NGAP_id_SerialNumber },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_314_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_SerialNumber },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_314_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_315_ASN_NGAP_id_BroadcastCancelledAreaList },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_315_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_BroadcastCancelledAreaList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_315_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_316_ASN_NGAP_id_CriticalityDiagnostics },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_316_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_316_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_PWSCancelResponseIEs_1[] = {
 	{ 4, 4, asn_IOS_ASN_NGAP_PWSCancelResponseIEs_1_rows }
@@ -2539,22 +2539,22 @@ static const long asn_VAL_320_ASN_NGAP_id_EmergencyAreaIDListForRestart = 23;
 static const long asn_VAL_320_ASN_NGAP_reject = 0;
 static const long asn_VAL_320_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_PWSRestartIndicationIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_317_ASN_NGAP_id_CellIDListForRestart },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_317_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CellIDListForRestart },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_317_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_318_ASN_NGAP_id_GlobalRANNodeID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_318_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_GlobalRANNodeID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_318_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_319_ASN_NGAP_id_TAIListForRestart },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_319_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_TAIListForRestart },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_319_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_320_ASN_NGAP_id_EmergencyAreaIDListForRestart },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_320_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_EmergencyAreaIDListForRestart },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_320_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_317_ASN_NGAP_id_CellIDListForRestart },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_317_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CellIDListForRestart },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_317_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_318_ASN_NGAP_id_GlobalRANNodeID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_318_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_GlobalRANNodeID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_318_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_319_ASN_NGAP_id_TAIListForRestart },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_319_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_TAIListForRestart },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_319_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_320_ASN_NGAP_id_EmergencyAreaIDListForRestart },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_320_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_EmergencyAreaIDListForRestart },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_320_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_PWSRestartIndicationIEs_1[] = {
 	{ 4, 4, asn_IOS_ASN_NGAP_PWSRestartIndicationIEs_1_rows }
@@ -2566,14 +2566,14 @@ static const long asn_VAL_322_ASN_NGAP_id_GlobalRANNodeID = 27;
 static const long asn_VAL_322_ASN_NGAP_reject = 0;
 static const long asn_VAL_322_ASN_NGAP_mandatory = 2;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_PWSFailureIndicationIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_321_ASN_NGAP_id_PWSFailedCellIDList },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_321_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PWSFailedCellIDList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_321_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_322_ASN_NGAP_id_GlobalRANNodeID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_322_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_GlobalRANNodeID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_322_ASN_NGAP_mandatory }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_321_ASN_NGAP_id_PWSFailedCellIDList },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_321_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PWSFailedCellIDList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_321_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_322_ASN_NGAP_id_GlobalRANNodeID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_322_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_GlobalRANNodeID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_322_ASN_NGAP_mandatory }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_PWSFailureIndicationIEs_1[] = {
 	{ 2, 4, asn_IOS_ASN_NGAP_PWSFailureIndicationIEs_1_rows }
@@ -2591,22 +2591,22 @@ static const long asn_VAL_326_ASN_NGAP_id_NRPPa_PDU = 46;
 static const long asn_VAL_326_ASN_NGAP_reject = 0;
 static const long asn_VAL_326_ASN_NGAP_mandatory = 2;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_DownlinkUEAssociatedNRPPaTransportIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_323_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_323_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_323_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_324_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_324_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_324_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_325_ASN_NGAP_id_RoutingID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_325_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RoutingID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_325_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_326_ASN_NGAP_id_NRPPa_PDU },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_326_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_NRPPa_PDU },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_326_ASN_NGAP_mandatory }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_323_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_323_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_323_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_324_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_324_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_324_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_325_ASN_NGAP_id_RoutingID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_325_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RoutingID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_325_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_326_ASN_NGAP_id_NRPPa_PDU },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_326_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_NRPPa_PDU },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_326_ASN_NGAP_mandatory }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_DownlinkUEAssociatedNRPPaTransportIEs_1[] = {
 	{ 4, 4, asn_IOS_ASN_NGAP_DownlinkUEAssociatedNRPPaTransportIEs_1_rows }
@@ -2624,22 +2624,22 @@ static const long asn_VAL_330_ASN_NGAP_id_NRPPa_PDU = 46;
 static const long asn_VAL_330_ASN_NGAP_reject = 0;
 static const long asn_VAL_330_ASN_NGAP_mandatory = 2;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_UplinkUEAssociatedNRPPaTransportIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_327_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_327_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_327_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_328_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_328_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_328_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_329_ASN_NGAP_id_RoutingID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_329_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RoutingID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_329_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_330_ASN_NGAP_id_NRPPa_PDU },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_330_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_NRPPa_PDU },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_330_ASN_NGAP_mandatory }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_327_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_327_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_327_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_328_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_328_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_328_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_329_ASN_NGAP_id_RoutingID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_329_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RoutingID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_329_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_330_ASN_NGAP_id_NRPPa_PDU },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_330_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_NRPPa_PDU },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_330_ASN_NGAP_mandatory }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_UplinkUEAssociatedNRPPaTransportIEs_1[] = {
 	{ 4, 4, asn_IOS_ASN_NGAP_UplinkUEAssociatedNRPPaTransportIEs_1_rows }
@@ -2651,14 +2651,14 @@ static const long asn_VAL_332_ASN_NGAP_id_NRPPa_PDU = 46;
 static const long asn_VAL_332_ASN_NGAP_reject = 0;
 static const long asn_VAL_332_ASN_NGAP_mandatory = 2;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_DownlinkNonUEAssociatedNRPPaTransportIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_331_ASN_NGAP_id_RoutingID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_331_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RoutingID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_331_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_332_ASN_NGAP_id_NRPPa_PDU },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_332_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_NRPPa_PDU },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_332_ASN_NGAP_mandatory }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_331_ASN_NGAP_id_RoutingID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_331_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RoutingID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_331_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_332_ASN_NGAP_id_NRPPa_PDU },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_332_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_NRPPa_PDU },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_332_ASN_NGAP_mandatory }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_DownlinkNonUEAssociatedNRPPaTransportIEs_1[] = {
 	{ 2, 4, asn_IOS_ASN_NGAP_DownlinkNonUEAssociatedNRPPaTransportIEs_1_rows }
@@ -2670,14 +2670,14 @@ static const long asn_VAL_334_ASN_NGAP_id_NRPPa_PDU = 46;
 static const long asn_VAL_334_ASN_NGAP_reject = 0;
 static const long asn_VAL_334_ASN_NGAP_mandatory = 2;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_UplinkNonUEAssociatedNRPPaTransportIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_333_ASN_NGAP_id_RoutingID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_333_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RoutingID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_333_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_334_ASN_NGAP_id_NRPPa_PDU },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_334_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_NRPPa_PDU },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_334_ASN_NGAP_mandatory }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_333_ASN_NGAP_id_RoutingID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_333_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RoutingID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_333_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_334_ASN_NGAP_id_NRPPa_PDU },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_334_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_NRPPa_PDU },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_334_ASN_NGAP_mandatory }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_UplinkNonUEAssociatedNRPPaTransportIEs_1[] = {
 	{ 2, 4, asn_IOS_ASN_NGAP_UplinkNonUEAssociatedNRPPaTransportIEs_1_rows }
@@ -2692,18 +2692,18 @@ static const long asn_VAL_337_ASN_NGAP_id_TraceActivation = 108;
 static const long asn_VAL_337_ASN_NGAP_ignore = 1;
 static const long asn_VAL_337_ASN_NGAP_mandatory = 2;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_TraceStartIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_335_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_335_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_335_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_336_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_336_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_336_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_337_ASN_NGAP_id_TraceActivation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_337_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_TraceActivation },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_337_ASN_NGAP_mandatory }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_335_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_335_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_335_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_336_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_336_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_336_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_337_ASN_NGAP_id_TraceActivation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_337_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_TraceActivation },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_337_ASN_NGAP_mandatory }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_TraceStartIEs_1[] = {
 	{ 3, 4, asn_IOS_ASN_NGAP_TraceStartIEs_1_rows }
@@ -2721,22 +2721,22 @@ static const long asn_VAL_341_ASN_NGAP_id_Cause = 15;
 static const long asn_VAL_341_ASN_NGAP_ignore = 1;
 static const long asn_VAL_341_ASN_NGAP_mandatory = 2;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_TraceFailureIndicationIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_338_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_338_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_338_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_339_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_339_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_339_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_340_ASN_NGAP_id_NGRANTraceID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_340_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_NGRANTraceID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_340_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_341_ASN_NGAP_id_Cause },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_341_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_Cause },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_341_ASN_NGAP_mandatory }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_338_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_338_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_338_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_339_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_339_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_339_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_340_ASN_NGAP_id_NGRANTraceID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_340_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_NGRANTraceID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_340_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_341_ASN_NGAP_id_Cause },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_341_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_Cause },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_341_ASN_NGAP_mandatory }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_TraceFailureIndicationIEs_1[] = {
 	{ 4, 4, asn_IOS_ASN_NGAP_TraceFailureIndicationIEs_1_rows }
@@ -2751,18 +2751,18 @@ static const long asn_VAL_344_ASN_NGAP_id_NGRANTraceID = 44;
 static const long asn_VAL_344_ASN_NGAP_ignore = 1;
 static const long asn_VAL_344_ASN_NGAP_mandatory = 2;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_DeactivateTraceIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_342_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_342_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_342_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_343_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_343_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_343_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_344_ASN_NGAP_id_NGRANTraceID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_344_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_NGRANTraceID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_344_ASN_NGAP_mandatory }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_342_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_342_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_342_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_343_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_343_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_343_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_344_ASN_NGAP_id_NGRANTraceID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_344_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_NGRANTraceID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_344_ASN_NGAP_mandatory }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_DeactivateTraceIEs_1[] = {
 	{ 3, 4, asn_IOS_ASN_NGAP_DeactivateTraceIEs_1_rows }
@@ -2783,26 +2783,26 @@ static const long asn_VAL_349_ASN_NGAP_id_TraceCollectionEntityIPAddress = 109;
 static const long asn_VAL_349_ASN_NGAP_ignore = 1;
 static const long asn_VAL_349_ASN_NGAP_mandatory = 2;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_CellTrafficTraceIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_345_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_345_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_345_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_346_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_346_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_346_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_347_ASN_NGAP_id_NGRANTraceID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_347_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_NGRANTraceID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_347_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_348_ASN_NGAP_id_NGRAN_CGI },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_348_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_NGRAN_CGI },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_348_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_349_ASN_NGAP_id_TraceCollectionEntityIPAddress },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_349_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_TransportLayerAddress },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_349_ASN_NGAP_mandatory }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_345_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_345_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_345_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_346_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_346_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_346_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_347_ASN_NGAP_id_NGRANTraceID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_347_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_NGRANTraceID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_347_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_348_ASN_NGAP_id_NGRAN_CGI },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_348_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_NGRAN_CGI },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_348_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_349_ASN_NGAP_id_TraceCollectionEntityIPAddress },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_349_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_TransportLayerAddress },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_349_ASN_NGAP_mandatory }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_CellTrafficTraceIEs_1[] = {
 	{ 5, 4, asn_IOS_ASN_NGAP_CellTrafficTraceIEs_1_rows }
@@ -2817,18 +2817,18 @@ static const long asn_VAL_352_ASN_NGAP_id_LocationReportingRequestType = 33;
 static const long asn_VAL_352_ASN_NGAP_ignore = 1;
 static const long asn_VAL_352_ASN_NGAP_mandatory = 2;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_LocationReportingControlIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_350_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_350_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_350_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_351_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_351_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_351_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_352_ASN_NGAP_id_LocationReportingRequestType },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_352_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_LocationReportingRequestType },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_352_ASN_NGAP_mandatory }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_350_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_350_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_350_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_351_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_351_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_351_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_352_ASN_NGAP_id_LocationReportingRequestType },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_352_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_LocationReportingRequestType },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_352_ASN_NGAP_mandatory }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_LocationReportingControlIEs_1[] = {
 	{ 3, 4, asn_IOS_ASN_NGAP_LocationReportingControlIEs_1_rows }
@@ -2843,18 +2843,18 @@ static const long asn_VAL_355_ASN_NGAP_id_Cause = 15;
 static const long asn_VAL_355_ASN_NGAP_ignore = 1;
 static const long asn_VAL_355_ASN_NGAP_mandatory = 2;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_LocationReportingFailureIndicationIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_353_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_353_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_353_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_354_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_354_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_354_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_355_ASN_NGAP_id_Cause },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_355_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_Cause },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_355_ASN_NGAP_mandatory }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_353_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_353_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_353_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_354_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_354_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_354_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_355_ASN_NGAP_id_Cause },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_355_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_Cause },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_355_ASN_NGAP_mandatory }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_LocationReportingFailureIndicationIEs_1[] = {
 	{ 3, 4, asn_IOS_ASN_NGAP_LocationReportingFailureIndicationIEs_1_rows }
@@ -2875,26 +2875,26 @@ static const long asn_VAL_360_ASN_NGAP_id_LocationReportingRequestType = 33;
 static const long asn_VAL_360_ASN_NGAP_ignore = 1;
 static const long asn_VAL_360_ASN_NGAP_mandatory = 2;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_LocationReportIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_356_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_356_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_356_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_357_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_357_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_357_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_358_ASN_NGAP_id_UserLocationInformation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_358_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UserLocationInformation },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_358_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_359_ASN_NGAP_id_UEPresenceInAreaOfInterestList },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_359_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UEPresenceInAreaOfInterestList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_359_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_360_ASN_NGAP_id_LocationReportingRequestType },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_360_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_LocationReportingRequestType },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_360_ASN_NGAP_mandatory }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_356_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_356_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_356_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_357_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_357_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_357_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_358_ASN_NGAP_id_UserLocationInformation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_358_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UserLocationInformation },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_358_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_359_ASN_NGAP_id_UEPresenceInAreaOfInterestList },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_359_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UEPresenceInAreaOfInterestList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_359_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_360_ASN_NGAP_id_LocationReportingRequestType },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_360_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_LocationReportingRequestType },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_360_ASN_NGAP_mandatory }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_LocationReportIEs_1[] = {
 	{ 5, 4, asn_IOS_ASN_NGAP_LocationReportIEs_1_rows }
@@ -2906,14 +2906,14 @@ static const long asn_VAL_362_ASN_NGAP_id_RAN_UE_NGAP_ID = 85;
 static const long asn_VAL_362_ASN_NGAP_reject = 0;
 static const long asn_VAL_362_ASN_NGAP_mandatory = 2;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_UETNLABindingReleaseRequestIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_361_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_361_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_361_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_362_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_362_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_362_ASN_NGAP_mandatory }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_361_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_361_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_361_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_362_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_362_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_362_ASN_NGAP_mandatory }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_UETNLABindingReleaseRequestIEs_1[] = {
 	{ 2, 4, asn_IOS_ASN_NGAP_UETNLABindingReleaseRequestIEs_1_rows }
@@ -2931,22 +2931,22 @@ static const long asn_VAL_366_ASN_NGAP_id_UERadioCapabilityForPaging = 118;
 static const long asn_VAL_366_ASN_NGAP_ignore = 1;
 static const long asn_VAL_366_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_UERadioCapabilityInfoIndicationIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_363_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_363_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_363_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_364_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_364_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_364_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_365_ASN_NGAP_id_UERadioCapability },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_365_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UERadioCapability },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_365_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_366_ASN_NGAP_id_UERadioCapabilityForPaging },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_366_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UERadioCapabilityForPaging },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_366_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_363_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_363_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_363_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_364_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_364_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_364_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_365_ASN_NGAP_id_UERadioCapability },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_365_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UERadioCapability },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_365_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_366_ASN_NGAP_id_UERadioCapabilityForPaging },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_366_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UERadioCapabilityForPaging },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_366_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_UERadioCapabilityInfoIndicationIEs_1[] = {
 	{ 4, 4, asn_IOS_ASN_NGAP_UERadioCapabilityInfoIndicationIEs_1_rows }
@@ -2961,18 +2961,18 @@ static const long asn_VAL_369_ASN_NGAP_id_UERadioCapability = 117;
 static const long asn_VAL_369_ASN_NGAP_ignore = 1;
 static const long asn_VAL_369_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_UERadioCapabilityCheckRequestIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_367_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_367_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_367_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_368_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_368_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_368_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_369_ASN_NGAP_id_UERadioCapability },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_369_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UERadioCapability },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_369_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_367_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_367_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_367_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_368_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_368_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_368_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_369_ASN_NGAP_id_UERadioCapability },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_369_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UERadioCapability },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_369_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_UERadioCapabilityCheckRequestIEs_1[] = {
 	{ 3, 4, asn_IOS_ASN_NGAP_UERadioCapabilityCheckRequestIEs_1_rows }
@@ -2990,22 +2990,22 @@ static const long asn_VAL_373_ASN_NGAP_id_CriticalityDiagnostics = 19;
 static const long asn_VAL_373_ASN_NGAP_ignore = 1;
 static const long asn_VAL_373_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_UERadioCapabilityCheckResponseIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_370_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_370_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_370_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_371_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_371_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_371_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_372_ASN_NGAP_id_IMSVoiceSupportIndicator },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_372_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_IMSVoiceSupportIndicator },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_372_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_373_ASN_NGAP_id_CriticalityDiagnostics },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_373_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_373_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_370_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_370_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_370_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_371_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_371_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_371_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_372_ASN_NGAP_id_IMSVoiceSupportIndicator },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_372_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_IMSVoiceSupportIndicator },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_372_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_373_ASN_NGAP_id_CriticalityDiagnostics },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_373_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CriticalityDiagnostics },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_373_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_UERadioCapabilityCheckResponseIEs_1[] = {
 	{ 4, 4, asn_IOS_ASN_NGAP_UERadioCapabilityCheckResponseIEs_1_rows }
@@ -3026,26 +3026,26 @@ static const long asn_VAL_378_ASN_NGAP_id_UserLocationInformation = 121;
 static const long asn_VAL_378_ASN_NGAP_ignore = 1;
 static const long asn_VAL_378_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_SecondaryRATDataUsageReportIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_374_ASN_NGAP_id_AMF_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_374_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_374_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_375_ASN_NGAP_id_RAN_UE_NGAP_ID },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_375_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_375_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_376_ASN_NGAP_id_PDUSessionResourceSecondaryRATUsageList },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_376_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceSecondaryRATUsageList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_376_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_377_ASN_NGAP_id_HandoverFlag },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_377_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_HandoverFlag },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_377_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_378_ASN_NGAP_id_UserLocationInformation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_378_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UserLocationInformation },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_378_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_374_ASN_NGAP_id_AMF_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_374_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_374_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_375_ASN_NGAP_id_RAN_UE_NGAP_ID },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_375_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_375_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_376_ASN_NGAP_id_PDUSessionResourceSecondaryRATUsageList },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_376_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceSecondaryRATUsageList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_376_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_377_ASN_NGAP_id_HandoverFlag },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_377_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_HandoverFlag },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_377_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_378_ASN_NGAP_id_UserLocationInformation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_378_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UserLocationInformation },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_378_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_SecondaryRATDataUsageReportIEs_1[] = {
 	{ 5, 4, asn_IOS_ASN_NGAP_SecondaryRATDataUsageReportIEs_1_rows }
@@ -3072,34 +3072,34 @@ static const long asn_VAL_386_ASN_NGAP_id_CommonNetworkInstance = 166;
 static const long asn_VAL_386_ASN_NGAP_ignore = 1;
 static const long asn_VAL_386_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_380_ASN_NGAP_id_PDUSessionAggregateMaximumBitRate },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_380_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionAggregateMaximumBitRate },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_380_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_381_ASN_NGAP_id_UL_NGU_UP_TNLModifyList },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_381_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UL_NGU_UP_TNLModifyList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_381_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_382_ASN_NGAP_id_NetworkInstance },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_382_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_NetworkInstance },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_382_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_383_ASN_NGAP_id_QosFlowAddOrModifyRequestList },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_383_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_QosFlowAddOrModifyRequestList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_383_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_384_ASN_NGAP_id_QosFlowToReleaseList },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_384_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_QosFlowListWithCause },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_384_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_385_ASN_NGAP_id_AdditionalUL_NGU_UP_TNLInformation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_385_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UPTransportLayerInformationList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_385_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_386_ASN_NGAP_id_CommonNetworkInstance },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_386_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CommonNetworkInstance },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_386_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_380_ASN_NGAP_id_PDUSessionAggregateMaximumBitRate },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_380_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionAggregateMaximumBitRate },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_380_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_381_ASN_NGAP_id_UL_NGU_UP_TNLModifyList },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_381_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UL_NGU_UP_TNLModifyList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_381_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_382_ASN_NGAP_id_NetworkInstance },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_382_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_NetworkInstance },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_382_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_383_ASN_NGAP_id_QosFlowAddOrModifyRequestList },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_383_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_QosFlowAddOrModifyRequestList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_383_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_384_ASN_NGAP_id_QosFlowToReleaseList },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_384_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_QosFlowListWithCause },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_384_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_385_ASN_NGAP_id_AdditionalUL_NGU_UP_TNLInformation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_385_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UPTransportLayerInformationList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_385_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_386_ASN_NGAP_id_CommonNetworkInstance },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_386_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CommonNetworkInstance },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_386_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs_1[] = {
 	{ 7, 4, asn_IOS_ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs_1_rows }
@@ -3132,42 +3132,42 @@ static const long asn_VAL_395_ASN_NGAP_id_CommonNetworkInstance = 166;
 static const long asn_VAL_395_ASN_NGAP_ignore = 1;
 static const long asn_VAL_395_ASN_NGAP_optional = 0;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs_1_rows[] = {
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_387_ASN_NGAP_id_PDUSessionAggregateMaximumBitRate },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_387_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionAggregateMaximumBitRate },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_387_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_388_ASN_NGAP_id_UL_NGU_UP_TNLInformation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_388_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UPTransportLayerInformation },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_388_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_389_ASN_NGAP_id_AdditionalUL_NGU_UP_TNLInformation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_389_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_UPTransportLayerInformationList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_389_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_390_ASN_NGAP_id_DataForwardingNotPossible },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_390_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_DataForwardingNotPossible },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_390_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_391_ASN_NGAP_id_PDUSessionType },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_391_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionType },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_391_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_392_ASN_NGAP_id_SecurityIndication },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_392_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_SecurityIndication },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_392_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_393_ASN_NGAP_id_NetworkInstance },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_393_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_NetworkInstance },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_393_ASN_NGAP_optional },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_394_ASN_NGAP_id_QosFlowSetupRequestList },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_394_ASN_NGAP_reject },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_QosFlowSetupRequestList },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_394_ASN_NGAP_mandatory },
-	{ "&id", aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_395_ASN_NGAP_id_CommonNetworkInstance },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_395_ASN_NGAP_ignore },
-	{ "&Value", aioc__type, &asn_DEF_ASN_NGAP_CommonNetworkInstance },
-	{ "&presence", aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_395_ASN_NGAP_optional }
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_387_ASN_NGAP_id_PDUSessionAggregateMaximumBitRate },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_387_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionAggregateMaximumBitRate },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_387_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_388_ASN_NGAP_id_UL_NGU_UP_TNLInformation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_388_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UPTransportLayerInformation },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_388_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_389_ASN_NGAP_id_AdditionalUL_NGU_UP_TNLInformation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_389_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UPTransportLayerInformationList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_389_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_390_ASN_NGAP_id_DataForwardingNotPossible },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_390_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_DataForwardingNotPossible },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_390_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_391_ASN_NGAP_id_PDUSessionType },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_391_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionType },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_391_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_392_ASN_NGAP_id_SecurityIndication },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_392_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_SecurityIndication },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_392_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_393_ASN_NGAP_id_NetworkInstance },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_393_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_NetworkInstance },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_393_ASN_NGAP_optional },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_394_ASN_NGAP_id_QosFlowSetupRequestList },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_394_ASN_NGAP_reject },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_QosFlowSetupRequestList },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_394_ASN_NGAP_mandatory },
+	{ "&id", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProtocolIE_ID, &asn_VAL_395_ASN_NGAP_id_CommonNetworkInstance },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_395_ASN_NGAP_ignore },
+	{ "&Value", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CommonNetworkInstance },
+	{ "&presence", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Presence, &asn_VAL_395_ASN_NGAP_optional }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs_1[] = {
 	{ 9, 4, asn_IOS_ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs_1_rows }
@@ -3525,7 +3525,7 @@ select_CPTransportLayerInformation_ExtIEs_ASN_NGAP_criticality_type(const asn_TY
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -3571,7 +3571,7 @@ select_CPTransportLayerInformation_ExtIEs_ASN_NGAP_value_type(const asn_TYPE_des
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -4902,7 +4902,7 @@ select_PDUSessionResourceSetupRequestIEs_ASN_NGAP_criticality_type(const asn_TYP
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -4948,7 +4948,7 @@ select_PDUSessionResourceSetupRequestIEs_ASN_NGAP_value_type(const asn_TYPE_desc
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -5019,7 +5019,7 @@ select_PDUSessionResourceSetupResponseIEs_ASN_NGAP_criticality_type(const asn_TY
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -5065,7 +5065,7 @@ select_PDUSessionResourceSetupResponseIEs_ASN_NGAP_value_type(const asn_TYPE_des
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -5136,7 +5136,7 @@ select_PDUSessionResourceReleaseCommandIEs_ASN_NGAP_criticality_type(const asn_T
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -5182,7 +5182,7 @@ select_PDUSessionResourceReleaseCommandIEs_ASN_NGAP_value_type(const asn_TYPE_de
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -5253,7 +5253,7 @@ select_PDUSessionResourceReleaseResponseIEs_ASN_NGAP_criticality_type(const asn_
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -5299,7 +5299,7 @@ select_PDUSessionResourceReleaseResponseIEs_ASN_NGAP_value_type(const asn_TYPE_d
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -5370,7 +5370,7 @@ select_PDUSessionResourceModifyRequestIEs_ASN_NGAP_criticality_type(const asn_TY
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -5416,7 +5416,7 @@ select_PDUSessionResourceModifyRequestIEs_ASN_NGAP_value_type(const asn_TYPE_des
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -5487,7 +5487,7 @@ select_PDUSessionResourceModifyResponseIEs_ASN_NGAP_criticality_type(const asn_T
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -5533,7 +5533,7 @@ select_PDUSessionResourceModifyResponseIEs_ASN_NGAP_value_type(const asn_TYPE_de
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -5604,7 +5604,7 @@ select_PDUSessionResourceNotifyIEs_ASN_NGAP_criticality_type(const asn_TYPE_desc
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -5650,7 +5650,7 @@ select_PDUSessionResourceNotifyIEs_ASN_NGAP_value_type(const asn_TYPE_descriptor
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -5721,7 +5721,7 @@ select_PDUSessionResourceModifyIndicationIEs_ASN_NGAP_criticality_type(const asn
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -5767,7 +5767,7 @@ select_PDUSessionResourceModifyIndicationIEs_ASN_NGAP_value_type(const asn_TYPE_
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -5838,7 +5838,7 @@ select_PDUSessionResourceModifyConfirmIEs_ASN_NGAP_criticality_type(const asn_TY
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -5884,7 +5884,7 @@ select_PDUSessionResourceModifyConfirmIEs_ASN_NGAP_value_type(const asn_TYPE_des
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -5955,7 +5955,7 @@ select_InitialContextSetupRequestIEs_ASN_NGAP_criticality_type(const asn_TYPE_de
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -6001,7 +6001,7 @@ select_InitialContextSetupRequestIEs_ASN_NGAP_value_type(const asn_TYPE_descript
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -6072,7 +6072,7 @@ select_InitialContextSetupResponseIEs_ASN_NGAP_criticality_type(const asn_TYPE_d
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -6118,7 +6118,7 @@ select_InitialContextSetupResponseIEs_ASN_NGAP_value_type(const asn_TYPE_descrip
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -6189,7 +6189,7 @@ select_InitialContextSetupFailureIEs_ASN_NGAP_criticality_type(const asn_TYPE_de
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -6235,7 +6235,7 @@ select_InitialContextSetupFailureIEs_ASN_NGAP_value_type(const asn_TYPE_descript
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -6306,7 +6306,7 @@ select_UEContextReleaseRequest_IEs_ASN_NGAP_criticality_type(const asn_TYPE_desc
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -6352,7 +6352,7 @@ select_UEContextReleaseRequest_IEs_ASN_NGAP_value_type(const asn_TYPE_descriptor
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -6423,7 +6423,7 @@ select_UEContextReleaseCommand_IEs_ASN_NGAP_criticality_type(const asn_TYPE_desc
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -6469,7 +6469,7 @@ select_UEContextReleaseCommand_IEs_ASN_NGAP_value_type(const asn_TYPE_descriptor
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -6540,7 +6540,7 @@ select_UEContextReleaseComplete_IEs_ASN_NGAP_criticality_type(const asn_TYPE_des
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -6586,7 +6586,7 @@ select_UEContextReleaseComplete_IEs_ASN_NGAP_value_type(const asn_TYPE_descripto
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -6657,7 +6657,7 @@ select_UEContextModificationRequestIEs_ASN_NGAP_criticality_type(const asn_TYPE_
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -6703,7 +6703,7 @@ select_UEContextModificationRequestIEs_ASN_NGAP_value_type(const asn_TYPE_descri
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -6774,7 +6774,7 @@ select_UEContextModificationResponseIEs_ASN_NGAP_criticality_type(const asn_TYPE
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -6820,7 +6820,7 @@ select_UEContextModificationResponseIEs_ASN_NGAP_value_type(const asn_TYPE_descr
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -6891,7 +6891,7 @@ select_UEContextModificationFailureIEs_ASN_NGAP_criticality_type(const asn_TYPE_
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -6937,7 +6937,7 @@ select_UEContextModificationFailureIEs_ASN_NGAP_value_type(const asn_TYPE_descri
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -7008,7 +7008,7 @@ select_RRCInactiveTransitionReportIEs_ASN_NGAP_criticality_type(const asn_TYPE_d
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -7054,7 +7054,7 @@ select_RRCInactiveTransitionReportIEs_ASN_NGAP_value_type(const asn_TYPE_descrip
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -7125,7 +7125,7 @@ select_HandoverRequiredIEs_ASN_NGAP_criticality_type(const asn_TYPE_descriptor_t
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -7171,7 +7171,7 @@ select_HandoverRequiredIEs_ASN_NGAP_value_type(const asn_TYPE_descriptor_t *pare
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -7242,7 +7242,7 @@ select_HandoverCommandIEs_ASN_NGAP_criticality_type(const asn_TYPE_descriptor_t 
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -7288,7 +7288,7 @@ select_HandoverCommandIEs_ASN_NGAP_value_type(const asn_TYPE_descriptor_t *paren
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -7359,7 +7359,7 @@ select_HandoverPreparationFailureIEs_ASN_NGAP_criticality_type(const asn_TYPE_de
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -7405,7 +7405,7 @@ select_HandoverPreparationFailureIEs_ASN_NGAP_value_type(const asn_TYPE_descript
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -7476,7 +7476,7 @@ select_HandoverRequestIEs_ASN_NGAP_criticality_type(const asn_TYPE_descriptor_t 
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -7522,7 +7522,7 @@ select_HandoverRequestIEs_ASN_NGAP_value_type(const asn_TYPE_descriptor_t *paren
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -7593,7 +7593,7 @@ select_HandoverRequestAcknowledgeIEs_ASN_NGAP_criticality_type(const asn_TYPE_de
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -7639,7 +7639,7 @@ select_HandoverRequestAcknowledgeIEs_ASN_NGAP_value_type(const asn_TYPE_descript
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -7710,7 +7710,7 @@ select_HandoverFailureIEs_ASN_NGAP_criticality_type(const asn_TYPE_descriptor_t 
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -7756,7 +7756,7 @@ select_HandoverFailureIEs_ASN_NGAP_value_type(const asn_TYPE_descriptor_t *paren
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -7827,7 +7827,7 @@ select_HandoverNotifyIEs_ASN_NGAP_criticality_type(const asn_TYPE_descriptor_t *
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -7873,7 +7873,7 @@ select_HandoverNotifyIEs_ASN_NGAP_value_type(const asn_TYPE_descriptor_t *parent
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -7944,7 +7944,7 @@ select_PathSwitchRequestIEs_ASN_NGAP_criticality_type(const asn_TYPE_descriptor_
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -7990,7 +7990,7 @@ select_PathSwitchRequestIEs_ASN_NGAP_value_type(const asn_TYPE_descriptor_t *par
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -8061,7 +8061,7 @@ select_PathSwitchRequestAcknowledgeIEs_ASN_NGAP_criticality_type(const asn_TYPE_
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -8107,7 +8107,7 @@ select_PathSwitchRequestAcknowledgeIEs_ASN_NGAP_value_type(const asn_TYPE_descri
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -8178,7 +8178,7 @@ select_PathSwitchRequestFailureIEs_ASN_NGAP_criticality_type(const asn_TYPE_desc
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -8224,7 +8224,7 @@ select_PathSwitchRequestFailureIEs_ASN_NGAP_value_type(const asn_TYPE_descriptor
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -8295,7 +8295,7 @@ select_HandoverCancelIEs_ASN_NGAP_criticality_type(const asn_TYPE_descriptor_t *
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -8341,7 +8341,7 @@ select_HandoverCancelIEs_ASN_NGAP_value_type(const asn_TYPE_descriptor_t *parent
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -8412,7 +8412,7 @@ select_HandoverCancelAcknowledgeIEs_ASN_NGAP_criticality_type(const asn_TYPE_des
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -8458,7 +8458,7 @@ select_HandoverCancelAcknowledgeIEs_ASN_NGAP_value_type(const asn_TYPE_descripto
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -8529,7 +8529,7 @@ select_UplinkRANStatusTransferIEs_ASN_NGAP_criticality_type(const asn_TYPE_descr
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -8575,7 +8575,7 @@ select_UplinkRANStatusTransferIEs_ASN_NGAP_value_type(const asn_TYPE_descriptor_
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -8646,7 +8646,7 @@ select_DownlinkRANStatusTransferIEs_ASN_NGAP_criticality_type(const asn_TYPE_des
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -8692,7 +8692,7 @@ select_DownlinkRANStatusTransferIEs_ASN_NGAP_value_type(const asn_TYPE_descripto
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -8763,7 +8763,7 @@ select_PagingIEs_ASN_NGAP_criticality_type(const asn_TYPE_descriptor_t *parent_t
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -8809,7 +8809,7 @@ select_PagingIEs_ASN_NGAP_value_type(const asn_TYPE_descriptor_t *parent_type, c
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -8880,7 +8880,7 @@ select_InitialUEMessage_IEs_ASN_NGAP_criticality_type(const asn_TYPE_descriptor_
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -8926,7 +8926,7 @@ select_InitialUEMessage_IEs_ASN_NGAP_value_type(const asn_TYPE_descriptor_t *par
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -8997,7 +8997,7 @@ select_DownlinkNASTransport_IEs_ASN_NGAP_criticality_type(const asn_TYPE_descrip
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -9043,7 +9043,7 @@ select_DownlinkNASTransport_IEs_ASN_NGAP_value_type(const asn_TYPE_descriptor_t 
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -9114,7 +9114,7 @@ select_UplinkNASTransport_IEs_ASN_NGAP_criticality_type(const asn_TYPE_descripto
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -9160,7 +9160,7 @@ select_UplinkNASTransport_IEs_ASN_NGAP_value_type(const asn_TYPE_descriptor_t *p
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -9231,7 +9231,7 @@ select_NASNonDeliveryIndication_IEs_ASN_NGAP_criticality_type(const asn_TYPE_des
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -9277,7 +9277,7 @@ select_NASNonDeliveryIndication_IEs_ASN_NGAP_value_type(const asn_TYPE_descripto
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -9348,7 +9348,7 @@ select_RerouteNASRequest_IEs_ASN_NGAP_criticality_type(const asn_TYPE_descriptor
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -9394,7 +9394,7 @@ select_RerouteNASRequest_IEs_ASN_NGAP_value_type(const asn_TYPE_descriptor_t *pa
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -9465,7 +9465,7 @@ select_NGSetupRequestIEs_ASN_NGAP_criticality_type(const asn_TYPE_descriptor_t *
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -9511,7 +9511,7 @@ select_NGSetupRequestIEs_ASN_NGAP_value_type(const asn_TYPE_descriptor_t *parent
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -9582,7 +9582,7 @@ select_NGSetupResponseIEs_ASN_NGAP_criticality_type(const asn_TYPE_descriptor_t 
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -9628,7 +9628,7 @@ select_NGSetupResponseIEs_ASN_NGAP_value_type(const asn_TYPE_descriptor_t *paren
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -9699,7 +9699,7 @@ select_NGSetupFailureIEs_ASN_NGAP_criticality_type(const asn_TYPE_descriptor_t *
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -9745,7 +9745,7 @@ select_NGSetupFailureIEs_ASN_NGAP_value_type(const asn_TYPE_descriptor_t *parent
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -9816,7 +9816,7 @@ select_RANConfigurationUpdateIEs_ASN_NGAP_criticality_type(const asn_TYPE_descri
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -9862,7 +9862,7 @@ select_RANConfigurationUpdateIEs_ASN_NGAP_value_type(const asn_TYPE_descriptor_t
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -9933,7 +9933,7 @@ select_RANConfigurationUpdateAcknowledgeIEs_ASN_NGAP_criticality_type(const asn_
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -9979,7 +9979,7 @@ select_RANConfigurationUpdateAcknowledgeIEs_ASN_NGAP_value_type(const asn_TYPE_d
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -10050,7 +10050,7 @@ select_RANConfigurationUpdateFailureIEs_ASN_NGAP_criticality_type(const asn_TYPE
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -10096,7 +10096,7 @@ select_RANConfigurationUpdateFailureIEs_ASN_NGAP_value_type(const asn_TYPE_descr
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -10167,7 +10167,7 @@ select_AMFConfigurationUpdateIEs_ASN_NGAP_criticality_type(const asn_TYPE_descri
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -10213,7 +10213,7 @@ select_AMFConfigurationUpdateIEs_ASN_NGAP_value_type(const asn_TYPE_descriptor_t
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -10284,7 +10284,7 @@ select_AMFConfigurationUpdateAcknowledgeIEs_ASN_NGAP_criticality_type(const asn_
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -10330,7 +10330,7 @@ select_AMFConfigurationUpdateAcknowledgeIEs_ASN_NGAP_value_type(const asn_TYPE_d
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -10401,7 +10401,7 @@ select_AMFConfigurationUpdateFailureIEs_ASN_NGAP_criticality_type(const asn_TYPE
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -10447,7 +10447,7 @@ select_AMFConfigurationUpdateFailureIEs_ASN_NGAP_value_type(const asn_TYPE_descr
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -10518,7 +10518,7 @@ select_AMFStatusIndicationIEs_ASN_NGAP_criticality_type(const asn_TYPE_descripto
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -10564,7 +10564,7 @@ select_AMFStatusIndicationIEs_ASN_NGAP_value_type(const asn_TYPE_descriptor_t *p
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -10635,7 +10635,7 @@ select_NGResetIEs_ASN_NGAP_criticality_type(const asn_TYPE_descriptor_t *parent_
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -10681,7 +10681,7 @@ select_NGResetIEs_ASN_NGAP_value_type(const asn_TYPE_descriptor_t *parent_type, 
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -10752,7 +10752,7 @@ select_NGResetAcknowledgeIEs_ASN_NGAP_criticality_type(const asn_TYPE_descriptor
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -10798,7 +10798,7 @@ select_NGResetAcknowledgeIEs_ASN_NGAP_value_type(const asn_TYPE_descriptor_t *pa
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -10869,7 +10869,7 @@ select_ErrorIndicationIEs_ASN_NGAP_criticality_type(const asn_TYPE_descriptor_t 
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -10915,7 +10915,7 @@ select_ErrorIndicationIEs_ASN_NGAP_value_type(const asn_TYPE_descriptor_t *paren
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -10986,7 +10986,7 @@ select_OverloadStartIEs_ASN_NGAP_criticality_type(const asn_TYPE_descriptor_t *p
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -11032,7 +11032,7 @@ select_OverloadStartIEs_ASN_NGAP_value_type(const asn_TYPE_descriptor_t *parent_
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -11166,7 +11166,7 @@ select_UplinkRANConfigurationTransferIEs_ASN_NGAP_criticality_type(const asn_TYP
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -11212,7 +11212,7 @@ select_UplinkRANConfigurationTransferIEs_ASN_NGAP_value_type(const asn_TYPE_desc
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -11283,7 +11283,7 @@ select_DownlinkRANConfigurationTransferIEs_ASN_NGAP_criticality_type(const asn_T
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -11329,7 +11329,7 @@ select_DownlinkRANConfigurationTransferIEs_ASN_NGAP_value_type(const asn_TYPE_de
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -11400,7 +11400,7 @@ select_WriteReplaceWarningRequestIEs_ASN_NGAP_criticality_type(const asn_TYPE_de
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -11446,7 +11446,7 @@ select_WriteReplaceWarningRequestIEs_ASN_NGAP_value_type(const asn_TYPE_descript
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -11517,7 +11517,7 @@ select_WriteReplaceWarningResponseIEs_ASN_NGAP_criticality_type(const asn_TYPE_d
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -11563,7 +11563,7 @@ select_WriteReplaceWarningResponseIEs_ASN_NGAP_value_type(const asn_TYPE_descrip
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -11634,7 +11634,7 @@ select_PWSCancelRequestIEs_ASN_NGAP_criticality_type(const asn_TYPE_descriptor_t
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -11680,7 +11680,7 @@ select_PWSCancelRequestIEs_ASN_NGAP_value_type(const asn_TYPE_descriptor_t *pare
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -11751,7 +11751,7 @@ select_PWSCancelResponseIEs_ASN_NGAP_criticality_type(const asn_TYPE_descriptor_
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -11797,7 +11797,7 @@ select_PWSCancelResponseIEs_ASN_NGAP_value_type(const asn_TYPE_descriptor_t *par
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -11868,7 +11868,7 @@ select_PWSRestartIndicationIEs_ASN_NGAP_criticality_type(const asn_TYPE_descript
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -11914,7 +11914,7 @@ select_PWSRestartIndicationIEs_ASN_NGAP_value_type(const asn_TYPE_descriptor_t *
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -11985,7 +11985,7 @@ select_PWSFailureIndicationIEs_ASN_NGAP_criticality_type(const asn_TYPE_descript
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -12031,7 +12031,7 @@ select_PWSFailureIndicationIEs_ASN_NGAP_value_type(const asn_TYPE_descriptor_t *
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -12102,7 +12102,7 @@ select_DownlinkUEAssociatedNRPPaTransportIEs_ASN_NGAP_criticality_type(const asn
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -12148,7 +12148,7 @@ select_DownlinkUEAssociatedNRPPaTransportIEs_ASN_NGAP_value_type(const asn_TYPE_
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -12219,7 +12219,7 @@ select_UplinkUEAssociatedNRPPaTransportIEs_ASN_NGAP_criticality_type(const asn_T
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -12265,7 +12265,7 @@ select_UplinkUEAssociatedNRPPaTransportIEs_ASN_NGAP_value_type(const asn_TYPE_de
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -12336,7 +12336,7 @@ select_DownlinkNonUEAssociatedNRPPaTransportIEs_ASN_NGAP_criticality_type(const 
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -12382,7 +12382,7 @@ select_DownlinkNonUEAssociatedNRPPaTransportIEs_ASN_NGAP_value_type(const asn_TY
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -12453,7 +12453,7 @@ select_UplinkNonUEAssociatedNRPPaTransportIEs_ASN_NGAP_criticality_type(const as
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -12499,7 +12499,7 @@ select_UplinkNonUEAssociatedNRPPaTransportIEs_ASN_NGAP_value_type(const asn_TYPE
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -12570,7 +12570,7 @@ select_TraceStartIEs_ASN_NGAP_criticality_type(const asn_TYPE_descriptor_t *pare
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -12616,7 +12616,7 @@ select_TraceStartIEs_ASN_NGAP_value_type(const asn_TYPE_descriptor_t *parent_typ
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -12687,7 +12687,7 @@ select_TraceFailureIndicationIEs_ASN_NGAP_criticality_type(const asn_TYPE_descri
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -12733,7 +12733,7 @@ select_TraceFailureIndicationIEs_ASN_NGAP_value_type(const asn_TYPE_descriptor_t
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -12804,7 +12804,7 @@ select_DeactivateTraceIEs_ASN_NGAP_criticality_type(const asn_TYPE_descriptor_t 
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -12850,7 +12850,7 @@ select_DeactivateTraceIEs_ASN_NGAP_value_type(const asn_TYPE_descriptor_t *paren
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -12921,7 +12921,7 @@ select_CellTrafficTraceIEs_ASN_NGAP_criticality_type(const asn_TYPE_descriptor_t
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -12967,7 +12967,7 @@ select_CellTrafficTraceIEs_ASN_NGAP_value_type(const asn_TYPE_descriptor_t *pare
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -13038,7 +13038,7 @@ select_LocationReportingControlIEs_ASN_NGAP_criticality_type(const asn_TYPE_desc
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -13084,7 +13084,7 @@ select_LocationReportingControlIEs_ASN_NGAP_value_type(const asn_TYPE_descriptor
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -13155,7 +13155,7 @@ select_LocationReportingFailureIndicationIEs_ASN_NGAP_criticality_type(const asn
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -13201,7 +13201,7 @@ select_LocationReportingFailureIndicationIEs_ASN_NGAP_value_type(const asn_TYPE_
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -13272,7 +13272,7 @@ select_LocationReportIEs_ASN_NGAP_criticality_type(const asn_TYPE_descriptor_t *
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -13318,7 +13318,7 @@ select_LocationReportIEs_ASN_NGAP_value_type(const asn_TYPE_descriptor_t *parent
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -13389,7 +13389,7 @@ select_UETNLABindingReleaseRequestIEs_ASN_NGAP_criticality_type(const asn_TYPE_d
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -13435,7 +13435,7 @@ select_UETNLABindingReleaseRequestIEs_ASN_NGAP_value_type(const asn_TYPE_descrip
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -13506,7 +13506,7 @@ select_UERadioCapabilityInfoIndicationIEs_ASN_NGAP_criticality_type(const asn_TY
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -13552,7 +13552,7 @@ select_UERadioCapabilityInfoIndicationIEs_ASN_NGAP_value_type(const asn_TYPE_des
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -13623,7 +13623,7 @@ select_UERadioCapabilityCheckRequestIEs_ASN_NGAP_criticality_type(const asn_TYPE
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -13669,7 +13669,7 @@ select_UERadioCapabilityCheckRequestIEs_ASN_NGAP_value_type(const asn_TYPE_descr
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -13740,7 +13740,7 @@ select_UERadioCapabilityCheckResponseIEs_ASN_NGAP_criticality_type(const asn_TYP
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -13786,7 +13786,7 @@ select_UERadioCapabilityCheckResponseIEs_ASN_NGAP_value_type(const asn_TYPE_desc
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -13857,7 +13857,7 @@ select_SecondaryRATDataUsageReportIEs_ASN_NGAP_criticality_type(const asn_TYPE_d
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -13903,7 +13903,7 @@ select_SecondaryRATDataUsageReportIEs_ASN_NGAP_value_type(const asn_TYPE_descrip
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -13974,7 +13974,7 @@ select_PDUSessionResourceModifyRequestTransferIEs_ASN_NGAP_criticality_type(cons
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -14020,7 +14020,7 @@ select_PDUSessionResourceModifyRequestTransferIEs_ASN_NGAP_value_type(const asn_
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined) 
 	        continue;
 	
 	    presence_index++;
@@ -14091,7 +14091,7 @@ select_PDUSessionResourceSetupRequestTransferIEs_ASN_NGAP_criticality_type(const
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -14137,7 +14137,7 @@ select_PDUSessionResourceSetupRequestTransferIEs_ASN_NGAP_value_type(const asn_T
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -14171,1600 +14171,1600 @@ memb_ASN_NGAP_value_constraint_421(const asn_TYPE_descriptor_t *td, const void *
 }
 
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_2 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_3 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_4 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_6 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_7 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_8 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_10 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_11 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_12 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_14 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_15 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_16 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_18 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_19 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_20 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_22 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_23 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_24 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_26 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_27 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_28 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_30 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_31 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_32 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_34 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_35 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_36 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_38 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_39 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_40 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_42 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_43 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_44 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_46 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_47 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_48 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_50 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_51 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_52 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_54 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_55 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_56 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_58 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_59 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_60 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_62 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_63 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_64 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_66 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_67 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_68 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_70 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_71 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_72 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_74 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_75 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_76 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_78 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_79 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_80 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_82 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_83 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_84 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_86 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_87 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_88 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_90 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_91 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_92 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_94 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_95 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_96 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_98 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_99 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_100 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_102 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_103 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_104 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_106 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_107 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_108 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_110 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_111 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_112 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_114 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_115 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_116 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_118 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_119 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_120 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_122 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_123 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_124 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_126 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_127 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_128 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_130 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_131 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_132 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_134 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_135 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_136 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_138 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_139 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_140 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_142 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_143 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_144 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_146 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_147 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_148 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_150 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_151 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_152 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_154 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_155 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_156 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_158 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_159 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_160 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_162 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_163 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_164 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_166 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_167 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_168 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_170 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_171 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_172 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_174 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_175 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_176 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_178 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_179 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_180 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_182 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_183 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_184 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_186 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_187 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_188 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_190 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_191 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_192 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_194 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_195 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_196 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_198 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_199 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_200 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_202 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_203 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_204 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_206 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_207 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_208 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_210 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_211 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_212 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_214 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_215 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_216 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_218 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_219 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_220 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_222 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_223 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_224 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_226 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_227 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_228 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_230 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_231 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_232 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_234 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_235 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_236 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_238 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_239 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_240 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_242 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_243 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_244 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_246 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_247 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_248 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_250 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_251 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_252 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_254 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_255 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_256 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_258 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_259 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_260 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_262 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_263 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_264 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_266 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_267 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_268 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_270 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_271 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_272 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_274 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_275 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_276 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_278 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_279 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_280 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_282 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_283 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_284 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_286 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_287 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_288 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_290 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_291 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_292 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_294 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_295 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_296 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_298 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_299 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_300 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_302 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_303 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_304 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_306 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_307 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_308 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_310 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_311 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_312 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_314 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_315 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_316 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_318 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_319 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_320 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_322 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_323 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_324 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_326 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_327 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_328 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_330 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_331 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_332 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_334 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_335 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_336 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_338 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_339 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_340 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_342 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_343 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_344 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_346 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_347 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_348 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_350 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_351 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_352 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_354 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_355 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_356 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_358 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_359 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_360 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_362 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_363 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_364 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_366 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_367 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_368 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_370 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_371 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_372 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_374 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_375 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_376 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_378 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_379 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_380 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_382 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_383 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_384 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_386 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_387 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_388 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_390 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_391 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_392 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_394 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_395 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_396 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_398 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_399 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_400 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_402 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_403 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_404 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_406 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_407 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_408 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_410 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_411 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_412 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_414 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_415 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_416 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_418 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_419 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_420 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_id_constr_422 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_423 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_424 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_4 = {
-	sizeof(struct ASN_NGAP_AMFPagingTarget_ExtIEs__value),
-	offsetof(struct ASN_NGAP_AMFPagingTarget_ExtIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_AMFPagingTarget_ExtIEs__value, present),
-	sizeof(((struct ASN_NGAP_AMFPagingTarget_ExtIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_AMFPagingTarget_ExtIEs_t::ASN_NGAP_AMFPagingTarget_ExtIEs__value),
+	offsetof(struct ASN_NGAP_AMFPagingTarget_ExtIEs_t::ASN_NGAP_AMFPagingTarget_ExtIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_AMFPagingTarget_ExtIEs_t::ASN_NGAP_AMFPagingTarget_ExtIEs__value, present),
+	sizeof(((struct ASN_NGAP_AMFPagingTarget_ExtIEs_t::ASN_NGAP_AMFPagingTarget_ExtIEs__value *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -15846,10 +15846,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_AMFPagingTarget_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_8 = {
-	sizeof(struct ASN_NGAP_BroadcastCancelledAreaList_ExtIEs__value),
-	offsetof(struct ASN_NGAP_BroadcastCancelledAreaList_ExtIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_BroadcastCancelledAreaList_ExtIEs__value, present),
-	sizeof(((struct ASN_NGAP_BroadcastCancelledAreaList_ExtIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_BroadcastCancelledAreaList_ExtIEs_t::ASN_NGAP_BroadcastCancelledAreaList_ExtIEs__value),
+	offsetof(struct ASN_NGAP_BroadcastCancelledAreaList_ExtIEs_t::ASN_NGAP_BroadcastCancelledAreaList_ExtIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_BroadcastCancelledAreaList_ExtIEs_t::ASN_NGAP_BroadcastCancelledAreaList_ExtIEs__value, present),
+	sizeof(((struct ASN_NGAP_BroadcastCancelledAreaList_ExtIEs_t::ASN_NGAP_BroadcastCancelledAreaList_ExtIEs__value *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -15931,10 +15931,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_BroadcastCancelledAreaList_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_12 = {
-	sizeof(struct ASN_NGAP_BroadcastCompletedAreaList_ExtIEs__value),
-	offsetof(struct ASN_NGAP_BroadcastCompletedAreaList_ExtIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_BroadcastCompletedAreaList_ExtIEs__value, present),
-	sizeof(((struct ASN_NGAP_BroadcastCompletedAreaList_ExtIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_BroadcastCompletedAreaList_ExtIEs_t::ASN_NGAP_BroadcastCompletedAreaList_ExtIEs__value),
+	offsetof(struct ASN_NGAP_BroadcastCompletedAreaList_ExtIEs_t::ASN_NGAP_BroadcastCompletedAreaList_ExtIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_BroadcastCompletedAreaList_ExtIEs_t::ASN_NGAP_BroadcastCompletedAreaList_ExtIEs__value, present),
+	sizeof(((struct ASN_NGAP_BroadcastCompletedAreaList_ExtIEs_t::ASN_NGAP_BroadcastCompletedAreaList_ExtIEs__value *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -16016,10 +16016,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_BroadcastCompletedAreaList_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_16 = {
-	sizeof(struct ASN_NGAP_Cause_ExtIEs__value),
-	offsetof(struct ASN_NGAP_Cause_ExtIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_Cause_ExtIEs__value, present),
-	sizeof(((struct ASN_NGAP_Cause_ExtIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_Cause_ExtIEs_t::ASN_NGAP_Cause_ExtIEs__value),
+	offsetof(struct ASN_NGAP_Cause_ExtIEs_t::ASN_NGAP_Cause_ExtIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_Cause_ExtIEs_t::ASN_NGAP_Cause_ExtIEs__value, present),
+	sizeof(((struct ASN_NGAP_Cause_ExtIEs_t::ASN_NGAP_Cause_ExtIEs__value *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -16101,10 +16101,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_Cause_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_20 = {
-	sizeof(struct ASN_NGAP_CellIDListForRestart_ExtIEs__value),
-	offsetof(struct ASN_NGAP_CellIDListForRestart_ExtIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_CellIDListForRestart_ExtIEs__value, present),
-	sizeof(((struct ASN_NGAP_CellIDListForRestart_ExtIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_CellIDListForRestart_ExtIEs_t::ASN_NGAP_CellIDListForRestart_ExtIEs__value),
+	offsetof(struct ASN_NGAP_CellIDListForRestart_ExtIEs_t::ASN_NGAP_CellIDListForRestart_ExtIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_CellIDListForRestart_ExtIEs_t::ASN_NGAP_CellIDListForRestart_ExtIEs__value, present),
+	sizeof(((struct ASN_NGAP_CellIDListForRestart_ExtIEs_t::ASN_NGAP_CellIDListForRestart_ExtIEs__value *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -16186,7 +16186,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_CellIDListForRestart_ExtIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_24[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_CPTransportLayerInformation_ExtIEs__value, choice.EndpointIPAddressAndPort),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_CPTransportLayerInformation_ExtIEs_t::ASN_NGAP_CPTransportLayerInformation_ExtIEs__value, choice.EndpointIPAddressAndPort),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_EndpointIPAddressAndPort,
@@ -16200,10 +16200,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_24[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 0, 0, 0 } /* EndpointIPAddressAndPort */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_24 = {
-	sizeof(struct ASN_NGAP_CPTransportLayerInformation_ExtIEs__value),
-	offsetof(struct ASN_NGAP_CPTransportLayerInformation_ExtIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_CPTransportLayerInformation_ExtIEs__value, present),
-	sizeof(((struct ASN_NGAP_CPTransportLayerInformation_ExtIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_CPTransportLayerInformation_ExtIEs_t::ASN_NGAP_CPTransportLayerInformation_ExtIEs__value),
+	offsetof(struct ASN_NGAP_CPTransportLayerInformation_ExtIEs_t::ASN_NGAP_CPTransportLayerInformation_ExtIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_CPTransportLayerInformation_ExtIEs_t::ASN_NGAP_CPTransportLayerInformation_ExtIEs__value, present),
+	sizeof(((struct ASN_NGAP_CPTransportLayerInformation_ExtIEs_t::ASN_NGAP_CPTransportLayerInformation_ExtIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_24,
 	1,	/* Count of tags in the map */
 	0, 0,
@@ -16286,10 +16286,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_CPTransportLayerInformation_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_28 = {
-	sizeof(struct ASN_NGAP_DRBStatusDL_ExtIEs__value),
-	offsetof(struct ASN_NGAP_DRBStatusDL_ExtIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_DRBStatusDL_ExtIEs__value, present),
-	sizeof(((struct ASN_NGAP_DRBStatusDL_ExtIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_DRBStatusDL_ExtIEs_t::ASN_NGAP_DRBStatusDL_ExtIEs__value),
+	offsetof(struct ASN_NGAP_DRBStatusDL_ExtIEs_t::ASN_NGAP_DRBStatusDL_ExtIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_DRBStatusDL_ExtIEs_t::ASN_NGAP_DRBStatusDL_ExtIEs__value, present),
+	sizeof(((struct ASN_NGAP_DRBStatusDL_ExtIEs_t::ASN_NGAP_DRBStatusDL_ExtIEs__value *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -16371,10 +16371,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_DRBStatusDL_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_32 = {
-	sizeof(struct ASN_NGAP_DRBStatusUL_ExtIEs__value),
-	offsetof(struct ASN_NGAP_DRBStatusUL_ExtIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_DRBStatusUL_ExtIEs__value, present),
-	sizeof(((struct ASN_NGAP_DRBStatusUL_ExtIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_DRBStatusUL_ExtIEs_t::ASN_NGAP_DRBStatusUL_ExtIEs__value),
+	offsetof(struct ASN_NGAP_DRBStatusUL_ExtIEs_t::ASN_NGAP_DRBStatusUL_ExtIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_DRBStatusUL_ExtIEs_t::ASN_NGAP_DRBStatusUL_ExtIEs__value, present),
+	sizeof(((struct ASN_NGAP_DRBStatusUL_ExtIEs_t::ASN_NGAP_DRBStatusUL_ExtIEs__value *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -16456,10 +16456,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_DRBStatusUL_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_36 = {
-	sizeof(struct ASN_NGAP_GlobalRANNodeID_ExtIEs__value),
-	offsetof(struct ASN_NGAP_GlobalRANNodeID_ExtIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_GlobalRANNodeID_ExtIEs__value, present),
-	sizeof(((struct ASN_NGAP_GlobalRANNodeID_ExtIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_GlobalRANNodeID_ExtIEs_t::ASN_NGAP_GlobalRANNodeID_ExtIEs__value),
+	offsetof(struct ASN_NGAP_GlobalRANNodeID_ExtIEs_t::ASN_NGAP_GlobalRANNodeID_ExtIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_GlobalRANNodeID_ExtIEs_t::ASN_NGAP_GlobalRANNodeID_ExtIEs__value, present),
+	sizeof(((struct ASN_NGAP_GlobalRANNodeID_ExtIEs_t::ASN_NGAP_GlobalRANNodeID_ExtIEs__value *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -16541,10 +16541,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_GlobalRANNodeID_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_40 = {
-	sizeof(struct ASN_NGAP_GNB_ID_ExtIEs__value),
-	offsetof(struct ASN_NGAP_GNB_ID_ExtIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_GNB_ID_ExtIEs__value, present),
-	sizeof(((struct ASN_NGAP_GNB_ID_ExtIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_GNB_ID_ExtIEs_t::ASN_NGAP_GNB_ID_ExtIEs__value),
+	offsetof(struct ASN_NGAP_GNB_ID_ExtIEs_t::ASN_NGAP_GNB_ID_ExtIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_GNB_ID_ExtIEs_t::ASN_NGAP_GNB_ID_ExtIEs__value, present),
+	sizeof(((struct ASN_NGAP_GNB_ID_ExtIEs_t::ASN_NGAP_GNB_ID_ExtIEs__value *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -16626,10 +16626,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_GNB_ID_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_44 = {
-	sizeof(struct ASN_NGAP_LastVisitedCellInformation_ExtIEs__value),
-	offsetof(struct ASN_NGAP_LastVisitedCellInformation_ExtIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_LastVisitedCellInformation_ExtIEs__value, present),
-	sizeof(((struct ASN_NGAP_LastVisitedCellInformation_ExtIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_LastVisitedCellInformation_ExtIEs_t::ASN_NGAP_LastVisitedCellInformation_ExtIEs__value),
+	offsetof(struct ASN_NGAP_LastVisitedCellInformation_ExtIEs_t::ASN_NGAP_LastVisitedCellInformation_ExtIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_LastVisitedCellInformation_ExtIEs_t::ASN_NGAP_LastVisitedCellInformation_ExtIEs__value, present),
+	sizeof(((struct ASN_NGAP_LastVisitedCellInformation_ExtIEs_t::ASN_NGAP_LastVisitedCellInformation_ExtIEs__value *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -16711,10 +16711,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_LastVisitedCellInformation_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_48 = {
-	sizeof(struct ASN_NGAP_N3IWF_ID_ExtIEs__value),
-	offsetof(struct ASN_NGAP_N3IWF_ID_ExtIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_N3IWF_ID_ExtIEs__value, present),
-	sizeof(((struct ASN_NGAP_N3IWF_ID_ExtIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_N3IWF_ID_ExtIEs_t::ASN_NGAP_N3IWF_ID_ExtIEs__value),
+	offsetof(struct ASN_NGAP_N3IWF_ID_ExtIEs_t::ASN_NGAP_N3IWF_ID_ExtIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_N3IWF_ID_ExtIEs_t::ASN_NGAP_N3IWF_ID_ExtIEs__value, present),
+	sizeof(((struct ASN_NGAP_N3IWF_ID_ExtIEs_t::ASN_NGAP_N3IWF_ID_ExtIEs__value *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -16796,10 +16796,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_N3IWF_ID_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_52 = {
-	sizeof(struct ASN_NGAP_NgENB_ID_ExtIEs__value),
-	offsetof(struct ASN_NGAP_NgENB_ID_ExtIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_NgENB_ID_ExtIEs__value, present),
-	sizeof(((struct ASN_NGAP_NgENB_ID_ExtIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_NgENB_ID_ExtIEs_t::ASN_NGAP_NgENB_ID_ExtIEs__value),
+	offsetof(struct ASN_NGAP_NgENB_ID_ExtIEs_t::ASN_NGAP_NgENB_ID_ExtIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_NgENB_ID_ExtIEs_t::ASN_NGAP_NgENB_ID_ExtIEs__value, present),
+	sizeof(((struct ASN_NGAP_NgENB_ID_ExtIEs_t::ASN_NGAP_NgENB_ID_ExtIEs__value *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -16881,10 +16881,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_NgENB_ID_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_56 = {
-	sizeof(struct ASN_NGAP_NGRAN_CGI_ExtIEs__value),
-	offsetof(struct ASN_NGAP_NGRAN_CGI_ExtIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_NGRAN_CGI_ExtIEs__value, present),
-	sizeof(((struct ASN_NGAP_NGRAN_CGI_ExtIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_NGRAN_CGI_ExtIEs_t::ASN_NGAP_NGRAN_CGI_ExtIEs__value),
+	offsetof(struct ASN_NGAP_NGRAN_CGI_ExtIEs_t::ASN_NGAP_NGRAN_CGI_ExtIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_NGRAN_CGI_ExtIEs_t::ASN_NGAP_NGRAN_CGI_ExtIEs__value, present),
+	sizeof(((struct ASN_NGAP_NGRAN_CGI_ExtIEs_t::ASN_NGAP_NGRAN_CGI_ExtIEs__value *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -16966,10 +16966,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_NGRAN_CGI_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_60 = {
-	sizeof(struct ASN_NGAP_OverloadResponse_ExtIEs__value),
-	offsetof(struct ASN_NGAP_OverloadResponse_ExtIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_OverloadResponse_ExtIEs__value, present),
-	sizeof(((struct ASN_NGAP_OverloadResponse_ExtIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_OverloadResponse_ExtIEs_t::ASN_NGAP_OverloadResponse_ExtIEs__value),
+	offsetof(struct ASN_NGAP_OverloadResponse_ExtIEs_t::ASN_NGAP_OverloadResponse_ExtIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_OverloadResponse_ExtIEs_t::ASN_NGAP_OverloadResponse_ExtIEs__value, present),
+	sizeof(((struct ASN_NGAP_OverloadResponse_ExtIEs_t::ASN_NGAP_OverloadResponse_ExtIEs__value *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -17051,10 +17051,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_OverloadResponse_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_64 = {
-	sizeof(struct ASN_NGAP_PWSFailedCellIDList_ExtIEs__value),
-	offsetof(struct ASN_NGAP_PWSFailedCellIDList_ExtIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_PWSFailedCellIDList_ExtIEs__value, present),
-	sizeof(((struct ASN_NGAP_PWSFailedCellIDList_ExtIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_PWSFailedCellIDList_ExtIEs_t::ASN_NGAP_PWSFailedCellIDList_ExtIEs__value),
+	offsetof(struct ASN_NGAP_PWSFailedCellIDList_ExtIEs_t::ASN_NGAP_PWSFailedCellIDList_ExtIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_PWSFailedCellIDList_ExtIEs_t::ASN_NGAP_PWSFailedCellIDList_ExtIEs__value, present),
+	sizeof(((struct ASN_NGAP_PWSFailedCellIDList_ExtIEs_t::ASN_NGAP_PWSFailedCellIDList_ExtIEs__value *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -17136,10 +17136,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PWSFailedCellIDList_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_68 = {
-	sizeof(struct ASN_NGAP_QosCharacteristics_ExtIEs__value),
-	offsetof(struct ASN_NGAP_QosCharacteristics_ExtIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_QosCharacteristics_ExtIEs__value, present),
-	sizeof(((struct ASN_NGAP_QosCharacteristics_ExtIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_QosCharacteristics_ExtIEs_t::ASN_NGAP_QosCharacteristics_ExtIEs__value),
+	offsetof(struct ASN_NGAP_QosCharacteristics_ExtIEs_t::ASN_NGAP_QosCharacteristics_ExtIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_QosCharacteristics_ExtIEs_t::ASN_NGAP_QosCharacteristics_ExtIEs__value, present),
+	sizeof(((struct ASN_NGAP_QosCharacteristics_ExtIEs_t::ASN_NGAP_QosCharacteristics_ExtIEs__value *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -17221,10 +17221,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_QosCharacteristics_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_72 = {
-	sizeof(struct ASN_NGAP_ResetType_ExtIEs__value),
-	offsetof(struct ASN_NGAP_ResetType_ExtIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_ResetType_ExtIEs__value, present),
-	sizeof(((struct ASN_NGAP_ResetType_ExtIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_ResetType_ExtIEs_t::ASN_NGAP_ResetType_ExtIEs__value),
+	offsetof(struct ASN_NGAP_ResetType_ExtIEs_t::ASN_NGAP_ResetType_ExtIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_ResetType_ExtIEs_t::ASN_NGAP_ResetType_ExtIEs__value, present),
+	sizeof(((struct ASN_NGAP_ResetType_ExtIEs_t::ASN_NGAP_ResetType_ExtIEs__value *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -17306,10 +17306,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_ResetType_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_76 = {
-	sizeof(struct ASN_NGAP_SONInformation_ExtIEs__value),
-	offsetof(struct ASN_NGAP_SONInformation_ExtIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_SONInformation_ExtIEs__value, present),
-	sizeof(((struct ASN_NGAP_SONInformation_ExtIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_SONInformation_ExtIEs_t::ASN_NGAP_SONInformation_ExtIEs__value),
+	offsetof(struct ASN_NGAP_SONInformation_ExtIEs_t::ASN_NGAP_SONInformation_ExtIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_SONInformation_ExtIEs_t::ASN_NGAP_SONInformation_ExtIEs__value, present),
+	sizeof(((struct ASN_NGAP_SONInformation_ExtIEs_t::ASN_NGAP_SONInformation_ExtIEs__value *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -17391,10 +17391,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_SONInformation_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_80 = {
-	sizeof(struct ASN_NGAP_TargetID_ExtIEs__value),
-	offsetof(struct ASN_NGAP_TargetID_ExtIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_TargetID_ExtIEs__value, present),
-	sizeof(((struct ASN_NGAP_TargetID_ExtIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_TargetID_ExtIEs_t::ASN_NGAP_TargetID_ExtIEs__value),
+	offsetof(struct ASN_NGAP_TargetID_ExtIEs_t::ASN_NGAP_TargetID_ExtIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_TargetID_ExtIEs_t::ASN_NGAP_TargetID_ExtIEs__value, present),
+	sizeof(((struct ASN_NGAP_TargetID_ExtIEs_t::ASN_NGAP_TargetID_ExtIEs__value *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -17476,10 +17476,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_TargetID_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_84 = {
-	sizeof(struct ASN_NGAP_UEIdentityIndexValue_ExtIEs__value),
-	offsetof(struct ASN_NGAP_UEIdentityIndexValue_ExtIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_UEIdentityIndexValue_ExtIEs__value, present),
-	sizeof(((struct ASN_NGAP_UEIdentityIndexValue_ExtIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_UEIdentityIndexValue_ExtIEs_t::ASN_NGAP_UEIdentityIndexValue_ExtIEs__value),
+	offsetof(struct ASN_NGAP_UEIdentityIndexValue_ExtIEs_t::ASN_NGAP_UEIdentityIndexValue_ExtIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_UEIdentityIndexValue_ExtIEs_t::ASN_NGAP_UEIdentityIndexValue_ExtIEs__value, present),
+	sizeof(((struct ASN_NGAP_UEIdentityIndexValue_ExtIEs_t::ASN_NGAP_UEIdentityIndexValue_ExtIEs__value *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -17561,10 +17561,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_UEIdentityIndexValue_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_88 = {
-	sizeof(struct ASN_NGAP_UE_NGAP_IDs_ExtIEs__value),
-	offsetof(struct ASN_NGAP_UE_NGAP_IDs_ExtIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_UE_NGAP_IDs_ExtIEs__value, present),
-	sizeof(((struct ASN_NGAP_UE_NGAP_IDs_ExtIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_UE_NGAP_IDs_ExtIEs_t::ASN_NGAP_UE_NGAP_IDs_ExtIEs__value),
+	offsetof(struct ASN_NGAP_UE_NGAP_IDs_ExtIEs_t::ASN_NGAP_UE_NGAP_IDs_ExtIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_UE_NGAP_IDs_ExtIEs_t::ASN_NGAP_UE_NGAP_IDs_ExtIEs__value, present),
+	sizeof(((struct ASN_NGAP_UE_NGAP_IDs_ExtIEs_t::ASN_NGAP_UE_NGAP_IDs_ExtIEs__value *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -17646,10 +17646,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_UE_NGAP_IDs_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_92 = {
-	sizeof(struct ASN_NGAP_UEPagingIdentity_ExtIEs__value),
-	offsetof(struct ASN_NGAP_UEPagingIdentity_ExtIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_UEPagingIdentity_ExtIEs__value, present),
-	sizeof(((struct ASN_NGAP_UEPagingIdentity_ExtIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_UEPagingIdentity_ExtIEs_t::ASN_NGAP_UEPagingIdentity_ExtIEs__value),
+	offsetof(struct ASN_NGAP_UEPagingIdentity_ExtIEs_t::ASN_NGAP_UEPagingIdentity_ExtIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_UEPagingIdentity_ExtIEs_t::ASN_NGAP_UEPagingIdentity_ExtIEs__value, present),
+	sizeof(((struct ASN_NGAP_UEPagingIdentity_ExtIEs_t::ASN_NGAP_UEPagingIdentity_ExtIEs__value *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -17731,10 +17731,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_UEPagingIdentity_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_96 = {
-	sizeof(struct ASN_NGAP_UPTransportLayerInformation_ExtIEs__value),
-	offsetof(struct ASN_NGAP_UPTransportLayerInformation_ExtIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_UPTransportLayerInformation_ExtIEs__value, present),
-	sizeof(((struct ASN_NGAP_UPTransportLayerInformation_ExtIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_UPTransportLayerInformation_ExtIEs_t::ASN_NGAP_UPTransportLayerInformation_ExtIEs__value),
+	offsetof(struct ASN_NGAP_UPTransportLayerInformation_ExtIEs_t::ASN_NGAP_UPTransportLayerInformation_ExtIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_UPTransportLayerInformation_ExtIEs_t::ASN_NGAP_UPTransportLayerInformation_ExtIEs__value, present),
+	sizeof(((struct ASN_NGAP_UPTransportLayerInformation_ExtIEs_t::ASN_NGAP_UPTransportLayerInformation_ExtIEs__value *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -17816,10 +17816,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_UPTransportLayerInformation_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_100 = {
-	sizeof(struct ASN_NGAP_UserLocationInformation_ExtIEs__value),
-	offsetof(struct ASN_NGAP_UserLocationInformation_ExtIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_UserLocationInformation_ExtIEs__value, present),
-	sizeof(((struct ASN_NGAP_UserLocationInformation_ExtIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_UserLocationInformation_ExtIEs_t::ASN_NGAP_UserLocationInformation_ExtIEs__value),
+	offsetof(struct ASN_NGAP_UserLocationInformation_ExtIEs_t::ASN_NGAP_UserLocationInformation_ExtIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_UserLocationInformation_ExtIEs_t::ASN_NGAP_UserLocationInformation_ExtIEs__value, present),
+	sizeof(((struct ASN_NGAP_UserLocationInformation_ExtIEs_t::ASN_NGAP_UserLocationInformation_ExtIEs__value *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -17901,10 +17901,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_UserLocationInformation_ExtIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_104 = {
-	sizeof(struct ASN_NGAP_WarningAreaList_ExtIEs__value),
-	offsetof(struct ASN_NGAP_WarningAreaList_ExtIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_WarningAreaList_ExtIEs__value, present),
-	sizeof(((struct ASN_NGAP_WarningAreaList_ExtIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_WarningAreaList_ExtIEs_t::ASN_NGAP_WarningAreaList_ExtIEs__value),
+	offsetof(struct ASN_NGAP_WarningAreaList_ExtIEs_t::ASN_NGAP_WarningAreaList_ExtIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_WarningAreaList_ExtIEs_t::ASN_NGAP_WarningAreaList_ExtIEs__value, present),
+	sizeof(((struct ASN_NGAP_WarningAreaList_ExtIEs_t::ASN_NGAP_WarningAreaList_ExtIEs__value *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -17986,7 +17986,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_WarningAreaList_ExtIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_108[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestIEs_t::ASN_NGAP_PDUSessionResourceSetupRequestIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -17995,7 +17995,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_108[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestIEs_t::ASN_NGAP_PDUSessionResourceSetupRequestIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -18004,7 +18004,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_108[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestIEs__value, choice.RANPagingPriority),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestIEs_t::ASN_NGAP_PDUSessionResourceSetupRequestIEs__value, choice.RANPagingPriority),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RANPagingPriority,
@@ -18013,7 +18013,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_108[] = {
 		0, 0, /* No default value */
 		"RANPagingPriority"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestIEs__value, choice.NAS_PDU),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestIEs_t::ASN_NGAP_PDUSessionResourceSetupRequestIEs__value, choice.NAS_PDU),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_NAS_PDU,
@@ -18022,7 +18022,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_108[] = {
 		0, 0, /* No default value */
 		"NAS-PDU"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestIEs__value, choice.PDUSessionResourceSetupListSUReq),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestIEs_t::ASN_NGAP_PDUSessionResourceSetupRequestIEs__value, choice.PDUSessionResourceSetupListSUReq),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceSetupListSUReq,
@@ -18031,7 +18031,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_108[] = {
 		0, 0, /* No default value */
 		"PDUSessionResourceSetupListSUReq"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestIEs__value, choice.UEAggregateMaximumBitRate),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestIEs_t::ASN_NGAP_PDUSessionResourceSetupRequestIEs__value, choice.UEAggregateMaximumBitRate),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UEAggregateMaximumBitRate,
@@ -18050,10 +18050,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_108[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 5, -1, 0 } /* UEAggregateMaximumBitRate */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_108 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceSetupRequestIEs__value),
-	offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestIEs__value, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceSetupRequestIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceSetupRequestIEs_t::ASN_NGAP_PDUSessionResourceSetupRequestIEs__value),
+	offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestIEs_t::ASN_NGAP_PDUSessionResourceSetupRequestIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestIEs_t::ASN_NGAP_PDUSessionResourceSetupRequestIEs__value, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceSetupRequestIEs_t::ASN_NGAP_PDUSessionResourceSetupRequestIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_108,
 	6,	/* Count of tags in the map */
 	0, 0,
@@ -18136,7 +18136,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceSetupRequestIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_112[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupResponseIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupResponseIEs_t::ASN_NGAP_PDUSessionResourceSetupResponseIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -18145,7 +18145,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_112[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupResponseIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupResponseIEs_t::ASN_NGAP_PDUSessionResourceSetupResponseIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -18154,7 +18154,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_112[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupResponseIEs__value, choice.PDUSessionResourceSetupListSURes),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupResponseIEs_t::ASN_NGAP_PDUSessionResourceSetupResponseIEs__value, choice.PDUSessionResourceSetupListSURes),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceSetupListSURes,
@@ -18163,7 +18163,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_112[] = {
 		0, 0, /* No default value */
 		"PDUSessionResourceSetupListSURes"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupResponseIEs__value, choice.PDUSessionResourceFailedToSetupListSURes),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupResponseIEs_t::ASN_NGAP_PDUSessionResourceSetupResponseIEs__value, choice.PDUSessionResourceFailedToSetupListSURes),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceFailedToSetupListSURes,
@@ -18172,7 +18172,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_112[] = {
 		0, 0, /* No default value */
 		"PDUSessionResourceFailedToSetupListSURes"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupResponseIEs__value, choice.CriticalityDiagnostics),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupResponseIEs_t::ASN_NGAP_PDUSessionResourceSetupResponseIEs__value, choice.CriticalityDiagnostics),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CriticalityDiagnostics,
@@ -18190,10 +18190,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_112[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 4, -2, 0 } /* CriticalityDiagnostics */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_112 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceSetupResponseIEs__value),
-	offsetof(struct ASN_NGAP_PDUSessionResourceSetupResponseIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceSetupResponseIEs__value, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceSetupResponseIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceSetupResponseIEs_t::ASN_NGAP_PDUSessionResourceSetupResponseIEs__value),
+	offsetof(struct ASN_NGAP_PDUSessionResourceSetupResponseIEs_t::ASN_NGAP_PDUSessionResourceSetupResponseIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceSetupResponseIEs_t::ASN_NGAP_PDUSessionResourceSetupResponseIEs__value, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceSetupResponseIEs_t::ASN_NGAP_PDUSessionResourceSetupResponseIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_112,
 	5,	/* Count of tags in the map */
 	0, 0,
@@ -18276,7 +18276,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceSetupResponseIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_116[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceReleaseCommandIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceReleaseCommandIEs_t::ASN_NGAP_PDUSessionResourceReleaseCommandIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -18285,7 +18285,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_116[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceReleaseCommandIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceReleaseCommandIEs_t::ASN_NGAP_PDUSessionResourceReleaseCommandIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -18294,7 +18294,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_116[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceReleaseCommandIEs__value, choice.RANPagingPriority),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceReleaseCommandIEs_t::ASN_NGAP_PDUSessionResourceReleaseCommandIEs__value, choice.RANPagingPriority),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RANPagingPriority,
@@ -18303,7 +18303,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_116[] = {
 		0, 0, /* No default value */
 		"RANPagingPriority"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceReleaseCommandIEs__value, choice.NAS_PDU),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceReleaseCommandIEs_t::ASN_NGAP_PDUSessionResourceReleaseCommandIEs__value, choice.NAS_PDU),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_NAS_PDU,
@@ -18312,7 +18312,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_116[] = {
 		0, 0, /* No default value */
 		"NAS-PDU"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceReleaseCommandIEs__value, choice.PDUSessionResourceToReleaseListRelCmd),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceReleaseCommandIEs_t::ASN_NGAP_PDUSessionResourceReleaseCommandIEs__value, choice.PDUSessionResourceToReleaseListRelCmd),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceToReleaseListRelCmd,
@@ -18330,10 +18330,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_116[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 4, 0, 0 } /* PDUSessionResourceToReleaseListRelCmd */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_116 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceReleaseCommandIEs__value),
-	offsetof(struct ASN_NGAP_PDUSessionResourceReleaseCommandIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceReleaseCommandIEs__value, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceReleaseCommandIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceReleaseCommandIEs_t::ASN_NGAP_PDUSessionResourceReleaseCommandIEs__value),
+	offsetof(struct ASN_NGAP_PDUSessionResourceReleaseCommandIEs_t::ASN_NGAP_PDUSessionResourceReleaseCommandIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceReleaseCommandIEs_t::ASN_NGAP_PDUSessionResourceReleaseCommandIEs__value, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceReleaseCommandIEs_t::ASN_NGAP_PDUSessionResourceReleaseCommandIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_116,
 	5,	/* Count of tags in the map */
 	0, 0,
@@ -18416,7 +18416,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceReleaseCommandIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_120[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceReleaseResponseIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceReleaseResponseIEs_t::ASN_NGAP_PDUSessionResourceReleaseResponseIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -18425,7 +18425,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_120[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceReleaseResponseIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceReleaseResponseIEs_t::ASN_NGAP_PDUSessionResourceReleaseResponseIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -18434,7 +18434,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_120[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceReleaseResponseIEs__value, choice.PDUSessionResourceReleasedListRelRes),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceReleaseResponseIEs_t::ASN_NGAP_PDUSessionResourceReleaseResponseIEs__value, choice.PDUSessionResourceReleasedListRelRes),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceReleasedListRelRes,
@@ -18443,7 +18443,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_120[] = {
 		0, 0, /* No default value */
 		"PDUSessionResourceReleasedListRelRes"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceReleaseResponseIEs__value, choice.UserLocationInformation),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceReleaseResponseIEs_t::ASN_NGAP_PDUSessionResourceReleaseResponseIEs__value, choice.UserLocationInformation),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_UserLocationInformation,
@@ -18452,7 +18452,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_120[] = {
 		0, 0, /* No default value */
 		"UserLocationInformation"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceReleaseResponseIEs__value, choice.CriticalityDiagnostics),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceReleaseResponseIEs_t::ASN_NGAP_PDUSessionResourceReleaseResponseIEs__value, choice.CriticalityDiagnostics),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CriticalityDiagnostics,
@@ -18475,10 +18475,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_120[] = {
     { (ASN_TAG_CLASS_CONTEXT | (3 << 2)), 3, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_120 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceReleaseResponseIEs__value),
-	offsetof(struct ASN_NGAP_PDUSessionResourceReleaseResponseIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceReleaseResponseIEs__value, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceReleaseResponseIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceReleaseResponseIEs_t::ASN_NGAP_PDUSessionResourceReleaseResponseIEs__value),
+	offsetof(struct ASN_NGAP_PDUSessionResourceReleaseResponseIEs_t::ASN_NGAP_PDUSessionResourceReleaseResponseIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceReleaseResponseIEs_t::ASN_NGAP_PDUSessionResourceReleaseResponseIEs__value, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceReleaseResponseIEs_t::ASN_NGAP_PDUSessionResourceReleaseResponseIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_120,
 	8,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_120,
@@ -18562,7 +18562,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceReleaseResponseIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_124[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyRequestIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyRequestIEs_t::ASN_NGAP_PDUSessionResourceModifyRequestIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -18571,7 +18571,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_124[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyRequestIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyRequestIEs_t::ASN_NGAP_PDUSessionResourceModifyRequestIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -18580,7 +18580,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_124[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyRequestIEs__value, choice.RANPagingPriority),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyRequestIEs_t::ASN_NGAP_PDUSessionResourceModifyRequestIEs__value, choice.RANPagingPriority),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RANPagingPriority,
@@ -18589,7 +18589,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_124[] = {
 		0, 0, /* No default value */
 		"RANPagingPriority"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyRequestIEs__value, choice.PDUSessionResourceModifyListModReq),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyRequestIEs_t::ASN_NGAP_PDUSessionResourceModifyRequestIEs__value, choice.PDUSessionResourceModifyListModReq),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceModifyListModReq,
@@ -18606,10 +18606,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_124[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 3, 0, 0 } /* PDUSessionResourceModifyListModReq */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_124 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceModifyRequestIEs__value),
-	offsetof(struct ASN_NGAP_PDUSessionResourceModifyRequestIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceModifyRequestIEs__value, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceModifyRequestIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceModifyRequestIEs_t::ASN_NGAP_PDUSessionResourceModifyRequestIEs__value),
+	offsetof(struct ASN_NGAP_PDUSessionResourceModifyRequestIEs_t::ASN_NGAP_PDUSessionResourceModifyRequestIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceModifyRequestIEs_t::ASN_NGAP_PDUSessionResourceModifyRequestIEs__value, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceModifyRequestIEs_t::ASN_NGAP_PDUSessionResourceModifyRequestIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_124,
 	4,	/* Count of tags in the map */
 	0, 0,
@@ -18692,7 +18692,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceModifyRequestIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_128[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyResponseIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyResponseIEs_t::ASN_NGAP_PDUSessionResourceModifyResponseIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -18701,7 +18701,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_128[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyResponseIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyResponseIEs_t::ASN_NGAP_PDUSessionResourceModifyResponseIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -18710,7 +18710,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_128[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyResponseIEs__value, choice.PDUSessionResourceModifyListModRes),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyResponseIEs_t::ASN_NGAP_PDUSessionResourceModifyResponseIEs__value, choice.PDUSessionResourceModifyListModRes),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceModifyListModRes,
@@ -18719,7 +18719,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_128[] = {
 		0, 0, /* No default value */
 		"PDUSessionResourceModifyListModRes"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyResponseIEs__value, choice.PDUSessionResourceFailedToModifyListModRes),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyResponseIEs_t::ASN_NGAP_PDUSessionResourceModifyResponseIEs__value, choice.PDUSessionResourceFailedToModifyListModRes),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceFailedToModifyListModRes,
@@ -18728,7 +18728,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_128[] = {
 		0, 0, /* No default value */
 		"PDUSessionResourceFailedToModifyListModRes"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyResponseIEs__value, choice.UserLocationInformation),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyResponseIEs_t::ASN_NGAP_PDUSessionResourceModifyResponseIEs__value, choice.UserLocationInformation),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_UserLocationInformation,
@@ -18737,7 +18737,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_128[] = {
 		0, 0, /* No default value */
 		"UserLocationInformation"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyResponseIEs__value, choice.CriticalityDiagnostics),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyResponseIEs_t::ASN_NGAP_PDUSessionResourceModifyResponseIEs__value, choice.CriticalityDiagnostics),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CriticalityDiagnostics,
@@ -18761,10 +18761,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_128[] = {
     { (ASN_TAG_CLASS_CONTEXT | (3 << 2)), 4, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_128 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceModifyResponseIEs__value),
-	offsetof(struct ASN_NGAP_PDUSessionResourceModifyResponseIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceModifyResponseIEs__value, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceModifyResponseIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceModifyResponseIEs_t::ASN_NGAP_PDUSessionResourceModifyResponseIEs__value),
+	offsetof(struct ASN_NGAP_PDUSessionResourceModifyResponseIEs_t::ASN_NGAP_PDUSessionResourceModifyResponseIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceModifyResponseIEs_t::ASN_NGAP_PDUSessionResourceModifyResponseIEs__value, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceModifyResponseIEs_t::ASN_NGAP_PDUSessionResourceModifyResponseIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_128,
 	9,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_128,
@@ -18848,7 +18848,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceModifyResponseIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_132[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceNotifyIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceNotifyIEs_t::ASN_NGAP_PDUSessionResourceNotifyIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -18857,7 +18857,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_132[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceNotifyIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceNotifyIEs_t::ASN_NGAP_PDUSessionResourceNotifyIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -18866,7 +18866,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_132[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceNotifyIEs__value, choice.PDUSessionResourceNotifyList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceNotifyIEs_t::ASN_NGAP_PDUSessionResourceNotifyIEs__value, choice.PDUSessionResourceNotifyList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceNotifyList,
@@ -18875,7 +18875,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_132[] = {
 		0, 0, /* No default value */
 		"PDUSessionResourceNotifyList"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceNotifyIEs__value, choice.PDUSessionResourceReleasedListNot),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceNotifyIEs_t::ASN_NGAP_PDUSessionResourceNotifyIEs__value, choice.PDUSessionResourceReleasedListNot),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceReleasedListNot,
@@ -18884,7 +18884,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_132[] = {
 		0, 0, /* No default value */
 		"PDUSessionResourceReleasedListNot"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceNotifyIEs__value, choice.UserLocationInformation),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceNotifyIEs_t::ASN_NGAP_PDUSessionResourceNotifyIEs__value, choice.UserLocationInformation),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_UserLocationInformation,
@@ -18905,10 +18905,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_132[] = {
     { (ASN_TAG_CLASS_CONTEXT | (3 << 2)), 4, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_132 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceNotifyIEs__value),
-	offsetof(struct ASN_NGAP_PDUSessionResourceNotifyIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceNotifyIEs__value, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceNotifyIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceNotifyIEs_t::ASN_NGAP_PDUSessionResourceNotifyIEs__value),
+	offsetof(struct ASN_NGAP_PDUSessionResourceNotifyIEs_t::ASN_NGAP_PDUSessionResourceNotifyIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceNotifyIEs_t::ASN_NGAP_PDUSessionResourceNotifyIEs__value, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceNotifyIEs_t::ASN_NGAP_PDUSessionResourceNotifyIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_132,
 	8,	/* Count of tags in the map */
 	0, 0,
@@ -18991,7 +18991,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceNotifyIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_136[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyIndicationIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyIndicationIEs_t::ASN_NGAP_PDUSessionResourceModifyIndicationIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -19000,7 +19000,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_136[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyIndicationIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyIndicationIEs_t::ASN_NGAP_PDUSessionResourceModifyIndicationIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -19009,7 +19009,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_136[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyIndicationIEs__value, choice.PDUSessionResourceModifyListModInd),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyIndicationIEs_t::ASN_NGAP_PDUSessionResourceModifyIndicationIEs__value, choice.PDUSessionResourceModifyListModInd),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceModifyListModInd,
@@ -19025,10 +19025,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_136[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 2, 0, 0 } /* PDUSessionResourceModifyListModInd */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_136 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceModifyIndicationIEs__value),
-	offsetof(struct ASN_NGAP_PDUSessionResourceModifyIndicationIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceModifyIndicationIEs__value, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceModifyIndicationIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceModifyIndicationIEs_t::ASN_NGAP_PDUSessionResourceModifyIndicationIEs__value),
+	offsetof(struct ASN_NGAP_PDUSessionResourceModifyIndicationIEs_t::ASN_NGAP_PDUSessionResourceModifyIndicationIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceModifyIndicationIEs_t::ASN_NGAP_PDUSessionResourceModifyIndicationIEs__value, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceModifyIndicationIEs_t::ASN_NGAP_PDUSessionResourceModifyIndicationIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_136,
 	3,	/* Count of tags in the map */
 	0, 0,
@@ -19111,7 +19111,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceModifyIndicationIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_140[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyConfirmIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyConfirmIEs_t::ASN_NGAP_PDUSessionResourceModifyConfirmIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -19120,7 +19120,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_140[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyConfirmIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyConfirmIEs_t::ASN_NGAP_PDUSessionResourceModifyConfirmIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -19129,7 +19129,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_140[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyConfirmIEs__value, choice.PDUSessionResourceModifyListModCfm),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyConfirmIEs_t::ASN_NGAP_PDUSessionResourceModifyConfirmIEs__value, choice.PDUSessionResourceModifyListModCfm),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceModifyListModCfm,
@@ -19138,7 +19138,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_140[] = {
 		0, 0, /* No default value */
 		"PDUSessionResourceModifyListModCfm"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyConfirmIEs__value, choice.PDUSessionResourceFailedToModifyListModCfm),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyConfirmIEs_t::ASN_NGAP_PDUSessionResourceModifyConfirmIEs__value, choice.PDUSessionResourceFailedToModifyListModCfm),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceFailedToModifyListModCfm,
@@ -19147,7 +19147,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_140[] = {
 		0, 0, /* No default value */
 		"PDUSessionResourceFailedToModifyListModCfm"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyConfirmIEs__value, choice.CriticalityDiagnostics),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyConfirmIEs_t::ASN_NGAP_PDUSessionResourceModifyConfirmIEs__value, choice.CriticalityDiagnostics),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CriticalityDiagnostics,
@@ -19165,10 +19165,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_140[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 4, -2, 0 } /* CriticalityDiagnostics */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_140 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceModifyConfirmIEs__value),
-	offsetof(struct ASN_NGAP_PDUSessionResourceModifyConfirmIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceModifyConfirmIEs__value, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceModifyConfirmIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceModifyConfirmIEs_t::ASN_NGAP_PDUSessionResourceModifyConfirmIEs__value),
+	offsetof(struct ASN_NGAP_PDUSessionResourceModifyConfirmIEs_t::ASN_NGAP_PDUSessionResourceModifyConfirmIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceModifyConfirmIEs_t::ASN_NGAP_PDUSessionResourceModifyConfirmIEs__value, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceModifyConfirmIEs_t::ASN_NGAP_PDUSessionResourceModifyConfirmIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_140,
 	5,	/* Count of tags in the map */
 	0, 0,
@@ -19251,7 +19251,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceModifyConfirmIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_144[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs_t::ASN_NGAP_InitialContextSetupRequestIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -19260,7 +19260,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_144[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs_t::ASN_NGAP_InitialContextSetupRequestIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -19269,7 +19269,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_144[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs__value, choice.AMFName),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs_t::ASN_NGAP_InitialContextSetupRequestIEs__value, choice.AMFName),
 		(ASN_TAG_CLASS_UNIVERSAL | (19 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMFName,
@@ -19278,7 +19278,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_144[] = {
 		0, 0, /* No default value */
 		"AMFName"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs__value, choice.UEAggregateMaximumBitRate),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs_t::ASN_NGAP_InitialContextSetupRequestIEs__value, choice.UEAggregateMaximumBitRate),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UEAggregateMaximumBitRate,
@@ -19287,7 +19287,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_144[] = {
 		0, 0, /* No default value */
 		"UEAggregateMaximumBitRate"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs__value, choice.CoreNetworkAssistanceInformationForInactive),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs_t::ASN_NGAP_InitialContextSetupRequestIEs__value, choice.CoreNetworkAssistanceInformationForInactive),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CoreNetworkAssistanceInformationForInactive,
@@ -19296,7 +19296,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_144[] = {
 		0, 0, /* No default value */
 		"CoreNetworkAssistanceInformationForInactive"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs__value, choice.GUAMI),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs_t::ASN_NGAP_InitialContextSetupRequestIEs__value, choice.GUAMI),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_GUAMI,
@@ -19305,7 +19305,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_144[] = {
 		0, 0, /* No default value */
 		"GUAMI"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs__value, choice.PDUSessionResourceSetupListCxtReq),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs_t::ASN_NGAP_InitialContextSetupRequestIEs__value, choice.PDUSessionResourceSetupListCxtReq),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceSetupListCxtReq,
@@ -19314,7 +19314,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_144[] = {
 		0, 0, /* No default value */
 		"PDUSessionResourceSetupListCxtReq"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs__value, choice.AllowedNSSAI),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs_t::ASN_NGAP_InitialContextSetupRequestIEs__value, choice.AllowedNSSAI),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AllowedNSSAI,
@@ -19323,7 +19323,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_144[] = {
 		0, 0, /* No default value */
 		"AllowedNSSAI"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs__value, choice.UESecurityCapabilities),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs_t::ASN_NGAP_InitialContextSetupRequestIEs__value, choice.UESecurityCapabilities),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UESecurityCapabilities,
@@ -19332,7 +19332,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_144[] = {
 		0, 0, /* No default value */
 		"UESecurityCapabilities"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs__value, choice.SecurityKey),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs_t::ASN_NGAP_InitialContextSetupRequestIEs__value, choice.SecurityKey),
 		(ASN_TAG_CLASS_UNIVERSAL | (3 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_SecurityKey,
@@ -19341,7 +19341,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_144[] = {
 		0, 0, /* No default value */
 		"SecurityKey"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs__value, choice.TraceActivation),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs_t::ASN_NGAP_InitialContextSetupRequestIEs__value, choice.TraceActivation),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_TraceActivation,
@@ -19350,7 +19350,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_144[] = {
 		0, 0, /* No default value */
 		"TraceActivation"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs__value, choice.MobilityRestrictionList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs_t::ASN_NGAP_InitialContextSetupRequestIEs__value, choice.MobilityRestrictionList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_MobilityRestrictionList,
@@ -19359,7 +19359,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_144[] = {
 		0, 0, /* No default value */
 		"MobilityRestrictionList"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs__value, choice.UERadioCapability),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs_t::ASN_NGAP_InitialContextSetupRequestIEs__value, choice.UERadioCapability),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UERadioCapability,
@@ -19368,7 +19368,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_144[] = {
 		0, 0, /* No default value */
 		"UERadioCapability"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs__value, choice.IndexToRFSP),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs_t::ASN_NGAP_InitialContextSetupRequestIEs__value, choice.IndexToRFSP),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_IndexToRFSP,
@@ -19377,7 +19377,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_144[] = {
 		0, 0, /* No default value */
 		"IndexToRFSP"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs__value, choice.MaskedIMEISV),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs_t::ASN_NGAP_InitialContextSetupRequestIEs__value, choice.MaskedIMEISV),
 		(ASN_TAG_CLASS_UNIVERSAL | (3 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_MaskedIMEISV,
@@ -19386,7 +19386,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_144[] = {
 		0, 0, /* No default value */
 		"MaskedIMEISV"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs__value, choice.NAS_PDU),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs_t::ASN_NGAP_InitialContextSetupRequestIEs__value, choice.NAS_PDU),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_NAS_PDU,
@@ -19395,7 +19395,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_144[] = {
 		0, 0, /* No default value */
 		"NAS-PDU"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs__value, choice.EmergencyFallbackIndicator),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs_t::ASN_NGAP_InitialContextSetupRequestIEs__value, choice.EmergencyFallbackIndicator),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_EmergencyFallbackIndicator,
@@ -19404,7 +19404,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_144[] = {
 		0, 0, /* No default value */
 		"EmergencyFallbackIndicator"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs__value, choice.RRCInactiveTransitionReportRequest),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs_t::ASN_NGAP_InitialContextSetupRequestIEs__value, choice.RRCInactiveTransitionReportRequest),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RRCInactiveTransitionReportRequest,
@@ -19413,7 +19413,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_144[] = {
 		0, 0, /* No default value */
 		"RRCInactiveTransitionReportRequest"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs__value, choice.UERadioCapabilityForPaging),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs_t::ASN_NGAP_InitialContextSetupRequestIEs__value, choice.UERadioCapabilityForPaging),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UERadioCapabilityForPaging,
@@ -19422,7 +19422,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_144[] = {
 		0, 0, /* No default value */
 		"UERadioCapabilityForPaging"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs__value, choice.RedirectionVoiceFallback),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs_t::ASN_NGAP_InitialContextSetupRequestIEs__value, choice.RedirectionVoiceFallback),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RedirectionVoiceFallback,
@@ -19431,7 +19431,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_144[] = {
 		0, 0, /* No default value */
 		"RedirectionVoiceFallback"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs__value, choice.LocationReportingRequestType),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs_t::ASN_NGAP_InitialContextSetupRequestIEs__value, choice.LocationReportingRequestType),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_LocationReportingRequestType,
@@ -19440,7 +19440,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_144[] = {
 		0, 0, /* No default value */
 		"LocationReportingRequestType"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs__value, choice.CNAssistedRANTuning),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs_t::ASN_NGAP_InitialContextSetupRequestIEs__value, choice.CNAssistedRANTuning),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CNAssistedRANTuning,
@@ -19477,10 +19477,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_144[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (19 << 2)), 2, 0, 0 } /* AMFName */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_144 = {
-	sizeof(struct ASN_NGAP_InitialContextSetupRequestIEs__value),
-	offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs__value, present),
-	sizeof(((struct ASN_NGAP_InitialContextSetupRequestIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_InitialContextSetupRequestIEs_t::ASN_NGAP_InitialContextSetupRequestIEs__value),
+	offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs_t::ASN_NGAP_InitialContextSetupRequestIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_InitialContextSetupRequestIEs_t::ASN_NGAP_InitialContextSetupRequestIEs__value, present),
+	sizeof(((struct ASN_NGAP_InitialContextSetupRequestIEs_t::ASN_NGAP_InitialContextSetupRequestIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_144,
 	22,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_144,
@@ -19564,7 +19564,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_InitialContextSetupRequestIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_148[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupResponseIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupResponseIEs_t::ASN_NGAP_InitialContextSetupResponseIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -19573,7 +19573,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_148[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupResponseIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupResponseIEs_t::ASN_NGAP_InitialContextSetupResponseIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -19582,7 +19582,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_148[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupResponseIEs__value, choice.PDUSessionResourceSetupListCxtRes),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupResponseIEs_t::ASN_NGAP_InitialContextSetupResponseIEs__value, choice.PDUSessionResourceSetupListCxtRes),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceSetupListCxtRes,
@@ -19591,7 +19591,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_148[] = {
 		0, 0, /* No default value */
 		"PDUSessionResourceSetupListCxtRes"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupResponseIEs__value, choice.PDUSessionResourceFailedToSetupListCxtRes),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupResponseIEs_t::ASN_NGAP_InitialContextSetupResponseIEs__value, choice.PDUSessionResourceFailedToSetupListCxtRes),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceFailedToSetupListCxtRes,
@@ -19600,7 +19600,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_148[] = {
 		0, 0, /* No default value */
 		"PDUSessionResourceFailedToSetupListCxtRes"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupResponseIEs__value, choice.CriticalityDiagnostics),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupResponseIEs_t::ASN_NGAP_InitialContextSetupResponseIEs__value, choice.CriticalityDiagnostics),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CriticalityDiagnostics,
@@ -19618,10 +19618,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_148[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 4, -2, 0 } /* CriticalityDiagnostics */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_148 = {
-	sizeof(struct ASN_NGAP_InitialContextSetupResponseIEs__value),
-	offsetof(struct ASN_NGAP_InitialContextSetupResponseIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_InitialContextSetupResponseIEs__value, present),
-	sizeof(((struct ASN_NGAP_InitialContextSetupResponseIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_InitialContextSetupResponseIEs_t::ASN_NGAP_InitialContextSetupResponseIEs__value),
+	offsetof(struct ASN_NGAP_InitialContextSetupResponseIEs_t::ASN_NGAP_InitialContextSetupResponseIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_InitialContextSetupResponseIEs_t::ASN_NGAP_InitialContextSetupResponseIEs__value, present),
+	sizeof(((struct ASN_NGAP_InitialContextSetupResponseIEs_t::ASN_NGAP_InitialContextSetupResponseIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_148,
 	5,	/* Count of tags in the map */
 	0, 0,
@@ -19704,7 +19704,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_InitialContextSetupResponseIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_152[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupFailureIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupFailureIEs_t::ASN_NGAP_InitialContextSetupFailureIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -19713,7 +19713,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_152[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupFailureIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupFailureIEs_t::ASN_NGAP_InitialContextSetupFailureIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -19722,7 +19722,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_152[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupFailureIEs__value, choice.PDUSessionResourceFailedToSetupListCxtFail),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupFailureIEs_t::ASN_NGAP_InitialContextSetupFailureIEs__value, choice.PDUSessionResourceFailedToSetupListCxtFail),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceFailedToSetupListCxtFail,
@@ -19731,7 +19731,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_152[] = {
 		0, 0, /* No default value */
 		"PDUSessionResourceFailedToSetupListCxtFail"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupFailureIEs__value, choice.Cause),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupFailureIEs_t::ASN_NGAP_InitialContextSetupFailureIEs__value, choice.Cause),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_Cause,
@@ -19740,7 +19740,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_152[] = {
 		0, 0, /* No default value */
 		"Cause"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupFailureIEs__value, choice.CriticalityDiagnostics),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialContextSetupFailureIEs_t::ASN_NGAP_InitialContextSetupFailureIEs__value, choice.CriticalityDiagnostics),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CriticalityDiagnostics,
@@ -19765,10 +19765,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_152[] = {
     { (ASN_TAG_CLASS_CONTEXT | (5 << 2)), 3, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_152 = {
-	sizeof(struct ASN_NGAP_InitialContextSetupFailureIEs__value),
-	offsetof(struct ASN_NGAP_InitialContextSetupFailureIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_InitialContextSetupFailureIEs__value, present),
-	sizeof(((struct ASN_NGAP_InitialContextSetupFailureIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_InitialContextSetupFailureIEs_t::ASN_NGAP_InitialContextSetupFailureIEs__value),
+	offsetof(struct ASN_NGAP_InitialContextSetupFailureIEs_t::ASN_NGAP_InitialContextSetupFailureIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_InitialContextSetupFailureIEs_t::ASN_NGAP_InitialContextSetupFailureIEs__value, present),
+	sizeof(((struct ASN_NGAP_InitialContextSetupFailureIEs_t::ASN_NGAP_InitialContextSetupFailureIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_152,
 	10,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_152,
@@ -19852,7 +19852,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_InitialContextSetupFailureIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_156[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextReleaseRequest_IEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextReleaseRequest_IEs_t::ASN_NGAP_UEContextReleaseRequest_IEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -19861,7 +19861,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_156[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextReleaseRequest_IEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextReleaseRequest_IEs_t::ASN_NGAP_UEContextReleaseRequest_IEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -19870,7 +19870,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_156[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextReleaseRequest_IEs__value, choice.PDUSessionResourceListCxtRelReq),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextReleaseRequest_IEs_t::ASN_NGAP_UEContextReleaseRequest_IEs__value, choice.PDUSessionResourceListCxtRelReq),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceListCxtRelReq,
@@ -19879,7 +19879,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_156[] = {
 		0, 0, /* No default value */
 		"PDUSessionResourceListCxtRelReq"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextReleaseRequest_IEs__value, choice.Cause),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextReleaseRequest_IEs_t::ASN_NGAP_UEContextReleaseRequest_IEs__value, choice.Cause),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_Cause,
@@ -19901,10 +19901,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_156[] = {
     { (ASN_TAG_CLASS_CONTEXT | (5 << 2)), 3, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_156 = {
-	sizeof(struct ASN_NGAP_UEContextReleaseRequest_IEs__value),
-	offsetof(struct ASN_NGAP_UEContextReleaseRequest_IEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_UEContextReleaseRequest_IEs__value, present),
-	sizeof(((struct ASN_NGAP_UEContextReleaseRequest_IEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_UEContextReleaseRequest_IEs_t::ASN_NGAP_UEContextReleaseRequest_IEs__value),
+	offsetof(struct ASN_NGAP_UEContextReleaseRequest_IEs_t::ASN_NGAP_UEContextReleaseRequest_IEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_UEContextReleaseRequest_IEs_t::ASN_NGAP_UEContextReleaseRequest_IEs__value, present),
+	sizeof(((struct ASN_NGAP_UEContextReleaseRequest_IEs_t::ASN_NGAP_UEContextReleaseRequest_IEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_156,
 	9,	/* Count of tags in the map */
 	0, 0,
@@ -19987,7 +19987,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_UEContextReleaseRequest_IEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_160[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextReleaseCommand_IEs__value, choice.UE_NGAP_IDs),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextReleaseCommand_IEs_t::ASN_NGAP_UEContextReleaseCommand_IEs__value, choice.UE_NGAP_IDs),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_UE_NGAP_IDs,
@@ -19996,7 +19996,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_160[] = {
 		0, 0, /* No default value */
 		"UE-NGAP-IDs"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextReleaseCommand_IEs__value, choice.Cause),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextReleaseCommand_IEs_t::ASN_NGAP_UEContextReleaseCommand_IEs__value, choice.Cause),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_Cause,
@@ -20018,10 +20018,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_160[] = {
     { (ASN_TAG_CLASS_CONTEXT | (5 << 2)), 1, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_160 = {
-	sizeof(struct ASN_NGAP_UEContextReleaseCommand_IEs__value),
-	offsetof(struct ASN_NGAP_UEContextReleaseCommand_IEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_UEContextReleaseCommand_IEs__value, present),
-	sizeof(((struct ASN_NGAP_UEContextReleaseCommand_IEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_UEContextReleaseCommand_IEs_t::ASN_NGAP_UEContextReleaseCommand_IEs__value),
+	offsetof(struct ASN_NGAP_UEContextReleaseCommand_IEs_t::ASN_NGAP_UEContextReleaseCommand_IEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_UEContextReleaseCommand_IEs_t::ASN_NGAP_UEContextReleaseCommand_IEs__value, present),
+	sizeof(((struct ASN_NGAP_UEContextReleaseCommand_IEs_t::ASN_NGAP_UEContextReleaseCommand_IEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_160,
 	9,	/* Count of tags in the map */
 	0, 0,
@@ -20104,7 +20104,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_UEContextReleaseCommand_IEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_164[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextReleaseComplete_IEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextReleaseComplete_IEs_t::ASN_NGAP_UEContextReleaseComplete_IEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -20113,7 +20113,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_164[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextReleaseComplete_IEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextReleaseComplete_IEs_t::ASN_NGAP_UEContextReleaseComplete_IEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -20122,7 +20122,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_164[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextReleaseComplete_IEs__value, choice.UserLocationInformation),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextReleaseComplete_IEs_t::ASN_NGAP_UEContextReleaseComplete_IEs__value, choice.UserLocationInformation),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_UserLocationInformation,
@@ -20131,7 +20131,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_164[] = {
 		0, 0, /* No default value */
 		"UserLocationInformation"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextReleaseComplete_IEs__value, choice.InfoOnRecommendedCellsAndRANNodesForPaging),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextReleaseComplete_IEs_t::ASN_NGAP_UEContextReleaseComplete_IEs__value, choice.InfoOnRecommendedCellsAndRANNodesForPaging),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_InfoOnRecommendedCellsAndRANNodesForPaging,
@@ -20140,7 +20140,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_164[] = {
 		0, 0, /* No default value */
 		"InfoOnRecommendedCellsAndRANNodesForPaging"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextReleaseComplete_IEs__value, choice.PDUSessionResourceListCxtRelCpl),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextReleaseComplete_IEs_t::ASN_NGAP_UEContextReleaseComplete_IEs__value, choice.PDUSessionResourceListCxtRelCpl),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceListCxtRelCpl,
@@ -20149,7 +20149,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_164[] = {
 		0, 0, /* No default value */
 		"PDUSessionResourceListCxtRelCpl"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextReleaseComplete_IEs__value, choice.CriticalityDiagnostics),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextReleaseComplete_IEs_t::ASN_NGAP_UEContextReleaseComplete_IEs__value, choice.CriticalityDiagnostics),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CriticalityDiagnostics,
@@ -20173,10 +20173,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_164[] = {
     { (ASN_TAG_CLASS_CONTEXT | (3 << 2)), 2, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_164 = {
-	sizeof(struct ASN_NGAP_UEContextReleaseComplete_IEs__value),
-	offsetof(struct ASN_NGAP_UEContextReleaseComplete_IEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_UEContextReleaseComplete_IEs__value, present),
-	sizeof(((struct ASN_NGAP_UEContextReleaseComplete_IEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_UEContextReleaseComplete_IEs_t::ASN_NGAP_UEContextReleaseComplete_IEs__value),
+	offsetof(struct ASN_NGAP_UEContextReleaseComplete_IEs_t::ASN_NGAP_UEContextReleaseComplete_IEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_UEContextReleaseComplete_IEs_t::ASN_NGAP_UEContextReleaseComplete_IEs__value, present),
+	sizeof(((struct ASN_NGAP_UEContextReleaseComplete_IEs_t::ASN_NGAP_UEContextReleaseComplete_IEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_164,
 	9,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_164,
@@ -20260,7 +20260,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_UEContextReleaseComplete_IEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_168[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationRequestIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationRequestIEs_t::ASN_NGAP_UEContextModificationRequestIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -20269,7 +20269,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_168[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationRequestIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationRequestIEs_t::ASN_NGAP_UEContextModificationRequestIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -20278,7 +20278,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_168[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationRequestIEs__value, choice.RANPagingPriority),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationRequestIEs_t::ASN_NGAP_UEContextModificationRequestIEs__value, choice.RANPagingPriority),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RANPagingPriority,
@@ -20287,7 +20287,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_168[] = {
 		0, 0, /* No default value */
 		"RANPagingPriority"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationRequestIEs__value, choice.SecurityKey),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationRequestIEs_t::ASN_NGAP_UEContextModificationRequestIEs__value, choice.SecurityKey),
 		(ASN_TAG_CLASS_UNIVERSAL | (3 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_SecurityKey,
@@ -20296,7 +20296,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_168[] = {
 		0, 0, /* No default value */
 		"SecurityKey"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationRequestIEs__value, choice.IndexToRFSP),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationRequestIEs_t::ASN_NGAP_UEContextModificationRequestIEs__value, choice.IndexToRFSP),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_IndexToRFSP,
@@ -20305,7 +20305,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_168[] = {
 		0, 0, /* No default value */
 		"IndexToRFSP"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationRequestIEs__value, choice.UEAggregateMaximumBitRate),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationRequestIEs_t::ASN_NGAP_UEContextModificationRequestIEs__value, choice.UEAggregateMaximumBitRate),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UEAggregateMaximumBitRate,
@@ -20314,7 +20314,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_168[] = {
 		0, 0, /* No default value */
 		"UEAggregateMaximumBitRate"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationRequestIEs__value, choice.UESecurityCapabilities),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationRequestIEs_t::ASN_NGAP_UEContextModificationRequestIEs__value, choice.UESecurityCapabilities),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UESecurityCapabilities,
@@ -20323,7 +20323,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_168[] = {
 		0, 0, /* No default value */
 		"UESecurityCapabilities"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationRequestIEs__value, choice.CoreNetworkAssistanceInformationForInactive),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationRequestIEs_t::ASN_NGAP_UEContextModificationRequestIEs__value, choice.CoreNetworkAssistanceInformationForInactive),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CoreNetworkAssistanceInformationForInactive,
@@ -20332,7 +20332,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_168[] = {
 		0, 0, /* No default value */
 		"CoreNetworkAssistanceInformationForInactive"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationRequestIEs__value, choice.EmergencyFallbackIndicator),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationRequestIEs_t::ASN_NGAP_UEContextModificationRequestIEs__value, choice.EmergencyFallbackIndicator),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_EmergencyFallbackIndicator,
@@ -20341,7 +20341,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_168[] = {
 		0, 0, /* No default value */
 		"EmergencyFallbackIndicator"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationRequestIEs__value, choice.AMF_UE_NGAP_ID_1),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationRequestIEs_t::ASN_NGAP_UEContextModificationRequestIEs__value, choice.AMF_UE_NGAP_ID_1),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -20350,7 +20350,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_168[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationRequestIEs__value, choice.RRCInactiveTransitionReportRequest),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationRequestIEs_t::ASN_NGAP_UEContextModificationRequestIEs__value, choice.RRCInactiveTransitionReportRequest),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RRCInactiveTransitionReportRequest,
@@ -20359,7 +20359,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_168[] = {
 		0, 0, /* No default value */
 		"RRCInactiveTransitionReportRequest"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationRequestIEs__value, choice.GUAMI),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationRequestIEs_t::ASN_NGAP_UEContextModificationRequestIEs__value, choice.GUAMI),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_GUAMI,
@@ -20368,7 +20368,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_168[] = {
 		0, 0, /* No default value */
 		"GUAMI"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationRequestIEs__value, choice.CNAssistedRANTuning),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationRequestIEs_t::ASN_NGAP_UEContextModificationRequestIEs__value, choice.CNAssistedRANTuning),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CNAssistedRANTuning,
@@ -20396,10 +20396,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_168[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 12, -5, 0 } /* CNAssistedRANTuning */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_168 = {
-	sizeof(struct ASN_NGAP_UEContextModificationRequestIEs__value),
-	offsetof(struct ASN_NGAP_UEContextModificationRequestIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_UEContextModificationRequestIEs__value, present),
-	sizeof(((struct ASN_NGAP_UEContextModificationRequestIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_UEContextModificationRequestIEs_t::ASN_NGAP_UEContextModificationRequestIEs__value),
+	offsetof(struct ASN_NGAP_UEContextModificationRequestIEs_t::ASN_NGAP_UEContextModificationRequestIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_UEContextModificationRequestIEs_t::ASN_NGAP_UEContextModificationRequestIEs__value, present),
+	sizeof(((struct ASN_NGAP_UEContextModificationRequestIEs_t::ASN_NGAP_UEContextModificationRequestIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_168,
 	13,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_168,
@@ -20483,7 +20483,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_UEContextModificationRequestIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_172[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationResponseIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationResponseIEs_t::ASN_NGAP_UEContextModificationResponseIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -20492,7 +20492,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_172[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationResponseIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationResponseIEs_t::ASN_NGAP_UEContextModificationResponseIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -20501,7 +20501,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_172[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationResponseIEs__value, choice.RRCState),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationResponseIEs_t::ASN_NGAP_UEContextModificationResponseIEs__value, choice.RRCState),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RRCState,
@@ -20510,7 +20510,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_172[] = {
 		0, 0, /* No default value */
 		"RRCState"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationResponseIEs__value, choice.UserLocationInformation),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationResponseIEs_t::ASN_NGAP_UEContextModificationResponseIEs__value, choice.UserLocationInformation),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_UserLocationInformation,
@@ -20519,7 +20519,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_172[] = {
 		0, 0, /* No default value */
 		"UserLocationInformation"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationResponseIEs__value, choice.CriticalityDiagnostics),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationResponseIEs_t::ASN_NGAP_UEContextModificationResponseIEs__value, choice.CriticalityDiagnostics),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CriticalityDiagnostics,
@@ -20542,10 +20542,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_172[] = {
     { (ASN_TAG_CLASS_CONTEXT | (3 << 2)), 3, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_172 = {
-	sizeof(struct ASN_NGAP_UEContextModificationResponseIEs__value),
-	offsetof(struct ASN_NGAP_UEContextModificationResponseIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_UEContextModificationResponseIEs__value, present),
-	sizeof(((struct ASN_NGAP_UEContextModificationResponseIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_UEContextModificationResponseIEs_t::ASN_NGAP_UEContextModificationResponseIEs__value),
+	offsetof(struct ASN_NGAP_UEContextModificationResponseIEs_t::ASN_NGAP_UEContextModificationResponseIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_UEContextModificationResponseIEs_t::ASN_NGAP_UEContextModificationResponseIEs__value, present),
+	sizeof(((struct ASN_NGAP_UEContextModificationResponseIEs_t::ASN_NGAP_UEContextModificationResponseIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_172,
 	8,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_172,
@@ -20629,7 +20629,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_UEContextModificationResponseIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_176[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationFailureIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationFailureIEs_t::ASN_NGAP_UEContextModificationFailureIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -20638,7 +20638,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_176[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationFailureIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationFailureIEs_t::ASN_NGAP_UEContextModificationFailureIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -20647,7 +20647,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_176[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationFailureIEs__value, choice.Cause),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationFailureIEs_t::ASN_NGAP_UEContextModificationFailureIEs__value, choice.Cause),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_Cause,
@@ -20656,7 +20656,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_176[] = {
 		0, 0, /* No default value */
 		"Cause"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationFailureIEs__value, choice.CriticalityDiagnostics),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UEContextModificationFailureIEs_t::ASN_NGAP_UEContextModificationFailureIEs__value, choice.CriticalityDiagnostics),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CriticalityDiagnostics,
@@ -20680,10 +20680,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_176[] = {
     { (ASN_TAG_CLASS_CONTEXT | (5 << 2)), 2, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_176 = {
-	sizeof(struct ASN_NGAP_UEContextModificationFailureIEs__value),
-	offsetof(struct ASN_NGAP_UEContextModificationFailureIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_UEContextModificationFailureIEs__value, present),
-	sizeof(((struct ASN_NGAP_UEContextModificationFailureIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_UEContextModificationFailureIEs_t::ASN_NGAP_UEContextModificationFailureIEs__value),
+	offsetof(struct ASN_NGAP_UEContextModificationFailureIEs_t::ASN_NGAP_UEContextModificationFailureIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_UEContextModificationFailureIEs_t::ASN_NGAP_UEContextModificationFailureIEs__value, present),
+	sizeof(((struct ASN_NGAP_UEContextModificationFailureIEs_t::ASN_NGAP_UEContextModificationFailureIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_176,
 	9,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_176,
@@ -20767,7 +20767,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_UEContextModificationFailureIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_180[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RRCInactiveTransitionReportIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RRCInactiveTransitionReportIEs_t::ASN_NGAP_RRCInactiveTransitionReportIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -20776,7 +20776,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_180[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RRCInactiveTransitionReportIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RRCInactiveTransitionReportIEs_t::ASN_NGAP_RRCInactiveTransitionReportIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -20785,7 +20785,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_180[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RRCInactiveTransitionReportIEs__value, choice.RRCState),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RRCInactiveTransitionReportIEs_t::ASN_NGAP_RRCInactiveTransitionReportIEs__value, choice.RRCState),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RRCState,
@@ -20794,7 +20794,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_180[] = {
 		0, 0, /* No default value */
 		"RRCState"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RRCInactiveTransitionReportIEs__value, choice.UserLocationInformation),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RRCInactiveTransitionReportIEs_t::ASN_NGAP_RRCInactiveTransitionReportIEs__value, choice.UserLocationInformation),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_UserLocationInformation,
@@ -20814,10 +20814,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_180[] = {
     { (ASN_TAG_CLASS_CONTEXT | (3 << 2)), 3, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_180 = {
-	sizeof(struct ASN_NGAP_RRCInactiveTransitionReportIEs__value),
-	offsetof(struct ASN_NGAP_RRCInactiveTransitionReportIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_RRCInactiveTransitionReportIEs__value, present),
-	sizeof(((struct ASN_NGAP_RRCInactiveTransitionReportIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_RRCInactiveTransitionReportIEs_t::ASN_NGAP_RRCInactiveTransitionReportIEs__value),
+	offsetof(struct ASN_NGAP_RRCInactiveTransitionReportIEs_t::ASN_NGAP_RRCInactiveTransitionReportIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_RRCInactiveTransitionReportIEs_t::ASN_NGAP_RRCInactiveTransitionReportIEs__value, present),
+	sizeof(((struct ASN_NGAP_RRCInactiveTransitionReportIEs_t::ASN_NGAP_RRCInactiveTransitionReportIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_180,
 	7,	/* Count of tags in the map */
 	0, 0,
@@ -20900,7 +20900,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_RRCInactiveTransitionReportIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_184[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequiredIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequiredIEs_t::ASN_NGAP_HandoverRequiredIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -20909,7 +20909,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_184[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequiredIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequiredIEs_t::ASN_NGAP_HandoverRequiredIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -20918,7 +20918,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_184[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequiredIEs__value, choice.HandoverType),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequiredIEs_t::ASN_NGAP_HandoverRequiredIEs__value, choice.HandoverType),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_HandoverType,
@@ -20927,7 +20927,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_184[] = {
 		0, 0, /* No default value */
 		"HandoverType"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequiredIEs__value, choice.Cause),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequiredIEs_t::ASN_NGAP_HandoverRequiredIEs__value, choice.Cause),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_Cause,
@@ -20936,7 +20936,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_184[] = {
 		0, 0, /* No default value */
 		"Cause"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequiredIEs__value, choice.TargetID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequiredIEs_t::ASN_NGAP_HandoverRequiredIEs__value, choice.TargetID),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_TargetID,
@@ -20945,7 +20945,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_184[] = {
 		0, 0, /* No default value */
 		"TargetID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequiredIEs__value, choice.DirectForwardingPathAvailability),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequiredIEs_t::ASN_NGAP_HandoverRequiredIEs__value, choice.DirectForwardingPathAvailability),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_DirectForwardingPathAvailability,
@@ -20954,7 +20954,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_184[] = {
 		0, 0, /* No default value */
 		"DirectForwardingPathAvailability"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequiredIEs__value, choice.PDUSessionResourceListHORqd),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequiredIEs_t::ASN_NGAP_HandoverRequiredIEs__value, choice.PDUSessionResourceListHORqd),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceListHORqd,
@@ -20963,7 +20963,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_184[] = {
 		0, 0, /* No default value */
 		"PDUSessionResourceListHORqd"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequiredIEs__value, choice.SourceToTarget_TransparentContainer),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequiredIEs_t::ASN_NGAP_HandoverRequiredIEs__value, choice.SourceToTarget_TransparentContainer),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_SourceToTarget_TransparentContainer,
@@ -20993,10 +20993,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_184[] = {
     { (ASN_TAG_CLASS_CONTEXT | (5 << 2)), 3, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_184 = {
-	sizeof(struct ASN_NGAP_HandoverRequiredIEs__value),
-	offsetof(struct ASN_NGAP_HandoverRequiredIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_HandoverRequiredIEs__value, present),
-	sizeof(((struct ASN_NGAP_HandoverRequiredIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_HandoverRequiredIEs_t::ASN_NGAP_HandoverRequiredIEs__value),
+	offsetof(struct ASN_NGAP_HandoverRequiredIEs_t::ASN_NGAP_HandoverRequiredIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_HandoverRequiredIEs_t::ASN_NGAP_HandoverRequiredIEs__value, present),
+	sizeof(((struct ASN_NGAP_HandoverRequiredIEs_t::ASN_NGAP_HandoverRequiredIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_184,
 	15,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_184,
@@ -21080,7 +21080,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_HandoverRequiredIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_188[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverCommandIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverCommandIEs_t::ASN_NGAP_HandoverCommandIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -21089,7 +21089,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_188[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverCommandIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverCommandIEs_t::ASN_NGAP_HandoverCommandIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -21098,7 +21098,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_188[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverCommandIEs__value, choice.HandoverType),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverCommandIEs_t::ASN_NGAP_HandoverCommandIEs__value, choice.HandoverType),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_HandoverType,
@@ -21107,7 +21107,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_188[] = {
 		0, 0, /* No default value */
 		"HandoverType"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverCommandIEs__value, choice.NASSecurityParametersFromNGRAN),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverCommandIEs_t::ASN_NGAP_HandoverCommandIEs__value, choice.NASSecurityParametersFromNGRAN),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_NASSecurityParametersFromNGRAN,
@@ -21116,7 +21116,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_188[] = {
 		0, 0, /* No default value */
 		"NASSecurityParametersFromNGRAN"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverCommandIEs__value, choice.PDUSessionResourceHandoverList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverCommandIEs_t::ASN_NGAP_HandoverCommandIEs__value, choice.PDUSessionResourceHandoverList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceHandoverList,
@@ -21125,7 +21125,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_188[] = {
 		0, 0, /* No default value */
 		"PDUSessionResourceHandoverList"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverCommandIEs__value, choice.PDUSessionResourceToReleaseListHOCmd),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverCommandIEs_t::ASN_NGAP_HandoverCommandIEs__value, choice.PDUSessionResourceToReleaseListHOCmd),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceToReleaseListHOCmd,
@@ -21134,7 +21134,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_188[] = {
 		0, 0, /* No default value */
 		"PDUSessionResourceToReleaseListHOCmd"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverCommandIEs__value, choice.TargetToSource_TransparentContainer),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverCommandIEs_t::ASN_NGAP_HandoverCommandIEs__value, choice.TargetToSource_TransparentContainer),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_TargetToSource_TransparentContainer,
@@ -21143,7 +21143,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_188[] = {
 		0, 0, /* No default value */
 		"TargetToSource-TransparentContainer"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverCommandIEs__value, choice.CriticalityDiagnostics),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverCommandIEs_t::ASN_NGAP_HandoverCommandIEs__value, choice.CriticalityDiagnostics),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CriticalityDiagnostics,
@@ -21166,10 +21166,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_188[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 7, -2, 0 } /* CriticalityDiagnostics */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_188 = {
-	sizeof(struct ASN_NGAP_HandoverCommandIEs__value),
-	offsetof(struct ASN_NGAP_HandoverCommandIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_HandoverCommandIEs__value, present),
-	sizeof(((struct ASN_NGAP_HandoverCommandIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_HandoverCommandIEs_t::ASN_NGAP_HandoverCommandIEs__value),
+	offsetof(struct ASN_NGAP_HandoverCommandIEs_t::ASN_NGAP_HandoverCommandIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_HandoverCommandIEs_t::ASN_NGAP_HandoverCommandIEs__value, present),
+	sizeof(((struct ASN_NGAP_HandoverCommandIEs_t::ASN_NGAP_HandoverCommandIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_188,
 	8,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_188,
@@ -21253,7 +21253,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_HandoverCommandIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_192[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverPreparationFailureIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverPreparationFailureIEs_t::ASN_NGAP_HandoverPreparationFailureIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -21262,7 +21262,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_192[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverPreparationFailureIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverPreparationFailureIEs_t::ASN_NGAP_HandoverPreparationFailureIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -21271,7 +21271,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_192[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverPreparationFailureIEs__value, choice.Cause),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverPreparationFailureIEs_t::ASN_NGAP_HandoverPreparationFailureIEs__value, choice.Cause),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_Cause,
@@ -21280,7 +21280,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_192[] = {
 		0, 0, /* No default value */
 		"Cause"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverPreparationFailureIEs__value, choice.CriticalityDiagnostics),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverPreparationFailureIEs_t::ASN_NGAP_HandoverPreparationFailureIEs__value, choice.CriticalityDiagnostics),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CriticalityDiagnostics,
@@ -21304,10 +21304,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_192[] = {
     { (ASN_TAG_CLASS_CONTEXT | (5 << 2)), 2, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_192 = {
-	sizeof(struct ASN_NGAP_HandoverPreparationFailureIEs__value),
-	offsetof(struct ASN_NGAP_HandoverPreparationFailureIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_HandoverPreparationFailureIEs__value, present),
-	sizeof(((struct ASN_NGAP_HandoverPreparationFailureIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_HandoverPreparationFailureIEs_t::ASN_NGAP_HandoverPreparationFailureIEs__value),
+	offsetof(struct ASN_NGAP_HandoverPreparationFailureIEs_t::ASN_NGAP_HandoverPreparationFailureIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_HandoverPreparationFailureIEs_t::ASN_NGAP_HandoverPreparationFailureIEs__value, present),
+	sizeof(((struct ASN_NGAP_HandoverPreparationFailureIEs_t::ASN_NGAP_HandoverPreparationFailureIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_192,
 	9,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_192,
@@ -21391,7 +21391,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_HandoverPreparationFailureIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_196[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs_t::ASN_NGAP_HandoverRequestIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -21400,7 +21400,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_196[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs__value, choice.HandoverType),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs_t::ASN_NGAP_HandoverRequestIEs__value, choice.HandoverType),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_HandoverType,
@@ -21409,7 +21409,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_196[] = {
 		0, 0, /* No default value */
 		"HandoverType"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs__value, choice.Cause),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs_t::ASN_NGAP_HandoverRequestIEs__value, choice.Cause),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_Cause,
@@ -21418,7 +21418,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_196[] = {
 		0, 0, /* No default value */
 		"Cause"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs__value, choice.UEAggregateMaximumBitRate),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs_t::ASN_NGAP_HandoverRequestIEs__value, choice.UEAggregateMaximumBitRate),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UEAggregateMaximumBitRate,
@@ -21427,7 +21427,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_196[] = {
 		0, 0, /* No default value */
 		"UEAggregateMaximumBitRate"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs__value, choice.CoreNetworkAssistanceInformationForInactive),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs_t::ASN_NGAP_HandoverRequestIEs__value, choice.CoreNetworkAssistanceInformationForInactive),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CoreNetworkAssistanceInformationForInactive,
@@ -21436,7 +21436,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_196[] = {
 		0, 0, /* No default value */
 		"CoreNetworkAssistanceInformationForInactive"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs__value, choice.UESecurityCapabilities),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs_t::ASN_NGAP_HandoverRequestIEs__value, choice.UESecurityCapabilities),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UESecurityCapabilities,
@@ -21445,7 +21445,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_196[] = {
 		0, 0, /* No default value */
 		"UESecurityCapabilities"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs__value, choice.SecurityContext),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs_t::ASN_NGAP_HandoverRequestIEs__value, choice.SecurityContext),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_SecurityContext,
@@ -21454,7 +21454,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_196[] = {
 		0, 0, /* No default value */
 		"SecurityContext"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs__value, choice.NewSecurityContextInd),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs_t::ASN_NGAP_HandoverRequestIEs__value, choice.NewSecurityContextInd),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_NewSecurityContextInd,
@@ -21463,7 +21463,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_196[] = {
 		0, 0, /* No default value */
 		"NewSecurityContextInd"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs__value, choice.NAS_PDU),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs_t::ASN_NGAP_HandoverRequestIEs__value, choice.NAS_PDU),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_NAS_PDU,
@@ -21472,7 +21472,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_196[] = {
 		0, 0, /* No default value */
 		"NAS-PDU"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs__value, choice.PDUSessionResourceSetupListHOReq),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs_t::ASN_NGAP_HandoverRequestIEs__value, choice.PDUSessionResourceSetupListHOReq),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceSetupListHOReq,
@@ -21481,7 +21481,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_196[] = {
 		0, 0, /* No default value */
 		"PDUSessionResourceSetupListHOReq"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs__value, choice.AllowedNSSAI),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs_t::ASN_NGAP_HandoverRequestIEs__value, choice.AllowedNSSAI),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AllowedNSSAI,
@@ -21490,7 +21490,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_196[] = {
 		0, 0, /* No default value */
 		"AllowedNSSAI"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs__value, choice.TraceActivation),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs_t::ASN_NGAP_HandoverRequestIEs__value, choice.TraceActivation),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_TraceActivation,
@@ -21499,7 +21499,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_196[] = {
 		0, 0, /* No default value */
 		"TraceActivation"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs__value, choice.MaskedIMEISV),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs_t::ASN_NGAP_HandoverRequestIEs__value, choice.MaskedIMEISV),
 		(ASN_TAG_CLASS_UNIVERSAL | (3 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_MaskedIMEISV,
@@ -21508,7 +21508,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_196[] = {
 		0, 0, /* No default value */
 		"MaskedIMEISV"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs__value, choice.SourceToTarget_TransparentContainer),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs_t::ASN_NGAP_HandoverRequestIEs__value, choice.SourceToTarget_TransparentContainer),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_SourceToTarget_TransparentContainer,
@@ -21517,7 +21517,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_196[] = {
 		0, 0, /* No default value */
 		"SourceToTarget-TransparentContainer"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs__value, choice.MobilityRestrictionList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs_t::ASN_NGAP_HandoverRequestIEs__value, choice.MobilityRestrictionList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_MobilityRestrictionList,
@@ -21526,7 +21526,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_196[] = {
 		0, 0, /* No default value */
 		"MobilityRestrictionList"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs__value, choice.LocationReportingRequestType),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs_t::ASN_NGAP_HandoverRequestIEs__value, choice.LocationReportingRequestType),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_LocationReportingRequestType,
@@ -21535,7 +21535,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_196[] = {
 		0, 0, /* No default value */
 		"LocationReportingRequestType"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs__value, choice.RRCInactiveTransitionReportRequest),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs_t::ASN_NGAP_HandoverRequestIEs__value, choice.RRCInactiveTransitionReportRequest),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RRCInactiveTransitionReportRequest,
@@ -21544,7 +21544,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_196[] = {
 		0, 0, /* No default value */
 		"RRCInactiveTransitionReportRequest"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs__value, choice.GUAMI),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs_t::ASN_NGAP_HandoverRequestIEs__value, choice.GUAMI),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_GUAMI,
@@ -21553,7 +21553,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_196[] = {
 		0, 0, /* No default value */
 		"GUAMI"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs__value, choice.RedirectionVoiceFallback),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs_t::ASN_NGAP_HandoverRequestIEs__value, choice.RedirectionVoiceFallback),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RedirectionVoiceFallback,
@@ -21562,7 +21562,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_196[] = {
 		0, 0, /* No default value */
 		"RedirectionVoiceFallback"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs__value, choice.CNAssistedRANTuning),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestIEs_t::ASN_NGAP_HandoverRequestIEs__value, choice.CNAssistedRANTuning),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CNAssistedRANTuning,
@@ -21602,10 +21602,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_196[] = {
     { (ASN_TAG_CLASS_CONTEXT | (5 << 2)), 2, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_196 = {
-	sizeof(struct ASN_NGAP_HandoverRequestIEs__value),
-	offsetof(struct ASN_NGAP_HandoverRequestIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_HandoverRequestIEs__value, present),
-	sizeof(((struct ASN_NGAP_HandoverRequestIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_HandoverRequestIEs_t::ASN_NGAP_HandoverRequestIEs__value),
+	offsetof(struct ASN_NGAP_HandoverRequestIEs_t::ASN_NGAP_HandoverRequestIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_HandoverRequestIEs_t::ASN_NGAP_HandoverRequestIEs__value, present),
+	sizeof(((struct ASN_NGAP_HandoverRequestIEs_t::ASN_NGAP_HandoverRequestIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_196,
 	25,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_196,
@@ -21689,7 +21689,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_HandoverRequestIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_200[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestAcknowledgeIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestAcknowledgeIEs_t::ASN_NGAP_HandoverRequestAcknowledgeIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -21698,7 +21698,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_200[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestAcknowledgeIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestAcknowledgeIEs_t::ASN_NGAP_HandoverRequestAcknowledgeIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -21707,7 +21707,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_200[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestAcknowledgeIEs__value, choice.PDUSessionResourceAdmittedList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestAcknowledgeIEs_t::ASN_NGAP_HandoverRequestAcknowledgeIEs__value, choice.PDUSessionResourceAdmittedList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceAdmittedList,
@@ -21716,7 +21716,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_200[] = {
 		0, 0, /* No default value */
 		"PDUSessionResourceAdmittedList"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestAcknowledgeIEs__value, choice.PDUSessionResourceFailedToSetupListHOAck),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestAcknowledgeIEs_t::ASN_NGAP_HandoverRequestAcknowledgeIEs__value, choice.PDUSessionResourceFailedToSetupListHOAck),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceFailedToSetupListHOAck,
@@ -21725,7 +21725,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_200[] = {
 		0, 0, /* No default value */
 		"PDUSessionResourceFailedToSetupListHOAck"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestAcknowledgeIEs__value, choice.TargetToSource_TransparentContainer),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestAcknowledgeIEs_t::ASN_NGAP_HandoverRequestAcknowledgeIEs__value, choice.TargetToSource_TransparentContainer),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_TargetToSource_TransparentContainer,
@@ -21734,7 +21734,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_200[] = {
 		0, 0, /* No default value */
 		"TargetToSource-TransparentContainer"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestAcknowledgeIEs__value, choice.CriticalityDiagnostics),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverRequestAcknowledgeIEs_t::ASN_NGAP_HandoverRequestAcknowledgeIEs__value, choice.CriticalityDiagnostics),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CriticalityDiagnostics,
@@ -21755,10 +21755,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_200[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 5, -2, 0 } /* CriticalityDiagnostics */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_200 = {
-	sizeof(struct ASN_NGAP_HandoverRequestAcknowledgeIEs__value),
-	offsetof(struct ASN_NGAP_HandoverRequestAcknowledgeIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_HandoverRequestAcknowledgeIEs__value, present),
-	sizeof(((struct ASN_NGAP_HandoverRequestAcknowledgeIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_HandoverRequestAcknowledgeIEs_t::ASN_NGAP_HandoverRequestAcknowledgeIEs__value),
+	offsetof(struct ASN_NGAP_HandoverRequestAcknowledgeIEs_t::ASN_NGAP_HandoverRequestAcknowledgeIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_HandoverRequestAcknowledgeIEs_t::ASN_NGAP_HandoverRequestAcknowledgeIEs__value, present),
+	sizeof(((struct ASN_NGAP_HandoverRequestAcknowledgeIEs_t::ASN_NGAP_HandoverRequestAcknowledgeIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_200,
 	6,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_200,
@@ -21842,7 +21842,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_HandoverRequestAcknowledgeIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_204[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverFailureIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverFailureIEs_t::ASN_NGAP_HandoverFailureIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -21851,7 +21851,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_204[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverFailureIEs__value, choice.Cause),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverFailureIEs_t::ASN_NGAP_HandoverFailureIEs__value, choice.Cause),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_Cause,
@@ -21860,7 +21860,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_204[] = {
 		0, 0, /* No default value */
 		"Cause"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverFailureIEs__value, choice.CriticalityDiagnostics),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverFailureIEs_t::ASN_NGAP_HandoverFailureIEs__value, choice.CriticalityDiagnostics),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CriticalityDiagnostics,
@@ -21883,10 +21883,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_204[] = {
     { (ASN_TAG_CLASS_CONTEXT | (5 << 2)), 1, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_204 = {
-	sizeof(struct ASN_NGAP_HandoverFailureIEs__value),
-	offsetof(struct ASN_NGAP_HandoverFailureIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_HandoverFailureIEs__value, present),
-	sizeof(((struct ASN_NGAP_HandoverFailureIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_HandoverFailureIEs_t::ASN_NGAP_HandoverFailureIEs__value),
+	offsetof(struct ASN_NGAP_HandoverFailureIEs_t::ASN_NGAP_HandoverFailureIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_HandoverFailureIEs_t::ASN_NGAP_HandoverFailureIEs__value, present),
+	sizeof(((struct ASN_NGAP_HandoverFailureIEs_t::ASN_NGAP_HandoverFailureIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_204,
 	8,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_204,
@@ -21970,7 +21970,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_HandoverFailureIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_208[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverNotifyIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverNotifyIEs_t::ASN_NGAP_HandoverNotifyIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -21979,7 +21979,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_208[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverNotifyIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverNotifyIEs_t::ASN_NGAP_HandoverNotifyIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -21988,7 +21988,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_208[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverNotifyIEs__value, choice.UserLocationInformation),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverNotifyIEs_t::ASN_NGAP_HandoverNotifyIEs__value, choice.UserLocationInformation),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_UserLocationInformation,
@@ -22007,10 +22007,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_208[] = {
     { (ASN_TAG_CLASS_CONTEXT | (3 << 2)), 2, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_208 = {
-	sizeof(struct ASN_NGAP_HandoverNotifyIEs__value),
-	offsetof(struct ASN_NGAP_HandoverNotifyIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_HandoverNotifyIEs__value, present),
-	sizeof(((struct ASN_NGAP_HandoverNotifyIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_HandoverNotifyIEs_t::ASN_NGAP_HandoverNotifyIEs__value),
+	offsetof(struct ASN_NGAP_HandoverNotifyIEs_t::ASN_NGAP_HandoverNotifyIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_HandoverNotifyIEs_t::ASN_NGAP_HandoverNotifyIEs__value, present),
+	sizeof(((struct ASN_NGAP_HandoverNotifyIEs_t::ASN_NGAP_HandoverNotifyIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_208,
 	6,	/* Count of tags in the map */
 	0, 0,
@@ -22093,7 +22093,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_HandoverNotifyIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_212[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestIEs_t::ASN_NGAP_PathSwitchRequestIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -22102,7 +22102,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_212[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestIEs_t::ASN_NGAP_PathSwitchRequestIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -22111,7 +22111,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_212[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestIEs__value, choice.UserLocationInformation),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestIEs_t::ASN_NGAP_PathSwitchRequestIEs__value, choice.UserLocationInformation),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_UserLocationInformation,
@@ -22120,7 +22120,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_212[] = {
 		0, 0, /* No default value */
 		"UserLocationInformation"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestIEs__value, choice.UESecurityCapabilities),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestIEs_t::ASN_NGAP_PathSwitchRequestIEs__value, choice.UESecurityCapabilities),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UESecurityCapabilities,
@@ -22129,7 +22129,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_212[] = {
 		0, 0, /* No default value */
 		"UESecurityCapabilities"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestIEs__value, choice.PDUSessionResourceToBeSwitchedDLList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestIEs_t::ASN_NGAP_PathSwitchRequestIEs__value, choice.PDUSessionResourceToBeSwitchedDLList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceToBeSwitchedDLList,
@@ -22138,7 +22138,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_212[] = {
 		0, 0, /* No default value */
 		"PDUSessionResourceToBeSwitchedDLList"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestIEs__value, choice.PDUSessionResourceFailedToSetupListPSReq),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestIEs_t::ASN_NGAP_PathSwitchRequestIEs__value, choice.PDUSessionResourceFailedToSetupListPSReq),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceFailedToSetupListPSReq,
@@ -22162,10 +22162,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_212[] = {
     { (ASN_TAG_CLASS_CONTEXT | (3 << 2)), 2, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_212 = {
-	sizeof(struct ASN_NGAP_PathSwitchRequestIEs__value),
-	offsetof(struct ASN_NGAP_PathSwitchRequestIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_PathSwitchRequestIEs__value, present),
-	sizeof(((struct ASN_NGAP_PathSwitchRequestIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_PathSwitchRequestIEs_t::ASN_NGAP_PathSwitchRequestIEs__value),
+	offsetof(struct ASN_NGAP_PathSwitchRequestIEs_t::ASN_NGAP_PathSwitchRequestIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_PathSwitchRequestIEs_t::ASN_NGAP_PathSwitchRequestIEs__value, present),
+	sizeof(((struct ASN_NGAP_PathSwitchRequestIEs_t::ASN_NGAP_PathSwitchRequestIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_212,
 	9,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_212,
@@ -22249,7 +22249,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PathSwitchRequestIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_216[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeIEs_t::ASN_NGAP_PathSwitchRequestAcknowledgeIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -22258,7 +22258,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_216[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeIEs_t::ASN_NGAP_PathSwitchRequestAcknowledgeIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -22267,7 +22267,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_216[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeIEs__value, choice.UESecurityCapabilities),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeIEs_t::ASN_NGAP_PathSwitchRequestAcknowledgeIEs__value, choice.UESecurityCapabilities),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UESecurityCapabilities,
@@ -22276,7 +22276,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_216[] = {
 		0, 0, /* No default value */
 		"UESecurityCapabilities"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeIEs__value, choice.SecurityContext),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeIEs_t::ASN_NGAP_PathSwitchRequestAcknowledgeIEs__value, choice.SecurityContext),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_SecurityContext,
@@ -22285,7 +22285,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_216[] = {
 		0, 0, /* No default value */
 		"SecurityContext"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeIEs__value, choice.NewSecurityContextInd),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeIEs_t::ASN_NGAP_PathSwitchRequestAcknowledgeIEs__value, choice.NewSecurityContextInd),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_NewSecurityContextInd,
@@ -22294,7 +22294,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_216[] = {
 		0, 0, /* No default value */
 		"NewSecurityContextInd"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeIEs__value, choice.PDUSessionResourceSwitchedList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeIEs_t::ASN_NGAP_PathSwitchRequestAcknowledgeIEs__value, choice.PDUSessionResourceSwitchedList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceSwitchedList,
@@ -22303,7 +22303,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_216[] = {
 		0, 0, /* No default value */
 		"PDUSessionResourceSwitchedList"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeIEs__value, choice.PDUSessionResourceReleasedListPSAck),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeIEs_t::ASN_NGAP_PathSwitchRequestAcknowledgeIEs__value, choice.PDUSessionResourceReleasedListPSAck),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceReleasedListPSAck,
@@ -22312,7 +22312,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_216[] = {
 		0, 0, /* No default value */
 		"PDUSessionResourceReleasedListPSAck"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeIEs__value, choice.AllowedNSSAI),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeIEs_t::ASN_NGAP_PathSwitchRequestAcknowledgeIEs__value, choice.AllowedNSSAI),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AllowedNSSAI,
@@ -22321,7 +22321,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_216[] = {
 		0, 0, /* No default value */
 		"AllowedNSSAI"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeIEs__value, choice.CoreNetworkAssistanceInformationForInactive),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeIEs_t::ASN_NGAP_PathSwitchRequestAcknowledgeIEs__value, choice.CoreNetworkAssistanceInformationForInactive),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CoreNetworkAssistanceInformationForInactive,
@@ -22330,7 +22330,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_216[] = {
 		0, 0, /* No default value */
 		"CoreNetworkAssistanceInformationForInactive"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeIEs__value, choice.RRCInactiveTransitionReportRequest),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeIEs_t::ASN_NGAP_PathSwitchRequestAcknowledgeIEs__value, choice.RRCInactiveTransitionReportRequest),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RRCInactiveTransitionReportRequest,
@@ -22339,7 +22339,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_216[] = {
 		0, 0, /* No default value */
 		"RRCInactiveTransitionReportRequest"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeIEs__value, choice.CriticalityDiagnostics),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeIEs_t::ASN_NGAP_PathSwitchRequestAcknowledgeIEs__value, choice.CriticalityDiagnostics),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CriticalityDiagnostics,
@@ -22348,7 +22348,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_216[] = {
 		0, 0, /* No default value */
 		"CriticalityDiagnostics"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeIEs__value, choice.RedirectionVoiceFallback),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeIEs_t::ASN_NGAP_PathSwitchRequestAcknowledgeIEs__value, choice.RedirectionVoiceFallback),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RedirectionVoiceFallback,
@@ -22357,7 +22357,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_216[] = {
 		0, 0, /* No default value */
 		"RedirectionVoiceFallback"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeIEs__value, choice.CNAssistedRANTuning),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeIEs_t::ASN_NGAP_PathSwitchRequestAcknowledgeIEs__value, choice.CNAssistedRANTuning),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CNAssistedRANTuning,
@@ -22385,10 +22385,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_216[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 12, -7, 0 } /* CNAssistedRANTuning */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_216 = {
-	sizeof(struct ASN_NGAP_PathSwitchRequestAcknowledgeIEs__value),
-	offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeIEs__value, present),
-	sizeof(((struct ASN_NGAP_PathSwitchRequestAcknowledgeIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_PathSwitchRequestAcknowledgeIEs_t::ASN_NGAP_PathSwitchRequestAcknowledgeIEs__value),
+	offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeIEs_t::ASN_NGAP_PathSwitchRequestAcknowledgeIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_PathSwitchRequestAcknowledgeIEs_t::ASN_NGAP_PathSwitchRequestAcknowledgeIEs__value, present),
+	sizeof(((struct ASN_NGAP_PathSwitchRequestAcknowledgeIEs_t::ASN_NGAP_PathSwitchRequestAcknowledgeIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_216,
 	13,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_216,
@@ -22472,7 +22472,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PathSwitchRequestAcknowledgeIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_220[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestFailureIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestFailureIEs_t::ASN_NGAP_PathSwitchRequestFailureIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -22481,7 +22481,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_220[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestFailureIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestFailureIEs_t::ASN_NGAP_PathSwitchRequestFailureIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -22490,7 +22490,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_220[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestFailureIEs__value, choice.PDUSessionResourceReleasedListPSFail),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestFailureIEs_t::ASN_NGAP_PathSwitchRequestFailureIEs__value, choice.PDUSessionResourceReleasedListPSFail),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceReleasedListPSFail,
@@ -22499,7 +22499,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_220[] = {
 		0, 0, /* No default value */
 		"PDUSessionResourceReleasedListPSFail"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestFailureIEs__value, choice.CriticalityDiagnostics),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PathSwitchRequestFailureIEs_t::ASN_NGAP_PathSwitchRequestFailureIEs__value, choice.CriticalityDiagnostics),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CriticalityDiagnostics,
@@ -22516,10 +22516,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_220[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 3, -1, 0 } /* CriticalityDiagnostics */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_220 = {
-	sizeof(struct ASN_NGAP_PathSwitchRequestFailureIEs__value),
-	offsetof(struct ASN_NGAP_PathSwitchRequestFailureIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_PathSwitchRequestFailureIEs__value, present),
-	sizeof(((struct ASN_NGAP_PathSwitchRequestFailureIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_PathSwitchRequestFailureIEs_t::ASN_NGAP_PathSwitchRequestFailureIEs__value),
+	offsetof(struct ASN_NGAP_PathSwitchRequestFailureIEs_t::ASN_NGAP_PathSwitchRequestFailureIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_PathSwitchRequestFailureIEs_t::ASN_NGAP_PathSwitchRequestFailureIEs__value, present),
+	sizeof(((struct ASN_NGAP_PathSwitchRequestFailureIEs_t::ASN_NGAP_PathSwitchRequestFailureIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_220,
 	4,	/* Count of tags in the map */
 	0, 0,
@@ -22602,7 +22602,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PathSwitchRequestFailureIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_224[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverCancelIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverCancelIEs_t::ASN_NGAP_HandoverCancelIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -22611,7 +22611,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_224[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverCancelIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverCancelIEs_t::ASN_NGAP_HandoverCancelIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -22620,7 +22620,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_224[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverCancelIEs__value, choice.Cause),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverCancelIEs_t::ASN_NGAP_HandoverCancelIEs__value, choice.Cause),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_Cause,
@@ -22641,10 +22641,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_224[] = {
     { (ASN_TAG_CLASS_CONTEXT | (5 << 2)), 2, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_224 = {
-	sizeof(struct ASN_NGAP_HandoverCancelIEs__value),
-	offsetof(struct ASN_NGAP_HandoverCancelIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_HandoverCancelIEs__value, present),
-	sizeof(((struct ASN_NGAP_HandoverCancelIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_HandoverCancelIEs_t::ASN_NGAP_HandoverCancelIEs__value),
+	offsetof(struct ASN_NGAP_HandoverCancelIEs_t::ASN_NGAP_HandoverCancelIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_HandoverCancelIEs_t::ASN_NGAP_HandoverCancelIEs__value, present),
+	sizeof(((struct ASN_NGAP_HandoverCancelIEs_t::ASN_NGAP_HandoverCancelIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_224,
 	8,	/* Count of tags in the map */
 	0, 0,
@@ -22727,7 +22727,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_HandoverCancelIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_228[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverCancelAcknowledgeIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverCancelAcknowledgeIEs_t::ASN_NGAP_HandoverCancelAcknowledgeIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -22736,7 +22736,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_228[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverCancelAcknowledgeIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverCancelAcknowledgeIEs_t::ASN_NGAP_HandoverCancelAcknowledgeIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -22745,7 +22745,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_228[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverCancelAcknowledgeIEs__value, choice.CriticalityDiagnostics),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_HandoverCancelAcknowledgeIEs_t::ASN_NGAP_HandoverCancelAcknowledgeIEs__value, choice.CriticalityDiagnostics),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CriticalityDiagnostics,
@@ -22761,10 +22761,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_228[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 2, 0, 0 } /* CriticalityDiagnostics */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_228 = {
-	sizeof(struct ASN_NGAP_HandoverCancelAcknowledgeIEs__value),
-	offsetof(struct ASN_NGAP_HandoverCancelAcknowledgeIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_HandoverCancelAcknowledgeIEs__value, present),
-	sizeof(((struct ASN_NGAP_HandoverCancelAcknowledgeIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_HandoverCancelAcknowledgeIEs_t::ASN_NGAP_HandoverCancelAcknowledgeIEs__value),
+	offsetof(struct ASN_NGAP_HandoverCancelAcknowledgeIEs_t::ASN_NGAP_HandoverCancelAcknowledgeIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_HandoverCancelAcknowledgeIEs_t::ASN_NGAP_HandoverCancelAcknowledgeIEs__value, present),
+	sizeof(((struct ASN_NGAP_HandoverCancelAcknowledgeIEs_t::ASN_NGAP_HandoverCancelAcknowledgeIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_228,
 	3,	/* Count of tags in the map */
 	0, 0,
@@ -22847,7 +22847,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_HandoverCancelAcknowledgeIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_232[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UplinkRANStatusTransferIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UplinkRANStatusTransferIEs_t::ASN_NGAP_UplinkRANStatusTransferIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -22856,7 +22856,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_232[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UplinkRANStatusTransferIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UplinkRANStatusTransferIEs_t::ASN_NGAP_UplinkRANStatusTransferIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -22865,7 +22865,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_232[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UplinkRANStatusTransferIEs__value, choice.RANStatusTransfer_TransparentContainer),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UplinkRANStatusTransferIEs_t::ASN_NGAP_UplinkRANStatusTransferIEs__value, choice.RANStatusTransfer_TransparentContainer),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RANStatusTransfer_TransparentContainer,
@@ -22881,10 +22881,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_232[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 2, 0, 0 } /* RANStatusTransfer-TransparentContainer */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_232 = {
-	sizeof(struct ASN_NGAP_UplinkRANStatusTransferIEs__value),
-	offsetof(struct ASN_NGAP_UplinkRANStatusTransferIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_UplinkRANStatusTransferIEs__value, present),
-	sizeof(((struct ASN_NGAP_UplinkRANStatusTransferIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_UplinkRANStatusTransferIEs_t::ASN_NGAP_UplinkRANStatusTransferIEs__value),
+	offsetof(struct ASN_NGAP_UplinkRANStatusTransferIEs_t::ASN_NGAP_UplinkRANStatusTransferIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_UplinkRANStatusTransferIEs_t::ASN_NGAP_UplinkRANStatusTransferIEs__value, present),
+	sizeof(((struct ASN_NGAP_UplinkRANStatusTransferIEs_t::ASN_NGAP_UplinkRANStatusTransferIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_232,
 	3,	/* Count of tags in the map */
 	0, 0,
@@ -22967,7 +22967,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_UplinkRANStatusTransferIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_236[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkRANStatusTransferIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkRANStatusTransferIEs_t::ASN_NGAP_DownlinkRANStatusTransferIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -22976,7 +22976,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_236[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkRANStatusTransferIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkRANStatusTransferIEs_t::ASN_NGAP_DownlinkRANStatusTransferIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -22985,7 +22985,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_236[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkRANStatusTransferIEs__value, choice.RANStatusTransfer_TransparentContainer),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkRANStatusTransferIEs_t::ASN_NGAP_DownlinkRANStatusTransferIEs__value, choice.RANStatusTransfer_TransparentContainer),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RANStatusTransfer_TransparentContainer,
@@ -23001,10 +23001,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_236[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 2, 0, 0 } /* RANStatusTransfer-TransparentContainer */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_236 = {
-	sizeof(struct ASN_NGAP_DownlinkRANStatusTransferIEs__value),
-	offsetof(struct ASN_NGAP_DownlinkRANStatusTransferIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_DownlinkRANStatusTransferIEs__value, present),
-	sizeof(((struct ASN_NGAP_DownlinkRANStatusTransferIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_DownlinkRANStatusTransferIEs_t::ASN_NGAP_DownlinkRANStatusTransferIEs__value),
+	offsetof(struct ASN_NGAP_DownlinkRANStatusTransferIEs_t::ASN_NGAP_DownlinkRANStatusTransferIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_DownlinkRANStatusTransferIEs_t::ASN_NGAP_DownlinkRANStatusTransferIEs__value, present),
+	sizeof(((struct ASN_NGAP_DownlinkRANStatusTransferIEs_t::ASN_NGAP_DownlinkRANStatusTransferIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_236,
 	3,	/* Count of tags in the map */
 	0, 0,
@@ -23087,7 +23087,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_DownlinkRANStatusTransferIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_240[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PagingIEs__value, choice.UEPagingIdentity),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PagingIEs_t::ASN_NGAP_PagingIEs__value, choice.UEPagingIdentity),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_UEPagingIdentity,
@@ -23096,7 +23096,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_240[] = {
 		0, 0, /* No default value */
 		"UEPagingIdentity"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PagingIEs__value, choice.PagingDRX),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PagingIEs_t::ASN_NGAP_PagingIEs__value, choice.PagingDRX),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PagingDRX,
@@ -23105,7 +23105,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_240[] = {
 		0, 0, /* No default value */
 		"PagingDRX"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PagingIEs__value, choice.TAIListForPaging),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PagingIEs_t::ASN_NGAP_PagingIEs__value, choice.TAIListForPaging),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_TAIListForPaging,
@@ -23114,7 +23114,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_240[] = {
 		0, 0, /* No default value */
 		"TAIListForPaging"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PagingIEs__value, choice.PagingPriority),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PagingIEs_t::ASN_NGAP_PagingIEs__value, choice.PagingPriority),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PagingPriority,
@@ -23123,7 +23123,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_240[] = {
 		0, 0, /* No default value */
 		"PagingPriority"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PagingIEs__value, choice.UERadioCapabilityForPaging),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PagingIEs_t::ASN_NGAP_PagingIEs__value, choice.UERadioCapabilityForPaging),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UERadioCapabilityForPaging,
@@ -23132,7 +23132,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_240[] = {
 		0, 0, /* No default value */
 		"UERadioCapabilityForPaging"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PagingIEs__value, choice.PagingOrigin),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PagingIEs_t::ASN_NGAP_PagingIEs__value, choice.PagingOrigin),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PagingOrigin,
@@ -23141,7 +23141,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_240[] = {
 		0, 0, /* No default value */
 		"PagingOrigin"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PagingIEs__value, choice.AssistanceDataForPaging),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PagingIEs_t::ASN_NGAP_PagingIEs__value, choice.AssistanceDataForPaging),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AssistanceDataForPaging,
@@ -23164,10 +23164,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_240[] = {
     { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 0, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_240 = {
-	sizeof(struct ASN_NGAP_PagingIEs__value),
-	offsetof(struct ASN_NGAP_PagingIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_PagingIEs__value, present),
-	sizeof(((struct ASN_NGAP_PagingIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_PagingIEs_t::ASN_NGAP_PagingIEs__value),
+	offsetof(struct ASN_NGAP_PagingIEs_t::ASN_NGAP_PagingIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_PagingIEs_t::ASN_NGAP_PagingIEs__value, present),
+	sizeof(((struct ASN_NGAP_PagingIEs_t::ASN_NGAP_PagingIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_240,
 	8,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_240,
@@ -23251,7 +23251,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PagingIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_244[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialUEMessage_IEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialUEMessage_IEs_t::ASN_NGAP_InitialUEMessage_IEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -23260,7 +23260,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_244[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialUEMessage_IEs__value, choice.NAS_PDU),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialUEMessage_IEs_t::ASN_NGAP_InitialUEMessage_IEs__value, choice.NAS_PDU),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_NAS_PDU,
@@ -23269,7 +23269,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_244[] = {
 		0, 0, /* No default value */
 		"NAS-PDU"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialUEMessage_IEs__value, choice.UserLocationInformation),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialUEMessage_IEs_t::ASN_NGAP_InitialUEMessage_IEs__value, choice.UserLocationInformation),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_UserLocationInformation,
@@ -23278,7 +23278,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_244[] = {
 		0, 0, /* No default value */
 		"UserLocationInformation"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialUEMessage_IEs__value, choice.RRCEstablishmentCause),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialUEMessage_IEs_t::ASN_NGAP_InitialUEMessage_IEs__value, choice.RRCEstablishmentCause),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RRCEstablishmentCause,
@@ -23287,7 +23287,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_244[] = {
 		0, 0, /* No default value */
 		"RRCEstablishmentCause"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialUEMessage_IEs__value, choice.FiveG_S_TMSI),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialUEMessage_IEs_t::ASN_NGAP_InitialUEMessage_IEs__value, choice.FiveG_S_TMSI),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_FiveG_S_TMSI,
@@ -23296,7 +23296,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_244[] = {
 		0, 0, /* No default value */
 		"FiveG-S-TMSI"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialUEMessage_IEs__value, choice.AMFSetID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialUEMessage_IEs_t::ASN_NGAP_InitialUEMessage_IEs__value, choice.AMFSetID),
 		(ASN_TAG_CLASS_UNIVERSAL | (3 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMFSetID,
@@ -23305,7 +23305,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_244[] = {
 		0, 0, /* No default value */
 		"AMFSetID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialUEMessage_IEs__value, choice.UEContextRequest),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialUEMessage_IEs_t::ASN_NGAP_InitialUEMessage_IEs__value, choice.UEContextRequest),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UEContextRequest,
@@ -23314,7 +23314,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_244[] = {
 		0, 0, /* No default value */
 		"UEContextRequest"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialUEMessage_IEs__value, choice.AllowedNSSAI),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialUEMessage_IEs_t::ASN_NGAP_InitialUEMessage_IEs__value, choice.AllowedNSSAI),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AllowedNSSAI,
@@ -23323,7 +23323,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_244[] = {
 		0, 0, /* No default value */
 		"AllowedNSSAI"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialUEMessage_IEs__value, choice.SourceToTarget_AMFInformationReroute),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialUEMessage_IEs_t::ASN_NGAP_InitialUEMessage_IEs__value, choice.SourceToTarget_AMFInformationReroute),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_SourceToTarget_AMFInformationReroute,
@@ -23332,7 +23332,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_244[] = {
 		0, 0, /* No default value */
 		"SourceToTarget-AMFInformationReroute"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialUEMessage_IEs__value, choice.PLMNIdentity),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitialUEMessage_IEs_t::ASN_NGAP_InitialUEMessage_IEs__value, choice.PLMNIdentity),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PLMNIdentity,
@@ -23360,10 +23360,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_244[] = {
     { (ASN_TAG_CLASS_CONTEXT | (3 << 2)), 2, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_244 = {
-	sizeof(struct ASN_NGAP_InitialUEMessage_IEs__value),
-	offsetof(struct ASN_NGAP_InitialUEMessage_IEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_InitialUEMessage_IEs__value, present),
-	sizeof(((struct ASN_NGAP_InitialUEMessage_IEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_InitialUEMessage_IEs_t::ASN_NGAP_InitialUEMessage_IEs__value),
+	offsetof(struct ASN_NGAP_InitialUEMessage_IEs_t::ASN_NGAP_InitialUEMessage_IEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_InitialUEMessage_IEs_t::ASN_NGAP_InitialUEMessage_IEs__value, present),
+	sizeof(((struct ASN_NGAP_InitialUEMessage_IEs_t::ASN_NGAP_InitialUEMessage_IEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_244,
 	13,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_244,
@@ -23447,7 +23447,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_InitialUEMessage_IEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_248[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkNASTransport_IEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkNASTransport_IEs_t::ASN_NGAP_DownlinkNASTransport_IEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -23456,7 +23456,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_248[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkNASTransport_IEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkNASTransport_IEs_t::ASN_NGAP_DownlinkNASTransport_IEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -23465,7 +23465,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_248[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkNASTransport_IEs__value, choice.AMFName),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkNASTransport_IEs_t::ASN_NGAP_DownlinkNASTransport_IEs__value, choice.AMFName),
 		(ASN_TAG_CLASS_UNIVERSAL | (19 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMFName,
@@ -23474,7 +23474,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_248[] = {
 		0, 0, /* No default value */
 		"AMFName"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkNASTransport_IEs__value, choice.RANPagingPriority),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkNASTransport_IEs_t::ASN_NGAP_DownlinkNASTransport_IEs__value, choice.RANPagingPriority),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RANPagingPriority,
@@ -23483,7 +23483,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_248[] = {
 		0, 0, /* No default value */
 		"RANPagingPriority"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkNASTransport_IEs__value, choice.NAS_PDU),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkNASTransport_IEs_t::ASN_NGAP_DownlinkNASTransport_IEs__value, choice.NAS_PDU),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_NAS_PDU,
@@ -23492,7 +23492,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_248[] = {
 		0, 0, /* No default value */
 		"NAS-PDU"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkNASTransport_IEs__value, choice.MobilityRestrictionList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkNASTransport_IEs_t::ASN_NGAP_DownlinkNASTransport_IEs__value, choice.MobilityRestrictionList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_MobilityRestrictionList,
@@ -23501,7 +23501,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_248[] = {
 		0, 0, /* No default value */
 		"MobilityRestrictionList"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkNASTransport_IEs__value, choice.IndexToRFSP),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkNASTransport_IEs_t::ASN_NGAP_DownlinkNASTransport_IEs__value, choice.IndexToRFSP),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_IndexToRFSP,
@@ -23510,7 +23510,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_248[] = {
 		0, 0, /* No default value */
 		"IndexToRFSP"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkNASTransport_IEs__value, choice.UEAggregateMaximumBitRate),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkNASTransport_IEs_t::ASN_NGAP_DownlinkNASTransport_IEs__value, choice.UEAggregateMaximumBitRate),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UEAggregateMaximumBitRate,
@@ -23519,7 +23519,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_248[] = {
 		0, 0, /* No default value */
 		"UEAggregateMaximumBitRate"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkNASTransport_IEs__value, choice.AllowedNSSAI),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkNASTransport_IEs_t::ASN_NGAP_DownlinkNASTransport_IEs__value, choice.AllowedNSSAI),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AllowedNSSAI,
@@ -23543,10 +23543,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_248[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (19 << 2)), 2, 0, 0 } /* AMFName */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_248 = {
-	sizeof(struct ASN_NGAP_DownlinkNASTransport_IEs__value),
-	offsetof(struct ASN_NGAP_DownlinkNASTransport_IEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_DownlinkNASTransport_IEs__value, present),
-	sizeof(((struct ASN_NGAP_DownlinkNASTransport_IEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_DownlinkNASTransport_IEs_t::ASN_NGAP_DownlinkNASTransport_IEs__value),
+	offsetof(struct ASN_NGAP_DownlinkNASTransport_IEs_t::ASN_NGAP_DownlinkNASTransport_IEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_DownlinkNASTransport_IEs_t::ASN_NGAP_DownlinkNASTransport_IEs__value, present),
+	sizeof(((struct ASN_NGAP_DownlinkNASTransport_IEs_t::ASN_NGAP_DownlinkNASTransport_IEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_248,
 	9,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_248,
@@ -23630,7 +23630,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_DownlinkNASTransport_IEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_252[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UplinkNASTransport_IEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UplinkNASTransport_IEs_t::ASN_NGAP_UplinkNASTransport_IEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -23639,7 +23639,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_252[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UplinkNASTransport_IEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UplinkNASTransport_IEs_t::ASN_NGAP_UplinkNASTransport_IEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -23648,7 +23648,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_252[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UplinkNASTransport_IEs__value, choice.NAS_PDU),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UplinkNASTransport_IEs_t::ASN_NGAP_UplinkNASTransport_IEs__value, choice.NAS_PDU),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_NAS_PDU,
@@ -23657,7 +23657,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_252[] = {
 		0, 0, /* No default value */
 		"NAS-PDU"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UplinkNASTransport_IEs__value, choice.UserLocationInformation),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UplinkNASTransport_IEs_t::ASN_NGAP_UplinkNASTransport_IEs__value, choice.UserLocationInformation),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_UserLocationInformation,
@@ -23677,10 +23677,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_252[] = {
     { (ASN_TAG_CLASS_CONTEXT | (3 << 2)), 3, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_252 = {
-	sizeof(struct ASN_NGAP_UplinkNASTransport_IEs__value),
-	offsetof(struct ASN_NGAP_UplinkNASTransport_IEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_UplinkNASTransport_IEs__value, present),
-	sizeof(((struct ASN_NGAP_UplinkNASTransport_IEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_UplinkNASTransport_IEs_t::ASN_NGAP_UplinkNASTransport_IEs__value),
+	offsetof(struct ASN_NGAP_UplinkNASTransport_IEs_t::ASN_NGAP_UplinkNASTransport_IEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_UplinkNASTransport_IEs_t::ASN_NGAP_UplinkNASTransport_IEs__value, present),
+	sizeof(((struct ASN_NGAP_UplinkNASTransport_IEs_t::ASN_NGAP_UplinkNASTransport_IEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_252,
 	7,	/* Count of tags in the map */
 	0, 0,
@@ -23763,7 +23763,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_UplinkNASTransport_IEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_256[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NASNonDeliveryIndication_IEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NASNonDeliveryIndication_IEs_t::ASN_NGAP_NASNonDeliveryIndication_IEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -23772,7 +23772,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_256[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NASNonDeliveryIndication_IEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NASNonDeliveryIndication_IEs_t::ASN_NGAP_NASNonDeliveryIndication_IEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -23781,7 +23781,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_256[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NASNonDeliveryIndication_IEs__value, choice.NAS_PDU),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NASNonDeliveryIndication_IEs_t::ASN_NGAP_NASNonDeliveryIndication_IEs__value, choice.NAS_PDU),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_NAS_PDU,
@@ -23790,7 +23790,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_256[] = {
 		0, 0, /* No default value */
 		"NAS-PDU"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NASNonDeliveryIndication_IEs__value, choice.Cause),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NASNonDeliveryIndication_IEs_t::ASN_NGAP_NASNonDeliveryIndication_IEs__value, choice.Cause),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_Cause,
@@ -23812,10 +23812,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_256[] = {
     { (ASN_TAG_CLASS_CONTEXT | (5 << 2)), 3, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_256 = {
-	sizeof(struct ASN_NGAP_NASNonDeliveryIndication_IEs__value),
-	offsetof(struct ASN_NGAP_NASNonDeliveryIndication_IEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_NASNonDeliveryIndication_IEs__value, present),
-	sizeof(((struct ASN_NGAP_NASNonDeliveryIndication_IEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_NASNonDeliveryIndication_IEs_t::ASN_NGAP_NASNonDeliveryIndication_IEs__value),
+	offsetof(struct ASN_NGAP_NASNonDeliveryIndication_IEs_t::ASN_NGAP_NASNonDeliveryIndication_IEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_NASNonDeliveryIndication_IEs_t::ASN_NGAP_NASNonDeliveryIndication_IEs__value, present),
+	sizeof(((struct ASN_NGAP_NASNonDeliveryIndication_IEs_t::ASN_NGAP_NASNonDeliveryIndication_IEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_256,
 	9,	/* Count of tags in the map */
 	0, 0,
@@ -23898,7 +23898,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_NASNonDeliveryIndication_IEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_260[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RerouteNASRequest_IEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RerouteNASRequest_IEs_t::ASN_NGAP_RerouteNASRequest_IEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -23907,7 +23907,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_260[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RerouteNASRequest_IEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RerouteNASRequest_IEs_t::ASN_NGAP_RerouteNASRequest_IEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -23916,7 +23916,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_260[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RerouteNASRequest_IEs__value, choice.OCTET_STRING),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RerouteNASRequest_IEs_t::ASN_NGAP_RerouteNASRequest_IEs__value, choice.OCTET_STRING),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_OCTET_STRING,
@@ -23925,7 +23925,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_260[] = {
 		0, 0, /* No default value */
 		"OCTET STRING"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RerouteNASRequest_IEs__value, choice.AMFSetID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RerouteNASRequest_IEs_t::ASN_NGAP_RerouteNASRequest_IEs__value, choice.AMFSetID),
 		(ASN_TAG_CLASS_UNIVERSAL | (3 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMFSetID,
@@ -23934,7 +23934,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_260[] = {
 		0, 0, /* No default value */
 		"AMFSetID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RerouteNASRequest_IEs__value, choice.AllowedNSSAI),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RerouteNASRequest_IEs_t::ASN_NGAP_RerouteNASRequest_IEs__value, choice.AllowedNSSAI),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AllowedNSSAI,
@@ -23943,7 +23943,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_260[] = {
 		0, 0, /* No default value */
 		"AllowedNSSAI"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RerouteNASRequest_IEs__value, choice.SourceToTarget_AMFInformationReroute),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RerouteNASRequest_IEs_t::ASN_NGAP_RerouteNASRequest_IEs__value, choice.SourceToTarget_AMFInformationReroute),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_SourceToTarget_AMFInformationReroute,
@@ -23964,10 +23964,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_260[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 5, -1, 0 } /* SourceToTarget-AMFInformationReroute */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_260 = {
-	sizeof(struct ASN_NGAP_RerouteNASRequest_IEs__value),
-	offsetof(struct ASN_NGAP_RerouteNASRequest_IEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_RerouteNASRequest_IEs__value, present),
-	sizeof(((struct ASN_NGAP_RerouteNASRequest_IEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_RerouteNASRequest_IEs_t::ASN_NGAP_RerouteNASRequest_IEs__value),
+	offsetof(struct ASN_NGAP_RerouteNASRequest_IEs_t::ASN_NGAP_RerouteNASRequest_IEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_RerouteNASRequest_IEs_t::ASN_NGAP_RerouteNASRequest_IEs__value, present),
+	sizeof(((struct ASN_NGAP_RerouteNASRequest_IEs_t::ASN_NGAP_RerouteNASRequest_IEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_260,
 	6,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_260,
@@ -24051,7 +24051,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_RerouteNASRequest_IEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_264[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGSetupRequestIEs__value, choice.GlobalRANNodeID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGSetupRequestIEs_t::ASN_NGAP_NGSetupRequestIEs__value, choice.GlobalRANNodeID),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_GlobalRANNodeID,
@@ -24060,7 +24060,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_264[] = {
 		0, 0, /* No default value */
 		"GlobalRANNodeID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGSetupRequestIEs__value, choice.RANNodeName),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGSetupRequestIEs_t::ASN_NGAP_NGSetupRequestIEs__value, choice.RANNodeName),
 		(ASN_TAG_CLASS_UNIVERSAL | (19 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RANNodeName,
@@ -24069,7 +24069,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_264[] = {
 		0, 0, /* No default value */
 		"RANNodeName"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGSetupRequestIEs__value, choice.SupportedTAList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGSetupRequestIEs_t::ASN_NGAP_NGSetupRequestIEs__value, choice.SupportedTAList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_SupportedTAList,
@@ -24078,7 +24078,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_264[] = {
 		0, 0, /* No default value */
 		"SupportedTAList"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGSetupRequestIEs__value, choice.PagingDRX),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGSetupRequestIEs_t::ASN_NGAP_NGSetupRequestIEs__value, choice.PagingDRX),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PagingDRX,
@@ -24087,7 +24087,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_264[] = {
 		0, 0, /* No default value */
 		"PagingDRX"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGSetupRequestIEs__value, choice.UERetentionInformation),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGSetupRequestIEs_t::ASN_NGAP_NGSetupRequestIEs__value, choice.UERetentionInformation),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UERetentionInformation,
@@ -24110,10 +24110,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_264[] = {
     { (ASN_TAG_CLASS_CONTEXT | (3 << 2)), 0, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_264 = {
-	sizeof(struct ASN_NGAP_NGSetupRequestIEs__value),
-	offsetof(struct ASN_NGAP_NGSetupRequestIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_NGSetupRequestIEs__value, present),
-	sizeof(((struct ASN_NGAP_NGSetupRequestIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_NGSetupRequestIEs_t::ASN_NGAP_NGSetupRequestIEs__value),
+	offsetof(struct ASN_NGAP_NGSetupRequestIEs_t::ASN_NGAP_NGSetupRequestIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_NGSetupRequestIEs_t::ASN_NGAP_NGSetupRequestIEs__value, present),
+	sizeof(((struct ASN_NGAP_NGSetupRequestIEs_t::ASN_NGAP_NGSetupRequestIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_264,
 	8,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_264,
@@ -24197,7 +24197,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_NGSetupRequestIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_268[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGSetupResponseIEs__value, choice.AMFName),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGSetupResponseIEs_t::ASN_NGAP_NGSetupResponseIEs__value, choice.AMFName),
 		(ASN_TAG_CLASS_UNIVERSAL | (19 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMFName,
@@ -24206,7 +24206,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_268[] = {
 		0, 0, /* No default value */
 		"AMFName"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGSetupResponseIEs__value, choice.ServedGUAMIList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGSetupResponseIEs_t::ASN_NGAP_NGSetupResponseIEs__value, choice.ServedGUAMIList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_ServedGUAMIList,
@@ -24215,7 +24215,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_268[] = {
 		0, 0, /* No default value */
 		"ServedGUAMIList"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGSetupResponseIEs__value, choice.RelativeAMFCapacity),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGSetupResponseIEs_t::ASN_NGAP_NGSetupResponseIEs__value, choice.RelativeAMFCapacity),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RelativeAMFCapacity,
@@ -24224,7 +24224,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_268[] = {
 		0, 0, /* No default value */
 		"RelativeAMFCapacity"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGSetupResponseIEs__value, choice.PLMNSupportList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGSetupResponseIEs_t::ASN_NGAP_NGSetupResponseIEs__value, choice.PLMNSupportList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PLMNSupportList,
@@ -24233,7 +24233,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_268[] = {
 		0, 0, /* No default value */
 		"PLMNSupportList"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGSetupResponseIEs__value, choice.CriticalityDiagnostics),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGSetupResponseIEs_t::ASN_NGAP_NGSetupResponseIEs__value, choice.CriticalityDiagnostics),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CriticalityDiagnostics,
@@ -24242,7 +24242,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_268[] = {
 		0, 0, /* No default value */
 		"CriticalityDiagnostics"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGSetupResponseIEs__value, choice.UERetentionInformation),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGSetupResponseIEs_t::ASN_NGAP_NGSetupResponseIEs__value, choice.UERetentionInformation),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UERetentionInformation,
@@ -24263,10 +24263,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_268[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (19 << 2)), 0, 0, 0 } /* AMFName */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_268 = {
-	sizeof(struct ASN_NGAP_NGSetupResponseIEs__value),
-	offsetof(struct ASN_NGAP_NGSetupResponseIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_NGSetupResponseIEs__value, present),
-	sizeof(((struct ASN_NGAP_NGSetupResponseIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_NGSetupResponseIEs_t::ASN_NGAP_NGSetupResponseIEs__value),
+	offsetof(struct ASN_NGAP_NGSetupResponseIEs_t::ASN_NGAP_NGSetupResponseIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_NGSetupResponseIEs_t::ASN_NGAP_NGSetupResponseIEs__value, present),
+	sizeof(((struct ASN_NGAP_NGSetupResponseIEs_t::ASN_NGAP_NGSetupResponseIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_268,
 	6,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_268,
@@ -24350,7 +24350,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_NGSetupResponseIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_272[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGSetupFailureIEs__value, choice.Cause),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGSetupFailureIEs_t::ASN_NGAP_NGSetupFailureIEs__value, choice.Cause),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_Cause,
@@ -24359,7 +24359,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_272[] = {
 		0, 0, /* No default value */
 		"Cause"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGSetupFailureIEs__value, choice.TimeToWait),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGSetupFailureIEs_t::ASN_NGAP_NGSetupFailureIEs__value, choice.TimeToWait),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_TimeToWait,
@@ -24368,7 +24368,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_272[] = {
 		0, 0, /* No default value */
 		"TimeToWait"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGSetupFailureIEs__value, choice.CriticalityDiagnostics),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGSetupFailureIEs_t::ASN_NGAP_NGSetupFailureIEs__value, choice.CriticalityDiagnostics),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CriticalityDiagnostics,
@@ -24391,10 +24391,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_272[] = {
     { (ASN_TAG_CLASS_CONTEXT | (5 << 2)), 0, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_272 = {
-	sizeof(struct ASN_NGAP_NGSetupFailureIEs__value),
-	offsetof(struct ASN_NGAP_NGSetupFailureIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_NGSetupFailureIEs__value, present),
-	sizeof(((struct ASN_NGAP_NGSetupFailureIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_NGSetupFailureIEs_t::ASN_NGAP_NGSetupFailureIEs__value),
+	offsetof(struct ASN_NGAP_NGSetupFailureIEs_t::ASN_NGAP_NGSetupFailureIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_NGSetupFailureIEs_t::ASN_NGAP_NGSetupFailureIEs__value, present),
+	sizeof(((struct ASN_NGAP_NGSetupFailureIEs_t::ASN_NGAP_NGSetupFailureIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_272,
 	8,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_272,
@@ -24478,7 +24478,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_NGSetupFailureIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_276[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RANConfigurationUpdateIEs__value, choice.RANNodeName),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RANConfigurationUpdateIEs_t::ASN_NGAP_RANConfigurationUpdateIEs__value, choice.RANNodeName),
 		(ASN_TAG_CLASS_UNIVERSAL | (19 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RANNodeName,
@@ -24487,7 +24487,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_276[] = {
 		0, 0, /* No default value */
 		"RANNodeName"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RANConfigurationUpdateIEs__value, choice.SupportedTAList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RANConfigurationUpdateIEs_t::ASN_NGAP_RANConfigurationUpdateIEs__value, choice.SupportedTAList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_SupportedTAList,
@@ -24496,7 +24496,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_276[] = {
 		0, 0, /* No default value */
 		"SupportedTAList"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RANConfigurationUpdateIEs__value, choice.PagingDRX),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RANConfigurationUpdateIEs_t::ASN_NGAP_RANConfigurationUpdateIEs__value, choice.PagingDRX),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PagingDRX,
@@ -24505,7 +24505,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_276[] = {
 		0, 0, /* No default value */
 		"PagingDRX"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RANConfigurationUpdateIEs__value, choice.GlobalRANNodeID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RANConfigurationUpdateIEs_t::ASN_NGAP_RANConfigurationUpdateIEs__value, choice.GlobalRANNodeID),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_GlobalRANNodeID,
@@ -24514,7 +24514,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_276[] = {
 		0, 0, /* No default value */
 		"GlobalRANNodeID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RANConfigurationUpdateIEs__value, choice.NGRAN_TNLAssociationToRemoveList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RANConfigurationUpdateIEs_t::ASN_NGAP_RANConfigurationUpdateIEs__value, choice.NGRAN_TNLAssociationToRemoveList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_NGRAN_TNLAssociationToRemoveList,
@@ -24537,10 +24537,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_276[] = {
     { (ASN_TAG_CLASS_CONTEXT | (3 << 2)), 3, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_276 = {
-	sizeof(struct ASN_NGAP_RANConfigurationUpdateIEs__value),
-	offsetof(struct ASN_NGAP_RANConfigurationUpdateIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_RANConfigurationUpdateIEs__value, present),
-	sizeof(((struct ASN_NGAP_RANConfigurationUpdateIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_RANConfigurationUpdateIEs_t::ASN_NGAP_RANConfigurationUpdateIEs__value),
+	offsetof(struct ASN_NGAP_RANConfigurationUpdateIEs_t::ASN_NGAP_RANConfigurationUpdateIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_RANConfigurationUpdateIEs_t::ASN_NGAP_RANConfigurationUpdateIEs__value, present),
+	sizeof(((struct ASN_NGAP_RANConfigurationUpdateIEs_t::ASN_NGAP_RANConfigurationUpdateIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_276,
 	8,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_276,
@@ -24624,7 +24624,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_RANConfigurationUpdateIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_280[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RANConfigurationUpdateAcknowledgeIEs__value, choice.CriticalityDiagnostics),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RANConfigurationUpdateAcknowledgeIEs_t::ASN_NGAP_RANConfigurationUpdateAcknowledgeIEs__value, choice.CriticalityDiagnostics),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CriticalityDiagnostics,
@@ -24638,10 +24638,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_280[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 0, 0, 0 } /* CriticalityDiagnostics */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_280 = {
-	sizeof(struct ASN_NGAP_RANConfigurationUpdateAcknowledgeIEs__value),
-	offsetof(struct ASN_NGAP_RANConfigurationUpdateAcknowledgeIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_RANConfigurationUpdateAcknowledgeIEs__value, present),
-	sizeof(((struct ASN_NGAP_RANConfigurationUpdateAcknowledgeIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_RANConfigurationUpdateAcknowledgeIEs_t::ASN_NGAP_RANConfigurationUpdateAcknowledgeIEs__value),
+	offsetof(struct ASN_NGAP_RANConfigurationUpdateAcknowledgeIEs_t::ASN_NGAP_RANConfigurationUpdateAcknowledgeIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_RANConfigurationUpdateAcknowledgeIEs_t::ASN_NGAP_RANConfigurationUpdateAcknowledgeIEs__value, present),
+	sizeof(((struct ASN_NGAP_RANConfigurationUpdateAcknowledgeIEs_t::ASN_NGAP_RANConfigurationUpdateAcknowledgeIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_280,
 	1,	/* Count of tags in the map */
 	0, 0,
@@ -24724,7 +24724,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_RANConfigurationUpdateAcknowledgeIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_284[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RANConfigurationUpdateFailureIEs__value, choice.Cause),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RANConfigurationUpdateFailureIEs_t::ASN_NGAP_RANConfigurationUpdateFailureIEs__value, choice.Cause),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_Cause,
@@ -24733,7 +24733,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_284[] = {
 		0, 0, /* No default value */
 		"Cause"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RANConfigurationUpdateFailureIEs__value, choice.TimeToWait),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RANConfigurationUpdateFailureIEs_t::ASN_NGAP_RANConfigurationUpdateFailureIEs__value, choice.TimeToWait),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_TimeToWait,
@@ -24742,7 +24742,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_284[] = {
 		0, 0, /* No default value */
 		"TimeToWait"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RANConfigurationUpdateFailureIEs__value, choice.CriticalityDiagnostics),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_RANConfigurationUpdateFailureIEs_t::ASN_NGAP_RANConfigurationUpdateFailureIEs__value, choice.CriticalityDiagnostics),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CriticalityDiagnostics,
@@ -24765,10 +24765,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_284[] = {
     { (ASN_TAG_CLASS_CONTEXT | (5 << 2)), 0, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_284 = {
-	sizeof(struct ASN_NGAP_RANConfigurationUpdateFailureIEs__value),
-	offsetof(struct ASN_NGAP_RANConfigurationUpdateFailureIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_RANConfigurationUpdateFailureIEs__value, present),
-	sizeof(((struct ASN_NGAP_RANConfigurationUpdateFailureIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_RANConfigurationUpdateFailureIEs_t::ASN_NGAP_RANConfigurationUpdateFailureIEs__value),
+	offsetof(struct ASN_NGAP_RANConfigurationUpdateFailureIEs_t::ASN_NGAP_RANConfigurationUpdateFailureIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_RANConfigurationUpdateFailureIEs_t::ASN_NGAP_RANConfigurationUpdateFailureIEs__value, present),
+	sizeof(((struct ASN_NGAP_RANConfigurationUpdateFailureIEs_t::ASN_NGAP_RANConfigurationUpdateFailureIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_284,
 	8,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_284,
@@ -24852,7 +24852,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_RANConfigurationUpdateFailureIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_288[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_AMFConfigurationUpdateIEs__value, choice.AMFName),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_AMFConfigurationUpdateIEs_t::ASN_NGAP_AMFConfigurationUpdateIEs__value, choice.AMFName),
 		(ASN_TAG_CLASS_UNIVERSAL | (19 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMFName,
@@ -24861,7 +24861,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_288[] = {
 		0, 0, /* No default value */
 		"AMFName"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_AMFConfigurationUpdateIEs__value, choice.ServedGUAMIList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_AMFConfigurationUpdateIEs_t::ASN_NGAP_AMFConfigurationUpdateIEs__value, choice.ServedGUAMIList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_ServedGUAMIList,
@@ -24870,7 +24870,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_288[] = {
 		0, 0, /* No default value */
 		"ServedGUAMIList"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_AMFConfigurationUpdateIEs__value, choice.RelativeAMFCapacity),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_AMFConfigurationUpdateIEs_t::ASN_NGAP_AMFConfigurationUpdateIEs__value, choice.RelativeAMFCapacity),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RelativeAMFCapacity,
@@ -24879,7 +24879,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_288[] = {
 		0, 0, /* No default value */
 		"RelativeAMFCapacity"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_AMFConfigurationUpdateIEs__value, choice.PLMNSupportList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_AMFConfigurationUpdateIEs_t::ASN_NGAP_AMFConfigurationUpdateIEs__value, choice.PLMNSupportList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PLMNSupportList,
@@ -24888,7 +24888,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_288[] = {
 		0, 0, /* No default value */
 		"PLMNSupportList"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_AMFConfigurationUpdateIEs__value, choice.AMF_TNLAssociationToAddList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_AMFConfigurationUpdateIEs_t::ASN_NGAP_AMFConfigurationUpdateIEs__value, choice.AMF_TNLAssociationToAddList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_TNLAssociationToAddList,
@@ -24897,7 +24897,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_288[] = {
 		0, 0, /* No default value */
 		"AMF-TNLAssociationToAddList"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_AMFConfigurationUpdateIEs__value, choice.AMF_TNLAssociationToRemoveList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_AMFConfigurationUpdateIEs_t::ASN_NGAP_AMFConfigurationUpdateIEs__value, choice.AMF_TNLAssociationToRemoveList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_TNLAssociationToRemoveList,
@@ -24906,7 +24906,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_288[] = {
 		0, 0, /* No default value */
 		"AMF-TNLAssociationToRemoveList"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_AMFConfigurationUpdateIEs__value, choice.AMF_TNLAssociationToUpdateList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_AMFConfigurationUpdateIEs_t::ASN_NGAP_AMFConfigurationUpdateIEs__value, choice.AMF_TNLAssociationToUpdateList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_TNLAssociationToUpdateList,
@@ -24928,10 +24928,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_288[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (19 << 2)), 0, 0, 0 } /* AMFName */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_288 = {
-	sizeof(struct ASN_NGAP_AMFConfigurationUpdateIEs__value),
-	offsetof(struct ASN_NGAP_AMFConfigurationUpdateIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_AMFConfigurationUpdateIEs__value, present),
-	sizeof(((struct ASN_NGAP_AMFConfigurationUpdateIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_AMFConfigurationUpdateIEs_t::ASN_NGAP_AMFConfigurationUpdateIEs__value),
+	offsetof(struct ASN_NGAP_AMFConfigurationUpdateIEs_t::ASN_NGAP_AMFConfigurationUpdateIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_AMFConfigurationUpdateIEs_t::ASN_NGAP_AMFConfigurationUpdateIEs__value, present),
+	sizeof(((struct ASN_NGAP_AMFConfigurationUpdateIEs_t::ASN_NGAP_AMFConfigurationUpdateIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_288,
 	7,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_288,
@@ -25015,7 +25015,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_AMFConfigurationUpdateIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_292[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_AMFConfigurationUpdateAcknowledgeIEs__value, choice.AMF_TNLAssociationSetupList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_AMFConfigurationUpdateAcknowledgeIEs_t::ASN_NGAP_AMFConfigurationUpdateAcknowledgeIEs__value, choice.AMF_TNLAssociationSetupList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_TNLAssociationSetupList,
@@ -25024,7 +25024,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_292[] = {
 		0, 0, /* No default value */
 		"AMF-TNLAssociationSetupList"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_AMFConfigurationUpdateAcknowledgeIEs__value, choice.TNLAssociationList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_AMFConfigurationUpdateAcknowledgeIEs_t::ASN_NGAP_AMFConfigurationUpdateAcknowledgeIEs__value, choice.TNLAssociationList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_TNLAssociationList,
@@ -25033,7 +25033,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_292[] = {
 		0, 0, /* No default value */
 		"TNLAssociationList"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_AMFConfigurationUpdateAcknowledgeIEs__value, choice.CriticalityDiagnostics),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_AMFConfigurationUpdateAcknowledgeIEs_t::ASN_NGAP_AMFConfigurationUpdateAcknowledgeIEs__value, choice.CriticalityDiagnostics),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CriticalityDiagnostics,
@@ -25049,10 +25049,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_292[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 2, -2, 0 } /* CriticalityDiagnostics */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_292 = {
-	sizeof(struct ASN_NGAP_AMFConfigurationUpdateAcknowledgeIEs__value),
-	offsetof(struct ASN_NGAP_AMFConfigurationUpdateAcknowledgeIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_AMFConfigurationUpdateAcknowledgeIEs__value, present),
-	sizeof(((struct ASN_NGAP_AMFConfigurationUpdateAcknowledgeIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_AMFConfigurationUpdateAcknowledgeIEs_t::ASN_NGAP_AMFConfigurationUpdateAcknowledgeIEs__value),
+	offsetof(struct ASN_NGAP_AMFConfigurationUpdateAcknowledgeIEs_t::ASN_NGAP_AMFConfigurationUpdateAcknowledgeIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_AMFConfigurationUpdateAcknowledgeIEs_t::ASN_NGAP_AMFConfigurationUpdateAcknowledgeIEs__value, present),
+	sizeof(((struct ASN_NGAP_AMFConfigurationUpdateAcknowledgeIEs_t::ASN_NGAP_AMFConfigurationUpdateAcknowledgeIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_292,
 	3,	/* Count of tags in the map */
 	0, 0,
@@ -25135,7 +25135,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_AMFConfigurationUpdateAcknowledgeIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_296[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_AMFConfigurationUpdateFailureIEs__value, choice.Cause),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_AMFConfigurationUpdateFailureIEs_t::ASN_NGAP_AMFConfigurationUpdateFailureIEs__value, choice.Cause),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_Cause,
@@ -25144,7 +25144,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_296[] = {
 		0, 0, /* No default value */
 		"Cause"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_AMFConfigurationUpdateFailureIEs__value, choice.TimeToWait),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_AMFConfigurationUpdateFailureIEs_t::ASN_NGAP_AMFConfigurationUpdateFailureIEs__value, choice.TimeToWait),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_TimeToWait,
@@ -25153,7 +25153,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_296[] = {
 		0, 0, /* No default value */
 		"TimeToWait"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_AMFConfigurationUpdateFailureIEs__value, choice.CriticalityDiagnostics),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_AMFConfigurationUpdateFailureIEs_t::ASN_NGAP_AMFConfigurationUpdateFailureIEs__value, choice.CriticalityDiagnostics),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CriticalityDiagnostics,
@@ -25176,10 +25176,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_296[] = {
     { (ASN_TAG_CLASS_CONTEXT | (5 << 2)), 0, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_296 = {
-	sizeof(struct ASN_NGAP_AMFConfigurationUpdateFailureIEs__value),
-	offsetof(struct ASN_NGAP_AMFConfigurationUpdateFailureIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_AMFConfigurationUpdateFailureIEs__value, present),
-	sizeof(((struct ASN_NGAP_AMFConfigurationUpdateFailureIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_AMFConfigurationUpdateFailureIEs_t::ASN_NGAP_AMFConfigurationUpdateFailureIEs__value),
+	offsetof(struct ASN_NGAP_AMFConfigurationUpdateFailureIEs_t::ASN_NGAP_AMFConfigurationUpdateFailureIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_AMFConfigurationUpdateFailureIEs_t::ASN_NGAP_AMFConfigurationUpdateFailureIEs__value, present),
+	sizeof(((struct ASN_NGAP_AMFConfigurationUpdateFailureIEs_t::ASN_NGAP_AMFConfigurationUpdateFailureIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_296,
 	8,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_296,
@@ -25263,7 +25263,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_AMFConfigurationUpdateFailureIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_300[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_AMFStatusIndicationIEs__value, choice.UnavailableGUAMIList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_AMFStatusIndicationIEs_t::ASN_NGAP_AMFStatusIndicationIEs__value, choice.UnavailableGUAMIList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UnavailableGUAMIList,
@@ -25277,10 +25277,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_300[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 0, 0, 0 } /* UnavailableGUAMIList */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_300 = {
-	sizeof(struct ASN_NGAP_AMFStatusIndicationIEs__value),
-	offsetof(struct ASN_NGAP_AMFStatusIndicationIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_AMFStatusIndicationIEs__value, present),
-	sizeof(((struct ASN_NGAP_AMFStatusIndicationIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_AMFStatusIndicationIEs_t::ASN_NGAP_AMFStatusIndicationIEs__value),
+	offsetof(struct ASN_NGAP_AMFStatusIndicationIEs_t::ASN_NGAP_AMFStatusIndicationIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_AMFStatusIndicationIEs_t::ASN_NGAP_AMFStatusIndicationIEs__value, present),
+	sizeof(((struct ASN_NGAP_AMFStatusIndicationIEs_t::ASN_NGAP_AMFStatusIndicationIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_300,
 	1,	/* Count of tags in the map */
 	0, 0,
@@ -25363,7 +25363,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_AMFStatusIndicationIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_304[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGResetIEs__value, choice.Cause),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGResetIEs_t::ASN_NGAP_NGResetIEs__value, choice.Cause),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_Cause,
@@ -25372,7 +25372,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_304[] = {
 		0, 0, /* No default value */
 		"Cause"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGResetIEs__value, choice.ResetType),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGResetIEs_t::ASN_NGAP_NGResetIEs__value, choice.ResetType),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_ResetType,
@@ -25394,10 +25394,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_304[] = {
     { (ASN_TAG_CLASS_CONTEXT | (5 << 2)), 0, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_304 = {
-	sizeof(struct ASN_NGAP_NGResetIEs__value),
-	offsetof(struct ASN_NGAP_NGResetIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_NGResetIEs__value, present),
-	sizeof(((struct ASN_NGAP_NGResetIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_NGResetIEs_t::ASN_NGAP_NGResetIEs__value),
+	offsetof(struct ASN_NGAP_NGResetIEs_t::ASN_NGAP_NGResetIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_NGResetIEs_t::ASN_NGAP_NGResetIEs__value, present),
+	sizeof(((struct ASN_NGAP_NGResetIEs_t::ASN_NGAP_NGResetIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_304,
 	9,	/* Count of tags in the map */
 	0, 0,
@@ -25480,7 +25480,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_NGResetIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_308[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGResetAcknowledgeIEs__value, choice.UE_associatedLogicalNG_connectionList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGResetAcknowledgeIEs_t::ASN_NGAP_NGResetAcknowledgeIEs__value, choice.UE_associatedLogicalNG_connectionList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UE_associatedLogicalNG_connectionList,
@@ -25489,7 +25489,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_308[] = {
 		0, 0, /* No default value */
 		"UE-associatedLogicalNG-connectionList"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGResetAcknowledgeIEs__value, choice.CriticalityDiagnostics),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_NGResetAcknowledgeIEs_t::ASN_NGAP_NGResetAcknowledgeIEs__value, choice.CriticalityDiagnostics),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CriticalityDiagnostics,
@@ -25504,10 +25504,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_308[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 1, -1, 0 } /* CriticalityDiagnostics */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_308 = {
-	sizeof(struct ASN_NGAP_NGResetAcknowledgeIEs__value),
-	offsetof(struct ASN_NGAP_NGResetAcknowledgeIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_NGResetAcknowledgeIEs__value, present),
-	sizeof(((struct ASN_NGAP_NGResetAcknowledgeIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_NGResetAcknowledgeIEs_t::ASN_NGAP_NGResetAcknowledgeIEs__value),
+	offsetof(struct ASN_NGAP_NGResetAcknowledgeIEs_t::ASN_NGAP_NGResetAcknowledgeIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_NGResetAcknowledgeIEs_t::ASN_NGAP_NGResetAcknowledgeIEs__value, present),
+	sizeof(((struct ASN_NGAP_NGResetAcknowledgeIEs_t::ASN_NGAP_NGResetAcknowledgeIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_308,
 	2,	/* Count of tags in the map */
 	0, 0,
@@ -25590,7 +25590,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_NGResetAcknowledgeIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_312[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_ErrorIndicationIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_ErrorIndicationIEs_t::ASN_NGAP_ErrorIndicationIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -25599,7 +25599,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_312[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_ErrorIndicationIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_ErrorIndicationIEs_t::ASN_NGAP_ErrorIndicationIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -25608,7 +25608,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_312[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_ErrorIndicationIEs__value, choice.Cause),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_ErrorIndicationIEs_t::ASN_NGAP_ErrorIndicationIEs__value, choice.Cause),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_Cause,
@@ -25617,7 +25617,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_312[] = {
 		0, 0, /* No default value */
 		"Cause"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_ErrorIndicationIEs__value, choice.CriticalityDiagnostics),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_ErrorIndicationIEs_t::ASN_NGAP_ErrorIndicationIEs__value, choice.CriticalityDiagnostics),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CriticalityDiagnostics,
@@ -25641,10 +25641,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_312[] = {
     { (ASN_TAG_CLASS_CONTEXT | (5 << 2)), 2, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_312 = {
-	sizeof(struct ASN_NGAP_ErrorIndicationIEs__value),
-	offsetof(struct ASN_NGAP_ErrorIndicationIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_ErrorIndicationIEs__value, present),
-	sizeof(((struct ASN_NGAP_ErrorIndicationIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_ErrorIndicationIEs_t::ASN_NGAP_ErrorIndicationIEs__value),
+	offsetof(struct ASN_NGAP_ErrorIndicationIEs_t::ASN_NGAP_ErrorIndicationIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_ErrorIndicationIEs_t::ASN_NGAP_ErrorIndicationIEs__value, present),
+	sizeof(((struct ASN_NGAP_ErrorIndicationIEs_t::ASN_NGAP_ErrorIndicationIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_312,
 	9,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_312,
@@ -25728,7 +25728,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_ErrorIndicationIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_316[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_OverloadStartIEs__value, choice.OverloadResponse),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_OverloadStartIEs_t::ASN_NGAP_OverloadStartIEs__value, choice.OverloadResponse),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_OverloadResponse,
@@ -25737,7 +25737,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_316[] = {
 		0, 0, /* No default value */
 		"OverloadResponse"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_OverloadStartIEs__value, choice.TrafficLoadReductionIndication),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_OverloadStartIEs_t::ASN_NGAP_OverloadStartIEs__value, choice.TrafficLoadReductionIndication),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_TrafficLoadReductionIndication,
@@ -25746,7 +25746,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_316[] = {
 		0, 0, /* No default value */
 		"TrafficLoadReductionIndication"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_OverloadStartIEs__value, choice.OverloadStartNSSAIList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_OverloadStartIEs_t::ASN_NGAP_OverloadStartIEs__value, choice.OverloadStartNSSAIList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_OverloadStartNSSAIList,
@@ -25765,10 +25765,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_316[] = {
     { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 0, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_316 = {
-	sizeof(struct ASN_NGAP_OverloadStartIEs__value),
-	offsetof(struct ASN_NGAP_OverloadStartIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_OverloadStartIEs__value, present),
-	sizeof(((struct ASN_NGAP_OverloadStartIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_OverloadStartIEs_t::ASN_NGAP_OverloadStartIEs__value),
+	offsetof(struct ASN_NGAP_OverloadStartIEs_t::ASN_NGAP_OverloadStartIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_OverloadStartIEs_t::ASN_NGAP_OverloadStartIEs__value, present),
+	sizeof(((struct ASN_NGAP_OverloadStartIEs_t::ASN_NGAP_OverloadStartIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_316,
 	4,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_316,
@@ -25852,10 +25852,10 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_OverloadStartIEs = {
 };
 
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_320 = {
-	sizeof(struct ASN_NGAP_OverloadStopIEs__value),
-	offsetof(struct ASN_NGAP_OverloadStopIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_OverloadStopIEs__value, present),
-	sizeof(((struct ASN_NGAP_OverloadStopIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_OverloadStopIEs_t::ASN_NGAP_OverloadStopIEs__value),
+	offsetof(struct ASN_NGAP_OverloadStopIEs_t::ASN_NGAP_OverloadStopIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_OverloadStopIEs_t::ASN_NGAP_OverloadStopIEs__value, present),
+	sizeof(((struct ASN_NGAP_OverloadStopIEs_t::ASN_NGAP_OverloadStopIEs__value *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -25937,7 +25937,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_OverloadStopIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_324[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UplinkRANConfigurationTransferIEs__value, choice.SONConfigurationTransfer),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UplinkRANConfigurationTransferIEs_t::ASN_NGAP_UplinkRANConfigurationTransferIEs__value, choice.SONConfigurationTransfer),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_SONConfigurationTransfer,
@@ -25946,7 +25946,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_324[] = {
 		0, 0, /* No default value */
 		"SONConfigurationTransfer"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UplinkRANConfigurationTransferIEs__value, choice.EN_DCSONConfigurationTransfer),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UplinkRANConfigurationTransferIEs_t::ASN_NGAP_UplinkRANConfigurationTransferIEs__value, choice.EN_DCSONConfigurationTransfer),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_EN_DCSONConfigurationTransfer,
@@ -25963,10 +25963,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_324[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 0, 0, 0 } /* SONConfigurationTransfer */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_324 = {
-	sizeof(struct ASN_NGAP_UplinkRANConfigurationTransferIEs__value),
-	offsetof(struct ASN_NGAP_UplinkRANConfigurationTransferIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_UplinkRANConfigurationTransferIEs__value, present),
-	sizeof(((struct ASN_NGAP_UplinkRANConfigurationTransferIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_UplinkRANConfigurationTransferIEs_t::ASN_NGAP_UplinkRANConfigurationTransferIEs__value),
+	offsetof(struct ASN_NGAP_UplinkRANConfigurationTransferIEs_t::ASN_NGAP_UplinkRANConfigurationTransferIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_UplinkRANConfigurationTransferIEs_t::ASN_NGAP_UplinkRANConfigurationTransferIEs__value, present),
+	sizeof(((struct ASN_NGAP_UplinkRANConfigurationTransferIEs_t::ASN_NGAP_UplinkRANConfigurationTransferIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_324,
 	2,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_324,
@@ -26050,7 +26050,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_UplinkRANConfigurationTransferIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_328[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkRANConfigurationTransferIEs__value, choice.SONConfigurationTransfer),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkRANConfigurationTransferIEs_t::ASN_NGAP_DownlinkRANConfigurationTransferIEs__value, choice.SONConfigurationTransfer),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_SONConfigurationTransfer,
@@ -26059,7 +26059,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_328[] = {
 		0, 0, /* No default value */
 		"SONConfigurationTransfer"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkRANConfigurationTransferIEs__value, choice.EN_DCSONConfigurationTransfer),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkRANConfigurationTransferIEs_t::ASN_NGAP_DownlinkRANConfigurationTransferIEs__value, choice.EN_DCSONConfigurationTransfer),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_EN_DCSONConfigurationTransfer,
@@ -26076,10 +26076,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_328[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 0, 0, 0 } /* SONConfigurationTransfer */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_328 = {
-	sizeof(struct ASN_NGAP_DownlinkRANConfigurationTransferIEs__value),
-	offsetof(struct ASN_NGAP_DownlinkRANConfigurationTransferIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_DownlinkRANConfigurationTransferIEs__value, present),
-	sizeof(((struct ASN_NGAP_DownlinkRANConfigurationTransferIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_DownlinkRANConfigurationTransferIEs_t::ASN_NGAP_DownlinkRANConfigurationTransferIEs__value),
+	offsetof(struct ASN_NGAP_DownlinkRANConfigurationTransferIEs_t::ASN_NGAP_DownlinkRANConfigurationTransferIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_DownlinkRANConfigurationTransferIEs_t::ASN_NGAP_DownlinkRANConfigurationTransferIEs__value, present),
+	sizeof(((struct ASN_NGAP_DownlinkRANConfigurationTransferIEs_t::ASN_NGAP_DownlinkRANConfigurationTransferIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_328,
 	2,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_328,
@@ -26163,7 +26163,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_DownlinkRANConfigurationTransferIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_332[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_WriteReplaceWarningRequestIEs__value, choice.MessageIdentifier),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_WriteReplaceWarningRequestIEs_t::ASN_NGAP_WriteReplaceWarningRequestIEs__value, choice.MessageIdentifier),
 		(ASN_TAG_CLASS_UNIVERSAL | (3 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_MessageIdentifier,
@@ -26172,7 +26172,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_332[] = {
 		0, 0, /* No default value */
 		"MessageIdentifier"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_WriteReplaceWarningRequestIEs__value, choice.SerialNumber),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_WriteReplaceWarningRequestIEs_t::ASN_NGAP_WriteReplaceWarningRequestIEs__value, choice.SerialNumber),
 		(ASN_TAG_CLASS_UNIVERSAL | (3 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_SerialNumber,
@@ -26181,7 +26181,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_332[] = {
 		0, 0, /* No default value */
 		"SerialNumber"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_WriteReplaceWarningRequestIEs__value, choice.WarningAreaList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_WriteReplaceWarningRequestIEs_t::ASN_NGAP_WriteReplaceWarningRequestIEs__value, choice.WarningAreaList),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_WarningAreaList,
@@ -26190,7 +26190,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_332[] = {
 		0, 0, /* No default value */
 		"WarningAreaList"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_WriteReplaceWarningRequestIEs__value, choice.RepetitionPeriod),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_WriteReplaceWarningRequestIEs_t::ASN_NGAP_WriteReplaceWarningRequestIEs__value, choice.RepetitionPeriod),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RepetitionPeriod,
@@ -26199,7 +26199,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_332[] = {
 		0, 0, /* No default value */
 		"RepetitionPeriod"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_WriteReplaceWarningRequestIEs__value, choice.NumberOfBroadcastsRequested),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_WriteReplaceWarningRequestIEs_t::ASN_NGAP_WriteReplaceWarningRequestIEs__value, choice.NumberOfBroadcastsRequested),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_NumberOfBroadcastsRequested,
@@ -26208,7 +26208,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_332[] = {
 		0, 0, /* No default value */
 		"NumberOfBroadcastsRequested"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_WriteReplaceWarningRequestIEs__value, choice.WarningType),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_WriteReplaceWarningRequestIEs_t::ASN_NGAP_WriteReplaceWarningRequestIEs__value, choice.WarningType),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_WarningType,
@@ -26217,7 +26217,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_332[] = {
 		0, 0, /* No default value */
 		"WarningType"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_WriteReplaceWarningRequestIEs__value, choice.WarningSecurityInfo),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_WriteReplaceWarningRequestIEs_t::ASN_NGAP_WriteReplaceWarningRequestIEs__value, choice.WarningSecurityInfo),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_WarningSecurityInfo,
@@ -26226,7 +26226,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_332[] = {
 		0, 0, /* No default value */
 		"WarningSecurityInfo"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_WriteReplaceWarningRequestIEs__value, choice.DataCodingScheme),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_WriteReplaceWarningRequestIEs_t::ASN_NGAP_WriteReplaceWarningRequestIEs__value, choice.DataCodingScheme),
 		(ASN_TAG_CLASS_UNIVERSAL | (3 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_DataCodingScheme,
@@ -26235,7 +26235,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_332[] = {
 		0, 0, /* No default value */
 		"DataCodingScheme"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_WriteReplaceWarningRequestIEs__value, choice.WarningMessageContents),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_WriteReplaceWarningRequestIEs_t::ASN_NGAP_WriteReplaceWarningRequestIEs__value, choice.WarningMessageContents),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_WarningMessageContents,
@@ -26244,7 +26244,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_332[] = {
 		0, 0, /* No default value */
 		"WarningMessageContents"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_WriteReplaceWarningRequestIEs__value, choice.ConcurrentWarningMessageInd),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_WriteReplaceWarningRequestIEs_t::ASN_NGAP_WriteReplaceWarningRequestIEs__value, choice.ConcurrentWarningMessageInd),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_ConcurrentWarningMessageInd,
@@ -26253,7 +26253,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_332[] = {
 		0, 0, /* No default value */
 		"ConcurrentWarningMessageInd"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_WriteReplaceWarningRequestIEs__value, choice.WarningAreaCoordinates),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_WriteReplaceWarningRequestIEs_t::ASN_NGAP_WriteReplaceWarningRequestIEs__value, choice.WarningAreaCoordinates),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_WarningAreaCoordinates,
@@ -26283,10 +26283,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_332[] = {
     { (ASN_TAG_CLASS_CONTEXT | (4 << 2)), 2, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_332 = {
-	sizeof(struct ASN_NGAP_WriteReplaceWarningRequestIEs__value),
-	offsetof(struct ASN_NGAP_WriteReplaceWarningRequestIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_WriteReplaceWarningRequestIEs__value, present),
-	sizeof(((struct ASN_NGAP_WriteReplaceWarningRequestIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_WriteReplaceWarningRequestIEs_t::ASN_NGAP_WriteReplaceWarningRequestIEs__value),
+	offsetof(struct ASN_NGAP_WriteReplaceWarningRequestIEs_t::ASN_NGAP_WriteReplaceWarningRequestIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_WriteReplaceWarningRequestIEs_t::ASN_NGAP_WriteReplaceWarningRequestIEs__value, present),
+	sizeof(((struct ASN_NGAP_WriteReplaceWarningRequestIEs_t::ASN_NGAP_WriteReplaceWarningRequestIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_332,
 	15,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_332,
@@ -26370,7 +26370,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_WriteReplaceWarningRequestIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_336[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_WriteReplaceWarningResponseIEs__value, choice.MessageIdentifier),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_WriteReplaceWarningResponseIEs_t::ASN_NGAP_WriteReplaceWarningResponseIEs__value, choice.MessageIdentifier),
 		(ASN_TAG_CLASS_UNIVERSAL | (3 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_MessageIdentifier,
@@ -26379,7 +26379,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_336[] = {
 		0, 0, /* No default value */
 		"MessageIdentifier"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_WriteReplaceWarningResponseIEs__value, choice.SerialNumber),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_WriteReplaceWarningResponseIEs_t::ASN_NGAP_WriteReplaceWarningResponseIEs__value, choice.SerialNumber),
 		(ASN_TAG_CLASS_UNIVERSAL | (3 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_SerialNumber,
@@ -26388,7 +26388,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_336[] = {
 		0, 0, /* No default value */
 		"SerialNumber"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_WriteReplaceWarningResponseIEs__value, choice.BroadcastCompletedAreaList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_WriteReplaceWarningResponseIEs_t::ASN_NGAP_WriteReplaceWarningResponseIEs__value, choice.BroadcastCompletedAreaList),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_BroadcastCompletedAreaList,
@@ -26397,7 +26397,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_336[] = {
 		0, 0, /* No default value */
 		"BroadcastCompletedAreaList"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_WriteReplaceWarningResponseIEs__value, choice.CriticalityDiagnostics),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_WriteReplaceWarningResponseIEs_t::ASN_NGAP_WriteReplaceWarningResponseIEs__value, choice.CriticalityDiagnostics),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CriticalityDiagnostics,
@@ -26422,10 +26422,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_336[] = {
     { (ASN_TAG_CLASS_CONTEXT | (6 << 2)), 2, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_336 = {
-	sizeof(struct ASN_NGAP_WriteReplaceWarningResponseIEs__value),
-	offsetof(struct ASN_NGAP_WriteReplaceWarningResponseIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_WriteReplaceWarningResponseIEs__value, present),
-	sizeof(((struct ASN_NGAP_WriteReplaceWarningResponseIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_WriteReplaceWarningResponseIEs_t::ASN_NGAP_WriteReplaceWarningResponseIEs__value),
+	offsetof(struct ASN_NGAP_WriteReplaceWarningResponseIEs_t::ASN_NGAP_WriteReplaceWarningResponseIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_WriteReplaceWarningResponseIEs_t::ASN_NGAP_WriteReplaceWarningResponseIEs__value, present),
+	sizeof(((struct ASN_NGAP_WriteReplaceWarningResponseIEs_t::ASN_NGAP_WriteReplaceWarningResponseIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_336,
 	10,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_336,
@@ -26509,7 +26509,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_WriteReplaceWarningResponseIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_340[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PWSCancelRequestIEs__value, choice.MessageIdentifier),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PWSCancelRequestIEs_t::ASN_NGAP_PWSCancelRequestIEs__value, choice.MessageIdentifier),
 		(ASN_TAG_CLASS_UNIVERSAL | (3 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_MessageIdentifier,
@@ -26518,7 +26518,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_340[] = {
 		0, 0, /* No default value */
 		"MessageIdentifier"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PWSCancelRequestIEs__value, choice.SerialNumber),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PWSCancelRequestIEs_t::ASN_NGAP_PWSCancelRequestIEs__value, choice.SerialNumber),
 		(ASN_TAG_CLASS_UNIVERSAL | (3 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_SerialNumber,
@@ -26527,7 +26527,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_340[] = {
 		0, 0, /* No default value */
 		"SerialNumber"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PWSCancelRequestIEs__value, choice.WarningAreaList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PWSCancelRequestIEs_t::ASN_NGAP_PWSCancelRequestIEs__value, choice.WarningAreaList),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_WarningAreaList,
@@ -26536,7 +26536,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_340[] = {
 		0, 0, /* No default value */
 		"WarningAreaList"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PWSCancelRequestIEs__value, choice.CancelAllWarningMessages),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PWSCancelRequestIEs_t::ASN_NGAP_PWSCancelRequestIEs__value, choice.CancelAllWarningMessages),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CancelAllWarningMessages,
@@ -26559,10 +26559,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_340[] = {
     { (ASN_TAG_CLASS_CONTEXT | (4 << 2)), 2, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_340 = {
-	sizeof(struct ASN_NGAP_PWSCancelRequestIEs__value),
-	offsetof(struct ASN_NGAP_PWSCancelRequestIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_PWSCancelRequestIEs__value, present),
-	sizeof(((struct ASN_NGAP_PWSCancelRequestIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_PWSCancelRequestIEs_t::ASN_NGAP_PWSCancelRequestIEs__value),
+	offsetof(struct ASN_NGAP_PWSCancelRequestIEs_t::ASN_NGAP_PWSCancelRequestIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_PWSCancelRequestIEs_t::ASN_NGAP_PWSCancelRequestIEs__value, present),
+	sizeof(((struct ASN_NGAP_PWSCancelRequestIEs_t::ASN_NGAP_PWSCancelRequestIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_340,
 	8,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_340,
@@ -26646,7 +26646,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PWSCancelRequestIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_344[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PWSCancelResponseIEs__value, choice.MessageIdentifier),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PWSCancelResponseIEs_t::ASN_NGAP_PWSCancelResponseIEs__value, choice.MessageIdentifier),
 		(ASN_TAG_CLASS_UNIVERSAL | (3 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_MessageIdentifier,
@@ -26655,7 +26655,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_344[] = {
 		0, 0, /* No default value */
 		"MessageIdentifier"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PWSCancelResponseIEs__value, choice.SerialNumber),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PWSCancelResponseIEs_t::ASN_NGAP_PWSCancelResponseIEs__value, choice.SerialNumber),
 		(ASN_TAG_CLASS_UNIVERSAL | (3 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_SerialNumber,
@@ -26664,7 +26664,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_344[] = {
 		0, 0, /* No default value */
 		"SerialNumber"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PWSCancelResponseIEs__value, choice.BroadcastCancelledAreaList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PWSCancelResponseIEs_t::ASN_NGAP_PWSCancelResponseIEs__value, choice.BroadcastCancelledAreaList),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_BroadcastCancelledAreaList,
@@ -26673,7 +26673,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_344[] = {
 		0, 0, /* No default value */
 		"BroadcastCancelledAreaList"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PWSCancelResponseIEs__value, choice.CriticalityDiagnostics),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PWSCancelResponseIEs_t::ASN_NGAP_PWSCancelResponseIEs__value, choice.CriticalityDiagnostics),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CriticalityDiagnostics,
@@ -26698,10 +26698,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_344[] = {
     { (ASN_TAG_CLASS_CONTEXT | (6 << 2)), 2, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_344 = {
-	sizeof(struct ASN_NGAP_PWSCancelResponseIEs__value),
-	offsetof(struct ASN_NGAP_PWSCancelResponseIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_PWSCancelResponseIEs__value, present),
-	sizeof(((struct ASN_NGAP_PWSCancelResponseIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_PWSCancelResponseIEs_t::ASN_NGAP_PWSCancelResponseIEs__value),
+	offsetof(struct ASN_NGAP_PWSCancelResponseIEs_t::ASN_NGAP_PWSCancelResponseIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_PWSCancelResponseIEs_t::ASN_NGAP_PWSCancelResponseIEs__value, present),
+	sizeof(((struct ASN_NGAP_PWSCancelResponseIEs_t::ASN_NGAP_PWSCancelResponseIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_344,
 	10,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_344,
@@ -26785,7 +26785,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PWSCancelResponseIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_348[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PWSRestartIndicationIEs__value, choice.CellIDListForRestart),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PWSRestartIndicationIEs_t::ASN_NGAP_PWSRestartIndicationIEs__value, choice.CellIDListForRestart),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_CellIDListForRestart,
@@ -26794,7 +26794,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_348[] = {
 		0, 0, /* No default value */
 		"CellIDListForRestart"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PWSRestartIndicationIEs__value, choice.GlobalRANNodeID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PWSRestartIndicationIEs_t::ASN_NGAP_PWSRestartIndicationIEs__value, choice.GlobalRANNodeID),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_GlobalRANNodeID,
@@ -26803,7 +26803,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_348[] = {
 		0, 0, /* No default value */
 		"GlobalRANNodeID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PWSRestartIndicationIEs__value, choice.TAIListForRestart),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PWSRestartIndicationIEs_t::ASN_NGAP_PWSRestartIndicationIEs__value, choice.TAIListForRestart),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_TAIListForRestart,
@@ -26812,7 +26812,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_348[] = {
 		0, 0, /* No default value */
 		"TAIListForRestart"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PWSRestartIndicationIEs__value, choice.EmergencyAreaIDListForRestart),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PWSRestartIndicationIEs_t::ASN_NGAP_PWSRestartIndicationIEs__value, choice.EmergencyAreaIDListForRestart),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_EmergencyAreaIDListForRestart,
@@ -26836,10 +26836,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_348[] = {
     { (ASN_TAG_CLASS_CONTEXT | (3 << 2)), 1, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_348 = {
-	sizeof(struct ASN_NGAP_PWSRestartIndicationIEs__value),
-	offsetof(struct ASN_NGAP_PWSRestartIndicationIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_PWSRestartIndicationIEs__value, present),
-	sizeof(((struct ASN_NGAP_PWSRestartIndicationIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_PWSRestartIndicationIEs_t::ASN_NGAP_PWSRestartIndicationIEs__value),
+	offsetof(struct ASN_NGAP_PWSRestartIndicationIEs_t::ASN_NGAP_PWSRestartIndicationIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_PWSRestartIndicationIEs_t::ASN_NGAP_PWSRestartIndicationIEs__value, present),
+	sizeof(((struct ASN_NGAP_PWSRestartIndicationIEs_t::ASN_NGAP_PWSRestartIndicationIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_348,
 	9,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_348,
@@ -26923,7 +26923,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PWSRestartIndicationIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_352[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PWSFailureIndicationIEs__value, choice.PWSFailedCellIDList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PWSFailureIndicationIEs_t::ASN_NGAP_PWSFailureIndicationIEs__value, choice.PWSFailedCellIDList),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_PWSFailedCellIDList,
@@ -26932,7 +26932,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_352[] = {
 		0, 0, /* No default value */
 		"PWSFailedCellIDList"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PWSFailureIndicationIEs__value, choice.GlobalRANNodeID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PWSFailureIndicationIEs_t::ASN_NGAP_PWSFailureIndicationIEs__value, choice.GlobalRANNodeID),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_GlobalRANNodeID,
@@ -26952,10 +26952,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_352[] = {
     { (ASN_TAG_CLASS_CONTEXT | (3 << 2)), 1, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_352 = {
-	sizeof(struct ASN_NGAP_PWSFailureIndicationIEs__value),
-	offsetof(struct ASN_NGAP_PWSFailureIndicationIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_PWSFailureIndicationIEs__value, present),
-	sizeof(((struct ASN_NGAP_PWSFailureIndicationIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_PWSFailureIndicationIEs_t::ASN_NGAP_PWSFailureIndicationIEs__value),
+	offsetof(struct ASN_NGAP_PWSFailureIndicationIEs_t::ASN_NGAP_PWSFailureIndicationIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_PWSFailureIndicationIEs_t::ASN_NGAP_PWSFailureIndicationIEs__value, present),
+	sizeof(((struct ASN_NGAP_PWSFailureIndicationIEs_t::ASN_NGAP_PWSFailureIndicationIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_352,
 	7,	/* Count of tags in the map */
 	0, 0,
@@ -27038,7 +27038,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PWSFailureIndicationIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_356[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkUEAssociatedNRPPaTransportIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkUEAssociatedNRPPaTransportIEs_t::ASN_NGAP_DownlinkUEAssociatedNRPPaTransportIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -27047,7 +27047,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_356[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkUEAssociatedNRPPaTransportIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkUEAssociatedNRPPaTransportIEs_t::ASN_NGAP_DownlinkUEAssociatedNRPPaTransportIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -27056,7 +27056,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_356[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkUEAssociatedNRPPaTransportIEs__value, choice.RoutingID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkUEAssociatedNRPPaTransportIEs_t::ASN_NGAP_DownlinkUEAssociatedNRPPaTransportIEs__value, choice.RoutingID),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RoutingID,
@@ -27065,7 +27065,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_356[] = {
 		0, 0, /* No default value */
 		"RoutingID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkUEAssociatedNRPPaTransportIEs__value, choice.NRPPa_PDU),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkUEAssociatedNRPPaTransportIEs_t::ASN_NGAP_DownlinkUEAssociatedNRPPaTransportIEs__value, choice.NRPPa_PDU),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_NRPPa_PDU,
@@ -27082,10 +27082,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_356[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (4 << 2)), 3, -1, 0 } /* NRPPa-PDU */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_356 = {
-	sizeof(struct ASN_NGAP_DownlinkUEAssociatedNRPPaTransportIEs__value),
-	offsetof(struct ASN_NGAP_DownlinkUEAssociatedNRPPaTransportIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_DownlinkUEAssociatedNRPPaTransportIEs__value, present),
-	sizeof(((struct ASN_NGAP_DownlinkUEAssociatedNRPPaTransportIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_DownlinkUEAssociatedNRPPaTransportIEs_t::ASN_NGAP_DownlinkUEAssociatedNRPPaTransportIEs__value),
+	offsetof(struct ASN_NGAP_DownlinkUEAssociatedNRPPaTransportIEs_t::ASN_NGAP_DownlinkUEAssociatedNRPPaTransportIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_DownlinkUEAssociatedNRPPaTransportIEs_t::ASN_NGAP_DownlinkUEAssociatedNRPPaTransportIEs__value, present),
+	sizeof(((struct ASN_NGAP_DownlinkUEAssociatedNRPPaTransportIEs_t::ASN_NGAP_DownlinkUEAssociatedNRPPaTransportIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_356,
 	4,	/* Count of tags in the map */
 	0, 0,
@@ -27168,7 +27168,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_DownlinkUEAssociatedNRPPaTransportIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_360[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UplinkUEAssociatedNRPPaTransportIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UplinkUEAssociatedNRPPaTransportIEs_t::ASN_NGAP_UplinkUEAssociatedNRPPaTransportIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -27177,7 +27177,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_360[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UplinkUEAssociatedNRPPaTransportIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UplinkUEAssociatedNRPPaTransportIEs_t::ASN_NGAP_UplinkUEAssociatedNRPPaTransportIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -27186,7 +27186,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_360[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UplinkUEAssociatedNRPPaTransportIEs__value, choice.RoutingID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UplinkUEAssociatedNRPPaTransportIEs_t::ASN_NGAP_UplinkUEAssociatedNRPPaTransportIEs__value, choice.RoutingID),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RoutingID,
@@ -27195,7 +27195,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_360[] = {
 		0, 0, /* No default value */
 		"RoutingID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UplinkUEAssociatedNRPPaTransportIEs__value, choice.NRPPa_PDU),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UplinkUEAssociatedNRPPaTransportIEs_t::ASN_NGAP_UplinkUEAssociatedNRPPaTransportIEs__value, choice.NRPPa_PDU),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_NRPPa_PDU,
@@ -27212,10 +27212,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_360[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (4 << 2)), 3, -1, 0 } /* NRPPa-PDU */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_360 = {
-	sizeof(struct ASN_NGAP_UplinkUEAssociatedNRPPaTransportIEs__value),
-	offsetof(struct ASN_NGAP_UplinkUEAssociatedNRPPaTransportIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_UplinkUEAssociatedNRPPaTransportIEs__value, present),
-	sizeof(((struct ASN_NGAP_UplinkUEAssociatedNRPPaTransportIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_UplinkUEAssociatedNRPPaTransportIEs_t::ASN_NGAP_UplinkUEAssociatedNRPPaTransportIEs__value),
+	offsetof(struct ASN_NGAP_UplinkUEAssociatedNRPPaTransportIEs_t::ASN_NGAP_UplinkUEAssociatedNRPPaTransportIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_UplinkUEAssociatedNRPPaTransportIEs_t::ASN_NGAP_UplinkUEAssociatedNRPPaTransportIEs__value, present),
+	sizeof(((struct ASN_NGAP_UplinkUEAssociatedNRPPaTransportIEs_t::ASN_NGAP_UplinkUEAssociatedNRPPaTransportIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_360,
 	4,	/* Count of tags in the map */
 	0, 0,
@@ -27298,7 +27298,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_UplinkUEAssociatedNRPPaTransportIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_364[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkNonUEAssociatedNRPPaTransportIEs__value, choice.RoutingID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkNonUEAssociatedNRPPaTransportIEs_t::ASN_NGAP_DownlinkNonUEAssociatedNRPPaTransportIEs__value, choice.RoutingID),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RoutingID,
@@ -27307,7 +27307,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_364[] = {
 		0, 0, /* No default value */
 		"RoutingID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkNonUEAssociatedNRPPaTransportIEs__value, choice.NRPPa_PDU),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DownlinkNonUEAssociatedNRPPaTransportIEs_t::ASN_NGAP_DownlinkNonUEAssociatedNRPPaTransportIEs__value, choice.NRPPa_PDU),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_NRPPa_PDU,
@@ -27322,10 +27322,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_364[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (4 << 2)), 1, -1, 0 } /* NRPPa-PDU */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_364 = {
-	sizeof(struct ASN_NGAP_DownlinkNonUEAssociatedNRPPaTransportIEs__value),
-	offsetof(struct ASN_NGAP_DownlinkNonUEAssociatedNRPPaTransportIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_DownlinkNonUEAssociatedNRPPaTransportIEs__value, present),
-	sizeof(((struct ASN_NGAP_DownlinkNonUEAssociatedNRPPaTransportIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_DownlinkNonUEAssociatedNRPPaTransportIEs_t::ASN_NGAP_DownlinkNonUEAssociatedNRPPaTransportIEs__value),
+	offsetof(struct ASN_NGAP_DownlinkNonUEAssociatedNRPPaTransportIEs_t::ASN_NGAP_DownlinkNonUEAssociatedNRPPaTransportIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_DownlinkNonUEAssociatedNRPPaTransportIEs_t::ASN_NGAP_DownlinkNonUEAssociatedNRPPaTransportIEs__value, present),
+	sizeof(((struct ASN_NGAP_DownlinkNonUEAssociatedNRPPaTransportIEs_t::ASN_NGAP_DownlinkNonUEAssociatedNRPPaTransportIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_364,
 	2,	/* Count of tags in the map */
 	0, 0,
@@ -27408,7 +27408,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_DownlinkNonUEAssociatedNRPPaTransportIEs 
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_368[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UplinkNonUEAssociatedNRPPaTransportIEs__value, choice.RoutingID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UplinkNonUEAssociatedNRPPaTransportIEs_t::ASN_NGAP_UplinkNonUEAssociatedNRPPaTransportIEs__value, choice.RoutingID),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RoutingID,
@@ -27417,7 +27417,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_368[] = {
 		0, 0, /* No default value */
 		"RoutingID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UplinkNonUEAssociatedNRPPaTransportIEs__value, choice.NRPPa_PDU),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UplinkNonUEAssociatedNRPPaTransportIEs_t::ASN_NGAP_UplinkNonUEAssociatedNRPPaTransportIEs__value, choice.NRPPa_PDU),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_NRPPa_PDU,
@@ -27432,10 +27432,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_368[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (4 << 2)), 1, -1, 0 } /* NRPPa-PDU */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_368 = {
-	sizeof(struct ASN_NGAP_UplinkNonUEAssociatedNRPPaTransportIEs__value),
-	offsetof(struct ASN_NGAP_UplinkNonUEAssociatedNRPPaTransportIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_UplinkNonUEAssociatedNRPPaTransportIEs__value, present),
-	sizeof(((struct ASN_NGAP_UplinkNonUEAssociatedNRPPaTransportIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_UplinkNonUEAssociatedNRPPaTransportIEs_t::ASN_NGAP_UplinkNonUEAssociatedNRPPaTransportIEs__value),
+	offsetof(struct ASN_NGAP_UplinkNonUEAssociatedNRPPaTransportIEs_t::ASN_NGAP_UplinkNonUEAssociatedNRPPaTransportIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_UplinkNonUEAssociatedNRPPaTransportIEs_t::ASN_NGAP_UplinkNonUEAssociatedNRPPaTransportIEs__value, present),
+	sizeof(((struct ASN_NGAP_UplinkNonUEAssociatedNRPPaTransportIEs_t::ASN_NGAP_UplinkNonUEAssociatedNRPPaTransportIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_368,
 	2,	/* Count of tags in the map */
 	0, 0,
@@ -27518,7 +27518,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_UplinkNonUEAssociatedNRPPaTransportIEs = 
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_372[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_TraceStartIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_TraceStartIEs_t::ASN_NGAP_TraceStartIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -27527,7 +27527,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_372[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_TraceStartIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_TraceStartIEs_t::ASN_NGAP_TraceStartIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -27536,7 +27536,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_372[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_TraceStartIEs__value, choice.TraceActivation),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_TraceStartIEs_t::ASN_NGAP_TraceStartIEs__value, choice.TraceActivation),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_TraceActivation,
@@ -27552,10 +27552,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_372[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 2, 0, 0 } /* TraceActivation */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_372 = {
-	sizeof(struct ASN_NGAP_TraceStartIEs__value),
-	offsetof(struct ASN_NGAP_TraceStartIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_TraceStartIEs__value, present),
-	sizeof(((struct ASN_NGAP_TraceStartIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_TraceStartIEs_t::ASN_NGAP_TraceStartIEs__value),
+	offsetof(struct ASN_NGAP_TraceStartIEs_t::ASN_NGAP_TraceStartIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_TraceStartIEs_t::ASN_NGAP_TraceStartIEs__value, present),
+	sizeof(((struct ASN_NGAP_TraceStartIEs_t::ASN_NGAP_TraceStartIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_372,
 	3,	/* Count of tags in the map */
 	0, 0,
@@ -27638,7 +27638,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_TraceStartIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_376[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_TraceFailureIndicationIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_TraceFailureIndicationIEs_t::ASN_NGAP_TraceFailureIndicationIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -27647,7 +27647,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_376[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_TraceFailureIndicationIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_TraceFailureIndicationIEs_t::ASN_NGAP_TraceFailureIndicationIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -27656,7 +27656,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_376[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_TraceFailureIndicationIEs__value, choice.NGRANTraceID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_TraceFailureIndicationIEs_t::ASN_NGAP_TraceFailureIndicationIEs__value, choice.NGRANTraceID),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_NGRANTraceID,
@@ -27665,7 +27665,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_376[] = {
 		0, 0, /* No default value */
 		"NGRANTraceID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_TraceFailureIndicationIEs__value, choice.Cause),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_TraceFailureIndicationIEs_t::ASN_NGAP_TraceFailureIndicationIEs__value, choice.Cause),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_Cause,
@@ -27687,10 +27687,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_376[] = {
     { (ASN_TAG_CLASS_CONTEXT | (5 << 2)), 3, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_376 = {
-	sizeof(struct ASN_NGAP_TraceFailureIndicationIEs__value),
-	offsetof(struct ASN_NGAP_TraceFailureIndicationIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_TraceFailureIndicationIEs__value, present),
-	sizeof(((struct ASN_NGAP_TraceFailureIndicationIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_TraceFailureIndicationIEs_t::ASN_NGAP_TraceFailureIndicationIEs__value),
+	offsetof(struct ASN_NGAP_TraceFailureIndicationIEs_t::ASN_NGAP_TraceFailureIndicationIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_TraceFailureIndicationIEs_t::ASN_NGAP_TraceFailureIndicationIEs__value, present),
+	sizeof(((struct ASN_NGAP_TraceFailureIndicationIEs_t::ASN_NGAP_TraceFailureIndicationIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_376,
 	9,	/* Count of tags in the map */
 	0, 0,
@@ -27773,7 +27773,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_TraceFailureIndicationIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_380[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DeactivateTraceIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DeactivateTraceIEs_t::ASN_NGAP_DeactivateTraceIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -27782,7 +27782,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_380[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DeactivateTraceIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DeactivateTraceIEs_t::ASN_NGAP_DeactivateTraceIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -27791,7 +27791,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_380[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DeactivateTraceIEs__value, choice.NGRANTraceID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_DeactivateTraceIEs_t::ASN_NGAP_DeactivateTraceIEs__value, choice.NGRANTraceID),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_NGRANTraceID,
@@ -27807,10 +27807,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_380[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (4 << 2)), 2, 0, 0 } /* NGRANTraceID */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_380 = {
-	sizeof(struct ASN_NGAP_DeactivateTraceIEs__value),
-	offsetof(struct ASN_NGAP_DeactivateTraceIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_DeactivateTraceIEs__value, present),
-	sizeof(((struct ASN_NGAP_DeactivateTraceIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_DeactivateTraceIEs_t::ASN_NGAP_DeactivateTraceIEs__value),
+	offsetof(struct ASN_NGAP_DeactivateTraceIEs_t::ASN_NGAP_DeactivateTraceIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_DeactivateTraceIEs_t::ASN_NGAP_DeactivateTraceIEs__value, present),
+	sizeof(((struct ASN_NGAP_DeactivateTraceIEs_t::ASN_NGAP_DeactivateTraceIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_380,
 	3,	/* Count of tags in the map */
 	0, 0,
@@ -27893,7 +27893,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_DeactivateTraceIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_384[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_CellTrafficTraceIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_CellTrafficTraceIEs_t::ASN_NGAP_CellTrafficTraceIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -27902,7 +27902,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_384[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_CellTrafficTraceIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_CellTrafficTraceIEs_t::ASN_NGAP_CellTrafficTraceIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -27911,7 +27911,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_384[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_CellTrafficTraceIEs__value, choice.NGRANTraceID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_CellTrafficTraceIEs_t::ASN_NGAP_CellTrafficTraceIEs__value, choice.NGRANTraceID),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_NGRANTraceID,
@@ -27920,7 +27920,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_384[] = {
 		0, 0, /* No default value */
 		"NGRANTraceID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_CellTrafficTraceIEs__value, choice.NGRAN_CGI),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_CellTrafficTraceIEs_t::ASN_NGAP_CellTrafficTraceIEs__value, choice.NGRAN_CGI),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_NGRAN_CGI,
@@ -27929,7 +27929,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_384[] = {
 		0, 0, /* No default value */
 		"NGRAN-CGI"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_CellTrafficTraceIEs__value, choice.TransportLayerAddress),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_CellTrafficTraceIEs_t::ASN_NGAP_CellTrafficTraceIEs__value, choice.TransportLayerAddress),
 		(ASN_TAG_CLASS_UNIVERSAL | (3 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_TransportLayerAddress,
@@ -27951,10 +27951,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_384[] = {
     { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 3, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_384 = {
-	sizeof(struct ASN_NGAP_CellTrafficTraceIEs__value),
-	offsetof(struct ASN_NGAP_CellTrafficTraceIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_CellTrafficTraceIEs__value, present),
-	sizeof(((struct ASN_NGAP_CellTrafficTraceIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_CellTrafficTraceIEs_t::ASN_NGAP_CellTrafficTraceIEs__value),
+	offsetof(struct ASN_NGAP_CellTrafficTraceIEs_t::ASN_NGAP_CellTrafficTraceIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_CellTrafficTraceIEs_t::ASN_NGAP_CellTrafficTraceIEs__value, present),
+	sizeof(((struct ASN_NGAP_CellTrafficTraceIEs_t::ASN_NGAP_CellTrafficTraceIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_384,
 	7,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_384,
@@ -28038,7 +28038,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_CellTrafficTraceIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_388[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_LocationReportingControlIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_LocationReportingControlIEs_t::ASN_NGAP_LocationReportingControlIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -28047,7 +28047,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_388[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_LocationReportingControlIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_LocationReportingControlIEs_t::ASN_NGAP_LocationReportingControlIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -28056,7 +28056,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_388[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_LocationReportingControlIEs__value, choice.LocationReportingRequestType),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_LocationReportingControlIEs_t::ASN_NGAP_LocationReportingControlIEs__value, choice.LocationReportingRequestType),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_LocationReportingRequestType,
@@ -28072,10 +28072,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_388[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 2, 0, 0 } /* LocationReportingRequestType */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_388 = {
-	sizeof(struct ASN_NGAP_LocationReportingControlIEs__value),
-	offsetof(struct ASN_NGAP_LocationReportingControlIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_LocationReportingControlIEs__value, present),
-	sizeof(((struct ASN_NGAP_LocationReportingControlIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_LocationReportingControlIEs_t::ASN_NGAP_LocationReportingControlIEs__value),
+	offsetof(struct ASN_NGAP_LocationReportingControlIEs_t::ASN_NGAP_LocationReportingControlIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_LocationReportingControlIEs_t::ASN_NGAP_LocationReportingControlIEs__value, present),
+	sizeof(((struct ASN_NGAP_LocationReportingControlIEs_t::ASN_NGAP_LocationReportingControlIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_388,
 	3,	/* Count of tags in the map */
 	0, 0,
@@ -28158,7 +28158,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_LocationReportingControlIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_392[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_LocationReportingFailureIndicationIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_LocationReportingFailureIndicationIEs_t::ASN_NGAP_LocationReportingFailureIndicationIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -28167,7 +28167,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_392[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_LocationReportingFailureIndicationIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_LocationReportingFailureIndicationIEs_t::ASN_NGAP_LocationReportingFailureIndicationIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -28176,7 +28176,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_392[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_LocationReportingFailureIndicationIEs__value, choice.Cause),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_LocationReportingFailureIndicationIEs_t::ASN_NGAP_LocationReportingFailureIndicationIEs__value, choice.Cause),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_Cause,
@@ -28197,10 +28197,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_392[] = {
     { (ASN_TAG_CLASS_CONTEXT | (5 << 2)), 2, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_392 = {
-	sizeof(struct ASN_NGAP_LocationReportingFailureIndicationIEs__value),
-	offsetof(struct ASN_NGAP_LocationReportingFailureIndicationIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_LocationReportingFailureIndicationIEs__value, present),
-	sizeof(((struct ASN_NGAP_LocationReportingFailureIndicationIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_LocationReportingFailureIndicationIEs_t::ASN_NGAP_LocationReportingFailureIndicationIEs__value),
+	offsetof(struct ASN_NGAP_LocationReportingFailureIndicationIEs_t::ASN_NGAP_LocationReportingFailureIndicationIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_LocationReportingFailureIndicationIEs_t::ASN_NGAP_LocationReportingFailureIndicationIEs__value, present),
+	sizeof(((struct ASN_NGAP_LocationReportingFailureIndicationIEs_t::ASN_NGAP_LocationReportingFailureIndicationIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_392,
 	8,	/* Count of tags in the map */
 	0, 0,
@@ -28283,7 +28283,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_LocationReportingFailureIndicationIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_396[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_LocationReportIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_LocationReportIEs_t::ASN_NGAP_LocationReportIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -28292,7 +28292,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_396[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_LocationReportIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_LocationReportIEs_t::ASN_NGAP_LocationReportIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -28301,7 +28301,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_396[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_LocationReportIEs__value, choice.UserLocationInformation),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_LocationReportIEs_t::ASN_NGAP_LocationReportIEs__value, choice.UserLocationInformation),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_UserLocationInformation,
@@ -28310,7 +28310,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_396[] = {
 		0, 0, /* No default value */
 		"UserLocationInformation"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_LocationReportIEs__value, choice.UEPresenceInAreaOfInterestList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_LocationReportIEs_t::ASN_NGAP_LocationReportIEs__value, choice.UEPresenceInAreaOfInterestList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UEPresenceInAreaOfInterestList,
@@ -28319,7 +28319,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_396[] = {
 		0, 0, /* No default value */
 		"UEPresenceInAreaOfInterestList"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_LocationReportIEs__value, choice.LocationReportingRequestType),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_LocationReportIEs_t::ASN_NGAP_LocationReportIEs__value, choice.LocationReportingRequestType),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_LocationReportingRequestType,
@@ -28342,10 +28342,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_396[] = {
     { (ASN_TAG_CLASS_CONTEXT | (3 << 2)), 2, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_396 = {
-	sizeof(struct ASN_NGAP_LocationReportIEs__value),
-	offsetof(struct ASN_NGAP_LocationReportIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_LocationReportIEs__value, present),
-	sizeof(((struct ASN_NGAP_LocationReportIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_LocationReportIEs_t::ASN_NGAP_LocationReportIEs__value),
+	offsetof(struct ASN_NGAP_LocationReportIEs_t::ASN_NGAP_LocationReportIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_LocationReportIEs_t::ASN_NGAP_LocationReportIEs__value, present),
+	sizeof(((struct ASN_NGAP_LocationReportIEs_t::ASN_NGAP_LocationReportIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_396,
 	8,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_396,
@@ -28429,7 +28429,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_LocationReportIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_400[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UETNLABindingReleaseRequestIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UETNLABindingReleaseRequestIEs_t::ASN_NGAP_UETNLABindingReleaseRequestIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -28438,7 +28438,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_400[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UETNLABindingReleaseRequestIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UETNLABindingReleaseRequestIEs_t::ASN_NGAP_UETNLABindingReleaseRequestIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -28453,10 +28453,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_400[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 1, -1, 0 } /* RAN-UE-NGAP-ID */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_400 = {
-	sizeof(struct ASN_NGAP_UETNLABindingReleaseRequestIEs__value),
-	offsetof(struct ASN_NGAP_UETNLABindingReleaseRequestIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_UETNLABindingReleaseRequestIEs__value, present),
-	sizeof(((struct ASN_NGAP_UETNLABindingReleaseRequestIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_UETNLABindingReleaseRequestIEs_t::ASN_NGAP_UETNLABindingReleaseRequestIEs__value),
+	offsetof(struct ASN_NGAP_UETNLABindingReleaseRequestIEs_t::ASN_NGAP_UETNLABindingReleaseRequestIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_UETNLABindingReleaseRequestIEs_t::ASN_NGAP_UETNLABindingReleaseRequestIEs__value, present),
+	sizeof(((struct ASN_NGAP_UETNLABindingReleaseRequestIEs_t::ASN_NGAP_UETNLABindingReleaseRequestIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_400,
 	2,	/* Count of tags in the map */
 	0, 0,
@@ -28539,7 +28539,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_UETNLABindingReleaseRequestIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_404[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UERadioCapabilityInfoIndicationIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UERadioCapabilityInfoIndicationIEs_t::ASN_NGAP_UERadioCapabilityInfoIndicationIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -28548,7 +28548,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_404[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UERadioCapabilityInfoIndicationIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UERadioCapabilityInfoIndicationIEs_t::ASN_NGAP_UERadioCapabilityInfoIndicationIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -28557,7 +28557,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_404[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UERadioCapabilityInfoIndicationIEs__value, choice.UERadioCapability),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UERadioCapabilityInfoIndicationIEs_t::ASN_NGAP_UERadioCapabilityInfoIndicationIEs__value, choice.UERadioCapability),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UERadioCapability,
@@ -28566,7 +28566,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_404[] = {
 		0, 0, /* No default value */
 		"UERadioCapability"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UERadioCapabilityInfoIndicationIEs__value, choice.UERadioCapabilityForPaging),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UERadioCapabilityInfoIndicationIEs_t::ASN_NGAP_UERadioCapabilityInfoIndicationIEs__value, choice.UERadioCapabilityForPaging),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UERadioCapabilityForPaging,
@@ -28583,10 +28583,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_404[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 3, 0, 0 } /* UERadioCapabilityForPaging */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_404 = {
-	sizeof(struct ASN_NGAP_UERadioCapabilityInfoIndicationIEs__value),
-	offsetof(struct ASN_NGAP_UERadioCapabilityInfoIndicationIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_UERadioCapabilityInfoIndicationIEs__value, present),
-	sizeof(((struct ASN_NGAP_UERadioCapabilityInfoIndicationIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_UERadioCapabilityInfoIndicationIEs_t::ASN_NGAP_UERadioCapabilityInfoIndicationIEs__value),
+	offsetof(struct ASN_NGAP_UERadioCapabilityInfoIndicationIEs_t::ASN_NGAP_UERadioCapabilityInfoIndicationIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_UERadioCapabilityInfoIndicationIEs_t::ASN_NGAP_UERadioCapabilityInfoIndicationIEs__value, present),
+	sizeof(((struct ASN_NGAP_UERadioCapabilityInfoIndicationIEs_t::ASN_NGAP_UERadioCapabilityInfoIndicationIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_404,
 	4,	/* Count of tags in the map */
 	0, 0,
@@ -28669,7 +28669,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_UERadioCapabilityInfoIndicationIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_408[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UERadioCapabilityCheckRequestIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UERadioCapabilityCheckRequestIEs_t::ASN_NGAP_UERadioCapabilityCheckRequestIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -28678,7 +28678,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_408[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UERadioCapabilityCheckRequestIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UERadioCapabilityCheckRequestIEs_t::ASN_NGAP_UERadioCapabilityCheckRequestIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -28687,7 +28687,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_408[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UERadioCapabilityCheckRequestIEs__value, choice.UERadioCapability),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UERadioCapabilityCheckRequestIEs_t::ASN_NGAP_UERadioCapabilityCheckRequestIEs__value, choice.UERadioCapability),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UERadioCapability,
@@ -28703,10 +28703,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_408[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (4 << 2)), 2, 0, 0 } /* UERadioCapability */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_408 = {
-	sizeof(struct ASN_NGAP_UERadioCapabilityCheckRequestIEs__value),
-	offsetof(struct ASN_NGAP_UERadioCapabilityCheckRequestIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_UERadioCapabilityCheckRequestIEs__value, present),
-	sizeof(((struct ASN_NGAP_UERadioCapabilityCheckRequestIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_UERadioCapabilityCheckRequestIEs_t::ASN_NGAP_UERadioCapabilityCheckRequestIEs__value),
+	offsetof(struct ASN_NGAP_UERadioCapabilityCheckRequestIEs_t::ASN_NGAP_UERadioCapabilityCheckRequestIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_UERadioCapabilityCheckRequestIEs_t::ASN_NGAP_UERadioCapabilityCheckRequestIEs__value, present),
+	sizeof(((struct ASN_NGAP_UERadioCapabilityCheckRequestIEs_t::ASN_NGAP_UERadioCapabilityCheckRequestIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_408,
 	3,	/* Count of tags in the map */
 	0, 0,
@@ -28789,7 +28789,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_UERadioCapabilityCheckRequestIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_412[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UERadioCapabilityCheckResponseIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UERadioCapabilityCheckResponseIEs_t::ASN_NGAP_UERadioCapabilityCheckResponseIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -28798,7 +28798,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_412[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UERadioCapabilityCheckResponseIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UERadioCapabilityCheckResponseIEs_t::ASN_NGAP_UERadioCapabilityCheckResponseIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -28807,7 +28807,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_412[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UERadioCapabilityCheckResponseIEs__value, choice.IMSVoiceSupportIndicator),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UERadioCapabilityCheckResponseIEs_t::ASN_NGAP_UERadioCapabilityCheckResponseIEs__value, choice.IMSVoiceSupportIndicator),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_IMSVoiceSupportIndicator,
@@ -28816,7 +28816,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_412[] = {
 		0, 0, /* No default value */
 		"IMSVoiceSupportIndicator"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UERadioCapabilityCheckResponseIEs__value, choice.CriticalityDiagnostics),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_UERadioCapabilityCheckResponseIEs_t::ASN_NGAP_UERadioCapabilityCheckResponseIEs__value, choice.CriticalityDiagnostics),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CriticalityDiagnostics,
@@ -28833,10 +28833,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_412[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 3, 0, 0 } /* CriticalityDiagnostics */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_412 = {
-	sizeof(struct ASN_NGAP_UERadioCapabilityCheckResponseIEs__value),
-	offsetof(struct ASN_NGAP_UERadioCapabilityCheckResponseIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_UERadioCapabilityCheckResponseIEs__value, present),
-	sizeof(((struct ASN_NGAP_UERadioCapabilityCheckResponseIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_UERadioCapabilityCheckResponseIEs_t::ASN_NGAP_UERadioCapabilityCheckResponseIEs__value),
+	offsetof(struct ASN_NGAP_UERadioCapabilityCheckResponseIEs_t::ASN_NGAP_UERadioCapabilityCheckResponseIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_UERadioCapabilityCheckResponseIEs_t::ASN_NGAP_UERadioCapabilityCheckResponseIEs__value, present),
+	sizeof(((struct ASN_NGAP_UERadioCapabilityCheckResponseIEs_t::ASN_NGAP_UERadioCapabilityCheckResponseIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_412,
 	4,	/* Count of tags in the map */
 	0, 0,
@@ -28919,7 +28919,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_UERadioCapabilityCheckResponseIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_416[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_SecondaryRATDataUsageReportIEs__value, choice.AMF_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_SecondaryRATDataUsageReportIEs_t::ASN_NGAP_SecondaryRATDataUsageReportIEs__value, choice.AMF_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMF_UE_NGAP_ID,
@@ -28928,7 +28928,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_416[] = {
 		0, 0, /* No default value */
 		"AMF-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_SecondaryRATDataUsageReportIEs__value, choice.RAN_UE_NGAP_ID),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_SecondaryRATDataUsageReportIEs_t::ASN_NGAP_SecondaryRATDataUsageReportIEs__value, choice.RAN_UE_NGAP_ID),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RAN_UE_NGAP_ID,
@@ -28937,7 +28937,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_416[] = {
 		0, 0, /* No default value */
 		"RAN-UE-NGAP-ID"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_SecondaryRATDataUsageReportIEs__value, choice.PDUSessionResourceSecondaryRATUsageList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_SecondaryRATDataUsageReportIEs_t::ASN_NGAP_SecondaryRATDataUsageReportIEs__value, choice.PDUSessionResourceSecondaryRATUsageList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceSecondaryRATUsageList,
@@ -28946,7 +28946,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_416[] = {
 		0, 0, /* No default value */
 		"PDUSessionResourceSecondaryRATUsageList"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_SecondaryRATDataUsageReportIEs__value, choice.HandoverFlag),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_SecondaryRATDataUsageReportIEs_t::ASN_NGAP_SecondaryRATDataUsageReportIEs__value, choice.HandoverFlag),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_HandoverFlag,
@@ -28955,7 +28955,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_416[] = {
 		0, 0, /* No default value */
 		"HandoverFlag"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_SecondaryRATDataUsageReportIEs__value, choice.UserLocationInformation),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_SecondaryRATDataUsageReportIEs_t::ASN_NGAP_SecondaryRATDataUsageReportIEs__value, choice.UserLocationInformation),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_UserLocationInformation,
@@ -28978,10 +28978,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_416[] = {
     { (ASN_TAG_CLASS_CONTEXT | (3 << 2)), 4, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_416 = {
-	sizeof(struct ASN_NGAP_SecondaryRATDataUsageReportIEs__value),
-	offsetof(struct ASN_NGAP_SecondaryRATDataUsageReportIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_SecondaryRATDataUsageReportIEs__value, present),
-	sizeof(((struct ASN_NGAP_SecondaryRATDataUsageReportIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_SecondaryRATDataUsageReportIEs_t::ASN_NGAP_SecondaryRATDataUsageReportIEs__value),
+	offsetof(struct ASN_NGAP_SecondaryRATDataUsageReportIEs_t::ASN_NGAP_SecondaryRATDataUsageReportIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_SecondaryRATDataUsageReportIEs_t::ASN_NGAP_SecondaryRATDataUsageReportIEs__value, present),
+	sizeof(((struct ASN_NGAP_SecondaryRATDataUsageReportIEs_t::ASN_NGAP_SecondaryRATDataUsageReportIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_416,
 	8,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_416,
@@ -29065,7 +29065,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_SecondaryRATDataUsageReportIEs = {
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_420[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs__value, choice.PDUSessionAggregateMaximumBitRate),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs_t::ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs__value, choice.PDUSessionAggregateMaximumBitRate),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionAggregateMaximumBitRate,
@@ -29074,7 +29074,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_420[] = {
 		0, 0, /* No default value */
 		"PDUSessionAggregateMaximumBitRate"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs__value, choice.UL_NGU_UP_TNLModifyList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs_t::ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs__value, choice.UL_NGU_UP_TNLModifyList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UL_NGU_UP_TNLModifyList,
@@ -29083,7 +29083,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_420[] = {
 		0, 0, /* No default value */
 		"UL-NGU-UP-TNLModifyList"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs__value, choice.NetworkInstance),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs_t::ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs__value, choice.NetworkInstance),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_NetworkInstance,
@@ -29092,7 +29092,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_420[] = {
 		0, 0, /* No default value */
 		"NetworkInstance"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs__value, choice.QosFlowAddOrModifyRequestList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs_t::ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs__value, choice.QosFlowAddOrModifyRequestList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_QosFlowAddOrModifyRequestList,
@@ -29101,7 +29101,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_420[] = {
 		0, 0, /* No default value */
 		"QosFlowAddOrModifyRequestList"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs__value, choice.QosFlowListWithCause),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs_t::ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs__value, choice.QosFlowListWithCause),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_QosFlowListWithCause,
@@ -29110,7 +29110,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_420[] = {
 		0, 0, /* No default value */
 		"QosFlowListWithCause"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs__value, choice.UPTransportLayerInformationList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs_t::ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs__value, choice.UPTransportLayerInformationList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UPTransportLayerInformationList,
@@ -29119,7 +29119,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_420[] = {
 		0, 0, /* No default value */
 		"UPTransportLayerInformationList"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs__value, choice.CommonNetworkInstance),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs_t::ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs__value, choice.CommonNetworkInstance),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CommonNetworkInstance,
@@ -29141,10 +29141,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_420[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 5, -4, 0 } /* UPTransportLayerInformationList */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_420 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs__value),
-	offsetof(struct ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs__value, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs_t::ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs__value),
+	offsetof(struct ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs_t::ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs_t::ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs__value, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs_t::ASN_NGAP_PDUSessionResourceModifyRequestTransferIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_420,
 	7,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_420,
@@ -29228,7 +29228,7 @@ asn_TYPE_descriptor_t asn_DEF_ASN_NGAP_PDUSessionResourceModifyRequestTransferIE
 };
 
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_424[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs__value, choice.PDUSessionAggregateMaximumBitRate),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs_t::ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs__value, choice.PDUSessionAggregateMaximumBitRate),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionAggregateMaximumBitRate,
@@ -29237,7 +29237,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_424[] = {
 		0, 0, /* No default value */
 		"PDUSessionAggregateMaximumBitRate"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs__value, choice.UPTransportLayerInformation),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs_t::ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs__value, choice.UPTransportLayerInformation),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_ASN_NGAP_UPTransportLayerInformation,
@@ -29246,7 +29246,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_424[] = {
 		0, 0, /* No default value */
 		"UPTransportLayerInformation"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs__value, choice.UPTransportLayerInformationList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs_t::ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs__value, choice.UPTransportLayerInformationList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UPTransportLayerInformationList,
@@ -29255,7 +29255,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_424[] = {
 		0, 0, /* No default value */
 		"UPTransportLayerInformationList"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs__value, choice.DataForwardingNotPossible),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs_t::ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs__value, choice.DataForwardingNotPossible),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_DataForwardingNotPossible,
@@ -29264,7 +29264,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_424[] = {
 		0, 0, /* No default value */
 		"DataForwardingNotPossible"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs__value, choice.PDUSessionType),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs_t::ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs__value, choice.PDUSessionType),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionType,
@@ -29273,7 +29273,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_424[] = {
 		0, 0, /* No default value */
 		"PDUSessionType"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs__value, choice.SecurityIndication),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs_t::ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs__value, choice.SecurityIndication),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_SecurityIndication,
@@ -29282,7 +29282,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_424[] = {
 		0, 0, /* No default value */
 		"SecurityIndication"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs__value, choice.NetworkInstance),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs_t::ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs__value, choice.NetworkInstance),
 		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_NetworkInstance,
@@ -29291,7 +29291,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_424[] = {
 		0, 0, /* No default value */
 		"NetworkInstance"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs__value, choice.QosFlowSetupRequestList),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs_t::ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs__value, choice.QosFlowSetupRequestList),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_QosFlowSetupRequestList,
@@ -29300,7 +29300,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_424[] = {
 		0, 0, /* No default value */
 		"QosFlowSetupRequestList"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs__value, choice.CommonNetworkInstance),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs_t::ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs__value, choice.CommonNetworkInstance),
 		(ASN_TAG_CLASS_UNIVERSAL | (4 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CommonNetworkInstance,
@@ -29325,10 +29325,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_424[] = {
     { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 } /* choice-Extensions */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_424 = {
-	sizeof(struct ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs__value),
-	offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs__value, present),
-	sizeof(((struct ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs__value *)0)->present),
+	sizeof(struct ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs_t::ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs__value),
+	offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs_t::ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs_t::ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs__value, present),
+	sizeof(((struct ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs_t::ASN_NGAP_PDUSessionResourceSetupRequestTransferIEs__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_424,
 	10,	/* Count of tags in the map */
 	asn_MAP_ASN_NGAP_value_to_canonical_424,

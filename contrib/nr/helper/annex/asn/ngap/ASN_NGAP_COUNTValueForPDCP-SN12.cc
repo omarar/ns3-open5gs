@@ -59,13 +59,13 @@ memb_ASN_NGAP_hFN_PDCP_SN12_constraint_1(const asn_TYPE_descriptor_t *td, const 
 }
 
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_pDCP_SN12_constr_2 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 12,  12,  0,  4095 }	/* (0..4095) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 12,  12,  0,  4095 }	/* (0..4095) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_hFN_PDCP_SN12_constr_3 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 20, -1,  0,  1048575 }	/* (0..1048575) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 20, -1,  0,  1048575 }	/* (0..1048575) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 asn_TYPE_member_t asn_MBR_ASN_NGAP_COUNTValueForPDCP_SN12_1[] = {

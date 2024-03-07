@@ -3,8 +3,8 @@
  * All rights reserved.
  * Redistribution and modifications are permitted subject to BSD license.
  */
-#include <asn_internal.h>
-#include <PrintableString.h>
+#include <ns3/asn_internal.h>
+#include <ns3/PrintableString.h>
 
 /*
  * ASN.1:1984 (X.409)
@@ -42,8 +42,8 @@ static int asn_DEF_PrintableString_c2v(unsigned int code) {
 	return -1;
 }
 static asn_per_constraints_t asn_DEF_PrintableString_per_constraints = {
-	{ APC_CONSTRAINED, 4, 4, 0x20, 0x39 },	/* Value */
-	{ APC_SEMI_CONSTRAINED, -1, -1, 0, 0 },	/* Size */
+	{ asn_per_constraint_t::APC_CONSTRAINED, 4, 4, 0x20, 0x39 },	/* Value */
+	{ asn_per_constraint_t::APC_SEMI_CONSTRAINED, -1, -1, 0, 0 },	/* Size */
 	asn_DEF_PrintableString_v2c,
 	asn_DEF_PrintableString_c2v
 };

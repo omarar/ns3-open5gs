@@ -9,8 +9,8 @@
  * implementation deals with the standard (machine-specific) representation
  * of them instead of using the platform-independent buffer.
  */
-#include <asn_internal.h>
-#include <NativeEnumerated.h>
+#include <ns3/asn_internal.h>
+#include <ns3/NativeEnumerated.h>
 
 /*
  * NativeEnumerated basic type description.
@@ -115,7 +115,7 @@ NativeEnumerated_decode_uper(const asn_codec_ctx_t *opt_codec_ctx,
 
 	ASN_DEBUG("Decoding %s as NativeEnumerated", td->name);
 
-	if(ct->flags & APC_EXTENSIBLE) {
+	if(ct->flags & asn_per_constraint_t::APC_EXTENSIBLE) {
 		int inext = per_get_few_bits(pd, 1);
 		if(inext < 0) ASN__DECODE_STARVED;
 		if(inext) ct = 0;
@@ -199,7 +199,7 @@ NativeEnumerated_encode_uper(const asn_TYPE_descriptor_t *td,
 		if(value >= cmpWith)
 			inext = 1;
 	}
-	if(ct->flags & APC_EXTENSIBLE) {
+	if(ct->flags & asn_per_constraint_t::APC_EXTENSIBLE) {
 		if(per_put_few_bits(po, inext, 1))
 			ASN__ENCODE_FAILED;
 		if(inext) ct = 0;
@@ -254,7 +254,7 @@ NativeEnumerated_decode_aper(const asn_codec_ctx_t *opt_codec_ctx,
 
 	ASN_DEBUG("Decoding %s as NativeEnumerated", td->name);
 
-	if(ct->flags & APC_EXTENSIBLE) {
+	if(ct->flags & asn_per_constraint_t::APC_EXTENSIBLE) {
 		int inext = per_get_few_bits(pd, 1);
 		if(inext < 0) ASN__DECODE_STARVED;
 		if(inext) ct = 0;
@@ -337,7 +337,7 @@ NativeEnumerated_encode_aper(const asn_TYPE_descriptor_t *td,
 		if(value >= cmpWith)
 			inext = 1;
 	}
-	if(ct->flags & APC_EXTENSIBLE) {
+	if(ct->flags & asn_per_constraint_t::APC_EXTENSIBLE) {
 		if(per_put_few_bits(po, inext, 1))
 			ASN__ENCODE_FAILED;
 		if(inext) ct = 0;

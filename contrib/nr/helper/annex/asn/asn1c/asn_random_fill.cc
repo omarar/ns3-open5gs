@@ -3,9 +3,9 @@
  * All rights reserved.
  * Redistribution and modifications are permitted subject to BSD license.
  */
-#include <asn_internal.h>
-#include <asn_random_fill.h>
-#include <constr_TYPE.h>
+#include <ns3/asn_internal.h>
+#include <ns3/asn_random_fill.h>
+#include <ns3/constr_TYPE.h>
 
 int
 asn_random_fill(const struct asn_TYPE_descriptor_s *td, void **struct_ptr,
@@ -14,7 +14,7 @@ asn_random_fill(const struct asn_TYPE_descriptor_s *td, void **struct_ptr,
     if(td && td->op->random_fill) {
         asn_random_fill_result_t res =
             td->op->random_fill(td, struct_ptr, 0, length);
-        return (res.code == ARFILL_OK) ? 0 : -1;
+        return (res.code == asn_random_fill_result_t::ARFILL_OK) ? 0 : -1;
     } else {
         return -1;
     }

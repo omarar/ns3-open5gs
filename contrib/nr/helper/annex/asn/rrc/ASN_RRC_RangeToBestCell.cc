@@ -12,8 +12,8 @@
  * so here we adjust the DEF accordingly.
  */
 asn_per_constraints_t asn_PER_type_ASN_RRC_RangeToBestCell_constr_1 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 5,  5,  0,  30 }	/* (0..30) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 5,  5,  0,  30 }	/* (0..30) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static const ber_tlv_tag_t asn_DEF_ASN_RRC_RangeToBestCell_tags_1[] = {

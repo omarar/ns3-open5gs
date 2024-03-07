@@ -1,4 +1,4 @@
-# Install script for directory: /home/omar/ns-3-dev/src/uan
+# Install script for directory: /home/omar/Desktop/git_repo/ns3-open5gs/src/uan
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -49,12 +49,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-uan-default.so"
          RPATH "/usr/local/lib:$ORIGIN/:$ORIGIN/../lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/omar/ns-3-dev/build/lib/libns3.39-uan-default.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/omar/Desktop/git_repo/ns3-open5gs/build/lib/libns3.39-uan-default.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-uan-default.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-uan-default.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-uan-default.so"
-         OLD_RPATH "/home/omar/ns-3-dev/build/lib:::::::::"
+         OLD_RPATH "/home/omar/Desktop/git_repo/ns3-open5gs/build/lib:"
          NEW_RPATH "/usr/local/lib:$ORIGIN/:$ORIGIN/../lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-uan-default.so")
@@ -67,30 +67,30 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/ns3" TYPE FILE FILES
-    "/home/omar/ns-3-dev/src/uan/helper/acoustic-modem-energy-model-helper.h"
-    "/home/omar/ns-3-dev/src/uan/helper/uan-helper.h"
-    "/home/omar/ns-3-dev/src/uan/model/acoustic-modem-energy-model.h"
-    "/home/omar/ns-3-dev/src/uan/model/uan-channel.h"
-    "/home/omar/ns-3-dev/src/uan/model/uan-header-common.h"
-    "/home/omar/ns-3-dev/src/uan/model/uan-header-rc.h"
-    "/home/omar/ns-3-dev/src/uan/model/uan-mac-aloha.h"
-    "/home/omar/ns-3-dev/src/uan/model/uan-mac-cw.h"
-    "/home/omar/ns-3-dev/src/uan/model/uan-mac-rc-gw.h"
-    "/home/omar/ns-3-dev/src/uan/model/uan-mac-rc.h"
-    "/home/omar/ns-3-dev/src/uan/model/uan-mac.h"
-    "/home/omar/ns-3-dev/src/uan/model/uan-net-device.h"
-    "/home/omar/ns-3-dev/src/uan/model/uan-noise-model-default.h"
-    "/home/omar/ns-3-dev/src/uan/model/uan-noise-model.h"
-    "/home/omar/ns-3-dev/src/uan/model/uan-phy-dual.h"
-    "/home/omar/ns-3-dev/src/uan/model/uan-phy-gen.h"
-    "/home/omar/ns-3-dev/src/uan/model/uan-phy.h"
-    "/home/omar/ns-3-dev/src/uan/model/uan-prop-model-ideal.h"
-    "/home/omar/ns-3-dev/src/uan/model/uan-prop-model-thorp.h"
-    "/home/omar/ns-3-dev/src/uan/model/uan-prop-model.h"
-    "/home/omar/ns-3-dev/src/uan/model/uan-transducer-hd.h"
-    "/home/omar/ns-3-dev/src/uan/model/uan-transducer.h"
-    "/home/omar/ns-3-dev/src/uan/model/uan-tx-mode.h"
-    "/home/omar/ns-3-dev/build/include/ns3/uan-module.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/uan/helper/acoustic-modem-energy-model-helper.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/uan/helper/uan-helper.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/uan/model/acoustic-modem-energy-model.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/uan/model/uan-channel.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/uan/model/uan-header-common.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/uan/model/uan-header-rc.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/uan/model/uan-mac-aloha.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/uan/model/uan-mac-cw.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/uan/model/uan-mac-rc-gw.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/uan/model/uan-mac-rc.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/uan/model/uan-mac.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/uan/model/uan-net-device.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/uan/model/uan-noise-model-default.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/uan/model/uan-noise-model.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/uan/model/uan-phy-dual.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/uan/model/uan-phy-gen.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/uan/model/uan-phy.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/uan/model/uan-prop-model-ideal.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/uan/model/uan-prop-model-thorp.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/uan/model/uan-prop-model.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/uan/model/uan-transducer-hd.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/uan/model/uan-transducer.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/src/uan/model/uan-tx-mode.h"
+    "/home/omar/Desktop/git_repo/ns3-open5gs/build/include/ns3/uan-module.h"
     )
 endif()
 

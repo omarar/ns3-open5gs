@@ -112,28 +112,28 @@ memb_ASN_RRC_simultaneousCSI_ReportsAllCC_constraint_1(const asn_TYPE_descriptor
 }
 
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_maxNumberSimultaneousNZP_CSI_RS_ActBWP_AllCC_constr_4 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 6,  6,  1,  64 }	/* (1..64) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 6,  6,  1,  64 }	/* (1..64) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_totalNumberPortsSimultaneousNZP_CSI_RS_ActBWP_AllCC_constr_5 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 8,  8,  2,  256 }	/* (2..256) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 8,  8,  2,  256 }	/* (2..256) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_type_ASN_RRC_dualPA_Architecture_constr_7 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 0,  0,  0,  0 }	/* (0..0) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 0,  0,  0,  0 }	/* (0..0) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_simultaneousSRS_AssocCSI_RS_AllCC_constr_2 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 5,  5,  5,  32 }	/* (5..32) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 5,  5,  5,  32 }	/* (5..32) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_RRC_simultaneousCSI_ReportsAllCC_constr_6 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 5,  5,  5,  32 }	/* (5..32) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 5,  5,  5,  32 }	/* (5..32) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_TYPE_member_t asn_MBR_ASN_RRC_csi_RS_IM_ReceptionForFeedbackPerBandComb_3[] = {

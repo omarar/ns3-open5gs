@@ -114,271 +114,271 @@ static const long asn_VAL_52_ASN_NGAP_ignore = 1;
 static const long asn_VAL_53_ASN_NGAP_id_UplinkUEAssociatedNRPPaTransport = 50;
 static const long asn_VAL_53_ASN_NGAP_ignore = 1;
 static const asn_ioc_cell_t asn_IOS_ASN_NGAP_NGAP_ELEMENTARY_PROCEDURES_1_rows[] = {
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_AMFConfigurationUpdate },
-	{ "&SuccessfulOutcome", aioc__type, &asn_DEF_ASN_NGAP_AMFConfigurationUpdateAcknowledge },
-	{ "&UnsuccessfulOutcome", aioc__type, &asn_DEF_ASN_NGAP_AMFConfigurationUpdateFailure },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_1_ASN_NGAP_id_AMFConfigurationUpdate },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_1_ASN_NGAP_reject },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_HandoverCancel },
-	{ "&SuccessfulOutcome", aioc__type, &asn_DEF_ASN_NGAP_HandoverCancelAcknowledge },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMFConfigurationUpdate },
+	{ "&SuccessfulOutcome", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMFConfigurationUpdateAcknowledge },
+	{ "&UnsuccessfulOutcome", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMFConfigurationUpdateFailure },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_1_ASN_NGAP_id_AMFConfigurationUpdate },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_1_ASN_NGAP_reject },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_HandoverCancel },
+	{ "&SuccessfulOutcome", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_HandoverCancelAcknowledge },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_2_ASN_NGAP_id_HandoverCancel },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_2_ASN_NGAP_reject },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_HandoverRequired },
-	{ "&SuccessfulOutcome", aioc__type, &asn_DEF_ASN_NGAP_HandoverCommand },
-	{ "&UnsuccessfulOutcome", aioc__type, &asn_DEF_ASN_NGAP_HandoverPreparationFailure },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_3_ASN_NGAP_id_HandoverPreparation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_3_ASN_NGAP_reject },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_HandoverRequest },
-	{ "&SuccessfulOutcome", aioc__type, &asn_DEF_ASN_NGAP_HandoverRequestAcknowledge },
-	{ "&UnsuccessfulOutcome", aioc__type, &asn_DEF_ASN_NGAP_HandoverFailure },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_4_ASN_NGAP_id_HandoverResourceAllocation },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_4_ASN_NGAP_reject },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_InitialContextSetupRequest },
-	{ "&SuccessfulOutcome", aioc__type, &asn_DEF_ASN_NGAP_InitialContextSetupResponse },
-	{ "&UnsuccessfulOutcome", aioc__type, &asn_DEF_ASN_NGAP_InitialContextSetupFailure },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_5_ASN_NGAP_id_InitialContextSetup },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_5_ASN_NGAP_reject },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_NGReset },
-	{ "&SuccessfulOutcome", aioc__type, &asn_DEF_ASN_NGAP_NGResetAcknowledge },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_2_ASN_NGAP_id_HandoverCancel },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_2_ASN_NGAP_reject },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_HandoverRequired },
+	{ "&SuccessfulOutcome", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_HandoverCommand },
+	{ "&UnsuccessfulOutcome", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_HandoverPreparationFailure },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_3_ASN_NGAP_id_HandoverPreparation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_3_ASN_NGAP_reject },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_HandoverRequest },
+	{ "&SuccessfulOutcome", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_HandoverRequestAcknowledge },
+	{ "&UnsuccessfulOutcome", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_HandoverFailure },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_4_ASN_NGAP_id_HandoverResourceAllocation },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_4_ASN_NGAP_reject },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_InitialContextSetupRequest },
+	{ "&SuccessfulOutcome", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_InitialContextSetupResponse },
+	{ "&UnsuccessfulOutcome", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_InitialContextSetupFailure },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_5_ASN_NGAP_id_InitialContextSetup },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_5_ASN_NGAP_reject },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_NGReset },
+	{ "&SuccessfulOutcome", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_NGResetAcknowledge },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_6_ASN_NGAP_id_NGReset },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_6_ASN_NGAP_reject },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_NGSetupRequest },
-	{ "&SuccessfulOutcome", aioc__type, &asn_DEF_ASN_NGAP_NGSetupResponse },
-	{ "&UnsuccessfulOutcome", aioc__type, &asn_DEF_ASN_NGAP_NGSetupFailure },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_7_ASN_NGAP_id_NGSetup },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_7_ASN_NGAP_reject },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_PathSwitchRequest },
-	{ "&SuccessfulOutcome", aioc__type, &asn_DEF_ASN_NGAP_PathSwitchRequestAcknowledge },
-	{ "&UnsuccessfulOutcome", aioc__type, &asn_DEF_ASN_NGAP_PathSwitchRequestFailure },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_8_ASN_NGAP_id_PathSwitchRequest },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_8_ASN_NGAP_reject },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceModifyRequest },
-	{ "&SuccessfulOutcome", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceModifyResponse },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_6_ASN_NGAP_id_NGReset },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_6_ASN_NGAP_reject },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_NGSetupRequest },
+	{ "&SuccessfulOutcome", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_NGSetupResponse },
+	{ "&UnsuccessfulOutcome", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_NGSetupFailure },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_7_ASN_NGAP_id_NGSetup },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_7_ASN_NGAP_reject },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PathSwitchRequest },
+	{ "&SuccessfulOutcome", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PathSwitchRequestAcknowledge },
+	{ "&UnsuccessfulOutcome", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PathSwitchRequestFailure },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_8_ASN_NGAP_id_PathSwitchRequest },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_8_ASN_NGAP_reject },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceModifyRequest },
+	{ "&SuccessfulOutcome", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceModifyResponse },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_9_ASN_NGAP_id_PDUSessionResourceModify },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_9_ASN_NGAP_reject },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceModifyIndication },
-	{ "&SuccessfulOutcome", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceModifyConfirm },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_9_ASN_NGAP_id_PDUSessionResourceModify },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_9_ASN_NGAP_reject },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceModifyIndication },
+	{ "&SuccessfulOutcome", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceModifyConfirm },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_10_ASN_NGAP_id_PDUSessionResourceModifyIndication },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_10_ASN_NGAP_reject },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceReleaseCommand },
-	{ "&SuccessfulOutcome", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceReleaseResponse },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_10_ASN_NGAP_id_PDUSessionResourceModifyIndication },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_10_ASN_NGAP_reject },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceReleaseCommand },
+	{ "&SuccessfulOutcome", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceReleaseResponse },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_11_ASN_NGAP_id_PDUSessionResourceRelease },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_11_ASN_NGAP_reject },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceSetupRequest },
-	{ "&SuccessfulOutcome", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceSetupResponse },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_11_ASN_NGAP_id_PDUSessionResourceRelease },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_11_ASN_NGAP_reject },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceSetupRequest },
+	{ "&SuccessfulOutcome", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceSetupResponse },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_12_ASN_NGAP_id_PDUSessionResourceSetup },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_12_ASN_NGAP_reject },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_PWSCancelRequest },
-	{ "&SuccessfulOutcome", aioc__type, &asn_DEF_ASN_NGAP_PWSCancelResponse },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_12_ASN_NGAP_id_PDUSessionResourceSetup },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_12_ASN_NGAP_reject },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PWSCancelRequest },
+	{ "&SuccessfulOutcome", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PWSCancelResponse },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_13_ASN_NGAP_id_PWSCancel },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_13_ASN_NGAP_reject },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_RANConfigurationUpdate },
-	{ "&SuccessfulOutcome", aioc__type, &asn_DEF_ASN_NGAP_RANConfigurationUpdateAcknowledge },
-	{ "&UnsuccessfulOutcome", aioc__type, &asn_DEF_ASN_NGAP_RANConfigurationUpdateFailure },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_14_ASN_NGAP_id_RANConfigurationUpdate },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_14_ASN_NGAP_reject },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_UEContextModificationRequest },
-	{ "&SuccessfulOutcome", aioc__type, &asn_DEF_ASN_NGAP_UEContextModificationResponse },
-	{ "&UnsuccessfulOutcome", aioc__type, &asn_DEF_ASN_NGAP_UEContextModificationFailure },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_15_ASN_NGAP_id_UEContextModification },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_15_ASN_NGAP_reject },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_UEContextReleaseCommand },
-	{ "&SuccessfulOutcome", aioc__type, &asn_DEF_ASN_NGAP_UEContextReleaseComplete },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_13_ASN_NGAP_id_PWSCancel },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_13_ASN_NGAP_reject },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RANConfigurationUpdate },
+	{ "&SuccessfulOutcome", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RANConfigurationUpdateAcknowledge },
+	{ "&UnsuccessfulOutcome", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RANConfigurationUpdateFailure },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_14_ASN_NGAP_id_RANConfigurationUpdate },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_14_ASN_NGAP_reject },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UEContextModificationRequest },
+	{ "&SuccessfulOutcome", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UEContextModificationResponse },
+	{ "&UnsuccessfulOutcome", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UEContextModificationFailure },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_15_ASN_NGAP_id_UEContextModification },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_15_ASN_NGAP_reject },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UEContextReleaseCommand },
+	{ "&SuccessfulOutcome", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UEContextReleaseComplete },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_16_ASN_NGAP_id_UEContextRelease },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_16_ASN_NGAP_reject },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_UERadioCapabilityCheckRequest },
-	{ "&SuccessfulOutcome", aioc__type, &asn_DEF_ASN_NGAP_UERadioCapabilityCheckResponse },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_16_ASN_NGAP_id_UEContextRelease },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_16_ASN_NGAP_reject },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UERadioCapabilityCheckRequest },
+	{ "&SuccessfulOutcome", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UERadioCapabilityCheckResponse },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_17_ASN_NGAP_id_UERadioCapabilityCheck },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_17_ASN_NGAP_reject },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_WriteReplaceWarningRequest },
-	{ "&SuccessfulOutcome", aioc__type, &asn_DEF_ASN_NGAP_WriteReplaceWarningResponse },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_17_ASN_NGAP_id_UERadioCapabilityCheck },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_17_ASN_NGAP_reject },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_WriteReplaceWarningRequest },
+	{ "&SuccessfulOutcome", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_WriteReplaceWarningResponse },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_18_ASN_NGAP_id_WriteReplaceWarning },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_18_ASN_NGAP_reject },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_AMFStatusIndication },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_18_ASN_NGAP_id_WriteReplaceWarning },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_18_ASN_NGAP_reject },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_AMFStatusIndication },
 	{ "&SuccessfulOutcome",  },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_19_ASN_NGAP_id_AMFStatusIndication },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_19_ASN_NGAP_ignore },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_CellTrafficTrace },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_19_ASN_NGAP_id_AMFStatusIndication },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_19_ASN_NGAP_ignore },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_CellTrafficTrace },
 	{ "&SuccessfulOutcome",  },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_20_ASN_NGAP_id_CellTrafficTrace },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_20_ASN_NGAP_ignore },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_DeactivateTrace },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_20_ASN_NGAP_id_CellTrafficTrace },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_20_ASN_NGAP_ignore },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_DeactivateTrace },
 	{ "&SuccessfulOutcome",  },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_21_ASN_NGAP_id_DeactivateTrace },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_21_ASN_NGAP_ignore },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_DownlinkNASTransport },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_21_ASN_NGAP_id_DeactivateTrace },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_21_ASN_NGAP_ignore },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_DownlinkNASTransport },
 	{ "&SuccessfulOutcome",  },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_22_ASN_NGAP_id_DownlinkNASTransport },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_22_ASN_NGAP_ignore },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_DownlinkNonUEAssociatedNRPPaTransport },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_22_ASN_NGAP_id_DownlinkNASTransport },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_22_ASN_NGAP_ignore },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_DownlinkNonUEAssociatedNRPPaTransport },
 	{ "&SuccessfulOutcome",  },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_23_ASN_NGAP_id_DownlinkNonUEAssociatedNRPPaTransport },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_23_ASN_NGAP_ignore },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_DownlinkRANConfigurationTransfer },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_23_ASN_NGAP_id_DownlinkNonUEAssociatedNRPPaTransport },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_23_ASN_NGAP_ignore },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_DownlinkRANConfigurationTransfer },
 	{ "&SuccessfulOutcome",  },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_24_ASN_NGAP_id_DownlinkRANConfigurationTransfer },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_24_ASN_NGAP_ignore },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_DownlinkRANStatusTransfer },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_24_ASN_NGAP_id_DownlinkRANConfigurationTransfer },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_24_ASN_NGAP_ignore },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_DownlinkRANStatusTransfer },
 	{ "&SuccessfulOutcome",  },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_25_ASN_NGAP_id_DownlinkRANStatusTransfer },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_25_ASN_NGAP_ignore },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_DownlinkUEAssociatedNRPPaTransport },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_25_ASN_NGAP_id_DownlinkRANStatusTransfer },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_25_ASN_NGAP_ignore },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_DownlinkUEAssociatedNRPPaTransport },
 	{ "&SuccessfulOutcome",  },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_26_ASN_NGAP_id_DownlinkUEAssociatedNRPPaTransport },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_26_ASN_NGAP_ignore },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_ErrorIndication },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_26_ASN_NGAP_id_DownlinkUEAssociatedNRPPaTransport },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_26_ASN_NGAP_ignore },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_ErrorIndication },
 	{ "&SuccessfulOutcome",  },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_27_ASN_NGAP_id_ErrorIndication },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_27_ASN_NGAP_ignore },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_HandoverNotify },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_27_ASN_NGAP_id_ErrorIndication },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_27_ASN_NGAP_ignore },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_HandoverNotify },
 	{ "&SuccessfulOutcome",  },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_28_ASN_NGAP_id_HandoverNotification },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_28_ASN_NGAP_ignore },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_InitialUEMessage },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_28_ASN_NGAP_id_HandoverNotification },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_28_ASN_NGAP_ignore },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_InitialUEMessage },
 	{ "&SuccessfulOutcome",  },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_29_ASN_NGAP_id_InitialUEMessage },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_29_ASN_NGAP_ignore },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_LocationReport },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_29_ASN_NGAP_id_InitialUEMessage },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_29_ASN_NGAP_ignore },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_LocationReport },
 	{ "&SuccessfulOutcome",  },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_30_ASN_NGAP_id_LocationReport },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_30_ASN_NGAP_ignore },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_LocationReportingControl },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_30_ASN_NGAP_id_LocationReport },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_30_ASN_NGAP_ignore },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_LocationReportingControl },
 	{ "&SuccessfulOutcome",  },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_31_ASN_NGAP_id_LocationReportingControl },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_31_ASN_NGAP_ignore },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_LocationReportingFailureIndication },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_31_ASN_NGAP_id_LocationReportingControl },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_31_ASN_NGAP_ignore },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_LocationReportingFailureIndication },
 	{ "&SuccessfulOutcome",  },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_32_ASN_NGAP_id_LocationReportingFailureIndication },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_32_ASN_NGAP_ignore },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_NASNonDeliveryIndication },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_32_ASN_NGAP_id_LocationReportingFailureIndication },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_32_ASN_NGAP_ignore },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_NASNonDeliveryIndication },
 	{ "&SuccessfulOutcome",  },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_33_ASN_NGAP_id_NASNonDeliveryIndication },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_33_ASN_NGAP_ignore },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_OverloadStart },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_33_ASN_NGAP_id_NASNonDeliveryIndication },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_33_ASN_NGAP_ignore },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_OverloadStart },
 	{ "&SuccessfulOutcome",  },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_34_ASN_NGAP_id_OverloadStart },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_34_ASN_NGAP_ignore },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_OverloadStop },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_34_ASN_NGAP_id_OverloadStart },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_34_ASN_NGAP_ignore },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_OverloadStop },
 	{ "&SuccessfulOutcome",  },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_35_ASN_NGAP_id_OverloadStop },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_35_ASN_NGAP_reject },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_Paging },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_35_ASN_NGAP_id_OverloadStop },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_35_ASN_NGAP_reject },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_Paging },
 	{ "&SuccessfulOutcome",  },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_36_ASN_NGAP_id_Paging },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_36_ASN_NGAP_ignore },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceNotify },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_36_ASN_NGAP_id_Paging },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_36_ASN_NGAP_ignore },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PDUSessionResourceNotify },
 	{ "&SuccessfulOutcome",  },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_37_ASN_NGAP_id_PDUSessionResourceNotify },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_37_ASN_NGAP_ignore },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_PrivateMessage },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_37_ASN_NGAP_id_PDUSessionResourceNotify },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_37_ASN_NGAP_ignore },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PrivateMessage },
 	{ "&SuccessfulOutcome",  },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_38_ASN_NGAP_id_PrivateMessage },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_38_ASN_NGAP_ignore },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_PWSFailureIndication },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_38_ASN_NGAP_id_PrivateMessage },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_38_ASN_NGAP_ignore },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PWSFailureIndication },
 	{ "&SuccessfulOutcome",  },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_39_ASN_NGAP_id_PWSFailureIndication },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_39_ASN_NGAP_ignore },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_PWSRestartIndication },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_39_ASN_NGAP_id_PWSFailureIndication },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_39_ASN_NGAP_ignore },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_PWSRestartIndication },
 	{ "&SuccessfulOutcome",  },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_40_ASN_NGAP_id_PWSRestartIndication },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_40_ASN_NGAP_ignore },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_RerouteNASRequest },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_40_ASN_NGAP_id_PWSRestartIndication },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_40_ASN_NGAP_ignore },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RerouteNASRequest },
 	{ "&SuccessfulOutcome",  },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_41_ASN_NGAP_id_RerouteNASRequest },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_41_ASN_NGAP_reject },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_RRCInactiveTransitionReport },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_41_ASN_NGAP_id_RerouteNASRequest },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_41_ASN_NGAP_reject },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_RRCInactiveTransitionReport },
 	{ "&SuccessfulOutcome",  },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_42_ASN_NGAP_id_RRCInactiveTransitionReport },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_42_ASN_NGAP_ignore },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_SecondaryRATDataUsageReport },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_42_ASN_NGAP_id_RRCInactiveTransitionReport },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_42_ASN_NGAP_ignore },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_SecondaryRATDataUsageReport },
 	{ "&SuccessfulOutcome",  },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_43_ASN_NGAP_id_SecondaryRATDataUsageReport },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_43_ASN_NGAP_ignore },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_TraceFailureIndication },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_43_ASN_NGAP_id_SecondaryRATDataUsageReport },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_43_ASN_NGAP_ignore },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_TraceFailureIndication },
 	{ "&SuccessfulOutcome",  },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_44_ASN_NGAP_id_TraceFailureIndication },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_44_ASN_NGAP_ignore },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_TraceStart },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_44_ASN_NGAP_id_TraceFailureIndication },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_44_ASN_NGAP_ignore },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_TraceStart },
 	{ "&SuccessfulOutcome",  },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_45_ASN_NGAP_id_TraceStart },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_45_ASN_NGAP_ignore },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_UEContextReleaseRequest },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_45_ASN_NGAP_id_TraceStart },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_45_ASN_NGAP_ignore },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UEContextReleaseRequest },
 	{ "&SuccessfulOutcome",  },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_46_ASN_NGAP_id_UEContextReleaseRequest },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_46_ASN_NGAP_ignore },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_UERadioCapabilityInfoIndication },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_46_ASN_NGAP_id_UEContextReleaseRequest },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_46_ASN_NGAP_ignore },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UERadioCapabilityInfoIndication },
 	{ "&SuccessfulOutcome",  },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_47_ASN_NGAP_id_UERadioCapabilityInfoIndication },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_47_ASN_NGAP_ignore },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_UETNLABindingReleaseRequest },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_47_ASN_NGAP_id_UERadioCapabilityInfoIndication },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_47_ASN_NGAP_ignore },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UETNLABindingReleaseRequest },
 	{ "&SuccessfulOutcome",  },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_48_ASN_NGAP_id_UETNLABindingRelease },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_48_ASN_NGAP_ignore },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_UplinkNASTransport },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_48_ASN_NGAP_id_UETNLABindingRelease },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_48_ASN_NGAP_ignore },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UplinkNASTransport },
 	{ "&SuccessfulOutcome",  },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_49_ASN_NGAP_id_UplinkNASTransport },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_49_ASN_NGAP_ignore },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_UplinkNonUEAssociatedNRPPaTransport },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_49_ASN_NGAP_id_UplinkNASTransport },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_49_ASN_NGAP_ignore },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UplinkNonUEAssociatedNRPPaTransport },
 	{ "&SuccessfulOutcome",  },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_50_ASN_NGAP_id_UplinkNonUEAssociatedNRPPaTransport },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_50_ASN_NGAP_ignore },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_UplinkRANConfigurationTransfer },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_50_ASN_NGAP_id_UplinkNonUEAssociatedNRPPaTransport },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_50_ASN_NGAP_ignore },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UplinkRANConfigurationTransfer },
 	{ "&SuccessfulOutcome",  },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_51_ASN_NGAP_id_UplinkRANConfigurationTransfer },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_51_ASN_NGAP_ignore },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_UplinkRANStatusTransfer },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_51_ASN_NGAP_id_UplinkRANConfigurationTransfer },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_51_ASN_NGAP_ignore },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UplinkRANStatusTransfer },
 	{ "&SuccessfulOutcome",  },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_52_ASN_NGAP_id_UplinkRANStatusTransfer },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_52_ASN_NGAP_ignore },
-	{ "&InitiatingMessage", aioc__type, &asn_DEF_ASN_NGAP_UplinkUEAssociatedNRPPaTransport },
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_52_ASN_NGAP_id_UplinkRANStatusTransfer },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_52_ASN_NGAP_ignore },
+	{ "&InitiatingMessage", asn_ioc_cell_t::aioc__type, &asn_DEF_ASN_NGAP_UplinkUEAssociatedNRPPaTransport },
 	{ "&SuccessfulOutcome",  },
 	{ "&UnsuccessfulOutcome",  },
-	{ "&procedureCode", aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_53_ASN_NGAP_id_UplinkUEAssociatedNRPPaTransport },
-	{ "&criticality", aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_53_ASN_NGAP_ignore }
+	{ "&procedureCode", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_ProcedureCode, &asn_VAL_53_ASN_NGAP_id_UplinkUEAssociatedNRPPaTransport },
+	{ "&criticality", asn_ioc_cell_t::aioc__value, &asn_DEF_ASN_NGAP_Criticality, &asn_VAL_53_ASN_NGAP_ignore }
 };
 static const asn_ioc_set_t asn_IOS_ASN_NGAP_NGAP_ELEMENTARY_PROCEDURES_1[] = {
 	{ 53, 5, asn_IOS_ASN_NGAP_NGAP_ELEMENTARY_PROCEDURES_1_rows }
@@ -421,7 +421,7 @@ select_InitiatingMessage_ASN_NGAP_criticality_type(const asn_TYPE_descriptor_t *
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -467,7 +467,7 @@ select_InitiatingMessage_ASN_NGAP_value_type(const asn_TYPE_descriptor_t *parent
 	    const asn_ioc_cell_t *constraining_cell = &itable->rows[row * itable->columns_count + constraining_column];
 	    const asn_ioc_cell_t *type_cell = &itable->rows[row * itable->columns_count + for_column];
 	
-	    if(type_cell->cell_kind == aioc__undefined)
+	    if(type_cell->cell_kind == asn_ioc_cell_t::aioc__undefined)
 	        continue;
 	
 	    presence_index++;
@@ -501,22 +501,22 @@ memb_ASN_NGAP_value_constraint_1(const asn_TYPE_descriptor_t *td, const void *sp
 }
 
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_procedureCode_constr_2 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 8,  8,  0,  255 }	/* (0..255) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 8,  8,  0,  255 }	/* (0..255) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_criticality_constr_3 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_per_constraints_t asn_PER_memb_ASN_NGAP_value_constr_4 CC_NOTUSED = {
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
-	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
+	{ asn_per_constraint_t::APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
 static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.AMFConfigurationUpdate),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.AMFConfigurationUpdate),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMFConfigurationUpdate,
@@ -525,7 +525,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"AMFConfigurationUpdate"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.HandoverCancel),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.HandoverCancel),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_HandoverCancel,
@@ -534,7 +534,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"HandoverCancel"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.HandoverRequired),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.HandoverRequired),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_HandoverRequired,
@@ -543,7 +543,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"HandoverRequired"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.HandoverRequest),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.HandoverRequest),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_HandoverRequest,
@@ -552,7 +552,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"HandoverRequest"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.InitialContextSetupRequest),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.InitialContextSetupRequest),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_InitialContextSetupRequest,
@@ -561,7 +561,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"InitialContextSetupRequest"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.NGReset),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.NGReset),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_NGReset,
@@ -570,7 +570,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"NGReset"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.NGSetupRequest),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.NGSetupRequest),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_NGSetupRequest,
@@ -579,7 +579,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"NGSetupRequest"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.PathSwitchRequest),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.PathSwitchRequest),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PathSwitchRequest,
@@ -588,7 +588,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"PathSwitchRequest"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.PDUSessionResourceModifyRequest),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.PDUSessionResourceModifyRequest),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceModifyRequest,
@@ -597,7 +597,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"PDUSessionResourceModifyRequest"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.PDUSessionResourceModifyIndication),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.PDUSessionResourceModifyIndication),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceModifyIndication,
@@ -606,7 +606,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"PDUSessionResourceModifyIndication"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.PDUSessionResourceReleaseCommand),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.PDUSessionResourceReleaseCommand),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceReleaseCommand,
@@ -615,7 +615,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"PDUSessionResourceReleaseCommand"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.PDUSessionResourceSetupRequest),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.PDUSessionResourceSetupRequest),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceSetupRequest,
@@ -624,7 +624,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"PDUSessionResourceSetupRequest"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.PWSCancelRequest),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.PWSCancelRequest),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PWSCancelRequest,
@@ -633,7 +633,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"PWSCancelRequest"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.RANConfigurationUpdate),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.RANConfigurationUpdate),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RANConfigurationUpdate,
@@ -642,7 +642,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"RANConfigurationUpdate"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.UEContextModificationRequest),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.UEContextModificationRequest),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UEContextModificationRequest,
@@ -651,7 +651,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"UEContextModificationRequest"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.UEContextReleaseCommand),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.UEContextReleaseCommand),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UEContextReleaseCommand,
@@ -660,7 +660,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"UEContextReleaseCommand"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.UERadioCapabilityCheckRequest),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.UERadioCapabilityCheckRequest),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UERadioCapabilityCheckRequest,
@@ -669,7 +669,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"UERadioCapabilityCheckRequest"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.WriteReplaceWarningRequest),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.WriteReplaceWarningRequest),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_WriteReplaceWarningRequest,
@@ -678,7 +678,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"WriteReplaceWarningRequest"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.AMFStatusIndication),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.AMFStatusIndication),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_AMFStatusIndication,
@@ -687,7 +687,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"AMFStatusIndication"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.CellTrafficTrace),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.CellTrafficTrace),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_CellTrafficTrace,
@@ -696,7 +696,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"CellTrafficTrace"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.DeactivateTrace),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.DeactivateTrace),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_DeactivateTrace,
@@ -705,7 +705,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"DeactivateTrace"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.DownlinkNASTransport),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.DownlinkNASTransport),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_DownlinkNASTransport,
@@ -714,7 +714,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"DownlinkNASTransport"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.DownlinkNonUEAssociatedNRPPaTransport),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.DownlinkNonUEAssociatedNRPPaTransport),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_DownlinkNonUEAssociatedNRPPaTransport,
@@ -723,7 +723,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"DownlinkNonUEAssociatedNRPPaTransport"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.DownlinkRANConfigurationTransfer),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.DownlinkRANConfigurationTransfer),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_DownlinkRANConfigurationTransfer,
@@ -732,7 +732,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"DownlinkRANConfigurationTransfer"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.DownlinkRANStatusTransfer),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.DownlinkRANStatusTransfer),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_DownlinkRANStatusTransfer,
@@ -741,7 +741,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"DownlinkRANStatusTransfer"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.DownlinkUEAssociatedNRPPaTransport),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.DownlinkUEAssociatedNRPPaTransport),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_DownlinkUEAssociatedNRPPaTransport,
@@ -750,7 +750,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"DownlinkUEAssociatedNRPPaTransport"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.ErrorIndication),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.ErrorIndication),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_ErrorIndication,
@@ -759,7 +759,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"ErrorIndication"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.HandoverNotify),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.HandoverNotify),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_HandoverNotify,
@@ -768,7 +768,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"HandoverNotify"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.InitialUEMessage),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.InitialUEMessage),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_InitialUEMessage,
@@ -777,7 +777,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"InitialUEMessage"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.LocationReport),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.LocationReport),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_LocationReport,
@@ -786,7 +786,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"LocationReport"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.LocationReportingControl),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.LocationReportingControl),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_LocationReportingControl,
@@ -795,7 +795,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"LocationReportingControl"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.LocationReportingFailureIndication),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.LocationReportingFailureIndication),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_LocationReportingFailureIndication,
@@ -804,7 +804,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"LocationReportingFailureIndication"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.NASNonDeliveryIndication),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.NASNonDeliveryIndication),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_NASNonDeliveryIndication,
@@ -813,7 +813,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"NASNonDeliveryIndication"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.OverloadStart),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.OverloadStart),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_OverloadStart,
@@ -822,7 +822,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"OverloadStart"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.OverloadStop),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.OverloadStop),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_OverloadStop,
@@ -831,7 +831,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"OverloadStop"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.Paging),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.Paging),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_Paging,
@@ -840,7 +840,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"Paging"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.PDUSessionResourceNotify),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.PDUSessionResourceNotify),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PDUSessionResourceNotify,
@@ -849,7 +849,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"PDUSessionResourceNotify"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.PrivateMessage),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.PrivateMessage),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PrivateMessage,
@@ -858,7 +858,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"PrivateMessage"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.PWSFailureIndication),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.PWSFailureIndication),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PWSFailureIndication,
@@ -867,7 +867,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"PWSFailureIndication"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.PWSRestartIndication),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.PWSRestartIndication),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_PWSRestartIndication,
@@ -876,7 +876,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"PWSRestartIndication"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.RerouteNASRequest),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.RerouteNASRequest),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RerouteNASRequest,
@@ -885,7 +885,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"RerouteNASRequest"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.RRCInactiveTransitionReport),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.RRCInactiveTransitionReport),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_RRCInactiveTransitionReport,
@@ -894,7 +894,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"RRCInactiveTransitionReport"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.SecondaryRATDataUsageReport),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.SecondaryRATDataUsageReport),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_SecondaryRATDataUsageReport,
@@ -903,7 +903,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"SecondaryRATDataUsageReport"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.TraceFailureIndication),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.TraceFailureIndication),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_TraceFailureIndication,
@@ -912,7 +912,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"TraceFailureIndication"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.TraceStart),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.TraceStart),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_TraceStart,
@@ -921,7 +921,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"TraceStart"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.UEContextReleaseRequest),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.UEContextReleaseRequest),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UEContextReleaseRequest,
@@ -930,7 +930,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"UEContextReleaseRequest"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.UERadioCapabilityInfoIndication),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.UERadioCapabilityInfoIndication),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UERadioCapabilityInfoIndication,
@@ -939,7 +939,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"UERadioCapabilityInfoIndication"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.UETNLABindingReleaseRequest),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.UETNLABindingReleaseRequest),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UETNLABindingReleaseRequest,
@@ -948,7 +948,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"UETNLABindingReleaseRequest"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.UplinkNASTransport),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.UplinkNASTransport),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UplinkNASTransport,
@@ -957,7 +957,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"UplinkNASTransport"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.UplinkNonUEAssociatedNRPPaTransport),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.UplinkNonUEAssociatedNRPPaTransport),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UplinkNonUEAssociatedNRPPaTransport,
@@ -966,7 +966,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"UplinkNonUEAssociatedNRPPaTransport"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.UplinkRANConfigurationTransfer),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.UplinkRANConfigurationTransfer),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UplinkRANConfigurationTransfer,
@@ -975,7 +975,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"UplinkRANConfigurationTransfer"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.UplinkRANStatusTransfer),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.UplinkRANStatusTransfer),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UplinkRANStatusTransfer,
@@ -984,7 +984,7 @@ static asn_TYPE_member_t asn_MBR_ASN_NGAP_value_4[] = {
 		0, 0, /* No default value */
 		"UplinkRANStatusTransfer"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage__value, choice.UplinkUEAssociatedNRPPaTransport),
+	{ ATF_NOFLAGS, 0, offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, choice.UplinkUEAssociatedNRPPaTransport),
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ASN_NGAP_UplinkUEAssociatedNRPPaTransport,
@@ -1050,10 +1050,10 @@ static const asn_TYPE_tag2member_t asn_MAP_ASN_NGAP_value_tag2el_4[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 52, -52, 0 } /* UplinkUEAssociatedNRPPaTransport */
 };
 static asn_CHOICE_specifics_t asn_SPC_ASN_NGAP_value_specs_4 = {
-	sizeof(struct ASN_NGAP_InitiatingMessage__value),
-	offsetof(struct ASN_NGAP_InitiatingMessage__value, _asn_ctx),
-	offsetof(struct ASN_NGAP_InitiatingMessage__value, present),
-	sizeof(((struct ASN_NGAP_InitiatingMessage__value *)0)->present),
+	sizeof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value),
+	offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, _asn_ctx),
+	offsetof(struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value, present),
+	sizeof(((struct ASN_NGAP_InitiatingMessage_t::ASN_NGAP_InitiatingMessage__value *)0)->present),
 	asn_MAP_ASN_NGAP_value_tag2el_4,
 	53,	/* Count of tags in the map */
 	0, 0,

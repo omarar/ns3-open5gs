@@ -81,8 +81,8 @@ static int asn_PER_MAP_ASN_NGAP_AMFName_1_c2v(unsigned int code) {
  * so here we adjust the DEF accordingly.
  */
 asn_per_constraints_t asn_PER_type_ASN_NGAP_AMFName_constr_1 CC_NOTUSED = {
-	{ APC_CONSTRAINED,	 7,  7,  32,  122 }	/* (32..122) */,
-	{ APC_CONSTRAINED | APC_EXTENSIBLE,  8,  8,  1,  150 }	/* (SIZE(1..150,...)) */,
+	{ asn_per_constraint_t::APC_CONSTRAINED,	 7,  7,  32,  122 }	/* (32..122) */,
+	{ asn_per_constraint_t::APC_CONSTRAINED | asn_per_constraint_t::APC_EXTENSIBLE,  8,  8,  1,  150 }	/* (SIZE(1..150,...)) */,
 	asn_PER_MAP_ASN_NGAP_AMFName_1_v2c,	/* Value to PER code map */
 	asn_PER_MAP_ASN_NGAP_AMFName_1_c2v	/* PER code to value map */
 };

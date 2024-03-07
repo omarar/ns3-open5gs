@@ -3,9 +3,9 @@
  * All rights reserved.
  * Redistribution and modifications are permitted subject to BSD license.
  */
-#include <asn_internal.h>
-#include <constr_SET_OF.h>
-#include <asn_SET_OF.h>
+#include <ns3/asn_internal.h>
+#include <ns3/constr_SET_OF.h>
+#include <ns3/asn_SET_OF.h>
 
 /*
  * Number of bytes left for this structure.
@@ -936,7 +936,7 @@ SET_OF_decode_uper(const asn_codec_ctx_t *opt_codec_ctx,
 		ct = &td->encoding_constraints.per_constraints->size;
 	else ct = 0;
 
-	if(ct && ct->flags & APC_EXTENSIBLE) {
+	if(ct && ct->flags & asn_per_constraint_t::APC_EXTENSIBLE) {
 		int value = per_get_few_bits(pd, 1);
 		if(value < 0) ASN__DECODE_STARVED;
 		if(value) ct = 0;	/* Not restricted! */
@@ -1028,8 +1028,8 @@ SET_OF_encode_uper(const asn_TYPE_descriptor_t *td,
         int not_in_root =
             (list->count < ct->lower_bound || list->count > ct->upper_bound);
         ASN_DEBUG("lb %ld ub %ld %s", ct->lower_bound, ct->upper_bound,
-                  ct->flags & APC_EXTENSIBLE ? "ext" : "fix");
-        if(ct->flags & APC_EXTENSIBLE) {
+                  ct->flags & asn_per_constraint_t::APC_EXTENSIBLE ? "ext" : "fix");
+        if(ct->flags & asn_per_constraint_t::APC_EXTENSIBLE) {
             /* Declare whether size is in extension root */
             if(per_put_few_bits(po, not_in_root, 1)) ASN__ENCODE_FAILED;
             if(not_in_root) ct = 0;
@@ -1128,7 +1128,7 @@ SET_OF_decode_aper(const asn_codec_ctx_t *opt_codec_ctx,
 		ct = &td->encoding_constraints.per_constraints->size;
 	else ct = 0;
 
-	if(ct && ct->flags & APC_EXTENSIBLE) {
+	if(ct && ct->flags & asn_per_constraint_t::APC_EXTENSIBLE) {
 		int value = per_get_few_bits(pd, 1);
 		if(value < 0) ASN__DECODE_STARVED;
 		if(value) ct = 0;	/* Not restricted! */
@@ -1306,9 +1306,9 @@ SET_OF_random_fill(const asn_TYPE_descriptor_t *td, void **sptr,
                    size_t max_length) {
     const asn_SET_OF_specifics_t *specs =
         (const asn_SET_OF_specifics_t *)td->specifics;
-    asn_random_fill_result_t res_ok = {ARFILL_OK, 0};
-    asn_random_fill_result_t result_failed = {ARFILL_FAILED, 0};
-    asn_random_fill_result_t result_skipped = {ARFILL_SKIPPED, 0};
+    asn_random_fill_result_t res_ok = {asn_random_fill_result_t::ARFILL_OK, 0};
+    asn_random_fill_result_t result_failed = {asn_random_fill_result_t::ARFILL_FAILED, 0};
+    asn_random_fill_result_t result_skipped = {asn_random_fill_result_t::ARFILL_SKIPPED, 0};
     const asn_TYPE_member_t *elm = td->elements;
     void *st = *sptr;
     long max_elements = 5;
@@ -1340,10 +1340,10 @@ SET_OF_random_fill(const asn_TYPE_descriptor_t *td, void **sptr,
         constraints = &td->encoding_constraints;
     if(constraints->per_constraints) {
         const asn_per_constraint_t *pc = &constraints->per_constraints->size;
-        if(pc->flags & APC_SEMI_CONSTRAINED) {
+        if(pc->flags & asn_per_constraint_t::APC_SEMI_CONSTRAINED) {
             slb = pc->lower_bound;
             sub = pc->lower_bound + max_elements;
-        } else if(pc->flags & APC_CONSTRAINED) {
+        } else if(pc->flags & asn_per_constraint_t::APC_CONSTRAINED) {
             slb = pc->lower_bound;
             sub = pc->upper_bound;
             if(sub - slb > max_elements) sub = slb + max_elements;
@@ -1356,7 +1356,7 @@ SET_OF_random_fill(const asn_TYPE_descriptor_t *td, void **sptr,
     case -1:
         /* Prepare lengths somewhat outside of constrained range. */
         if(constraints->per_constraints
-           && (constraints->per_constraints->size.flags & APC_EXTENSIBLE)) {
+           && (constraints->per_constraints->size.flags & asn_per_constraint_t::APC_EXTENSIBLE)) {
             switch(asn_random_between(0, 5)) {
             default:
             case 0:
@@ -1424,13 +1424,13 @@ SET_OF_random_fill(const asn_TYPE_descriptor_t *td, void **sptr,
             (max_length > res_ok.length ? max_length - res_ok.length : 0)
                 / rnd_len);
         switch(tmpres.code) {
-        case ARFILL_OK:
+        case asn_random_fill_result_t::ARFILL_OK:
             ASN_SET_ADD(list, ptr);
             res_ok.length += tmpres.length;
             break;
-        case ARFILL_SKIPPED:
+        case asn_random_fill_result_t::ARFILL_SKIPPED:
             break;
-        case ARFILL_FAILED:
+        case asn_random_fill_result_t::ARFILL_FAILED:
             assert(ptr == 0);
             return tmpres;
         }

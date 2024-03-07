@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omar/ns-3-dev
+CMAKE_SOURCE_DIR = /home/omar/Desktop/git_repo/ns3-open5gs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omar/ns-3-dev/cmake-cache
+CMAKE_BINARY_DIR = /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache
 
 # Utility rule file for uninstall_raw-sock-creator.
 
@@ -67,7 +67,7 @@ include src/fd-net-device/CMakeFiles/uninstall_raw-sock-creator.dir/compiler_dep
 include src/fd-net-device/CMakeFiles/uninstall_raw-sock-creator.dir/progress.make
 
 src/fd-net-device/CMakeFiles/uninstall_raw-sock-creator:
-	cd /home/omar/ns-3-dev/cmake-cache/src/fd-net-device && rm /usr/local/libexec/ns3/ns3.39-raw-sock-creator-default
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/fd-net-device && rm /usr/local/libexec/ns3/ns3.39-raw-sock-creator-default
 
 uninstall_raw-sock-creator: src/fd-net-device/CMakeFiles/uninstall_raw-sock-creator
 uninstall_raw-sock-creator: src/fd-net-device/CMakeFiles/uninstall_raw-sock-creator.dir/build.make
@@ -78,10 +78,10 @@ src/fd-net-device/CMakeFiles/uninstall_raw-sock-creator.dir/build: uninstall_raw
 .PHONY : src/fd-net-device/CMakeFiles/uninstall_raw-sock-creator.dir/build
 
 src/fd-net-device/CMakeFiles/uninstall_raw-sock-creator.dir/clean:
-	cd /home/omar/ns-3-dev/cmake-cache/src/fd-net-device && $(CMAKE_COMMAND) -P CMakeFiles/uninstall_raw-sock-creator.dir/cmake_clean.cmake
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/fd-net-device && $(CMAKE_COMMAND) -P CMakeFiles/uninstall_raw-sock-creator.dir/cmake_clean.cmake
 .PHONY : src/fd-net-device/CMakeFiles/uninstall_raw-sock-creator.dir/clean
 
 src/fd-net-device/CMakeFiles/uninstall_raw-sock-creator.dir/depend:
-	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omar/ns-3-dev /home/omar/ns-3-dev/src/fd-net-device /home/omar/ns-3-dev/cmake-cache /home/omar/ns-3-dev/cmake-cache/src/fd-net-device /home/omar/ns-3-dev/cmake-cache/src/fd-net-device/CMakeFiles/uninstall_raw-sock-creator.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omar/Desktop/git_repo/ns3-open5gs /home/omar/Desktop/git_repo/ns3-open5gs/src/fd-net-device /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/fd-net-device /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/fd-net-device/CMakeFiles/uninstall_raw-sock-creator.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/fd-net-device/CMakeFiles/uninstall_raw-sock-creator.dir/depend
 
