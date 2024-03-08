@@ -54,11 +54,10 @@ set(header_files
     helper/annex/asn/asn1c/constr_SET_OF.h
     helper/annex/asn/asn1c/NativeInteger.h
         
-    #helper/annex/asn/asn1c/skeletons/oer_decoder.h
-    #helper/annex/asn/asn1c/skeletons/oer_encoder.h
-    #helper/annex/asn/asn1c/skeletons/oer_support.h
-         
-    
+    helper/annex/asn/asn1c/skeletons/oer_decoder.h
+    helper/annex/asn/asn1c/skeletons/oer_encoder.h
+    helper/annex/asn/asn1c/skeletons/oer_support.h
+             
     
 helper/annex/asn/ngap/ASN_NGAP_PagingAttemptCount.h
 helper/annex/asn/ngap/ASN_NGAP_XnTLAs.h
@@ -586,7 +585,7 @@ helper/annex/asn/ngap/ASN_NGAP_RelativeAMFCapacity.h
 helper/annex/asn/ngap/ASN_NGAP_ForbiddenAreaInformation.h
 helper/annex/asn/ngap/ASN_NGAP_EmergencyAreaIDBroadcastEUTRA.h
 helper/annex/asn/ngap/ASN_NGAP_UESecurityCapabilities.h
-#helper/annex/asn/ngap/ASN_NGAP_ProtocolIE-Field.h
+helper/annex/asn/ngap/ASN_NGAP_ProtocolIE-Field.h
 helper/annex/asn/ngap/ASN_NGAP_PDUSessionResourceNotify.h
 helper/annex/asn/ngap/ASN_NGAP_QosFlowLevelQosParameters.h
 helper/annex/asn/ngap/ASN_NGAP_CancelledCellsInTAI-EUTRA-Item.h
