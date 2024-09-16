@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omar/Desktop/git_repo/ns3-open5gs
+CMAKE_SOURCE_DIR = /home/omar/ns-3-dev
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache
+CMAKE_BINARY_DIR = /home/omar/ns-3-dev/cmake-cache
 
 # Utility rule file for doxygen-no-build.
 
@@ -67,7 +67,7 @@ include CMakeFiles/doxygen-no-build.dir/compiler_depend.make
 include CMakeFiles/doxygen-no-build.dir/progress.make
 
 CMakeFiles/doxygen-no-build:
-	echo The following Doxygen dependencies are missing: doxygen dia. Reconfigure the project after installing them.
+	echo The following Doxygen dependencies are missing: dia. Reconfigure the project after installing them.
 
 doxygen-no-build: CMakeFiles/doxygen-no-build
 doxygen-no-build: CMakeFiles/doxygen-no-build.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/doxygen-no-build.dir/clean:
 .PHONY : CMakeFiles/doxygen-no-build.dir/clean
 
 CMakeFiles/doxygen-no-build.dir/depend:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omar/Desktop/git_repo/ns3-open5gs /home/omar/Desktop/git_repo/ns3-open5gs /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/doxygen-no-build.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omar/ns-3-dev /home/omar/ns-3-dev /home/omar/ns-3-dev/cmake-cache /home/omar/ns-3-dev/cmake-cache /home/omar/ns-3-dev/cmake-cache/CMakeFiles/doxygen-no-build.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/doxygen-no-build.dir/depend
 

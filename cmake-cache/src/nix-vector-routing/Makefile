@@ -57,13 +57,23 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omar/Desktop/git_repo/ns3-open5gs
+CMAKE_SOURCE_DIR = /home/omar/ns-3-dev
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache
+CMAKE_BINARY_DIR = /home/omar/ns-3-dev/cmake-cache
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -132,14 +142,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -E cmake_progress_start /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/nix-vector-routing//CMakeFiles/progress.marks
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/nix-vector-routing/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles 0
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -E cmake_progress_start /home/omar/ns-3-dev/cmake-cache/CMakeFiles /home/omar/ns-3-dev/cmake-cache/src/nix-vector-routing//CMakeFiles/progress.marks
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/nix-vector-routing/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/omar/ns-3-dev/cmake-cache/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/nix-vector-routing/clean
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/nix-vector-routing/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,23 +158,23 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/nix-vector-routing/preinstall
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/nix-vector-routing/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/nix-vector-routing/preinstall
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/nix-vector-routing/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/VerifyGlobs.cmake
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/ns-3-dev/cmake-cache/CMakeFiles/VerifyGlobs.cmake
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/nix-vector-routing/CMakeFiles/libnix-vector-routing-obj.dir/rule:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/nix-vector-routing/CMakeFiles/libnix-vector-routing-obj.dir/rule
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/nix-vector-routing/CMakeFiles/libnix-vector-routing-obj.dir/rule
 .PHONY : src/nix-vector-routing/CMakeFiles/libnix-vector-routing-obj.dir/rule
 
 # Convenience name for target.
@@ -173,12 +183,12 @@ libnix-vector-routing-obj: src/nix-vector-routing/CMakeFiles/libnix-vector-routi
 
 # fast build rule for target.
 libnix-vector-routing-obj/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/nix-vector-routing/CMakeFiles/libnix-vector-routing-obj.dir/build.make src/nix-vector-routing/CMakeFiles/libnix-vector-routing-obj.dir/build
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/nix-vector-routing/CMakeFiles/libnix-vector-routing-obj.dir/build.make src/nix-vector-routing/CMakeFiles/libnix-vector-routing-obj.dir/build
 .PHONY : libnix-vector-routing-obj/fast
 
 # Convenience name for target.
 src/nix-vector-routing/CMakeFiles/libnix-vector-routing.dir/rule:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/nix-vector-routing/CMakeFiles/libnix-vector-routing.dir/rule
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/nix-vector-routing/CMakeFiles/libnix-vector-routing.dir/rule
 .PHONY : src/nix-vector-routing/CMakeFiles/libnix-vector-routing.dir/rule
 
 # Convenience name for target.
@@ -187,15 +197,29 @@ libnix-vector-routing: src/nix-vector-routing/CMakeFiles/libnix-vector-routing.d
 
 # fast build rule for target.
 libnix-vector-routing/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/nix-vector-routing/CMakeFiles/libnix-vector-routing.dir/build.make src/nix-vector-routing/CMakeFiles/libnix-vector-routing.dir/build
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/nix-vector-routing/CMakeFiles/libnix-vector-routing.dir/build.make src/nix-vector-routing/CMakeFiles/libnix-vector-routing.dir/build
 .PHONY : libnix-vector-routing/fast
+
+# Convenience name for target.
+src/nix-vector-routing/CMakeFiles/libnix-vector-routing-test.dir/rule:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/nix-vector-routing/CMakeFiles/libnix-vector-routing-test.dir/rule
+.PHONY : src/nix-vector-routing/CMakeFiles/libnix-vector-routing-test.dir/rule
+
+# Convenience name for target.
+libnix-vector-routing-test: src/nix-vector-routing/CMakeFiles/libnix-vector-routing-test.dir/rule
+.PHONY : libnix-vector-routing-test
+
+# fast build rule for target.
+libnix-vector-routing-test/fast:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/nix-vector-routing/CMakeFiles/libnix-vector-routing-test.dir/build.make src/nix-vector-routing/CMakeFiles/libnix-vector-routing-test.dir/build
+.PHONY : libnix-vector-routing-test/fast
 
 helper/nix-vector-helper.o: helper/nix-vector-helper.cc.o
 .PHONY : helper/nix-vector-helper.o
 
 # target to build an object file
 helper/nix-vector-helper.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/nix-vector-routing/CMakeFiles/libnix-vector-routing-obj.dir/build.make src/nix-vector-routing/CMakeFiles/libnix-vector-routing-obj.dir/helper/nix-vector-helper.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/nix-vector-routing/CMakeFiles/libnix-vector-routing-obj.dir/build.make src/nix-vector-routing/CMakeFiles/libnix-vector-routing-obj.dir/helper/nix-vector-helper.cc.o
 .PHONY : helper/nix-vector-helper.cc.o
 
 helper/nix-vector-helper.i: helper/nix-vector-helper.cc.i
@@ -203,7 +227,7 @@ helper/nix-vector-helper.i: helper/nix-vector-helper.cc.i
 
 # target to preprocess a source file
 helper/nix-vector-helper.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/nix-vector-routing/CMakeFiles/libnix-vector-routing-obj.dir/build.make src/nix-vector-routing/CMakeFiles/libnix-vector-routing-obj.dir/helper/nix-vector-helper.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/nix-vector-routing/CMakeFiles/libnix-vector-routing-obj.dir/build.make src/nix-vector-routing/CMakeFiles/libnix-vector-routing-obj.dir/helper/nix-vector-helper.cc.i
 .PHONY : helper/nix-vector-helper.cc.i
 
 helper/nix-vector-helper.s: helper/nix-vector-helper.cc.s
@@ -211,7 +235,7 @@ helper/nix-vector-helper.s: helper/nix-vector-helper.cc.s
 
 # target to generate assembly for a file
 helper/nix-vector-helper.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/nix-vector-routing/CMakeFiles/libnix-vector-routing-obj.dir/build.make src/nix-vector-routing/CMakeFiles/libnix-vector-routing-obj.dir/helper/nix-vector-helper.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/nix-vector-routing/CMakeFiles/libnix-vector-routing-obj.dir/build.make src/nix-vector-routing/CMakeFiles/libnix-vector-routing-obj.dir/helper/nix-vector-helper.cc.s
 .PHONY : helper/nix-vector-helper.cc.s
 
 model/nix-vector-routing.o: model/nix-vector-routing.cc.o
@@ -219,7 +243,7 @@ model/nix-vector-routing.o: model/nix-vector-routing.cc.o
 
 # target to build an object file
 model/nix-vector-routing.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/nix-vector-routing/CMakeFiles/libnix-vector-routing-obj.dir/build.make src/nix-vector-routing/CMakeFiles/libnix-vector-routing-obj.dir/model/nix-vector-routing.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/nix-vector-routing/CMakeFiles/libnix-vector-routing-obj.dir/build.make src/nix-vector-routing/CMakeFiles/libnix-vector-routing-obj.dir/model/nix-vector-routing.cc.o
 .PHONY : model/nix-vector-routing.cc.o
 
 model/nix-vector-routing.i: model/nix-vector-routing.cc.i
@@ -227,7 +251,7 @@ model/nix-vector-routing.i: model/nix-vector-routing.cc.i
 
 # target to preprocess a source file
 model/nix-vector-routing.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/nix-vector-routing/CMakeFiles/libnix-vector-routing-obj.dir/build.make src/nix-vector-routing/CMakeFiles/libnix-vector-routing-obj.dir/model/nix-vector-routing.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/nix-vector-routing/CMakeFiles/libnix-vector-routing-obj.dir/build.make src/nix-vector-routing/CMakeFiles/libnix-vector-routing-obj.dir/model/nix-vector-routing.cc.i
 .PHONY : model/nix-vector-routing.cc.i
 
 model/nix-vector-routing.s: model/nix-vector-routing.cc.s
@@ -235,8 +259,32 @@ model/nix-vector-routing.s: model/nix-vector-routing.cc.s
 
 # target to generate assembly for a file
 model/nix-vector-routing.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/nix-vector-routing/CMakeFiles/libnix-vector-routing-obj.dir/build.make src/nix-vector-routing/CMakeFiles/libnix-vector-routing-obj.dir/model/nix-vector-routing.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/nix-vector-routing/CMakeFiles/libnix-vector-routing-obj.dir/build.make src/nix-vector-routing/CMakeFiles/libnix-vector-routing-obj.dir/model/nix-vector-routing.cc.s
 .PHONY : model/nix-vector-routing.cc.s
+
+test/nix-test.o: test/nix-test.cc.o
+.PHONY : test/nix-test.o
+
+# target to build an object file
+test/nix-test.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/nix-vector-routing/CMakeFiles/libnix-vector-routing-test.dir/build.make src/nix-vector-routing/CMakeFiles/libnix-vector-routing-test.dir/test/nix-test.cc.o
+.PHONY : test/nix-test.cc.o
+
+test/nix-test.i: test/nix-test.cc.i
+.PHONY : test/nix-test.i
+
+# target to preprocess a source file
+test/nix-test.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/nix-vector-routing/CMakeFiles/libnix-vector-routing-test.dir/build.make src/nix-vector-routing/CMakeFiles/libnix-vector-routing-test.dir/test/nix-test.cc.i
+.PHONY : test/nix-test.cc.i
+
+test/nix-test.s: test/nix-test.cc.s
+.PHONY : test/nix-test.s
+
+# target to generate assembly for a file
+test/nix-test.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/nix-vector-routing/CMakeFiles/libnix-vector-routing-test.dir/build.make src/nix-vector-routing/CMakeFiles/libnix-vector-routing-test.dir/test/nix-test.cc.s
+.PHONY : test/nix-test.cc.s
 
 # Help Target
 help:
@@ -250,14 +298,19 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... libnix-vector-routing"
 	@echo "... libnix-vector-routing-obj"
+	@echo "... libnix-vector-routing-test"
 	@echo "... helper/nix-vector-helper.o"
 	@echo "... helper/nix-vector-helper.i"
 	@echo "... helper/nix-vector-helper.s"
 	@echo "... model/nix-vector-routing.o"
 	@echo "... model/nix-vector-routing.i"
 	@echo "... model/nix-vector-routing.s"
+	@echo "... test/nix-test.o"
+	@echo "... test/nix-test.i"
+	@echo "... test/nix-test.s"
 .PHONY : help
 
 
@@ -269,7 +322,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/VerifyGlobs.cmake
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/ns-3-dev/cmake-cache/CMakeFiles/VerifyGlobs.cmake
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

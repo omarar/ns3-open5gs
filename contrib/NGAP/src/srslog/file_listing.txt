@@ -1,0 +1,7 @@
+
+src/srslog/event_trace.cpp
+src/srslog/srslog.cpp
+src/srslog/srslog_c.cpp
+src/srslog/json_formatter.cpp
+src/srslog/text_formatter.cpp
+src/srslog/backend_worker.cpp

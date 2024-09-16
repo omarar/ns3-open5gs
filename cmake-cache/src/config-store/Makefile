@@ -57,13 +57,23 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omar/Desktop/git_repo/ns3-open5gs
+CMAKE_SOURCE_DIR = /home/omar/ns-3-dev
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache
+CMAKE_BINARY_DIR = /home/omar/ns-3-dev/cmake-cache
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -132,14 +142,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -E cmake_progress_start /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/config-store//CMakeFiles/progress.marks
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/config-store/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles 0
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -E cmake_progress_start /home/omar/ns-3-dev/cmake-cache/CMakeFiles /home/omar/ns-3-dev/cmake-cache/src/config-store//CMakeFiles/progress.marks
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/config-store/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/omar/ns-3-dev/cmake-cache/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/config-store/clean
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/config-store/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,23 +158,23 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/config-store/preinstall
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/config-store/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/config-store/preinstall
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/config-store/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/VerifyGlobs.cmake
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/ns-3-dev/cmake-cache/CMakeFiles/VerifyGlobs.cmake
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/config-store/CMakeFiles/libconfig-store-obj.dir/rule:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/config-store/CMakeFiles/libconfig-store-obj.dir/rule
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/config-store/CMakeFiles/libconfig-store-obj.dir/rule
 .PHONY : src/config-store/CMakeFiles/libconfig-store-obj.dir/rule
 
 # Convenience name for target.
@@ -173,12 +183,12 @@ libconfig-store-obj: src/config-store/CMakeFiles/libconfig-store-obj.dir/rule
 
 # fast build rule for target.
 libconfig-store-obj/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/build
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/build
 .PHONY : libconfig-store-obj/fast
 
 # Convenience name for target.
 src/config-store/CMakeFiles/libconfig-store.dir/rule:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/config-store/CMakeFiles/libconfig-store.dir/rule
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/config-store/CMakeFiles/libconfig-store.dir/rule
 .PHONY : src/config-store/CMakeFiles/libconfig-store.dir/rule
 
 # Convenience name for target.
@@ -187,7 +197,7 @@ libconfig-store: src/config-store/CMakeFiles/libconfig-store.dir/rule
 
 # fast build rule for target.
 libconfig-store/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store.dir/build.make src/config-store/CMakeFiles/libconfig-store.dir/build
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store.dir/build.make src/config-store/CMakeFiles/libconfig-store.dir/build
 .PHONY : libconfig-store/fast
 
 model/attribute-default-iterator.o: model/attribute-default-iterator.cc.o
@@ -195,7 +205,7 @@ model/attribute-default-iterator.o: model/attribute-default-iterator.cc.o
 
 # target to build an object file
 model/attribute-default-iterator.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/attribute-default-iterator.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/attribute-default-iterator.cc.o
 .PHONY : model/attribute-default-iterator.cc.o
 
 model/attribute-default-iterator.i: model/attribute-default-iterator.cc.i
@@ -203,7 +213,7 @@ model/attribute-default-iterator.i: model/attribute-default-iterator.cc.i
 
 # target to preprocess a source file
 model/attribute-default-iterator.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/attribute-default-iterator.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/attribute-default-iterator.cc.i
 .PHONY : model/attribute-default-iterator.cc.i
 
 model/attribute-default-iterator.s: model/attribute-default-iterator.cc.s
@@ -211,7 +221,7 @@ model/attribute-default-iterator.s: model/attribute-default-iterator.cc.s
 
 # target to generate assembly for a file
 model/attribute-default-iterator.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/attribute-default-iterator.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/attribute-default-iterator.cc.s
 .PHONY : model/attribute-default-iterator.cc.s
 
 model/attribute-iterator.o: model/attribute-iterator.cc.o
@@ -219,7 +229,7 @@ model/attribute-iterator.o: model/attribute-iterator.cc.o
 
 # target to build an object file
 model/attribute-iterator.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/attribute-iterator.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/attribute-iterator.cc.o
 .PHONY : model/attribute-iterator.cc.o
 
 model/attribute-iterator.i: model/attribute-iterator.cc.i
@@ -227,7 +237,7 @@ model/attribute-iterator.i: model/attribute-iterator.cc.i
 
 # target to preprocess a source file
 model/attribute-iterator.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/attribute-iterator.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/attribute-iterator.cc.i
 .PHONY : model/attribute-iterator.cc.i
 
 model/attribute-iterator.s: model/attribute-iterator.cc.s
@@ -235,7 +245,7 @@ model/attribute-iterator.s: model/attribute-iterator.cc.s
 
 # target to generate assembly for a file
 model/attribute-iterator.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/attribute-iterator.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/attribute-iterator.cc.s
 .PHONY : model/attribute-iterator.cc.s
 
 model/config-store.o: model/config-store.cc.o
@@ -243,7 +253,7 @@ model/config-store.o: model/config-store.cc.o
 
 # target to build an object file
 model/config-store.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/config-store.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/config-store.cc.o
 .PHONY : model/config-store.cc.o
 
 model/config-store.i: model/config-store.cc.i
@@ -251,7 +261,7 @@ model/config-store.i: model/config-store.cc.i
 
 # target to preprocess a source file
 model/config-store.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/config-store.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/config-store.cc.i
 .PHONY : model/config-store.cc.i
 
 model/config-store.s: model/config-store.cc.s
@@ -259,7 +269,7 @@ model/config-store.s: model/config-store.cc.s
 
 # target to generate assembly for a file
 model/config-store.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/config-store.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/config-store.cc.s
 .PHONY : model/config-store.cc.s
 
 model/file-config.o: model/file-config.cc.o
@@ -267,7 +277,7 @@ model/file-config.o: model/file-config.cc.o
 
 # target to build an object file
 model/file-config.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/file-config.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/file-config.cc.o
 .PHONY : model/file-config.cc.o
 
 model/file-config.i: model/file-config.cc.i
@@ -275,7 +285,7 @@ model/file-config.i: model/file-config.cc.i
 
 # target to preprocess a source file
 model/file-config.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/file-config.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/file-config.cc.i
 .PHONY : model/file-config.cc.i
 
 model/file-config.s: model/file-config.cc.s
@@ -283,7 +293,7 @@ model/file-config.s: model/file-config.cc.s
 
 # target to generate assembly for a file
 model/file-config.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/file-config.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/file-config.cc.s
 .PHONY : model/file-config.cc.s
 
 model/raw-text-config.o: model/raw-text-config.cc.o
@@ -291,7 +301,7 @@ model/raw-text-config.o: model/raw-text-config.cc.o
 
 # target to build an object file
 model/raw-text-config.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/raw-text-config.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/raw-text-config.cc.o
 .PHONY : model/raw-text-config.cc.o
 
 model/raw-text-config.i: model/raw-text-config.cc.i
@@ -299,7 +309,7 @@ model/raw-text-config.i: model/raw-text-config.cc.i
 
 # target to preprocess a source file
 model/raw-text-config.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/raw-text-config.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/raw-text-config.cc.i
 .PHONY : model/raw-text-config.cc.i
 
 model/raw-text-config.s: model/raw-text-config.cc.s
@@ -307,7 +317,7 @@ model/raw-text-config.s: model/raw-text-config.cc.s
 
 # target to generate assembly for a file
 model/raw-text-config.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/raw-text-config.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/raw-text-config.cc.s
 .PHONY : model/raw-text-config.cc.s
 
 model/xml-config.o: model/xml-config.cc.o
@@ -315,7 +325,7 @@ model/xml-config.o: model/xml-config.cc.o
 
 # target to build an object file
 model/xml-config.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/xml-config.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/xml-config.cc.o
 .PHONY : model/xml-config.cc.o
 
 model/xml-config.i: model/xml-config.cc.i
@@ -323,7 +333,7 @@ model/xml-config.i: model/xml-config.cc.i
 
 # target to preprocess a source file
 model/xml-config.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/xml-config.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/xml-config.cc.i
 .PHONY : model/xml-config.cc.i
 
 model/xml-config.s: model/xml-config.cc.s
@@ -331,7 +341,7 @@ model/xml-config.s: model/xml-config.cc.s
 
 # target to generate assembly for a file
 model/xml-config.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/xml-config.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/config-store/CMakeFiles/libconfig-store-obj.dir/build.make src/config-store/CMakeFiles/libconfig-store-obj.dir/model/xml-config.cc.s
 .PHONY : model/xml-config.cc.s
 
 # Help Target
@@ -346,6 +356,7 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... libconfig-store"
 	@echo "... libconfig-store-obj"
 	@echo "... model/attribute-default-iterator.o"
@@ -377,7 +388,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/VerifyGlobs.cmake
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/ns-3-dev/cmake-cache/CMakeFiles/VerifyGlobs.cmake
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

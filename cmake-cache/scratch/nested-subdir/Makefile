@@ -57,13 +57,23 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omar/Desktop/git_repo/ns3-open5gs
+CMAKE_SOURCE_DIR = /home/omar/ns-3-dev
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache
+CMAKE_BINARY_DIR = /home/omar/ns-3-dev/cmake-cache
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -132,14 +142,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -E cmake_progress_start /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/scratch/nested-subdir//CMakeFiles/progress.marks
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/nested-subdir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles 0
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -E cmake_progress_start /home/omar/ns-3-dev/cmake-cache/CMakeFiles /home/omar/ns-3-dev/cmake-cache/scratch/nested-subdir//CMakeFiles/progress.marks
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/nested-subdir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/omar/ns-3-dev/cmake-cache/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/nested-subdir/clean
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/nested-subdir/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,23 +158,23 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/nested-subdir/preinstall
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/nested-subdir/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/nested-subdir/preinstall
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/nested-subdir/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/VerifyGlobs.cmake
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/ns-3-dev/cmake-cache/CMakeFiles/VerifyGlobs.cmake
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/rule:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/rule
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/rule
 .PHONY : scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/rule
 
 # Convenience name for target.
@@ -173,12 +183,12 @@ scratch-nested-subdir-lib: scratch/nested-subdir/CMakeFiles/scratch-nested-subdi
 
 # fast build rule for target.
 scratch-nested-subdir-lib/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/build.make scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/build
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/build.make scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/build
 .PHONY : scratch-nested-subdir-lib/fast
 
 # Convenience name for target.
 scratch/nested-subdir/CMakeFiles/scratch_nested-subdir_scratch-nested-subdir-executable.dir/rule:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/nested-subdir/CMakeFiles/scratch_nested-subdir_scratch-nested-subdir-executable.dir/rule
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/nested-subdir/CMakeFiles/scratch_nested-subdir_scratch-nested-subdir-executable.dir/rule
 .PHONY : scratch/nested-subdir/CMakeFiles/scratch_nested-subdir_scratch-nested-subdir-executable.dir/rule
 
 # Convenience name for target.
@@ -187,7 +197,7 @@ scratch_nested-subdir_scratch-nested-subdir-executable: scratch/nested-subdir/CM
 
 # fast build rule for target.
 scratch_nested-subdir_scratch-nested-subdir-executable/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/nested-subdir/CMakeFiles/scratch_nested-subdir_scratch-nested-subdir-executable.dir/build.make scratch/nested-subdir/CMakeFiles/scratch_nested-subdir_scratch-nested-subdir-executable.dir/build
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/nested-subdir/CMakeFiles/scratch_nested-subdir_scratch-nested-subdir-executable.dir/build.make scratch/nested-subdir/CMakeFiles/scratch_nested-subdir_scratch-nested-subdir-executable.dir/build
 .PHONY : scratch_nested-subdir_scratch-nested-subdir-executable/fast
 
 lib/scratch-nested-subdir-library-source.o: lib/scratch-nested-subdir-library-source.cc.o
@@ -195,7 +205,7 @@ lib/scratch-nested-subdir-library-source.o: lib/scratch-nested-subdir-library-so
 
 # target to build an object file
 lib/scratch-nested-subdir-library-source.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/build.make scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/lib/scratch-nested-subdir-library-source.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/build.make scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/lib/scratch-nested-subdir-library-source.cc.o
 .PHONY : lib/scratch-nested-subdir-library-source.cc.o
 
 lib/scratch-nested-subdir-library-source.i: lib/scratch-nested-subdir-library-source.cc.i
@@ -203,7 +213,7 @@ lib/scratch-nested-subdir-library-source.i: lib/scratch-nested-subdir-library-so
 
 # target to preprocess a source file
 lib/scratch-nested-subdir-library-source.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/build.make scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/lib/scratch-nested-subdir-library-source.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/build.make scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/lib/scratch-nested-subdir-library-source.cc.i
 .PHONY : lib/scratch-nested-subdir-library-source.cc.i
 
 lib/scratch-nested-subdir-library-source.s: lib/scratch-nested-subdir-library-source.cc.s
@@ -211,7 +221,7 @@ lib/scratch-nested-subdir-library-source.s: lib/scratch-nested-subdir-library-so
 
 # target to generate assembly for a file
 lib/scratch-nested-subdir-library-source.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/build.make scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/lib/scratch-nested-subdir-library-source.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/build.make scratch/nested-subdir/CMakeFiles/scratch-nested-subdir-lib.dir/lib/scratch-nested-subdir-library-source.cc.s
 .PHONY : lib/scratch-nested-subdir-library-source.cc.s
 
 scratch-nested-subdir-executable.o: scratch-nested-subdir-executable.cc.o
@@ -219,7 +229,7 @@ scratch-nested-subdir-executable.o: scratch-nested-subdir-executable.cc.o
 
 # target to build an object file
 scratch-nested-subdir-executable.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/nested-subdir/CMakeFiles/scratch_nested-subdir_scratch-nested-subdir-executable.dir/build.make scratch/nested-subdir/CMakeFiles/scratch_nested-subdir_scratch-nested-subdir-executable.dir/scratch-nested-subdir-executable.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/nested-subdir/CMakeFiles/scratch_nested-subdir_scratch-nested-subdir-executable.dir/build.make scratch/nested-subdir/CMakeFiles/scratch_nested-subdir_scratch-nested-subdir-executable.dir/scratch-nested-subdir-executable.cc.o
 .PHONY : scratch-nested-subdir-executable.cc.o
 
 scratch-nested-subdir-executable.i: scratch-nested-subdir-executable.cc.i
@@ -227,7 +237,7 @@ scratch-nested-subdir-executable.i: scratch-nested-subdir-executable.cc.i
 
 # target to preprocess a source file
 scratch-nested-subdir-executable.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/nested-subdir/CMakeFiles/scratch_nested-subdir_scratch-nested-subdir-executable.dir/build.make scratch/nested-subdir/CMakeFiles/scratch_nested-subdir_scratch-nested-subdir-executable.dir/scratch-nested-subdir-executable.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/nested-subdir/CMakeFiles/scratch_nested-subdir_scratch-nested-subdir-executable.dir/build.make scratch/nested-subdir/CMakeFiles/scratch_nested-subdir_scratch-nested-subdir-executable.dir/scratch-nested-subdir-executable.cc.i
 .PHONY : scratch-nested-subdir-executable.cc.i
 
 scratch-nested-subdir-executable.s: scratch-nested-subdir-executable.cc.s
@@ -235,7 +245,7 @@ scratch-nested-subdir-executable.s: scratch-nested-subdir-executable.cc.s
 
 # target to generate assembly for a file
 scratch-nested-subdir-executable.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/nested-subdir/CMakeFiles/scratch_nested-subdir_scratch-nested-subdir-executable.dir/build.make scratch/nested-subdir/CMakeFiles/scratch_nested-subdir_scratch-nested-subdir-executable.dir/scratch-nested-subdir-executable.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/nested-subdir/CMakeFiles/scratch_nested-subdir_scratch-nested-subdir-executable.dir/build.make scratch/nested-subdir/CMakeFiles/scratch_nested-subdir_scratch-nested-subdir-executable.dir/scratch-nested-subdir-executable.cc.s
 .PHONY : scratch-nested-subdir-executable.cc.s
 
 # Help Target
@@ -250,6 +260,7 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... scratch-nested-subdir-lib"
 	@echo "... scratch_nested-subdir_scratch-nested-subdir-executable"
 	@echo "... lib/scratch-nested-subdir-library-source.o"
@@ -269,7 +280,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/VerifyGlobs.cmake
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/ns-3-dev/cmake-cache/CMakeFiles/VerifyGlobs.cmake
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -8,14 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/omar/Desktop/git_repo/ns3-open5gs/src/point-to-point/helper/point-to-point-helper.cc" "src/point-to-point/CMakeFiles/libpoint-to-point-obj.dir/helper/point-to-point-helper.cc.o" "gcc" "src/point-to-point/CMakeFiles/libpoint-to-point-obj.dir/helper/point-to-point-helper.cc.o.d"
-  "/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx" "src/point-to-point/CMakeFiles/libpoint-to-point-obj.dir/helper/point-to-point-helper.cc.o" "gcc" "src/point-to-point/CMakeFiles/libpoint-to-point-obj.dir/helper/point-to-point-helper.cc.o.d"
-  "/home/omar/Desktop/git_repo/ns3-open5gs/src/point-to-point/model/point-to-point-channel.cc" "src/point-to-point/CMakeFiles/libpoint-to-point-obj.dir/model/point-to-point-channel.cc.o" "gcc" "src/point-to-point/CMakeFiles/libpoint-to-point-obj.dir/model/point-to-point-channel.cc.o.d"
-  "/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx" "src/point-to-point/CMakeFiles/libpoint-to-point-obj.dir/model/point-to-point-channel.cc.o" "gcc" "src/point-to-point/CMakeFiles/libpoint-to-point-obj.dir/model/point-to-point-channel.cc.o.d"
-  "/home/omar/Desktop/git_repo/ns3-open5gs/src/point-to-point/model/point-to-point-net-device.cc" "src/point-to-point/CMakeFiles/libpoint-to-point-obj.dir/model/point-to-point-net-device.cc.o" "gcc" "src/point-to-point/CMakeFiles/libpoint-to-point-obj.dir/model/point-to-point-net-device.cc.o.d"
-  "/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx" "src/point-to-point/CMakeFiles/libpoint-to-point-obj.dir/model/point-to-point-net-device.cc.o" "gcc" "src/point-to-point/CMakeFiles/libpoint-to-point-obj.dir/model/point-to-point-net-device.cc.o.d"
-  "/home/omar/Desktop/git_repo/ns3-open5gs/src/point-to-point/model/ppp-header.cc" "src/point-to-point/CMakeFiles/libpoint-to-point-obj.dir/model/ppp-header.cc.o" "gcc" "src/point-to-point/CMakeFiles/libpoint-to-point-obj.dir/model/ppp-header.cc.o.d"
-  "/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx" "src/point-to-point/CMakeFiles/libpoint-to-point-obj.dir/model/ppp-header.cc.o" "gcc" "src/point-to-point/CMakeFiles/libpoint-to-point-obj.dir/model/ppp-header.cc.o.d"
+  "/home/omar/ns-3-dev/src/point-to-point/helper/point-to-point-helper.cc" "src/point-to-point/CMakeFiles/libpoint-to-point-obj.dir/helper/point-to-point-helper.cc.o" "gcc" "src/point-to-point/CMakeFiles/libpoint-to-point-obj.dir/helper/point-to-point-helper.cc.o.d"
+  "/home/omar/ns-3-dev/src/point-to-point/model/point-to-point-channel.cc" "src/point-to-point/CMakeFiles/libpoint-to-point-obj.dir/model/point-to-point-channel.cc.o" "gcc" "src/point-to-point/CMakeFiles/libpoint-to-point-obj.dir/model/point-to-point-channel.cc.o.d"
+  "/home/omar/ns-3-dev/src/point-to-point/model/point-to-point-net-device.cc" "src/point-to-point/CMakeFiles/libpoint-to-point-obj.dir/model/point-to-point-net-device.cc.o" "gcc" "src/point-to-point/CMakeFiles/libpoint-to-point-obj.dir/model/point-to-point-net-device.cc.o.d"
+  "/home/omar/ns-3-dev/src/point-to-point/model/ppp-header.cc" "src/point-to-point/CMakeFiles/libpoint-to-point-obj.dir/model/ppp-header.cc.o" "gcc" "src/point-to-point/CMakeFiles/libpoint-to-point-obj.dir/model/ppp-header.cc.o.d"
   )
 
 # Targets to which this target links.

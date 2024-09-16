@@ -9,6 +9,26 @@
 
 #include "nr-net-device.h"
 
+//added open5gs
+#include <chrono>
+#include <iostream>
+#include <stdexcept>
+#include <thread>
+
+#include <unistd.h>
+
+#include <ns3/base_app.hpp>
+#include <ns3/cli_base.hpp>
+#include <ns3/cli_cmd.hpp>
+#include <ns3/proc_table.hpp>
+#include <ns3/ue_ctl.hpp>
+#include <ns3/ue.hpp>
+#include <ns3/common.hpp>
+#include <ns3/concurrent_map.hpp>
+#include <ns3/constants.hpp>
+#include <ns3/options.hpp>
+#include <ns3/yaml_utils.hpp>
+#include <ns3/yaml.h>
 namespace ns3
 {
 
@@ -172,7 +192,12 @@ class NrUeNetDevice : public NrNetDevice
      * \brief Update the RRC config. Must be called only once.
      */
     void UpdateConfig();
-
+    /// added open5gs
+    void ConnectOpen5gs();
+    void ReceiveCommand(app::CliMessage &msg);
+    void Loop();
+    uint64_t Get_imsi_open5gs() const;
+    void set_imsi_open5gs(uint64_t IMSI);
   protected:
     // inherited from Object
     void DoInitialize() override;
@@ -187,6 +212,8 @@ class NrUeNetDevice : public NrNetDevice
     Ptr<EpcUeNas> m_nas;             //!< NAS pointer
     uint64_t m_imsi;                 //!< UE IMSI
     uint32_t m_csgId;                //!< ?_?
+    //added 
+    uint64_t m_imsi_open5gs; //imsi used to communicate with open5gs
 
     std::map<uint8_t, Ptr<BandwidthPartUe>> m_ccMap;             ///< component carrier map
     Ptr<LteUeComponentCarrierManager> m_componentCarrierManager; ///< the component carrier manager

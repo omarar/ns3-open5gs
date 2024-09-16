@@ -7,7 +7,7 @@ cmake_minimum_required(VERSION 3.10..3.10)
 # Project name                        #
 # ##############################################################################
 project(NS3 CXX C)
-
+set(CMAKE_BUILD_PARALLEL_LEVEL 4)
 file(STRINGS VERSION NS3_VER)
 
 # minimum compiler versions

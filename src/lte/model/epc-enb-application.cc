@@ -147,6 +147,8 @@ void
 EpcEnbApplication::DoInitialUeMessage(uint64_t imsi, uint16_t rnti)
 {
     NS_LOG_FUNCTION(this);
+           std::cout<<"epc enb application do initial ue message"<<std::endl;
+
     // side effect: create entry if not exist
     m_imsiRntiMap[imsi] = rnti;
     m_s1apSapMme->InitialUeMessage(imsi, rnti, imsi, m_cellId);

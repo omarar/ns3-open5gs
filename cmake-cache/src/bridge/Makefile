@@ -57,13 +57,23 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omar/Desktop/git_repo/ns3-open5gs
+CMAKE_SOURCE_DIR = /home/omar/ns-3-dev
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache
+CMAKE_BINARY_DIR = /home/omar/ns-3-dev/cmake-cache
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -132,14 +142,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -E cmake_progress_start /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/bridge//CMakeFiles/progress.marks
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/bridge/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles 0
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -E cmake_progress_start /home/omar/ns-3-dev/cmake-cache/CMakeFiles /home/omar/ns-3-dev/cmake-cache/src/bridge//CMakeFiles/progress.marks
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/bridge/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/omar/ns-3-dev/cmake-cache/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/bridge/clean
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/bridge/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,23 +158,23 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/bridge/preinstall
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/bridge/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/bridge/preinstall
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/bridge/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/VerifyGlobs.cmake
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/ns-3-dev/cmake-cache/CMakeFiles/VerifyGlobs.cmake
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/bridge/CMakeFiles/libbridge-obj.dir/rule:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/bridge/CMakeFiles/libbridge-obj.dir/rule
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/bridge/CMakeFiles/libbridge-obj.dir/rule
 .PHONY : src/bridge/CMakeFiles/libbridge-obj.dir/rule
 
 # Convenience name for target.
@@ -173,12 +183,12 @@ libbridge-obj: src/bridge/CMakeFiles/libbridge-obj.dir/rule
 
 # fast build rule for target.
 libbridge-obj/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/bridge/CMakeFiles/libbridge-obj.dir/build.make src/bridge/CMakeFiles/libbridge-obj.dir/build
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/bridge/CMakeFiles/libbridge-obj.dir/build.make src/bridge/CMakeFiles/libbridge-obj.dir/build
 .PHONY : libbridge-obj/fast
 
 # Convenience name for target.
 src/bridge/CMakeFiles/libbridge.dir/rule:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/bridge/CMakeFiles/libbridge.dir/rule
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/bridge/CMakeFiles/libbridge.dir/rule
 .PHONY : src/bridge/CMakeFiles/libbridge.dir/rule
 
 # Convenience name for target.
@@ -187,7 +197,7 @@ libbridge: src/bridge/CMakeFiles/libbridge.dir/rule
 
 # fast build rule for target.
 libbridge/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/bridge/CMakeFiles/libbridge.dir/build.make src/bridge/CMakeFiles/libbridge.dir/build
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/bridge/CMakeFiles/libbridge.dir/build.make src/bridge/CMakeFiles/libbridge.dir/build
 .PHONY : libbridge/fast
 
 helper/bridge-helper.o: helper/bridge-helper.cc.o
@@ -195,7 +205,7 @@ helper/bridge-helper.o: helper/bridge-helper.cc.o
 
 # target to build an object file
 helper/bridge-helper.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/bridge/CMakeFiles/libbridge-obj.dir/build.make src/bridge/CMakeFiles/libbridge-obj.dir/helper/bridge-helper.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/bridge/CMakeFiles/libbridge-obj.dir/build.make src/bridge/CMakeFiles/libbridge-obj.dir/helper/bridge-helper.cc.o
 .PHONY : helper/bridge-helper.cc.o
 
 helper/bridge-helper.i: helper/bridge-helper.cc.i
@@ -203,7 +213,7 @@ helper/bridge-helper.i: helper/bridge-helper.cc.i
 
 # target to preprocess a source file
 helper/bridge-helper.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/bridge/CMakeFiles/libbridge-obj.dir/build.make src/bridge/CMakeFiles/libbridge-obj.dir/helper/bridge-helper.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/bridge/CMakeFiles/libbridge-obj.dir/build.make src/bridge/CMakeFiles/libbridge-obj.dir/helper/bridge-helper.cc.i
 .PHONY : helper/bridge-helper.cc.i
 
 helper/bridge-helper.s: helper/bridge-helper.cc.s
@@ -211,7 +221,7 @@ helper/bridge-helper.s: helper/bridge-helper.cc.s
 
 # target to generate assembly for a file
 helper/bridge-helper.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/bridge/CMakeFiles/libbridge-obj.dir/build.make src/bridge/CMakeFiles/libbridge-obj.dir/helper/bridge-helper.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/bridge/CMakeFiles/libbridge-obj.dir/build.make src/bridge/CMakeFiles/libbridge-obj.dir/helper/bridge-helper.cc.s
 .PHONY : helper/bridge-helper.cc.s
 
 model/bridge-channel.o: model/bridge-channel.cc.o
@@ -219,7 +229,7 @@ model/bridge-channel.o: model/bridge-channel.cc.o
 
 # target to build an object file
 model/bridge-channel.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/bridge/CMakeFiles/libbridge-obj.dir/build.make src/bridge/CMakeFiles/libbridge-obj.dir/model/bridge-channel.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/bridge/CMakeFiles/libbridge-obj.dir/build.make src/bridge/CMakeFiles/libbridge-obj.dir/model/bridge-channel.cc.o
 .PHONY : model/bridge-channel.cc.o
 
 model/bridge-channel.i: model/bridge-channel.cc.i
@@ -227,7 +237,7 @@ model/bridge-channel.i: model/bridge-channel.cc.i
 
 # target to preprocess a source file
 model/bridge-channel.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/bridge/CMakeFiles/libbridge-obj.dir/build.make src/bridge/CMakeFiles/libbridge-obj.dir/model/bridge-channel.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/bridge/CMakeFiles/libbridge-obj.dir/build.make src/bridge/CMakeFiles/libbridge-obj.dir/model/bridge-channel.cc.i
 .PHONY : model/bridge-channel.cc.i
 
 model/bridge-channel.s: model/bridge-channel.cc.s
@@ -235,7 +245,7 @@ model/bridge-channel.s: model/bridge-channel.cc.s
 
 # target to generate assembly for a file
 model/bridge-channel.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/bridge/CMakeFiles/libbridge-obj.dir/build.make src/bridge/CMakeFiles/libbridge-obj.dir/model/bridge-channel.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/bridge/CMakeFiles/libbridge-obj.dir/build.make src/bridge/CMakeFiles/libbridge-obj.dir/model/bridge-channel.cc.s
 .PHONY : model/bridge-channel.cc.s
 
 model/bridge-net-device.o: model/bridge-net-device.cc.o
@@ -243,7 +253,7 @@ model/bridge-net-device.o: model/bridge-net-device.cc.o
 
 # target to build an object file
 model/bridge-net-device.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/bridge/CMakeFiles/libbridge-obj.dir/build.make src/bridge/CMakeFiles/libbridge-obj.dir/model/bridge-net-device.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/bridge/CMakeFiles/libbridge-obj.dir/build.make src/bridge/CMakeFiles/libbridge-obj.dir/model/bridge-net-device.cc.o
 .PHONY : model/bridge-net-device.cc.o
 
 model/bridge-net-device.i: model/bridge-net-device.cc.i
@@ -251,7 +261,7 @@ model/bridge-net-device.i: model/bridge-net-device.cc.i
 
 # target to preprocess a source file
 model/bridge-net-device.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/bridge/CMakeFiles/libbridge-obj.dir/build.make src/bridge/CMakeFiles/libbridge-obj.dir/model/bridge-net-device.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/bridge/CMakeFiles/libbridge-obj.dir/build.make src/bridge/CMakeFiles/libbridge-obj.dir/model/bridge-net-device.cc.i
 .PHONY : model/bridge-net-device.cc.i
 
 model/bridge-net-device.s: model/bridge-net-device.cc.s
@@ -259,7 +269,7 @@ model/bridge-net-device.s: model/bridge-net-device.cc.s
 
 # target to generate assembly for a file
 model/bridge-net-device.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/bridge/CMakeFiles/libbridge-obj.dir/build.make src/bridge/CMakeFiles/libbridge-obj.dir/model/bridge-net-device.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/bridge/CMakeFiles/libbridge-obj.dir/build.make src/bridge/CMakeFiles/libbridge-obj.dir/model/bridge-net-device.cc.s
 .PHONY : model/bridge-net-device.cc.s
 
 # Help Target
@@ -274,6 +284,7 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... libbridge"
 	@echo "... libbridge-obj"
 	@echo "... helper/bridge-helper.o"
@@ -296,7 +307,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/VerifyGlobs.cmake
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/ns-3-dev/cmake-cache/CMakeFiles/VerifyGlobs.cmake
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -1,3 +1,4 @@
+find_library(LIBRT rt)
 build_lib(
   LIBNAME lr-wpan
   SOURCE_FILES
@@ -37,6 +38,7 @@ build_lib(
     ${libmobility}
     ${libspectrum}
     ${libpropagation}
+    ${LIBRT}
   TEST_SOURCES
     test/lr-wpan-ack-test.cc
     test/lr-wpan-cca-test.cc

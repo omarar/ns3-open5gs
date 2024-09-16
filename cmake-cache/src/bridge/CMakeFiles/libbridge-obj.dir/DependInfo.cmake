@@ -8,12 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/omar/Desktop/git_repo/ns3-open5gs/src/bridge/helper/bridge-helper.cc" "src/bridge/CMakeFiles/libbridge-obj.dir/helper/bridge-helper.cc.o" "gcc" "src/bridge/CMakeFiles/libbridge-obj.dir/helper/bridge-helper.cc.o.d"
-  "/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx" "src/bridge/CMakeFiles/libbridge-obj.dir/helper/bridge-helper.cc.o" "gcc" "src/bridge/CMakeFiles/libbridge-obj.dir/helper/bridge-helper.cc.o.d"
-  "/home/omar/Desktop/git_repo/ns3-open5gs/src/bridge/model/bridge-channel.cc" "src/bridge/CMakeFiles/libbridge-obj.dir/model/bridge-channel.cc.o" "gcc" "src/bridge/CMakeFiles/libbridge-obj.dir/model/bridge-channel.cc.o.d"
-  "/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx" "src/bridge/CMakeFiles/libbridge-obj.dir/model/bridge-channel.cc.o" "gcc" "src/bridge/CMakeFiles/libbridge-obj.dir/model/bridge-channel.cc.o.d"
-  "/home/omar/Desktop/git_repo/ns3-open5gs/src/bridge/model/bridge-net-device.cc" "src/bridge/CMakeFiles/libbridge-obj.dir/model/bridge-net-device.cc.o" "gcc" "src/bridge/CMakeFiles/libbridge-obj.dir/model/bridge-net-device.cc.o.d"
-  "/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx" "src/bridge/CMakeFiles/libbridge-obj.dir/model/bridge-net-device.cc.o" "gcc" "src/bridge/CMakeFiles/libbridge-obj.dir/model/bridge-net-device.cc.o.d"
+  "/home/omar/ns-3-dev/src/bridge/helper/bridge-helper.cc" "src/bridge/CMakeFiles/libbridge-obj.dir/helper/bridge-helper.cc.o" "gcc" "src/bridge/CMakeFiles/libbridge-obj.dir/helper/bridge-helper.cc.o.d"
+  "/home/omar/ns-3-dev/src/bridge/model/bridge-channel.cc" "src/bridge/CMakeFiles/libbridge-obj.dir/model/bridge-channel.cc.o" "gcc" "src/bridge/CMakeFiles/libbridge-obj.dir/model/bridge-channel.cc.o.d"
+  "/home/omar/ns-3-dev/src/bridge/model/bridge-net-device.cc" "src/bridge/CMakeFiles/libbridge-obj.dir/model/bridge-net-device.cc.o" "gcc" "src/bridge/CMakeFiles/libbridge-obj.dir/model/bridge-net-device.cc.o.d"
   )
 
 # Targets to which this target links.

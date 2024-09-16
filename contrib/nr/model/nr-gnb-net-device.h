@@ -8,7 +8,26 @@
 #define NR_ENB_NET_DEVICE_H
 
 #include "nr-net-device.h"
+// addded//
 
+#include <iostream>
+#include <stdexcept>
+#include <unordered_map>
+
+#include <unistd.h>
+#include <string>
+#include <ns3/gnb.hpp>
+#include <ns3/base_app.hpp>
+#include <ns3/cli_base.hpp>
+#include <ns3/cli_cmd.hpp>
+#include <ns3/proc_table.hpp>
+#include <ns3/constants.hpp>
+#include <ns3/io.hpp>
+#include <ns3/options.hpp>
+#include <ns3/yaml_utils.hpp>
+#include <ns3/yaml.h>
+
+//-----------
 namespace ns3
 {
 
@@ -100,7 +119,17 @@ class NrGnbNetDevice : public NrNetDevice
      * \brief Update the RRC config. Must be called only once.
      */
     void UpdateConfig();
-
+    /// added open5gs
+    void ConnectOpen5gs();
+    void ReceiveCommand(app::CliMessage &msg);
+    void Loop();
+    std::string Get_ngapIp() const;
+    std::string Get_linkIp() const;
+    std::string Get_gtpIp() const;
+    void Set_ngapIp(std::string ngapIp);
+    void Set_linkIp(std::string linkIp);
+    void Set_gtpIp(std::string ngapIp);
+    void generateIPAddress(uint16_t x, std::string& ngapIp, std::string& linkIp, std::string& gtpIp);
   protected:
     void DoInitialize() override;
 
@@ -111,7 +140,11 @@ class NrGnbNetDevice : public NrNetDevice
     Ptr<LteEnbRrc> m_rrc;
 
     uint16_t m_cellId; //!< Cell ID. Set by the helper.
-
+    ////added
+    std::string ngapIp;
+    std::string linkIp;
+    std::string gtpIp;
+    /// end of added 
     std::map<uint8_t, Ptr<BandwidthPartGnb>> m_ccMap; /**< ComponentCarrier map */
 
     Ptr<LteEnbComponentCarrierManager>

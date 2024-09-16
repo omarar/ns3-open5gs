@@ -1,3 +1,4 @@
+find_library(LIBRT rt)
 build_lib_example(
   NAME adhoc-aloha-ideal-phy
   SOURCE_FILES adhoc-aloha-ideal-phy.cc
@@ -6,6 +7,7 @@ build_lib_example(
     ${libinternet}
     ${libmobility}
     ${libspectrum}
+    ${LIBRT}
 )
 
 build_lib_example(
@@ -16,6 +18,7 @@ build_lib_example(
     ${libinternet}
     ${libmobility}
     ${libspectrum}
+    ${LIBRT}
 )
 
 build_lib_example(
@@ -26,6 +29,7 @@ build_lib_example(
     ${libinternet}
     ${libmobility}
     ${libspectrum}
+    ${LIBRT}
 )
 
 build_lib_example(
@@ -35,6 +39,7 @@ build_lib_example(
     ${libcore}
     ${libmobility}
     ${libspectrum}
+    ${LIBRT}
 )
 
 build_lib_example(
@@ -54,6 +59,7 @@ build_lib_example(
     ${liblte}
     ${libmobility}
     ${libspectrum}
+    ${LIBRT}
 )
 
 build_lib_example(
@@ -64,4 +70,5 @@ build_lib_example(
     ${liblte}
     ${libmobility}
     ${libspectrum}
+    ${LIBRT}
 )

@@ -16,7 +16,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_targetsDefined)
 set(_targetsNotDefined)
 set(_expectedTargets)
-foreach(_expectedTarget ns3::libnr ns3::libantenna ns3::libaodv ns3::libapplications ns3::libbridge ns3::libbuildings ns3::libconfig-store ns3::libcore ns3::libcsma ns3::libcsma-layout ns3::libdsdv ns3::libdsr ns3::libenergy ns3::raw-sock-creator ns3::tap-device-creator ns3::libfd-net-device ns3::libflow-monitor ns3::libinternet ns3::libinternet-apps ns3::liblr-wpan ns3::liblte ns3::libmesh ns3::libmobility ns3::libnetanim ns3::libnetwork ns3::libnix-vector-routing ns3::libolsr ns3::libpoint-to-point ns3::libpoint-to-point-layout ns3::libpropagation ns3::libsixlowpan ns3::libspectrum ns3::libstats ns3::libtap-bridge ns3::tap-creator ns3::libtopology-read ns3::libtraffic-control ns3::libuan ns3::libvirtual-net-device ns3::libwifi ns3::libwimax)
+foreach(_expectedTarget ns3::libNGAP ns3::libnr ns3::libantenna ns3::libaodv ns3::libapplications ns3::libbridge ns3::libbuildings ns3::libconfig-store ns3::libcore ns3::libcsma ns3::libcsma-layout ns3::libdsdv ns3::libdsr ns3::libenergy ns3::raw-sock-creator ns3::tap-device-creator ns3::libfd-net-device ns3::libflow-monitor ns3::libinternet ns3::libinternet-apps ns3::liblr-wpan ns3::liblte ns3::libmesh ns3::libmobility ns3::libnetanim ns3::libnetwork ns3::libnix-vector-routing ns3::libolsr ns3::libpoint-to-point ns3::libpoint-to-point-layout ns3::libpropagation ns3::libsixlowpan ns3::libspectrum ns3::libstats ns3::libtap-bridge ns3::tap-creator ns3::libtopology-read ns3::libtraffic-control ns3::libuan ns3::libvirtual-net-device ns3::libwifi ns3::libwimax)
   list(APPEND _expectedTargets ${_expectedTarget})
   if(NOT TARGET ${_expectedTarget})
     list(APPEND _targetsNotDefined ${_expectedTarget})
@@ -50,12 +50,20 @@ if(_IMPORT_PREFIX STREQUAL "/")
   set(_IMPORT_PREFIX "")
 endif()
 
+# Create imported target ns3::libNGAP
+add_library(ns3::libNGAP SHARED IMPORTED)
+
+set_target_properties(ns3::libNGAP PROPERTIES
+  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include;/usr/include;/usr;/usr/include/libxml2"
+  INTERFACE_LINK_LIBRARIES "-Wl,--no-as-needed;ns3::libinternet-apps;ns3::libinternet;ns3::libnetwork;ns3::libcore;ns3::libbridge;ns3::libtraffic-control;ns3::libfd-net-device;/usr/lib/x86_64-linux-gnu/libmbedcrypto.so;-Wl,--as-needed"
+)
+
 # Create imported target ns3::libnr
 add_library(ns3::libnr SHARED IMPORTED)
 
 set_target_properties(ns3::libnr PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include;/usr/include;/usr;/usr/include/libxml2"
-  INTERFACE_LINK_LIBRARIES "-Wl,--no-as-needed;ns3::liblte;ns3::libinternet-apps;-Wl,--as-needed"
+  INTERFACE_LINK_LIBRARIES "-Wl,--no-as-needed;ns3::libNGAP;ns3::liblte;ns3::libinternet-apps;/usr/lib/x86_64-linux-gnu/libmbedcrypto.so;-Wl,--as-needed"
 )
 
 # Create imported target ns3::libantenna
@@ -197,7 +205,7 @@ add_library(ns3::liblr-wpan SHARED IMPORTED)
 
 set_target_properties(ns3::liblr-wpan PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include;/usr/include;/usr;/usr/include/libxml2"
-  INTERFACE_LINK_LIBRARIES "-Wl,--no-as-needed;ns3::libnetwork;ns3::libcore;ns3::libmobility;ns3::libspectrum;ns3::libpropagation;-Wl,--as-needed"
+  INTERFACE_LINK_LIBRARIES "-Wl,--no-as-needed;ns3::libnetwork;ns3::libcore;ns3::libmobility;ns3::libspectrum;ns3::libpropagation;/usr/lib/x86_64-linux-gnu/librt.a;-Wl,--as-needed"
 )
 
 # Create imported target ns3::liblte

@@ -30,7 +30,6 @@
 #include "ns3/nr-helper.h"
 #include "ns3/nr-module.h"
 #include "ns3/nr-point-to-point-epc-helper.h"
-
 using namespace ns3;
 
 /*
@@ -219,6 +218,8 @@ main(int argc, char* argv[])
 
     randomStream += nrHelper->AssignStreams(enbNetDev, randomStream);
     randomStream += nrHelper->AssignStreams(ueNetDev, randomStream);
+    
+   // int j = nrHelper->InitConnect(0,'c');
 
     // Set the attribute of the netdevice (enbNetDev.Get (0)) and bandwidth part (0)
     nrHelper->GetGnbPhy(enbNetDev.Get(0), 0)
@@ -275,7 +276,7 @@ main(int argc, char* argv[])
     Simulator::Stop(Seconds(1));
     Simulator::Run();
     Simulator::Destroy();
-
+    
     if (g_rxPdcpCallbackCalled && g_rxRxRlcPDUCallbackCalled)
     {
         return EXIT_SUCCESS;

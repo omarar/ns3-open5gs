@@ -57,13 +57,23 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omar/Desktop/git_repo/ns3-open5gs
+CMAKE_SOURCE_DIR = /home/omar/ns-3-dev
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache
+CMAKE_BINARY_DIR = /home/omar/ns-3-dev/cmake-cache
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -132,14 +142,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -E cmake_progress_start /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/sixlowpan//CMakeFiles/progress.marks
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/sixlowpan/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles 0
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -E cmake_progress_start /home/omar/ns-3-dev/cmake-cache/CMakeFiles /home/omar/ns-3-dev/cmake-cache/src/sixlowpan//CMakeFiles/progress.marks
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/sixlowpan/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/omar/ns-3-dev/cmake-cache/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/sixlowpan/clean
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/sixlowpan/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,23 +158,23 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/sixlowpan/preinstall
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/sixlowpan/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/sixlowpan/preinstall
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/sixlowpan/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/VerifyGlobs.cmake
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/ns-3-dev/cmake-cache/CMakeFiles/VerifyGlobs.cmake
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/rule:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/rule
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/rule
 .PHONY : src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/rule
 
 # Convenience name for target.
@@ -173,12 +183,12 @@ libsixlowpan-obj: src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/rule
 
 # fast build rule for target.
 libsixlowpan-obj/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/build
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/build
 .PHONY : libsixlowpan-obj/fast
 
 # Convenience name for target.
 src/sixlowpan/CMakeFiles/libsixlowpan.dir/rule:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/sixlowpan/CMakeFiles/libsixlowpan.dir/rule
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/sixlowpan/CMakeFiles/libsixlowpan.dir/rule
 .PHONY : src/sixlowpan/CMakeFiles/libsixlowpan.dir/rule
 
 # Convenience name for target.
@@ -187,15 +197,29 @@ libsixlowpan: src/sixlowpan/CMakeFiles/libsixlowpan.dir/rule
 
 # fast build rule for target.
 libsixlowpan/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan.dir/build
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan.dir/build
 .PHONY : libsixlowpan/fast
+
+# Convenience name for target.
+src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/rule:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/rule
+.PHONY : src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/rule
+
+# Convenience name for target.
+libsixlowpan-test: src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/rule
+.PHONY : libsixlowpan-test
+
+# fast build rule for target.
+libsixlowpan-test/fast:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/build
+.PHONY : libsixlowpan-test/fast
 
 helper/sixlowpan-helper.o: helper/sixlowpan-helper.cc.o
 .PHONY : helper/sixlowpan-helper.o
 
 # target to build an object file
 helper/sixlowpan-helper.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/helper/sixlowpan-helper.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/helper/sixlowpan-helper.cc.o
 .PHONY : helper/sixlowpan-helper.cc.o
 
 helper/sixlowpan-helper.i: helper/sixlowpan-helper.cc.i
@@ -203,7 +227,7 @@ helper/sixlowpan-helper.i: helper/sixlowpan-helper.cc.i
 
 # target to preprocess a source file
 helper/sixlowpan-helper.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/helper/sixlowpan-helper.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/helper/sixlowpan-helper.cc.i
 .PHONY : helper/sixlowpan-helper.cc.i
 
 helper/sixlowpan-helper.s: helper/sixlowpan-helper.cc.s
@@ -211,7 +235,7 @@ helper/sixlowpan-helper.s: helper/sixlowpan-helper.cc.s
 
 # target to generate assembly for a file
 helper/sixlowpan-helper.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/helper/sixlowpan-helper.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/helper/sixlowpan-helper.cc.s
 .PHONY : helper/sixlowpan-helper.cc.s
 
 model/sixlowpan-header.o: model/sixlowpan-header.cc.o
@@ -219,7 +243,7 @@ model/sixlowpan-header.o: model/sixlowpan-header.cc.o
 
 # target to build an object file
 model/sixlowpan-header.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/model/sixlowpan-header.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/model/sixlowpan-header.cc.o
 .PHONY : model/sixlowpan-header.cc.o
 
 model/sixlowpan-header.i: model/sixlowpan-header.cc.i
@@ -227,7 +251,7 @@ model/sixlowpan-header.i: model/sixlowpan-header.cc.i
 
 # target to preprocess a source file
 model/sixlowpan-header.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/model/sixlowpan-header.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/model/sixlowpan-header.cc.i
 .PHONY : model/sixlowpan-header.cc.i
 
 model/sixlowpan-header.s: model/sixlowpan-header.cc.s
@@ -235,7 +259,7 @@ model/sixlowpan-header.s: model/sixlowpan-header.cc.s
 
 # target to generate assembly for a file
 model/sixlowpan-header.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/model/sixlowpan-header.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/model/sixlowpan-header.cc.s
 .PHONY : model/sixlowpan-header.cc.s
 
 model/sixlowpan-net-device.o: model/sixlowpan-net-device.cc.o
@@ -243,7 +267,7 @@ model/sixlowpan-net-device.o: model/sixlowpan-net-device.cc.o
 
 # target to build an object file
 model/sixlowpan-net-device.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/model/sixlowpan-net-device.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/model/sixlowpan-net-device.cc.o
 .PHONY : model/sixlowpan-net-device.cc.o
 
 model/sixlowpan-net-device.i: model/sixlowpan-net-device.cc.i
@@ -251,7 +275,7 @@ model/sixlowpan-net-device.i: model/sixlowpan-net-device.cc.i
 
 # target to preprocess a source file
 model/sixlowpan-net-device.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/model/sixlowpan-net-device.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/model/sixlowpan-net-device.cc.i
 .PHONY : model/sixlowpan-net-device.cc.i
 
 model/sixlowpan-net-device.s: model/sixlowpan-net-device.cc.s
@@ -259,8 +283,152 @@ model/sixlowpan-net-device.s: model/sixlowpan-net-device.cc.s
 
 # target to generate assembly for a file
 model/sixlowpan-net-device.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/model/sixlowpan-net-device.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/model/sixlowpan-net-device.cc.s
 .PHONY : model/sixlowpan-net-device.cc.s
+
+test/mock-net-device.o: test/mock-net-device.cc.o
+.PHONY : test/mock-net-device.o
+
+# target to build an object file
+test/mock-net-device.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/mock-net-device.cc.o
+.PHONY : test/mock-net-device.cc.o
+
+test/mock-net-device.i: test/mock-net-device.cc.i
+.PHONY : test/mock-net-device.i
+
+# target to preprocess a source file
+test/mock-net-device.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/mock-net-device.cc.i
+.PHONY : test/mock-net-device.cc.i
+
+test/mock-net-device.s: test/mock-net-device.cc.s
+.PHONY : test/mock-net-device.s
+
+# target to generate assembly for a file
+test/mock-net-device.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/mock-net-device.cc.s
+.PHONY : test/mock-net-device.cc.s
+
+test/sixlowpan-examples-test-suite.o: test/sixlowpan-examples-test-suite.cc.o
+.PHONY : test/sixlowpan-examples-test-suite.o
+
+# target to build an object file
+test/sixlowpan-examples-test-suite.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-examples-test-suite.cc.o
+.PHONY : test/sixlowpan-examples-test-suite.cc.o
+
+test/sixlowpan-examples-test-suite.i: test/sixlowpan-examples-test-suite.cc.i
+.PHONY : test/sixlowpan-examples-test-suite.i
+
+# target to preprocess a source file
+test/sixlowpan-examples-test-suite.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-examples-test-suite.cc.i
+.PHONY : test/sixlowpan-examples-test-suite.cc.i
+
+test/sixlowpan-examples-test-suite.s: test/sixlowpan-examples-test-suite.cc.s
+.PHONY : test/sixlowpan-examples-test-suite.s
+
+# target to generate assembly for a file
+test/sixlowpan-examples-test-suite.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-examples-test-suite.cc.s
+.PHONY : test/sixlowpan-examples-test-suite.cc.s
+
+test/sixlowpan-fragmentation-test.o: test/sixlowpan-fragmentation-test.cc.o
+.PHONY : test/sixlowpan-fragmentation-test.o
+
+# target to build an object file
+test/sixlowpan-fragmentation-test.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-fragmentation-test.cc.o
+.PHONY : test/sixlowpan-fragmentation-test.cc.o
+
+test/sixlowpan-fragmentation-test.i: test/sixlowpan-fragmentation-test.cc.i
+.PHONY : test/sixlowpan-fragmentation-test.i
+
+# target to preprocess a source file
+test/sixlowpan-fragmentation-test.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-fragmentation-test.cc.i
+.PHONY : test/sixlowpan-fragmentation-test.cc.i
+
+test/sixlowpan-fragmentation-test.s: test/sixlowpan-fragmentation-test.cc.s
+.PHONY : test/sixlowpan-fragmentation-test.s
+
+# target to generate assembly for a file
+test/sixlowpan-fragmentation-test.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-fragmentation-test.cc.s
+.PHONY : test/sixlowpan-fragmentation-test.cc.s
+
+test/sixlowpan-hc1-test.o: test/sixlowpan-hc1-test.cc.o
+.PHONY : test/sixlowpan-hc1-test.o
+
+# target to build an object file
+test/sixlowpan-hc1-test.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-hc1-test.cc.o
+.PHONY : test/sixlowpan-hc1-test.cc.o
+
+test/sixlowpan-hc1-test.i: test/sixlowpan-hc1-test.cc.i
+.PHONY : test/sixlowpan-hc1-test.i
+
+# target to preprocess a source file
+test/sixlowpan-hc1-test.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-hc1-test.cc.i
+.PHONY : test/sixlowpan-hc1-test.cc.i
+
+test/sixlowpan-hc1-test.s: test/sixlowpan-hc1-test.cc.s
+.PHONY : test/sixlowpan-hc1-test.s
+
+# target to generate assembly for a file
+test/sixlowpan-hc1-test.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-hc1-test.cc.s
+.PHONY : test/sixlowpan-hc1-test.cc.s
+
+test/sixlowpan-iphc-stateful-test.o: test/sixlowpan-iphc-stateful-test.cc.o
+.PHONY : test/sixlowpan-iphc-stateful-test.o
+
+# target to build an object file
+test/sixlowpan-iphc-stateful-test.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-iphc-stateful-test.cc.o
+.PHONY : test/sixlowpan-iphc-stateful-test.cc.o
+
+test/sixlowpan-iphc-stateful-test.i: test/sixlowpan-iphc-stateful-test.cc.i
+.PHONY : test/sixlowpan-iphc-stateful-test.i
+
+# target to preprocess a source file
+test/sixlowpan-iphc-stateful-test.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-iphc-stateful-test.cc.i
+.PHONY : test/sixlowpan-iphc-stateful-test.cc.i
+
+test/sixlowpan-iphc-stateful-test.s: test/sixlowpan-iphc-stateful-test.cc.s
+.PHONY : test/sixlowpan-iphc-stateful-test.s
+
+# target to generate assembly for a file
+test/sixlowpan-iphc-stateful-test.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-iphc-stateful-test.cc.s
+.PHONY : test/sixlowpan-iphc-stateful-test.cc.s
+
+test/sixlowpan-iphc-test.o: test/sixlowpan-iphc-test.cc.o
+.PHONY : test/sixlowpan-iphc-test.o
+
+# target to build an object file
+test/sixlowpan-iphc-test.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-iphc-test.cc.o
+.PHONY : test/sixlowpan-iphc-test.cc.o
+
+test/sixlowpan-iphc-test.i: test/sixlowpan-iphc-test.cc.i
+.PHONY : test/sixlowpan-iphc-test.i
+
+# target to preprocess a source file
+test/sixlowpan-iphc-test.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-iphc-test.cc.i
+.PHONY : test/sixlowpan-iphc-test.cc.i
+
+test/sixlowpan-iphc-test.s: test/sixlowpan-iphc-test.cc.s
+.PHONY : test/sixlowpan-iphc-test.s
+
+# target to generate assembly for a file
+test/sixlowpan-iphc-test.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/build.make src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-iphc-test.cc.s
+.PHONY : test/sixlowpan-iphc-test.cc.s
 
 # Help Target
 help:
@@ -274,8 +442,10 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... libsixlowpan"
 	@echo "... libsixlowpan-obj"
+	@echo "... libsixlowpan-test"
 	@echo "... helper/sixlowpan-helper.o"
 	@echo "... helper/sixlowpan-helper.i"
 	@echo "... helper/sixlowpan-helper.s"
@@ -285,6 +455,24 @@ help:
 	@echo "... model/sixlowpan-net-device.o"
 	@echo "... model/sixlowpan-net-device.i"
 	@echo "... model/sixlowpan-net-device.s"
+	@echo "... test/mock-net-device.o"
+	@echo "... test/mock-net-device.i"
+	@echo "... test/mock-net-device.s"
+	@echo "... test/sixlowpan-examples-test-suite.o"
+	@echo "... test/sixlowpan-examples-test-suite.i"
+	@echo "... test/sixlowpan-examples-test-suite.s"
+	@echo "... test/sixlowpan-fragmentation-test.o"
+	@echo "... test/sixlowpan-fragmentation-test.i"
+	@echo "... test/sixlowpan-fragmentation-test.s"
+	@echo "... test/sixlowpan-hc1-test.o"
+	@echo "... test/sixlowpan-hc1-test.i"
+	@echo "... test/sixlowpan-hc1-test.s"
+	@echo "... test/sixlowpan-iphc-stateful-test.o"
+	@echo "... test/sixlowpan-iphc-stateful-test.i"
+	@echo "... test/sixlowpan-iphc-stateful-test.s"
+	@echo "... test/sixlowpan-iphc-test.o"
+	@echo "... test/sixlowpan-iphc-test.i"
+	@echo "... test/sixlowpan-iphc-test.s"
 .PHONY : help
 
 
@@ -296,7 +484,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/VerifyGlobs.cmake
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/ns-3-dev/cmake-cache/CMakeFiles/VerifyGlobs.cmake
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

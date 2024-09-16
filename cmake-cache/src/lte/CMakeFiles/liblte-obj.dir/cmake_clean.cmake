@@ -233,8 +233,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/liblte-obj.dir/model/lte-ue-rrc.cc.o.d"
   "CMakeFiles/liblte-obj.dir/model/lte-vendor-specific-parameters.cc.o"
   "CMakeFiles/liblte-obj.dir/model/lte-vendor-specific-parameters.cc.o.d"
-  "CMakeFiles/liblte-obj.dir/model/ngap.cc.o"
-  "CMakeFiles/liblte-obj.dir/model/ngap.cc.o.d"
   "CMakeFiles/liblte-obj.dir/model/no-op-component-carrier-manager.cc.o"
   "CMakeFiles/liblte-obj.dir/model/no-op-component-carrier-manager.cc.o.d"
   "CMakeFiles/liblte-obj.dir/model/no-op-handover-algorithm.cc.o"

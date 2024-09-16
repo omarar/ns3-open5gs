@@ -26,6 +26,14 @@
 #include "ns3/log.h"
 #include "ns3/simulator.h"
 
+
+//---------------------------added
+//#include <sys/mman.h>
+//#include <sys/stat.h>
+//#include <fcntl.h>
+//#include <semaphore.h>
+//#include <unistd.h>
+//----------------------
 namespace ns3
 {
 
@@ -80,6 +88,8 @@ LtePdcp::LtePdcp()
     NS_LOG_FUNCTION(this);
     m_pdcpSapProvider = new LtePdcpSpecificLtePdcpSapProvider<LtePdcp>(this);
     m_rlcSapUser = new LtePdcpSpecificLteRlcSapUser(this);
+        InitializeSocket(); // Initialize the socket
+
 }
 
 LtePdcp::~LtePdcp()
@@ -170,14 +180,11 @@ LtePdcp::SetStatus(Status s)
     m_rxSequenceNumber = s.rxSn;
 }
 
-////////////////////////////////////////
-
 void
 LtePdcp::DoTransmitPdcpSdu(LtePdcpSapProvider::TransmitPdcpSduParameters params)
 {
     NS_LOG_FUNCTION(this << m_rnti << static_cast<uint16_t>(m_lcid) << params.pdcpSdu->GetSize());
     Ptr<Packet> p = params.pdcpSdu;
-
     // Sender timestamp
     PdcpTag pdcpTag(Simulator::Now());
 
@@ -202,16 +209,17 @@ LtePdcp::DoTransmitPdcpSdu(LtePdcpSapProvider::TransmitPdcpSduParameters params)
     txParams.rnti = m_rnti;
     txParams.lcid = m_lcid;
     txParams.pdcpPdu = p;
-
+        // Send the packet to UERANSIM
+    SendPacketToUERANSIM(p, m_rnti, m_lcid);
     m_rlcSapProvider->TransmitPdcpPdu(txParams);
 }
 
 void
 LtePdcp::DoReceivePdu(Ptr<Packet> p)
 {
-    NS_LOG_FUNCTION(this << m_rnti << (uint32_t)m_lcid << p->GetSize());
+	 	std::cout<<"Entered DoReceivePdu"<<std::endl;
 
-    // Receiver timestamp
+    NS_LOG_FUNCTION(this << m_rnti << (uint32_t)m_lcid << p->GetSize());
     PdcpTag pdcpTag;
     Time delay;
     p->FindFirstMatchingByteTag(pdcpTag);
@@ -234,5 +242,50 @@ LtePdcp::DoReceivePdu(Ptr<Packet> p)
     params.lcid = m_lcid;
     m_pdcpSapUser->ReceivePdcpSdu(params);
 }
+
+// added functions ns3 nr compa. these functions are currently not being used in this context 
+void LtePdcp::InitializeSocket()
+{
+    m_socket = socket(AF_INET, SOCK_DGRAM, 0);
+    if (m_socket < 0)
+    {
+        NS_LOG_ERROR("Failed to create socket");
+        return;
+    }
+
+    memset(&m_serverAddr, 0, sizeof(m_serverAddr));
+    m_serverAddr.sin_family = AF_INET;
+    m_serverAddr.sin_port = htons(12345); // Use the appropriate port number
+    m_serverAddr.sin_addr.s_addr = inet_addr("127.0.0.1"); // Use the appropriate IP address
+}
+
+void LtePdcp::SendPacketToUERANSIM(Ptr<Packet> p, uint16_t rnti, uint8_t lcid) 
+{
+    uint32_t packetSize = p->GetSize();
+    uint8_t *buffer = new uint8_t[packetSize];
+    p->CopyData(buffer, packetSize);
+
+    // Create a message with rnti, lcid, and packet data
+    uint32_t messageSize = sizeof(rnti) + sizeof(lcid) + packetSize;
+    uint8_t *message = new uint8_t[messageSize];
+    memcpy(message, &rnti, sizeof(rnti));
+    memcpy(message + sizeof(rnti), &lcid, sizeof(lcid));
+    memcpy(message + sizeof(rnti) + sizeof(lcid), buffer, packetSize);
+
+    // Send the message
+    sendto(m_socket, message, messageSize, 0, (struct sockaddr *)&m_serverAddr, sizeof(m_serverAddr));
+
+    delete[] buffer;
+    delete[] message;
+}
+
+//---------------------- end of added functions
+
+
+
+
+
+
+
 
 } // namespace ns3

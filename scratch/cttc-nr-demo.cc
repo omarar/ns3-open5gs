@@ -1,38 +1,18 @@
-/* -*-  Mode: C++; c-file-style: "gnu"; indent-tabs-mode:nil; -*- */
-
 // Copyright (c) 2019 Centre Tecnologic de Telecomunicacions de Catalunya (CTTC)
 //
 // SPDX-License-Identifier: GPL-2.0-only
-
-/**
- * \ingroup examples
- * \file cttc-nr-demo.cc
- * \brief A cozy, simple, NR demo (in a tutorial style)
- *
- * This example describes how to setup a simulation using the 3GPP channel model
- * from TR 38.900. This example consists of a simple grid topology, in which you
- * can choose the number of gNbs and UEs. Have a look at the possible parameters
- * to know what you can configure through the command line.
- *
- * With the default configuration, the example will create two flows that will
- * go through two different subband numerologies (or bandwidth parts). For that,
- * specifically, two bands are created, each with a single CC, and each CC containing
- * one bandwidth part.
- *
- * The example will print on-screen the end-to-end result of one (or two) flows,
- * as well as writing them on a file.
- *
- * \code{.unparsed}
-$ ./ns3 run "cttc-nr-demo --PrintHelp"
-    \endcode
- *
- */
-
+ 
+// NOLINTBEGIN
+// clang-format off
+ 
+// clang-format on
+// NOLINTEND
+ 
 /*
  * Include part. Often, you will have to include the headers for an entire module;
  * do that by including the name of the module you need with the suffix "-module.h".
  */
-
+ 
 #include "ns3/antenna-module.h"
 #include "ns3/applications-module.h"
 #include "ns3/buildings-module.h"
@@ -42,22 +22,21 @@ $ ./ns3 run "cttc-nr-demo --PrintHelp"
 #include "ns3/internet-apps-module.h"
 #include "ns3/internet-module.h"
 #include "ns3/mobility-module.h"
-#include "ns3/network-module.h"
 #include "ns3/nr-module.h"
 #include "ns3/point-to-point-module.h"
-#include "ns3/netanim-module.h"
-
+ 
 /*
  * Use, always, the namespace ns3. All the NR classes are inside such namespace.
  */
 using namespace ns3;
-
+ 
 /*
  * With this line, we will be able to see the logs of the file by enabling the
- * component "CttcNrDemo"
+ * component "CttcNrDemo".
+ * Further information on how logging works can be found in the ns-3 documentation [3].
  */
 NS_LOG_COMPONENT_DEFINE("CttcNrDemo");
-
+ 
 int
 main(int argc, char* argv[])
 {
@@ -71,39 +50,42 @@ main(int argc, char* argv[])
     uint16_t ueNumPergNb = 2;
     bool logging = false;
     bool doubleOperationalBand = true;
-
+ 
     // Traffic parameters (that we will use inside this script):
     uint32_t udpPacketSizeULL = 100;
     uint32_t udpPacketSizeBe = 1252;
     uint32_t lambdaULL = 10000;
     uint32_t lambdaBe = 10000;
-
+ 
     // Simulation parameters. Please don't use double to indicate seconds; use
     // ns-3 Time values which use integers to avoid portability issues.
     Time simTime = MilliSeconds(1000);
     Time udpAppStartTime = MilliSeconds(400);
-
-    // NR parameters. We will take the input from the command line, and then we
+ 
+    // NR parameters (Reference: 3GPP TR 38.901 V17.0.0 (Release 17)
+    // Table 7.8-1 for the power and BW).
+    // In this example the BW has been split into two BWPs
+    // We will take the input from the command line, and then we
     // will pass them inside the NR module.
     uint16_t numerologyBwp1 = 4;
     double centralFrequencyBand1 = 28e9;
-    double bandwidthBand1 = 100e6;
+    double bandwidthBand1 = 50e6;
     uint16_t numerologyBwp2 = 2;
     double centralFrequencyBand2 = 28.2e9;
-    double bandwidthBand2 = 100e6;
-    double totalTxPower = 4;
-
+    double bandwidthBand2 = 50e6;
+    double totalTxPower = 35;
+ 
     // Where we will store the output files.
     std::string simTag = "default";
     std::string outputDir = "./";
-
+ 
     /*
      * From here, we instruct the ns3::CommandLine class of all the input parameters
      * that we may accept as input, as well as their description, and the storage
      * variable.
      */
     CommandLine cmd(__FILE__);
-
+ 
     cmd.AddValue("gNbNum", "The number of gNbs in multiple-ue topology", gNbNum);
     cmd.AddValue("ueNumPergNb", "The number of UE per gNb in multiple-ue topology", ueNumPergNb);
     cmd.AddValue("logging", "Enable logging", logging);
@@ -121,7 +103,7 @@ main(int argc, char* argv[])
                  "Number of UDP packets in one second for ultra low latency traffic",
                  lambdaULL);
     cmd.AddValue("lambdaBe",
-                 "Number of UDP packets in one second for best effor traffic",
+                 "Number of UDP packets in one second for best effort traffic",
                  lambdaBe);
     cmd.AddValue("simTime", "Simulation time", simTime);
     cmd.AddValue("numerologyBwp1", "The numerology to be used in bandwidth part 1", numerologyBwp1);
@@ -142,17 +124,17 @@ main(int argc, char* argv[])
                  "tag to be appended to output filenames to distinguish simulation campaigns",
                  simTag);
     cmd.AddValue("outputDir", "directory where to store simulation results", outputDir);
-
+ 
     // Parse the command line
     cmd.Parse(argc, argv);
-
+ 
     /*
      * Check if the frequency is in the allowed range.
      * If you need to add other checks, here is the best position to put them.
      */
     NS_ABORT_IF(centralFrequencyBand1 < 0.5e9 && centralFrequencyBand1 > 100e9);
     NS_ABORT_IF(centralFrequencyBand2 < 0.5e9 && centralFrequencyBand2 > 100e9);
-
+ 
     /*
      * If the logging variable is set to true, enable the log of some components
      * through the code. The same effect can be obtained through the use
@@ -169,13 +151,15 @@ main(int argc, char* argv[])
         LogComponentEnable("UdpServer", LOG_LEVEL_INFO);
         LogComponentEnable("LtePdcp", LOG_LEVEL_INFO);
     }
-
+ 
     /*
-     * Default values for the simulation. We are progressively removing all
-     * the instances of SetDefault, but we need it for legacy code (LTE)
+     * In general, attributes for the NR module are typically configured in NrHelper.  However, some
+     * attributes need to be configured globally through the Config::SetDefault() method. Below is
+     * an example: if you want to make the RLC buffer very large, you can pass a very large integer
+     * here.
      */
     Config::SetDefault("ns3::LteRlcUm::MaxTxBufferSize", UintegerValue(999999999));
-
+ 
     /*
      * Create the scenario. In our examples, we heavily use helpers that setup
      * the gnbs and ue following a pre-defined pattern. Please have a look at the
@@ -185,19 +169,20 @@ main(int argc, char* argv[])
     GridScenarioHelper gridScenario;
     gridScenario.SetRows(1);
     gridScenario.SetColumns(gNbNum);
-    gridScenario.SetHorizontalBsDistance(5.0);
-    gridScenario.SetVerticalBsDistance(5.0);
-    gridScenario.SetBsHeight(1.5);
+    // All units below are in meters
+    gridScenario.SetHorizontalBsDistance(10.0);
+    gridScenario.SetVerticalBsDistance(10.0);
+    gridScenario.SetBsHeight(10);
     gridScenario.SetUtHeight(1.5);
     // must be set before BS number
     gridScenario.SetSectorization(GridScenarioHelper::SINGLE);
     gridScenario.SetBsNumber(gNbNum);
     gridScenario.SetUtNumber(ueNumPergNb * gNbNum);
     gridScenario.SetScenarioHeight(3); // Create a 3x3 scenario where the UE will
-    gridScenario.SetScenarioLength(3); // be distribuited.
+    gridScenario.SetScenarioLength(3); // be distributed.
     randomStream += gridScenario.AssignStreams(randomStream);
     gridScenario.CreateScenario();
-
+ 
     /*
      * Create two different NodeContainer for the different traffic type.
      * In ueLowLat we will put the UEs that will receive low-latency traffic,
@@ -205,7 +190,7 @@ main(int argc, char* argv[])
      */
     NodeContainer ueLowLatContainer;
     NodeContainer ueVoiceContainer;
-
+ 
     for (uint32_t j = 0; j < gridScenario.GetUserTerminals().GetN(); ++j)
     {
         Ptr<Node> ue = gridScenario.GetUserTerminals().Get(j);
@@ -218,11 +203,13 @@ main(int argc, char* argv[])
             ueVoiceContainer.Add(ue);
         }
     }
-
+ 
     /*
      * TODO: Add a print, or a plot, that shows the scenario.
      */
-
+    NS_LOG_INFO("Creating " << gridScenario.GetUserTerminals().GetN() << " user terminals and "
+                            << gridScenario.GetBaseStations().GetN() << " gNBs");
+ 
     /*
      * Setup the NR module. We create the various helpers needed for the
      * NR simulation:
@@ -234,11 +221,11 @@ main(int argc, char* argv[])
     Ptr<NrPointToPointEpcHelper> epcHelper = CreateObject<NrPointToPointEpcHelper>();
     Ptr<IdealBeamformingHelper> idealBeamformingHelper = CreateObject<IdealBeamformingHelper>();
     Ptr<NrHelper> nrHelper = CreateObject<NrHelper>();
-
+ 
     // Put the pointers inside nrHelper
     nrHelper->SetBeamformingHelper(idealBeamformingHelper);
     nrHelper->SetEpcHelper(epcHelper);
-
+ 
     /*
      * Spectrum division. We create two operational bands, each of them containing
      * one component carrier, and each CC containing a single bandwidth part
@@ -249,7 +236,7 @@ main(int argc, char* argv[])
     BandwidthPartInfoPtrVector allBwps;
     CcBwpCreator ccBwpCreator;
     const uint8_t numCcPerBand = 1; // in this example, both bands have a single CC
-
+ 
     // Create the configuration for the CcBwpHelper. SimpleOperationBandConf creates
     // a single BWP per CC
     CcBwpCreator::SimpleOperationBandConf bandConf1(centralFrequencyBand1,
@@ -260,18 +247,18 @@ main(int argc, char* argv[])
                                                     bandwidthBand2,
                                                     numCcPerBand,
                                                     BandwidthPartInfo::UMi_StreetCanyon);
-
+ 
     // By using the configuration created, it is time to make the operation bands
     OperationBandInfo band1 = ccBwpCreator.CreateOperationBandContiguousCc(bandConf1);
     OperationBandInfo band2 = ccBwpCreator.CreateOperationBandContiguousCc(bandConf2);
-
+ 
     /*
      * The configured spectrum division is:
      * ------------Band1--------------|--------------Band2-----------------
      * ------------CC1----------------|--------------CC2-------------------
      * ------------BWP1---------------|--------------BWP2------------------
      */
-
+ 
     /*
      * Attributes of ThreeGppChannelModel still cannot be set in our way.
      * TODO: Coordinate with Tommaso
@@ -279,7 +266,7 @@ main(int argc, char* argv[])
     Config::SetDefault("ns3::ThreeGppChannelModel::UpdatePeriod", TimeValue(MilliSeconds(0)));
     nrHelper->SetChannelConditionModelAttribute("UpdatePeriod", TimeValue(MilliSeconds(0)));
     nrHelper->SetPathlossAttribute("ShadowingEnabled", BooleanValue(false));
-
+ 
     /*
      * Initialize channel and pathloss, plus other things inside band1. If needed,
      * the band configuration can be done manually, but we leave it for more
@@ -287,14 +274,14 @@ main(int argc, char* argv[])
      * of all the spectrum initialization needs.
      */
     nrHelper->InitializeOperationBand(&band1);
-
+ 
     /*
      * Start to account for the bandwidth used by the example, as well as
      * the total power that has to be divided among the BWPs.
      */
     double x = pow(10, totalTxPower / 10);
     double totalBandwidth = bandwidthBand1;
-
+ 
     /*
      * if not single band simulation, initialize and setup power in the second band
      */
@@ -309,7 +296,7 @@ main(int argc, char* argv[])
     {
         allBwps = CcBwpCreator::GetAllBwps({band1});
     }
-
+ 
     /*
      * allBwps contains all the spectrum configuration needed for the nrHelper.
      *
@@ -327,32 +314,32 @@ main(int argc, char* argv[])
      * the pointer needed, and calling "SetAttribute" on top of such pointer.
      *
      */
-
+ 
     Packet::EnableChecking();
     Packet::EnablePrinting();
-
+ 
     /*
      *  Case (i): Attributes valid for all the nodes
      */
     // Beamforming method
     idealBeamformingHelper->SetAttribute("BeamformingMethod",
                                          TypeIdValue(DirectPathBeamforming::GetTypeId()));
-
+ 
     // Core latency
     epcHelper->SetAttribute("S1uLinkDelay", TimeValue(MilliSeconds(0)));
-
+ 
     // Antennas for all the UEs
     nrHelper->SetUeAntennaAttribute("NumRows", UintegerValue(2));
     nrHelper->SetUeAntennaAttribute("NumColumns", UintegerValue(4));
     nrHelper->SetUeAntennaAttribute("AntennaElement",
                                     PointerValue(CreateObject<IsotropicAntennaModel>()));
-
+ 
     // Antennas for all the gNbs
     nrHelper->SetGnbAntennaAttribute("NumRows", UintegerValue(4));
     nrHelper->SetGnbAntennaAttribute("NumColumns", UintegerValue(8));
     nrHelper->SetGnbAntennaAttribute("AntennaElement",
                                      PointerValue(CreateObject<IsotropicAntennaModel>()));
-
+ 
     uint32_t bwpIdForLowLat = 0;
     uint32_t bwpIdForVoice = 0;
     if (doubleOperationalBand)
@@ -360,38 +347,38 @@ main(int argc, char* argv[])
         bwpIdForVoice = 1;
         bwpIdForLowLat = 0;
     }
-
+ 
     // gNb routing between Bearer and bandwidh part
     nrHelper->SetGnbBwpManagerAlgorithmAttribute("NGBR_LOW_LAT_EMBB",
                                                  UintegerValue(bwpIdForLowLat));
     nrHelper->SetGnbBwpManagerAlgorithmAttribute("GBR_CONV_VOICE", UintegerValue(bwpIdForVoice));
-
+ 
     // Ue routing between Bearer and bandwidth part
     nrHelper->SetUeBwpManagerAlgorithmAttribute("NGBR_LOW_LAT_EMBB", UintegerValue(bwpIdForLowLat));
     nrHelper->SetUeBwpManagerAlgorithmAttribute("GBR_CONV_VOICE", UintegerValue(bwpIdForVoice));
-
+ 
     /*
      * We miss many other parameters. By default, not configuring them is equivalent
      * to use the default values. Please, have a look at the documentation to see
      * what are the default values for all the attributes you are not seeing here.
      */
-
+ 
     /*
      * Case (ii): Attributes valid for a subset of the nodes
      */
-
+ 
     // NOT PRESENT IN THIS SIMPLE EXAMPLE
-
+ 
     /*
      * We have configured the attributes we needed. Now, install and get the pointers
      * to the NetDevices, which contains all the NR stack:
      */
-
+ 
     NetDeviceContainer enbNetDev =
         nrHelper->InstallGnbDevice(gridScenario.GetBaseStations(), allBwps);
     NetDeviceContainer ueLowLatNetDev = nrHelper->InstallUeDevice(ueLowLatContainer, allBwps);
     NetDeviceContainer ueVoiceNetDev = nrHelper->InstallUeDevice(ueVoiceContainer, allBwps);
-
+ 
     randomStream += nrHelper->AssignStreams(enbNetDev, randomStream);
     randomStream += nrHelper->AssignStreams(ueLowLatNetDev, randomStream);
     randomStream += nrHelper->AssignStreams(ueVoiceNetDev, randomStream);
@@ -399,14 +386,14 @@ main(int argc, char* argv[])
      * Case (iii): Go node for node and change the attributes we have to setup
      * per-node.
      */
-
+ 
     // Get the first netdevice (enbNetDev.Get (0)) and the first bandwidth part (0)
     // and set the attribute.
     nrHelper->GetGnbPhy(enbNetDev.Get(0), 0)
         ->SetAttribute("Numerology", UintegerValue(numerologyBwp1));
     nrHelper->GetGnbPhy(enbNetDev.Get(0), 0)
         ->SetAttribute("TxPower", DoubleValue(10 * log10((bandwidthBand1 / totalBandwidth) * x)));
-
+ 
     if (doubleOperationalBand)
     {
         // Get the first netdevice (enbNetDev.Get (0)) and the second bandwidth part (1)
@@ -416,27 +403,27 @@ main(int argc, char* argv[])
         nrHelper->GetGnbPhy(enbNetDev.Get(0), 1)
             ->SetTxPower(10 * log10((bandwidthBand2 / totalBandwidth) * x));
     }
-
+ 
     // When all the configuration is done, explicitly call UpdateConfig ()
-
+ 
     for (auto it = enbNetDev.Begin(); it != enbNetDev.End(); ++it)
     {
         DynamicCast<NrGnbNetDevice>(*it)->UpdateConfig();
     }
-
+ 
     for (auto it = ueLowLatNetDev.Begin(); it != ueLowLatNetDev.End(); ++it)
     {
         DynamicCast<NrUeNetDevice>(*it)->UpdateConfig();
     }
-
+ 
     for (auto it = ueVoiceNetDev.Begin(); it != ueVoiceNetDev.End(); ++it)
     {
         DynamicCast<NrUeNetDevice>(*it)->UpdateConfig();
     }
-
+ 
     // From here, it is standard NS3. In the future, we will create helpers
     // for this part as well.
-
+ 
     // create the internet and install the IP stack on the UEs
     // get SGW/PGW and create a single RemoteHost
     Ptr<Node> pgw = epcHelper->GetPgwNode();
@@ -445,7 +432,7 @@ main(int argc, char* argv[])
     Ptr<Node> remoteHost = remoteHostContainer.Get(0);
     InternetStackHelper internet;
     internet.Install(remoteHostContainer);
-
+ 
     // connect a remoteHost to pgw. Setup routing too
     PointToPointHelper p2ph;
     p2ph.SetDeviceAttribute("DataRate", DataRateValue(DataRate("100Gb/s")));
@@ -460,12 +447,12 @@ main(int argc, char* argv[])
         ipv4RoutingHelper.GetStaticRouting(remoteHost->GetObject<Ipv4>());
     remoteHostStaticRouting->AddNetworkRouteTo(Ipv4Address("7.0.0.0"), Ipv4Mask("255.0.0.0"), 1);
     internet.Install(gridScenario.GetUserTerminals());
-
+ 
     Ipv4InterfaceContainer ueLowLatIpIface =
         epcHelper->AssignUeIpv4Address(NetDeviceContainer(ueLowLatNetDev));
     Ipv4InterfaceContainer ueVoiceIpIface =
         epcHelper->AssignUeIpv4Address(NetDeviceContainer(ueVoiceNetDev));
-
+ 
     // Set the default gateway for the UEs
     for (uint32_t j = 0; j < gridScenario.GetUserTerminals().GetN(); ++j)
     {
@@ -473,28 +460,28 @@ main(int argc, char* argv[])
             gridScenario.GetUserTerminals().Get(j)->GetObject<Ipv4>());
         ueStaticRouting->SetDefaultRoute(epcHelper->GetUeDefaultGatewayAddress(), 1);
     }
-
+ 
     // attach UEs to the closest eNB
     nrHelper->AttachToClosestEnb(ueLowLatNetDev, enbNetDev);
     nrHelper->AttachToClosestEnb(ueVoiceNetDev, enbNetDev);
-
+ 
     /*
      * Traffic part. Install two kind of traffic: low-latency and voice, each
      * identified by a particular source port.
      */
     uint16_t dlPortLowLat = 1234;
     uint16_t dlPortVoice = 1235;
-
+ 
     ApplicationContainer serverApps;
-
+ 
     // The sink will always listen to the specified ports
     UdpServerHelper dlPacketSinkLowLat(dlPortLowLat);
     UdpServerHelper dlPacketSinkVoice(dlPortVoice);
-
+ 
     // The server, that is the application which is listening, is installed in the UE
     serverApps.Add(dlPacketSinkLowLat.Install(ueLowLatContainer));
     serverApps.Add(dlPacketSinkVoice.Install(ueVoiceContainer));
-
+ 
     /*
      * Configure attributes for the different generators, using user-provided
      * parameters for generating a CBR traffic
@@ -506,122 +493,107 @@ main(int argc, char* argv[])
     dlClientLowLat.SetAttribute("MaxPackets", UintegerValue(0xFFFFFFFF));
     dlClientLowLat.SetAttribute("PacketSize", UintegerValue(udpPacketSizeULL));
     dlClientLowLat.SetAttribute("Interval", TimeValue(Seconds(1.0 / lambdaULL)));
-
+ 
     // The bearer that will carry low latency traffic
     EpsBearer lowLatBearer(EpsBearer::NGBR_LOW_LAT_EMBB);
-
+ 
     // The filter for the low-latency traffic
     Ptr<EpcTft> lowLatTft = Create<EpcTft>();
     EpcTft::PacketFilter dlpfLowLat;
     dlpfLowLat.localPortStart = dlPortLowLat;
     dlpfLowLat.localPortEnd = dlPortLowLat;
     lowLatTft->Add(dlpfLowLat);
-
+ 
     // Voice configuration and object creation:
     UdpClientHelper dlClientVoice;
     dlClientVoice.SetAttribute("RemotePort", UintegerValue(dlPortVoice));
     dlClientVoice.SetAttribute("MaxPackets", UintegerValue(0xFFFFFFFF));
     dlClientVoice.SetAttribute("PacketSize", UintegerValue(udpPacketSizeBe));
     dlClientVoice.SetAttribute("Interval", TimeValue(Seconds(1.0 / lambdaBe)));
-
+ 
     // The bearer that will carry voice traffic
     EpsBearer voiceBearer(EpsBearer::GBR_CONV_VOICE);
-
+ 
     // The filter for the voice traffic
     Ptr<EpcTft> voiceTft = Create<EpcTft>();
     EpcTft::PacketFilter dlpfVoice;
     dlpfVoice.localPortStart = dlPortVoice;
     dlpfVoice.localPortEnd = dlPortVoice;
     voiceTft->Add(dlpfVoice);
-
+ 
     /*
      * Let's install the applications!
-     
-     // Retrieve and print the IP address of the UE
-    Ptr<Ipv4> ipv4 = ueNodes.Get(0)->GetObject<Ipv4>();
-    Ipv4Address ueIpAddr = ipv4->GetAddress(1, 0).GetLocal();
-    std::cout << "UE IP Address: " << ueIpAddr << std::endl;
      */
     ApplicationContainer clientApps;
-
-
+ 
     for (uint32_t i = 0; i < ueLowLatContainer.GetN(); ++i)
     {
         Ptr<Node> ue = ueLowLatContainer.Get(i);
-        Ptr<NetDevice> ueDevice = ueLowLatNetDev.Get(i); 
-        Address ueAddress = ueLowLatIpIface.GetAddress(i);               
-        
-        //Ipv4Address addr = ueAddress.GetLocal();
-        //std::cout << "UE LowLat" << i << " IP address: " << ueLowLatIpIface << std::endl;
-
+        Ptr<NetDevice> ueDevice = ueLowLatNetDev.Get(i);
+        Address ueAddress = ueLowLatIpIface.GetAddress(i);
+ 
         // The client, who is transmitting, is installed in the remote host,
         // with destination address set to the address of the UE
         dlClientLowLat.SetAttribute("RemoteAddress", AddressValue(ueAddress));
         clientApps.Add(dlClientLowLat.Install(remoteHost));
-
+ 
         // Activate a dedicated bearer for the traffic type
         nrHelper->ActivateDedicatedEpsBearer(ueDevice, lowLatBearer, lowLatTft);
     }
-
+ 
     for (uint32_t i = 0; i < ueVoiceContainer.GetN(); ++i)
     {
         Ptr<Node> ue = ueVoiceContainer.Get(i);
         Ptr<NetDevice> ueDevice = ueVoiceNetDev.Get(i);
         Address ueAddress = ueVoiceIpIface.GetAddress(i);
-             
-       // Ipv4Address ueAddress1 = ueVoiceIpIface.GetAddress(i, 0).GetLocal();
-        //std::cout << "UE " << i << " IP Address: " << ueAddress1 << std::endl;     
-             
+ 
         // The client, who is transmitting, is installed in the remote host,
         // with destination address set to the address of the UE
         dlClientVoice.SetAttribute("RemoteAddress", AddressValue(ueAddress));
         clientApps.Add(dlClientVoice.Install(remoteHost));
-
+ 
         // Activate a dedicated bearer for the traffic type
         nrHelper->ActivateDedicatedEpsBearer(ueDevice, voiceBearer, voiceTft);
     }
-
+ 
     // start UDP server and client apps
     serverApps.Start(udpAppStartTime);
     clientApps.Start(udpAppStartTime);
     serverApps.Stop(simTime);
     clientApps.Stop(simTime);
-
+ 
     // enable the traces provided by the nr module
     // nrHelper->EnableTraces();
-
+ 
     FlowMonitorHelper flowmonHelper;
     NodeContainer endpointNodes;
     endpointNodes.Add(remoteHost);
     endpointNodes.Add(gridScenario.GetUserTerminals());
-
+ 
     Ptr<ns3::FlowMonitor> monitor = flowmonHelper.Install(endpointNodes);
     monitor->SetAttribute("DelayBinWidth", DoubleValue(0.001));
     monitor->SetAttribute("JitterBinWidth", DoubleValue(0.001));
     monitor->SetAttribute("PacketSizeBinWidth", DoubleValue(20));
-
+ 
     Simulator::Stop(simTime);
-    
-    AnimationInterface anim ("cttc-nr-demo-animation.xml");
-    
     Simulator::Run();
-
+ 
     /*
      * To check what was installed in the memory, i.e., BWPs of eNb Device, and its configuration.
      * Example is: Node 1 -> Device 0 -> BandwidthPartMap -> {0,1} BWPs -> NrGnbPhy -> Numerology,
     GtkConfigStore config;
     config.ConfigureAttributes ();
     */
-
+ 
     // Print per-flow statistics
     monitor->CheckForLostPackets();
     Ptr<Ipv4FlowClassifier> classifier =
         DynamicCast<Ipv4FlowClassifier>(flowmonHelper.GetClassifier());
     FlowMonitor::FlowStatsContainer stats = monitor->GetFlowStats();
-
+ 
     double averageFlowThroughput = 0.0;
     double averageFlowDelay = 0.0;
-
+ 
     std::ofstream outFile;
     std::string filename = outputDir + "/" + simTag;
     outFile.open(filename.c_str(), std::ofstream::out | std::ofstream::trunc);
@@ -630,9 +602,9 @@ main(int argc, char* argv[])
         std::cerr << "Can't open file " << filename << std::endl;
         return 1;
     }
-
+ 
     outFile.setf(std::ios_base::fixed);
-
+ 
     double flowDuration = (simTime - udpAppStartTime).GetSeconds();
     for (std::map<FlowId, FlowMonitor::FlowStats>::const_iterator i = stats.begin();
          i != stats.end();
@@ -662,7 +634,7 @@ main(int argc, char* argv[])
             // Measure the duration of the flow from receiver's perspective
             averageFlowThroughput += i->second.rxBytes * 8.0 / flowDuration / 1000 / 1000;
             averageFlowDelay += 1000 * i->second.delaySum.GetSeconds() / i->second.rxPackets;
-
+ 
             outFile << "  Throughput: " << i->second.rxBytes * 8.0 / flowDuration / 1000 / 1000
                     << " Mbps\n";
             outFile << "  Mean delay:  "
@@ -680,29 +652,29 @@ main(int argc, char* argv[])
         }
         outFile << "  Rx Packets: " << i->second.rxPackets << "\n";
     }
-
+ 
     double meanFlowThroughput = averageFlowThroughput / stats.size();
     double meanFlowDelay = averageFlowDelay / stats.size();
-
+ 
     outFile << "\n\n  Mean flow throughput: " << meanFlowThroughput << "\n";
     outFile << "  Mean flow delay: " << meanFlowDelay << "\n";
-
+ 
     outFile.close();
-
+ 
     std::ifstream f(filename.c_str());
-
+ 
     if (f.is_open())
     {
         std::cout << f.rdbuf();
     }
-
+ 
     Simulator::Destroy();
-
+ 
     if (argc == 0)
     {
         double toleranceMeanFlowThroughput = 0.0001 * 56.258560;
         double toleranceMeanFlowDelay = 0.0001 * 0.553292;
-
+ 
         if (meanFlowThroughput >= 56.258560 - toleranceMeanFlowThroughput &&
             meanFlowThroughput <= 56.258560 + toleranceMeanFlowThroughput &&
             meanFlowDelay >= 0.553292 - toleranceMeanFlowDelay &&
@@ -719,7 +691,7 @@ main(int argc, char* argv[])
     {
         double toleranceMeanFlowThroughput = 0.0001 * 47.858536;
         double toleranceMeanFlowDelay = 0.0001 * 10.504189;
-
+ 
         if (meanFlowThroughput >= 47.858536 - toleranceMeanFlowThroughput &&
             meanFlowThroughput <= 47.858536 + toleranceMeanFlowThroughput &&
             meanFlowDelay >= 10.504189 - toleranceMeanFlowDelay &&
@@ -737,3 +709,4 @@ main(int argc, char* argv[])
         return EXIT_SUCCESS; // we dont check other parameters configurations at the moment
     }
 }
+

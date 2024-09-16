@@ -68,7 +68,7 @@ NoBackhaulEpcHelper::NoBackhaulEpcHelper()
     m_s11Ipv4AddressHelper.SetBase("13.0.0.0", "255.255.255.252");
     m_s5Ipv4AddressHelper.SetBase("14.0.0.0", "255.255.255.252");
 
-    // we use a /8 net for all UEs
+    // we use a /8 net for all UEs was 7.0.0.0 255.0.0.0 //("10.45.0.0", "255.255.255.0");
     m_uePgwAddressHelper.SetBase("7.0.0.0", "255.0.0.0");
 
     // we use a /64 IPv6 net all UEs

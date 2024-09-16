@@ -57,13 +57,23 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omar/Desktop/git_repo/ns3-open5gs
+CMAKE_SOURCE_DIR = /home/omar/ns-3-dev
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache
+CMAKE_BINARY_DIR = /home/omar/ns-3-dev/cmake-cache
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -132,14 +142,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -E cmake_progress_start /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/scratch//CMakeFiles/progress.marks
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles 0
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -E cmake_progress_start /home/omar/ns-3-dev/cmake-cache/CMakeFiles /home/omar/ns-3-dev/cmake-cache/scratch//CMakeFiles/progress.marks
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/omar/ns-3-dev/cmake-cache/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/clean
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,23 +158,23 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/preinstall
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/preinstall
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/VerifyGlobs.cmake
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/ns-3-dev/cmake-cache/CMakeFiles/VerifyGlobs.cmake
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 scratch/CMakeFiles/scratch_cttc-nr-demo.dir/rule:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_cttc-nr-demo.dir/rule
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_cttc-nr-demo.dir/rule
 .PHONY : scratch/CMakeFiles/scratch_cttc-nr-demo.dir/rule
 
 # Convenience name for target.
@@ -173,82 +183,152 @@ scratch_cttc-nr-demo: scratch/CMakeFiles/scratch_cttc-nr-demo.dir/rule
 
 # fast build rule for target.
 scratch_cttc-nr-demo/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-demo.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-demo.dir/build
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-demo.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-demo.dir/build
 .PHONY : scratch_cttc-nr-demo/fast
 
 # Convenience name for target.
-scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs.dir/rule:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs.dir/rule
-.PHONY : scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs.dir/rule
+scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs-1gnb.dir/rule:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs-1gnb.dir/rule
+.PHONY : scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs-1gnb.dir/rule
 
 # Convenience name for target.
-scratch_cttc-nr-mimo-demo-open5gs: scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs.dir/rule
-.PHONY : scratch_cttc-nr-mimo-demo-open5gs
+scratch_cttc-nr-mimo-demo-open5gs-1gnb: scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs-1gnb.dir/rule
+.PHONY : scratch_cttc-nr-mimo-demo-open5gs-1gnb
 
 # fast build rule for target.
-scratch_cttc-nr-mimo-demo-open5gs/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs.dir/build
-.PHONY : scratch_cttc-nr-mimo-demo-open5gs/fast
+scratch_cttc-nr-mimo-demo-open5gs-1gnb/fast:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs-1gnb.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs-1gnb.dir/build
+.PHONY : scratch_cttc-nr-mimo-demo-open5gs-1gnb/fast
 
 # Convenience name for target.
-scratch/CMakeFiles/scratch_eNB_open5gs_integration.dir/rule:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_eNB_open5gs_integration.dir/rule
-.PHONY : scratch/CMakeFiles/scratch_eNB_open5gs_integration.dir/rule
+scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs-1ue.dir/rule:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs-1ue.dir/rule
+.PHONY : scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs-1ue.dir/rule
 
 # Convenience name for target.
-scratch_eNB_open5gs_integration: scratch/CMakeFiles/scratch_eNB_open5gs_integration.dir/rule
-.PHONY : scratch_eNB_open5gs_integration
+scratch_cttc-nr-mimo-demo-open5gs-1ue: scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs-1ue.dir/rule
+.PHONY : scratch_cttc-nr-mimo-demo-open5gs-1ue
 
 # fast build rule for target.
-scratch_eNB_open5gs_integration/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_eNB_open5gs_integration.dir/build.make scratch/CMakeFiles/scratch_eNB_open5gs_integration.dir/build
-.PHONY : scratch_eNB_open5gs_integration/fast
+scratch_cttc-nr-mimo-demo-open5gs-1ue/fast:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs-1ue.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs-1ue.dir/build
+.PHONY : scratch_cttc-nr-mimo-demo-open5gs-1ue/fast
 
 # Convenience name for target.
-scratch/CMakeFiles/scratch_first.dir/rule:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_first.dir/rule
-.PHONY : scratch/CMakeFiles/scratch_first.dir/rule
+scratch/CMakeFiles/scratch_cttc-nr-mimo-demo.dir/rule:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_cttc-nr-mimo-demo.dir/rule
+.PHONY : scratch/CMakeFiles/scratch_cttc-nr-mimo-demo.dir/rule
 
 # Convenience name for target.
-scratch_first: scratch/CMakeFiles/scratch_first.dir/rule
-.PHONY : scratch_first
+scratch_cttc-nr-mimo-demo: scratch/CMakeFiles/scratch_cttc-nr-mimo-demo.dir/rule
+.PHONY : scratch_cttc-nr-mimo-demo
 
 # fast build rule for target.
-scratch_first/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_first.dir/build.make scratch/CMakeFiles/scratch_first.dir/build
-.PHONY : scratch_first/fast
+scratch_cttc-nr-mimo-demo/fast:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-mimo-demo.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-mimo-demo.dir/build
+.PHONY : scratch_cttc-nr-mimo-demo/fast
 
 # Convenience name for target.
-scratch/CMakeFiles/scratch_lena-simple-epc.dir/rule:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_lena-simple-epc.dir/rule
-.PHONY : scratch/CMakeFiles/scratch_lena-simple-epc.dir/rule
+scratch/CMakeFiles/scratch_example.dir/rule:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_example.dir/rule
+.PHONY : scratch/CMakeFiles/scratch_example.dir/rule
 
 # Convenience name for target.
-scratch_lena-simple-epc: scratch/CMakeFiles/scratch_lena-simple-epc.dir/rule
-.PHONY : scratch_lena-simple-epc
+scratch_example: scratch/CMakeFiles/scratch_example.dir/rule
+.PHONY : scratch_example
 
 # fast build rule for target.
-scratch_lena-simple-epc/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_lena-simple-epc.dir/build.make scratch/CMakeFiles/scratch_lena-simple-epc.dir/build
-.PHONY : scratch_lena-simple-epc/fast
+scratch_example/fast:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_example.dir/build.make scratch/CMakeFiles/scratch_example.dir/build
+.PHONY : scratch_example/fast
 
 # Convenience name for target.
-scratch/CMakeFiles/scratch_scratch-simulator.dir/rule:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_scratch-simulator.dir/rule
-.PHONY : scratch/CMakeFiles/scratch_scratch-simulator.dir/rule
+scratch/CMakeFiles/scratch_gnb.dir/rule:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_gnb.dir/rule
+.PHONY : scratch/CMakeFiles/scratch_gnb.dir/rule
 
 # Convenience name for target.
-scratch_scratch-simulator: scratch/CMakeFiles/scratch_scratch-simulator.dir/rule
-.PHONY : scratch_scratch-simulator
+scratch_gnb: scratch/CMakeFiles/scratch_gnb.dir/rule
+.PHONY : scratch_gnb
 
 # fast build rule for target.
-scratch_scratch-simulator/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_scratch-simulator.dir/build.make scratch/CMakeFiles/scratch_scratch-simulator.dir/build
-.PHONY : scratch_scratch-simulator/fast
+scratch_gnb/fast:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_gnb.dir/build.make scratch/CMakeFiles/scratch_gnb.dir/build
+.PHONY : scratch_gnb/fast
+
+# Convenience name for target.
+scratch/CMakeFiles/scratch_grid_example.dir/rule:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_grid_example.dir/rule
+.PHONY : scratch/CMakeFiles/scratch_grid_example.dir/rule
+
+# Convenience name for target.
+scratch_grid_example: scratch/CMakeFiles/scratch_grid_example.dir/rule
+.PHONY : scratch_grid_example
+
+# fast build rule for target.
+scratch_grid_example/fast:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_grid_example.dir/build.make scratch/CMakeFiles/scratch_grid_example.dir/build
+.PHONY : scratch_grid_example/fast
+
+# Convenience name for target.
+scratch/CMakeFiles/scratch_gtp-test.dir/rule:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_gtp-test.dir/rule
+.PHONY : scratch/CMakeFiles/scratch_gtp-test.dir/rule
+
+# Convenience name for target.
+scratch_gtp-test: scratch/CMakeFiles/scratch_gtp-test.dir/rule
+.PHONY : scratch_gtp-test
+
+# fast build rule for target.
+scratch_gtp-test/fast:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_gtp-test.dir/build.make scratch/CMakeFiles/scratch_gtp-test.dir/build
+.PHONY : scratch_gtp-test/fast
+
+# Convenience name for target.
+scratch/CMakeFiles/scratch_udp-test.dir/rule:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_udp-test.dir/rule
+.PHONY : scratch/CMakeFiles/scratch_udp-test.dir/rule
+
+# Convenience name for target.
+scratch_udp-test: scratch/CMakeFiles/scratch_udp-test.dir/rule
+.PHONY : scratch_udp-test
+
+# fast build rule for target.
+scratch_udp-test/fast:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_udp-test.dir/build.make scratch/CMakeFiles/scratch_udp-test.dir/build
+.PHONY : scratch_udp-test/fast
+
+# Convenience name for target.
+scratch/CMakeFiles/scratch_udpcapture.dir/rule:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_udpcapture.dir/rule
+.PHONY : scratch/CMakeFiles/scratch_udpcapture.dir/rule
+
+# Convenience name for target.
+scratch_udpcapture: scratch/CMakeFiles/scratch_udpcapture.dir/rule
+.PHONY : scratch_udpcapture
+
+# fast build rule for target.
+scratch_udpcapture/fast:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_udpcapture.dir/build.make scratch/CMakeFiles/scratch_udpcapture.dir/build
+.PHONY : scratch_udpcapture/fast
+
+# Convenience name for target.
+scratch/CMakeFiles/scratch_ue.dir/rule:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_ue.dir/rule
+.PHONY : scratch/CMakeFiles/scratch_ue.dir/rule
+
+# Convenience name for target.
+scratch_ue: scratch/CMakeFiles/scratch_ue.dir/rule
+.PHONY : scratch_ue
+
+# fast build rule for target.
+scratch_ue/fast:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_ue.dir/build.make scratch/CMakeFiles/scratch_ue.dir/build
+.PHONY : scratch_ue/fast
 
 # Convenience name for target.
 scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/rule:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/rule
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/rule
 .PHONY : scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/rule
 
 # Convenience name for target.
@@ -257,7 +337,7 @@ scratch_subdir_scratch-subdir: scratch/CMakeFiles/scratch_subdir_scratch-subdir.
 
 # fast build rule for target.
 scratch_subdir_scratch-subdir/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/build.make scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/build
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/build.make scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/build
 .PHONY : scratch_subdir_scratch-subdir/fast
 
 cttc-nr-demo.o: cttc-nr-demo.cc.o
@@ -265,7 +345,7 @@ cttc-nr-demo.o: cttc-nr-demo.cc.o
 
 # target to build an object file
 cttc-nr-demo.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-demo.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-demo.dir/cttc-nr-demo.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-demo.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-demo.dir/cttc-nr-demo.cc.o
 .PHONY : cttc-nr-demo.cc.o
 
 cttc-nr-demo.i: cttc-nr-demo.cc.i
@@ -273,7 +353,7 @@ cttc-nr-demo.i: cttc-nr-demo.cc.i
 
 # target to preprocess a source file
 cttc-nr-demo.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-demo.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-demo.dir/cttc-nr-demo.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-demo.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-demo.dir/cttc-nr-demo.cc.i
 .PHONY : cttc-nr-demo.cc.i
 
 cttc-nr-demo.s: cttc-nr-demo.cc.s
@@ -281,135 +361,183 @@ cttc-nr-demo.s: cttc-nr-demo.cc.s
 
 # target to generate assembly for a file
 cttc-nr-demo.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-demo.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-demo.dir/cttc-nr-demo.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-demo.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-demo.dir/cttc-nr-demo.cc.s
 .PHONY : cttc-nr-demo.cc.s
 
-cttc-nr-mimo-demo-open5gs.o: cttc-nr-mimo-demo-open5gs.cc.o
-.PHONY : cttc-nr-mimo-demo-open5gs.o
+cttc-nr-mimo-demo-open5gs-1gnb.o: cttc-nr-mimo-demo-open5gs-1gnb.cc.o
+.PHONY : cttc-nr-mimo-demo-open5gs-1gnb.o
 
 # target to build an object file
-cttc-nr-mimo-demo-open5gs.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs.dir/cttc-nr-mimo-demo-open5gs.cc.o
-.PHONY : cttc-nr-mimo-demo-open5gs.cc.o
+cttc-nr-mimo-demo-open5gs-1gnb.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs-1gnb.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs-1gnb.dir/cttc-nr-mimo-demo-open5gs-1gnb.cc.o
+.PHONY : cttc-nr-mimo-demo-open5gs-1gnb.cc.o
 
-cttc-nr-mimo-demo-open5gs.i: cttc-nr-mimo-demo-open5gs.cc.i
-.PHONY : cttc-nr-mimo-demo-open5gs.i
+cttc-nr-mimo-demo-open5gs-1gnb.i: cttc-nr-mimo-demo-open5gs-1gnb.cc.i
+.PHONY : cttc-nr-mimo-demo-open5gs-1gnb.i
 
 # target to preprocess a source file
-cttc-nr-mimo-demo-open5gs.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs.dir/cttc-nr-mimo-demo-open5gs.cc.i
-.PHONY : cttc-nr-mimo-demo-open5gs.cc.i
+cttc-nr-mimo-demo-open5gs-1gnb.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs-1gnb.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs-1gnb.dir/cttc-nr-mimo-demo-open5gs-1gnb.cc.i
+.PHONY : cttc-nr-mimo-demo-open5gs-1gnb.cc.i
 
-cttc-nr-mimo-demo-open5gs.s: cttc-nr-mimo-demo-open5gs.cc.s
-.PHONY : cttc-nr-mimo-demo-open5gs.s
+cttc-nr-mimo-demo-open5gs-1gnb.s: cttc-nr-mimo-demo-open5gs-1gnb.cc.s
+.PHONY : cttc-nr-mimo-demo-open5gs-1gnb.s
 
 # target to generate assembly for a file
-cttc-nr-mimo-demo-open5gs.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs.dir/cttc-nr-mimo-demo-open5gs.cc.s
-.PHONY : cttc-nr-mimo-demo-open5gs.cc.s
+cttc-nr-mimo-demo-open5gs-1gnb.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs-1gnb.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs-1gnb.dir/cttc-nr-mimo-demo-open5gs-1gnb.cc.s
+.PHONY : cttc-nr-mimo-demo-open5gs-1gnb.cc.s
 
-eNB_open5gs_integration.o: eNB_open5gs_integration.cc.o
-.PHONY : eNB_open5gs_integration.o
+cttc-nr-mimo-demo-open5gs-1ue.o: cttc-nr-mimo-demo-open5gs-1ue.cc.o
+.PHONY : cttc-nr-mimo-demo-open5gs-1ue.o
 
 # target to build an object file
-eNB_open5gs_integration.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_eNB_open5gs_integration.dir/build.make scratch/CMakeFiles/scratch_eNB_open5gs_integration.dir/eNB_open5gs_integration.cc.o
-.PHONY : eNB_open5gs_integration.cc.o
+cttc-nr-mimo-demo-open5gs-1ue.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs-1ue.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs-1ue.dir/cttc-nr-mimo-demo-open5gs-1ue.cc.o
+.PHONY : cttc-nr-mimo-demo-open5gs-1ue.cc.o
 
-eNB_open5gs_integration.i: eNB_open5gs_integration.cc.i
-.PHONY : eNB_open5gs_integration.i
+cttc-nr-mimo-demo-open5gs-1ue.i: cttc-nr-mimo-demo-open5gs-1ue.cc.i
+.PHONY : cttc-nr-mimo-demo-open5gs-1ue.i
 
 # target to preprocess a source file
-eNB_open5gs_integration.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_eNB_open5gs_integration.dir/build.make scratch/CMakeFiles/scratch_eNB_open5gs_integration.dir/eNB_open5gs_integration.cc.i
-.PHONY : eNB_open5gs_integration.cc.i
+cttc-nr-mimo-demo-open5gs-1ue.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs-1ue.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs-1ue.dir/cttc-nr-mimo-demo-open5gs-1ue.cc.i
+.PHONY : cttc-nr-mimo-demo-open5gs-1ue.cc.i
 
-eNB_open5gs_integration.s: eNB_open5gs_integration.cc.s
-.PHONY : eNB_open5gs_integration.s
+cttc-nr-mimo-demo-open5gs-1ue.s: cttc-nr-mimo-demo-open5gs-1ue.cc.s
+.PHONY : cttc-nr-mimo-demo-open5gs-1ue.s
 
 # target to generate assembly for a file
-eNB_open5gs_integration.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_eNB_open5gs_integration.dir/build.make scratch/CMakeFiles/scratch_eNB_open5gs_integration.dir/eNB_open5gs_integration.cc.s
-.PHONY : eNB_open5gs_integration.cc.s
+cttc-nr-mimo-demo-open5gs-1ue.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs-1ue.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs-1ue.dir/cttc-nr-mimo-demo-open5gs-1ue.cc.s
+.PHONY : cttc-nr-mimo-demo-open5gs-1ue.cc.s
 
-first.o: first.cc.o
-.PHONY : first.o
+cttc-nr-mimo-demo.o: cttc-nr-mimo-demo.cc.o
+.PHONY : cttc-nr-mimo-demo.o
 
 # target to build an object file
-first.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_first.dir/build.make scratch/CMakeFiles/scratch_first.dir/first.cc.o
-.PHONY : first.cc.o
+cttc-nr-mimo-demo.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-mimo-demo.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-mimo-demo.dir/cttc-nr-mimo-demo.cc.o
+.PHONY : cttc-nr-mimo-demo.cc.o
 
-first.i: first.cc.i
-.PHONY : first.i
+cttc-nr-mimo-demo.i: cttc-nr-mimo-demo.cc.i
+.PHONY : cttc-nr-mimo-demo.i
 
 # target to preprocess a source file
-first.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_first.dir/build.make scratch/CMakeFiles/scratch_first.dir/first.cc.i
-.PHONY : first.cc.i
+cttc-nr-mimo-demo.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-mimo-demo.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-mimo-demo.dir/cttc-nr-mimo-demo.cc.i
+.PHONY : cttc-nr-mimo-demo.cc.i
 
-first.s: first.cc.s
-.PHONY : first.s
+cttc-nr-mimo-demo.s: cttc-nr-mimo-demo.cc.s
+.PHONY : cttc-nr-mimo-demo.s
 
 # target to generate assembly for a file
-first.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_first.dir/build.make scratch/CMakeFiles/scratch_first.dir/first.cc.s
-.PHONY : first.cc.s
+cttc-nr-mimo-demo.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-mimo-demo.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-mimo-demo.dir/cttc-nr-mimo-demo.cc.s
+.PHONY : cttc-nr-mimo-demo.cc.s
 
-lena-simple-epc.o: lena-simple-epc.cc.o
-.PHONY : lena-simple-epc.o
+example.o: example.cc.o
+.PHONY : example.o
 
 # target to build an object file
-lena-simple-epc.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_lena-simple-epc.dir/build.make scratch/CMakeFiles/scratch_lena-simple-epc.dir/lena-simple-epc.cc.o
-.PHONY : lena-simple-epc.cc.o
+example.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_example.dir/build.make scratch/CMakeFiles/scratch_example.dir/example.cc.o
+.PHONY : example.cc.o
 
-lena-simple-epc.i: lena-simple-epc.cc.i
-.PHONY : lena-simple-epc.i
+example.i: example.cc.i
+.PHONY : example.i
 
 # target to preprocess a source file
-lena-simple-epc.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_lena-simple-epc.dir/build.make scratch/CMakeFiles/scratch_lena-simple-epc.dir/lena-simple-epc.cc.i
-.PHONY : lena-simple-epc.cc.i
+example.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_example.dir/build.make scratch/CMakeFiles/scratch_example.dir/example.cc.i
+.PHONY : example.cc.i
 
-lena-simple-epc.s: lena-simple-epc.cc.s
-.PHONY : lena-simple-epc.s
+example.s: example.cc.s
+.PHONY : example.s
 
 # target to generate assembly for a file
-lena-simple-epc.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_lena-simple-epc.dir/build.make scratch/CMakeFiles/scratch_lena-simple-epc.dir/lena-simple-epc.cc.s
-.PHONY : lena-simple-epc.cc.s
+example.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_example.dir/build.make scratch/CMakeFiles/scratch_example.dir/example.cc.s
+.PHONY : example.cc.s
 
-scratch-simulator.o: scratch-simulator.cc.o
-.PHONY : scratch-simulator.o
+gnb.o: gnb.cc.o
+.PHONY : gnb.o
 
 # target to build an object file
-scratch-simulator.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_scratch-simulator.dir/build.make scratch/CMakeFiles/scratch_scratch-simulator.dir/scratch-simulator.cc.o
-.PHONY : scratch-simulator.cc.o
+gnb.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_gnb.dir/build.make scratch/CMakeFiles/scratch_gnb.dir/gnb.cc.o
+.PHONY : gnb.cc.o
 
-scratch-simulator.i: scratch-simulator.cc.i
-.PHONY : scratch-simulator.i
+gnb.i: gnb.cc.i
+.PHONY : gnb.i
 
 # target to preprocess a source file
-scratch-simulator.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_scratch-simulator.dir/build.make scratch/CMakeFiles/scratch_scratch-simulator.dir/scratch-simulator.cc.i
-.PHONY : scratch-simulator.cc.i
+gnb.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_gnb.dir/build.make scratch/CMakeFiles/scratch_gnb.dir/gnb.cc.i
+.PHONY : gnb.cc.i
 
-scratch-simulator.s: scratch-simulator.cc.s
-.PHONY : scratch-simulator.s
+gnb.s: gnb.cc.s
+.PHONY : gnb.s
 
 # target to generate assembly for a file
-scratch-simulator.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_scratch-simulator.dir/build.make scratch/CMakeFiles/scratch_scratch-simulator.dir/scratch-simulator.cc.s
-.PHONY : scratch-simulator.cc.s
+gnb.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_gnb.dir/build.make scratch/CMakeFiles/scratch_gnb.dir/gnb.cc.s
+.PHONY : gnb.cc.s
+
+grid_example.o: grid_example.cc.o
+.PHONY : grid_example.o
+
+# target to build an object file
+grid_example.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_grid_example.dir/build.make scratch/CMakeFiles/scratch_grid_example.dir/grid_example.cc.o
+.PHONY : grid_example.cc.o
+
+grid_example.i: grid_example.cc.i
+.PHONY : grid_example.i
+
+# target to preprocess a source file
+grid_example.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_grid_example.dir/build.make scratch/CMakeFiles/scratch_grid_example.dir/grid_example.cc.i
+.PHONY : grid_example.cc.i
+
+grid_example.s: grid_example.cc.s
+.PHONY : grid_example.s
+
+# target to generate assembly for a file
+grid_example.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_grid_example.dir/build.make scratch/CMakeFiles/scratch_grid_example.dir/grid_example.cc.s
+.PHONY : grid_example.cc.s
+
+gtp-test.o: gtp-test.cc.o
+.PHONY : gtp-test.o
+
+# target to build an object file
+gtp-test.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_gtp-test.dir/build.make scratch/CMakeFiles/scratch_gtp-test.dir/gtp-test.cc.o
+.PHONY : gtp-test.cc.o
+
+gtp-test.i: gtp-test.cc.i
+.PHONY : gtp-test.i
+
+# target to preprocess a source file
+gtp-test.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_gtp-test.dir/build.make scratch/CMakeFiles/scratch_gtp-test.dir/gtp-test.cc.i
+.PHONY : gtp-test.cc.i
+
+gtp-test.s: gtp-test.cc.s
+.PHONY : gtp-test.s
+
+# target to generate assembly for a file
+gtp-test.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_gtp-test.dir/build.make scratch/CMakeFiles/scratch_gtp-test.dir/gtp-test.cc.s
+.PHONY : gtp-test.cc.s
 
 subdir/scratch-subdir-additional-header.o: subdir/scratch-subdir-additional-header.cc.o
 .PHONY : subdir/scratch-subdir-additional-header.o
 
 # target to build an object file
 subdir/scratch-subdir-additional-header.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/build.make scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/subdir/scratch-subdir-additional-header.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/build.make scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/subdir/scratch-subdir-additional-header.cc.o
 .PHONY : subdir/scratch-subdir-additional-header.cc.o
 
 subdir/scratch-subdir-additional-header.i: subdir/scratch-subdir-additional-header.cc.i
@@ -417,7 +545,7 @@ subdir/scratch-subdir-additional-header.i: subdir/scratch-subdir-additional-head
 
 # target to preprocess a source file
 subdir/scratch-subdir-additional-header.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/build.make scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/subdir/scratch-subdir-additional-header.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/build.make scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/subdir/scratch-subdir-additional-header.cc.i
 .PHONY : subdir/scratch-subdir-additional-header.cc.i
 
 subdir/scratch-subdir-additional-header.s: subdir/scratch-subdir-additional-header.cc.s
@@ -425,7 +553,7 @@ subdir/scratch-subdir-additional-header.s: subdir/scratch-subdir-additional-head
 
 # target to generate assembly for a file
 subdir/scratch-subdir-additional-header.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/build.make scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/subdir/scratch-subdir-additional-header.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/build.make scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/subdir/scratch-subdir-additional-header.cc.s
 .PHONY : subdir/scratch-subdir-additional-header.cc.s
 
 subdir/scratch-subdir.o: subdir/scratch-subdir.cc.o
@@ -433,7 +561,7 @@ subdir/scratch-subdir.o: subdir/scratch-subdir.cc.o
 
 # target to build an object file
 subdir/scratch-subdir.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/build.make scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/subdir/scratch-subdir.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/build.make scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/subdir/scratch-subdir.cc.o
 .PHONY : subdir/scratch-subdir.cc.o
 
 subdir/scratch-subdir.i: subdir/scratch-subdir.cc.i
@@ -441,7 +569,7 @@ subdir/scratch-subdir.i: subdir/scratch-subdir.cc.i
 
 # target to preprocess a source file
 subdir/scratch-subdir.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/build.make scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/subdir/scratch-subdir.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/build.make scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/subdir/scratch-subdir.cc.i
 .PHONY : subdir/scratch-subdir.cc.i
 
 subdir/scratch-subdir.s: subdir/scratch-subdir.cc.s
@@ -449,8 +577,80 @@ subdir/scratch-subdir.s: subdir/scratch-subdir.cc.s
 
 # target to generate assembly for a file
 subdir/scratch-subdir.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/build.make scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/subdir/scratch-subdir.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/build.make scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/subdir/scratch-subdir.cc.s
 .PHONY : subdir/scratch-subdir.cc.s
+
+udp-test.o: udp-test.cc.o
+.PHONY : udp-test.o
+
+# target to build an object file
+udp-test.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_udp-test.dir/build.make scratch/CMakeFiles/scratch_udp-test.dir/udp-test.cc.o
+.PHONY : udp-test.cc.o
+
+udp-test.i: udp-test.cc.i
+.PHONY : udp-test.i
+
+# target to preprocess a source file
+udp-test.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_udp-test.dir/build.make scratch/CMakeFiles/scratch_udp-test.dir/udp-test.cc.i
+.PHONY : udp-test.cc.i
+
+udp-test.s: udp-test.cc.s
+.PHONY : udp-test.s
+
+# target to generate assembly for a file
+udp-test.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_udp-test.dir/build.make scratch/CMakeFiles/scratch_udp-test.dir/udp-test.cc.s
+.PHONY : udp-test.cc.s
+
+udpcapture.o: udpcapture.cc.o
+.PHONY : udpcapture.o
+
+# target to build an object file
+udpcapture.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_udpcapture.dir/build.make scratch/CMakeFiles/scratch_udpcapture.dir/udpcapture.cc.o
+.PHONY : udpcapture.cc.o
+
+udpcapture.i: udpcapture.cc.i
+.PHONY : udpcapture.i
+
+# target to preprocess a source file
+udpcapture.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_udpcapture.dir/build.make scratch/CMakeFiles/scratch_udpcapture.dir/udpcapture.cc.i
+.PHONY : udpcapture.cc.i
+
+udpcapture.s: udpcapture.cc.s
+.PHONY : udpcapture.s
+
+# target to generate assembly for a file
+udpcapture.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_udpcapture.dir/build.make scratch/CMakeFiles/scratch_udpcapture.dir/udpcapture.cc.s
+.PHONY : udpcapture.cc.s
+
+ue.o: ue.cc.o
+.PHONY : ue.o
+
+# target to build an object file
+ue.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_ue.dir/build.make scratch/CMakeFiles/scratch_ue.dir/ue.cc.o
+.PHONY : ue.cc.o
+
+ue.i: ue.cc.i
+.PHONY : ue.i
+
+# target to preprocess a source file
+ue.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_ue.dir/build.make scratch/CMakeFiles/scratch_ue.dir/ue.cc.i
+.PHONY : ue.cc.i
+
+ue.s: ue.cc.s
+.PHONY : ue.s
+
+# target to generate assembly for a file
+ue.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_ue.dir/build.make scratch/CMakeFiles/scratch_ue.dir/ue.cc.s
+.PHONY : ue.cc.s
 
 # Help Target
 help:
@@ -464,37 +664,58 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... scratch_cttc-nr-demo"
-	@echo "... scratch_cttc-nr-mimo-demo-open5gs"
-	@echo "... scratch_eNB_open5gs_integration"
-	@echo "... scratch_first"
-	@echo "... scratch_lena-simple-epc"
-	@echo "... scratch_scratch-simulator"
+	@echo "... scratch_cttc-nr-mimo-demo"
+	@echo "... scratch_cttc-nr-mimo-demo-open5gs-1gnb"
+	@echo "... scratch_cttc-nr-mimo-demo-open5gs-1ue"
+	@echo "... scratch_example"
+	@echo "... scratch_gnb"
+	@echo "... scratch_grid_example"
+	@echo "... scratch_gtp-test"
 	@echo "... scratch_subdir_scratch-subdir"
+	@echo "... scratch_udp-test"
+	@echo "... scratch_udpcapture"
+	@echo "... scratch_ue"
 	@echo "... cttc-nr-demo.o"
 	@echo "... cttc-nr-demo.i"
 	@echo "... cttc-nr-demo.s"
-	@echo "... cttc-nr-mimo-demo-open5gs.o"
-	@echo "... cttc-nr-mimo-demo-open5gs.i"
-	@echo "... cttc-nr-mimo-demo-open5gs.s"
-	@echo "... eNB_open5gs_integration.o"
-	@echo "... eNB_open5gs_integration.i"
-	@echo "... eNB_open5gs_integration.s"
-	@echo "... first.o"
-	@echo "... first.i"
-	@echo "... first.s"
-	@echo "... lena-simple-epc.o"
-	@echo "... lena-simple-epc.i"
-	@echo "... lena-simple-epc.s"
-	@echo "... scratch-simulator.o"
-	@echo "... scratch-simulator.i"
-	@echo "... scratch-simulator.s"
+	@echo "... cttc-nr-mimo-demo-open5gs-1gnb.o"
+	@echo "... cttc-nr-mimo-demo-open5gs-1gnb.i"
+	@echo "... cttc-nr-mimo-demo-open5gs-1gnb.s"
+	@echo "... cttc-nr-mimo-demo-open5gs-1ue.o"
+	@echo "... cttc-nr-mimo-demo-open5gs-1ue.i"
+	@echo "... cttc-nr-mimo-demo-open5gs-1ue.s"
+	@echo "... cttc-nr-mimo-demo.o"
+	@echo "... cttc-nr-mimo-demo.i"
+	@echo "... cttc-nr-mimo-demo.s"
+	@echo "... example.o"
+	@echo "... example.i"
+	@echo "... example.s"
+	@echo "... gnb.o"
+	@echo "... gnb.i"
+	@echo "... gnb.s"
+	@echo "... grid_example.o"
+	@echo "... grid_example.i"
+	@echo "... grid_example.s"
+	@echo "... gtp-test.o"
+	@echo "... gtp-test.i"
+	@echo "... gtp-test.s"
 	@echo "... subdir/scratch-subdir-additional-header.o"
 	@echo "... subdir/scratch-subdir-additional-header.i"
 	@echo "... subdir/scratch-subdir-additional-header.s"
 	@echo "... subdir/scratch-subdir.o"
 	@echo "... subdir/scratch-subdir.i"
 	@echo "... subdir/scratch-subdir.s"
+	@echo "... udp-test.o"
+	@echo "... udp-test.i"
+	@echo "... udp-test.s"
+	@echo "... udpcapture.o"
+	@echo "... udpcapture.i"
+	@echo "... udpcapture.s"
+	@echo "... ue.o"
+	@echo "... ue.i"
+	@echo "... ue.s"
 .PHONY : help
 
 
@@ -506,7 +727,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/VerifyGlobs.cmake
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/ns-3-dev/cmake-cache/CMakeFiles/VerifyGlobs.cmake
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

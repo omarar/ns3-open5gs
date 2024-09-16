@@ -8,12 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/omar/Desktop/git_repo/ns3-open5gs/src/sixlowpan/helper/sixlowpan-helper.cc" "src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/helper/sixlowpan-helper.cc.o" "gcc" "src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/helper/sixlowpan-helper.cc.o.d"
-  "/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx" "src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/helper/sixlowpan-helper.cc.o" "gcc" "src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/helper/sixlowpan-helper.cc.o.d"
-  "/home/omar/Desktop/git_repo/ns3-open5gs/src/sixlowpan/model/sixlowpan-header.cc" "src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/model/sixlowpan-header.cc.o" "gcc" "src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/model/sixlowpan-header.cc.o.d"
-  "/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx" "src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/model/sixlowpan-header.cc.o" "gcc" "src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/model/sixlowpan-header.cc.o.d"
-  "/home/omar/Desktop/git_repo/ns3-open5gs/src/sixlowpan/model/sixlowpan-net-device.cc" "src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/model/sixlowpan-net-device.cc.o" "gcc" "src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/model/sixlowpan-net-device.cc.o.d"
-  "/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/stdlib_pch-default.dir/cmake_pch.hxx" "src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/model/sixlowpan-net-device.cc.o" "gcc" "src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/model/sixlowpan-net-device.cc.o.d"
+  "/home/omar/ns-3-dev/src/sixlowpan/helper/sixlowpan-helper.cc" "src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/helper/sixlowpan-helper.cc.o" "gcc" "src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/helper/sixlowpan-helper.cc.o.d"
+  "/home/omar/ns-3-dev/src/sixlowpan/model/sixlowpan-header.cc" "src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/model/sixlowpan-header.cc.o" "gcc" "src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/model/sixlowpan-header.cc.o.d"
+  "/home/omar/ns-3-dev/src/sixlowpan/model/sixlowpan-net-device.cc" "src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/model/sixlowpan-net-device.cc.o" "gcc" "src/sixlowpan/CMakeFiles/libsixlowpan-obj.dir/model/sixlowpan-net-device.cc.o.d"
   )
 
 # Targets to which this target links.

@@ -5,6 +5,16 @@
 # Commands may need to know the format version.
 set(CMAKE_IMPORT_FILE_VERSION 1)
 
+# Import target "ns3::libNGAP" for configuration "default"
+set_property(TARGET ns3::libNGAP APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
+set_target_properties(ns3::libNGAP PROPERTIES
+  IMPORTED_LOCATION_DEFAULT "${_IMPORT_PREFIX}/lib/libns3.39-NGAP-default.so"
+  IMPORTED_SONAME_DEFAULT "libns3.39-NGAP-default.so"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS ns3::libNGAP )
+list(APPEND _IMPORT_CHECK_FILES_FOR_ns3::libNGAP "${_IMPORT_PREFIX}/lib/libns3.39-NGAP-default.so" )
+
 # Import target "ns3::libnr" for configuration "default"
 set_property(TARGET ns3::libnr APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
 set_target_properties(ns3::libnr PROPERTIES

@@ -43,6 +43,7 @@
 #include <ns3/three-gpp-v2v-propagation-loss-model.h>
 #include <ns3/uniform-planar-array.h>
 
+
 #include <algorithm>
 
 namespace ns3
@@ -1048,7 +1049,7 @@ void
 NrHelper::AttachToClosestEnb(NetDeviceContainer ueDevices, NetDeviceContainer enbDevices)
 {
     NS_LOG_FUNCTION(this);
-
+    std::cout << "_____NrHelper::AttachToClosestEnb is called!" << std::endl;
     for (NetDeviceContainer::Iterator i = ueDevices.Begin(); i != ueDevices.End(); i++)
     {
         AttachToClosestEnb(*i, enbDevices);
@@ -1122,6 +1123,7 @@ NrHelper::AttachToEnb(const Ptr<NetDevice>& ueDevice, const Ptr<NetDevice>& gnbD
     {
         m_beamformingHelper->AddBeamformingTask(enbNetDev, ueNetDev);
     }
+    std::cout << "_____NrHelper:: END AttachToEnb with success !" << std::endl;
 }
 
 uint8_t
@@ -1841,5 +1843,7 @@ NrHelper::EnableDlDataPathlossTraces(NetDeviceContainer& ueDevs)
                     "DlDataPathloss",
                     MakeBoundCallback(&NrPhyRxTrace::ReportDlDataPathloss, m_phyStats));
 }
+
+
 
 } // namespace ns3

@@ -1,4 +1,4 @@
-# Install script for directory: /home/omar/Desktop/git_repo/ns3-open5gs/src/antenna
+# Install script for directory: /home/omar/ns-3-dev/src/antenna
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -49,12 +49,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-antenna-default.so"
          RPATH "/usr/local/lib:$ORIGIN/:$ORIGIN/../lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/omar/Desktop/git_repo/ns3-open5gs/build/lib/libns3.39-antenna-default.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/omar/ns-3-dev/build/lib/libns3.39-antenna-default.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-antenna-default.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-antenna-default.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-antenna-default.so"
-         OLD_RPATH "/home/omar/Desktop/git_repo/ns3-open5gs/build/lib:"
+         OLD_RPATH "/home/omar/ns-3-dev/build/lib:::::::::"
          NEW_RPATH "/usr/local/lib:$ORIGIN/:$ORIGIN/../lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-antenna-default.so")
@@ -67,15 +67,15 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/ns3" TYPE FILE FILES
-    "/home/omar/Desktop/git_repo/ns3-open5gs/src/antenna/model/angles.h"
-    "/home/omar/Desktop/git_repo/ns3-open5gs/src/antenna/model/antenna-model.h"
-    "/home/omar/Desktop/git_repo/ns3-open5gs/src/antenna/model/cosine-antenna-model.h"
-    "/home/omar/Desktop/git_repo/ns3-open5gs/src/antenna/model/isotropic-antenna-model.h"
-    "/home/omar/Desktop/git_repo/ns3-open5gs/src/antenna/model/parabolic-antenna-model.h"
-    "/home/omar/Desktop/git_repo/ns3-open5gs/src/antenna/model/phased-array-model.h"
-    "/home/omar/Desktop/git_repo/ns3-open5gs/src/antenna/model/three-gpp-antenna-model.h"
-    "/home/omar/Desktop/git_repo/ns3-open5gs/src/antenna/model/uniform-planar-array.h"
-    "/home/omar/Desktop/git_repo/ns3-open5gs/build/include/ns3/antenna-module.h"
+    "/home/omar/ns-3-dev/src/antenna/model/angles.h"
+    "/home/omar/ns-3-dev/src/antenna/model/antenna-model.h"
+    "/home/omar/ns-3-dev/src/antenna/model/cosine-antenna-model.h"
+    "/home/omar/ns-3-dev/src/antenna/model/isotropic-antenna-model.h"
+    "/home/omar/ns-3-dev/src/antenna/model/parabolic-antenna-model.h"
+    "/home/omar/ns-3-dev/src/antenna/model/phased-array-model.h"
+    "/home/omar/ns-3-dev/src/antenna/model/three-gpp-antenna-model.h"
+    "/home/omar/ns-3-dev/src/antenna/model/uniform-planar-array.h"
+    "/home/omar/ns-3-dev/build/include/ns3/antenna-module.h"
     )
 endif()
 

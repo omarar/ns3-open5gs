@@ -1,4 +1,4 @@
-# Install script for directory: /home/omar/Desktop/git_repo/ns3-open5gs/src/internet-apps
+# Install script for directory: /home/omar/ns-3-dev/src/internet-apps
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -49,12 +49,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-internet-apps-default.so"
          RPATH "/usr/local/lib:$ORIGIN/:$ORIGIN/../lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/omar/Desktop/git_repo/ns3-open5gs/build/lib/libns3.39-internet-apps-default.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/omar/ns-3-dev/build/lib/libns3.39-internet-apps-default.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-internet-apps-default.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-internet-apps-default.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-internet-apps-default.so"
-         OLD_RPATH "/home/omar/Desktop/git_repo/ns3-open5gs/build/lib:"
+         OLD_RPATH "/home/omar/ns-3-dev/build/lib:::::::::"
          NEW_RPATH "/usr/local/lib:$ORIGIN/:$ORIGIN/../lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-internet-apps-default.so")
@@ -67,23 +67,29 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/ns3" TYPE FILE FILES
-    "/home/omar/Desktop/git_repo/ns3-open5gs/src/internet-apps/helper/dhcp-helper.h"
-    "/home/omar/Desktop/git_repo/ns3-open5gs/src/internet-apps/helper/ping-helper.h"
-    "/home/omar/Desktop/git_repo/ns3-open5gs/src/internet-apps/helper/ping6-helper.h"
-    "/home/omar/Desktop/git_repo/ns3-open5gs/src/internet-apps/helper/radvd-helper.h"
-    "/home/omar/Desktop/git_repo/ns3-open5gs/src/internet-apps/helper/v4ping-helper.h"
-    "/home/omar/Desktop/git_repo/ns3-open5gs/src/internet-apps/helper/v4traceroute-helper.h"
-    "/home/omar/Desktop/git_repo/ns3-open5gs/src/internet-apps/model/dhcp-client.h"
-    "/home/omar/Desktop/git_repo/ns3-open5gs/src/internet-apps/model/dhcp-header.h"
-    "/home/omar/Desktop/git_repo/ns3-open5gs/src/internet-apps/model/dhcp-server.h"
-    "/home/omar/Desktop/git_repo/ns3-open5gs/src/internet-apps/model/ping.h"
-    "/home/omar/Desktop/git_repo/ns3-open5gs/src/internet-apps/model/ping6.h"
-    "/home/omar/Desktop/git_repo/ns3-open5gs/src/internet-apps/model/radvd-interface.h"
-    "/home/omar/Desktop/git_repo/ns3-open5gs/src/internet-apps/model/radvd-prefix.h"
-    "/home/omar/Desktop/git_repo/ns3-open5gs/src/internet-apps/model/radvd.h"
-    "/home/omar/Desktop/git_repo/ns3-open5gs/src/internet-apps/model/v4ping.h"
-    "/home/omar/Desktop/git_repo/ns3-open5gs/src/internet-apps/model/v4traceroute.h"
-    "/home/omar/Desktop/git_repo/ns3-open5gs/build/include/ns3/internet-apps-module.h"
+    "/home/omar/ns-3-dev/src/internet-apps/helper/dhcp-helper.h"
+    "/home/omar/ns-3-dev/src/internet-apps/helper/ping-helper.h"
+    "/home/omar/ns-3-dev/src/internet-apps/helper/ping6-helper.h"
+    "/home/omar/ns-3-dev/src/internet-apps/helper/radvd-helper.h"
+    "/home/omar/ns-3-dev/src/internet-apps/helper/v4ping-helper.h"
+    "/home/omar/ns-3-dev/src/internet-apps/helper/v4traceroute-helper.h"
+    "/home/omar/ns-3-dev/src/internet-apps/model/dhcp-client.h"
+    "/home/omar/ns-3-dev/src/internet-apps/model/dhcp-header.h"
+    "/home/omar/ns-3-dev/src/internet-apps/model/dhcp-server.h"
+    "/home/omar/ns-3-dev/src/internet-apps/model/ping.h"
+    "/home/omar/ns-3-dev/src/internet-apps/model/ping6.h"
+    "/home/omar/ns-3-dev/src/internet-apps/model/radvd-interface.h"
+    "/home/omar/ns-3-dev/src/internet-apps/model/radvd-prefix.h"
+    "/home/omar/ns-3-dev/src/internet-apps/model/radvd.h"
+    "/home/omar/ns-3-dev/src/internet-apps/model/v4ping.h"
+    "/home/omar/ns-3-dev/src/internet-apps/model/v4traceroute.h"
+    "/home/omar/ns-3-dev/build/include/ns3/internet-apps-module.h"
     )
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for each subdirectory.
+  include("/home/omar/ns-3-dev/cmake-cache/src/internet-apps/examples/cmake_install.cmake")
+
 endif()
 

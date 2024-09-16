@@ -22,6 +22,7 @@
 #include "ns3/traffic-generator-ngmn-video.h"
 #include "ns3/traffic-generator-ngmn-voip.h"
 #include "ns3/traffic-generator.h"
+#include <map>
 
 #include <list>
 

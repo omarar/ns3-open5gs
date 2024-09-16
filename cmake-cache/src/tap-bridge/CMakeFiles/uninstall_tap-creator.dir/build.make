@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omar/Desktop/git_repo/ns3-open5gs
+CMAKE_SOURCE_DIR = /home/omar/ns-3-dev
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache
+CMAKE_BINARY_DIR = /home/omar/ns-3-dev/cmake-cache
 
 # Utility rule file for uninstall_tap-creator.
 
@@ -67,7 +67,7 @@ include src/tap-bridge/CMakeFiles/uninstall_tap-creator.dir/compiler_depend.make
 include src/tap-bridge/CMakeFiles/uninstall_tap-creator.dir/progress.make
 
 src/tap-bridge/CMakeFiles/uninstall_tap-creator:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/tap-bridge && rm /usr/local/libexec/ns3/ns3.39-tap-creator-default
+	cd /home/omar/ns-3-dev/cmake-cache/src/tap-bridge && rm /usr/local/libexec/ns3/ns3.39-tap-creator-default
 
 uninstall_tap-creator: src/tap-bridge/CMakeFiles/uninstall_tap-creator
 uninstall_tap-creator: src/tap-bridge/CMakeFiles/uninstall_tap-creator.dir/build.make
@@ -78,10 +78,10 @@ src/tap-bridge/CMakeFiles/uninstall_tap-creator.dir/build: uninstall_tap-creator
 .PHONY : src/tap-bridge/CMakeFiles/uninstall_tap-creator.dir/build
 
 src/tap-bridge/CMakeFiles/uninstall_tap-creator.dir/clean:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/tap-bridge && $(CMAKE_COMMAND) -P CMakeFiles/uninstall_tap-creator.dir/cmake_clean.cmake
+	cd /home/omar/ns-3-dev/cmake-cache/src/tap-bridge && $(CMAKE_COMMAND) -P CMakeFiles/uninstall_tap-creator.dir/cmake_clean.cmake
 .PHONY : src/tap-bridge/CMakeFiles/uninstall_tap-creator.dir/clean
 
 src/tap-bridge/CMakeFiles/uninstall_tap-creator.dir/depend:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omar/Desktop/git_repo/ns3-open5gs /home/omar/Desktop/git_repo/ns3-open5gs/src/tap-bridge /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/tap-bridge /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/tap-bridge/CMakeFiles/uninstall_tap-creator.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omar/ns-3-dev /home/omar/ns-3-dev/src/tap-bridge /home/omar/ns-3-dev/cmake-cache /home/omar/ns-3-dev/cmake-cache/src/tap-bridge /home/omar/ns-3-dev/cmake-cache/src/tap-bridge/CMakeFiles/uninstall_tap-creator.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/tap-bridge/CMakeFiles/uninstall_tap-creator.dir/depend
 

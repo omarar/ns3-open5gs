@@ -57,13 +57,23 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omar/Desktop/git_repo/ns3-open5gs
+CMAKE_SOURCE_DIR = /home/omar/ns-3-dev
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache
+CMAKE_BINARY_DIR = /home/omar/ns-3-dev/cmake-cache
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -132,14 +142,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -E cmake_progress_start /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/lte//CMakeFiles/progress.marks
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/lte/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles 0
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -E cmake_progress_start /home/omar/ns-3-dev/cmake-cache/CMakeFiles /home/omar/ns-3-dev/cmake-cache/src/lte//CMakeFiles/progress.marks
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/lte/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/omar/ns-3-dev/cmake-cache/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/lte/clean
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/lte/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,23 +158,23 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/lte/preinstall
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/lte/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/lte/preinstall
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/lte/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/VerifyGlobs.cmake
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/ns-3-dev/cmake-cache/CMakeFiles/VerifyGlobs.cmake
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/lte/CMakeFiles/liblte-obj.dir/rule:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/lte/CMakeFiles/liblte-obj.dir/rule
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/lte/CMakeFiles/liblte-obj.dir/rule
 .PHONY : src/lte/CMakeFiles/liblte-obj.dir/rule
 
 # Convenience name for target.
@@ -173,12 +183,12 @@ liblte-obj: src/lte/CMakeFiles/liblte-obj.dir/rule
 
 # fast build rule for target.
 liblte-obj/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/build
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/build
 .PHONY : liblte-obj/fast
 
 # Convenience name for target.
 src/lte/CMakeFiles/liblte.dir/rule:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/lte/CMakeFiles/liblte.dir/rule
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/lte/CMakeFiles/liblte.dir/rule
 .PHONY : src/lte/CMakeFiles/liblte.dir/rule
 
 # Convenience name for target.
@@ -187,15 +197,29 @@ liblte: src/lte/CMakeFiles/liblte.dir/rule
 
 # fast build rule for target.
 liblte/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte.dir/build.make src/lte/CMakeFiles/liblte.dir/build
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte.dir/build.make src/lte/CMakeFiles/liblte.dir/build
 .PHONY : liblte/fast
+
+# Convenience name for target.
+src/lte/CMakeFiles/liblte-test.dir/rule:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/lte/CMakeFiles/liblte-test.dir/rule
+.PHONY : src/lte/CMakeFiles/liblte-test.dir/rule
+
+# Convenience name for target.
+liblte-test: src/lte/CMakeFiles/liblte-test.dir/rule
+.PHONY : liblte-test
+
+# fast build rule for target.
+liblte-test/fast:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/build
+.PHONY : liblte-test/fast
 
 helper/cc-helper.o: helper/cc-helper.cc.o
 .PHONY : helper/cc-helper.o
 
 # target to build an object file
 helper/cc-helper.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/cc-helper.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/cc-helper.cc.o
 .PHONY : helper/cc-helper.cc.o
 
 helper/cc-helper.i: helper/cc-helper.cc.i
@@ -203,7 +227,7 @@ helper/cc-helper.i: helper/cc-helper.cc.i
 
 # target to preprocess a source file
 helper/cc-helper.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/cc-helper.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/cc-helper.cc.i
 .PHONY : helper/cc-helper.cc.i
 
 helper/cc-helper.s: helper/cc-helper.cc.s
@@ -211,7 +235,7 @@ helper/cc-helper.s: helper/cc-helper.cc.s
 
 # target to generate assembly for a file
 helper/cc-helper.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/cc-helper.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/cc-helper.cc.s
 .PHONY : helper/cc-helper.cc.s
 
 helper/emu-epc-helper.o: helper/emu-epc-helper.cc.o
@@ -219,7 +243,7 @@ helper/emu-epc-helper.o: helper/emu-epc-helper.cc.o
 
 # target to build an object file
 helper/emu-epc-helper.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/emu-epc-helper.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/emu-epc-helper.cc.o
 .PHONY : helper/emu-epc-helper.cc.o
 
 helper/emu-epc-helper.i: helper/emu-epc-helper.cc.i
@@ -227,7 +251,7 @@ helper/emu-epc-helper.i: helper/emu-epc-helper.cc.i
 
 # target to preprocess a source file
 helper/emu-epc-helper.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/emu-epc-helper.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/emu-epc-helper.cc.i
 .PHONY : helper/emu-epc-helper.cc.i
 
 helper/emu-epc-helper.s: helper/emu-epc-helper.cc.s
@@ -235,7 +259,7 @@ helper/emu-epc-helper.s: helper/emu-epc-helper.cc.s
 
 # target to generate assembly for a file
 helper/emu-epc-helper.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/emu-epc-helper.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/emu-epc-helper.cc.s
 .PHONY : helper/emu-epc-helper.cc.s
 
 helper/epc-helper.o: helper/epc-helper.cc.o
@@ -243,7 +267,7 @@ helper/epc-helper.o: helper/epc-helper.cc.o
 
 # target to build an object file
 helper/epc-helper.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/epc-helper.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/epc-helper.cc.o
 .PHONY : helper/epc-helper.cc.o
 
 helper/epc-helper.i: helper/epc-helper.cc.i
@@ -251,7 +275,7 @@ helper/epc-helper.i: helper/epc-helper.cc.i
 
 # target to preprocess a source file
 helper/epc-helper.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/epc-helper.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/epc-helper.cc.i
 .PHONY : helper/epc-helper.cc.i
 
 helper/epc-helper.s: helper/epc-helper.cc.s
@@ -259,7 +283,7 @@ helper/epc-helper.s: helper/epc-helper.cc.s
 
 # target to generate assembly for a file
 helper/epc-helper.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/epc-helper.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/epc-helper.cc.s
 .PHONY : helper/epc-helper.cc.s
 
 helper/lte-global-pathloss-database.o: helper/lte-global-pathloss-database.cc.o
@@ -267,7 +291,7 @@ helper/lte-global-pathloss-database.o: helper/lte-global-pathloss-database.cc.o
 
 # target to build an object file
 helper/lte-global-pathloss-database.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/lte-global-pathloss-database.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/lte-global-pathloss-database.cc.o
 .PHONY : helper/lte-global-pathloss-database.cc.o
 
 helper/lte-global-pathloss-database.i: helper/lte-global-pathloss-database.cc.i
@@ -275,7 +299,7 @@ helper/lte-global-pathloss-database.i: helper/lte-global-pathloss-database.cc.i
 
 # target to preprocess a source file
 helper/lte-global-pathloss-database.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/lte-global-pathloss-database.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/lte-global-pathloss-database.cc.i
 .PHONY : helper/lte-global-pathloss-database.cc.i
 
 helper/lte-global-pathloss-database.s: helper/lte-global-pathloss-database.cc.s
@@ -283,7 +307,7 @@ helper/lte-global-pathloss-database.s: helper/lte-global-pathloss-database.cc.s
 
 # target to generate assembly for a file
 helper/lte-global-pathloss-database.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/lte-global-pathloss-database.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/lte-global-pathloss-database.cc.s
 .PHONY : helper/lte-global-pathloss-database.cc.s
 
 helper/lte-helper.o: helper/lte-helper.cc.o
@@ -291,7 +315,7 @@ helper/lte-helper.o: helper/lte-helper.cc.o
 
 # target to build an object file
 helper/lte-helper.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/lte-helper.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/lte-helper.cc.o
 .PHONY : helper/lte-helper.cc.o
 
 helper/lte-helper.i: helper/lte-helper.cc.i
@@ -299,7 +323,7 @@ helper/lte-helper.i: helper/lte-helper.cc.i
 
 # target to preprocess a source file
 helper/lte-helper.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/lte-helper.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/lte-helper.cc.i
 .PHONY : helper/lte-helper.cc.i
 
 helper/lte-helper.s: helper/lte-helper.cc.s
@@ -307,7 +331,7 @@ helper/lte-helper.s: helper/lte-helper.cc.s
 
 # target to generate assembly for a file
 helper/lte-helper.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/lte-helper.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/lte-helper.cc.s
 .PHONY : helper/lte-helper.cc.s
 
 helper/lte-hex-grid-enb-topology-helper.o: helper/lte-hex-grid-enb-topology-helper.cc.o
@@ -315,7 +339,7 @@ helper/lte-hex-grid-enb-topology-helper.o: helper/lte-hex-grid-enb-topology-help
 
 # target to build an object file
 helper/lte-hex-grid-enb-topology-helper.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/lte-hex-grid-enb-topology-helper.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/lte-hex-grid-enb-topology-helper.cc.o
 .PHONY : helper/lte-hex-grid-enb-topology-helper.cc.o
 
 helper/lte-hex-grid-enb-topology-helper.i: helper/lte-hex-grid-enb-topology-helper.cc.i
@@ -323,7 +347,7 @@ helper/lte-hex-grid-enb-topology-helper.i: helper/lte-hex-grid-enb-topology-help
 
 # target to preprocess a source file
 helper/lte-hex-grid-enb-topology-helper.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/lte-hex-grid-enb-topology-helper.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/lte-hex-grid-enb-topology-helper.cc.i
 .PHONY : helper/lte-hex-grid-enb-topology-helper.cc.i
 
 helper/lte-hex-grid-enb-topology-helper.s: helper/lte-hex-grid-enb-topology-helper.cc.s
@@ -331,7 +355,7 @@ helper/lte-hex-grid-enb-topology-helper.s: helper/lte-hex-grid-enb-topology-help
 
 # target to generate assembly for a file
 helper/lte-hex-grid-enb-topology-helper.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/lte-hex-grid-enb-topology-helper.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/lte-hex-grid-enb-topology-helper.cc.s
 .PHONY : helper/lte-hex-grid-enb-topology-helper.cc.s
 
 helper/lte-stats-calculator.o: helper/lte-stats-calculator.cc.o
@@ -339,7 +363,7 @@ helper/lte-stats-calculator.o: helper/lte-stats-calculator.cc.o
 
 # target to build an object file
 helper/lte-stats-calculator.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/lte-stats-calculator.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/lte-stats-calculator.cc.o
 .PHONY : helper/lte-stats-calculator.cc.o
 
 helper/lte-stats-calculator.i: helper/lte-stats-calculator.cc.i
@@ -347,7 +371,7 @@ helper/lte-stats-calculator.i: helper/lte-stats-calculator.cc.i
 
 # target to preprocess a source file
 helper/lte-stats-calculator.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/lte-stats-calculator.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/lte-stats-calculator.cc.i
 .PHONY : helper/lte-stats-calculator.cc.i
 
 helper/lte-stats-calculator.s: helper/lte-stats-calculator.cc.s
@@ -355,7 +379,7 @@ helper/lte-stats-calculator.s: helper/lte-stats-calculator.cc.s
 
 # target to generate assembly for a file
 helper/lte-stats-calculator.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/lte-stats-calculator.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/lte-stats-calculator.cc.s
 .PHONY : helper/lte-stats-calculator.cc.s
 
 helper/mac-stats-calculator.o: helper/mac-stats-calculator.cc.o
@@ -363,7 +387,7 @@ helper/mac-stats-calculator.o: helper/mac-stats-calculator.cc.o
 
 # target to build an object file
 helper/mac-stats-calculator.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/mac-stats-calculator.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/mac-stats-calculator.cc.o
 .PHONY : helper/mac-stats-calculator.cc.o
 
 helper/mac-stats-calculator.i: helper/mac-stats-calculator.cc.i
@@ -371,7 +395,7 @@ helper/mac-stats-calculator.i: helper/mac-stats-calculator.cc.i
 
 # target to preprocess a source file
 helper/mac-stats-calculator.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/mac-stats-calculator.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/mac-stats-calculator.cc.i
 .PHONY : helper/mac-stats-calculator.cc.i
 
 helper/mac-stats-calculator.s: helper/mac-stats-calculator.cc.s
@@ -379,7 +403,7 @@ helper/mac-stats-calculator.s: helper/mac-stats-calculator.cc.s
 
 # target to generate assembly for a file
 helper/mac-stats-calculator.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/mac-stats-calculator.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/mac-stats-calculator.cc.s
 .PHONY : helper/mac-stats-calculator.cc.s
 
 helper/no-backhaul-epc-helper.o: helper/no-backhaul-epc-helper.cc.o
@@ -387,7 +411,7 @@ helper/no-backhaul-epc-helper.o: helper/no-backhaul-epc-helper.cc.o
 
 # target to build an object file
 helper/no-backhaul-epc-helper.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/no-backhaul-epc-helper.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/no-backhaul-epc-helper.cc.o
 .PHONY : helper/no-backhaul-epc-helper.cc.o
 
 helper/no-backhaul-epc-helper.i: helper/no-backhaul-epc-helper.cc.i
@@ -395,7 +419,7 @@ helper/no-backhaul-epc-helper.i: helper/no-backhaul-epc-helper.cc.i
 
 # target to preprocess a source file
 helper/no-backhaul-epc-helper.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/no-backhaul-epc-helper.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/no-backhaul-epc-helper.cc.i
 .PHONY : helper/no-backhaul-epc-helper.cc.i
 
 helper/no-backhaul-epc-helper.s: helper/no-backhaul-epc-helper.cc.s
@@ -403,7 +427,7 @@ helper/no-backhaul-epc-helper.s: helper/no-backhaul-epc-helper.cc.s
 
 # target to generate assembly for a file
 helper/no-backhaul-epc-helper.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/no-backhaul-epc-helper.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/no-backhaul-epc-helper.cc.s
 .PHONY : helper/no-backhaul-epc-helper.cc.s
 
 helper/phy-rx-stats-calculator.o: helper/phy-rx-stats-calculator.cc.o
@@ -411,7 +435,7 @@ helper/phy-rx-stats-calculator.o: helper/phy-rx-stats-calculator.cc.o
 
 # target to build an object file
 helper/phy-rx-stats-calculator.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/phy-rx-stats-calculator.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/phy-rx-stats-calculator.cc.o
 .PHONY : helper/phy-rx-stats-calculator.cc.o
 
 helper/phy-rx-stats-calculator.i: helper/phy-rx-stats-calculator.cc.i
@@ -419,7 +443,7 @@ helper/phy-rx-stats-calculator.i: helper/phy-rx-stats-calculator.cc.i
 
 # target to preprocess a source file
 helper/phy-rx-stats-calculator.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/phy-rx-stats-calculator.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/phy-rx-stats-calculator.cc.i
 .PHONY : helper/phy-rx-stats-calculator.cc.i
 
 helper/phy-rx-stats-calculator.s: helper/phy-rx-stats-calculator.cc.s
@@ -427,7 +451,7 @@ helper/phy-rx-stats-calculator.s: helper/phy-rx-stats-calculator.cc.s
 
 # target to generate assembly for a file
 helper/phy-rx-stats-calculator.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/phy-rx-stats-calculator.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/phy-rx-stats-calculator.cc.s
 .PHONY : helper/phy-rx-stats-calculator.cc.s
 
 helper/phy-stats-calculator.o: helper/phy-stats-calculator.cc.o
@@ -435,7 +459,7 @@ helper/phy-stats-calculator.o: helper/phy-stats-calculator.cc.o
 
 # target to build an object file
 helper/phy-stats-calculator.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/phy-stats-calculator.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/phy-stats-calculator.cc.o
 .PHONY : helper/phy-stats-calculator.cc.o
 
 helper/phy-stats-calculator.i: helper/phy-stats-calculator.cc.i
@@ -443,7 +467,7 @@ helper/phy-stats-calculator.i: helper/phy-stats-calculator.cc.i
 
 # target to preprocess a source file
 helper/phy-stats-calculator.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/phy-stats-calculator.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/phy-stats-calculator.cc.i
 .PHONY : helper/phy-stats-calculator.cc.i
 
 helper/phy-stats-calculator.s: helper/phy-stats-calculator.cc.s
@@ -451,7 +475,7 @@ helper/phy-stats-calculator.s: helper/phy-stats-calculator.cc.s
 
 # target to generate assembly for a file
 helper/phy-stats-calculator.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/phy-stats-calculator.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/phy-stats-calculator.cc.s
 .PHONY : helper/phy-stats-calculator.cc.s
 
 helper/phy-tx-stats-calculator.o: helper/phy-tx-stats-calculator.cc.o
@@ -459,7 +483,7 @@ helper/phy-tx-stats-calculator.o: helper/phy-tx-stats-calculator.cc.o
 
 # target to build an object file
 helper/phy-tx-stats-calculator.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/phy-tx-stats-calculator.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/phy-tx-stats-calculator.cc.o
 .PHONY : helper/phy-tx-stats-calculator.cc.o
 
 helper/phy-tx-stats-calculator.i: helper/phy-tx-stats-calculator.cc.i
@@ -467,7 +491,7 @@ helper/phy-tx-stats-calculator.i: helper/phy-tx-stats-calculator.cc.i
 
 # target to preprocess a source file
 helper/phy-tx-stats-calculator.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/phy-tx-stats-calculator.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/phy-tx-stats-calculator.cc.i
 .PHONY : helper/phy-tx-stats-calculator.cc.i
 
 helper/phy-tx-stats-calculator.s: helper/phy-tx-stats-calculator.cc.s
@@ -475,7 +499,7 @@ helper/phy-tx-stats-calculator.s: helper/phy-tx-stats-calculator.cc.s
 
 # target to generate assembly for a file
 helper/phy-tx-stats-calculator.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/phy-tx-stats-calculator.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/phy-tx-stats-calculator.cc.s
 .PHONY : helper/phy-tx-stats-calculator.cc.s
 
 helper/point-to-point-epc-helper.o: helper/point-to-point-epc-helper.cc.o
@@ -483,7 +507,7 @@ helper/point-to-point-epc-helper.o: helper/point-to-point-epc-helper.cc.o
 
 # target to build an object file
 helper/point-to-point-epc-helper.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/point-to-point-epc-helper.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/point-to-point-epc-helper.cc.o
 .PHONY : helper/point-to-point-epc-helper.cc.o
 
 helper/point-to-point-epc-helper.i: helper/point-to-point-epc-helper.cc.i
@@ -491,7 +515,7 @@ helper/point-to-point-epc-helper.i: helper/point-to-point-epc-helper.cc.i
 
 # target to preprocess a source file
 helper/point-to-point-epc-helper.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/point-to-point-epc-helper.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/point-to-point-epc-helper.cc.i
 .PHONY : helper/point-to-point-epc-helper.cc.i
 
 helper/point-to-point-epc-helper.s: helper/point-to-point-epc-helper.cc.s
@@ -499,7 +523,7 @@ helper/point-to-point-epc-helper.s: helper/point-to-point-epc-helper.cc.s
 
 # target to generate assembly for a file
 helper/point-to-point-epc-helper.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/point-to-point-epc-helper.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/point-to-point-epc-helper.cc.s
 .PHONY : helper/point-to-point-epc-helper.cc.s
 
 helper/radio-bearer-stats-calculator.o: helper/radio-bearer-stats-calculator.cc.o
@@ -507,7 +531,7 @@ helper/radio-bearer-stats-calculator.o: helper/radio-bearer-stats-calculator.cc.
 
 # target to build an object file
 helper/radio-bearer-stats-calculator.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/radio-bearer-stats-calculator.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/radio-bearer-stats-calculator.cc.o
 .PHONY : helper/radio-bearer-stats-calculator.cc.o
 
 helper/radio-bearer-stats-calculator.i: helper/radio-bearer-stats-calculator.cc.i
@@ -515,7 +539,7 @@ helper/radio-bearer-stats-calculator.i: helper/radio-bearer-stats-calculator.cc.
 
 # target to preprocess a source file
 helper/radio-bearer-stats-calculator.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/radio-bearer-stats-calculator.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/radio-bearer-stats-calculator.cc.i
 .PHONY : helper/radio-bearer-stats-calculator.cc.i
 
 helper/radio-bearer-stats-calculator.s: helper/radio-bearer-stats-calculator.cc.s
@@ -523,7 +547,7 @@ helper/radio-bearer-stats-calculator.s: helper/radio-bearer-stats-calculator.cc.
 
 # target to generate assembly for a file
 helper/radio-bearer-stats-calculator.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/radio-bearer-stats-calculator.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/radio-bearer-stats-calculator.cc.s
 .PHONY : helper/radio-bearer-stats-calculator.cc.s
 
 helper/radio-bearer-stats-connector.o: helper/radio-bearer-stats-connector.cc.o
@@ -531,7 +555,7 @@ helper/radio-bearer-stats-connector.o: helper/radio-bearer-stats-connector.cc.o
 
 # target to build an object file
 helper/radio-bearer-stats-connector.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/radio-bearer-stats-connector.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/radio-bearer-stats-connector.cc.o
 .PHONY : helper/radio-bearer-stats-connector.cc.o
 
 helper/radio-bearer-stats-connector.i: helper/radio-bearer-stats-connector.cc.i
@@ -539,7 +563,7 @@ helper/radio-bearer-stats-connector.i: helper/radio-bearer-stats-connector.cc.i
 
 # target to preprocess a source file
 helper/radio-bearer-stats-connector.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/radio-bearer-stats-connector.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/radio-bearer-stats-connector.cc.i
 .PHONY : helper/radio-bearer-stats-connector.cc.i
 
 helper/radio-bearer-stats-connector.s: helper/radio-bearer-stats-connector.cc.s
@@ -547,7 +571,7 @@ helper/radio-bearer-stats-connector.s: helper/radio-bearer-stats-connector.cc.s
 
 # target to generate assembly for a file
 helper/radio-bearer-stats-connector.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/radio-bearer-stats-connector.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/radio-bearer-stats-connector.cc.s
 .PHONY : helper/radio-bearer-stats-connector.cc.s
 
 helper/radio-environment-map-helper.o: helper/radio-environment-map-helper.cc.o
@@ -555,7 +579,7 @@ helper/radio-environment-map-helper.o: helper/radio-environment-map-helper.cc.o
 
 # target to build an object file
 helper/radio-environment-map-helper.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/radio-environment-map-helper.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/radio-environment-map-helper.cc.o
 .PHONY : helper/radio-environment-map-helper.cc.o
 
 helper/radio-environment-map-helper.i: helper/radio-environment-map-helper.cc.i
@@ -563,7 +587,7 @@ helper/radio-environment-map-helper.i: helper/radio-environment-map-helper.cc.i
 
 # target to preprocess a source file
 helper/radio-environment-map-helper.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/radio-environment-map-helper.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/radio-environment-map-helper.cc.i
 .PHONY : helper/radio-environment-map-helper.cc.i
 
 helper/radio-environment-map-helper.s: helper/radio-environment-map-helper.cc.s
@@ -571,7 +595,7 @@ helper/radio-environment-map-helper.s: helper/radio-environment-map-helper.cc.s
 
 # target to generate assembly for a file
 helper/radio-environment-map-helper.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/radio-environment-map-helper.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/helper/radio-environment-map-helper.cc.s
 .PHONY : helper/radio-environment-map-helper.cc.s
 
 model/a2-a4-rsrq-handover-algorithm.o: model/a2-a4-rsrq-handover-algorithm.cc.o
@@ -579,7 +603,7 @@ model/a2-a4-rsrq-handover-algorithm.o: model/a2-a4-rsrq-handover-algorithm.cc.o
 
 # target to build an object file
 model/a2-a4-rsrq-handover-algorithm.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/a2-a4-rsrq-handover-algorithm.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/a2-a4-rsrq-handover-algorithm.cc.o
 .PHONY : model/a2-a4-rsrq-handover-algorithm.cc.o
 
 model/a2-a4-rsrq-handover-algorithm.i: model/a2-a4-rsrq-handover-algorithm.cc.i
@@ -587,7 +611,7 @@ model/a2-a4-rsrq-handover-algorithm.i: model/a2-a4-rsrq-handover-algorithm.cc.i
 
 # target to preprocess a source file
 model/a2-a4-rsrq-handover-algorithm.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/a2-a4-rsrq-handover-algorithm.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/a2-a4-rsrq-handover-algorithm.cc.i
 .PHONY : model/a2-a4-rsrq-handover-algorithm.cc.i
 
 model/a2-a4-rsrq-handover-algorithm.s: model/a2-a4-rsrq-handover-algorithm.cc.s
@@ -595,7 +619,7 @@ model/a2-a4-rsrq-handover-algorithm.s: model/a2-a4-rsrq-handover-algorithm.cc.s
 
 # target to generate assembly for a file
 model/a2-a4-rsrq-handover-algorithm.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/a2-a4-rsrq-handover-algorithm.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/a2-a4-rsrq-handover-algorithm.cc.s
 .PHONY : model/a2-a4-rsrq-handover-algorithm.cc.s
 
 model/a3-rsrp-handover-algorithm.o: model/a3-rsrp-handover-algorithm.cc.o
@@ -603,7 +627,7 @@ model/a3-rsrp-handover-algorithm.o: model/a3-rsrp-handover-algorithm.cc.o
 
 # target to build an object file
 model/a3-rsrp-handover-algorithm.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/a3-rsrp-handover-algorithm.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/a3-rsrp-handover-algorithm.cc.o
 .PHONY : model/a3-rsrp-handover-algorithm.cc.o
 
 model/a3-rsrp-handover-algorithm.i: model/a3-rsrp-handover-algorithm.cc.i
@@ -611,7 +635,7 @@ model/a3-rsrp-handover-algorithm.i: model/a3-rsrp-handover-algorithm.cc.i
 
 # target to preprocess a source file
 model/a3-rsrp-handover-algorithm.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/a3-rsrp-handover-algorithm.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/a3-rsrp-handover-algorithm.cc.i
 .PHONY : model/a3-rsrp-handover-algorithm.cc.i
 
 model/a3-rsrp-handover-algorithm.s: model/a3-rsrp-handover-algorithm.cc.s
@@ -619,7 +643,7 @@ model/a3-rsrp-handover-algorithm.s: model/a3-rsrp-handover-algorithm.cc.s
 
 # target to generate assembly for a file
 model/a3-rsrp-handover-algorithm.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/a3-rsrp-handover-algorithm.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/a3-rsrp-handover-algorithm.cc.s
 .PHONY : model/a3-rsrp-handover-algorithm.cc.s
 
 model/component-carrier-enb.o: model/component-carrier-enb.cc.o
@@ -627,7 +651,7 @@ model/component-carrier-enb.o: model/component-carrier-enb.cc.o
 
 # target to build an object file
 model/component-carrier-enb.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/component-carrier-enb.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/component-carrier-enb.cc.o
 .PHONY : model/component-carrier-enb.cc.o
 
 model/component-carrier-enb.i: model/component-carrier-enb.cc.i
@@ -635,7 +659,7 @@ model/component-carrier-enb.i: model/component-carrier-enb.cc.i
 
 # target to preprocess a source file
 model/component-carrier-enb.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/component-carrier-enb.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/component-carrier-enb.cc.i
 .PHONY : model/component-carrier-enb.cc.i
 
 model/component-carrier-enb.s: model/component-carrier-enb.cc.s
@@ -643,7 +667,7 @@ model/component-carrier-enb.s: model/component-carrier-enb.cc.s
 
 # target to generate assembly for a file
 model/component-carrier-enb.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/component-carrier-enb.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/component-carrier-enb.cc.s
 .PHONY : model/component-carrier-enb.cc.s
 
 model/component-carrier-ue.o: model/component-carrier-ue.cc.o
@@ -651,7 +675,7 @@ model/component-carrier-ue.o: model/component-carrier-ue.cc.o
 
 # target to build an object file
 model/component-carrier-ue.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/component-carrier-ue.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/component-carrier-ue.cc.o
 .PHONY : model/component-carrier-ue.cc.o
 
 model/component-carrier-ue.i: model/component-carrier-ue.cc.i
@@ -659,7 +683,7 @@ model/component-carrier-ue.i: model/component-carrier-ue.cc.i
 
 # target to preprocess a source file
 model/component-carrier-ue.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/component-carrier-ue.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/component-carrier-ue.cc.i
 .PHONY : model/component-carrier-ue.cc.i
 
 model/component-carrier-ue.s: model/component-carrier-ue.cc.s
@@ -667,7 +691,7 @@ model/component-carrier-ue.s: model/component-carrier-ue.cc.s
 
 # target to generate assembly for a file
 model/component-carrier-ue.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/component-carrier-ue.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/component-carrier-ue.cc.s
 .PHONY : model/component-carrier-ue.cc.s
 
 model/component-carrier.o: model/component-carrier.cc.o
@@ -675,7 +699,7 @@ model/component-carrier.o: model/component-carrier.cc.o
 
 # target to build an object file
 model/component-carrier.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/component-carrier.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/component-carrier.cc.o
 .PHONY : model/component-carrier.cc.o
 
 model/component-carrier.i: model/component-carrier.cc.i
@@ -683,7 +707,7 @@ model/component-carrier.i: model/component-carrier.cc.i
 
 # target to preprocess a source file
 model/component-carrier.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/component-carrier.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/component-carrier.cc.i
 .PHONY : model/component-carrier.cc.i
 
 model/component-carrier.s: model/component-carrier.cc.s
@@ -691,7 +715,7 @@ model/component-carrier.s: model/component-carrier.cc.s
 
 # target to generate assembly for a file
 model/component-carrier.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/component-carrier.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/component-carrier.cc.s
 .PHONY : model/component-carrier.cc.s
 
 model/cqa-ff-mac-scheduler.o: model/cqa-ff-mac-scheduler.cc.o
@@ -699,7 +723,7 @@ model/cqa-ff-mac-scheduler.o: model/cqa-ff-mac-scheduler.cc.o
 
 # target to build an object file
 model/cqa-ff-mac-scheduler.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/cqa-ff-mac-scheduler.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/cqa-ff-mac-scheduler.cc.o
 .PHONY : model/cqa-ff-mac-scheduler.cc.o
 
 model/cqa-ff-mac-scheduler.i: model/cqa-ff-mac-scheduler.cc.i
@@ -707,7 +731,7 @@ model/cqa-ff-mac-scheduler.i: model/cqa-ff-mac-scheduler.cc.i
 
 # target to preprocess a source file
 model/cqa-ff-mac-scheduler.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/cqa-ff-mac-scheduler.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/cqa-ff-mac-scheduler.cc.i
 .PHONY : model/cqa-ff-mac-scheduler.cc.i
 
 model/cqa-ff-mac-scheduler.s: model/cqa-ff-mac-scheduler.cc.s
@@ -715,7 +739,7 @@ model/cqa-ff-mac-scheduler.s: model/cqa-ff-mac-scheduler.cc.s
 
 # target to generate assembly for a file
 model/cqa-ff-mac-scheduler.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/cqa-ff-mac-scheduler.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/cqa-ff-mac-scheduler.cc.s
 .PHONY : model/cqa-ff-mac-scheduler.cc.s
 
 model/epc-enb-application.o: model/epc-enb-application.cc.o
@@ -723,7 +747,7 @@ model/epc-enb-application.o: model/epc-enb-application.cc.o
 
 # target to build an object file
 model/epc-enb-application.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-enb-application.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-enb-application.cc.o
 .PHONY : model/epc-enb-application.cc.o
 
 model/epc-enb-application.i: model/epc-enb-application.cc.i
@@ -731,7 +755,7 @@ model/epc-enb-application.i: model/epc-enb-application.cc.i
 
 # target to preprocess a source file
 model/epc-enb-application.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-enb-application.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-enb-application.cc.i
 .PHONY : model/epc-enb-application.cc.i
 
 model/epc-enb-application.s: model/epc-enb-application.cc.s
@@ -739,7 +763,7 @@ model/epc-enb-application.s: model/epc-enb-application.cc.s
 
 # target to generate assembly for a file
 model/epc-enb-application.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-enb-application.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-enb-application.cc.s
 .PHONY : model/epc-enb-application.cc.s
 
 model/epc-enb-s1-sap.o: model/epc-enb-s1-sap.cc.o
@@ -747,7 +771,7 @@ model/epc-enb-s1-sap.o: model/epc-enb-s1-sap.cc.o
 
 # target to build an object file
 model/epc-enb-s1-sap.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-enb-s1-sap.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-enb-s1-sap.cc.o
 .PHONY : model/epc-enb-s1-sap.cc.o
 
 model/epc-enb-s1-sap.i: model/epc-enb-s1-sap.cc.i
@@ -755,7 +779,7 @@ model/epc-enb-s1-sap.i: model/epc-enb-s1-sap.cc.i
 
 # target to preprocess a source file
 model/epc-enb-s1-sap.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-enb-s1-sap.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-enb-s1-sap.cc.i
 .PHONY : model/epc-enb-s1-sap.cc.i
 
 model/epc-enb-s1-sap.s: model/epc-enb-s1-sap.cc.s
@@ -763,7 +787,7 @@ model/epc-enb-s1-sap.s: model/epc-enb-s1-sap.cc.s
 
 # target to generate assembly for a file
 model/epc-enb-s1-sap.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-enb-s1-sap.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-enb-s1-sap.cc.s
 .PHONY : model/epc-enb-s1-sap.cc.s
 
 model/epc-gtpc-header.o: model/epc-gtpc-header.cc.o
@@ -771,7 +795,7 @@ model/epc-gtpc-header.o: model/epc-gtpc-header.cc.o
 
 # target to build an object file
 model/epc-gtpc-header.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-gtpc-header.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-gtpc-header.cc.o
 .PHONY : model/epc-gtpc-header.cc.o
 
 model/epc-gtpc-header.i: model/epc-gtpc-header.cc.i
@@ -779,7 +803,7 @@ model/epc-gtpc-header.i: model/epc-gtpc-header.cc.i
 
 # target to preprocess a source file
 model/epc-gtpc-header.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-gtpc-header.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-gtpc-header.cc.i
 .PHONY : model/epc-gtpc-header.cc.i
 
 model/epc-gtpc-header.s: model/epc-gtpc-header.cc.s
@@ -787,7 +811,7 @@ model/epc-gtpc-header.s: model/epc-gtpc-header.cc.s
 
 # target to generate assembly for a file
 model/epc-gtpc-header.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-gtpc-header.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-gtpc-header.cc.s
 .PHONY : model/epc-gtpc-header.cc.s
 
 model/epc-gtpu-header.o: model/epc-gtpu-header.cc.o
@@ -795,7 +819,7 @@ model/epc-gtpu-header.o: model/epc-gtpu-header.cc.o
 
 # target to build an object file
 model/epc-gtpu-header.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-gtpu-header.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-gtpu-header.cc.o
 .PHONY : model/epc-gtpu-header.cc.o
 
 model/epc-gtpu-header.i: model/epc-gtpu-header.cc.i
@@ -803,7 +827,7 @@ model/epc-gtpu-header.i: model/epc-gtpu-header.cc.i
 
 # target to preprocess a source file
 model/epc-gtpu-header.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-gtpu-header.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-gtpu-header.cc.i
 .PHONY : model/epc-gtpu-header.cc.i
 
 model/epc-gtpu-header.s: model/epc-gtpu-header.cc.s
@@ -811,7 +835,7 @@ model/epc-gtpu-header.s: model/epc-gtpu-header.cc.s
 
 # target to generate assembly for a file
 model/epc-gtpu-header.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-gtpu-header.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-gtpu-header.cc.s
 .PHONY : model/epc-gtpu-header.cc.s
 
 model/epc-mme-application.o: model/epc-mme-application.cc.o
@@ -819,7 +843,7 @@ model/epc-mme-application.o: model/epc-mme-application.cc.o
 
 # target to build an object file
 model/epc-mme-application.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-mme-application.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-mme-application.cc.o
 .PHONY : model/epc-mme-application.cc.o
 
 model/epc-mme-application.i: model/epc-mme-application.cc.i
@@ -827,7 +851,7 @@ model/epc-mme-application.i: model/epc-mme-application.cc.i
 
 # target to preprocess a source file
 model/epc-mme-application.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-mme-application.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-mme-application.cc.i
 .PHONY : model/epc-mme-application.cc.i
 
 model/epc-mme-application.s: model/epc-mme-application.cc.s
@@ -835,7 +859,7 @@ model/epc-mme-application.s: model/epc-mme-application.cc.s
 
 # target to generate assembly for a file
 model/epc-mme-application.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-mme-application.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-mme-application.cc.s
 .PHONY : model/epc-mme-application.cc.s
 
 model/epc-pgw-application.o: model/epc-pgw-application.cc.o
@@ -843,7 +867,7 @@ model/epc-pgw-application.o: model/epc-pgw-application.cc.o
 
 # target to build an object file
 model/epc-pgw-application.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-pgw-application.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-pgw-application.cc.o
 .PHONY : model/epc-pgw-application.cc.o
 
 model/epc-pgw-application.i: model/epc-pgw-application.cc.i
@@ -851,7 +875,7 @@ model/epc-pgw-application.i: model/epc-pgw-application.cc.i
 
 # target to preprocess a source file
 model/epc-pgw-application.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-pgw-application.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-pgw-application.cc.i
 .PHONY : model/epc-pgw-application.cc.i
 
 model/epc-pgw-application.s: model/epc-pgw-application.cc.s
@@ -859,7 +883,7 @@ model/epc-pgw-application.s: model/epc-pgw-application.cc.s
 
 # target to generate assembly for a file
 model/epc-pgw-application.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-pgw-application.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-pgw-application.cc.s
 .PHONY : model/epc-pgw-application.cc.s
 
 model/epc-s11-sap.o: model/epc-s11-sap.cc.o
@@ -867,7 +891,7 @@ model/epc-s11-sap.o: model/epc-s11-sap.cc.o
 
 # target to build an object file
 model/epc-s11-sap.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-s11-sap.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-s11-sap.cc.o
 .PHONY : model/epc-s11-sap.cc.o
 
 model/epc-s11-sap.i: model/epc-s11-sap.cc.i
@@ -875,7 +899,7 @@ model/epc-s11-sap.i: model/epc-s11-sap.cc.i
 
 # target to preprocess a source file
 model/epc-s11-sap.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-s11-sap.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-s11-sap.cc.i
 .PHONY : model/epc-s11-sap.cc.i
 
 model/epc-s11-sap.s: model/epc-s11-sap.cc.s
@@ -883,7 +907,7 @@ model/epc-s11-sap.s: model/epc-s11-sap.cc.s
 
 # target to generate assembly for a file
 model/epc-s11-sap.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-s11-sap.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-s11-sap.cc.s
 .PHONY : model/epc-s11-sap.cc.s
 
 model/epc-s1ap-sap.o: model/epc-s1ap-sap.cc.o
@@ -891,7 +915,7 @@ model/epc-s1ap-sap.o: model/epc-s1ap-sap.cc.o
 
 # target to build an object file
 model/epc-s1ap-sap.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-s1ap-sap.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-s1ap-sap.cc.o
 .PHONY : model/epc-s1ap-sap.cc.o
 
 model/epc-s1ap-sap.i: model/epc-s1ap-sap.cc.i
@@ -899,7 +923,7 @@ model/epc-s1ap-sap.i: model/epc-s1ap-sap.cc.i
 
 # target to preprocess a source file
 model/epc-s1ap-sap.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-s1ap-sap.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-s1ap-sap.cc.i
 .PHONY : model/epc-s1ap-sap.cc.i
 
 model/epc-s1ap-sap.s: model/epc-s1ap-sap.cc.s
@@ -907,7 +931,7 @@ model/epc-s1ap-sap.s: model/epc-s1ap-sap.cc.s
 
 # target to generate assembly for a file
 model/epc-s1ap-sap.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-s1ap-sap.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-s1ap-sap.cc.s
 .PHONY : model/epc-s1ap-sap.cc.s
 
 model/epc-sgw-application.o: model/epc-sgw-application.cc.o
@@ -915,7 +939,7 @@ model/epc-sgw-application.o: model/epc-sgw-application.cc.o
 
 # target to build an object file
 model/epc-sgw-application.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-sgw-application.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-sgw-application.cc.o
 .PHONY : model/epc-sgw-application.cc.o
 
 model/epc-sgw-application.i: model/epc-sgw-application.cc.i
@@ -923,7 +947,7 @@ model/epc-sgw-application.i: model/epc-sgw-application.cc.i
 
 # target to preprocess a source file
 model/epc-sgw-application.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-sgw-application.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-sgw-application.cc.i
 .PHONY : model/epc-sgw-application.cc.i
 
 model/epc-sgw-application.s: model/epc-sgw-application.cc.s
@@ -931,7 +955,7 @@ model/epc-sgw-application.s: model/epc-sgw-application.cc.s
 
 # target to generate assembly for a file
 model/epc-sgw-application.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-sgw-application.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-sgw-application.cc.s
 .PHONY : model/epc-sgw-application.cc.s
 
 model/epc-tft-classifier.o: model/epc-tft-classifier.cc.o
@@ -939,7 +963,7 @@ model/epc-tft-classifier.o: model/epc-tft-classifier.cc.o
 
 # target to build an object file
 model/epc-tft-classifier.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-tft-classifier.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-tft-classifier.cc.o
 .PHONY : model/epc-tft-classifier.cc.o
 
 model/epc-tft-classifier.i: model/epc-tft-classifier.cc.i
@@ -947,7 +971,7 @@ model/epc-tft-classifier.i: model/epc-tft-classifier.cc.i
 
 # target to preprocess a source file
 model/epc-tft-classifier.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-tft-classifier.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-tft-classifier.cc.i
 .PHONY : model/epc-tft-classifier.cc.i
 
 model/epc-tft-classifier.s: model/epc-tft-classifier.cc.s
@@ -955,7 +979,7 @@ model/epc-tft-classifier.s: model/epc-tft-classifier.cc.s
 
 # target to generate assembly for a file
 model/epc-tft-classifier.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-tft-classifier.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-tft-classifier.cc.s
 .PHONY : model/epc-tft-classifier.cc.s
 
 model/epc-tft.o: model/epc-tft.cc.o
@@ -963,7 +987,7 @@ model/epc-tft.o: model/epc-tft.cc.o
 
 # target to build an object file
 model/epc-tft.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-tft.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-tft.cc.o
 .PHONY : model/epc-tft.cc.o
 
 model/epc-tft.i: model/epc-tft.cc.i
@@ -971,7 +995,7 @@ model/epc-tft.i: model/epc-tft.cc.i
 
 # target to preprocess a source file
 model/epc-tft.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-tft.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-tft.cc.i
 .PHONY : model/epc-tft.cc.i
 
 model/epc-tft.s: model/epc-tft.cc.s
@@ -979,7 +1003,7 @@ model/epc-tft.s: model/epc-tft.cc.s
 
 # target to generate assembly for a file
 model/epc-tft.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-tft.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-tft.cc.s
 .PHONY : model/epc-tft.cc.s
 
 model/epc-ue-nas.o: model/epc-ue-nas.cc.o
@@ -987,7 +1011,7 @@ model/epc-ue-nas.o: model/epc-ue-nas.cc.o
 
 # target to build an object file
 model/epc-ue-nas.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-ue-nas.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-ue-nas.cc.o
 .PHONY : model/epc-ue-nas.cc.o
 
 model/epc-ue-nas.i: model/epc-ue-nas.cc.i
@@ -995,7 +1019,7 @@ model/epc-ue-nas.i: model/epc-ue-nas.cc.i
 
 # target to preprocess a source file
 model/epc-ue-nas.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-ue-nas.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-ue-nas.cc.i
 .PHONY : model/epc-ue-nas.cc.i
 
 model/epc-ue-nas.s: model/epc-ue-nas.cc.s
@@ -1003,7 +1027,7 @@ model/epc-ue-nas.s: model/epc-ue-nas.cc.s
 
 # target to generate assembly for a file
 model/epc-ue-nas.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-ue-nas.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-ue-nas.cc.s
 .PHONY : model/epc-ue-nas.cc.s
 
 model/epc-x2-header.o: model/epc-x2-header.cc.o
@@ -1011,7 +1035,7 @@ model/epc-x2-header.o: model/epc-x2-header.cc.o
 
 # target to build an object file
 model/epc-x2-header.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-x2-header.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-x2-header.cc.o
 .PHONY : model/epc-x2-header.cc.o
 
 model/epc-x2-header.i: model/epc-x2-header.cc.i
@@ -1019,7 +1043,7 @@ model/epc-x2-header.i: model/epc-x2-header.cc.i
 
 # target to preprocess a source file
 model/epc-x2-header.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-x2-header.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-x2-header.cc.i
 .PHONY : model/epc-x2-header.cc.i
 
 model/epc-x2-header.s: model/epc-x2-header.cc.s
@@ -1027,7 +1051,7 @@ model/epc-x2-header.s: model/epc-x2-header.cc.s
 
 # target to generate assembly for a file
 model/epc-x2-header.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-x2-header.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-x2-header.cc.s
 .PHONY : model/epc-x2-header.cc.s
 
 model/epc-x2-sap.o: model/epc-x2-sap.cc.o
@@ -1035,7 +1059,7 @@ model/epc-x2-sap.o: model/epc-x2-sap.cc.o
 
 # target to build an object file
 model/epc-x2-sap.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-x2-sap.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-x2-sap.cc.o
 .PHONY : model/epc-x2-sap.cc.o
 
 model/epc-x2-sap.i: model/epc-x2-sap.cc.i
@@ -1043,7 +1067,7 @@ model/epc-x2-sap.i: model/epc-x2-sap.cc.i
 
 # target to preprocess a source file
 model/epc-x2-sap.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-x2-sap.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-x2-sap.cc.i
 .PHONY : model/epc-x2-sap.cc.i
 
 model/epc-x2-sap.s: model/epc-x2-sap.cc.s
@@ -1051,7 +1075,7 @@ model/epc-x2-sap.s: model/epc-x2-sap.cc.s
 
 # target to generate assembly for a file
 model/epc-x2-sap.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-x2-sap.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-x2-sap.cc.s
 .PHONY : model/epc-x2-sap.cc.s
 
 model/epc-x2.o: model/epc-x2.cc.o
@@ -1059,7 +1083,7 @@ model/epc-x2.o: model/epc-x2.cc.o
 
 # target to build an object file
 model/epc-x2.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-x2.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-x2.cc.o
 .PHONY : model/epc-x2.cc.o
 
 model/epc-x2.i: model/epc-x2.cc.i
@@ -1067,7 +1091,7 @@ model/epc-x2.i: model/epc-x2.cc.i
 
 # target to preprocess a source file
 model/epc-x2.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-x2.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-x2.cc.i
 .PHONY : model/epc-x2.cc.i
 
 model/epc-x2.s: model/epc-x2.cc.s
@@ -1075,7 +1099,7 @@ model/epc-x2.s: model/epc-x2.cc.s
 
 # target to generate assembly for a file
 model/epc-x2.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-x2.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/epc-x2.cc.s
 .PHONY : model/epc-x2.cc.s
 
 model/eps-bearer-tag.o: model/eps-bearer-tag.cc.o
@@ -1083,7 +1107,7 @@ model/eps-bearer-tag.o: model/eps-bearer-tag.cc.o
 
 # target to build an object file
 model/eps-bearer-tag.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/eps-bearer-tag.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/eps-bearer-tag.cc.o
 .PHONY : model/eps-bearer-tag.cc.o
 
 model/eps-bearer-tag.i: model/eps-bearer-tag.cc.i
@@ -1091,7 +1115,7 @@ model/eps-bearer-tag.i: model/eps-bearer-tag.cc.i
 
 # target to preprocess a source file
 model/eps-bearer-tag.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/eps-bearer-tag.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/eps-bearer-tag.cc.i
 .PHONY : model/eps-bearer-tag.cc.i
 
 model/eps-bearer-tag.s: model/eps-bearer-tag.cc.s
@@ -1099,7 +1123,7 @@ model/eps-bearer-tag.s: model/eps-bearer-tag.cc.s
 
 # target to generate assembly for a file
 model/eps-bearer-tag.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/eps-bearer-tag.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/eps-bearer-tag.cc.s
 .PHONY : model/eps-bearer-tag.cc.s
 
 model/eps-bearer.o: model/eps-bearer.cc.o
@@ -1107,7 +1131,7 @@ model/eps-bearer.o: model/eps-bearer.cc.o
 
 # target to build an object file
 model/eps-bearer.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/eps-bearer.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/eps-bearer.cc.o
 .PHONY : model/eps-bearer.cc.o
 
 model/eps-bearer.i: model/eps-bearer.cc.i
@@ -1115,7 +1139,7 @@ model/eps-bearer.i: model/eps-bearer.cc.i
 
 # target to preprocess a source file
 model/eps-bearer.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/eps-bearer.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/eps-bearer.cc.i
 .PHONY : model/eps-bearer.cc.i
 
 model/eps-bearer.s: model/eps-bearer.cc.s
@@ -1123,7 +1147,7 @@ model/eps-bearer.s: model/eps-bearer.cc.s
 
 # target to generate assembly for a file
 model/eps-bearer.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/eps-bearer.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/eps-bearer.cc.s
 .PHONY : model/eps-bearer.cc.s
 
 model/fdbet-ff-mac-scheduler.o: model/fdbet-ff-mac-scheduler.cc.o
@@ -1131,7 +1155,7 @@ model/fdbet-ff-mac-scheduler.o: model/fdbet-ff-mac-scheduler.cc.o
 
 # target to build an object file
 model/fdbet-ff-mac-scheduler.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/fdbet-ff-mac-scheduler.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/fdbet-ff-mac-scheduler.cc.o
 .PHONY : model/fdbet-ff-mac-scheduler.cc.o
 
 model/fdbet-ff-mac-scheduler.i: model/fdbet-ff-mac-scheduler.cc.i
@@ -1139,7 +1163,7 @@ model/fdbet-ff-mac-scheduler.i: model/fdbet-ff-mac-scheduler.cc.i
 
 # target to preprocess a source file
 model/fdbet-ff-mac-scheduler.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/fdbet-ff-mac-scheduler.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/fdbet-ff-mac-scheduler.cc.i
 .PHONY : model/fdbet-ff-mac-scheduler.cc.i
 
 model/fdbet-ff-mac-scheduler.s: model/fdbet-ff-mac-scheduler.cc.s
@@ -1147,7 +1171,7 @@ model/fdbet-ff-mac-scheduler.s: model/fdbet-ff-mac-scheduler.cc.s
 
 # target to generate assembly for a file
 model/fdbet-ff-mac-scheduler.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/fdbet-ff-mac-scheduler.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/fdbet-ff-mac-scheduler.cc.s
 .PHONY : model/fdbet-ff-mac-scheduler.cc.s
 
 model/fdmt-ff-mac-scheduler.o: model/fdmt-ff-mac-scheduler.cc.o
@@ -1155,7 +1179,7 @@ model/fdmt-ff-mac-scheduler.o: model/fdmt-ff-mac-scheduler.cc.o
 
 # target to build an object file
 model/fdmt-ff-mac-scheduler.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/fdmt-ff-mac-scheduler.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/fdmt-ff-mac-scheduler.cc.o
 .PHONY : model/fdmt-ff-mac-scheduler.cc.o
 
 model/fdmt-ff-mac-scheduler.i: model/fdmt-ff-mac-scheduler.cc.i
@@ -1163,7 +1187,7 @@ model/fdmt-ff-mac-scheduler.i: model/fdmt-ff-mac-scheduler.cc.i
 
 # target to preprocess a source file
 model/fdmt-ff-mac-scheduler.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/fdmt-ff-mac-scheduler.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/fdmt-ff-mac-scheduler.cc.i
 .PHONY : model/fdmt-ff-mac-scheduler.cc.i
 
 model/fdmt-ff-mac-scheduler.s: model/fdmt-ff-mac-scheduler.cc.s
@@ -1171,7 +1195,7 @@ model/fdmt-ff-mac-scheduler.s: model/fdmt-ff-mac-scheduler.cc.s
 
 # target to generate assembly for a file
 model/fdmt-ff-mac-scheduler.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/fdmt-ff-mac-scheduler.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/fdmt-ff-mac-scheduler.cc.s
 .PHONY : model/fdmt-ff-mac-scheduler.cc.s
 
 model/fdtbfq-ff-mac-scheduler.o: model/fdtbfq-ff-mac-scheduler.cc.o
@@ -1179,7 +1203,7 @@ model/fdtbfq-ff-mac-scheduler.o: model/fdtbfq-ff-mac-scheduler.cc.o
 
 # target to build an object file
 model/fdtbfq-ff-mac-scheduler.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/fdtbfq-ff-mac-scheduler.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/fdtbfq-ff-mac-scheduler.cc.o
 .PHONY : model/fdtbfq-ff-mac-scheduler.cc.o
 
 model/fdtbfq-ff-mac-scheduler.i: model/fdtbfq-ff-mac-scheduler.cc.i
@@ -1187,7 +1211,7 @@ model/fdtbfq-ff-mac-scheduler.i: model/fdtbfq-ff-mac-scheduler.cc.i
 
 # target to preprocess a source file
 model/fdtbfq-ff-mac-scheduler.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/fdtbfq-ff-mac-scheduler.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/fdtbfq-ff-mac-scheduler.cc.i
 .PHONY : model/fdtbfq-ff-mac-scheduler.cc.i
 
 model/fdtbfq-ff-mac-scheduler.s: model/fdtbfq-ff-mac-scheduler.cc.s
@@ -1195,7 +1219,7 @@ model/fdtbfq-ff-mac-scheduler.s: model/fdtbfq-ff-mac-scheduler.cc.s
 
 # target to generate assembly for a file
 model/fdtbfq-ff-mac-scheduler.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/fdtbfq-ff-mac-scheduler.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/fdtbfq-ff-mac-scheduler.cc.s
 .PHONY : model/fdtbfq-ff-mac-scheduler.cc.s
 
 model/ff-mac-common.o: model/ff-mac-common.cc.o
@@ -1203,7 +1227,7 @@ model/ff-mac-common.o: model/ff-mac-common.cc.o
 
 # target to build an object file
 model/ff-mac-common.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/ff-mac-common.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/ff-mac-common.cc.o
 .PHONY : model/ff-mac-common.cc.o
 
 model/ff-mac-common.i: model/ff-mac-common.cc.i
@@ -1211,7 +1235,7 @@ model/ff-mac-common.i: model/ff-mac-common.cc.i
 
 # target to preprocess a source file
 model/ff-mac-common.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/ff-mac-common.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/ff-mac-common.cc.i
 .PHONY : model/ff-mac-common.cc.i
 
 model/ff-mac-common.s: model/ff-mac-common.cc.s
@@ -1219,7 +1243,7 @@ model/ff-mac-common.s: model/ff-mac-common.cc.s
 
 # target to generate assembly for a file
 model/ff-mac-common.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/ff-mac-common.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/ff-mac-common.cc.s
 .PHONY : model/ff-mac-common.cc.s
 
 model/ff-mac-csched-sap.o: model/ff-mac-csched-sap.cc.o
@@ -1227,7 +1251,7 @@ model/ff-mac-csched-sap.o: model/ff-mac-csched-sap.cc.o
 
 # target to build an object file
 model/ff-mac-csched-sap.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/ff-mac-csched-sap.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/ff-mac-csched-sap.cc.o
 .PHONY : model/ff-mac-csched-sap.cc.o
 
 model/ff-mac-csched-sap.i: model/ff-mac-csched-sap.cc.i
@@ -1235,7 +1259,7 @@ model/ff-mac-csched-sap.i: model/ff-mac-csched-sap.cc.i
 
 # target to preprocess a source file
 model/ff-mac-csched-sap.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/ff-mac-csched-sap.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/ff-mac-csched-sap.cc.i
 .PHONY : model/ff-mac-csched-sap.cc.i
 
 model/ff-mac-csched-sap.s: model/ff-mac-csched-sap.cc.s
@@ -1243,7 +1267,7 @@ model/ff-mac-csched-sap.s: model/ff-mac-csched-sap.cc.s
 
 # target to generate assembly for a file
 model/ff-mac-csched-sap.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/ff-mac-csched-sap.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/ff-mac-csched-sap.cc.s
 .PHONY : model/ff-mac-csched-sap.cc.s
 
 model/ff-mac-sched-sap.o: model/ff-mac-sched-sap.cc.o
@@ -1251,7 +1275,7 @@ model/ff-mac-sched-sap.o: model/ff-mac-sched-sap.cc.o
 
 # target to build an object file
 model/ff-mac-sched-sap.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/ff-mac-sched-sap.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/ff-mac-sched-sap.cc.o
 .PHONY : model/ff-mac-sched-sap.cc.o
 
 model/ff-mac-sched-sap.i: model/ff-mac-sched-sap.cc.i
@@ -1259,7 +1283,7 @@ model/ff-mac-sched-sap.i: model/ff-mac-sched-sap.cc.i
 
 # target to preprocess a source file
 model/ff-mac-sched-sap.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/ff-mac-sched-sap.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/ff-mac-sched-sap.cc.i
 .PHONY : model/ff-mac-sched-sap.cc.i
 
 model/ff-mac-sched-sap.s: model/ff-mac-sched-sap.cc.s
@@ -1267,7 +1291,7 @@ model/ff-mac-sched-sap.s: model/ff-mac-sched-sap.cc.s
 
 # target to generate assembly for a file
 model/ff-mac-sched-sap.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/ff-mac-sched-sap.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/ff-mac-sched-sap.cc.s
 .PHONY : model/ff-mac-sched-sap.cc.s
 
 model/ff-mac-scheduler.o: model/ff-mac-scheduler.cc.o
@@ -1275,7 +1299,7 @@ model/ff-mac-scheduler.o: model/ff-mac-scheduler.cc.o
 
 # target to build an object file
 model/ff-mac-scheduler.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/ff-mac-scheduler.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/ff-mac-scheduler.cc.o
 .PHONY : model/ff-mac-scheduler.cc.o
 
 model/ff-mac-scheduler.i: model/ff-mac-scheduler.cc.i
@@ -1283,7 +1307,7 @@ model/ff-mac-scheduler.i: model/ff-mac-scheduler.cc.i
 
 # target to preprocess a source file
 model/ff-mac-scheduler.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/ff-mac-scheduler.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/ff-mac-scheduler.cc.i
 .PHONY : model/ff-mac-scheduler.cc.i
 
 model/ff-mac-scheduler.s: model/ff-mac-scheduler.cc.s
@@ -1291,7 +1315,7 @@ model/ff-mac-scheduler.s: model/ff-mac-scheduler.cc.s
 
 # target to generate assembly for a file
 model/ff-mac-scheduler.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/ff-mac-scheduler.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/ff-mac-scheduler.cc.s
 .PHONY : model/ff-mac-scheduler.cc.s
 
 model/lte-amc.o: model/lte-amc.cc.o
@@ -1299,7 +1323,7 @@ model/lte-amc.o: model/lte-amc.cc.o
 
 # target to build an object file
 model/lte-amc.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-amc.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-amc.cc.o
 .PHONY : model/lte-amc.cc.o
 
 model/lte-amc.i: model/lte-amc.cc.i
@@ -1307,7 +1331,7 @@ model/lte-amc.i: model/lte-amc.cc.i
 
 # target to preprocess a source file
 model/lte-amc.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-amc.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-amc.cc.i
 .PHONY : model/lte-amc.cc.i
 
 model/lte-amc.s: model/lte-amc.cc.s
@@ -1315,7 +1339,7 @@ model/lte-amc.s: model/lte-amc.cc.s
 
 # target to generate assembly for a file
 model/lte-amc.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-amc.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-amc.cc.s
 .PHONY : model/lte-amc.cc.s
 
 model/lte-anr-sap.o: model/lte-anr-sap.cc.o
@@ -1323,7 +1347,7 @@ model/lte-anr-sap.o: model/lte-anr-sap.cc.o
 
 # target to build an object file
 model/lte-anr-sap.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-anr-sap.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-anr-sap.cc.o
 .PHONY : model/lte-anr-sap.cc.o
 
 model/lte-anr-sap.i: model/lte-anr-sap.cc.i
@@ -1331,7 +1355,7 @@ model/lte-anr-sap.i: model/lte-anr-sap.cc.i
 
 # target to preprocess a source file
 model/lte-anr-sap.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-anr-sap.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-anr-sap.cc.i
 .PHONY : model/lte-anr-sap.cc.i
 
 model/lte-anr-sap.s: model/lte-anr-sap.cc.s
@@ -1339,7 +1363,7 @@ model/lte-anr-sap.s: model/lte-anr-sap.cc.s
 
 # target to generate assembly for a file
 model/lte-anr-sap.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-anr-sap.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-anr-sap.cc.s
 .PHONY : model/lte-anr-sap.cc.s
 
 model/lte-anr.o: model/lte-anr.cc.o
@@ -1347,7 +1371,7 @@ model/lte-anr.o: model/lte-anr.cc.o
 
 # target to build an object file
 model/lte-anr.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-anr.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-anr.cc.o
 .PHONY : model/lte-anr.cc.o
 
 model/lte-anr.i: model/lte-anr.cc.i
@@ -1355,7 +1379,7 @@ model/lte-anr.i: model/lte-anr.cc.i
 
 # target to preprocess a source file
 model/lte-anr.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-anr.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-anr.cc.i
 .PHONY : model/lte-anr.cc.i
 
 model/lte-anr.s: model/lte-anr.cc.s
@@ -1363,7 +1387,7 @@ model/lte-anr.s: model/lte-anr.cc.s
 
 # target to generate assembly for a file
 model/lte-anr.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-anr.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-anr.cc.s
 .PHONY : model/lte-anr.cc.s
 
 model/lte-as-sap.o: model/lte-as-sap.cc.o
@@ -1371,7 +1395,7 @@ model/lte-as-sap.o: model/lte-as-sap.cc.o
 
 # target to build an object file
 model/lte-as-sap.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-as-sap.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-as-sap.cc.o
 .PHONY : model/lte-as-sap.cc.o
 
 model/lte-as-sap.i: model/lte-as-sap.cc.i
@@ -1379,7 +1403,7 @@ model/lte-as-sap.i: model/lte-as-sap.cc.i
 
 # target to preprocess a source file
 model/lte-as-sap.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-as-sap.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-as-sap.cc.i
 .PHONY : model/lte-as-sap.cc.i
 
 model/lte-as-sap.s: model/lte-as-sap.cc.s
@@ -1387,7 +1411,7 @@ model/lte-as-sap.s: model/lte-as-sap.cc.s
 
 # target to generate assembly for a file
 model/lte-as-sap.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-as-sap.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-as-sap.cc.s
 .PHONY : model/lte-as-sap.cc.s
 
 model/lte-asn1-header.o: model/lte-asn1-header.cc.o
@@ -1395,7 +1419,7 @@ model/lte-asn1-header.o: model/lte-asn1-header.cc.o
 
 # target to build an object file
 model/lte-asn1-header.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-asn1-header.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-asn1-header.cc.o
 .PHONY : model/lte-asn1-header.cc.o
 
 model/lte-asn1-header.i: model/lte-asn1-header.cc.i
@@ -1403,7 +1427,7 @@ model/lte-asn1-header.i: model/lte-asn1-header.cc.i
 
 # target to preprocess a source file
 model/lte-asn1-header.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-asn1-header.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-asn1-header.cc.i
 .PHONY : model/lte-asn1-header.cc.i
 
 model/lte-asn1-header.s: model/lte-asn1-header.cc.s
@@ -1411,7 +1435,7 @@ model/lte-asn1-header.s: model/lte-asn1-header.cc.s
 
 # target to generate assembly for a file
 model/lte-asn1-header.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-asn1-header.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-asn1-header.cc.s
 .PHONY : model/lte-asn1-header.cc.s
 
 model/lte-ccm-mac-sap.o: model/lte-ccm-mac-sap.cc.o
@@ -1419,7 +1443,7 @@ model/lte-ccm-mac-sap.o: model/lte-ccm-mac-sap.cc.o
 
 # target to build an object file
 model/lte-ccm-mac-sap.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ccm-mac-sap.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ccm-mac-sap.cc.o
 .PHONY : model/lte-ccm-mac-sap.cc.o
 
 model/lte-ccm-mac-sap.i: model/lte-ccm-mac-sap.cc.i
@@ -1427,7 +1451,7 @@ model/lte-ccm-mac-sap.i: model/lte-ccm-mac-sap.cc.i
 
 # target to preprocess a source file
 model/lte-ccm-mac-sap.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ccm-mac-sap.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ccm-mac-sap.cc.i
 .PHONY : model/lte-ccm-mac-sap.cc.i
 
 model/lte-ccm-mac-sap.s: model/lte-ccm-mac-sap.cc.s
@@ -1435,7 +1459,7 @@ model/lte-ccm-mac-sap.s: model/lte-ccm-mac-sap.cc.s
 
 # target to generate assembly for a file
 model/lte-ccm-mac-sap.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ccm-mac-sap.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ccm-mac-sap.cc.s
 .PHONY : model/lte-ccm-mac-sap.cc.s
 
 model/lte-ccm-rrc-sap.o: model/lte-ccm-rrc-sap.cc.o
@@ -1443,7 +1467,7 @@ model/lte-ccm-rrc-sap.o: model/lte-ccm-rrc-sap.cc.o
 
 # target to build an object file
 model/lte-ccm-rrc-sap.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ccm-rrc-sap.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ccm-rrc-sap.cc.o
 .PHONY : model/lte-ccm-rrc-sap.cc.o
 
 model/lte-ccm-rrc-sap.i: model/lte-ccm-rrc-sap.cc.i
@@ -1451,7 +1475,7 @@ model/lte-ccm-rrc-sap.i: model/lte-ccm-rrc-sap.cc.i
 
 # target to preprocess a source file
 model/lte-ccm-rrc-sap.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ccm-rrc-sap.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ccm-rrc-sap.cc.i
 .PHONY : model/lte-ccm-rrc-sap.cc.i
 
 model/lte-ccm-rrc-sap.s: model/lte-ccm-rrc-sap.cc.s
@@ -1459,7 +1483,7 @@ model/lte-ccm-rrc-sap.s: model/lte-ccm-rrc-sap.cc.s
 
 # target to generate assembly for a file
 model/lte-ccm-rrc-sap.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ccm-rrc-sap.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ccm-rrc-sap.cc.s
 .PHONY : model/lte-ccm-rrc-sap.cc.s
 
 model/lte-chunk-processor.o: model/lte-chunk-processor.cc.o
@@ -1467,7 +1491,7 @@ model/lte-chunk-processor.o: model/lte-chunk-processor.cc.o
 
 # target to build an object file
 model/lte-chunk-processor.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-chunk-processor.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-chunk-processor.cc.o
 .PHONY : model/lte-chunk-processor.cc.o
 
 model/lte-chunk-processor.i: model/lte-chunk-processor.cc.i
@@ -1475,7 +1499,7 @@ model/lte-chunk-processor.i: model/lte-chunk-processor.cc.i
 
 # target to preprocess a source file
 model/lte-chunk-processor.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-chunk-processor.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-chunk-processor.cc.i
 .PHONY : model/lte-chunk-processor.cc.i
 
 model/lte-chunk-processor.s: model/lte-chunk-processor.cc.s
@@ -1483,7 +1507,7 @@ model/lte-chunk-processor.s: model/lte-chunk-processor.cc.s
 
 # target to generate assembly for a file
 model/lte-chunk-processor.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-chunk-processor.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-chunk-processor.cc.s
 .PHONY : model/lte-chunk-processor.cc.s
 
 model/lte-common.o: model/lte-common.cc.o
@@ -1491,7 +1515,7 @@ model/lte-common.o: model/lte-common.cc.o
 
 # target to build an object file
 model/lte-common.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-common.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-common.cc.o
 .PHONY : model/lte-common.cc.o
 
 model/lte-common.i: model/lte-common.cc.i
@@ -1499,7 +1523,7 @@ model/lte-common.i: model/lte-common.cc.i
 
 # target to preprocess a source file
 model/lte-common.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-common.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-common.cc.i
 .PHONY : model/lte-common.cc.i
 
 model/lte-common.s: model/lte-common.cc.s
@@ -1507,7 +1531,7 @@ model/lte-common.s: model/lte-common.cc.s
 
 # target to generate assembly for a file
 model/lte-common.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-common.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-common.cc.s
 .PHONY : model/lte-common.cc.s
 
 model/lte-control-messages.o: model/lte-control-messages.cc.o
@@ -1515,7 +1539,7 @@ model/lte-control-messages.o: model/lte-control-messages.cc.o
 
 # target to build an object file
 model/lte-control-messages.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-control-messages.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-control-messages.cc.o
 .PHONY : model/lte-control-messages.cc.o
 
 model/lte-control-messages.i: model/lte-control-messages.cc.i
@@ -1523,7 +1547,7 @@ model/lte-control-messages.i: model/lte-control-messages.cc.i
 
 # target to preprocess a source file
 model/lte-control-messages.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-control-messages.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-control-messages.cc.i
 .PHONY : model/lte-control-messages.cc.i
 
 model/lte-control-messages.s: model/lte-control-messages.cc.s
@@ -1531,7 +1555,7 @@ model/lte-control-messages.s: model/lte-control-messages.cc.s
 
 # target to generate assembly for a file
 model/lte-control-messages.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-control-messages.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-control-messages.cc.s
 .PHONY : model/lte-control-messages.cc.s
 
 model/lte-enb-cmac-sap.o: model/lte-enb-cmac-sap.cc.o
@@ -1539,7 +1563,7 @@ model/lte-enb-cmac-sap.o: model/lte-enb-cmac-sap.cc.o
 
 # target to build an object file
 model/lte-enb-cmac-sap.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-cmac-sap.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-cmac-sap.cc.o
 .PHONY : model/lte-enb-cmac-sap.cc.o
 
 model/lte-enb-cmac-sap.i: model/lte-enb-cmac-sap.cc.i
@@ -1547,7 +1571,7 @@ model/lte-enb-cmac-sap.i: model/lte-enb-cmac-sap.cc.i
 
 # target to preprocess a source file
 model/lte-enb-cmac-sap.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-cmac-sap.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-cmac-sap.cc.i
 .PHONY : model/lte-enb-cmac-sap.cc.i
 
 model/lte-enb-cmac-sap.s: model/lte-enb-cmac-sap.cc.s
@@ -1555,7 +1579,7 @@ model/lte-enb-cmac-sap.s: model/lte-enb-cmac-sap.cc.s
 
 # target to generate assembly for a file
 model/lte-enb-cmac-sap.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-cmac-sap.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-cmac-sap.cc.s
 .PHONY : model/lte-enb-cmac-sap.cc.s
 
 model/lte-enb-component-carrier-manager.o: model/lte-enb-component-carrier-manager.cc.o
@@ -1563,7 +1587,7 @@ model/lte-enb-component-carrier-manager.o: model/lte-enb-component-carrier-manag
 
 # target to build an object file
 model/lte-enb-component-carrier-manager.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-component-carrier-manager.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-component-carrier-manager.cc.o
 .PHONY : model/lte-enb-component-carrier-manager.cc.o
 
 model/lte-enb-component-carrier-manager.i: model/lte-enb-component-carrier-manager.cc.i
@@ -1571,7 +1595,7 @@ model/lte-enb-component-carrier-manager.i: model/lte-enb-component-carrier-manag
 
 # target to preprocess a source file
 model/lte-enb-component-carrier-manager.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-component-carrier-manager.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-component-carrier-manager.cc.i
 .PHONY : model/lte-enb-component-carrier-manager.cc.i
 
 model/lte-enb-component-carrier-manager.s: model/lte-enb-component-carrier-manager.cc.s
@@ -1579,7 +1603,7 @@ model/lte-enb-component-carrier-manager.s: model/lte-enb-component-carrier-manag
 
 # target to generate assembly for a file
 model/lte-enb-component-carrier-manager.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-component-carrier-manager.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-component-carrier-manager.cc.s
 .PHONY : model/lte-enb-component-carrier-manager.cc.s
 
 model/lte-enb-cphy-sap.o: model/lte-enb-cphy-sap.cc.o
@@ -1587,7 +1611,7 @@ model/lte-enb-cphy-sap.o: model/lte-enb-cphy-sap.cc.o
 
 # target to build an object file
 model/lte-enb-cphy-sap.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-cphy-sap.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-cphy-sap.cc.o
 .PHONY : model/lte-enb-cphy-sap.cc.o
 
 model/lte-enb-cphy-sap.i: model/lte-enb-cphy-sap.cc.i
@@ -1595,7 +1619,7 @@ model/lte-enb-cphy-sap.i: model/lte-enb-cphy-sap.cc.i
 
 # target to preprocess a source file
 model/lte-enb-cphy-sap.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-cphy-sap.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-cphy-sap.cc.i
 .PHONY : model/lte-enb-cphy-sap.cc.i
 
 model/lte-enb-cphy-sap.s: model/lte-enb-cphy-sap.cc.s
@@ -1603,7 +1627,7 @@ model/lte-enb-cphy-sap.s: model/lte-enb-cphy-sap.cc.s
 
 # target to generate assembly for a file
 model/lte-enb-cphy-sap.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-cphy-sap.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-cphy-sap.cc.s
 .PHONY : model/lte-enb-cphy-sap.cc.s
 
 model/lte-enb-mac.o: model/lte-enb-mac.cc.o
@@ -1611,7 +1635,7 @@ model/lte-enb-mac.o: model/lte-enb-mac.cc.o
 
 # target to build an object file
 model/lte-enb-mac.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-mac.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-mac.cc.o
 .PHONY : model/lte-enb-mac.cc.o
 
 model/lte-enb-mac.i: model/lte-enb-mac.cc.i
@@ -1619,7 +1643,7 @@ model/lte-enb-mac.i: model/lte-enb-mac.cc.i
 
 # target to preprocess a source file
 model/lte-enb-mac.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-mac.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-mac.cc.i
 .PHONY : model/lte-enb-mac.cc.i
 
 model/lte-enb-mac.s: model/lte-enb-mac.cc.s
@@ -1627,7 +1651,7 @@ model/lte-enb-mac.s: model/lte-enb-mac.cc.s
 
 # target to generate assembly for a file
 model/lte-enb-mac.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-mac.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-mac.cc.s
 .PHONY : model/lte-enb-mac.cc.s
 
 model/lte-enb-net-device.o: model/lte-enb-net-device.cc.o
@@ -1635,7 +1659,7 @@ model/lte-enb-net-device.o: model/lte-enb-net-device.cc.o
 
 # target to build an object file
 model/lte-enb-net-device.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-net-device.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-net-device.cc.o
 .PHONY : model/lte-enb-net-device.cc.o
 
 model/lte-enb-net-device.i: model/lte-enb-net-device.cc.i
@@ -1643,7 +1667,7 @@ model/lte-enb-net-device.i: model/lte-enb-net-device.cc.i
 
 # target to preprocess a source file
 model/lte-enb-net-device.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-net-device.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-net-device.cc.i
 .PHONY : model/lte-enb-net-device.cc.i
 
 model/lte-enb-net-device.s: model/lte-enb-net-device.cc.s
@@ -1651,7 +1675,7 @@ model/lte-enb-net-device.s: model/lte-enb-net-device.cc.s
 
 # target to generate assembly for a file
 model/lte-enb-net-device.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-net-device.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-net-device.cc.s
 .PHONY : model/lte-enb-net-device.cc.s
 
 model/lte-enb-phy-sap.o: model/lte-enb-phy-sap.cc.o
@@ -1659,7 +1683,7 @@ model/lte-enb-phy-sap.o: model/lte-enb-phy-sap.cc.o
 
 # target to build an object file
 model/lte-enb-phy-sap.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-phy-sap.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-phy-sap.cc.o
 .PHONY : model/lte-enb-phy-sap.cc.o
 
 model/lte-enb-phy-sap.i: model/lte-enb-phy-sap.cc.i
@@ -1667,7 +1691,7 @@ model/lte-enb-phy-sap.i: model/lte-enb-phy-sap.cc.i
 
 # target to preprocess a source file
 model/lte-enb-phy-sap.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-phy-sap.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-phy-sap.cc.i
 .PHONY : model/lte-enb-phy-sap.cc.i
 
 model/lte-enb-phy-sap.s: model/lte-enb-phy-sap.cc.s
@@ -1675,7 +1699,7 @@ model/lte-enb-phy-sap.s: model/lte-enb-phy-sap.cc.s
 
 # target to generate assembly for a file
 model/lte-enb-phy-sap.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-phy-sap.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-phy-sap.cc.s
 .PHONY : model/lte-enb-phy-sap.cc.s
 
 model/lte-enb-phy.o: model/lte-enb-phy.cc.o
@@ -1683,7 +1707,7 @@ model/lte-enb-phy.o: model/lte-enb-phy.cc.o
 
 # target to build an object file
 model/lte-enb-phy.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-phy.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-phy.cc.o
 .PHONY : model/lte-enb-phy.cc.o
 
 model/lte-enb-phy.i: model/lte-enb-phy.cc.i
@@ -1691,7 +1715,7 @@ model/lte-enb-phy.i: model/lte-enb-phy.cc.i
 
 # target to preprocess a source file
 model/lte-enb-phy.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-phy.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-phy.cc.i
 .PHONY : model/lte-enb-phy.cc.i
 
 model/lte-enb-phy.s: model/lte-enb-phy.cc.s
@@ -1699,7 +1723,7 @@ model/lte-enb-phy.s: model/lte-enb-phy.cc.s
 
 # target to generate assembly for a file
 model/lte-enb-phy.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-phy.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-phy.cc.s
 .PHONY : model/lte-enb-phy.cc.s
 
 model/lte-enb-rrc.o: model/lte-enb-rrc.cc.o
@@ -1707,7 +1731,7 @@ model/lte-enb-rrc.o: model/lte-enb-rrc.cc.o
 
 # target to build an object file
 model/lte-enb-rrc.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-rrc.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-rrc.cc.o
 .PHONY : model/lte-enb-rrc.cc.o
 
 model/lte-enb-rrc.i: model/lte-enb-rrc.cc.i
@@ -1715,7 +1739,7 @@ model/lte-enb-rrc.i: model/lte-enb-rrc.cc.i
 
 # target to preprocess a source file
 model/lte-enb-rrc.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-rrc.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-rrc.cc.i
 .PHONY : model/lte-enb-rrc.cc.i
 
 model/lte-enb-rrc.s: model/lte-enb-rrc.cc.s
@@ -1723,7 +1747,7 @@ model/lte-enb-rrc.s: model/lte-enb-rrc.cc.s
 
 # target to generate assembly for a file
 model/lte-enb-rrc.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-rrc.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-enb-rrc.cc.s
 .PHONY : model/lte-enb-rrc.cc.s
 
 model/lte-ffr-algorithm.o: model/lte-ffr-algorithm.cc.o
@@ -1731,7 +1755,7 @@ model/lte-ffr-algorithm.o: model/lte-ffr-algorithm.cc.o
 
 # target to build an object file
 model/lte-ffr-algorithm.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-algorithm.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-algorithm.cc.o
 .PHONY : model/lte-ffr-algorithm.cc.o
 
 model/lte-ffr-algorithm.i: model/lte-ffr-algorithm.cc.i
@@ -1739,7 +1763,7 @@ model/lte-ffr-algorithm.i: model/lte-ffr-algorithm.cc.i
 
 # target to preprocess a source file
 model/lte-ffr-algorithm.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-algorithm.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-algorithm.cc.i
 .PHONY : model/lte-ffr-algorithm.cc.i
 
 model/lte-ffr-algorithm.s: model/lte-ffr-algorithm.cc.s
@@ -1747,7 +1771,7 @@ model/lte-ffr-algorithm.s: model/lte-ffr-algorithm.cc.s
 
 # target to generate assembly for a file
 model/lte-ffr-algorithm.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-algorithm.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-algorithm.cc.s
 .PHONY : model/lte-ffr-algorithm.cc.s
 
 model/lte-ffr-distributed-algorithm.o: model/lte-ffr-distributed-algorithm.cc.o
@@ -1755,7 +1779,7 @@ model/lte-ffr-distributed-algorithm.o: model/lte-ffr-distributed-algorithm.cc.o
 
 # target to build an object file
 model/lte-ffr-distributed-algorithm.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-distributed-algorithm.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-distributed-algorithm.cc.o
 .PHONY : model/lte-ffr-distributed-algorithm.cc.o
 
 model/lte-ffr-distributed-algorithm.i: model/lte-ffr-distributed-algorithm.cc.i
@@ -1763,7 +1787,7 @@ model/lte-ffr-distributed-algorithm.i: model/lte-ffr-distributed-algorithm.cc.i
 
 # target to preprocess a source file
 model/lte-ffr-distributed-algorithm.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-distributed-algorithm.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-distributed-algorithm.cc.i
 .PHONY : model/lte-ffr-distributed-algorithm.cc.i
 
 model/lte-ffr-distributed-algorithm.s: model/lte-ffr-distributed-algorithm.cc.s
@@ -1771,7 +1795,7 @@ model/lte-ffr-distributed-algorithm.s: model/lte-ffr-distributed-algorithm.cc.s
 
 # target to generate assembly for a file
 model/lte-ffr-distributed-algorithm.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-distributed-algorithm.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-distributed-algorithm.cc.s
 .PHONY : model/lte-ffr-distributed-algorithm.cc.s
 
 model/lte-ffr-enhanced-algorithm.o: model/lte-ffr-enhanced-algorithm.cc.o
@@ -1779,7 +1803,7 @@ model/lte-ffr-enhanced-algorithm.o: model/lte-ffr-enhanced-algorithm.cc.o
 
 # target to build an object file
 model/lte-ffr-enhanced-algorithm.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-enhanced-algorithm.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-enhanced-algorithm.cc.o
 .PHONY : model/lte-ffr-enhanced-algorithm.cc.o
 
 model/lte-ffr-enhanced-algorithm.i: model/lte-ffr-enhanced-algorithm.cc.i
@@ -1787,7 +1811,7 @@ model/lte-ffr-enhanced-algorithm.i: model/lte-ffr-enhanced-algorithm.cc.i
 
 # target to preprocess a source file
 model/lte-ffr-enhanced-algorithm.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-enhanced-algorithm.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-enhanced-algorithm.cc.i
 .PHONY : model/lte-ffr-enhanced-algorithm.cc.i
 
 model/lte-ffr-enhanced-algorithm.s: model/lte-ffr-enhanced-algorithm.cc.s
@@ -1795,7 +1819,7 @@ model/lte-ffr-enhanced-algorithm.s: model/lte-ffr-enhanced-algorithm.cc.s
 
 # target to generate assembly for a file
 model/lte-ffr-enhanced-algorithm.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-enhanced-algorithm.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-enhanced-algorithm.cc.s
 .PHONY : model/lte-ffr-enhanced-algorithm.cc.s
 
 model/lte-ffr-rrc-sap.o: model/lte-ffr-rrc-sap.cc.o
@@ -1803,7 +1827,7 @@ model/lte-ffr-rrc-sap.o: model/lte-ffr-rrc-sap.cc.o
 
 # target to build an object file
 model/lte-ffr-rrc-sap.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-rrc-sap.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-rrc-sap.cc.o
 .PHONY : model/lte-ffr-rrc-sap.cc.o
 
 model/lte-ffr-rrc-sap.i: model/lte-ffr-rrc-sap.cc.i
@@ -1811,7 +1835,7 @@ model/lte-ffr-rrc-sap.i: model/lte-ffr-rrc-sap.cc.i
 
 # target to preprocess a source file
 model/lte-ffr-rrc-sap.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-rrc-sap.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-rrc-sap.cc.i
 .PHONY : model/lte-ffr-rrc-sap.cc.i
 
 model/lte-ffr-rrc-sap.s: model/lte-ffr-rrc-sap.cc.s
@@ -1819,7 +1843,7 @@ model/lte-ffr-rrc-sap.s: model/lte-ffr-rrc-sap.cc.s
 
 # target to generate assembly for a file
 model/lte-ffr-rrc-sap.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-rrc-sap.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-rrc-sap.cc.s
 .PHONY : model/lte-ffr-rrc-sap.cc.s
 
 model/lte-ffr-sap.o: model/lte-ffr-sap.cc.o
@@ -1827,7 +1851,7 @@ model/lte-ffr-sap.o: model/lte-ffr-sap.cc.o
 
 # target to build an object file
 model/lte-ffr-sap.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-sap.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-sap.cc.o
 .PHONY : model/lte-ffr-sap.cc.o
 
 model/lte-ffr-sap.i: model/lte-ffr-sap.cc.i
@@ -1835,7 +1859,7 @@ model/lte-ffr-sap.i: model/lte-ffr-sap.cc.i
 
 # target to preprocess a source file
 model/lte-ffr-sap.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-sap.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-sap.cc.i
 .PHONY : model/lte-ffr-sap.cc.i
 
 model/lte-ffr-sap.s: model/lte-ffr-sap.cc.s
@@ -1843,7 +1867,7 @@ model/lte-ffr-sap.s: model/lte-ffr-sap.cc.s
 
 # target to generate assembly for a file
 model/lte-ffr-sap.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-sap.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-sap.cc.s
 .PHONY : model/lte-ffr-sap.cc.s
 
 model/lte-ffr-soft-algorithm.o: model/lte-ffr-soft-algorithm.cc.o
@@ -1851,7 +1875,7 @@ model/lte-ffr-soft-algorithm.o: model/lte-ffr-soft-algorithm.cc.o
 
 # target to build an object file
 model/lte-ffr-soft-algorithm.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-soft-algorithm.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-soft-algorithm.cc.o
 .PHONY : model/lte-ffr-soft-algorithm.cc.o
 
 model/lte-ffr-soft-algorithm.i: model/lte-ffr-soft-algorithm.cc.i
@@ -1859,7 +1883,7 @@ model/lte-ffr-soft-algorithm.i: model/lte-ffr-soft-algorithm.cc.i
 
 # target to preprocess a source file
 model/lte-ffr-soft-algorithm.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-soft-algorithm.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-soft-algorithm.cc.i
 .PHONY : model/lte-ffr-soft-algorithm.cc.i
 
 model/lte-ffr-soft-algorithm.s: model/lte-ffr-soft-algorithm.cc.s
@@ -1867,7 +1891,7 @@ model/lte-ffr-soft-algorithm.s: model/lte-ffr-soft-algorithm.cc.s
 
 # target to generate assembly for a file
 model/lte-ffr-soft-algorithm.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-soft-algorithm.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ffr-soft-algorithm.cc.s
 .PHONY : model/lte-ffr-soft-algorithm.cc.s
 
 model/lte-fr-hard-algorithm.o: model/lte-fr-hard-algorithm.cc.o
@@ -1875,7 +1899,7 @@ model/lte-fr-hard-algorithm.o: model/lte-fr-hard-algorithm.cc.o
 
 # target to build an object file
 model/lte-fr-hard-algorithm.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-fr-hard-algorithm.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-fr-hard-algorithm.cc.o
 .PHONY : model/lte-fr-hard-algorithm.cc.o
 
 model/lte-fr-hard-algorithm.i: model/lte-fr-hard-algorithm.cc.i
@@ -1883,7 +1907,7 @@ model/lte-fr-hard-algorithm.i: model/lte-fr-hard-algorithm.cc.i
 
 # target to preprocess a source file
 model/lte-fr-hard-algorithm.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-fr-hard-algorithm.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-fr-hard-algorithm.cc.i
 .PHONY : model/lte-fr-hard-algorithm.cc.i
 
 model/lte-fr-hard-algorithm.s: model/lte-fr-hard-algorithm.cc.s
@@ -1891,7 +1915,7 @@ model/lte-fr-hard-algorithm.s: model/lte-fr-hard-algorithm.cc.s
 
 # target to generate assembly for a file
 model/lte-fr-hard-algorithm.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-fr-hard-algorithm.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-fr-hard-algorithm.cc.s
 .PHONY : model/lte-fr-hard-algorithm.cc.s
 
 model/lte-fr-no-op-algorithm.o: model/lte-fr-no-op-algorithm.cc.o
@@ -1899,7 +1923,7 @@ model/lte-fr-no-op-algorithm.o: model/lte-fr-no-op-algorithm.cc.o
 
 # target to build an object file
 model/lte-fr-no-op-algorithm.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-fr-no-op-algorithm.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-fr-no-op-algorithm.cc.o
 .PHONY : model/lte-fr-no-op-algorithm.cc.o
 
 model/lte-fr-no-op-algorithm.i: model/lte-fr-no-op-algorithm.cc.i
@@ -1907,7 +1931,7 @@ model/lte-fr-no-op-algorithm.i: model/lte-fr-no-op-algorithm.cc.i
 
 # target to preprocess a source file
 model/lte-fr-no-op-algorithm.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-fr-no-op-algorithm.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-fr-no-op-algorithm.cc.i
 .PHONY : model/lte-fr-no-op-algorithm.cc.i
 
 model/lte-fr-no-op-algorithm.s: model/lte-fr-no-op-algorithm.cc.s
@@ -1915,7 +1939,7 @@ model/lte-fr-no-op-algorithm.s: model/lte-fr-no-op-algorithm.cc.s
 
 # target to generate assembly for a file
 model/lte-fr-no-op-algorithm.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-fr-no-op-algorithm.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-fr-no-op-algorithm.cc.s
 .PHONY : model/lte-fr-no-op-algorithm.cc.s
 
 model/lte-fr-soft-algorithm.o: model/lte-fr-soft-algorithm.cc.o
@@ -1923,7 +1947,7 @@ model/lte-fr-soft-algorithm.o: model/lte-fr-soft-algorithm.cc.o
 
 # target to build an object file
 model/lte-fr-soft-algorithm.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-fr-soft-algorithm.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-fr-soft-algorithm.cc.o
 .PHONY : model/lte-fr-soft-algorithm.cc.o
 
 model/lte-fr-soft-algorithm.i: model/lte-fr-soft-algorithm.cc.i
@@ -1931,7 +1955,7 @@ model/lte-fr-soft-algorithm.i: model/lte-fr-soft-algorithm.cc.i
 
 # target to preprocess a source file
 model/lte-fr-soft-algorithm.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-fr-soft-algorithm.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-fr-soft-algorithm.cc.i
 .PHONY : model/lte-fr-soft-algorithm.cc.i
 
 model/lte-fr-soft-algorithm.s: model/lte-fr-soft-algorithm.cc.s
@@ -1939,7 +1963,7 @@ model/lte-fr-soft-algorithm.s: model/lte-fr-soft-algorithm.cc.s
 
 # target to generate assembly for a file
 model/lte-fr-soft-algorithm.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-fr-soft-algorithm.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-fr-soft-algorithm.cc.s
 .PHONY : model/lte-fr-soft-algorithm.cc.s
 
 model/lte-fr-strict-algorithm.o: model/lte-fr-strict-algorithm.cc.o
@@ -1947,7 +1971,7 @@ model/lte-fr-strict-algorithm.o: model/lte-fr-strict-algorithm.cc.o
 
 # target to build an object file
 model/lte-fr-strict-algorithm.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-fr-strict-algorithm.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-fr-strict-algorithm.cc.o
 .PHONY : model/lte-fr-strict-algorithm.cc.o
 
 model/lte-fr-strict-algorithm.i: model/lte-fr-strict-algorithm.cc.i
@@ -1955,7 +1979,7 @@ model/lte-fr-strict-algorithm.i: model/lte-fr-strict-algorithm.cc.i
 
 # target to preprocess a source file
 model/lte-fr-strict-algorithm.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-fr-strict-algorithm.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-fr-strict-algorithm.cc.i
 .PHONY : model/lte-fr-strict-algorithm.cc.i
 
 model/lte-fr-strict-algorithm.s: model/lte-fr-strict-algorithm.cc.s
@@ -1963,7 +1987,7 @@ model/lte-fr-strict-algorithm.s: model/lte-fr-strict-algorithm.cc.s
 
 # target to generate assembly for a file
 model/lte-fr-strict-algorithm.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-fr-strict-algorithm.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-fr-strict-algorithm.cc.s
 .PHONY : model/lte-fr-strict-algorithm.cc.s
 
 model/lte-handover-algorithm.o: model/lte-handover-algorithm.cc.o
@@ -1971,7 +1995,7 @@ model/lte-handover-algorithm.o: model/lte-handover-algorithm.cc.o
 
 # target to build an object file
 model/lte-handover-algorithm.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-handover-algorithm.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-handover-algorithm.cc.o
 .PHONY : model/lte-handover-algorithm.cc.o
 
 model/lte-handover-algorithm.i: model/lte-handover-algorithm.cc.i
@@ -1979,7 +2003,7 @@ model/lte-handover-algorithm.i: model/lte-handover-algorithm.cc.i
 
 # target to preprocess a source file
 model/lte-handover-algorithm.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-handover-algorithm.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-handover-algorithm.cc.i
 .PHONY : model/lte-handover-algorithm.cc.i
 
 model/lte-handover-algorithm.s: model/lte-handover-algorithm.cc.s
@@ -1987,7 +2011,7 @@ model/lte-handover-algorithm.s: model/lte-handover-algorithm.cc.s
 
 # target to generate assembly for a file
 model/lte-handover-algorithm.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-handover-algorithm.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-handover-algorithm.cc.s
 .PHONY : model/lte-handover-algorithm.cc.s
 
 model/lte-handover-management-sap.o: model/lte-handover-management-sap.cc.o
@@ -1995,7 +2019,7 @@ model/lte-handover-management-sap.o: model/lte-handover-management-sap.cc.o
 
 # target to build an object file
 model/lte-handover-management-sap.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-handover-management-sap.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-handover-management-sap.cc.o
 .PHONY : model/lte-handover-management-sap.cc.o
 
 model/lte-handover-management-sap.i: model/lte-handover-management-sap.cc.i
@@ -2003,7 +2027,7 @@ model/lte-handover-management-sap.i: model/lte-handover-management-sap.cc.i
 
 # target to preprocess a source file
 model/lte-handover-management-sap.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-handover-management-sap.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-handover-management-sap.cc.i
 .PHONY : model/lte-handover-management-sap.cc.i
 
 model/lte-handover-management-sap.s: model/lte-handover-management-sap.cc.s
@@ -2011,7 +2035,7 @@ model/lte-handover-management-sap.s: model/lte-handover-management-sap.cc.s
 
 # target to generate assembly for a file
 model/lte-handover-management-sap.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-handover-management-sap.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-handover-management-sap.cc.s
 .PHONY : model/lte-handover-management-sap.cc.s
 
 model/lte-harq-phy.o: model/lte-harq-phy.cc.o
@@ -2019,7 +2043,7 @@ model/lte-harq-phy.o: model/lte-harq-phy.cc.o
 
 # target to build an object file
 model/lte-harq-phy.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-harq-phy.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-harq-phy.cc.o
 .PHONY : model/lte-harq-phy.cc.o
 
 model/lte-harq-phy.i: model/lte-harq-phy.cc.i
@@ -2027,7 +2051,7 @@ model/lte-harq-phy.i: model/lte-harq-phy.cc.i
 
 # target to preprocess a source file
 model/lte-harq-phy.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-harq-phy.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-harq-phy.cc.i
 .PHONY : model/lte-harq-phy.cc.i
 
 model/lte-harq-phy.s: model/lte-harq-phy.cc.s
@@ -2035,7 +2059,7 @@ model/lte-harq-phy.s: model/lte-harq-phy.cc.s
 
 # target to generate assembly for a file
 model/lte-harq-phy.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-harq-phy.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-harq-phy.cc.s
 .PHONY : model/lte-harq-phy.cc.s
 
 model/lte-interference.o: model/lte-interference.cc.o
@@ -2043,7 +2067,7 @@ model/lte-interference.o: model/lte-interference.cc.o
 
 # target to build an object file
 model/lte-interference.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-interference.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-interference.cc.o
 .PHONY : model/lte-interference.cc.o
 
 model/lte-interference.i: model/lte-interference.cc.i
@@ -2051,7 +2075,7 @@ model/lte-interference.i: model/lte-interference.cc.i
 
 # target to preprocess a source file
 model/lte-interference.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-interference.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-interference.cc.i
 .PHONY : model/lte-interference.cc.i
 
 model/lte-interference.s: model/lte-interference.cc.s
@@ -2059,7 +2083,7 @@ model/lte-interference.s: model/lte-interference.cc.s
 
 # target to generate assembly for a file
 model/lte-interference.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-interference.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-interference.cc.s
 .PHONY : model/lte-interference.cc.s
 
 model/lte-mac-sap.o: model/lte-mac-sap.cc.o
@@ -2067,7 +2091,7 @@ model/lte-mac-sap.o: model/lte-mac-sap.cc.o
 
 # target to build an object file
 model/lte-mac-sap.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-mac-sap.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-mac-sap.cc.o
 .PHONY : model/lte-mac-sap.cc.o
 
 model/lte-mac-sap.i: model/lte-mac-sap.cc.i
@@ -2075,7 +2099,7 @@ model/lte-mac-sap.i: model/lte-mac-sap.cc.i
 
 # target to preprocess a source file
 model/lte-mac-sap.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-mac-sap.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-mac-sap.cc.i
 .PHONY : model/lte-mac-sap.cc.i
 
 model/lte-mac-sap.s: model/lte-mac-sap.cc.s
@@ -2083,7 +2107,7 @@ model/lte-mac-sap.s: model/lte-mac-sap.cc.s
 
 # target to generate assembly for a file
 model/lte-mac-sap.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-mac-sap.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-mac-sap.cc.s
 .PHONY : model/lte-mac-sap.cc.s
 
 model/lte-mi-error-model.o: model/lte-mi-error-model.cc.o
@@ -2091,7 +2115,7 @@ model/lte-mi-error-model.o: model/lte-mi-error-model.cc.o
 
 # target to build an object file
 model/lte-mi-error-model.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-mi-error-model.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-mi-error-model.cc.o
 .PHONY : model/lte-mi-error-model.cc.o
 
 model/lte-mi-error-model.i: model/lte-mi-error-model.cc.i
@@ -2099,7 +2123,7 @@ model/lte-mi-error-model.i: model/lte-mi-error-model.cc.i
 
 # target to preprocess a source file
 model/lte-mi-error-model.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-mi-error-model.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-mi-error-model.cc.i
 .PHONY : model/lte-mi-error-model.cc.i
 
 model/lte-mi-error-model.s: model/lte-mi-error-model.cc.s
@@ -2107,7 +2131,7 @@ model/lte-mi-error-model.s: model/lte-mi-error-model.cc.s
 
 # target to generate assembly for a file
 model/lte-mi-error-model.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-mi-error-model.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-mi-error-model.cc.s
 .PHONY : model/lte-mi-error-model.cc.s
 
 model/lte-net-device.o: model/lte-net-device.cc.o
@@ -2115,7 +2139,7 @@ model/lte-net-device.o: model/lte-net-device.cc.o
 
 # target to build an object file
 model/lte-net-device.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-net-device.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-net-device.cc.o
 .PHONY : model/lte-net-device.cc.o
 
 model/lte-net-device.i: model/lte-net-device.cc.i
@@ -2123,7 +2147,7 @@ model/lte-net-device.i: model/lte-net-device.cc.i
 
 # target to preprocess a source file
 model/lte-net-device.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-net-device.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-net-device.cc.i
 .PHONY : model/lte-net-device.cc.i
 
 model/lte-net-device.s: model/lte-net-device.cc.s
@@ -2131,7 +2155,7 @@ model/lte-net-device.s: model/lte-net-device.cc.s
 
 # target to generate assembly for a file
 model/lte-net-device.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-net-device.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-net-device.cc.s
 .PHONY : model/lte-net-device.cc.s
 
 model/lte-pdcp-header.o: model/lte-pdcp-header.cc.o
@@ -2139,7 +2163,7 @@ model/lte-pdcp-header.o: model/lte-pdcp-header.cc.o
 
 # target to build an object file
 model/lte-pdcp-header.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-pdcp-header.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-pdcp-header.cc.o
 .PHONY : model/lte-pdcp-header.cc.o
 
 model/lte-pdcp-header.i: model/lte-pdcp-header.cc.i
@@ -2147,7 +2171,7 @@ model/lte-pdcp-header.i: model/lte-pdcp-header.cc.i
 
 # target to preprocess a source file
 model/lte-pdcp-header.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-pdcp-header.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-pdcp-header.cc.i
 .PHONY : model/lte-pdcp-header.cc.i
 
 model/lte-pdcp-header.s: model/lte-pdcp-header.cc.s
@@ -2155,7 +2179,7 @@ model/lte-pdcp-header.s: model/lte-pdcp-header.cc.s
 
 # target to generate assembly for a file
 model/lte-pdcp-header.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-pdcp-header.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-pdcp-header.cc.s
 .PHONY : model/lte-pdcp-header.cc.s
 
 model/lte-pdcp-sap.o: model/lte-pdcp-sap.cc.o
@@ -2163,7 +2187,7 @@ model/lte-pdcp-sap.o: model/lte-pdcp-sap.cc.o
 
 # target to build an object file
 model/lte-pdcp-sap.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-pdcp-sap.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-pdcp-sap.cc.o
 .PHONY : model/lte-pdcp-sap.cc.o
 
 model/lte-pdcp-sap.i: model/lte-pdcp-sap.cc.i
@@ -2171,7 +2195,7 @@ model/lte-pdcp-sap.i: model/lte-pdcp-sap.cc.i
 
 # target to preprocess a source file
 model/lte-pdcp-sap.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-pdcp-sap.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-pdcp-sap.cc.i
 .PHONY : model/lte-pdcp-sap.cc.i
 
 model/lte-pdcp-sap.s: model/lte-pdcp-sap.cc.s
@@ -2179,7 +2203,7 @@ model/lte-pdcp-sap.s: model/lte-pdcp-sap.cc.s
 
 # target to generate assembly for a file
 model/lte-pdcp-sap.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-pdcp-sap.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-pdcp-sap.cc.s
 .PHONY : model/lte-pdcp-sap.cc.s
 
 model/lte-pdcp-tag.o: model/lte-pdcp-tag.cc.o
@@ -2187,7 +2211,7 @@ model/lte-pdcp-tag.o: model/lte-pdcp-tag.cc.o
 
 # target to build an object file
 model/lte-pdcp-tag.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-pdcp-tag.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-pdcp-tag.cc.o
 .PHONY : model/lte-pdcp-tag.cc.o
 
 model/lte-pdcp-tag.i: model/lte-pdcp-tag.cc.i
@@ -2195,7 +2219,7 @@ model/lte-pdcp-tag.i: model/lte-pdcp-tag.cc.i
 
 # target to preprocess a source file
 model/lte-pdcp-tag.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-pdcp-tag.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-pdcp-tag.cc.i
 .PHONY : model/lte-pdcp-tag.cc.i
 
 model/lte-pdcp-tag.s: model/lte-pdcp-tag.cc.s
@@ -2203,7 +2227,7 @@ model/lte-pdcp-tag.s: model/lte-pdcp-tag.cc.s
 
 # target to generate assembly for a file
 model/lte-pdcp-tag.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-pdcp-tag.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-pdcp-tag.cc.s
 .PHONY : model/lte-pdcp-tag.cc.s
 
 model/lte-pdcp.o: model/lte-pdcp.cc.o
@@ -2211,7 +2235,7 @@ model/lte-pdcp.o: model/lte-pdcp.cc.o
 
 # target to build an object file
 model/lte-pdcp.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-pdcp.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-pdcp.cc.o
 .PHONY : model/lte-pdcp.cc.o
 
 model/lte-pdcp.i: model/lte-pdcp.cc.i
@@ -2219,7 +2243,7 @@ model/lte-pdcp.i: model/lte-pdcp.cc.i
 
 # target to preprocess a source file
 model/lte-pdcp.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-pdcp.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-pdcp.cc.i
 .PHONY : model/lte-pdcp.cc.i
 
 model/lte-pdcp.s: model/lte-pdcp.cc.s
@@ -2227,7 +2251,7 @@ model/lte-pdcp.s: model/lte-pdcp.cc.s
 
 # target to generate assembly for a file
 model/lte-pdcp.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-pdcp.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-pdcp.cc.s
 .PHONY : model/lte-pdcp.cc.s
 
 model/lte-phy-tag.o: model/lte-phy-tag.cc.o
@@ -2235,7 +2259,7 @@ model/lte-phy-tag.o: model/lte-phy-tag.cc.o
 
 # target to build an object file
 model/lte-phy-tag.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-phy-tag.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-phy-tag.cc.o
 .PHONY : model/lte-phy-tag.cc.o
 
 model/lte-phy-tag.i: model/lte-phy-tag.cc.i
@@ -2243,7 +2267,7 @@ model/lte-phy-tag.i: model/lte-phy-tag.cc.i
 
 # target to preprocess a source file
 model/lte-phy-tag.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-phy-tag.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-phy-tag.cc.i
 .PHONY : model/lte-phy-tag.cc.i
 
 model/lte-phy-tag.s: model/lte-phy-tag.cc.s
@@ -2251,7 +2275,7 @@ model/lte-phy-tag.s: model/lte-phy-tag.cc.s
 
 # target to generate assembly for a file
 model/lte-phy-tag.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-phy-tag.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-phy-tag.cc.s
 .PHONY : model/lte-phy-tag.cc.s
 
 model/lte-phy.o: model/lte-phy.cc.o
@@ -2259,7 +2283,7 @@ model/lte-phy.o: model/lte-phy.cc.o
 
 # target to build an object file
 model/lte-phy.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-phy.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-phy.cc.o
 .PHONY : model/lte-phy.cc.o
 
 model/lte-phy.i: model/lte-phy.cc.i
@@ -2267,7 +2291,7 @@ model/lte-phy.i: model/lte-phy.cc.i
 
 # target to preprocess a source file
 model/lte-phy.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-phy.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-phy.cc.i
 .PHONY : model/lte-phy.cc.i
 
 model/lte-phy.s: model/lte-phy.cc.s
@@ -2275,7 +2299,7 @@ model/lte-phy.s: model/lte-phy.cc.s
 
 # target to generate assembly for a file
 model/lte-phy.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-phy.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-phy.cc.s
 .PHONY : model/lte-phy.cc.s
 
 model/lte-radio-bearer-info.o: model/lte-radio-bearer-info.cc.o
@@ -2283,7 +2307,7 @@ model/lte-radio-bearer-info.o: model/lte-radio-bearer-info.cc.o
 
 # target to build an object file
 model/lte-radio-bearer-info.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-radio-bearer-info.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-radio-bearer-info.cc.o
 .PHONY : model/lte-radio-bearer-info.cc.o
 
 model/lte-radio-bearer-info.i: model/lte-radio-bearer-info.cc.i
@@ -2291,7 +2315,7 @@ model/lte-radio-bearer-info.i: model/lte-radio-bearer-info.cc.i
 
 # target to preprocess a source file
 model/lte-radio-bearer-info.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-radio-bearer-info.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-radio-bearer-info.cc.i
 .PHONY : model/lte-radio-bearer-info.cc.i
 
 model/lte-radio-bearer-info.s: model/lte-radio-bearer-info.cc.s
@@ -2299,7 +2323,7 @@ model/lte-radio-bearer-info.s: model/lte-radio-bearer-info.cc.s
 
 # target to generate assembly for a file
 model/lte-radio-bearer-info.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-radio-bearer-info.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-radio-bearer-info.cc.s
 .PHONY : model/lte-radio-bearer-info.cc.s
 
 model/lte-radio-bearer-tag.o: model/lte-radio-bearer-tag.cc.o
@@ -2307,7 +2331,7 @@ model/lte-radio-bearer-tag.o: model/lte-radio-bearer-tag.cc.o
 
 # target to build an object file
 model/lte-radio-bearer-tag.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-radio-bearer-tag.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-radio-bearer-tag.cc.o
 .PHONY : model/lte-radio-bearer-tag.cc.o
 
 model/lte-radio-bearer-tag.i: model/lte-radio-bearer-tag.cc.i
@@ -2315,7 +2339,7 @@ model/lte-radio-bearer-tag.i: model/lte-radio-bearer-tag.cc.i
 
 # target to preprocess a source file
 model/lte-radio-bearer-tag.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-radio-bearer-tag.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-radio-bearer-tag.cc.i
 .PHONY : model/lte-radio-bearer-tag.cc.i
 
 model/lte-radio-bearer-tag.s: model/lte-radio-bearer-tag.cc.s
@@ -2323,7 +2347,7 @@ model/lte-radio-bearer-tag.s: model/lte-radio-bearer-tag.cc.s
 
 # target to generate assembly for a file
 model/lte-radio-bearer-tag.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-radio-bearer-tag.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-radio-bearer-tag.cc.s
 .PHONY : model/lte-radio-bearer-tag.cc.s
 
 model/lte-rlc-am-header.o: model/lte-rlc-am-header.cc.o
@@ -2331,7 +2355,7 @@ model/lte-rlc-am-header.o: model/lte-rlc-am-header.cc.o
 
 # target to build an object file
 model/lte-rlc-am-header.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-am-header.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-am-header.cc.o
 .PHONY : model/lte-rlc-am-header.cc.o
 
 model/lte-rlc-am-header.i: model/lte-rlc-am-header.cc.i
@@ -2339,7 +2363,7 @@ model/lte-rlc-am-header.i: model/lte-rlc-am-header.cc.i
 
 # target to preprocess a source file
 model/lte-rlc-am-header.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-am-header.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-am-header.cc.i
 .PHONY : model/lte-rlc-am-header.cc.i
 
 model/lte-rlc-am-header.s: model/lte-rlc-am-header.cc.s
@@ -2347,7 +2371,7 @@ model/lte-rlc-am-header.s: model/lte-rlc-am-header.cc.s
 
 # target to generate assembly for a file
 model/lte-rlc-am-header.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-am-header.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-am-header.cc.s
 .PHONY : model/lte-rlc-am-header.cc.s
 
 model/lte-rlc-am.o: model/lte-rlc-am.cc.o
@@ -2355,7 +2379,7 @@ model/lte-rlc-am.o: model/lte-rlc-am.cc.o
 
 # target to build an object file
 model/lte-rlc-am.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-am.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-am.cc.o
 .PHONY : model/lte-rlc-am.cc.o
 
 model/lte-rlc-am.i: model/lte-rlc-am.cc.i
@@ -2363,7 +2387,7 @@ model/lte-rlc-am.i: model/lte-rlc-am.cc.i
 
 # target to preprocess a source file
 model/lte-rlc-am.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-am.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-am.cc.i
 .PHONY : model/lte-rlc-am.cc.i
 
 model/lte-rlc-am.s: model/lte-rlc-am.cc.s
@@ -2371,7 +2395,7 @@ model/lte-rlc-am.s: model/lte-rlc-am.cc.s
 
 # target to generate assembly for a file
 model/lte-rlc-am.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-am.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-am.cc.s
 .PHONY : model/lte-rlc-am.cc.s
 
 model/lte-rlc-header.o: model/lte-rlc-header.cc.o
@@ -2379,7 +2403,7 @@ model/lte-rlc-header.o: model/lte-rlc-header.cc.o
 
 # target to build an object file
 model/lte-rlc-header.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-header.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-header.cc.o
 .PHONY : model/lte-rlc-header.cc.o
 
 model/lte-rlc-header.i: model/lte-rlc-header.cc.i
@@ -2387,7 +2411,7 @@ model/lte-rlc-header.i: model/lte-rlc-header.cc.i
 
 # target to preprocess a source file
 model/lte-rlc-header.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-header.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-header.cc.i
 .PHONY : model/lte-rlc-header.cc.i
 
 model/lte-rlc-header.s: model/lte-rlc-header.cc.s
@@ -2395,7 +2419,7 @@ model/lte-rlc-header.s: model/lte-rlc-header.cc.s
 
 # target to generate assembly for a file
 model/lte-rlc-header.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-header.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-header.cc.s
 .PHONY : model/lte-rlc-header.cc.s
 
 model/lte-rlc-sap.o: model/lte-rlc-sap.cc.o
@@ -2403,7 +2427,7 @@ model/lte-rlc-sap.o: model/lte-rlc-sap.cc.o
 
 # target to build an object file
 model/lte-rlc-sap.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-sap.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-sap.cc.o
 .PHONY : model/lte-rlc-sap.cc.o
 
 model/lte-rlc-sap.i: model/lte-rlc-sap.cc.i
@@ -2411,7 +2435,7 @@ model/lte-rlc-sap.i: model/lte-rlc-sap.cc.i
 
 # target to preprocess a source file
 model/lte-rlc-sap.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-sap.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-sap.cc.i
 .PHONY : model/lte-rlc-sap.cc.i
 
 model/lte-rlc-sap.s: model/lte-rlc-sap.cc.s
@@ -2419,7 +2443,7 @@ model/lte-rlc-sap.s: model/lte-rlc-sap.cc.s
 
 # target to generate assembly for a file
 model/lte-rlc-sap.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-sap.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-sap.cc.s
 .PHONY : model/lte-rlc-sap.cc.s
 
 model/lte-rlc-sdu-status-tag.o: model/lte-rlc-sdu-status-tag.cc.o
@@ -2427,7 +2451,7 @@ model/lte-rlc-sdu-status-tag.o: model/lte-rlc-sdu-status-tag.cc.o
 
 # target to build an object file
 model/lte-rlc-sdu-status-tag.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-sdu-status-tag.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-sdu-status-tag.cc.o
 .PHONY : model/lte-rlc-sdu-status-tag.cc.o
 
 model/lte-rlc-sdu-status-tag.i: model/lte-rlc-sdu-status-tag.cc.i
@@ -2435,7 +2459,7 @@ model/lte-rlc-sdu-status-tag.i: model/lte-rlc-sdu-status-tag.cc.i
 
 # target to preprocess a source file
 model/lte-rlc-sdu-status-tag.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-sdu-status-tag.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-sdu-status-tag.cc.i
 .PHONY : model/lte-rlc-sdu-status-tag.cc.i
 
 model/lte-rlc-sdu-status-tag.s: model/lte-rlc-sdu-status-tag.cc.s
@@ -2443,7 +2467,7 @@ model/lte-rlc-sdu-status-tag.s: model/lte-rlc-sdu-status-tag.cc.s
 
 # target to generate assembly for a file
 model/lte-rlc-sdu-status-tag.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-sdu-status-tag.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-sdu-status-tag.cc.s
 .PHONY : model/lte-rlc-sdu-status-tag.cc.s
 
 model/lte-rlc-sequence-number.o: model/lte-rlc-sequence-number.cc.o
@@ -2451,7 +2475,7 @@ model/lte-rlc-sequence-number.o: model/lte-rlc-sequence-number.cc.o
 
 # target to build an object file
 model/lte-rlc-sequence-number.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-sequence-number.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-sequence-number.cc.o
 .PHONY : model/lte-rlc-sequence-number.cc.o
 
 model/lte-rlc-sequence-number.i: model/lte-rlc-sequence-number.cc.i
@@ -2459,7 +2483,7 @@ model/lte-rlc-sequence-number.i: model/lte-rlc-sequence-number.cc.i
 
 # target to preprocess a source file
 model/lte-rlc-sequence-number.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-sequence-number.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-sequence-number.cc.i
 .PHONY : model/lte-rlc-sequence-number.cc.i
 
 model/lte-rlc-sequence-number.s: model/lte-rlc-sequence-number.cc.s
@@ -2467,7 +2491,7 @@ model/lte-rlc-sequence-number.s: model/lte-rlc-sequence-number.cc.s
 
 # target to generate assembly for a file
 model/lte-rlc-sequence-number.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-sequence-number.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-sequence-number.cc.s
 .PHONY : model/lte-rlc-sequence-number.cc.s
 
 model/lte-rlc-tag.o: model/lte-rlc-tag.cc.o
@@ -2475,7 +2499,7 @@ model/lte-rlc-tag.o: model/lte-rlc-tag.cc.o
 
 # target to build an object file
 model/lte-rlc-tag.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-tag.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-tag.cc.o
 .PHONY : model/lte-rlc-tag.cc.o
 
 model/lte-rlc-tag.i: model/lte-rlc-tag.cc.i
@@ -2483,7 +2507,7 @@ model/lte-rlc-tag.i: model/lte-rlc-tag.cc.i
 
 # target to preprocess a source file
 model/lte-rlc-tag.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-tag.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-tag.cc.i
 .PHONY : model/lte-rlc-tag.cc.i
 
 model/lte-rlc-tag.s: model/lte-rlc-tag.cc.s
@@ -2491,7 +2515,7 @@ model/lte-rlc-tag.s: model/lte-rlc-tag.cc.s
 
 # target to generate assembly for a file
 model/lte-rlc-tag.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-tag.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-tag.cc.s
 .PHONY : model/lte-rlc-tag.cc.s
 
 model/lte-rlc-tm.o: model/lte-rlc-tm.cc.o
@@ -2499,7 +2523,7 @@ model/lte-rlc-tm.o: model/lte-rlc-tm.cc.o
 
 # target to build an object file
 model/lte-rlc-tm.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-tm.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-tm.cc.o
 .PHONY : model/lte-rlc-tm.cc.o
 
 model/lte-rlc-tm.i: model/lte-rlc-tm.cc.i
@@ -2507,7 +2531,7 @@ model/lte-rlc-tm.i: model/lte-rlc-tm.cc.i
 
 # target to preprocess a source file
 model/lte-rlc-tm.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-tm.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-tm.cc.i
 .PHONY : model/lte-rlc-tm.cc.i
 
 model/lte-rlc-tm.s: model/lte-rlc-tm.cc.s
@@ -2515,7 +2539,7 @@ model/lte-rlc-tm.s: model/lte-rlc-tm.cc.s
 
 # target to generate assembly for a file
 model/lte-rlc-tm.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-tm.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-tm.cc.s
 .PHONY : model/lte-rlc-tm.cc.s
 
 model/lte-rlc-um.o: model/lte-rlc-um.cc.o
@@ -2523,7 +2547,7 @@ model/lte-rlc-um.o: model/lte-rlc-um.cc.o
 
 # target to build an object file
 model/lte-rlc-um.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-um.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-um.cc.o
 .PHONY : model/lte-rlc-um.cc.o
 
 model/lte-rlc-um.i: model/lte-rlc-um.cc.i
@@ -2531,7 +2555,7 @@ model/lte-rlc-um.i: model/lte-rlc-um.cc.i
 
 # target to preprocess a source file
 model/lte-rlc-um.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-um.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-um.cc.i
 .PHONY : model/lte-rlc-um.cc.i
 
 model/lte-rlc-um.s: model/lte-rlc-um.cc.s
@@ -2539,7 +2563,7 @@ model/lte-rlc-um.s: model/lte-rlc-um.cc.s
 
 # target to generate assembly for a file
 model/lte-rlc-um.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-um.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc-um.cc.s
 .PHONY : model/lte-rlc-um.cc.s
 
 model/lte-rlc.o: model/lte-rlc.cc.o
@@ -2547,7 +2571,7 @@ model/lte-rlc.o: model/lte-rlc.cc.o
 
 # target to build an object file
 model/lte-rlc.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc.cc.o
 .PHONY : model/lte-rlc.cc.o
 
 model/lte-rlc.i: model/lte-rlc.cc.i
@@ -2555,7 +2579,7 @@ model/lte-rlc.i: model/lte-rlc.cc.i
 
 # target to preprocess a source file
 model/lte-rlc.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc.cc.i
 .PHONY : model/lte-rlc.cc.i
 
 model/lte-rlc.s: model/lte-rlc.cc.s
@@ -2563,7 +2587,7 @@ model/lte-rlc.s: model/lte-rlc.cc.s
 
 # target to generate assembly for a file
 model/lte-rlc.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rlc.cc.s
 .PHONY : model/lte-rlc.cc.s
 
 model/lte-rrc-header.o: model/lte-rrc-header.cc.o
@@ -2571,7 +2595,7 @@ model/lte-rrc-header.o: model/lte-rrc-header.cc.o
 
 # target to build an object file
 model/lte-rrc-header.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rrc-header.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rrc-header.cc.o
 .PHONY : model/lte-rrc-header.cc.o
 
 model/lte-rrc-header.i: model/lte-rrc-header.cc.i
@@ -2579,7 +2603,7 @@ model/lte-rrc-header.i: model/lte-rrc-header.cc.i
 
 # target to preprocess a source file
 model/lte-rrc-header.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rrc-header.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rrc-header.cc.i
 .PHONY : model/lte-rrc-header.cc.i
 
 model/lte-rrc-header.s: model/lte-rrc-header.cc.s
@@ -2587,7 +2611,7 @@ model/lte-rrc-header.s: model/lte-rrc-header.cc.s
 
 # target to generate assembly for a file
 model/lte-rrc-header.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rrc-header.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rrc-header.cc.s
 .PHONY : model/lte-rrc-header.cc.s
 
 model/lte-rrc-protocol-ideal.o: model/lte-rrc-protocol-ideal.cc.o
@@ -2595,7 +2619,7 @@ model/lte-rrc-protocol-ideal.o: model/lte-rrc-protocol-ideal.cc.o
 
 # target to build an object file
 model/lte-rrc-protocol-ideal.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rrc-protocol-ideal.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rrc-protocol-ideal.cc.o
 .PHONY : model/lte-rrc-protocol-ideal.cc.o
 
 model/lte-rrc-protocol-ideal.i: model/lte-rrc-protocol-ideal.cc.i
@@ -2603,7 +2627,7 @@ model/lte-rrc-protocol-ideal.i: model/lte-rrc-protocol-ideal.cc.i
 
 # target to preprocess a source file
 model/lte-rrc-protocol-ideal.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rrc-protocol-ideal.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rrc-protocol-ideal.cc.i
 .PHONY : model/lte-rrc-protocol-ideal.cc.i
 
 model/lte-rrc-protocol-ideal.s: model/lte-rrc-protocol-ideal.cc.s
@@ -2611,7 +2635,7 @@ model/lte-rrc-protocol-ideal.s: model/lte-rrc-protocol-ideal.cc.s
 
 # target to generate assembly for a file
 model/lte-rrc-protocol-ideal.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rrc-protocol-ideal.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rrc-protocol-ideal.cc.s
 .PHONY : model/lte-rrc-protocol-ideal.cc.s
 
 model/lte-rrc-protocol-real.o: model/lte-rrc-protocol-real.cc.o
@@ -2619,7 +2643,7 @@ model/lte-rrc-protocol-real.o: model/lte-rrc-protocol-real.cc.o
 
 # target to build an object file
 model/lte-rrc-protocol-real.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rrc-protocol-real.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rrc-protocol-real.cc.o
 .PHONY : model/lte-rrc-protocol-real.cc.o
 
 model/lte-rrc-protocol-real.i: model/lte-rrc-protocol-real.cc.i
@@ -2627,7 +2651,7 @@ model/lte-rrc-protocol-real.i: model/lte-rrc-protocol-real.cc.i
 
 # target to preprocess a source file
 model/lte-rrc-protocol-real.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rrc-protocol-real.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rrc-protocol-real.cc.i
 .PHONY : model/lte-rrc-protocol-real.cc.i
 
 model/lte-rrc-protocol-real.s: model/lte-rrc-protocol-real.cc.s
@@ -2635,7 +2659,7 @@ model/lte-rrc-protocol-real.s: model/lte-rrc-protocol-real.cc.s
 
 # target to generate assembly for a file
 model/lte-rrc-protocol-real.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rrc-protocol-real.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rrc-protocol-real.cc.s
 .PHONY : model/lte-rrc-protocol-real.cc.s
 
 model/lte-rrc-sap.o: model/lte-rrc-sap.cc.o
@@ -2643,7 +2667,7 @@ model/lte-rrc-sap.o: model/lte-rrc-sap.cc.o
 
 # target to build an object file
 model/lte-rrc-sap.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rrc-sap.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rrc-sap.cc.o
 .PHONY : model/lte-rrc-sap.cc.o
 
 model/lte-rrc-sap.i: model/lte-rrc-sap.cc.i
@@ -2651,7 +2675,7 @@ model/lte-rrc-sap.i: model/lte-rrc-sap.cc.i
 
 # target to preprocess a source file
 model/lte-rrc-sap.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rrc-sap.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rrc-sap.cc.i
 .PHONY : model/lte-rrc-sap.cc.i
 
 model/lte-rrc-sap.s: model/lte-rrc-sap.cc.s
@@ -2659,7 +2683,7 @@ model/lte-rrc-sap.s: model/lte-rrc-sap.cc.s
 
 # target to generate assembly for a file
 model/lte-rrc-sap.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rrc-sap.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-rrc-sap.cc.s
 .PHONY : model/lte-rrc-sap.cc.s
 
 model/lte-spectrum-phy.o: model/lte-spectrum-phy.cc.o
@@ -2667,7 +2691,7 @@ model/lte-spectrum-phy.o: model/lte-spectrum-phy.cc.o
 
 # target to build an object file
 model/lte-spectrum-phy.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-spectrum-phy.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-spectrum-phy.cc.o
 .PHONY : model/lte-spectrum-phy.cc.o
 
 model/lte-spectrum-phy.i: model/lte-spectrum-phy.cc.i
@@ -2675,7 +2699,7 @@ model/lte-spectrum-phy.i: model/lte-spectrum-phy.cc.i
 
 # target to preprocess a source file
 model/lte-spectrum-phy.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-spectrum-phy.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-spectrum-phy.cc.i
 .PHONY : model/lte-spectrum-phy.cc.i
 
 model/lte-spectrum-phy.s: model/lte-spectrum-phy.cc.s
@@ -2683,7 +2707,7 @@ model/lte-spectrum-phy.s: model/lte-spectrum-phy.cc.s
 
 # target to generate assembly for a file
 model/lte-spectrum-phy.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-spectrum-phy.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-spectrum-phy.cc.s
 .PHONY : model/lte-spectrum-phy.cc.s
 
 model/lte-spectrum-signal-parameters.o: model/lte-spectrum-signal-parameters.cc.o
@@ -2691,7 +2715,7 @@ model/lte-spectrum-signal-parameters.o: model/lte-spectrum-signal-parameters.cc.
 
 # target to build an object file
 model/lte-spectrum-signal-parameters.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-spectrum-signal-parameters.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-spectrum-signal-parameters.cc.o
 .PHONY : model/lte-spectrum-signal-parameters.cc.o
 
 model/lte-spectrum-signal-parameters.i: model/lte-spectrum-signal-parameters.cc.i
@@ -2699,7 +2723,7 @@ model/lte-spectrum-signal-parameters.i: model/lte-spectrum-signal-parameters.cc.
 
 # target to preprocess a source file
 model/lte-spectrum-signal-parameters.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-spectrum-signal-parameters.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-spectrum-signal-parameters.cc.i
 .PHONY : model/lte-spectrum-signal-parameters.cc.i
 
 model/lte-spectrum-signal-parameters.s: model/lte-spectrum-signal-parameters.cc.s
@@ -2707,7 +2731,7 @@ model/lte-spectrum-signal-parameters.s: model/lte-spectrum-signal-parameters.cc.
 
 # target to generate assembly for a file
 model/lte-spectrum-signal-parameters.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-spectrum-signal-parameters.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-spectrum-signal-parameters.cc.s
 .PHONY : model/lte-spectrum-signal-parameters.cc.s
 
 model/lte-spectrum-value-helper.o: model/lte-spectrum-value-helper.cc.o
@@ -2715,7 +2739,7 @@ model/lte-spectrum-value-helper.o: model/lte-spectrum-value-helper.cc.o
 
 # target to build an object file
 model/lte-spectrum-value-helper.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-spectrum-value-helper.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-spectrum-value-helper.cc.o
 .PHONY : model/lte-spectrum-value-helper.cc.o
 
 model/lte-spectrum-value-helper.i: model/lte-spectrum-value-helper.cc.i
@@ -2723,7 +2747,7 @@ model/lte-spectrum-value-helper.i: model/lte-spectrum-value-helper.cc.i
 
 # target to preprocess a source file
 model/lte-spectrum-value-helper.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-spectrum-value-helper.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-spectrum-value-helper.cc.i
 .PHONY : model/lte-spectrum-value-helper.cc.i
 
 model/lte-spectrum-value-helper.s: model/lte-spectrum-value-helper.cc.s
@@ -2731,7 +2755,7 @@ model/lte-spectrum-value-helper.s: model/lte-spectrum-value-helper.cc.s
 
 # target to generate assembly for a file
 model/lte-spectrum-value-helper.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-spectrum-value-helper.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-spectrum-value-helper.cc.s
 .PHONY : model/lte-spectrum-value-helper.cc.s
 
 model/lte-ue-ccm-rrc-sap.o: model/lte-ue-ccm-rrc-sap.cc.o
@@ -2739,7 +2763,7 @@ model/lte-ue-ccm-rrc-sap.o: model/lte-ue-ccm-rrc-sap.cc.o
 
 # target to build an object file
 model/lte-ue-ccm-rrc-sap.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-ccm-rrc-sap.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-ccm-rrc-sap.cc.o
 .PHONY : model/lte-ue-ccm-rrc-sap.cc.o
 
 model/lte-ue-ccm-rrc-sap.i: model/lte-ue-ccm-rrc-sap.cc.i
@@ -2747,7 +2771,7 @@ model/lte-ue-ccm-rrc-sap.i: model/lte-ue-ccm-rrc-sap.cc.i
 
 # target to preprocess a source file
 model/lte-ue-ccm-rrc-sap.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-ccm-rrc-sap.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-ccm-rrc-sap.cc.i
 .PHONY : model/lte-ue-ccm-rrc-sap.cc.i
 
 model/lte-ue-ccm-rrc-sap.s: model/lte-ue-ccm-rrc-sap.cc.s
@@ -2755,7 +2779,7 @@ model/lte-ue-ccm-rrc-sap.s: model/lte-ue-ccm-rrc-sap.cc.s
 
 # target to generate assembly for a file
 model/lte-ue-ccm-rrc-sap.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-ccm-rrc-sap.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-ccm-rrc-sap.cc.s
 .PHONY : model/lte-ue-ccm-rrc-sap.cc.s
 
 model/lte-ue-cmac-sap.o: model/lte-ue-cmac-sap.cc.o
@@ -2763,7 +2787,7 @@ model/lte-ue-cmac-sap.o: model/lte-ue-cmac-sap.cc.o
 
 # target to build an object file
 model/lte-ue-cmac-sap.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-cmac-sap.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-cmac-sap.cc.o
 .PHONY : model/lte-ue-cmac-sap.cc.o
 
 model/lte-ue-cmac-sap.i: model/lte-ue-cmac-sap.cc.i
@@ -2771,7 +2795,7 @@ model/lte-ue-cmac-sap.i: model/lte-ue-cmac-sap.cc.i
 
 # target to preprocess a source file
 model/lte-ue-cmac-sap.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-cmac-sap.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-cmac-sap.cc.i
 .PHONY : model/lte-ue-cmac-sap.cc.i
 
 model/lte-ue-cmac-sap.s: model/lte-ue-cmac-sap.cc.s
@@ -2779,7 +2803,7 @@ model/lte-ue-cmac-sap.s: model/lte-ue-cmac-sap.cc.s
 
 # target to generate assembly for a file
 model/lte-ue-cmac-sap.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-cmac-sap.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-cmac-sap.cc.s
 .PHONY : model/lte-ue-cmac-sap.cc.s
 
 model/lte-ue-component-carrier-manager.o: model/lte-ue-component-carrier-manager.cc.o
@@ -2787,7 +2811,7 @@ model/lte-ue-component-carrier-manager.o: model/lte-ue-component-carrier-manager
 
 # target to build an object file
 model/lte-ue-component-carrier-manager.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-component-carrier-manager.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-component-carrier-manager.cc.o
 .PHONY : model/lte-ue-component-carrier-manager.cc.o
 
 model/lte-ue-component-carrier-manager.i: model/lte-ue-component-carrier-manager.cc.i
@@ -2795,7 +2819,7 @@ model/lte-ue-component-carrier-manager.i: model/lte-ue-component-carrier-manager
 
 # target to preprocess a source file
 model/lte-ue-component-carrier-manager.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-component-carrier-manager.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-component-carrier-manager.cc.i
 .PHONY : model/lte-ue-component-carrier-manager.cc.i
 
 model/lte-ue-component-carrier-manager.s: model/lte-ue-component-carrier-manager.cc.s
@@ -2803,7 +2827,7 @@ model/lte-ue-component-carrier-manager.s: model/lte-ue-component-carrier-manager
 
 # target to generate assembly for a file
 model/lte-ue-component-carrier-manager.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-component-carrier-manager.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-component-carrier-manager.cc.s
 .PHONY : model/lte-ue-component-carrier-manager.cc.s
 
 model/lte-ue-cphy-sap.o: model/lte-ue-cphy-sap.cc.o
@@ -2811,7 +2835,7 @@ model/lte-ue-cphy-sap.o: model/lte-ue-cphy-sap.cc.o
 
 # target to build an object file
 model/lte-ue-cphy-sap.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-cphy-sap.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-cphy-sap.cc.o
 .PHONY : model/lte-ue-cphy-sap.cc.o
 
 model/lte-ue-cphy-sap.i: model/lte-ue-cphy-sap.cc.i
@@ -2819,7 +2843,7 @@ model/lte-ue-cphy-sap.i: model/lte-ue-cphy-sap.cc.i
 
 # target to preprocess a source file
 model/lte-ue-cphy-sap.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-cphy-sap.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-cphy-sap.cc.i
 .PHONY : model/lte-ue-cphy-sap.cc.i
 
 model/lte-ue-cphy-sap.s: model/lte-ue-cphy-sap.cc.s
@@ -2827,7 +2851,7 @@ model/lte-ue-cphy-sap.s: model/lte-ue-cphy-sap.cc.s
 
 # target to generate assembly for a file
 model/lte-ue-cphy-sap.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-cphy-sap.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-cphy-sap.cc.s
 .PHONY : model/lte-ue-cphy-sap.cc.s
 
 model/lte-ue-mac.o: model/lte-ue-mac.cc.o
@@ -2835,7 +2859,7 @@ model/lte-ue-mac.o: model/lte-ue-mac.cc.o
 
 # target to build an object file
 model/lte-ue-mac.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-mac.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-mac.cc.o
 .PHONY : model/lte-ue-mac.cc.o
 
 model/lte-ue-mac.i: model/lte-ue-mac.cc.i
@@ -2843,7 +2867,7 @@ model/lte-ue-mac.i: model/lte-ue-mac.cc.i
 
 # target to preprocess a source file
 model/lte-ue-mac.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-mac.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-mac.cc.i
 .PHONY : model/lte-ue-mac.cc.i
 
 model/lte-ue-mac.s: model/lte-ue-mac.cc.s
@@ -2851,7 +2875,7 @@ model/lte-ue-mac.s: model/lte-ue-mac.cc.s
 
 # target to generate assembly for a file
 model/lte-ue-mac.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-mac.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-mac.cc.s
 .PHONY : model/lte-ue-mac.cc.s
 
 model/lte-ue-net-device.o: model/lte-ue-net-device.cc.o
@@ -2859,7 +2883,7 @@ model/lte-ue-net-device.o: model/lte-ue-net-device.cc.o
 
 # target to build an object file
 model/lte-ue-net-device.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-net-device.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-net-device.cc.o
 .PHONY : model/lte-ue-net-device.cc.o
 
 model/lte-ue-net-device.i: model/lte-ue-net-device.cc.i
@@ -2867,7 +2891,7 @@ model/lte-ue-net-device.i: model/lte-ue-net-device.cc.i
 
 # target to preprocess a source file
 model/lte-ue-net-device.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-net-device.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-net-device.cc.i
 .PHONY : model/lte-ue-net-device.cc.i
 
 model/lte-ue-net-device.s: model/lte-ue-net-device.cc.s
@@ -2875,7 +2899,7 @@ model/lte-ue-net-device.s: model/lte-ue-net-device.cc.s
 
 # target to generate assembly for a file
 model/lte-ue-net-device.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-net-device.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-net-device.cc.s
 .PHONY : model/lte-ue-net-device.cc.s
 
 model/lte-ue-phy-sap.o: model/lte-ue-phy-sap.cc.o
@@ -2883,7 +2907,7 @@ model/lte-ue-phy-sap.o: model/lte-ue-phy-sap.cc.o
 
 # target to build an object file
 model/lte-ue-phy-sap.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-phy-sap.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-phy-sap.cc.o
 .PHONY : model/lte-ue-phy-sap.cc.o
 
 model/lte-ue-phy-sap.i: model/lte-ue-phy-sap.cc.i
@@ -2891,7 +2915,7 @@ model/lte-ue-phy-sap.i: model/lte-ue-phy-sap.cc.i
 
 # target to preprocess a source file
 model/lte-ue-phy-sap.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-phy-sap.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-phy-sap.cc.i
 .PHONY : model/lte-ue-phy-sap.cc.i
 
 model/lte-ue-phy-sap.s: model/lte-ue-phy-sap.cc.s
@@ -2899,7 +2923,7 @@ model/lte-ue-phy-sap.s: model/lte-ue-phy-sap.cc.s
 
 # target to generate assembly for a file
 model/lte-ue-phy-sap.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-phy-sap.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-phy-sap.cc.s
 .PHONY : model/lte-ue-phy-sap.cc.s
 
 model/lte-ue-phy.o: model/lte-ue-phy.cc.o
@@ -2907,7 +2931,7 @@ model/lte-ue-phy.o: model/lte-ue-phy.cc.o
 
 # target to build an object file
 model/lte-ue-phy.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-phy.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-phy.cc.o
 .PHONY : model/lte-ue-phy.cc.o
 
 model/lte-ue-phy.i: model/lte-ue-phy.cc.i
@@ -2915,7 +2939,7 @@ model/lte-ue-phy.i: model/lte-ue-phy.cc.i
 
 # target to preprocess a source file
 model/lte-ue-phy.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-phy.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-phy.cc.i
 .PHONY : model/lte-ue-phy.cc.i
 
 model/lte-ue-phy.s: model/lte-ue-phy.cc.s
@@ -2923,7 +2947,7 @@ model/lte-ue-phy.s: model/lte-ue-phy.cc.s
 
 # target to generate assembly for a file
 model/lte-ue-phy.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-phy.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-phy.cc.s
 .PHONY : model/lte-ue-phy.cc.s
 
 model/lte-ue-power-control.o: model/lte-ue-power-control.cc.o
@@ -2931,7 +2955,7 @@ model/lte-ue-power-control.o: model/lte-ue-power-control.cc.o
 
 # target to build an object file
 model/lte-ue-power-control.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-power-control.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-power-control.cc.o
 .PHONY : model/lte-ue-power-control.cc.o
 
 model/lte-ue-power-control.i: model/lte-ue-power-control.cc.i
@@ -2939,7 +2963,7 @@ model/lte-ue-power-control.i: model/lte-ue-power-control.cc.i
 
 # target to preprocess a source file
 model/lte-ue-power-control.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-power-control.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-power-control.cc.i
 .PHONY : model/lte-ue-power-control.cc.i
 
 model/lte-ue-power-control.s: model/lte-ue-power-control.cc.s
@@ -2947,7 +2971,7 @@ model/lte-ue-power-control.s: model/lte-ue-power-control.cc.s
 
 # target to generate assembly for a file
 model/lte-ue-power-control.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-power-control.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-power-control.cc.s
 .PHONY : model/lte-ue-power-control.cc.s
 
 model/lte-ue-rrc.o: model/lte-ue-rrc.cc.o
@@ -2955,7 +2979,7 @@ model/lte-ue-rrc.o: model/lte-ue-rrc.cc.o
 
 # target to build an object file
 model/lte-ue-rrc.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-rrc.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-rrc.cc.o
 .PHONY : model/lte-ue-rrc.cc.o
 
 model/lte-ue-rrc.i: model/lte-ue-rrc.cc.i
@@ -2963,7 +2987,7 @@ model/lte-ue-rrc.i: model/lte-ue-rrc.cc.i
 
 # target to preprocess a source file
 model/lte-ue-rrc.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-rrc.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-rrc.cc.i
 .PHONY : model/lte-ue-rrc.cc.i
 
 model/lte-ue-rrc.s: model/lte-ue-rrc.cc.s
@@ -2971,7 +2995,7 @@ model/lte-ue-rrc.s: model/lte-ue-rrc.cc.s
 
 # target to generate assembly for a file
 model/lte-ue-rrc.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-rrc.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-ue-rrc.cc.s
 .PHONY : model/lte-ue-rrc.cc.s
 
 model/lte-vendor-specific-parameters.o: model/lte-vendor-specific-parameters.cc.o
@@ -2979,7 +3003,7 @@ model/lte-vendor-specific-parameters.o: model/lte-vendor-specific-parameters.cc.
 
 # target to build an object file
 model/lte-vendor-specific-parameters.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-vendor-specific-parameters.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-vendor-specific-parameters.cc.o
 .PHONY : model/lte-vendor-specific-parameters.cc.o
 
 model/lte-vendor-specific-parameters.i: model/lte-vendor-specific-parameters.cc.i
@@ -2987,7 +3011,7 @@ model/lte-vendor-specific-parameters.i: model/lte-vendor-specific-parameters.cc.
 
 # target to preprocess a source file
 model/lte-vendor-specific-parameters.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-vendor-specific-parameters.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-vendor-specific-parameters.cc.i
 .PHONY : model/lte-vendor-specific-parameters.cc.i
 
 model/lte-vendor-specific-parameters.s: model/lte-vendor-specific-parameters.cc.s
@@ -2995,39 +3019,15 @@ model/lte-vendor-specific-parameters.s: model/lte-vendor-specific-parameters.cc.
 
 # target to generate assembly for a file
 model/lte-vendor-specific-parameters.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-vendor-specific-parameters.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/lte-vendor-specific-parameters.cc.s
 .PHONY : model/lte-vendor-specific-parameters.cc.s
-
-model/ngap.o: model/ngap.cc.o
-.PHONY : model/ngap.o
-
-# target to build an object file
-model/ngap.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/ngap.cc.o
-.PHONY : model/ngap.cc.o
-
-model/ngap.i: model/ngap.cc.i
-.PHONY : model/ngap.i
-
-# target to preprocess a source file
-model/ngap.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/ngap.cc.i
-.PHONY : model/ngap.cc.i
-
-model/ngap.s: model/ngap.cc.s
-.PHONY : model/ngap.s
-
-# target to generate assembly for a file
-model/ngap.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/ngap.cc.s
-.PHONY : model/ngap.cc.s
 
 model/no-op-component-carrier-manager.o: model/no-op-component-carrier-manager.cc.o
 .PHONY : model/no-op-component-carrier-manager.o
 
 # target to build an object file
 model/no-op-component-carrier-manager.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/no-op-component-carrier-manager.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/no-op-component-carrier-manager.cc.o
 .PHONY : model/no-op-component-carrier-manager.cc.o
 
 model/no-op-component-carrier-manager.i: model/no-op-component-carrier-manager.cc.i
@@ -3035,7 +3035,7 @@ model/no-op-component-carrier-manager.i: model/no-op-component-carrier-manager.c
 
 # target to preprocess a source file
 model/no-op-component-carrier-manager.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/no-op-component-carrier-manager.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/no-op-component-carrier-manager.cc.i
 .PHONY : model/no-op-component-carrier-manager.cc.i
 
 model/no-op-component-carrier-manager.s: model/no-op-component-carrier-manager.cc.s
@@ -3043,7 +3043,7 @@ model/no-op-component-carrier-manager.s: model/no-op-component-carrier-manager.c
 
 # target to generate assembly for a file
 model/no-op-component-carrier-manager.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/no-op-component-carrier-manager.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/no-op-component-carrier-manager.cc.s
 .PHONY : model/no-op-component-carrier-manager.cc.s
 
 model/no-op-handover-algorithm.o: model/no-op-handover-algorithm.cc.o
@@ -3051,7 +3051,7 @@ model/no-op-handover-algorithm.o: model/no-op-handover-algorithm.cc.o
 
 # target to build an object file
 model/no-op-handover-algorithm.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/no-op-handover-algorithm.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/no-op-handover-algorithm.cc.o
 .PHONY : model/no-op-handover-algorithm.cc.o
 
 model/no-op-handover-algorithm.i: model/no-op-handover-algorithm.cc.i
@@ -3059,7 +3059,7 @@ model/no-op-handover-algorithm.i: model/no-op-handover-algorithm.cc.i
 
 # target to preprocess a source file
 model/no-op-handover-algorithm.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/no-op-handover-algorithm.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/no-op-handover-algorithm.cc.i
 .PHONY : model/no-op-handover-algorithm.cc.i
 
 model/no-op-handover-algorithm.s: model/no-op-handover-algorithm.cc.s
@@ -3067,7 +3067,7 @@ model/no-op-handover-algorithm.s: model/no-op-handover-algorithm.cc.s
 
 # target to generate assembly for a file
 model/no-op-handover-algorithm.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/no-op-handover-algorithm.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/no-op-handover-algorithm.cc.s
 .PHONY : model/no-op-handover-algorithm.cc.s
 
 model/pf-ff-mac-scheduler.o: model/pf-ff-mac-scheduler.cc.o
@@ -3075,7 +3075,7 @@ model/pf-ff-mac-scheduler.o: model/pf-ff-mac-scheduler.cc.o
 
 # target to build an object file
 model/pf-ff-mac-scheduler.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/pf-ff-mac-scheduler.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/pf-ff-mac-scheduler.cc.o
 .PHONY : model/pf-ff-mac-scheduler.cc.o
 
 model/pf-ff-mac-scheduler.i: model/pf-ff-mac-scheduler.cc.i
@@ -3083,7 +3083,7 @@ model/pf-ff-mac-scheduler.i: model/pf-ff-mac-scheduler.cc.i
 
 # target to preprocess a source file
 model/pf-ff-mac-scheduler.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/pf-ff-mac-scheduler.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/pf-ff-mac-scheduler.cc.i
 .PHONY : model/pf-ff-mac-scheduler.cc.i
 
 model/pf-ff-mac-scheduler.s: model/pf-ff-mac-scheduler.cc.s
@@ -3091,7 +3091,7 @@ model/pf-ff-mac-scheduler.s: model/pf-ff-mac-scheduler.cc.s
 
 # target to generate assembly for a file
 model/pf-ff-mac-scheduler.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/pf-ff-mac-scheduler.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/pf-ff-mac-scheduler.cc.s
 .PHONY : model/pf-ff-mac-scheduler.cc.s
 
 model/pss-ff-mac-scheduler.o: model/pss-ff-mac-scheduler.cc.o
@@ -3099,7 +3099,7 @@ model/pss-ff-mac-scheduler.o: model/pss-ff-mac-scheduler.cc.o
 
 # target to build an object file
 model/pss-ff-mac-scheduler.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/pss-ff-mac-scheduler.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/pss-ff-mac-scheduler.cc.o
 .PHONY : model/pss-ff-mac-scheduler.cc.o
 
 model/pss-ff-mac-scheduler.i: model/pss-ff-mac-scheduler.cc.i
@@ -3107,7 +3107,7 @@ model/pss-ff-mac-scheduler.i: model/pss-ff-mac-scheduler.cc.i
 
 # target to preprocess a source file
 model/pss-ff-mac-scheduler.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/pss-ff-mac-scheduler.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/pss-ff-mac-scheduler.cc.i
 .PHONY : model/pss-ff-mac-scheduler.cc.i
 
 model/pss-ff-mac-scheduler.s: model/pss-ff-mac-scheduler.cc.s
@@ -3115,7 +3115,7 @@ model/pss-ff-mac-scheduler.s: model/pss-ff-mac-scheduler.cc.s
 
 # target to generate assembly for a file
 model/pss-ff-mac-scheduler.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/pss-ff-mac-scheduler.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/pss-ff-mac-scheduler.cc.s
 .PHONY : model/pss-ff-mac-scheduler.cc.s
 
 model/rem-spectrum-phy.o: model/rem-spectrum-phy.cc.o
@@ -3123,7 +3123,7 @@ model/rem-spectrum-phy.o: model/rem-spectrum-phy.cc.o
 
 # target to build an object file
 model/rem-spectrum-phy.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/rem-spectrum-phy.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/rem-spectrum-phy.cc.o
 .PHONY : model/rem-spectrum-phy.cc.o
 
 model/rem-spectrum-phy.i: model/rem-spectrum-phy.cc.i
@@ -3131,7 +3131,7 @@ model/rem-spectrum-phy.i: model/rem-spectrum-phy.cc.i
 
 # target to preprocess a source file
 model/rem-spectrum-phy.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/rem-spectrum-phy.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/rem-spectrum-phy.cc.i
 .PHONY : model/rem-spectrum-phy.cc.i
 
 model/rem-spectrum-phy.s: model/rem-spectrum-phy.cc.s
@@ -3139,7 +3139,7 @@ model/rem-spectrum-phy.s: model/rem-spectrum-phy.cc.s
 
 # target to generate assembly for a file
 model/rem-spectrum-phy.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/rem-spectrum-phy.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/rem-spectrum-phy.cc.s
 .PHONY : model/rem-spectrum-phy.cc.s
 
 model/rr-ff-mac-scheduler.o: model/rr-ff-mac-scheduler.cc.o
@@ -3147,7 +3147,7 @@ model/rr-ff-mac-scheduler.o: model/rr-ff-mac-scheduler.cc.o
 
 # target to build an object file
 model/rr-ff-mac-scheduler.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/rr-ff-mac-scheduler.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/rr-ff-mac-scheduler.cc.o
 .PHONY : model/rr-ff-mac-scheduler.cc.o
 
 model/rr-ff-mac-scheduler.i: model/rr-ff-mac-scheduler.cc.i
@@ -3155,7 +3155,7 @@ model/rr-ff-mac-scheduler.i: model/rr-ff-mac-scheduler.cc.i
 
 # target to preprocess a source file
 model/rr-ff-mac-scheduler.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/rr-ff-mac-scheduler.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/rr-ff-mac-scheduler.cc.i
 .PHONY : model/rr-ff-mac-scheduler.cc.i
 
 model/rr-ff-mac-scheduler.s: model/rr-ff-mac-scheduler.cc.s
@@ -3163,7 +3163,7 @@ model/rr-ff-mac-scheduler.s: model/rr-ff-mac-scheduler.cc.s
 
 # target to generate assembly for a file
 model/rr-ff-mac-scheduler.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/rr-ff-mac-scheduler.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/rr-ff-mac-scheduler.cc.s
 .PHONY : model/rr-ff-mac-scheduler.cc.s
 
 model/simple-ue-component-carrier-manager.o: model/simple-ue-component-carrier-manager.cc.o
@@ -3171,7 +3171,7 @@ model/simple-ue-component-carrier-manager.o: model/simple-ue-component-carrier-m
 
 # target to build an object file
 model/simple-ue-component-carrier-manager.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/simple-ue-component-carrier-manager.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/simple-ue-component-carrier-manager.cc.o
 .PHONY : model/simple-ue-component-carrier-manager.cc.o
 
 model/simple-ue-component-carrier-manager.i: model/simple-ue-component-carrier-manager.cc.i
@@ -3179,7 +3179,7 @@ model/simple-ue-component-carrier-manager.i: model/simple-ue-component-carrier-m
 
 # target to preprocess a source file
 model/simple-ue-component-carrier-manager.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/simple-ue-component-carrier-manager.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/simple-ue-component-carrier-manager.cc.i
 .PHONY : model/simple-ue-component-carrier-manager.cc.i
 
 model/simple-ue-component-carrier-manager.s: model/simple-ue-component-carrier-manager.cc.s
@@ -3187,7 +3187,7 @@ model/simple-ue-component-carrier-manager.s: model/simple-ue-component-carrier-m
 
 # target to generate assembly for a file
 model/simple-ue-component-carrier-manager.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/simple-ue-component-carrier-manager.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/simple-ue-component-carrier-manager.cc.s
 .PHONY : model/simple-ue-component-carrier-manager.cc.s
 
 model/tdbet-ff-mac-scheduler.o: model/tdbet-ff-mac-scheduler.cc.o
@@ -3195,7 +3195,7 @@ model/tdbet-ff-mac-scheduler.o: model/tdbet-ff-mac-scheduler.cc.o
 
 # target to build an object file
 model/tdbet-ff-mac-scheduler.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/tdbet-ff-mac-scheduler.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/tdbet-ff-mac-scheduler.cc.o
 .PHONY : model/tdbet-ff-mac-scheduler.cc.o
 
 model/tdbet-ff-mac-scheduler.i: model/tdbet-ff-mac-scheduler.cc.i
@@ -3203,7 +3203,7 @@ model/tdbet-ff-mac-scheduler.i: model/tdbet-ff-mac-scheduler.cc.i
 
 # target to preprocess a source file
 model/tdbet-ff-mac-scheduler.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/tdbet-ff-mac-scheduler.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/tdbet-ff-mac-scheduler.cc.i
 .PHONY : model/tdbet-ff-mac-scheduler.cc.i
 
 model/tdbet-ff-mac-scheduler.s: model/tdbet-ff-mac-scheduler.cc.s
@@ -3211,7 +3211,7 @@ model/tdbet-ff-mac-scheduler.s: model/tdbet-ff-mac-scheduler.cc.s
 
 # target to generate assembly for a file
 model/tdbet-ff-mac-scheduler.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/tdbet-ff-mac-scheduler.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/tdbet-ff-mac-scheduler.cc.s
 .PHONY : model/tdbet-ff-mac-scheduler.cc.s
 
 model/tdmt-ff-mac-scheduler.o: model/tdmt-ff-mac-scheduler.cc.o
@@ -3219,7 +3219,7 @@ model/tdmt-ff-mac-scheduler.o: model/tdmt-ff-mac-scheduler.cc.o
 
 # target to build an object file
 model/tdmt-ff-mac-scheduler.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/tdmt-ff-mac-scheduler.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/tdmt-ff-mac-scheduler.cc.o
 .PHONY : model/tdmt-ff-mac-scheduler.cc.o
 
 model/tdmt-ff-mac-scheduler.i: model/tdmt-ff-mac-scheduler.cc.i
@@ -3227,7 +3227,7 @@ model/tdmt-ff-mac-scheduler.i: model/tdmt-ff-mac-scheduler.cc.i
 
 # target to preprocess a source file
 model/tdmt-ff-mac-scheduler.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/tdmt-ff-mac-scheduler.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/tdmt-ff-mac-scheduler.cc.i
 .PHONY : model/tdmt-ff-mac-scheduler.cc.i
 
 model/tdmt-ff-mac-scheduler.s: model/tdmt-ff-mac-scheduler.cc.s
@@ -3235,7 +3235,7 @@ model/tdmt-ff-mac-scheduler.s: model/tdmt-ff-mac-scheduler.cc.s
 
 # target to generate assembly for a file
 model/tdmt-ff-mac-scheduler.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/tdmt-ff-mac-scheduler.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/tdmt-ff-mac-scheduler.cc.s
 .PHONY : model/tdmt-ff-mac-scheduler.cc.s
 
 model/tdtbfq-ff-mac-scheduler.o: model/tdtbfq-ff-mac-scheduler.cc.o
@@ -3243,7 +3243,7 @@ model/tdtbfq-ff-mac-scheduler.o: model/tdtbfq-ff-mac-scheduler.cc.o
 
 # target to build an object file
 model/tdtbfq-ff-mac-scheduler.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/tdtbfq-ff-mac-scheduler.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/tdtbfq-ff-mac-scheduler.cc.o
 .PHONY : model/tdtbfq-ff-mac-scheduler.cc.o
 
 model/tdtbfq-ff-mac-scheduler.i: model/tdtbfq-ff-mac-scheduler.cc.i
@@ -3251,7 +3251,7 @@ model/tdtbfq-ff-mac-scheduler.i: model/tdtbfq-ff-mac-scheduler.cc.i
 
 # target to preprocess a source file
 model/tdtbfq-ff-mac-scheduler.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/tdtbfq-ff-mac-scheduler.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/tdtbfq-ff-mac-scheduler.cc.i
 .PHONY : model/tdtbfq-ff-mac-scheduler.cc.i
 
 model/tdtbfq-ff-mac-scheduler.s: model/tdtbfq-ff-mac-scheduler.cc.s
@@ -3259,7 +3259,7 @@ model/tdtbfq-ff-mac-scheduler.s: model/tdtbfq-ff-mac-scheduler.cc.s
 
 # target to generate assembly for a file
 model/tdtbfq-ff-mac-scheduler.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/tdtbfq-ff-mac-scheduler.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/tdtbfq-ff-mac-scheduler.cc.s
 .PHONY : model/tdtbfq-ff-mac-scheduler.cc.s
 
 model/tta-ff-mac-scheduler.o: model/tta-ff-mac-scheduler.cc.o
@@ -3267,7 +3267,7 @@ model/tta-ff-mac-scheduler.o: model/tta-ff-mac-scheduler.cc.o
 
 # target to build an object file
 model/tta-ff-mac-scheduler.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/tta-ff-mac-scheduler.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/tta-ff-mac-scheduler.cc.o
 .PHONY : model/tta-ff-mac-scheduler.cc.o
 
 model/tta-ff-mac-scheduler.i: model/tta-ff-mac-scheduler.cc.i
@@ -3275,7 +3275,7 @@ model/tta-ff-mac-scheduler.i: model/tta-ff-mac-scheduler.cc.i
 
 # target to preprocess a source file
 model/tta-ff-mac-scheduler.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/tta-ff-mac-scheduler.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/tta-ff-mac-scheduler.cc.i
 .PHONY : model/tta-ff-mac-scheduler.cc.i
 
 model/tta-ff-mac-scheduler.s: model/tta-ff-mac-scheduler.cc.s
@@ -3283,8 +3283,1472 @@ model/tta-ff-mac-scheduler.s: model/tta-ff-mac-scheduler.cc.s
 
 # target to generate assembly for a file
 model/tta-ff-mac-scheduler.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/tta-ff-mac-scheduler.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-obj.dir/build.make src/lte/CMakeFiles/liblte-obj.dir/model/tta-ff-mac-scheduler.cc.s
 .PHONY : model/tta-ff-mac-scheduler.cc.s
+
+test/epc-test-gtpu.o: test/epc-test-gtpu.cc.o
+.PHONY : test/epc-test-gtpu.o
+
+# target to build an object file
+test/epc-test-gtpu.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/epc-test-gtpu.cc.o
+.PHONY : test/epc-test-gtpu.cc.o
+
+test/epc-test-gtpu.i: test/epc-test-gtpu.cc.i
+.PHONY : test/epc-test-gtpu.i
+
+# target to preprocess a source file
+test/epc-test-gtpu.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/epc-test-gtpu.cc.i
+.PHONY : test/epc-test-gtpu.cc.i
+
+test/epc-test-gtpu.s: test/epc-test-gtpu.cc.s
+.PHONY : test/epc-test-gtpu.s
+
+# target to generate assembly for a file
+test/epc-test-gtpu.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/epc-test-gtpu.cc.s
+.PHONY : test/epc-test-gtpu.cc.s
+
+test/epc-test-s1u-downlink.o: test/epc-test-s1u-downlink.cc.o
+.PHONY : test/epc-test-s1u-downlink.o
+
+# target to build an object file
+test/epc-test-s1u-downlink.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/epc-test-s1u-downlink.cc.o
+.PHONY : test/epc-test-s1u-downlink.cc.o
+
+test/epc-test-s1u-downlink.i: test/epc-test-s1u-downlink.cc.i
+.PHONY : test/epc-test-s1u-downlink.i
+
+# target to preprocess a source file
+test/epc-test-s1u-downlink.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/epc-test-s1u-downlink.cc.i
+.PHONY : test/epc-test-s1u-downlink.cc.i
+
+test/epc-test-s1u-downlink.s: test/epc-test-s1u-downlink.cc.s
+.PHONY : test/epc-test-s1u-downlink.s
+
+# target to generate assembly for a file
+test/epc-test-s1u-downlink.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/epc-test-s1u-downlink.cc.s
+.PHONY : test/epc-test-s1u-downlink.cc.s
+
+test/epc-test-s1u-uplink.o: test/epc-test-s1u-uplink.cc.o
+.PHONY : test/epc-test-s1u-uplink.o
+
+# target to build an object file
+test/epc-test-s1u-uplink.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/epc-test-s1u-uplink.cc.o
+.PHONY : test/epc-test-s1u-uplink.cc.o
+
+test/epc-test-s1u-uplink.i: test/epc-test-s1u-uplink.cc.i
+.PHONY : test/epc-test-s1u-uplink.i
+
+# target to preprocess a source file
+test/epc-test-s1u-uplink.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/epc-test-s1u-uplink.cc.i
+.PHONY : test/epc-test-s1u-uplink.cc.i
+
+test/epc-test-s1u-uplink.s: test/epc-test-s1u-uplink.cc.s
+.PHONY : test/epc-test-s1u-uplink.s
+
+# target to generate assembly for a file
+test/epc-test-s1u-uplink.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/epc-test-s1u-uplink.cc.s
+.PHONY : test/epc-test-s1u-uplink.cc.s
+
+test/lte-ffr-simple.o: test/lte-ffr-simple.cc.o
+.PHONY : test/lte-ffr-simple.o
+
+# target to build an object file
+test/lte-ffr-simple.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-ffr-simple.cc.o
+.PHONY : test/lte-ffr-simple.cc.o
+
+test/lte-ffr-simple.i: test/lte-ffr-simple.cc.i
+.PHONY : test/lte-ffr-simple.i
+
+# target to preprocess a source file
+test/lte-ffr-simple.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-ffr-simple.cc.i
+.PHONY : test/lte-ffr-simple.cc.i
+
+test/lte-ffr-simple.s: test/lte-ffr-simple.cc.s
+.PHONY : test/lte-ffr-simple.s
+
+# target to generate assembly for a file
+test/lte-ffr-simple.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-ffr-simple.cc.s
+.PHONY : test/lte-ffr-simple.cc.s
+
+test/lte-simple-helper.o: test/lte-simple-helper.cc.o
+.PHONY : test/lte-simple-helper.o
+
+# target to build an object file
+test/lte-simple-helper.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-simple-helper.cc.o
+.PHONY : test/lte-simple-helper.cc.o
+
+test/lte-simple-helper.i: test/lte-simple-helper.cc.i
+.PHONY : test/lte-simple-helper.i
+
+# target to preprocess a source file
+test/lte-simple-helper.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-simple-helper.cc.i
+.PHONY : test/lte-simple-helper.cc.i
+
+test/lte-simple-helper.s: test/lte-simple-helper.cc.s
+.PHONY : test/lte-simple-helper.s
+
+# target to generate assembly for a file
+test/lte-simple-helper.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-simple-helper.cc.s
+.PHONY : test/lte-simple-helper.cc.s
+
+test/lte-simple-net-device.o: test/lte-simple-net-device.cc.o
+.PHONY : test/lte-simple-net-device.o
+
+# target to build an object file
+test/lte-simple-net-device.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-simple-net-device.cc.o
+.PHONY : test/lte-simple-net-device.cc.o
+
+test/lte-simple-net-device.i: test/lte-simple-net-device.cc.i
+.PHONY : test/lte-simple-net-device.i
+
+# target to preprocess a source file
+test/lte-simple-net-device.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-simple-net-device.cc.i
+.PHONY : test/lte-simple-net-device.cc.i
+
+test/lte-simple-net-device.s: test/lte-simple-net-device.cc.s
+.PHONY : test/lte-simple-net-device.s
+
+# target to generate assembly for a file
+test/lte-simple-net-device.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-simple-net-device.cc.s
+.PHONY : test/lte-simple-net-device.cc.s
+
+test/lte-simple-spectrum-phy.o: test/lte-simple-spectrum-phy.cc.o
+.PHONY : test/lte-simple-spectrum-phy.o
+
+# target to build an object file
+test/lte-simple-spectrum-phy.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-simple-spectrum-phy.cc.o
+.PHONY : test/lte-simple-spectrum-phy.cc.o
+
+test/lte-simple-spectrum-phy.i: test/lte-simple-spectrum-phy.cc.i
+.PHONY : test/lte-simple-spectrum-phy.i
+
+# target to preprocess a source file
+test/lte-simple-spectrum-phy.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-simple-spectrum-phy.cc.i
+.PHONY : test/lte-simple-spectrum-phy.cc.i
+
+test/lte-simple-spectrum-phy.s: test/lte-simple-spectrum-phy.cc.s
+.PHONY : test/lte-simple-spectrum-phy.s
+
+# target to generate assembly for a file
+test/lte-simple-spectrum-phy.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-simple-spectrum-phy.cc.s
+.PHONY : test/lte-simple-spectrum-phy.cc.s
+
+test/lte-test-aggregation-throughput-scale.o: test/lte-test-aggregation-throughput-scale.cc.o
+.PHONY : test/lte-test-aggregation-throughput-scale.o
+
+# target to build an object file
+test/lte-test-aggregation-throughput-scale.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-aggregation-throughput-scale.cc.o
+.PHONY : test/lte-test-aggregation-throughput-scale.cc.o
+
+test/lte-test-aggregation-throughput-scale.i: test/lte-test-aggregation-throughput-scale.cc.i
+.PHONY : test/lte-test-aggregation-throughput-scale.i
+
+# target to preprocess a source file
+test/lte-test-aggregation-throughput-scale.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-aggregation-throughput-scale.cc.i
+.PHONY : test/lte-test-aggregation-throughput-scale.cc.i
+
+test/lte-test-aggregation-throughput-scale.s: test/lte-test-aggregation-throughput-scale.cc.s
+.PHONY : test/lte-test-aggregation-throughput-scale.s
+
+# target to generate assembly for a file
+test/lte-test-aggregation-throughput-scale.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-aggregation-throughput-scale.cc.s
+.PHONY : test/lte-test-aggregation-throughput-scale.cc.s
+
+test/lte-test-carrier-aggregation-configuration.o: test/lte-test-carrier-aggregation-configuration.cc.o
+.PHONY : test/lte-test-carrier-aggregation-configuration.o
+
+# target to build an object file
+test/lte-test-carrier-aggregation-configuration.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-carrier-aggregation-configuration.cc.o
+.PHONY : test/lte-test-carrier-aggregation-configuration.cc.o
+
+test/lte-test-carrier-aggregation-configuration.i: test/lte-test-carrier-aggregation-configuration.cc.i
+.PHONY : test/lte-test-carrier-aggregation-configuration.i
+
+# target to preprocess a source file
+test/lte-test-carrier-aggregation-configuration.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-carrier-aggregation-configuration.cc.i
+.PHONY : test/lte-test-carrier-aggregation-configuration.cc.i
+
+test/lte-test-carrier-aggregation-configuration.s: test/lte-test-carrier-aggregation-configuration.cc.s
+.PHONY : test/lte-test-carrier-aggregation-configuration.s
+
+# target to generate assembly for a file
+test/lte-test-carrier-aggregation-configuration.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-carrier-aggregation-configuration.cc.s
+.PHONY : test/lte-test-carrier-aggregation-configuration.cc.s
+
+test/lte-test-carrier-aggregation.o: test/lte-test-carrier-aggregation.cc.o
+.PHONY : test/lte-test-carrier-aggregation.o
+
+# target to build an object file
+test/lte-test-carrier-aggregation.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-carrier-aggregation.cc.o
+.PHONY : test/lte-test-carrier-aggregation.cc.o
+
+test/lte-test-carrier-aggregation.i: test/lte-test-carrier-aggregation.cc.i
+.PHONY : test/lte-test-carrier-aggregation.i
+
+# target to preprocess a source file
+test/lte-test-carrier-aggregation.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-carrier-aggregation.cc.i
+.PHONY : test/lte-test-carrier-aggregation.cc.i
+
+test/lte-test-carrier-aggregation.s: test/lte-test-carrier-aggregation.cc.s
+.PHONY : test/lte-test-carrier-aggregation.s
+
+# target to generate assembly for a file
+test/lte-test-carrier-aggregation.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-carrier-aggregation.cc.s
+.PHONY : test/lte-test-carrier-aggregation.cc.s
+
+test/lte-test-cell-selection.o: test/lte-test-cell-selection.cc.o
+.PHONY : test/lte-test-cell-selection.o
+
+# target to build an object file
+test/lte-test-cell-selection.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-cell-selection.cc.o
+.PHONY : test/lte-test-cell-selection.cc.o
+
+test/lte-test-cell-selection.i: test/lte-test-cell-selection.cc.i
+.PHONY : test/lte-test-cell-selection.i
+
+# target to preprocess a source file
+test/lte-test-cell-selection.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-cell-selection.cc.i
+.PHONY : test/lte-test-cell-selection.cc.i
+
+test/lte-test-cell-selection.s: test/lte-test-cell-selection.cc.s
+.PHONY : test/lte-test-cell-selection.s
+
+# target to generate assembly for a file
+test/lte-test-cell-selection.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-cell-selection.cc.s
+.PHONY : test/lte-test-cell-selection.cc.s
+
+test/lte-test-cqa-ff-mac-scheduler.o: test/lte-test-cqa-ff-mac-scheduler.cc.o
+.PHONY : test/lte-test-cqa-ff-mac-scheduler.o
+
+# target to build an object file
+test/lte-test-cqa-ff-mac-scheduler.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-cqa-ff-mac-scheduler.cc.o
+.PHONY : test/lte-test-cqa-ff-mac-scheduler.cc.o
+
+test/lte-test-cqa-ff-mac-scheduler.i: test/lte-test-cqa-ff-mac-scheduler.cc.i
+.PHONY : test/lte-test-cqa-ff-mac-scheduler.i
+
+# target to preprocess a source file
+test/lte-test-cqa-ff-mac-scheduler.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-cqa-ff-mac-scheduler.cc.i
+.PHONY : test/lte-test-cqa-ff-mac-scheduler.cc.i
+
+test/lte-test-cqa-ff-mac-scheduler.s: test/lte-test-cqa-ff-mac-scheduler.cc.s
+.PHONY : test/lte-test-cqa-ff-mac-scheduler.s
+
+# target to generate assembly for a file
+test/lte-test-cqa-ff-mac-scheduler.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-cqa-ff-mac-scheduler.cc.s
+.PHONY : test/lte-test-cqa-ff-mac-scheduler.cc.s
+
+test/lte-test-cqi-generation.o: test/lte-test-cqi-generation.cc.o
+.PHONY : test/lte-test-cqi-generation.o
+
+# target to build an object file
+test/lte-test-cqi-generation.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-cqi-generation.cc.o
+.PHONY : test/lte-test-cqi-generation.cc.o
+
+test/lte-test-cqi-generation.i: test/lte-test-cqi-generation.cc.i
+.PHONY : test/lte-test-cqi-generation.i
+
+# target to preprocess a source file
+test/lte-test-cqi-generation.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-cqi-generation.cc.i
+.PHONY : test/lte-test-cqi-generation.cc.i
+
+test/lte-test-cqi-generation.s: test/lte-test-cqi-generation.cc.s
+.PHONY : test/lte-test-cqi-generation.s
+
+# target to generate assembly for a file
+test/lte-test-cqi-generation.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-cqi-generation.cc.s
+.PHONY : test/lte-test-cqi-generation.cc.s
+
+test/lte-test-deactivate-bearer.o: test/lte-test-deactivate-bearer.cc.o
+.PHONY : test/lte-test-deactivate-bearer.o
+
+# target to build an object file
+test/lte-test-deactivate-bearer.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-deactivate-bearer.cc.o
+.PHONY : test/lte-test-deactivate-bearer.cc.o
+
+test/lte-test-deactivate-bearer.i: test/lte-test-deactivate-bearer.cc.i
+.PHONY : test/lte-test-deactivate-bearer.i
+
+# target to preprocess a source file
+test/lte-test-deactivate-bearer.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-deactivate-bearer.cc.i
+.PHONY : test/lte-test-deactivate-bearer.cc.i
+
+test/lte-test-deactivate-bearer.s: test/lte-test-deactivate-bearer.cc.s
+.PHONY : test/lte-test-deactivate-bearer.s
+
+# target to generate assembly for a file
+test/lte-test-deactivate-bearer.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-deactivate-bearer.cc.s
+.PHONY : test/lte-test-deactivate-bearer.cc.s
+
+test/lte-test-downlink-power-control.o: test/lte-test-downlink-power-control.cc.o
+.PHONY : test/lte-test-downlink-power-control.o
+
+# target to build an object file
+test/lte-test-downlink-power-control.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-downlink-power-control.cc.o
+.PHONY : test/lte-test-downlink-power-control.cc.o
+
+test/lte-test-downlink-power-control.i: test/lte-test-downlink-power-control.cc.i
+.PHONY : test/lte-test-downlink-power-control.i
+
+# target to preprocess a source file
+test/lte-test-downlink-power-control.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-downlink-power-control.cc.i
+.PHONY : test/lte-test-downlink-power-control.cc.i
+
+test/lte-test-downlink-power-control.s: test/lte-test-downlink-power-control.cc.s
+.PHONY : test/lte-test-downlink-power-control.s
+
+# target to generate assembly for a file
+test/lte-test-downlink-power-control.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-downlink-power-control.cc.s
+.PHONY : test/lte-test-downlink-power-control.cc.s
+
+test/lte-test-downlink-sinr.o: test/lte-test-downlink-sinr.cc.o
+.PHONY : test/lte-test-downlink-sinr.o
+
+# target to build an object file
+test/lte-test-downlink-sinr.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-downlink-sinr.cc.o
+.PHONY : test/lte-test-downlink-sinr.cc.o
+
+test/lte-test-downlink-sinr.i: test/lte-test-downlink-sinr.cc.i
+.PHONY : test/lte-test-downlink-sinr.i
+
+# target to preprocess a source file
+test/lte-test-downlink-sinr.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-downlink-sinr.cc.i
+.PHONY : test/lte-test-downlink-sinr.cc.i
+
+test/lte-test-downlink-sinr.s: test/lte-test-downlink-sinr.cc.s
+.PHONY : test/lte-test-downlink-sinr.s
+
+# target to generate assembly for a file
+test/lte-test-downlink-sinr.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-downlink-sinr.cc.s
+.PHONY : test/lte-test-downlink-sinr.cc.s
+
+test/lte-test-earfcn.o: test/lte-test-earfcn.cc.o
+.PHONY : test/lte-test-earfcn.o
+
+# target to build an object file
+test/lte-test-earfcn.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-earfcn.cc.o
+.PHONY : test/lte-test-earfcn.cc.o
+
+test/lte-test-earfcn.i: test/lte-test-earfcn.cc.i
+.PHONY : test/lte-test-earfcn.i
+
+# target to preprocess a source file
+test/lte-test-earfcn.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-earfcn.cc.i
+.PHONY : test/lte-test-earfcn.cc.i
+
+test/lte-test-earfcn.s: test/lte-test-earfcn.cc.s
+.PHONY : test/lte-test-earfcn.s
+
+# target to generate assembly for a file
+test/lte-test-earfcn.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-earfcn.cc.s
+.PHONY : test/lte-test-earfcn.cc.s
+
+test/lte-test-entities.o: test/lte-test-entities.cc.o
+.PHONY : test/lte-test-entities.o
+
+# target to build an object file
+test/lte-test-entities.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-entities.cc.o
+.PHONY : test/lte-test-entities.cc.o
+
+test/lte-test-entities.i: test/lte-test-entities.cc.i
+.PHONY : test/lte-test-entities.i
+
+# target to preprocess a source file
+test/lte-test-entities.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-entities.cc.i
+.PHONY : test/lte-test-entities.cc.i
+
+test/lte-test-entities.s: test/lte-test-entities.cc.s
+.PHONY : test/lte-test-entities.s
+
+# target to generate assembly for a file
+test/lte-test-entities.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-entities.cc.s
+.PHONY : test/lte-test-entities.cc.s
+
+test/lte-test-fdbet-ff-mac-scheduler.o: test/lte-test-fdbet-ff-mac-scheduler.cc.o
+.PHONY : test/lte-test-fdbet-ff-mac-scheduler.o
+
+# target to build an object file
+test/lte-test-fdbet-ff-mac-scheduler.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-fdbet-ff-mac-scheduler.cc.o
+.PHONY : test/lte-test-fdbet-ff-mac-scheduler.cc.o
+
+test/lte-test-fdbet-ff-mac-scheduler.i: test/lte-test-fdbet-ff-mac-scheduler.cc.i
+.PHONY : test/lte-test-fdbet-ff-mac-scheduler.i
+
+# target to preprocess a source file
+test/lte-test-fdbet-ff-mac-scheduler.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-fdbet-ff-mac-scheduler.cc.i
+.PHONY : test/lte-test-fdbet-ff-mac-scheduler.cc.i
+
+test/lte-test-fdbet-ff-mac-scheduler.s: test/lte-test-fdbet-ff-mac-scheduler.cc.s
+.PHONY : test/lte-test-fdbet-ff-mac-scheduler.s
+
+# target to generate assembly for a file
+test/lte-test-fdbet-ff-mac-scheduler.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-fdbet-ff-mac-scheduler.cc.s
+.PHONY : test/lte-test-fdbet-ff-mac-scheduler.cc.s
+
+test/lte-test-fdmt-ff-mac-scheduler.o: test/lte-test-fdmt-ff-mac-scheduler.cc.o
+.PHONY : test/lte-test-fdmt-ff-mac-scheduler.o
+
+# target to build an object file
+test/lte-test-fdmt-ff-mac-scheduler.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-fdmt-ff-mac-scheduler.cc.o
+.PHONY : test/lte-test-fdmt-ff-mac-scheduler.cc.o
+
+test/lte-test-fdmt-ff-mac-scheduler.i: test/lte-test-fdmt-ff-mac-scheduler.cc.i
+.PHONY : test/lte-test-fdmt-ff-mac-scheduler.i
+
+# target to preprocess a source file
+test/lte-test-fdmt-ff-mac-scheduler.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-fdmt-ff-mac-scheduler.cc.i
+.PHONY : test/lte-test-fdmt-ff-mac-scheduler.cc.i
+
+test/lte-test-fdmt-ff-mac-scheduler.s: test/lte-test-fdmt-ff-mac-scheduler.cc.s
+.PHONY : test/lte-test-fdmt-ff-mac-scheduler.s
+
+# target to generate assembly for a file
+test/lte-test-fdmt-ff-mac-scheduler.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-fdmt-ff-mac-scheduler.cc.s
+.PHONY : test/lte-test-fdmt-ff-mac-scheduler.cc.s
+
+test/lte-test-fdtbfq-ff-mac-scheduler.o: test/lte-test-fdtbfq-ff-mac-scheduler.cc.o
+.PHONY : test/lte-test-fdtbfq-ff-mac-scheduler.o
+
+# target to build an object file
+test/lte-test-fdtbfq-ff-mac-scheduler.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-fdtbfq-ff-mac-scheduler.cc.o
+.PHONY : test/lte-test-fdtbfq-ff-mac-scheduler.cc.o
+
+test/lte-test-fdtbfq-ff-mac-scheduler.i: test/lte-test-fdtbfq-ff-mac-scheduler.cc.i
+.PHONY : test/lte-test-fdtbfq-ff-mac-scheduler.i
+
+# target to preprocess a source file
+test/lte-test-fdtbfq-ff-mac-scheduler.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-fdtbfq-ff-mac-scheduler.cc.i
+.PHONY : test/lte-test-fdtbfq-ff-mac-scheduler.cc.i
+
+test/lte-test-fdtbfq-ff-mac-scheduler.s: test/lte-test-fdtbfq-ff-mac-scheduler.cc.s
+.PHONY : test/lte-test-fdtbfq-ff-mac-scheduler.s
+
+# target to generate assembly for a file
+test/lte-test-fdtbfq-ff-mac-scheduler.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-fdtbfq-ff-mac-scheduler.cc.s
+.PHONY : test/lte-test-fdtbfq-ff-mac-scheduler.cc.s
+
+test/lte-test-frequency-reuse.o: test/lte-test-frequency-reuse.cc.o
+.PHONY : test/lte-test-frequency-reuse.o
+
+# target to build an object file
+test/lte-test-frequency-reuse.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-frequency-reuse.cc.o
+.PHONY : test/lte-test-frequency-reuse.cc.o
+
+test/lte-test-frequency-reuse.i: test/lte-test-frequency-reuse.cc.i
+.PHONY : test/lte-test-frequency-reuse.i
+
+# target to preprocess a source file
+test/lte-test-frequency-reuse.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-frequency-reuse.cc.i
+.PHONY : test/lte-test-frequency-reuse.cc.i
+
+test/lte-test-frequency-reuse.s: test/lte-test-frequency-reuse.cc.s
+.PHONY : test/lte-test-frequency-reuse.s
+
+# target to generate assembly for a file
+test/lte-test-frequency-reuse.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-frequency-reuse.cc.s
+.PHONY : test/lte-test-frequency-reuse.cc.s
+
+test/lte-test-harq.o: test/lte-test-harq.cc.o
+.PHONY : test/lte-test-harq.o
+
+# target to build an object file
+test/lte-test-harq.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-harq.cc.o
+.PHONY : test/lte-test-harq.cc.o
+
+test/lte-test-harq.i: test/lte-test-harq.cc.i
+.PHONY : test/lte-test-harq.i
+
+# target to preprocess a source file
+test/lte-test-harq.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-harq.cc.i
+.PHONY : test/lte-test-harq.cc.i
+
+test/lte-test-harq.s: test/lte-test-harq.cc.s
+.PHONY : test/lte-test-harq.s
+
+# target to generate assembly for a file
+test/lte-test-harq.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-harq.cc.s
+.PHONY : test/lte-test-harq.cc.s
+
+test/lte-test-interference-fr.o: test/lte-test-interference-fr.cc.o
+.PHONY : test/lte-test-interference-fr.o
+
+# target to build an object file
+test/lte-test-interference-fr.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-interference-fr.cc.o
+.PHONY : test/lte-test-interference-fr.cc.o
+
+test/lte-test-interference-fr.i: test/lte-test-interference-fr.cc.i
+.PHONY : test/lte-test-interference-fr.i
+
+# target to preprocess a source file
+test/lte-test-interference-fr.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-interference-fr.cc.i
+.PHONY : test/lte-test-interference-fr.cc.i
+
+test/lte-test-interference-fr.s: test/lte-test-interference-fr.cc.s
+.PHONY : test/lte-test-interference-fr.s
+
+# target to generate assembly for a file
+test/lte-test-interference-fr.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-interference-fr.cc.s
+.PHONY : test/lte-test-interference-fr.cc.s
+
+test/lte-test-interference.o: test/lte-test-interference.cc.o
+.PHONY : test/lte-test-interference.o
+
+# target to build an object file
+test/lte-test-interference.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-interference.cc.o
+.PHONY : test/lte-test-interference.cc.o
+
+test/lte-test-interference.i: test/lte-test-interference.cc.i
+.PHONY : test/lte-test-interference.i
+
+# target to preprocess a source file
+test/lte-test-interference.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-interference.cc.i
+.PHONY : test/lte-test-interference.cc.i
+
+test/lte-test-interference.s: test/lte-test-interference.cc.s
+.PHONY : test/lte-test-interference.s
+
+# target to generate assembly for a file
+test/lte-test-interference.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-interference.cc.s
+.PHONY : test/lte-test-interference.cc.s
+
+test/lte-test-ipv6-routing.o: test/lte-test-ipv6-routing.cc.o
+.PHONY : test/lte-test-ipv6-routing.o
+
+# target to build an object file
+test/lte-test-ipv6-routing.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-ipv6-routing.cc.o
+.PHONY : test/lte-test-ipv6-routing.cc.o
+
+test/lte-test-ipv6-routing.i: test/lte-test-ipv6-routing.cc.i
+.PHONY : test/lte-test-ipv6-routing.i
+
+# target to preprocess a source file
+test/lte-test-ipv6-routing.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-ipv6-routing.cc.i
+.PHONY : test/lte-test-ipv6-routing.cc.i
+
+test/lte-test-ipv6-routing.s: test/lte-test-ipv6-routing.cc.s
+.PHONY : test/lte-test-ipv6-routing.s
+
+# target to generate assembly for a file
+test/lte-test-ipv6-routing.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-ipv6-routing.cc.s
+.PHONY : test/lte-test-ipv6-routing.cc.s
+
+test/lte-test-link-adaptation.o: test/lte-test-link-adaptation.cc.o
+.PHONY : test/lte-test-link-adaptation.o
+
+# target to build an object file
+test/lte-test-link-adaptation.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-link-adaptation.cc.o
+.PHONY : test/lte-test-link-adaptation.cc.o
+
+test/lte-test-link-adaptation.i: test/lte-test-link-adaptation.cc.i
+.PHONY : test/lte-test-link-adaptation.i
+
+# target to preprocess a source file
+test/lte-test-link-adaptation.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-link-adaptation.cc.i
+.PHONY : test/lte-test-link-adaptation.cc.i
+
+test/lte-test-link-adaptation.s: test/lte-test-link-adaptation.cc.s
+.PHONY : test/lte-test-link-adaptation.s
+
+# target to generate assembly for a file
+test/lte-test-link-adaptation.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-link-adaptation.cc.s
+.PHONY : test/lte-test-link-adaptation.cc.s
+
+test/lte-test-mimo.o: test/lte-test-mimo.cc.o
+.PHONY : test/lte-test-mimo.o
+
+# target to build an object file
+test/lte-test-mimo.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-mimo.cc.o
+.PHONY : test/lte-test-mimo.cc.o
+
+test/lte-test-mimo.i: test/lte-test-mimo.cc.i
+.PHONY : test/lte-test-mimo.i
+
+# target to preprocess a source file
+test/lte-test-mimo.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-mimo.cc.i
+.PHONY : test/lte-test-mimo.cc.i
+
+test/lte-test-mimo.s: test/lte-test-mimo.cc.s
+.PHONY : test/lte-test-mimo.s
+
+# target to generate assembly for a file
+test/lte-test-mimo.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-mimo.cc.s
+.PHONY : test/lte-test-mimo.cc.s
+
+test/lte-test-pathloss-model.o: test/lte-test-pathloss-model.cc.o
+.PHONY : test/lte-test-pathloss-model.o
+
+# target to build an object file
+test/lte-test-pathloss-model.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-pathloss-model.cc.o
+.PHONY : test/lte-test-pathloss-model.cc.o
+
+test/lte-test-pathloss-model.i: test/lte-test-pathloss-model.cc.i
+.PHONY : test/lte-test-pathloss-model.i
+
+# target to preprocess a source file
+test/lte-test-pathloss-model.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-pathloss-model.cc.i
+.PHONY : test/lte-test-pathloss-model.cc.i
+
+test/lte-test-pathloss-model.s: test/lte-test-pathloss-model.cc.s
+.PHONY : test/lte-test-pathloss-model.s
+
+# target to generate assembly for a file
+test/lte-test-pathloss-model.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-pathloss-model.cc.s
+.PHONY : test/lte-test-pathloss-model.cc.s
+
+test/lte-test-pf-ff-mac-scheduler.o: test/lte-test-pf-ff-mac-scheduler.cc.o
+.PHONY : test/lte-test-pf-ff-mac-scheduler.o
+
+# target to build an object file
+test/lte-test-pf-ff-mac-scheduler.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-pf-ff-mac-scheduler.cc.o
+.PHONY : test/lte-test-pf-ff-mac-scheduler.cc.o
+
+test/lte-test-pf-ff-mac-scheduler.i: test/lte-test-pf-ff-mac-scheduler.cc.i
+.PHONY : test/lte-test-pf-ff-mac-scheduler.i
+
+# target to preprocess a source file
+test/lte-test-pf-ff-mac-scheduler.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-pf-ff-mac-scheduler.cc.i
+.PHONY : test/lte-test-pf-ff-mac-scheduler.cc.i
+
+test/lte-test-pf-ff-mac-scheduler.s: test/lte-test-pf-ff-mac-scheduler.cc.s
+.PHONY : test/lte-test-pf-ff-mac-scheduler.s
+
+# target to generate assembly for a file
+test/lte-test-pf-ff-mac-scheduler.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-pf-ff-mac-scheduler.cc.s
+.PHONY : test/lte-test-pf-ff-mac-scheduler.cc.s
+
+test/lte-test-phy-error-model.o: test/lte-test-phy-error-model.cc.o
+.PHONY : test/lte-test-phy-error-model.o
+
+# target to build an object file
+test/lte-test-phy-error-model.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-phy-error-model.cc.o
+.PHONY : test/lte-test-phy-error-model.cc.o
+
+test/lte-test-phy-error-model.i: test/lte-test-phy-error-model.cc.i
+.PHONY : test/lte-test-phy-error-model.i
+
+# target to preprocess a source file
+test/lte-test-phy-error-model.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-phy-error-model.cc.i
+.PHONY : test/lte-test-phy-error-model.cc.i
+
+test/lte-test-phy-error-model.s: test/lte-test-phy-error-model.cc.s
+.PHONY : test/lte-test-phy-error-model.s
+
+# target to generate assembly for a file
+test/lte-test-phy-error-model.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-phy-error-model.cc.s
+.PHONY : test/lte-test-phy-error-model.cc.s
+
+test/lte-test-primary-cell-change.o: test/lte-test-primary-cell-change.cc.o
+.PHONY : test/lte-test-primary-cell-change.o
+
+# target to build an object file
+test/lte-test-primary-cell-change.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-primary-cell-change.cc.o
+.PHONY : test/lte-test-primary-cell-change.cc.o
+
+test/lte-test-primary-cell-change.i: test/lte-test-primary-cell-change.cc.i
+.PHONY : test/lte-test-primary-cell-change.i
+
+# target to preprocess a source file
+test/lte-test-primary-cell-change.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-primary-cell-change.cc.i
+.PHONY : test/lte-test-primary-cell-change.cc.i
+
+test/lte-test-primary-cell-change.s: test/lte-test-primary-cell-change.cc.s
+.PHONY : test/lte-test-primary-cell-change.s
+
+# target to generate assembly for a file
+test/lte-test-primary-cell-change.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-primary-cell-change.cc.s
+.PHONY : test/lte-test-primary-cell-change.cc.s
+
+test/lte-test-pss-ff-mac-scheduler.o: test/lte-test-pss-ff-mac-scheduler.cc.o
+.PHONY : test/lte-test-pss-ff-mac-scheduler.o
+
+# target to build an object file
+test/lte-test-pss-ff-mac-scheduler.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-pss-ff-mac-scheduler.cc.o
+.PHONY : test/lte-test-pss-ff-mac-scheduler.cc.o
+
+test/lte-test-pss-ff-mac-scheduler.i: test/lte-test-pss-ff-mac-scheduler.cc.i
+.PHONY : test/lte-test-pss-ff-mac-scheduler.i
+
+# target to preprocess a source file
+test/lte-test-pss-ff-mac-scheduler.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-pss-ff-mac-scheduler.cc.i
+.PHONY : test/lte-test-pss-ff-mac-scheduler.cc.i
+
+test/lte-test-pss-ff-mac-scheduler.s: test/lte-test-pss-ff-mac-scheduler.cc.s
+.PHONY : test/lte-test-pss-ff-mac-scheduler.s
+
+# target to generate assembly for a file
+test/lte-test-pss-ff-mac-scheduler.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-pss-ff-mac-scheduler.cc.s
+.PHONY : test/lte-test-pss-ff-mac-scheduler.cc.s
+
+test/lte-test-radio-link-failure.o: test/lte-test-radio-link-failure.cc.o
+.PHONY : test/lte-test-radio-link-failure.o
+
+# target to build an object file
+test/lte-test-radio-link-failure.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-radio-link-failure.cc.o
+.PHONY : test/lte-test-radio-link-failure.cc.o
+
+test/lte-test-radio-link-failure.i: test/lte-test-radio-link-failure.cc.i
+.PHONY : test/lte-test-radio-link-failure.i
+
+# target to preprocess a source file
+test/lte-test-radio-link-failure.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-radio-link-failure.cc.i
+.PHONY : test/lte-test-radio-link-failure.cc.i
+
+test/lte-test-radio-link-failure.s: test/lte-test-radio-link-failure.cc.s
+.PHONY : test/lte-test-radio-link-failure.s
+
+# target to generate assembly for a file
+test/lte-test-radio-link-failure.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-radio-link-failure.cc.s
+.PHONY : test/lte-test-radio-link-failure.cc.s
+
+test/lte-test-rlc-am-e2e.o: test/lte-test-rlc-am-e2e.cc.o
+.PHONY : test/lte-test-rlc-am-e2e.o
+
+# target to build an object file
+test/lte-test-rlc-am-e2e.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-rlc-am-e2e.cc.o
+.PHONY : test/lte-test-rlc-am-e2e.cc.o
+
+test/lte-test-rlc-am-e2e.i: test/lte-test-rlc-am-e2e.cc.i
+.PHONY : test/lte-test-rlc-am-e2e.i
+
+# target to preprocess a source file
+test/lte-test-rlc-am-e2e.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-rlc-am-e2e.cc.i
+.PHONY : test/lte-test-rlc-am-e2e.cc.i
+
+test/lte-test-rlc-am-e2e.s: test/lte-test-rlc-am-e2e.cc.s
+.PHONY : test/lte-test-rlc-am-e2e.s
+
+# target to generate assembly for a file
+test/lte-test-rlc-am-e2e.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-rlc-am-e2e.cc.s
+.PHONY : test/lte-test-rlc-am-e2e.cc.s
+
+test/lte-test-rlc-am-transmitter.o: test/lte-test-rlc-am-transmitter.cc.o
+.PHONY : test/lte-test-rlc-am-transmitter.o
+
+# target to build an object file
+test/lte-test-rlc-am-transmitter.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-rlc-am-transmitter.cc.o
+.PHONY : test/lte-test-rlc-am-transmitter.cc.o
+
+test/lte-test-rlc-am-transmitter.i: test/lte-test-rlc-am-transmitter.cc.i
+.PHONY : test/lte-test-rlc-am-transmitter.i
+
+# target to preprocess a source file
+test/lte-test-rlc-am-transmitter.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-rlc-am-transmitter.cc.i
+.PHONY : test/lte-test-rlc-am-transmitter.cc.i
+
+test/lte-test-rlc-am-transmitter.s: test/lte-test-rlc-am-transmitter.cc.s
+.PHONY : test/lte-test-rlc-am-transmitter.s
+
+# target to generate assembly for a file
+test/lte-test-rlc-am-transmitter.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-rlc-am-transmitter.cc.s
+.PHONY : test/lte-test-rlc-am-transmitter.cc.s
+
+test/lte-test-rlc-um-e2e.o: test/lte-test-rlc-um-e2e.cc.o
+.PHONY : test/lte-test-rlc-um-e2e.o
+
+# target to build an object file
+test/lte-test-rlc-um-e2e.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-rlc-um-e2e.cc.o
+.PHONY : test/lte-test-rlc-um-e2e.cc.o
+
+test/lte-test-rlc-um-e2e.i: test/lte-test-rlc-um-e2e.cc.i
+.PHONY : test/lte-test-rlc-um-e2e.i
+
+# target to preprocess a source file
+test/lte-test-rlc-um-e2e.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-rlc-um-e2e.cc.i
+.PHONY : test/lte-test-rlc-um-e2e.cc.i
+
+test/lte-test-rlc-um-e2e.s: test/lte-test-rlc-um-e2e.cc.s
+.PHONY : test/lte-test-rlc-um-e2e.s
+
+# target to generate assembly for a file
+test/lte-test-rlc-um-e2e.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-rlc-um-e2e.cc.s
+.PHONY : test/lte-test-rlc-um-e2e.cc.s
+
+test/lte-test-rlc-um-transmitter.o: test/lte-test-rlc-um-transmitter.cc.o
+.PHONY : test/lte-test-rlc-um-transmitter.o
+
+# target to build an object file
+test/lte-test-rlc-um-transmitter.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-rlc-um-transmitter.cc.o
+.PHONY : test/lte-test-rlc-um-transmitter.cc.o
+
+test/lte-test-rlc-um-transmitter.i: test/lte-test-rlc-um-transmitter.cc.i
+.PHONY : test/lte-test-rlc-um-transmitter.i
+
+# target to preprocess a source file
+test/lte-test-rlc-um-transmitter.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-rlc-um-transmitter.cc.i
+.PHONY : test/lte-test-rlc-um-transmitter.cc.i
+
+test/lte-test-rlc-um-transmitter.s: test/lte-test-rlc-um-transmitter.cc.s
+.PHONY : test/lte-test-rlc-um-transmitter.s
+
+# target to generate assembly for a file
+test/lte-test-rlc-um-transmitter.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-rlc-um-transmitter.cc.s
+.PHONY : test/lte-test-rlc-um-transmitter.cc.s
+
+test/lte-test-rr-ff-mac-scheduler.o: test/lte-test-rr-ff-mac-scheduler.cc.o
+.PHONY : test/lte-test-rr-ff-mac-scheduler.o
+
+# target to build an object file
+test/lte-test-rr-ff-mac-scheduler.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-rr-ff-mac-scheduler.cc.o
+.PHONY : test/lte-test-rr-ff-mac-scheduler.cc.o
+
+test/lte-test-rr-ff-mac-scheduler.i: test/lte-test-rr-ff-mac-scheduler.cc.i
+.PHONY : test/lte-test-rr-ff-mac-scheduler.i
+
+# target to preprocess a source file
+test/lte-test-rr-ff-mac-scheduler.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-rr-ff-mac-scheduler.cc.i
+.PHONY : test/lte-test-rr-ff-mac-scheduler.cc.i
+
+test/lte-test-rr-ff-mac-scheduler.s: test/lte-test-rr-ff-mac-scheduler.cc.s
+.PHONY : test/lte-test-rr-ff-mac-scheduler.s
+
+# target to generate assembly for a file
+test/lte-test-rr-ff-mac-scheduler.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-rr-ff-mac-scheduler.cc.s
+.PHONY : test/lte-test-rr-ff-mac-scheduler.cc.s
+
+test/lte-test-secondary-cell-handover.o: test/lte-test-secondary-cell-handover.cc.o
+.PHONY : test/lte-test-secondary-cell-handover.o
+
+# target to build an object file
+test/lte-test-secondary-cell-handover.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-secondary-cell-handover.cc.o
+.PHONY : test/lte-test-secondary-cell-handover.cc.o
+
+test/lte-test-secondary-cell-handover.i: test/lte-test-secondary-cell-handover.cc.i
+.PHONY : test/lte-test-secondary-cell-handover.i
+
+# target to preprocess a source file
+test/lte-test-secondary-cell-handover.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-secondary-cell-handover.cc.i
+.PHONY : test/lte-test-secondary-cell-handover.cc.i
+
+test/lte-test-secondary-cell-handover.s: test/lte-test-secondary-cell-handover.cc.s
+.PHONY : test/lte-test-secondary-cell-handover.s
+
+# target to generate assembly for a file
+test/lte-test-secondary-cell-handover.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-secondary-cell-handover.cc.s
+.PHONY : test/lte-test-secondary-cell-handover.cc.s
+
+test/lte-test-secondary-cell-selection.o: test/lte-test-secondary-cell-selection.cc.o
+.PHONY : test/lte-test-secondary-cell-selection.o
+
+# target to build an object file
+test/lte-test-secondary-cell-selection.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-secondary-cell-selection.cc.o
+.PHONY : test/lte-test-secondary-cell-selection.cc.o
+
+test/lte-test-secondary-cell-selection.i: test/lte-test-secondary-cell-selection.cc.i
+.PHONY : test/lte-test-secondary-cell-selection.i
+
+# target to preprocess a source file
+test/lte-test-secondary-cell-selection.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-secondary-cell-selection.cc.i
+.PHONY : test/lte-test-secondary-cell-selection.cc.i
+
+test/lte-test-secondary-cell-selection.s: test/lte-test-secondary-cell-selection.cc.s
+.PHONY : test/lte-test-secondary-cell-selection.s
+
+# target to generate assembly for a file
+test/lte-test-secondary-cell-selection.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-secondary-cell-selection.cc.s
+.PHONY : test/lte-test-secondary-cell-selection.cc.s
+
+test/lte-test-spectrum-value-helper.o: test/lte-test-spectrum-value-helper.cc.o
+.PHONY : test/lte-test-spectrum-value-helper.o
+
+# target to build an object file
+test/lte-test-spectrum-value-helper.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-spectrum-value-helper.cc.o
+.PHONY : test/lte-test-spectrum-value-helper.cc.o
+
+test/lte-test-spectrum-value-helper.i: test/lte-test-spectrum-value-helper.cc.i
+.PHONY : test/lte-test-spectrum-value-helper.i
+
+# target to preprocess a source file
+test/lte-test-spectrum-value-helper.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-spectrum-value-helper.cc.i
+.PHONY : test/lte-test-spectrum-value-helper.cc.i
+
+test/lte-test-spectrum-value-helper.s: test/lte-test-spectrum-value-helper.cc.s
+.PHONY : test/lte-test-spectrum-value-helper.s
+
+# target to generate assembly for a file
+test/lte-test-spectrum-value-helper.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-spectrum-value-helper.cc.s
+.PHONY : test/lte-test-spectrum-value-helper.cc.s
+
+test/lte-test-tdbet-ff-mac-scheduler.o: test/lte-test-tdbet-ff-mac-scheduler.cc.o
+.PHONY : test/lte-test-tdbet-ff-mac-scheduler.o
+
+# target to build an object file
+test/lte-test-tdbet-ff-mac-scheduler.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-tdbet-ff-mac-scheduler.cc.o
+.PHONY : test/lte-test-tdbet-ff-mac-scheduler.cc.o
+
+test/lte-test-tdbet-ff-mac-scheduler.i: test/lte-test-tdbet-ff-mac-scheduler.cc.i
+.PHONY : test/lte-test-tdbet-ff-mac-scheduler.i
+
+# target to preprocess a source file
+test/lte-test-tdbet-ff-mac-scheduler.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-tdbet-ff-mac-scheduler.cc.i
+.PHONY : test/lte-test-tdbet-ff-mac-scheduler.cc.i
+
+test/lte-test-tdbet-ff-mac-scheduler.s: test/lte-test-tdbet-ff-mac-scheduler.cc.s
+.PHONY : test/lte-test-tdbet-ff-mac-scheduler.s
+
+# target to generate assembly for a file
+test/lte-test-tdbet-ff-mac-scheduler.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-tdbet-ff-mac-scheduler.cc.s
+.PHONY : test/lte-test-tdbet-ff-mac-scheduler.cc.s
+
+test/lte-test-tdmt-ff-mac-scheduler.o: test/lte-test-tdmt-ff-mac-scheduler.cc.o
+.PHONY : test/lte-test-tdmt-ff-mac-scheduler.o
+
+# target to build an object file
+test/lte-test-tdmt-ff-mac-scheduler.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-tdmt-ff-mac-scheduler.cc.o
+.PHONY : test/lte-test-tdmt-ff-mac-scheduler.cc.o
+
+test/lte-test-tdmt-ff-mac-scheduler.i: test/lte-test-tdmt-ff-mac-scheduler.cc.i
+.PHONY : test/lte-test-tdmt-ff-mac-scheduler.i
+
+# target to preprocess a source file
+test/lte-test-tdmt-ff-mac-scheduler.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-tdmt-ff-mac-scheduler.cc.i
+.PHONY : test/lte-test-tdmt-ff-mac-scheduler.cc.i
+
+test/lte-test-tdmt-ff-mac-scheduler.s: test/lte-test-tdmt-ff-mac-scheduler.cc.s
+.PHONY : test/lte-test-tdmt-ff-mac-scheduler.s
+
+# target to generate assembly for a file
+test/lte-test-tdmt-ff-mac-scheduler.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-tdmt-ff-mac-scheduler.cc.s
+.PHONY : test/lte-test-tdmt-ff-mac-scheduler.cc.s
+
+test/lte-test-tdtbfq-ff-mac-scheduler.o: test/lte-test-tdtbfq-ff-mac-scheduler.cc.o
+.PHONY : test/lte-test-tdtbfq-ff-mac-scheduler.o
+
+# target to build an object file
+test/lte-test-tdtbfq-ff-mac-scheduler.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-tdtbfq-ff-mac-scheduler.cc.o
+.PHONY : test/lte-test-tdtbfq-ff-mac-scheduler.cc.o
+
+test/lte-test-tdtbfq-ff-mac-scheduler.i: test/lte-test-tdtbfq-ff-mac-scheduler.cc.i
+.PHONY : test/lte-test-tdtbfq-ff-mac-scheduler.i
+
+# target to preprocess a source file
+test/lte-test-tdtbfq-ff-mac-scheduler.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-tdtbfq-ff-mac-scheduler.cc.i
+.PHONY : test/lte-test-tdtbfq-ff-mac-scheduler.cc.i
+
+test/lte-test-tdtbfq-ff-mac-scheduler.s: test/lte-test-tdtbfq-ff-mac-scheduler.cc.s
+.PHONY : test/lte-test-tdtbfq-ff-mac-scheduler.s
+
+# target to generate assembly for a file
+test/lte-test-tdtbfq-ff-mac-scheduler.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-tdtbfq-ff-mac-scheduler.cc.s
+.PHONY : test/lte-test-tdtbfq-ff-mac-scheduler.cc.s
+
+test/lte-test-tta-ff-mac-scheduler.o: test/lte-test-tta-ff-mac-scheduler.cc.o
+.PHONY : test/lte-test-tta-ff-mac-scheduler.o
+
+# target to build an object file
+test/lte-test-tta-ff-mac-scheduler.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-tta-ff-mac-scheduler.cc.o
+.PHONY : test/lte-test-tta-ff-mac-scheduler.cc.o
+
+test/lte-test-tta-ff-mac-scheduler.i: test/lte-test-tta-ff-mac-scheduler.cc.i
+.PHONY : test/lte-test-tta-ff-mac-scheduler.i
+
+# target to preprocess a source file
+test/lte-test-tta-ff-mac-scheduler.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-tta-ff-mac-scheduler.cc.i
+.PHONY : test/lte-test-tta-ff-mac-scheduler.cc.i
+
+test/lte-test-tta-ff-mac-scheduler.s: test/lte-test-tta-ff-mac-scheduler.cc.s
+.PHONY : test/lte-test-tta-ff-mac-scheduler.s
+
+# target to generate assembly for a file
+test/lte-test-tta-ff-mac-scheduler.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-tta-ff-mac-scheduler.cc.s
+.PHONY : test/lte-test-tta-ff-mac-scheduler.cc.s
+
+test/lte-test-ue-measurements.o: test/lte-test-ue-measurements.cc.o
+.PHONY : test/lte-test-ue-measurements.o
+
+# target to build an object file
+test/lte-test-ue-measurements.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-ue-measurements.cc.o
+.PHONY : test/lte-test-ue-measurements.cc.o
+
+test/lte-test-ue-measurements.i: test/lte-test-ue-measurements.cc.i
+.PHONY : test/lte-test-ue-measurements.i
+
+# target to preprocess a source file
+test/lte-test-ue-measurements.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-ue-measurements.cc.i
+.PHONY : test/lte-test-ue-measurements.cc.i
+
+test/lte-test-ue-measurements.s: test/lte-test-ue-measurements.cc.s
+.PHONY : test/lte-test-ue-measurements.s
+
+# target to generate assembly for a file
+test/lte-test-ue-measurements.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-ue-measurements.cc.s
+.PHONY : test/lte-test-ue-measurements.cc.s
+
+test/lte-test-ue-phy.o: test/lte-test-ue-phy.cc.o
+.PHONY : test/lte-test-ue-phy.o
+
+# target to build an object file
+test/lte-test-ue-phy.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-ue-phy.cc.o
+.PHONY : test/lte-test-ue-phy.cc.o
+
+test/lte-test-ue-phy.i: test/lte-test-ue-phy.cc.i
+.PHONY : test/lte-test-ue-phy.i
+
+# target to preprocess a source file
+test/lte-test-ue-phy.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-ue-phy.cc.i
+.PHONY : test/lte-test-ue-phy.cc.i
+
+test/lte-test-ue-phy.s: test/lte-test-ue-phy.cc.s
+.PHONY : test/lte-test-ue-phy.s
+
+# target to generate assembly for a file
+test/lte-test-ue-phy.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-ue-phy.cc.s
+.PHONY : test/lte-test-ue-phy.cc.s
+
+test/lte-test-uplink-power-control.o: test/lte-test-uplink-power-control.cc.o
+.PHONY : test/lte-test-uplink-power-control.o
+
+# target to build an object file
+test/lte-test-uplink-power-control.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-uplink-power-control.cc.o
+.PHONY : test/lte-test-uplink-power-control.cc.o
+
+test/lte-test-uplink-power-control.i: test/lte-test-uplink-power-control.cc.i
+.PHONY : test/lte-test-uplink-power-control.i
+
+# target to preprocess a source file
+test/lte-test-uplink-power-control.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-uplink-power-control.cc.i
+.PHONY : test/lte-test-uplink-power-control.cc.i
+
+test/lte-test-uplink-power-control.s: test/lte-test-uplink-power-control.cc.s
+.PHONY : test/lte-test-uplink-power-control.s
+
+# target to generate assembly for a file
+test/lte-test-uplink-power-control.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-uplink-power-control.cc.s
+.PHONY : test/lte-test-uplink-power-control.cc.s
+
+test/lte-test-uplink-sinr.o: test/lte-test-uplink-sinr.cc.o
+.PHONY : test/lte-test-uplink-sinr.o
+
+# target to build an object file
+test/lte-test-uplink-sinr.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-uplink-sinr.cc.o
+.PHONY : test/lte-test-uplink-sinr.cc.o
+
+test/lte-test-uplink-sinr.i: test/lte-test-uplink-sinr.cc.i
+.PHONY : test/lte-test-uplink-sinr.i
+
+# target to preprocess a source file
+test/lte-test-uplink-sinr.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-uplink-sinr.cc.i
+.PHONY : test/lte-test-uplink-sinr.cc.i
+
+test/lte-test-uplink-sinr.s: test/lte-test-uplink-sinr.cc.s
+.PHONY : test/lte-test-uplink-sinr.s
+
+# target to generate assembly for a file
+test/lte-test-uplink-sinr.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/lte-test-uplink-sinr.cc.s
+.PHONY : test/lte-test-uplink-sinr.cc.s
+
+test/test-asn1-encoding.o: test/test-asn1-encoding.cc.o
+.PHONY : test/test-asn1-encoding.o
+
+# target to build an object file
+test/test-asn1-encoding.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/test-asn1-encoding.cc.o
+.PHONY : test/test-asn1-encoding.cc.o
+
+test/test-asn1-encoding.i: test/test-asn1-encoding.cc.i
+.PHONY : test/test-asn1-encoding.i
+
+# target to preprocess a source file
+test/test-asn1-encoding.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/test-asn1-encoding.cc.i
+.PHONY : test/test-asn1-encoding.cc.i
+
+test/test-asn1-encoding.s: test/test-asn1-encoding.cc.s
+.PHONY : test/test-asn1-encoding.s
+
+# target to generate assembly for a file
+test/test-asn1-encoding.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/test-asn1-encoding.cc.s
+.PHONY : test/test-asn1-encoding.cc.s
+
+test/test-epc-tft-classifier.o: test/test-epc-tft-classifier.cc.o
+.PHONY : test/test-epc-tft-classifier.o
+
+# target to build an object file
+test/test-epc-tft-classifier.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/test-epc-tft-classifier.cc.o
+.PHONY : test/test-epc-tft-classifier.cc.o
+
+test/test-epc-tft-classifier.i: test/test-epc-tft-classifier.cc.i
+.PHONY : test/test-epc-tft-classifier.i
+
+# target to preprocess a source file
+test/test-epc-tft-classifier.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/test-epc-tft-classifier.cc.i
+.PHONY : test/test-epc-tft-classifier.cc.i
+
+test/test-epc-tft-classifier.s: test/test-epc-tft-classifier.cc.s
+.PHONY : test/test-epc-tft-classifier.s
+
+# target to generate assembly for a file
+test/test-epc-tft-classifier.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/test-epc-tft-classifier.cc.s
+.PHONY : test/test-epc-tft-classifier.cc.s
+
+test/test-lte-antenna.o: test/test-lte-antenna.cc.o
+.PHONY : test/test-lte-antenna.o
+
+# target to build an object file
+test/test-lte-antenna.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/test-lte-antenna.cc.o
+.PHONY : test/test-lte-antenna.cc.o
+
+test/test-lte-antenna.i: test/test-lte-antenna.cc.i
+.PHONY : test/test-lte-antenna.i
+
+# target to preprocess a source file
+test/test-lte-antenna.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/test-lte-antenna.cc.i
+.PHONY : test/test-lte-antenna.cc.i
+
+test/test-lte-antenna.s: test/test-lte-antenna.cc.s
+.PHONY : test/test-lte-antenna.s
+
+# target to generate assembly for a file
+test/test-lte-antenna.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/test-lte-antenna.cc.s
+.PHONY : test/test-lte-antenna.cc.s
+
+test/test-lte-epc-e2e-data.o: test/test-lte-epc-e2e-data.cc.o
+.PHONY : test/test-lte-epc-e2e-data.o
+
+# target to build an object file
+test/test-lte-epc-e2e-data.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/test-lte-epc-e2e-data.cc.o
+.PHONY : test/test-lte-epc-e2e-data.cc.o
+
+test/test-lte-epc-e2e-data.i: test/test-lte-epc-e2e-data.cc.i
+.PHONY : test/test-lte-epc-e2e-data.i
+
+# target to preprocess a source file
+test/test-lte-epc-e2e-data.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/test-lte-epc-e2e-data.cc.i
+.PHONY : test/test-lte-epc-e2e-data.cc.i
+
+test/test-lte-epc-e2e-data.s: test/test-lte-epc-e2e-data.cc.s
+.PHONY : test/test-lte-epc-e2e-data.s
+
+# target to generate assembly for a file
+test/test-lte-epc-e2e-data.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/test-lte-epc-e2e-data.cc.s
+.PHONY : test/test-lte-epc-e2e-data.cc.s
+
+test/test-lte-handover-delay.o: test/test-lte-handover-delay.cc.o
+.PHONY : test/test-lte-handover-delay.o
+
+# target to build an object file
+test/test-lte-handover-delay.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/test-lte-handover-delay.cc.o
+.PHONY : test/test-lte-handover-delay.cc.o
+
+test/test-lte-handover-delay.i: test/test-lte-handover-delay.cc.i
+.PHONY : test/test-lte-handover-delay.i
+
+# target to preprocess a source file
+test/test-lte-handover-delay.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/test-lte-handover-delay.cc.i
+.PHONY : test/test-lte-handover-delay.cc.i
+
+test/test-lte-handover-delay.s: test/test-lte-handover-delay.cc.s
+.PHONY : test/test-lte-handover-delay.s
+
+# target to generate assembly for a file
+test/test-lte-handover-delay.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/test-lte-handover-delay.cc.s
+.PHONY : test/test-lte-handover-delay.cc.s
+
+test/test-lte-handover-failure.o: test/test-lte-handover-failure.cc.o
+.PHONY : test/test-lte-handover-failure.o
+
+# target to build an object file
+test/test-lte-handover-failure.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/test-lte-handover-failure.cc.o
+.PHONY : test/test-lte-handover-failure.cc.o
+
+test/test-lte-handover-failure.i: test/test-lte-handover-failure.cc.i
+.PHONY : test/test-lte-handover-failure.i
+
+# target to preprocess a source file
+test/test-lte-handover-failure.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/test-lte-handover-failure.cc.i
+.PHONY : test/test-lte-handover-failure.cc.i
+
+test/test-lte-handover-failure.s: test/test-lte-handover-failure.cc.s
+.PHONY : test/test-lte-handover-failure.s
+
+# target to generate assembly for a file
+test/test-lte-handover-failure.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/test-lte-handover-failure.cc.s
+.PHONY : test/test-lte-handover-failure.cc.s
+
+test/test-lte-handover-target.o: test/test-lte-handover-target.cc.o
+.PHONY : test/test-lte-handover-target.o
+
+# target to build an object file
+test/test-lte-handover-target.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/test-lte-handover-target.cc.o
+.PHONY : test/test-lte-handover-target.cc.o
+
+test/test-lte-handover-target.i: test/test-lte-handover-target.cc.i
+.PHONY : test/test-lte-handover-target.i
+
+# target to preprocess a source file
+test/test-lte-handover-target.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/test-lte-handover-target.cc.i
+.PHONY : test/test-lte-handover-target.cc.i
+
+test/test-lte-handover-target.s: test/test-lte-handover-target.cc.s
+.PHONY : test/test-lte-handover-target.s
+
+# target to generate assembly for a file
+test/test-lte-handover-target.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/test-lte-handover-target.cc.s
+.PHONY : test/test-lte-handover-target.cc.s
+
+test/test-lte-rlc-header.o: test/test-lte-rlc-header.cc.o
+.PHONY : test/test-lte-rlc-header.o
+
+# target to build an object file
+test/test-lte-rlc-header.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/test-lte-rlc-header.cc.o
+.PHONY : test/test-lte-rlc-header.cc.o
+
+test/test-lte-rlc-header.i: test/test-lte-rlc-header.cc.i
+.PHONY : test/test-lte-rlc-header.i
+
+# target to preprocess a source file
+test/test-lte-rlc-header.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/test-lte-rlc-header.cc.i
+.PHONY : test/test-lte-rlc-header.cc.i
+
+test/test-lte-rlc-header.s: test/test-lte-rlc-header.cc.s
+.PHONY : test/test-lte-rlc-header.s
+
+# target to generate assembly for a file
+test/test-lte-rlc-header.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/test-lte-rlc-header.cc.s
+.PHONY : test/test-lte-rlc-header.cc.s
+
+test/test-lte-rrc.o: test/test-lte-rrc.cc.o
+.PHONY : test/test-lte-rrc.o
+
+# target to build an object file
+test/test-lte-rrc.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/test-lte-rrc.cc.o
+.PHONY : test/test-lte-rrc.cc.o
+
+test/test-lte-rrc.i: test/test-lte-rrc.cc.i
+.PHONY : test/test-lte-rrc.i
+
+# target to preprocess a source file
+test/test-lte-rrc.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/test-lte-rrc.cc.i
+.PHONY : test/test-lte-rrc.cc.i
+
+test/test-lte-rrc.s: test/test-lte-rrc.cc.s
+.PHONY : test/test-lte-rrc.s
+
+# target to generate assembly for a file
+test/test-lte-rrc.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/test-lte-rrc.cc.s
+.PHONY : test/test-lte-rrc.cc.s
+
+test/test-lte-x2-handover-measures.o: test/test-lte-x2-handover-measures.cc.o
+.PHONY : test/test-lte-x2-handover-measures.o
+
+# target to build an object file
+test/test-lte-x2-handover-measures.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/test-lte-x2-handover-measures.cc.o
+.PHONY : test/test-lte-x2-handover-measures.cc.o
+
+test/test-lte-x2-handover-measures.i: test/test-lte-x2-handover-measures.cc.i
+.PHONY : test/test-lte-x2-handover-measures.i
+
+# target to preprocess a source file
+test/test-lte-x2-handover-measures.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/test-lte-x2-handover-measures.cc.i
+.PHONY : test/test-lte-x2-handover-measures.cc.i
+
+test/test-lte-x2-handover-measures.s: test/test-lte-x2-handover-measures.cc.s
+.PHONY : test/test-lte-x2-handover-measures.s
+
+# target to generate assembly for a file
+test/test-lte-x2-handover-measures.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/test-lte-x2-handover-measures.cc.s
+.PHONY : test/test-lte-x2-handover-measures.cc.s
+
+test/test-lte-x2-handover.o: test/test-lte-x2-handover.cc.o
+.PHONY : test/test-lte-x2-handover.o
+
+# target to build an object file
+test/test-lte-x2-handover.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/test-lte-x2-handover.cc.o
+.PHONY : test/test-lte-x2-handover.cc.o
+
+test/test-lte-x2-handover.i: test/test-lte-x2-handover.cc.i
+.PHONY : test/test-lte-x2-handover.i
+
+# target to preprocess a source file
+test/test-lte-x2-handover.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/test-lte-x2-handover.cc.i
+.PHONY : test/test-lte-x2-handover.cc.i
+
+test/test-lte-x2-handover.s: test/test-lte-x2-handover.cc.s
+.PHONY : test/test-lte-x2-handover.s
+
+# target to generate assembly for a file
+test/test-lte-x2-handover.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/lte/CMakeFiles/liblte-test.dir/build.make src/lte/CMakeFiles/liblte-test.dir/test/test-lte-x2-handover.cc.s
+.PHONY : test/test-lte-x2-handover.cc.s
 
 # Help Target
 help:
@@ -3298,8 +4762,10 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... liblte"
 	@echo "... liblte-obj"
+	@echo "... liblte-test"
 	@echo "... helper/cc-helper.o"
 	@echo "... helper/cc-helper.i"
 	@echo "... helper/cc-helper.s"
@@ -3651,9 +5117,6 @@ help:
 	@echo "... model/lte-vendor-specific-parameters.o"
 	@echo "... model/lte-vendor-specific-parameters.i"
 	@echo "... model/lte-vendor-specific-parameters.s"
-	@echo "... model/ngap.o"
-	@echo "... model/ngap.i"
-	@echo "... model/ngap.s"
 	@echo "... model/no-op-component-carrier-manager.o"
 	@echo "... model/no-op-component-carrier-manager.i"
 	@echo "... model/no-op-component-carrier-manager.s"
@@ -3687,6 +5150,189 @@ help:
 	@echo "... model/tta-ff-mac-scheduler.o"
 	@echo "... model/tta-ff-mac-scheduler.i"
 	@echo "... model/tta-ff-mac-scheduler.s"
+	@echo "... test/epc-test-gtpu.o"
+	@echo "... test/epc-test-gtpu.i"
+	@echo "... test/epc-test-gtpu.s"
+	@echo "... test/epc-test-s1u-downlink.o"
+	@echo "... test/epc-test-s1u-downlink.i"
+	@echo "... test/epc-test-s1u-downlink.s"
+	@echo "... test/epc-test-s1u-uplink.o"
+	@echo "... test/epc-test-s1u-uplink.i"
+	@echo "... test/epc-test-s1u-uplink.s"
+	@echo "... test/lte-ffr-simple.o"
+	@echo "... test/lte-ffr-simple.i"
+	@echo "... test/lte-ffr-simple.s"
+	@echo "... test/lte-simple-helper.o"
+	@echo "... test/lte-simple-helper.i"
+	@echo "... test/lte-simple-helper.s"
+	@echo "... test/lte-simple-net-device.o"
+	@echo "... test/lte-simple-net-device.i"
+	@echo "... test/lte-simple-net-device.s"
+	@echo "... test/lte-simple-spectrum-phy.o"
+	@echo "... test/lte-simple-spectrum-phy.i"
+	@echo "... test/lte-simple-spectrum-phy.s"
+	@echo "... test/lte-test-aggregation-throughput-scale.o"
+	@echo "... test/lte-test-aggregation-throughput-scale.i"
+	@echo "... test/lte-test-aggregation-throughput-scale.s"
+	@echo "... test/lte-test-carrier-aggregation-configuration.o"
+	@echo "... test/lte-test-carrier-aggregation-configuration.i"
+	@echo "... test/lte-test-carrier-aggregation-configuration.s"
+	@echo "... test/lte-test-carrier-aggregation.o"
+	@echo "... test/lte-test-carrier-aggregation.i"
+	@echo "... test/lte-test-carrier-aggregation.s"
+	@echo "... test/lte-test-cell-selection.o"
+	@echo "... test/lte-test-cell-selection.i"
+	@echo "... test/lte-test-cell-selection.s"
+	@echo "... test/lte-test-cqa-ff-mac-scheduler.o"
+	@echo "... test/lte-test-cqa-ff-mac-scheduler.i"
+	@echo "... test/lte-test-cqa-ff-mac-scheduler.s"
+	@echo "... test/lte-test-cqi-generation.o"
+	@echo "... test/lte-test-cqi-generation.i"
+	@echo "... test/lte-test-cqi-generation.s"
+	@echo "... test/lte-test-deactivate-bearer.o"
+	@echo "... test/lte-test-deactivate-bearer.i"
+	@echo "... test/lte-test-deactivate-bearer.s"
+	@echo "... test/lte-test-downlink-power-control.o"
+	@echo "... test/lte-test-downlink-power-control.i"
+	@echo "... test/lte-test-downlink-power-control.s"
+	@echo "... test/lte-test-downlink-sinr.o"
+	@echo "... test/lte-test-downlink-sinr.i"
+	@echo "... test/lte-test-downlink-sinr.s"
+	@echo "... test/lte-test-earfcn.o"
+	@echo "... test/lte-test-earfcn.i"
+	@echo "... test/lte-test-earfcn.s"
+	@echo "... test/lte-test-entities.o"
+	@echo "... test/lte-test-entities.i"
+	@echo "... test/lte-test-entities.s"
+	@echo "... test/lte-test-fdbet-ff-mac-scheduler.o"
+	@echo "... test/lte-test-fdbet-ff-mac-scheduler.i"
+	@echo "... test/lte-test-fdbet-ff-mac-scheduler.s"
+	@echo "... test/lte-test-fdmt-ff-mac-scheduler.o"
+	@echo "... test/lte-test-fdmt-ff-mac-scheduler.i"
+	@echo "... test/lte-test-fdmt-ff-mac-scheduler.s"
+	@echo "... test/lte-test-fdtbfq-ff-mac-scheduler.o"
+	@echo "... test/lte-test-fdtbfq-ff-mac-scheduler.i"
+	@echo "... test/lte-test-fdtbfq-ff-mac-scheduler.s"
+	@echo "... test/lte-test-frequency-reuse.o"
+	@echo "... test/lte-test-frequency-reuse.i"
+	@echo "... test/lte-test-frequency-reuse.s"
+	@echo "... test/lte-test-harq.o"
+	@echo "... test/lte-test-harq.i"
+	@echo "... test/lte-test-harq.s"
+	@echo "... test/lte-test-interference-fr.o"
+	@echo "... test/lte-test-interference-fr.i"
+	@echo "... test/lte-test-interference-fr.s"
+	@echo "... test/lte-test-interference.o"
+	@echo "... test/lte-test-interference.i"
+	@echo "... test/lte-test-interference.s"
+	@echo "... test/lte-test-ipv6-routing.o"
+	@echo "... test/lte-test-ipv6-routing.i"
+	@echo "... test/lte-test-ipv6-routing.s"
+	@echo "... test/lte-test-link-adaptation.o"
+	@echo "... test/lte-test-link-adaptation.i"
+	@echo "... test/lte-test-link-adaptation.s"
+	@echo "... test/lte-test-mimo.o"
+	@echo "... test/lte-test-mimo.i"
+	@echo "... test/lte-test-mimo.s"
+	@echo "... test/lte-test-pathloss-model.o"
+	@echo "... test/lte-test-pathloss-model.i"
+	@echo "... test/lte-test-pathloss-model.s"
+	@echo "... test/lte-test-pf-ff-mac-scheduler.o"
+	@echo "... test/lte-test-pf-ff-mac-scheduler.i"
+	@echo "... test/lte-test-pf-ff-mac-scheduler.s"
+	@echo "... test/lte-test-phy-error-model.o"
+	@echo "... test/lte-test-phy-error-model.i"
+	@echo "... test/lte-test-phy-error-model.s"
+	@echo "... test/lte-test-primary-cell-change.o"
+	@echo "... test/lte-test-primary-cell-change.i"
+	@echo "... test/lte-test-primary-cell-change.s"
+	@echo "... test/lte-test-pss-ff-mac-scheduler.o"
+	@echo "... test/lte-test-pss-ff-mac-scheduler.i"
+	@echo "... test/lte-test-pss-ff-mac-scheduler.s"
+	@echo "... test/lte-test-radio-link-failure.o"
+	@echo "... test/lte-test-radio-link-failure.i"
+	@echo "... test/lte-test-radio-link-failure.s"
+	@echo "... test/lte-test-rlc-am-e2e.o"
+	@echo "... test/lte-test-rlc-am-e2e.i"
+	@echo "... test/lte-test-rlc-am-e2e.s"
+	@echo "... test/lte-test-rlc-am-transmitter.o"
+	@echo "... test/lte-test-rlc-am-transmitter.i"
+	@echo "... test/lte-test-rlc-am-transmitter.s"
+	@echo "... test/lte-test-rlc-um-e2e.o"
+	@echo "... test/lte-test-rlc-um-e2e.i"
+	@echo "... test/lte-test-rlc-um-e2e.s"
+	@echo "... test/lte-test-rlc-um-transmitter.o"
+	@echo "... test/lte-test-rlc-um-transmitter.i"
+	@echo "... test/lte-test-rlc-um-transmitter.s"
+	@echo "... test/lte-test-rr-ff-mac-scheduler.o"
+	@echo "... test/lte-test-rr-ff-mac-scheduler.i"
+	@echo "... test/lte-test-rr-ff-mac-scheduler.s"
+	@echo "... test/lte-test-secondary-cell-handover.o"
+	@echo "... test/lte-test-secondary-cell-handover.i"
+	@echo "... test/lte-test-secondary-cell-handover.s"
+	@echo "... test/lte-test-secondary-cell-selection.o"
+	@echo "... test/lte-test-secondary-cell-selection.i"
+	@echo "... test/lte-test-secondary-cell-selection.s"
+	@echo "... test/lte-test-spectrum-value-helper.o"
+	@echo "... test/lte-test-spectrum-value-helper.i"
+	@echo "... test/lte-test-spectrum-value-helper.s"
+	@echo "... test/lte-test-tdbet-ff-mac-scheduler.o"
+	@echo "... test/lte-test-tdbet-ff-mac-scheduler.i"
+	@echo "... test/lte-test-tdbet-ff-mac-scheduler.s"
+	@echo "... test/lte-test-tdmt-ff-mac-scheduler.o"
+	@echo "... test/lte-test-tdmt-ff-mac-scheduler.i"
+	@echo "... test/lte-test-tdmt-ff-mac-scheduler.s"
+	@echo "... test/lte-test-tdtbfq-ff-mac-scheduler.o"
+	@echo "... test/lte-test-tdtbfq-ff-mac-scheduler.i"
+	@echo "... test/lte-test-tdtbfq-ff-mac-scheduler.s"
+	@echo "... test/lte-test-tta-ff-mac-scheduler.o"
+	@echo "... test/lte-test-tta-ff-mac-scheduler.i"
+	@echo "... test/lte-test-tta-ff-mac-scheduler.s"
+	@echo "... test/lte-test-ue-measurements.o"
+	@echo "... test/lte-test-ue-measurements.i"
+	@echo "... test/lte-test-ue-measurements.s"
+	@echo "... test/lte-test-ue-phy.o"
+	@echo "... test/lte-test-ue-phy.i"
+	@echo "... test/lte-test-ue-phy.s"
+	@echo "... test/lte-test-uplink-power-control.o"
+	@echo "... test/lte-test-uplink-power-control.i"
+	@echo "... test/lte-test-uplink-power-control.s"
+	@echo "... test/lte-test-uplink-sinr.o"
+	@echo "... test/lte-test-uplink-sinr.i"
+	@echo "... test/lte-test-uplink-sinr.s"
+	@echo "... test/test-asn1-encoding.o"
+	@echo "... test/test-asn1-encoding.i"
+	@echo "... test/test-asn1-encoding.s"
+	@echo "... test/test-epc-tft-classifier.o"
+	@echo "... test/test-epc-tft-classifier.i"
+	@echo "... test/test-epc-tft-classifier.s"
+	@echo "... test/test-lte-antenna.o"
+	@echo "... test/test-lte-antenna.i"
+	@echo "... test/test-lte-antenna.s"
+	@echo "... test/test-lte-epc-e2e-data.o"
+	@echo "... test/test-lte-epc-e2e-data.i"
+	@echo "... test/test-lte-epc-e2e-data.s"
+	@echo "... test/test-lte-handover-delay.o"
+	@echo "... test/test-lte-handover-delay.i"
+	@echo "... test/test-lte-handover-delay.s"
+	@echo "... test/test-lte-handover-failure.o"
+	@echo "... test/test-lte-handover-failure.i"
+	@echo "... test/test-lte-handover-failure.s"
+	@echo "... test/test-lte-handover-target.o"
+	@echo "... test/test-lte-handover-target.i"
+	@echo "... test/test-lte-handover-target.s"
+	@echo "... test/test-lte-rlc-header.o"
+	@echo "... test/test-lte-rlc-header.i"
+	@echo "... test/test-lte-rlc-header.s"
+	@echo "... test/test-lte-rrc.o"
+	@echo "... test/test-lte-rrc.i"
+	@echo "... test/test-lte-rrc.s"
+	@echo "... test/test-lte-x2-handover-measures.o"
+	@echo "... test/test-lte-x2-handover-measures.i"
+	@echo "... test/test-lte-x2-handover-measures.s"
+	@echo "... test/test-lte-x2-handover.o"
+	@echo "... test/test-lte-x2-handover.i"
+	@echo "... test/test-lte-x2-handover.s"
 .PHONY : help
 
 
@@ -3698,7 +5344,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/VerifyGlobs.cmake
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/ns-3-dev/cmake-cache/CMakeFiles/VerifyGlobs.cmake
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

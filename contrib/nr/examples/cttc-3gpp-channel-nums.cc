@@ -70,8 +70,8 @@ main(int argc, char* argv[])
     // other simulation parameters default values
     uint16_t numerology = 0;
 
-    uint16_t gNbNum = 1;
-    uint16_t ueNumPergNb = 1;
+    uint16_t gNbNum = 5;
+    uint16_t ueNumPergNb = 2;
 
     double centralFrequency = 7e9;
     double bandwidth = 100e6;
@@ -81,7 +81,7 @@ main(int argc, char* argv[])
     bool udpFullBuffer = true;
     uint8_t fixedMcs = 28;
     bool useFixedMcs = true;
-    bool singleUeTopology = true;
+    bool singleUeTopology = false;
     // Where we will store the output files.
     std::string simTag = "default";
     std::string outputDir = "./";

@@ -16,6 +16,8 @@ if(${ENABLE_EMU})
       ${libfd-net-device}
   )
 endif()
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -lrt")
+
 
 set(source_files
     ${emu_sources}
@@ -48,7 +50,6 @@ set(source_files
     model/epc-pgw-application.cc
     model/epc-s11-sap.cc
     model/epc-s1ap-sap.cc
-    model/ngap.cc
     model/epc-sgw-application.cc
     model/epc-tft-classifier.cc
     model/epc-tft.cc
@@ -180,7 +181,6 @@ set(header_files
     model/epc-pgw-application.h
     model/epc-s11-sap.h
     model/epc-s1ap-sap.h
-    model/ngap.h
     model/epc-sgw-application.h
     model/epc-tft-classifier.h
     model/epc-tft.h
@@ -279,6 +279,9 @@ set(header_files
     model/tdmt-ff-mac-scheduler.h
     model/tdtbfq-ff-mac-scheduler.h
     model/tta-ff-mac-scheduler.h
+    #added 
+    #model/rrcstruct.h
+   
 )
 
 set(test_sources

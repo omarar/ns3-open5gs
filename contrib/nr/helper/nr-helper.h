@@ -241,6 +241,13 @@ class NrHelper : public Object
         const std::vector<std::reference_wrapper<BandwidthPartInfoPtr>> allBwps,
         uint8_t numberOfPanels = 1);
 
+
+     //------------------------------added 
+     //int InitConnect(int argc, char **argv);
+     
+     
+     //-------------------------------
+
     /**
      * \brief Get the number of configured BWP for a specific GNB NetDevice
      * \param gnbDevice The GNB NetDevice, obtained from InstallGnbDevice()

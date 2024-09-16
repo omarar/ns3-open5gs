@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omar/Desktop/git_repo/ns3-open5gs
+CMAKE_SOURCE_DIR = /home/omar/ns-3-dev
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache
+CMAKE_BINARY_DIR = /home/omar/ns-3-dev/cmake-cache
 
 # Include any dependencies generated for this target.
 include src/core/CMakeFiles/libcore.dir/depend.make
@@ -74,77 +74,79 @@ libcore_OBJECTS =
 
 # External object files for target libcore
 libcore_EXTERNAL_OBJECTS = \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/int64x64-128.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/unix-fd-reader.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/helper/csv-reader.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/helper/random-variable-stream-helper.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/helper/event-garbage-collector.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/time.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/event-id.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/scheduler.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/list-scheduler.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/map-scheduler.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/heap-scheduler.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/calendar-scheduler.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/priority-queue-scheduler.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/event-impl.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/simulator.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/simulator-impl.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/default-simulator-impl.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/timer.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/watchdog.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/synchronizer.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/make-event.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/environment-variable.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/log.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/breakpoint.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/type-id.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/attribute-construction-list.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/object-base.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/object.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/test.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/random-variable-stream.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/rng-seed-manager.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/rng-stream.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/command-line.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/attribute.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/boolean.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/integer.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/uinteger.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/enum.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/double.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/int64x64.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/string.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/pointer.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/object-ptr-container.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/object-factory.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/global-value.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/trace-source-accessor.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/config.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/callback.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/names.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/vector.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/fatal-impl.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/system-path.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/hash-function.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/hash-murmur3.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/hash-fnv.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/hash.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/des-metrics.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/ascii-file.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/node-printer.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/show-progress.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/time-printer.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/system-wall-clock-ms.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/system-wall-clock-timestamp.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/length.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/trickle-timer.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/realtime-simulator-impl.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/wall-clock-synchronizer.cc.o" \
-"/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/matrix-array.cc.o"
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/int64x64-128.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/unix-fd-reader.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/example-as-test.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/helper/csv-reader.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/helper/random-variable-stream-helper.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/helper/event-garbage-collector.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/time.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/event-id.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/scheduler.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/list-scheduler.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/map-scheduler.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/heap-scheduler.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/calendar-scheduler.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/priority-queue-scheduler.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/event-impl.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/simulator.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/simulator-impl.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/default-simulator-impl.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/timer.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/watchdog.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/synchronizer.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/make-event.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/environment-variable.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/log.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/breakpoint.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/type-id.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/attribute-construction-list.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/object-base.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/object.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/test.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/random-variable-stream.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/rng-seed-manager.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/rng-stream.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/command-line.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/attribute.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/boolean.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/integer.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/uinteger.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/enum.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/double.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/int64x64.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/string.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/pointer.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/object-ptr-container.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/object-factory.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/global-value.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/trace-source-accessor.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/config.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/callback.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/names.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/vector.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/fatal-impl.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/system-path.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/hash-function.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/hash-murmur3.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/hash-fnv.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/hash.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/des-metrics.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/ascii-file.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/node-printer.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/show-progress.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/time-printer.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/system-wall-clock-ms.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/system-wall-clock-timestamp.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/length.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/trickle-timer.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/realtime-simulator-impl.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/wall-clock-synchronizer.cc.o" \
+"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/matrix-array.cc.o"
 
 ../build/lib/libns3.39-core-default.so: src/core/CMakeFiles/libcore-obj.dir/model/int64x64-128.cc.o
 ../build/lib/libns3.39-core-default.so: src/core/CMakeFiles/libcore-obj.dir/model/unix-fd-reader.cc.o
+../build/lib/libns3.39-core-default.so: src/core/CMakeFiles/libcore-obj.dir/model/example-as-test.cc.o
 ../build/lib/libns3.39-core-default.so: src/core/CMakeFiles/libcore-obj.dir/helper/csv-reader.cc.o
 ../build/lib/libns3.39-core-default.so: src/core/CMakeFiles/libcore-obj.dir/helper/random-variable-stream-helper.cc.o
 ../build/lib/libns3.39-core-default.so: src/core/CMakeFiles/libcore-obj.dir/helper/event-garbage-collector.cc.o
@@ -215,18 +217,18 @@ libcore_EXTERNAL_OBJECTS = \
 ../build/lib/libns3.39-core-default.so: /usr/lib/x86_64-linux-gnu/libgsl.so
 ../build/lib/libns3.39-core-default.so: /usr/lib/x86_64-linux-gnu/libgslcblas.so
 ../build/lib/libns3.39-core-default.so: src/core/CMakeFiles/libcore.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Linking CXX shared library ../../../build/lib/libns3.39-core-default.so"
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/libcore.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/omar/ns-3-dev/cmake-cache/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Linking CXX shared library ../../../build/lib/libns3.39-core-default.so"
+	cd /home/omar/ns-3-dev/cmake-cache/src/core && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/libcore.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/core/CMakeFiles/libcore.dir/build: ../build/lib/libns3.39-core-default.so
 .PHONY : src/core/CMakeFiles/libcore.dir/build
 
 src/core/CMakeFiles/libcore.dir/clean:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core && $(CMAKE_COMMAND) -P CMakeFiles/libcore.dir/cmake_clean.cmake
+	cd /home/omar/ns-3-dev/cmake-cache/src/core && $(CMAKE_COMMAND) -P CMakeFiles/libcore.dir/cmake_clean.cmake
 .PHONY : src/core/CMakeFiles/libcore.dir/clean
 
 src/core/CMakeFiles/libcore.dir/depend:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omar/Desktop/git_repo/ns3-open5gs /home/omar/Desktop/git_repo/ns3-open5gs/src/core /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/core/CMakeFiles/libcore.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omar/ns-3-dev /home/omar/ns-3-dev/src/core /home/omar/ns-3-dev/cmake-cache /home/omar/ns-3-dev/cmake-cache/src/core /home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/core/CMakeFiles/libcore.dir/depend
 

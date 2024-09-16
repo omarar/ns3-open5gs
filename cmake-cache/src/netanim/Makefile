@@ -57,13 +57,23 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omar/Desktop/git_repo/ns3-open5gs
+CMAKE_SOURCE_DIR = /home/omar/ns-3-dev
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache
+CMAKE_BINARY_DIR = /home/omar/ns-3-dev/cmake-cache
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -132,14 +142,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -E cmake_progress_start /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/netanim//CMakeFiles/progress.marks
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/netanim/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles 0
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -E cmake_progress_start /home/omar/ns-3-dev/cmake-cache/CMakeFiles /home/omar/ns-3-dev/cmake-cache/src/netanim//CMakeFiles/progress.marks
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/netanim/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/omar/ns-3-dev/cmake-cache/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/netanim/clean
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/netanim/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,23 +158,23 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/netanim/preinstall
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/netanim/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/netanim/preinstall
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/netanim/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/VerifyGlobs.cmake
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/ns-3-dev/cmake-cache/CMakeFiles/VerifyGlobs.cmake
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/netanim/CMakeFiles/libnetanim-obj.dir/rule:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/netanim/CMakeFiles/libnetanim-obj.dir/rule
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/netanim/CMakeFiles/libnetanim-obj.dir/rule
 .PHONY : src/netanim/CMakeFiles/libnetanim-obj.dir/rule
 
 # Convenience name for target.
@@ -173,12 +183,12 @@ libnetanim-obj: src/netanim/CMakeFiles/libnetanim-obj.dir/rule
 
 # fast build rule for target.
 libnetanim-obj/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/netanim/CMakeFiles/libnetanim-obj.dir/build.make src/netanim/CMakeFiles/libnetanim-obj.dir/build
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/netanim/CMakeFiles/libnetanim-obj.dir/build.make src/netanim/CMakeFiles/libnetanim-obj.dir/build
 .PHONY : libnetanim-obj/fast
 
 # Convenience name for target.
 src/netanim/CMakeFiles/libnetanim.dir/rule:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/netanim/CMakeFiles/libnetanim.dir/rule
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/netanim/CMakeFiles/libnetanim.dir/rule
 .PHONY : src/netanim/CMakeFiles/libnetanim.dir/rule
 
 # Convenience name for target.
@@ -187,15 +197,29 @@ libnetanim: src/netanim/CMakeFiles/libnetanim.dir/rule
 
 # fast build rule for target.
 libnetanim/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/netanim/CMakeFiles/libnetanim.dir/build.make src/netanim/CMakeFiles/libnetanim.dir/build
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/netanim/CMakeFiles/libnetanim.dir/build.make src/netanim/CMakeFiles/libnetanim.dir/build
 .PHONY : libnetanim/fast
+
+# Convenience name for target.
+src/netanim/CMakeFiles/libnetanim-test.dir/rule:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/netanim/CMakeFiles/libnetanim-test.dir/rule
+.PHONY : src/netanim/CMakeFiles/libnetanim-test.dir/rule
+
+# Convenience name for target.
+libnetanim-test: src/netanim/CMakeFiles/libnetanim-test.dir/rule
+.PHONY : libnetanim-test
+
+# fast build rule for target.
+libnetanim-test/fast:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/netanim/CMakeFiles/libnetanim-test.dir/build.make src/netanim/CMakeFiles/libnetanim-test.dir/build
+.PHONY : libnetanim-test/fast
 
 model/animation-interface.o: model/animation-interface.cc.o
 .PHONY : model/animation-interface.o
 
 # target to build an object file
 model/animation-interface.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/netanim/CMakeFiles/libnetanim-obj.dir/build.make src/netanim/CMakeFiles/libnetanim-obj.dir/model/animation-interface.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/netanim/CMakeFiles/libnetanim-obj.dir/build.make src/netanim/CMakeFiles/libnetanim-obj.dir/model/animation-interface.cc.o
 .PHONY : model/animation-interface.cc.o
 
 model/animation-interface.i: model/animation-interface.cc.i
@@ -203,7 +227,7 @@ model/animation-interface.i: model/animation-interface.cc.i
 
 # target to preprocess a source file
 model/animation-interface.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/netanim/CMakeFiles/libnetanim-obj.dir/build.make src/netanim/CMakeFiles/libnetanim-obj.dir/model/animation-interface.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/netanim/CMakeFiles/libnetanim-obj.dir/build.make src/netanim/CMakeFiles/libnetanim-obj.dir/model/animation-interface.cc.i
 .PHONY : model/animation-interface.cc.i
 
 model/animation-interface.s: model/animation-interface.cc.s
@@ -211,8 +235,32 @@ model/animation-interface.s: model/animation-interface.cc.s
 
 # target to generate assembly for a file
 model/animation-interface.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/netanim/CMakeFiles/libnetanim-obj.dir/build.make src/netanim/CMakeFiles/libnetanim-obj.dir/model/animation-interface.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/netanim/CMakeFiles/libnetanim-obj.dir/build.make src/netanim/CMakeFiles/libnetanim-obj.dir/model/animation-interface.cc.s
 .PHONY : model/animation-interface.cc.s
+
+test/netanim-test.o: test/netanim-test.cc.o
+.PHONY : test/netanim-test.o
+
+# target to build an object file
+test/netanim-test.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/netanim/CMakeFiles/libnetanim-test.dir/build.make src/netanim/CMakeFiles/libnetanim-test.dir/test/netanim-test.cc.o
+.PHONY : test/netanim-test.cc.o
+
+test/netanim-test.i: test/netanim-test.cc.i
+.PHONY : test/netanim-test.i
+
+# target to preprocess a source file
+test/netanim-test.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/netanim/CMakeFiles/libnetanim-test.dir/build.make src/netanim/CMakeFiles/libnetanim-test.dir/test/netanim-test.cc.i
+.PHONY : test/netanim-test.cc.i
+
+test/netanim-test.s: test/netanim-test.cc.s
+.PHONY : test/netanim-test.s
+
+# target to generate assembly for a file
+test/netanim-test.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/netanim/CMakeFiles/libnetanim-test.dir/build.make src/netanim/CMakeFiles/libnetanim-test.dir/test/netanim-test.cc.s
+.PHONY : test/netanim-test.cc.s
 
 # Help Target
 help:
@@ -226,11 +274,16 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... libnetanim"
 	@echo "... libnetanim-obj"
+	@echo "... libnetanim-test"
 	@echo "... model/animation-interface.o"
 	@echo "... model/animation-interface.i"
 	@echo "... model/animation-interface.s"
+	@echo "... test/netanim-test.o"
+	@echo "... test/netanim-test.i"
+	@echo "... test/netanim-test.s"
 .PHONY : help
 
 
@@ -242,7 +295,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/VerifyGlobs.cmake
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/ns-3-dev/cmake-cache/CMakeFiles/VerifyGlobs.cmake
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

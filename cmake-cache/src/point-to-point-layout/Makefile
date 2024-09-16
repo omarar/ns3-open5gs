@@ -57,13 +57,23 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omar/Desktop/git_repo/ns3-open5gs
+CMAKE_SOURCE_DIR = /home/omar/ns-3-dev
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache
+CMAKE_BINARY_DIR = /home/omar/ns-3-dev/cmake-cache
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -132,14 +142,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -E cmake_progress_start /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/point-to-point-layout//CMakeFiles/progress.marks
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/point-to-point-layout/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles 0
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -E cmake_progress_start /home/omar/ns-3-dev/cmake-cache/CMakeFiles /home/omar/ns-3-dev/cmake-cache/src/point-to-point-layout//CMakeFiles/progress.marks
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/point-to-point-layout/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/omar/ns-3-dev/cmake-cache/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/point-to-point-layout/clean
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/point-to-point-layout/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,23 +158,23 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/point-to-point-layout/preinstall
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/point-to-point-layout/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/point-to-point-layout/preinstall
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/point-to-point-layout/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/VerifyGlobs.cmake
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/ns-3-dev/cmake-cache/CMakeFiles/VerifyGlobs.cmake
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/rule:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/rule
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/rule
 .PHONY : src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/rule
 
 # Convenience name for target.
@@ -173,12 +183,12 @@ libpoint-to-point-layout-obj: src/point-to-point-layout/CMakeFiles/libpoint-to-p
 
 # fast build rule for target.
 libpoint-to-point-layout-obj/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/build.make src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/build
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/build.make src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/build
 .PHONY : libpoint-to-point-layout-obj/fast
 
 # Convenience name for target.
 src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout.dir/rule:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout.dir/rule
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout.dir/rule
 .PHONY : src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout.dir/rule
 
 # Convenience name for target.
@@ -187,7 +197,7 @@ libpoint-to-point-layout: src/point-to-point-layout/CMakeFiles/libpoint-to-point
 
 # fast build rule for target.
 libpoint-to-point-layout/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout.dir/build.make src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout.dir/build
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout.dir/build.make src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout.dir/build
 .PHONY : libpoint-to-point-layout/fast
 
 model/point-to-point-dumbbell.o: model/point-to-point-dumbbell.cc.o
@@ -195,7 +205,7 @@ model/point-to-point-dumbbell.o: model/point-to-point-dumbbell.cc.o
 
 # target to build an object file
 model/point-to-point-dumbbell.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/build.make src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/model/point-to-point-dumbbell.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/build.make src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/model/point-to-point-dumbbell.cc.o
 .PHONY : model/point-to-point-dumbbell.cc.o
 
 model/point-to-point-dumbbell.i: model/point-to-point-dumbbell.cc.i
@@ -203,7 +213,7 @@ model/point-to-point-dumbbell.i: model/point-to-point-dumbbell.cc.i
 
 # target to preprocess a source file
 model/point-to-point-dumbbell.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/build.make src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/model/point-to-point-dumbbell.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/build.make src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/model/point-to-point-dumbbell.cc.i
 .PHONY : model/point-to-point-dumbbell.cc.i
 
 model/point-to-point-dumbbell.s: model/point-to-point-dumbbell.cc.s
@@ -211,7 +221,7 @@ model/point-to-point-dumbbell.s: model/point-to-point-dumbbell.cc.s
 
 # target to generate assembly for a file
 model/point-to-point-dumbbell.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/build.make src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/model/point-to-point-dumbbell.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/build.make src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/model/point-to-point-dumbbell.cc.s
 .PHONY : model/point-to-point-dumbbell.cc.s
 
 model/point-to-point-grid.o: model/point-to-point-grid.cc.o
@@ -219,7 +229,7 @@ model/point-to-point-grid.o: model/point-to-point-grid.cc.o
 
 # target to build an object file
 model/point-to-point-grid.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/build.make src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/model/point-to-point-grid.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/build.make src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/model/point-to-point-grid.cc.o
 .PHONY : model/point-to-point-grid.cc.o
 
 model/point-to-point-grid.i: model/point-to-point-grid.cc.i
@@ -227,7 +237,7 @@ model/point-to-point-grid.i: model/point-to-point-grid.cc.i
 
 # target to preprocess a source file
 model/point-to-point-grid.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/build.make src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/model/point-to-point-grid.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/build.make src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/model/point-to-point-grid.cc.i
 .PHONY : model/point-to-point-grid.cc.i
 
 model/point-to-point-grid.s: model/point-to-point-grid.cc.s
@@ -235,7 +245,7 @@ model/point-to-point-grid.s: model/point-to-point-grid.cc.s
 
 # target to generate assembly for a file
 model/point-to-point-grid.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/build.make src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/model/point-to-point-grid.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/build.make src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/model/point-to-point-grid.cc.s
 .PHONY : model/point-to-point-grid.cc.s
 
 model/point-to-point-star.o: model/point-to-point-star.cc.o
@@ -243,7 +253,7 @@ model/point-to-point-star.o: model/point-to-point-star.cc.o
 
 # target to build an object file
 model/point-to-point-star.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/build.make src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/model/point-to-point-star.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/build.make src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/model/point-to-point-star.cc.o
 .PHONY : model/point-to-point-star.cc.o
 
 model/point-to-point-star.i: model/point-to-point-star.cc.i
@@ -251,7 +261,7 @@ model/point-to-point-star.i: model/point-to-point-star.cc.i
 
 # target to preprocess a source file
 model/point-to-point-star.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/build.make src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/model/point-to-point-star.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/build.make src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/model/point-to-point-star.cc.i
 .PHONY : model/point-to-point-star.cc.i
 
 model/point-to-point-star.s: model/point-to-point-star.cc.s
@@ -259,7 +269,7 @@ model/point-to-point-star.s: model/point-to-point-star.cc.s
 
 # target to generate assembly for a file
 model/point-to-point-star.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/build.make src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/model/point-to-point-star.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/build.make src/point-to-point-layout/CMakeFiles/libpoint-to-point-layout-obj.dir/model/point-to-point-star.cc.s
 .PHONY : model/point-to-point-star.cc.s
 
 # Help Target
@@ -274,6 +284,7 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... libpoint-to-point-layout"
 	@echo "... libpoint-to-point-layout-obj"
 	@echo "... model/point-to-point-dumbbell.o"
@@ -296,7 +307,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/VerifyGlobs.cmake
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/ns-3-dev/cmake-cache/CMakeFiles/VerifyGlobs.cmake
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

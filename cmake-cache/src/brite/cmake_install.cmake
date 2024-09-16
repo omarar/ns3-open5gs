@@ -1,4 +1,4 @@
-# Install script for directory: /home/omar/Desktop/git_repo/ns3-open5gs/src/brite
+# Install script for directory: /home/omar/ns-3-dev/src/brite
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

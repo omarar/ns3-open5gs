@@ -57,13 +57,23 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omar/Desktop/git_repo/ns3-open5gs
+CMAKE_SOURCE_DIR = /home/omar/ns-3-dev
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache
+CMAKE_BINARY_DIR = /home/omar/ns-3-dev/cmake-cache
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -132,14 +142,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -E cmake_progress_start /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/topology-read//CMakeFiles/progress.marks
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/topology-read/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles 0
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -E cmake_progress_start /home/omar/ns-3-dev/cmake-cache/CMakeFiles /home/omar/ns-3-dev/cmake-cache/src/topology-read//CMakeFiles/progress.marks
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/topology-read/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/omar/ns-3-dev/cmake-cache/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/topology-read/clean
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/topology-read/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,23 +158,23 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/topology-read/preinstall
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/topology-read/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/topology-read/preinstall
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/topology-read/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/VerifyGlobs.cmake
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/ns-3-dev/cmake-cache/CMakeFiles/VerifyGlobs.cmake
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/topology-read/CMakeFiles/libtopology-read-obj.dir/rule:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/topology-read/CMakeFiles/libtopology-read-obj.dir/rule
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/topology-read/CMakeFiles/libtopology-read-obj.dir/rule
 .PHONY : src/topology-read/CMakeFiles/libtopology-read-obj.dir/rule
 
 # Convenience name for target.
@@ -173,12 +183,12 @@ libtopology-read-obj: src/topology-read/CMakeFiles/libtopology-read-obj.dir/rule
 
 # fast build rule for target.
 libtopology-read-obj/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-obj.dir/build.make src/topology-read/CMakeFiles/libtopology-read-obj.dir/build
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-obj.dir/build.make src/topology-read/CMakeFiles/libtopology-read-obj.dir/build
 .PHONY : libtopology-read-obj/fast
 
 # Convenience name for target.
 src/topology-read/CMakeFiles/libtopology-read.dir/rule:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/topology-read/CMakeFiles/libtopology-read.dir/rule
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/topology-read/CMakeFiles/libtopology-read.dir/rule
 .PHONY : src/topology-read/CMakeFiles/libtopology-read.dir/rule
 
 # Convenience name for target.
@@ -187,15 +197,29 @@ libtopology-read: src/topology-read/CMakeFiles/libtopology-read.dir/rule
 
 # fast build rule for target.
 libtopology-read/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read.dir/build.make src/topology-read/CMakeFiles/libtopology-read.dir/build
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read.dir/build.make src/topology-read/CMakeFiles/libtopology-read.dir/build
 .PHONY : libtopology-read/fast
+
+# Convenience name for target.
+src/topology-read/CMakeFiles/libtopology-read-test.dir/rule:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/topology-read/CMakeFiles/libtopology-read-test.dir/rule
+.PHONY : src/topology-read/CMakeFiles/libtopology-read-test.dir/rule
+
+# Convenience name for target.
+libtopology-read-test: src/topology-read/CMakeFiles/libtopology-read-test.dir/rule
+.PHONY : libtopology-read-test
+
+# fast build rule for target.
+libtopology-read-test/fast:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-test.dir/build.make src/topology-read/CMakeFiles/libtopology-read-test.dir/build
+.PHONY : libtopology-read-test/fast
 
 helper/topology-reader-helper.o: helper/topology-reader-helper.cc.o
 .PHONY : helper/topology-reader-helper.o
 
 # target to build an object file
 helper/topology-reader-helper.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-obj.dir/build.make src/topology-read/CMakeFiles/libtopology-read-obj.dir/helper/topology-reader-helper.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-obj.dir/build.make src/topology-read/CMakeFiles/libtopology-read-obj.dir/helper/topology-reader-helper.cc.o
 .PHONY : helper/topology-reader-helper.cc.o
 
 helper/topology-reader-helper.i: helper/topology-reader-helper.cc.i
@@ -203,7 +227,7 @@ helper/topology-reader-helper.i: helper/topology-reader-helper.cc.i
 
 # target to preprocess a source file
 helper/topology-reader-helper.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-obj.dir/build.make src/topology-read/CMakeFiles/libtopology-read-obj.dir/helper/topology-reader-helper.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-obj.dir/build.make src/topology-read/CMakeFiles/libtopology-read-obj.dir/helper/topology-reader-helper.cc.i
 .PHONY : helper/topology-reader-helper.cc.i
 
 helper/topology-reader-helper.s: helper/topology-reader-helper.cc.s
@@ -211,7 +235,7 @@ helper/topology-reader-helper.s: helper/topology-reader-helper.cc.s
 
 # target to generate assembly for a file
 helper/topology-reader-helper.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-obj.dir/build.make src/topology-read/CMakeFiles/libtopology-read-obj.dir/helper/topology-reader-helper.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-obj.dir/build.make src/topology-read/CMakeFiles/libtopology-read-obj.dir/helper/topology-reader-helper.cc.s
 .PHONY : helper/topology-reader-helper.cc.s
 
 model/inet-topology-reader.o: model/inet-topology-reader.cc.o
@@ -219,7 +243,7 @@ model/inet-topology-reader.o: model/inet-topology-reader.cc.o
 
 # target to build an object file
 model/inet-topology-reader.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-obj.dir/build.make src/topology-read/CMakeFiles/libtopology-read-obj.dir/model/inet-topology-reader.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-obj.dir/build.make src/topology-read/CMakeFiles/libtopology-read-obj.dir/model/inet-topology-reader.cc.o
 .PHONY : model/inet-topology-reader.cc.o
 
 model/inet-topology-reader.i: model/inet-topology-reader.cc.i
@@ -227,7 +251,7 @@ model/inet-topology-reader.i: model/inet-topology-reader.cc.i
 
 # target to preprocess a source file
 model/inet-topology-reader.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-obj.dir/build.make src/topology-read/CMakeFiles/libtopology-read-obj.dir/model/inet-topology-reader.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-obj.dir/build.make src/topology-read/CMakeFiles/libtopology-read-obj.dir/model/inet-topology-reader.cc.i
 .PHONY : model/inet-topology-reader.cc.i
 
 model/inet-topology-reader.s: model/inet-topology-reader.cc.s
@@ -235,7 +259,7 @@ model/inet-topology-reader.s: model/inet-topology-reader.cc.s
 
 # target to generate assembly for a file
 model/inet-topology-reader.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-obj.dir/build.make src/topology-read/CMakeFiles/libtopology-read-obj.dir/model/inet-topology-reader.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-obj.dir/build.make src/topology-read/CMakeFiles/libtopology-read-obj.dir/model/inet-topology-reader.cc.s
 .PHONY : model/inet-topology-reader.cc.s
 
 model/orbis-topology-reader.o: model/orbis-topology-reader.cc.o
@@ -243,7 +267,7 @@ model/orbis-topology-reader.o: model/orbis-topology-reader.cc.o
 
 # target to build an object file
 model/orbis-topology-reader.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-obj.dir/build.make src/topology-read/CMakeFiles/libtopology-read-obj.dir/model/orbis-topology-reader.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-obj.dir/build.make src/topology-read/CMakeFiles/libtopology-read-obj.dir/model/orbis-topology-reader.cc.o
 .PHONY : model/orbis-topology-reader.cc.o
 
 model/orbis-topology-reader.i: model/orbis-topology-reader.cc.i
@@ -251,7 +275,7 @@ model/orbis-topology-reader.i: model/orbis-topology-reader.cc.i
 
 # target to preprocess a source file
 model/orbis-topology-reader.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-obj.dir/build.make src/topology-read/CMakeFiles/libtopology-read-obj.dir/model/orbis-topology-reader.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-obj.dir/build.make src/topology-read/CMakeFiles/libtopology-read-obj.dir/model/orbis-topology-reader.cc.i
 .PHONY : model/orbis-topology-reader.cc.i
 
 model/orbis-topology-reader.s: model/orbis-topology-reader.cc.s
@@ -259,7 +283,7 @@ model/orbis-topology-reader.s: model/orbis-topology-reader.cc.s
 
 # target to generate assembly for a file
 model/orbis-topology-reader.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-obj.dir/build.make src/topology-read/CMakeFiles/libtopology-read-obj.dir/model/orbis-topology-reader.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-obj.dir/build.make src/topology-read/CMakeFiles/libtopology-read-obj.dir/model/orbis-topology-reader.cc.s
 .PHONY : model/orbis-topology-reader.cc.s
 
 model/rocketfuel-topology-reader.o: model/rocketfuel-topology-reader.cc.o
@@ -267,7 +291,7 @@ model/rocketfuel-topology-reader.o: model/rocketfuel-topology-reader.cc.o
 
 # target to build an object file
 model/rocketfuel-topology-reader.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-obj.dir/build.make src/topology-read/CMakeFiles/libtopology-read-obj.dir/model/rocketfuel-topology-reader.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-obj.dir/build.make src/topology-read/CMakeFiles/libtopology-read-obj.dir/model/rocketfuel-topology-reader.cc.o
 .PHONY : model/rocketfuel-topology-reader.cc.o
 
 model/rocketfuel-topology-reader.i: model/rocketfuel-topology-reader.cc.i
@@ -275,7 +299,7 @@ model/rocketfuel-topology-reader.i: model/rocketfuel-topology-reader.cc.i
 
 # target to preprocess a source file
 model/rocketfuel-topology-reader.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-obj.dir/build.make src/topology-read/CMakeFiles/libtopology-read-obj.dir/model/rocketfuel-topology-reader.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-obj.dir/build.make src/topology-read/CMakeFiles/libtopology-read-obj.dir/model/rocketfuel-topology-reader.cc.i
 .PHONY : model/rocketfuel-topology-reader.cc.i
 
 model/rocketfuel-topology-reader.s: model/rocketfuel-topology-reader.cc.s
@@ -283,7 +307,7 @@ model/rocketfuel-topology-reader.s: model/rocketfuel-topology-reader.cc.s
 
 # target to generate assembly for a file
 model/rocketfuel-topology-reader.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-obj.dir/build.make src/topology-read/CMakeFiles/libtopology-read-obj.dir/model/rocketfuel-topology-reader.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-obj.dir/build.make src/topology-read/CMakeFiles/libtopology-read-obj.dir/model/rocketfuel-topology-reader.cc.s
 .PHONY : model/rocketfuel-topology-reader.cc.s
 
 model/topology-reader.o: model/topology-reader.cc.o
@@ -291,7 +315,7 @@ model/topology-reader.o: model/topology-reader.cc.o
 
 # target to build an object file
 model/topology-reader.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-obj.dir/build.make src/topology-read/CMakeFiles/libtopology-read-obj.dir/model/topology-reader.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-obj.dir/build.make src/topology-read/CMakeFiles/libtopology-read-obj.dir/model/topology-reader.cc.o
 .PHONY : model/topology-reader.cc.o
 
 model/topology-reader.i: model/topology-reader.cc.i
@@ -299,7 +323,7 @@ model/topology-reader.i: model/topology-reader.cc.i
 
 # target to preprocess a source file
 model/topology-reader.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-obj.dir/build.make src/topology-read/CMakeFiles/libtopology-read-obj.dir/model/topology-reader.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-obj.dir/build.make src/topology-read/CMakeFiles/libtopology-read-obj.dir/model/topology-reader.cc.i
 .PHONY : model/topology-reader.cc.i
 
 model/topology-reader.s: model/topology-reader.cc.s
@@ -307,8 +331,32 @@ model/topology-reader.s: model/topology-reader.cc.s
 
 # target to generate assembly for a file
 model/topology-reader.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-obj.dir/build.make src/topology-read/CMakeFiles/libtopology-read-obj.dir/model/topology-reader.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-obj.dir/build.make src/topology-read/CMakeFiles/libtopology-read-obj.dir/model/topology-reader.cc.s
 .PHONY : model/topology-reader.cc.s
+
+test/rocketfuel-topology-reader-test-suite.o: test/rocketfuel-topology-reader-test-suite.cc.o
+.PHONY : test/rocketfuel-topology-reader-test-suite.o
+
+# target to build an object file
+test/rocketfuel-topology-reader-test-suite.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-test.dir/build.make src/topology-read/CMakeFiles/libtopology-read-test.dir/test/rocketfuel-topology-reader-test-suite.cc.o
+.PHONY : test/rocketfuel-topology-reader-test-suite.cc.o
+
+test/rocketfuel-topology-reader-test-suite.i: test/rocketfuel-topology-reader-test-suite.cc.i
+.PHONY : test/rocketfuel-topology-reader-test-suite.i
+
+# target to preprocess a source file
+test/rocketfuel-topology-reader-test-suite.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-test.dir/build.make src/topology-read/CMakeFiles/libtopology-read-test.dir/test/rocketfuel-topology-reader-test-suite.cc.i
+.PHONY : test/rocketfuel-topology-reader-test-suite.cc.i
+
+test/rocketfuel-topology-reader-test-suite.s: test/rocketfuel-topology-reader-test-suite.cc.s
+.PHONY : test/rocketfuel-topology-reader-test-suite.s
+
+# target to generate assembly for a file
+test/rocketfuel-topology-reader-test-suite.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/topology-read/CMakeFiles/libtopology-read-test.dir/build.make src/topology-read/CMakeFiles/libtopology-read-test.dir/test/rocketfuel-topology-reader-test-suite.cc.s
+.PHONY : test/rocketfuel-topology-reader-test-suite.cc.s
 
 # Help Target
 help:
@@ -322,8 +370,10 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... libtopology-read"
 	@echo "... libtopology-read-obj"
+	@echo "... libtopology-read-test"
 	@echo "... helper/topology-reader-helper.o"
 	@echo "... helper/topology-reader-helper.i"
 	@echo "... helper/topology-reader-helper.s"
@@ -339,6 +389,9 @@ help:
 	@echo "... model/topology-reader.o"
 	@echo "... model/topology-reader.i"
 	@echo "... model/topology-reader.s"
+	@echo "... test/rocketfuel-topology-reader-test-suite.o"
+	@echo "... test/rocketfuel-topology-reader-test-suite.i"
+	@echo "... test/rocketfuel-topology-reader-test-suite.s"
 .PHONY : help
 
 
@@ -350,7 +403,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/VerifyGlobs.cmake
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/ns-3-dev/cmake-cache/CMakeFiles/VerifyGlobs.cmake
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

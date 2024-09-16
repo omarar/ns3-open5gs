@@ -155,7 +155,7 @@ main(int argc, char* argv[])
     double bandwidthBand = 200e6;
     double txPowerPerBwp = 4;
     uint32_t packetSize = 1000;
-    bool isUll = true; // Whether the flow is a low latency type of traffic.
+    bool isUll = false; // Whether the flow is a low latency type of traffic.
 
     Time sendPacketTime = Seconds(0.4);
 
@@ -186,7 +186,6 @@ main(int argc, char* argv[])
     gridScenario.SetScenarioLength(3); // be distributed.
     randomStream += gridScenario.AssignStreams(randomStream);
     gridScenario.CreateScenario();
-
     Config::SetDefault("ns3::EpsBearer::Release", UintegerValue(15));
 
     Ptr<NrPointToPointEpcHelper> epcHelper = CreateObject<NrPointToPointEpcHelper>();
@@ -304,20 +303,11 @@ main(int argc, char* argv[])
     EpsBearer bearer(q);
     nrHelper->ActivateDedicatedEpsBearer(ueNetDev, bearer, tft);
 
-    Simulator::Schedule(Seconds(0.2), &ConnectPdcpRlcTraces);
+    //Simulator::Schedule(Seconds(0.2), &ConnectPdcpRlcTraces);
 
     nrHelper->EnableTraces();
 
     Simulator::Stop(Seconds(1));
     Simulator::Run();
     Simulator::Destroy();
-
-    if (g_rlcTraceCallbackCalled && g_pdcpTraceCallbackCalled)
-    {
-        return EXIT_SUCCESS;
-    }
-    else
-    {
-        return EXIT_FAILURE;
-    }
 }

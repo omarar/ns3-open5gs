@@ -57,13 +57,23 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omar/Desktop/git_repo/ns3-open5gs
+CMAKE_SOURCE_DIR = /home/omar/ns-3-dev
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache
+CMAKE_BINARY_DIR = /home/omar/ns-3-dev/cmake-cache
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -132,14 +142,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -E cmake_progress_start /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/propagation//CMakeFiles/progress.marks
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/propagation/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles 0
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -E cmake_progress_start /home/omar/ns-3-dev/cmake-cache/CMakeFiles /home/omar/ns-3-dev/cmake-cache/src/propagation//CMakeFiles/progress.marks
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/propagation/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/omar/ns-3-dev/cmake-cache/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/propagation/clean
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/propagation/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,23 +158,23 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/propagation/preinstall
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/propagation/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/propagation/preinstall
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/propagation/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/VerifyGlobs.cmake
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/ns-3-dev/cmake-cache/CMakeFiles/VerifyGlobs.cmake
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/propagation/CMakeFiles/libpropagation-obj.dir/rule:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/propagation/CMakeFiles/libpropagation-obj.dir/rule
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/propagation/CMakeFiles/libpropagation-obj.dir/rule
 .PHONY : src/propagation/CMakeFiles/libpropagation-obj.dir/rule
 
 # Convenience name for target.
@@ -173,12 +183,12 @@ libpropagation-obj: src/propagation/CMakeFiles/libpropagation-obj.dir/rule
 
 # fast build rule for target.
 libpropagation-obj/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/build
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/build
 .PHONY : libpropagation-obj/fast
 
 # Convenience name for target.
 src/propagation/CMakeFiles/libpropagation.dir/rule:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/propagation/CMakeFiles/libpropagation.dir/rule
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/propagation/CMakeFiles/libpropagation.dir/rule
 .PHONY : src/propagation/CMakeFiles/libpropagation.dir/rule
 
 # Convenience name for target.
@@ -187,15 +197,29 @@ libpropagation: src/propagation/CMakeFiles/libpropagation.dir/rule
 
 # fast build rule for target.
 libpropagation/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation.dir/build.make src/propagation/CMakeFiles/libpropagation.dir/build
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation.dir/build.make src/propagation/CMakeFiles/libpropagation.dir/build
 .PHONY : libpropagation/fast
+
+# Convenience name for target.
+src/propagation/CMakeFiles/libpropagation-test.dir/rule:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/propagation/CMakeFiles/libpropagation-test.dir/rule
+.PHONY : src/propagation/CMakeFiles/libpropagation-test.dir/rule
+
+# Convenience name for target.
+libpropagation-test: src/propagation/CMakeFiles/libpropagation-test.dir/rule
+.PHONY : libpropagation-test
+
+# fast build rule for target.
+libpropagation-test/fast:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-test.dir/build.make src/propagation/CMakeFiles/libpropagation-test.dir/build
+.PHONY : libpropagation-test/fast
 
 model/channel-condition-model.o: model/channel-condition-model.cc.o
 .PHONY : model/channel-condition-model.o
 
 # target to build an object file
 model/channel-condition-model.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/channel-condition-model.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/channel-condition-model.cc.o
 .PHONY : model/channel-condition-model.cc.o
 
 model/channel-condition-model.i: model/channel-condition-model.cc.i
@@ -203,7 +227,7 @@ model/channel-condition-model.i: model/channel-condition-model.cc.i
 
 # target to preprocess a source file
 model/channel-condition-model.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/channel-condition-model.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/channel-condition-model.cc.i
 .PHONY : model/channel-condition-model.cc.i
 
 model/channel-condition-model.s: model/channel-condition-model.cc.s
@@ -211,7 +235,7 @@ model/channel-condition-model.s: model/channel-condition-model.cc.s
 
 # target to generate assembly for a file
 model/channel-condition-model.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/channel-condition-model.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/channel-condition-model.cc.s
 .PHONY : model/channel-condition-model.cc.s
 
 model/cost231-propagation-loss-model.o: model/cost231-propagation-loss-model.cc.o
@@ -219,7 +243,7 @@ model/cost231-propagation-loss-model.o: model/cost231-propagation-loss-model.cc.
 
 # target to build an object file
 model/cost231-propagation-loss-model.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/cost231-propagation-loss-model.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/cost231-propagation-loss-model.cc.o
 .PHONY : model/cost231-propagation-loss-model.cc.o
 
 model/cost231-propagation-loss-model.i: model/cost231-propagation-loss-model.cc.i
@@ -227,7 +251,7 @@ model/cost231-propagation-loss-model.i: model/cost231-propagation-loss-model.cc.
 
 # target to preprocess a source file
 model/cost231-propagation-loss-model.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/cost231-propagation-loss-model.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/cost231-propagation-loss-model.cc.i
 .PHONY : model/cost231-propagation-loss-model.cc.i
 
 model/cost231-propagation-loss-model.s: model/cost231-propagation-loss-model.cc.s
@@ -235,7 +259,7 @@ model/cost231-propagation-loss-model.s: model/cost231-propagation-loss-model.cc.
 
 # target to generate assembly for a file
 model/cost231-propagation-loss-model.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/cost231-propagation-loss-model.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/cost231-propagation-loss-model.cc.s
 .PHONY : model/cost231-propagation-loss-model.cc.s
 
 model/itu-r-1411-los-propagation-loss-model.o: model/itu-r-1411-los-propagation-loss-model.cc.o
@@ -243,7 +267,7 @@ model/itu-r-1411-los-propagation-loss-model.o: model/itu-r-1411-los-propagation-
 
 # target to build an object file
 model/itu-r-1411-los-propagation-loss-model.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/itu-r-1411-los-propagation-loss-model.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/itu-r-1411-los-propagation-loss-model.cc.o
 .PHONY : model/itu-r-1411-los-propagation-loss-model.cc.o
 
 model/itu-r-1411-los-propagation-loss-model.i: model/itu-r-1411-los-propagation-loss-model.cc.i
@@ -251,7 +275,7 @@ model/itu-r-1411-los-propagation-loss-model.i: model/itu-r-1411-los-propagation-
 
 # target to preprocess a source file
 model/itu-r-1411-los-propagation-loss-model.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/itu-r-1411-los-propagation-loss-model.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/itu-r-1411-los-propagation-loss-model.cc.i
 .PHONY : model/itu-r-1411-los-propagation-loss-model.cc.i
 
 model/itu-r-1411-los-propagation-loss-model.s: model/itu-r-1411-los-propagation-loss-model.cc.s
@@ -259,7 +283,7 @@ model/itu-r-1411-los-propagation-loss-model.s: model/itu-r-1411-los-propagation-
 
 # target to generate assembly for a file
 model/itu-r-1411-los-propagation-loss-model.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/itu-r-1411-los-propagation-loss-model.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/itu-r-1411-los-propagation-loss-model.cc.s
 .PHONY : model/itu-r-1411-los-propagation-loss-model.cc.s
 
 model/itu-r-1411-nlos-over-rooftop-propagation-loss-model.o: model/itu-r-1411-nlos-over-rooftop-propagation-loss-model.cc.o
@@ -267,7 +291,7 @@ model/itu-r-1411-nlos-over-rooftop-propagation-loss-model.o: model/itu-r-1411-nl
 
 # target to build an object file
 model/itu-r-1411-nlos-over-rooftop-propagation-loss-model.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/itu-r-1411-nlos-over-rooftop-propagation-loss-model.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/itu-r-1411-nlos-over-rooftop-propagation-loss-model.cc.o
 .PHONY : model/itu-r-1411-nlos-over-rooftop-propagation-loss-model.cc.o
 
 model/itu-r-1411-nlos-over-rooftop-propagation-loss-model.i: model/itu-r-1411-nlos-over-rooftop-propagation-loss-model.cc.i
@@ -275,7 +299,7 @@ model/itu-r-1411-nlos-over-rooftop-propagation-loss-model.i: model/itu-r-1411-nl
 
 # target to preprocess a source file
 model/itu-r-1411-nlos-over-rooftop-propagation-loss-model.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/itu-r-1411-nlos-over-rooftop-propagation-loss-model.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/itu-r-1411-nlos-over-rooftop-propagation-loss-model.cc.i
 .PHONY : model/itu-r-1411-nlos-over-rooftop-propagation-loss-model.cc.i
 
 model/itu-r-1411-nlos-over-rooftop-propagation-loss-model.s: model/itu-r-1411-nlos-over-rooftop-propagation-loss-model.cc.s
@@ -283,7 +307,7 @@ model/itu-r-1411-nlos-over-rooftop-propagation-loss-model.s: model/itu-r-1411-nl
 
 # target to generate assembly for a file
 model/itu-r-1411-nlos-over-rooftop-propagation-loss-model.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/itu-r-1411-nlos-over-rooftop-propagation-loss-model.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/itu-r-1411-nlos-over-rooftop-propagation-loss-model.cc.s
 .PHONY : model/itu-r-1411-nlos-over-rooftop-propagation-loss-model.cc.s
 
 model/jakes-process.o: model/jakes-process.cc.o
@@ -291,7 +315,7 @@ model/jakes-process.o: model/jakes-process.cc.o
 
 # target to build an object file
 model/jakes-process.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/jakes-process.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/jakes-process.cc.o
 .PHONY : model/jakes-process.cc.o
 
 model/jakes-process.i: model/jakes-process.cc.i
@@ -299,7 +323,7 @@ model/jakes-process.i: model/jakes-process.cc.i
 
 # target to preprocess a source file
 model/jakes-process.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/jakes-process.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/jakes-process.cc.i
 .PHONY : model/jakes-process.cc.i
 
 model/jakes-process.s: model/jakes-process.cc.s
@@ -307,7 +331,7 @@ model/jakes-process.s: model/jakes-process.cc.s
 
 # target to generate assembly for a file
 model/jakes-process.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/jakes-process.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/jakes-process.cc.s
 .PHONY : model/jakes-process.cc.s
 
 model/jakes-propagation-loss-model.o: model/jakes-propagation-loss-model.cc.o
@@ -315,7 +339,7 @@ model/jakes-propagation-loss-model.o: model/jakes-propagation-loss-model.cc.o
 
 # target to build an object file
 model/jakes-propagation-loss-model.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/jakes-propagation-loss-model.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/jakes-propagation-loss-model.cc.o
 .PHONY : model/jakes-propagation-loss-model.cc.o
 
 model/jakes-propagation-loss-model.i: model/jakes-propagation-loss-model.cc.i
@@ -323,7 +347,7 @@ model/jakes-propagation-loss-model.i: model/jakes-propagation-loss-model.cc.i
 
 # target to preprocess a source file
 model/jakes-propagation-loss-model.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/jakes-propagation-loss-model.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/jakes-propagation-loss-model.cc.i
 .PHONY : model/jakes-propagation-loss-model.cc.i
 
 model/jakes-propagation-loss-model.s: model/jakes-propagation-loss-model.cc.s
@@ -331,7 +355,7 @@ model/jakes-propagation-loss-model.s: model/jakes-propagation-loss-model.cc.s
 
 # target to generate assembly for a file
 model/jakes-propagation-loss-model.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/jakes-propagation-loss-model.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/jakes-propagation-loss-model.cc.s
 .PHONY : model/jakes-propagation-loss-model.cc.s
 
 model/kun-2600-mhz-propagation-loss-model.o: model/kun-2600-mhz-propagation-loss-model.cc.o
@@ -339,7 +363,7 @@ model/kun-2600-mhz-propagation-loss-model.o: model/kun-2600-mhz-propagation-loss
 
 # target to build an object file
 model/kun-2600-mhz-propagation-loss-model.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/kun-2600-mhz-propagation-loss-model.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/kun-2600-mhz-propagation-loss-model.cc.o
 .PHONY : model/kun-2600-mhz-propagation-loss-model.cc.o
 
 model/kun-2600-mhz-propagation-loss-model.i: model/kun-2600-mhz-propagation-loss-model.cc.i
@@ -347,7 +371,7 @@ model/kun-2600-mhz-propagation-loss-model.i: model/kun-2600-mhz-propagation-loss
 
 # target to preprocess a source file
 model/kun-2600-mhz-propagation-loss-model.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/kun-2600-mhz-propagation-loss-model.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/kun-2600-mhz-propagation-loss-model.cc.i
 .PHONY : model/kun-2600-mhz-propagation-loss-model.cc.i
 
 model/kun-2600-mhz-propagation-loss-model.s: model/kun-2600-mhz-propagation-loss-model.cc.s
@@ -355,7 +379,7 @@ model/kun-2600-mhz-propagation-loss-model.s: model/kun-2600-mhz-propagation-loss
 
 # target to generate assembly for a file
 model/kun-2600-mhz-propagation-loss-model.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/kun-2600-mhz-propagation-loss-model.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/kun-2600-mhz-propagation-loss-model.cc.s
 .PHONY : model/kun-2600-mhz-propagation-loss-model.cc.s
 
 model/okumura-hata-propagation-loss-model.o: model/okumura-hata-propagation-loss-model.cc.o
@@ -363,7 +387,7 @@ model/okumura-hata-propagation-loss-model.o: model/okumura-hata-propagation-loss
 
 # target to build an object file
 model/okumura-hata-propagation-loss-model.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/okumura-hata-propagation-loss-model.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/okumura-hata-propagation-loss-model.cc.o
 .PHONY : model/okumura-hata-propagation-loss-model.cc.o
 
 model/okumura-hata-propagation-loss-model.i: model/okumura-hata-propagation-loss-model.cc.i
@@ -371,7 +395,7 @@ model/okumura-hata-propagation-loss-model.i: model/okumura-hata-propagation-loss
 
 # target to preprocess a source file
 model/okumura-hata-propagation-loss-model.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/okumura-hata-propagation-loss-model.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/okumura-hata-propagation-loss-model.cc.i
 .PHONY : model/okumura-hata-propagation-loss-model.cc.i
 
 model/okumura-hata-propagation-loss-model.s: model/okumura-hata-propagation-loss-model.cc.s
@@ -379,7 +403,7 @@ model/okumura-hata-propagation-loss-model.s: model/okumura-hata-propagation-loss
 
 # target to generate assembly for a file
 model/okumura-hata-propagation-loss-model.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/okumura-hata-propagation-loss-model.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/okumura-hata-propagation-loss-model.cc.s
 .PHONY : model/okumura-hata-propagation-loss-model.cc.s
 
 model/probabilistic-v2v-channel-condition-model.o: model/probabilistic-v2v-channel-condition-model.cc.o
@@ -387,7 +411,7 @@ model/probabilistic-v2v-channel-condition-model.o: model/probabilistic-v2v-chann
 
 # target to build an object file
 model/probabilistic-v2v-channel-condition-model.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/probabilistic-v2v-channel-condition-model.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/probabilistic-v2v-channel-condition-model.cc.o
 .PHONY : model/probabilistic-v2v-channel-condition-model.cc.o
 
 model/probabilistic-v2v-channel-condition-model.i: model/probabilistic-v2v-channel-condition-model.cc.i
@@ -395,7 +419,7 @@ model/probabilistic-v2v-channel-condition-model.i: model/probabilistic-v2v-chann
 
 # target to preprocess a source file
 model/probabilistic-v2v-channel-condition-model.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/probabilistic-v2v-channel-condition-model.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/probabilistic-v2v-channel-condition-model.cc.i
 .PHONY : model/probabilistic-v2v-channel-condition-model.cc.i
 
 model/probabilistic-v2v-channel-condition-model.s: model/probabilistic-v2v-channel-condition-model.cc.s
@@ -403,7 +427,7 @@ model/probabilistic-v2v-channel-condition-model.s: model/probabilistic-v2v-chann
 
 # target to generate assembly for a file
 model/probabilistic-v2v-channel-condition-model.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/probabilistic-v2v-channel-condition-model.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/probabilistic-v2v-channel-condition-model.cc.s
 .PHONY : model/probabilistic-v2v-channel-condition-model.cc.s
 
 model/propagation-delay-model.o: model/propagation-delay-model.cc.o
@@ -411,7 +435,7 @@ model/propagation-delay-model.o: model/propagation-delay-model.cc.o
 
 # target to build an object file
 model/propagation-delay-model.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/propagation-delay-model.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/propagation-delay-model.cc.o
 .PHONY : model/propagation-delay-model.cc.o
 
 model/propagation-delay-model.i: model/propagation-delay-model.cc.i
@@ -419,7 +443,7 @@ model/propagation-delay-model.i: model/propagation-delay-model.cc.i
 
 # target to preprocess a source file
 model/propagation-delay-model.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/propagation-delay-model.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/propagation-delay-model.cc.i
 .PHONY : model/propagation-delay-model.cc.i
 
 model/propagation-delay-model.s: model/propagation-delay-model.cc.s
@@ -427,7 +451,7 @@ model/propagation-delay-model.s: model/propagation-delay-model.cc.s
 
 # target to generate assembly for a file
 model/propagation-delay-model.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/propagation-delay-model.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/propagation-delay-model.cc.s
 .PHONY : model/propagation-delay-model.cc.s
 
 model/propagation-loss-model.o: model/propagation-loss-model.cc.o
@@ -435,7 +459,7 @@ model/propagation-loss-model.o: model/propagation-loss-model.cc.o
 
 # target to build an object file
 model/propagation-loss-model.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/propagation-loss-model.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/propagation-loss-model.cc.o
 .PHONY : model/propagation-loss-model.cc.o
 
 model/propagation-loss-model.i: model/propagation-loss-model.cc.i
@@ -443,7 +467,7 @@ model/propagation-loss-model.i: model/propagation-loss-model.cc.i
 
 # target to preprocess a source file
 model/propagation-loss-model.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/propagation-loss-model.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/propagation-loss-model.cc.i
 .PHONY : model/propagation-loss-model.cc.i
 
 model/propagation-loss-model.s: model/propagation-loss-model.cc.s
@@ -451,7 +475,7 @@ model/propagation-loss-model.s: model/propagation-loss-model.cc.s
 
 # target to generate assembly for a file
 model/propagation-loss-model.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/propagation-loss-model.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/propagation-loss-model.cc.s
 .PHONY : model/propagation-loss-model.cc.s
 
 model/three-gpp-propagation-loss-model.o: model/three-gpp-propagation-loss-model.cc.o
@@ -459,7 +483,7 @@ model/three-gpp-propagation-loss-model.o: model/three-gpp-propagation-loss-model
 
 # target to build an object file
 model/three-gpp-propagation-loss-model.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/three-gpp-propagation-loss-model.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/three-gpp-propagation-loss-model.cc.o
 .PHONY : model/three-gpp-propagation-loss-model.cc.o
 
 model/three-gpp-propagation-loss-model.i: model/three-gpp-propagation-loss-model.cc.i
@@ -467,7 +491,7 @@ model/three-gpp-propagation-loss-model.i: model/three-gpp-propagation-loss-model
 
 # target to preprocess a source file
 model/three-gpp-propagation-loss-model.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/three-gpp-propagation-loss-model.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/three-gpp-propagation-loss-model.cc.i
 .PHONY : model/three-gpp-propagation-loss-model.cc.i
 
 model/three-gpp-propagation-loss-model.s: model/three-gpp-propagation-loss-model.cc.s
@@ -475,7 +499,7 @@ model/three-gpp-propagation-loss-model.s: model/three-gpp-propagation-loss-model
 
 # target to generate assembly for a file
 model/three-gpp-propagation-loss-model.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/three-gpp-propagation-loss-model.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/three-gpp-propagation-loss-model.cc.s
 .PHONY : model/three-gpp-propagation-loss-model.cc.s
 
 model/three-gpp-v2v-propagation-loss-model.o: model/three-gpp-v2v-propagation-loss-model.cc.o
@@ -483,7 +507,7 @@ model/three-gpp-v2v-propagation-loss-model.o: model/three-gpp-v2v-propagation-lo
 
 # target to build an object file
 model/three-gpp-v2v-propagation-loss-model.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/three-gpp-v2v-propagation-loss-model.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/three-gpp-v2v-propagation-loss-model.cc.o
 .PHONY : model/three-gpp-v2v-propagation-loss-model.cc.o
 
 model/three-gpp-v2v-propagation-loss-model.i: model/three-gpp-v2v-propagation-loss-model.cc.i
@@ -491,7 +515,7 @@ model/three-gpp-v2v-propagation-loss-model.i: model/three-gpp-v2v-propagation-lo
 
 # target to preprocess a source file
 model/three-gpp-v2v-propagation-loss-model.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/three-gpp-v2v-propagation-loss-model.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/three-gpp-v2v-propagation-loss-model.cc.i
 .PHONY : model/three-gpp-v2v-propagation-loss-model.cc.i
 
 model/three-gpp-v2v-propagation-loss-model.s: model/three-gpp-v2v-propagation-loss-model.cc.s
@@ -499,8 +523,200 @@ model/three-gpp-v2v-propagation-loss-model.s: model/three-gpp-v2v-propagation-lo
 
 # target to generate assembly for a file
 model/three-gpp-v2v-propagation-loss-model.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/three-gpp-v2v-propagation-loss-model.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-obj.dir/build.make src/propagation/CMakeFiles/libpropagation-obj.dir/model/three-gpp-v2v-propagation-loss-model.cc.s
 .PHONY : model/three-gpp-v2v-propagation-loss-model.cc.s
+
+test/channel-condition-model-test-suite.o: test/channel-condition-model-test-suite.cc.o
+.PHONY : test/channel-condition-model-test-suite.o
+
+# target to build an object file
+test/channel-condition-model-test-suite.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-test.dir/build.make src/propagation/CMakeFiles/libpropagation-test.dir/test/channel-condition-model-test-suite.cc.o
+.PHONY : test/channel-condition-model-test-suite.cc.o
+
+test/channel-condition-model-test-suite.i: test/channel-condition-model-test-suite.cc.i
+.PHONY : test/channel-condition-model-test-suite.i
+
+# target to preprocess a source file
+test/channel-condition-model-test-suite.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-test.dir/build.make src/propagation/CMakeFiles/libpropagation-test.dir/test/channel-condition-model-test-suite.cc.i
+.PHONY : test/channel-condition-model-test-suite.cc.i
+
+test/channel-condition-model-test-suite.s: test/channel-condition-model-test-suite.cc.s
+.PHONY : test/channel-condition-model-test-suite.s
+
+# target to generate assembly for a file
+test/channel-condition-model-test-suite.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-test.dir/build.make src/propagation/CMakeFiles/libpropagation-test.dir/test/channel-condition-model-test-suite.cc.s
+.PHONY : test/channel-condition-model-test-suite.cc.s
+
+test/itu-r-1411-los-test-suite.o: test/itu-r-1411-los-test-suite.cc.o
+.PHONY : test/itu-r-1411-los-test-suite.o
+
+# target to build an object file
+test/itu-r-1411-los-test-suite.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-test.dir/build.make src/propagation/CMakeFiles/libpropagation-test.dir/test/itu-r-1411-los-test-suite.cc.o
+.PHONY : test/itu-r-1411-los-test-suite.cc.o
+
+test/itu-r-1411-los-test-suite.i: test/itu-r-1411-los-test-suite.cc.i
+.PHONY : test/itu-r-1411-los-test-suite.i
+
+# target to preprocess a source file
+test/itu-r-1411-los-test-suite.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-test.dir/build.make src/propagation/CMakeFiles/libpropagation-test.dir/test/itu-r-1411-los-test-suite.cc.i
+.PHONY : test/itu-r-1411-los-test-suite.cc.i
+
+test/itu-r-1411-los-test-suite.s: test/itu-r-1411-los-test-suite.cc.s
+.PHONY : test/itu-r-1411-los-test-suite.s
+
+# target to generate assembly for a file
+test/itu-r-1411-los-test-suite.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-test.dir/build.make src/propagation/CMakeFiles/libpropagation-test.dir/test/itu-r-1411-los-test-suite.cc.s
+.PHONY : test/itu-r-1411-los-test-suite.cc.s
+
+test/itu-r-1411-nlos-over-rooftop-test-suite.o: test/itu-r-1411-nlos-over-rooftop-test-suite.cc.o
+.PHONY : test/itu-r-1411-nlos-over-rooftop-test-suite.o
+
+# target to build an object file
+test/itu-r-1411-nlos-over-rooftop-test-suite.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-test.dir/build.make src/propagation/CMakeFiles/libpropagation-test.dir/test/itu-r-1411-nlos-over-rooftop-test-suite.cc.o
+.PHONY : test/itu-r-1411-nlos-over-rooftop-test-suite.cc.o
+
+test/itu-r-1411-nlos-over-rooftop-test-suite.i: test/itu-r-1411-nlos-over-rooftop-test-suite.cc.i
+.PHONY : test/itu-r-1411-nlos-over-rooftop-test-suite.i
+
+# target to preprocess a source file
+test/itu-r-1411-nlos-over-rooftop-test-suite.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-test.dir/build.make src/propagation/CMakeFiles/libpropagation-test.dir/test/itu-r-1411-nlos-over-rooftop-test-suite.cc.i
+.PHONY : test/itu-r-1411-nlos-over-rooftop-test-suite.cc.i
+
+test/itu-r-1411-nlos-over-rooftop-test-suite.s: test/itu-r-1411-nlos-over-rooftop-test-suite.cc.s
+.PHONY : test/itu-r-1411-nlos-over-rooftop-test-suite.s
+
+# target to generate assembly for a file
+test/itu-r-1411-nlos-over-rooftop-test-suite.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-test.dir/build.make src/propagation/CMakeFiles/libpropagation-test.dir/test/itu-r-1411-nlos-over-rooftop-test-suite.cc.s
+.PHONY : test/itu-r-1411-nlos-over-rooftop-test-suite.cc.s
+
+test/kun-2600-mhz-test-suite.o: test/kun-2600-mhz-test-suite.cc.o
+.PHONY : test/kun-2600-mhz-test-suite.o
+
+# target to build an object file
+test/kun-2600-mhz-test-suite.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-test.dir/build.make src/propagation/CMakeFiles/libpropagation-test.dir/test/kun-2600-mhz-test-suite.cc.o
+.PHONY : test/kun-2600-mhz-test-suite.cc.o
+
+test/kun-2600-mhz-test-suite.i: test/kun-2600-mhz-test-suite.cc.i
+.PHONY : test/kun-2600-mhz-test-suite.i
+
+# target to preprocess a source file
+test/kun-2600-mhz-test-suite.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-test.dir/build.make src/propagation/CMakeFiles/libpropagation-test.dir/test/kun-2600-mhz-test-suite.cc.i
+.PHONY : test/kun-2600-mhz-test-suite.cc.i
+
+test/kun-2600-mhz-test-suite.s: test/kun-2600-mhz-test-suite.cc.s
+.PHONY : test/kun-2600-mhz-test-suite.s
+
+# target to generate assembly for a file
+test/kun-2600-mhz-test-suite.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-test.dir/build.make src/propagation/CMakeFiles/libpropagation-test.dir/test/kun-2600-mhz-test-suite.cc.s
+.PHONY : test/kun-2600-mhz-test-suite.cc.s
+
+test/okumura-hata-test-suite.o: test/okumura-hata-test-suite.cc.o
+.PHONY : test/okumura-hata-test-suite.o
+
+# target to build an object file
+test/okumura-hata-test-suite.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-test.dir/build.make src/propagation/CMakeFiles/libpropagation-test.dir/test/okumura-hata-test-suite.cc.o
+.PHONY : test/okumura-hata-test-suite.cc.o
+
+test/okumura-hata-test-suite.i: test/okumura-hata-test-suite.cc.i
+.PHONY : test/okumura-hata-test-suite.i
+
+# target to preprocess a source file
+test/okumura-hata-test-suite.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-test.dir/build.make src/propagation/CMakeFiles/libpropagation-test.dir/test/okumura-hata-test-suite.cc.i
+.PHONY : test/okumura-hata-test-suite.cc.i
+
+test/okumura-hata-test-suite.s: test/okumura-hata-test-suite.cc.s
+.PHONY : test/okumura-hata-test-suite.s
+
+# target to generate assembly for a file
+test/okumura-hata-test-suite.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-test.dir/build.make src/propagation/CMakeFiles/libpropagation-test.dir/test/okumura-hata-test-suite.cc.s
+.PHONY : test/okumura-hata-test-suite.cc.s
+
+test/probabilistic-v2v-channel-condition-model-test.o: test/probabilistic-v2v-channel-condition-model-test.cc.o
+.PHONY : test/probabilistic-v2v-channel-condition-model-test.o
+
+# target to build an object file
+test/probabilistic-v2v-channel-condition-model-test.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-test.dir/build.make src/propagation/CMakeFiles/libpropagation-test.dir/test/probabilistic-v2v-channel-condition-model-test.cc.o
+.PHONY : test/probabilistic-v2v-channel-condition-model-test.cc.o
+
+test/probabilistic-v2v-channel-condition-model-test.i: test/probabilistic-v2v-channel-condition-model-test.cc.i
+.PHONY : test/probabilistic-v2v-channel-condition-model-test.i
+
+# target to preprocess a source file
+test/probabilistic-v2v-channel-condition-model-test.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-test.dir/build.make src/propagation/CMakeFiles/libpropagation-test.dir/test/probabilistic-v2v-channel-condition-model-test.cc.i
+.PHONY : test/probabilistic-v2v-channel-condition-model-test.cc.i
+
+test/probabilistic-v2v-channel-condition-model-test.s: test/probabilistic-v2v-channel-condition-model-test.cc.s
+.PHONY : test/probabilistic-v2v-channel-condition-model-test.s
+
+# target to generate assembly for a file
+test/probabilistic-v2v-channel-condition-model-test.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-test.dir/build.make src/propagation/CMakeFiles/libpropagation-test.dir/test/probabilistic-v2v-channel-condition-model-test.cc.s
+.PHONY : test/probabilistic-v2v-channel-condition-model-test.cc.s
+
+test/propagation-loss-model-test-suite.o: test/propagation-loss-model-test-suite.cc.o
+.PHONY : test/propagation-loss-model-test-suite.o
+
+# target to build an object file
+test/propagation-loss-model-test-suite.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-test.dir/build.make src/propagation/CMakeFiles/libpropagation-test.dir/test/propagation-loss-model-test-suite.cc.o
+.PHONY : test/propagation-loss-model-test-suite.cc.o
+
+test/propagation-loss-model-test-suite.i: test/propagation-loss-model-test-suite.cc.i
+.PHONY : test/propagation-loss-model-test-suite.i
+
+# target to preprocess a source file
+test/propagation-loss-model-test-suite.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-test.dir/build.make src/propagation/CMakeFiles/libpropagation-test.dir/test/propagation-loss-model-test-suite.cc.i
+.PHONY : test/propagation-loss-model-test-suite.cc.i
+
+test/propagation-loss-model-test-suite.s: test/propagation-loss-model-test-suite.cc.s
+.PHONY : test/propagation-loss-model-test-suite.s
+
+# target to generate assembly for a file
+test/propagation-loss-model-test-suite.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-test.dir/build.make src/propagation/CMakeFiles/libpropagation-test.dir/test/propagation-loss-model-test-suite.cc.s
+.PHONY : test/propagation-loss-model-test-suite.cc.s
+
+test/three-gpp-propagation-loss-model-test-suite.o: test/three-gpp-propagation-loss-model-test-suite.cc.o
+.PHONY : test/three-gpp-propagation-loss-model-test-suite.o
+
+# target to build an object file
+test/three-gpp-propagation-loss-model-test-suite.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-test.dir/build.make src/propagation/CMakeFiles/libpropagation-test.dir/test/three-gpp-propagation-loss-model-test-suite.cc.o
+.PHONY : test/three-gpp-propagation-loss-model-test-suite.cc.o
+
+test/three-gpp-propagation-loss-model-test-suite.i: test/three-gpp-propagation-loss-model-test-suite.cc.i
+.PHONY : test/three-gpp-propagation-loss-model-test-suite.i
+
+# target to preprocess a source file
+test/three-gpp-propagation-loss-model-test-suite.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-test.dir/build.make src/propagation/CMakeFiles/libpropagation-test.dir/test/three-gpp-propagation-loss-model-test-suite.cc.i
+.PHONY : test/three-gpp-propagation-loss-model-test-suite.cc.i
+
+test/three-gpp-propagation-loss-model-test-suite.s: test/three-gpp-propagation-loss-model-test-suite.cc.s
+.PHONY : test/three-gpp-propagation-loss-model-test-suite.s
+
+# target to generate assembly for a file
+test/three-gpp-propagation-loss-model-test-suite.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/propagation/CMakeFiles/libpropagation-test.dir/build.make src/propagation/CMakeFiles/libpropagation-test.dir/test/three-gpp-propagation-loss-model-test-suite.cc.s
+.PHONY : test/three-gpp-propagation-loss-model-test-suite.cc.s
 
 # Help Target
 help:
@@ -514,8 +730,10 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... libpropagation"
 	@echo "... libpropagation-obj"
+	@echo "... libpropagation-test"
 	@echo "... model/channel-condition-model.o"
 	@echo "... model/channel-condition-model.i"
 	@echo "... model/channel-condition-model.s"
@@ -555,6 +773,30 @@ help:
 	@echo "... model/three-gpp-v2v-propagation-loss-model.o"
 	@echo "... model/three-gpp-v2v-propagation-loss-model.i"
 	@echo "... model/three-gpp-v2v-propagation-loss-model.s"
+	@echo "... test/channel-condition-model-test-suite.o"
+	@echo "... test/channel-condition-model-test-suite.i"
+	@echo "... test/channel-condition-model-test-suite.s"
+	@echo "... test/itu-r-1411-los-test-suite.o"
+	@echo "... test/itu-r-1411-los-test-suite.i"
+	@echo "... test/itu-r-1411-los-test-suite.s"
+	@echo "... test/itu-r-1411-nlos-over-rooftop-test-suite.o"
+	@echo "... test/itu-r-1411-nlos-over-rooftop-test-suite.i"
+	@echo "... test/itu-r-1411-nlos-over-rooftop-test-suite.s"
+	@echo "... test/kun-2600-mhz-test-suite.o"
+	@echo "... test/kun-2600-mhz-test-suite.i"
+	@echo "... test/kun-2600-mhz-test-suite.s"
+	@echo "... test/okumura-hata-test-suite.o"
+	@echo "... test/okumura-hata-test-suite.i"
+	@echo "... test/okumura-hata-test-suite.s"
+	@echo "... test/probabilistic-v2v-channel-condition-model-test.o"
+	@echo "... test/probabilistic-v2v-channel-condition-model-test.i"
+	@echo "... test/probabilistic-v2v-channel-condition-model-test.s"
+	@echo "... test/propagation-loss-model-test-suite.o"
+	@echo "... test/propagation-loss-model-test-suite.i"
+	@echo "... test/propagation-loss-model-test-suite.s"
+	@echo "... test/three-gpp-propagation-loss-model-test-suite.o"
+	@echo "... test/three-gpp-propagation-loss-model-test-suite.i"
+	@echo "... test/three-gpp-propagation-loss-model-test-suite.s"
 .PHONY : help
 
 
@@ -566,7 +808,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/VerifyGlobs.cmake
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/ns-3-dev/cmake-cache/CMakeFiles/VerifyGlobs.cmake
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

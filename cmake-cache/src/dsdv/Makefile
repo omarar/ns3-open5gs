@@ -57,13 +57,23 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omar/Desktop/git_repo/ns3-open5gs
+CMAKE_SOURCE_DIR = /home/omar/ns-3-dev
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache
+CMAKE_BINARY_DIR = /home/omar/ns-3-dev/cmake-cache
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -132,14 +142,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -E cmake_progress_start /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/dsdv//CMakeFiles/progress.marks
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/dsdv/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles 0
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -E cmake_progress_start /home/omar/ns-3-dev/cmake-cache/CMakeFiles /home/omar/ns-3-dev/cmake-cache/src/dsdv//CMakeFiles/progress.marks
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/dsdv/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/omar/ns-3-dev/cmake-cache/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/dsdv/clean
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/dsdv/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,23 +158,23 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/dsdv/preinstall
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/dsdv/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/dsdv/preinstall
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/dsdv/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/VerifyGlobs.cmake
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/ns-3-dev/cmake-cache/CMakeFiles/VerifyGlobs.cmake
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/dsdv/CMakeFiles/libdsdv-obj.dir/rule:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/dsdv/CMakeFiles/libdsdv-obj.dir/rule
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/dsdv/CMakeFiles/libdsdv-obj.dir/rule
 .PHONY : src/dsdv/CMakeFiles/libdsdv-obj.dir/rule
 
 # Convenience name for target.
@@ -173,12 +183,12 @@ libdsdv-obj: src/dsdv/CMakeFiles/libdsdv-obj.dir/rule
 
 # fast build rule for target.
 libdsdv-obj/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-obj.dir/build.make src/dsdv/CMakeFiles/libdsdv-obj.dir/build
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-obj.dir/build.make src/dsdv/CMakeFiles/libdsdv-obj.dir/build
 .PHONY : libdsdv-obj/fast
 
 # Convenience name for target.
 src/dsdv/CMakeFiles/libdsdv.dir/rule:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/dsdv/CMakeFiles/libdsdv.dir/rule
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/dsdv/CMakeFiles/libdsdv.dir/rule
 .PHONY : src/dsdv/CMakeFiles/libdsdv.dir/rule
 
 # Convenience name for target.
@@ -187,15 +197,29 @@ libdsdv: src/dsdv/CMakeFiles/libdsdv.dir/rule
 
 # fast build rule for target.
 libdsdv/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv.dir/build.make src/dsdv/CMakeFiles/libdsdv.dir/build
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv.dir/build.make src/dsdv/CMakeFiles/libdsdv.dir/build
 .PHONY : libdsdv/fast
+
+# Convenience name for target.
+src/dsdv/CMakeFiles/libdsdv-test.dir/rule:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/dsdv/CMakeFiles/libdsdv-test.dir/rule
+.PHONY : src/dsdv/CMakeFiles/libdsdv-test.dir/rule
+
+# Convenience name for target.
+libdsdv-test: src/dsdv/CMakeFiles/libdsdv-test.dir/rule
+.PHONY : libdsdv-test
+
+# fast build rule for target.
+libdsdv-test/fast:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-test.dir/build.make src/dsdv/CMakeFiles/libdsdv-test.dir/build
+.PHONY : libdsdv-test/fast
 
 helper/dsdv-helper.o: helper/dsdv-helper.cc.o
 .PHONY : helper/dsdv-helper.o
 
 # target to build an object file
 helper/dsdv-helper.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-obj.dir/build.make src/dsdv/CMakeFiles/libdsdv-obj.dir/helper/dsdv-helper.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-obj.dir/build.make src/dsdv/CMakeFiles/libdsdv-obj.dir/helper/dsdv-helper.cc.o
 .PHONY : helper/dsdv-helper.cc.o
 
 helper/dsdv-helper.i: helper/dsdv-helper.cc.i
@@ -203,7 +227,7 @@ helper/dsdv-helper.i: helper/dsdv-helper.cc.i
 
 # target to preprocess a source file
 helper/dsdv-helper.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-obj.dir/build.make src/dsdv/CMakeFiles/libdsdv-obj.dir/helper/dsdv-helper.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-obj.dir/build.make src/dsdv/CMakeFiles/libdsdv-obj.dir/helper/dsdv-helper.cc.i
 .PHONY : helper/dsdv-helper.cc.i
 
 helper/dsdv-helper.s: helper/dsdv-helper.cc.s
@@ -211,7 +235,7 @@ helper/dsdv-helper.s: helper/dsdv-helper.cc.s
 
 # target to generate assembly for a file
 helper/dsdv-helper.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-obj.dir/build.make src/dsdv/CMakeFiles/libdsdv-obj.dir/helper/dsdv-helper.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-obj.dir/build.make src/dsdv/CMakeFiles/libdsdv-obj.dir/helper/dsdv-helper.cc.s
 .PHONY : helper/dsdv-helper.cc.s
 
 model/dsdv-packet-queue.o: model/dsdv-packet-queue.cc.o
@@ -219,7 +243,7 @@ model/dsdv-packet-queue.o: model/dsdv-packet-queue.cc.o
 
 # target to build an object file
 model/dsdv-packet-queue.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-obj.dir/build.make src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-packet-queue.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-obj.dir/build.make src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-packet-queue.cc.o
 .PHONY : model/dsdv-packet-queue.cc.o
 
 model/dsdv-packet-queue.i: model/dsdv-packet-queue.cc.i
@@ -227,7 +251,7 @@ model/dsdv-packet-queue.i: model/dsdv-packet-queue.cc.i
 
 # target to preprocess a source file
 model/dsdv-packet-queue.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-obj.dir/build.make src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-packet-queue.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-obj.dir/build.make src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-packet-queue.cc.i
 .PHONY : model/dsdv-packet-queue.cc.i
 
 model/dsdv-packet-queue.s: model/dsdv-packet-queue.cc.s
@@ -235,7 +259,7 @@ model/dsdv-packet-queue.s: model/dsdv-packet-queue.cc.s
 
 # target to generate assembly for a file
 model/dsdv-packet-queue.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-obj.dir/build.make src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-packet-queue.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-obj.dir/build.make src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-packet-queue.cc.s
 .PHONY : model/dsdv-packet-queue.cc.s
 
 model/dsdv-packet.o: model/dsdv-packet.cc.o
@@ -243,7 +267,7 @@ model/dsdv-packet.o: model/dsdv-packet.cc.o
 
 # target to build an object file
 model/dsdv-packet.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-obj.dir/build.make src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-packet.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-obj.dir/build.make src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-packet.cc.o
 .PHONY : model/dsdv-packet.cc.o
 
 model/dsdv-packet.i: model/dsdv-packet.cc.i
@@ -251,7 +275,7 @@ model/dsdv-packet.i: model/dsdv-packet.cc.i
 
 # target to preprocess a source file
 model/dsdv-packet.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-obj.dir/build.make src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-packet.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-obj.dir/build.make src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-packet.cc.i
 .PHONY : model/dsdv-packet.cc.i
 
 model/dsdv-packet.s: model/dsdv-packet.cc.s
@@ -259,7 +283,7 @@ model/dsdv-packet.s: model/dsdv-packet.cc.s
 
 # target to generate assembly for a file
 model/dsdv-packet.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-obj.dir/build.make src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-packet.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-obj.dir/build.make src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-packet.cc.s
 .PHONY : model/dsdv-packet.cc.s
 
 model/dsdv-routing-protocol.o: model/dsdv-routing-protocol.cc.o
@@ -267,7 +291,7 @@ model/dsdv-routing-protocol.o: model/dsdv-routing-protocol.cc.o
 
 # target to build an object file
 model/dsdv-routing-protocol.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-obj.dir/build.make src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-routing-protocol.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-obj.dir/build.make src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-routing-protocol.cc.o
 .PHONY : model/dsdv-routing-protocol.cc.o
 
 model/dsdv-routing-protocol.i: model/dsdv-routing-protocol.cc.i
@@ -275,7 +299,7 @@ model/dsdv-routing-protocol.i: model/dsdv-routing-protocol.cc.i
 
 # target to preprocess a source file
 model/dsdv-routing-protocol.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-obj.dir/build.make src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-routing-protocol.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-obj.dir/build.make src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-routing-protocol.cc.i
 .PHONY : model/dsdv-routing-protocol.cc.i
 
 model/dsdv-routing-protocol.s: model/dsdv-routing-protocol.cc.s
@@ -283,7 +307,7 @@ model/dsdv-routing-protocol.s: model/dsdv-routing-protocol.cc.s
 
 # target to generate assembly for a file
 model/dsdv-routing-protocol.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-obj.dir/build.make src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-routing-protocol.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-obj.dir/build.make src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-routing-protocol.cc.s
 .PHONY : model/dsdv-routing-protocol.cc.s
 
 model/dsdv-rtable.o: model/dsdv-rtable.cc.o
@@ -291,7 +315,7 @@ model/dsdv-rtable.o: model/dsdv-rtable.cc.o
 
 # target to build an object file
 model/dsdv-rtable.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-obj.dir/build.make src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-rtable.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-obj.dir/build.make src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-rtable.cc.o
 .PHONY : model/dsdv-rtable.cc.o
 
 model/dsdv-rtable.i: model/dsdv-rtable.cc.i
@@ -299,7 +323,7 @@ model/dsdv-rtable.i: model/dsdv-rtable.cc.i
 
 # target to preprocess a source file
 model/dsdv-rtable.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-obj.dir/build.make src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-rtable.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-obj.dir/build.make src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-rtable.cc.i
 .PHONY : model/dsdv-rtable.cc.i
 
 model/dsdv-rtable.s: model/dsdv-rtable.cc.s
@@ -307,8 +331,32 @@ model/dsdv-rtable.s: model/dsdv-rtable.cc.s
 
 # target to generate assembly for a file
 model/dsdv-rtable.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-obj.dir/build.make src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-rtable.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-obj.dir/build.make src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-rtable.cc.s
 .PHONY : model/dsdv-rtable.cc.s
+
+test/dsdv-testcase.o: test/dsdv-testcase.cc.o
+.PHONY : test/dsdv-testcase.o
+
+# target to build an object file
+test/dsdv-testcase.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-test.dir/build.make src/dsdv/CMakeFiles/libdsdv-test.dir/test/dsdv-testcase.cc.o
+.PHONY : test/dsdv-testcase.cc.o
+
+test/dsdv-testcase.i: test/dsdv-testcase.cc.i
+.PHONY : test/dsdv-testcase.i
+
+# target to preprocess a source file
+test/dsdv-testcase.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-test.dir/build.make src/dsdv/CMakeFiles/libdsdv-test.dir/test/dsdv-testcase.cc.i
+.PHONY : test/dsdv-testcase.cc.i
+
+test/dsdv-testcase.s: test/dsdv-testcase.cc.s
+.PHONY : test/dsdv-testcase.s
+
+# target to generate assembly for a file
+test/dsdv-testcase.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/dsdv/CMakeFiles/libdsdv-test.dir/build.make src/dsdv/CMakeFiles/libdsdv-test.dir/test/dsdv-testcase.cc.s
+.PHONY : test/dsdv-testcase.cc.s
 
 # Help Target
 help:
@@ -322,8 +370,10 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... libdsdv"
 	@echo "... libdsdv-obj"
+	@echo "... libdsdv-test"
 	@echo "... helper/dsdv-helper.o"
 	@echo "... helper/dsdv-helper.i"
 	@echo "... helper/dsdv-helper.s"
@@ -339,6 +389,9 @@ help:
 	@echo "... model/dsdv-rtable.o"
 	@echo "... model/dsdv-rtable.i"
 	@echo "... model/dsdv-rtable.s"
+	@echo "... test/dsdv-testcase.o"
+	@echo "... test/dsdv-testcase.i"
+	@echo "... test/dsdv-testcase.s"
 .PHONY : help
 
 
@@ -350,7 +403,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/VerifyGlobs.cmake
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/ns-3-dev/cmake-cache/CMakeFiles/VerifyGlobs.cmake
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -255,6 +255,7 @@ unset(below_minimum_msg)
 # for libraries)
 set(CXX_UNSUPPORTED_STANDARDS 98 11 14)
 set(CMAKE_CXX_STANDARD_MINIMUM 17)
+set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(LIB_AS_NEEDED_PRE)
@@ -1416,7 +1417,7 @@ macro(process_options)
       # If ccache is not enable or was not found, we can continue with
       # precompiled headers
       if((NOT ${NS3_CCACHE}) OR ("${CCACHE}" STREQUAL "CCACHE-NOTFOUND"))
-        set(PRECOMPILE_HEADERS_ENABLED ON)
+        set(PRECOMPILE_HEADERS_ENABLED OFF) #ON turned OFF)
         message(STATUS "Precompiled headers were enabled")
       else()
         # If ccache was found, we need to check if it is ccache >= 4
@@ -1432,7 +1433,7 @@ macro(process_options)
               "Precompiled headers are incompatible with ccache ${CMAKE_MATCH_1} and will be disabled."
             )
           else()
-            set(PRECOMPILE_HEADERS_ENABLED ON)
+            set(PRECOMPILE_HEADERS_ENABLED OFF)#ON turned OFF)
             message(STATUS "Precompiled headers were enabled.")
           endif()
         else()
@@ -1463,24 +1464,75 @@ macro(process_options)
       add_definitions(-Xclang -fno-validate-pch)
     endif()
     set(precompiled_header_libraries
-        <algorithm>
-        <cstdlib>
-        <cstring>
-        <exception>
-        <fstream>
-        <iostream>
-        <limits>
-        <list>
-        <map>
-        <math.h>
-        <ostream>
-        <set>
-        <sstream>
-        <stdint.h>
-        <stdlib.h>
-        <string>
-        <unordered_map>
-        <vector>
+<algorithm>
+<cstdlib>
+<cstring>
+<exception>
+<fstream>
+<iostream>
+<limits>
+<list>
+<map>
+<math.h>
+<ostream>
+<set>
+<sstream>
+<stdint.h>
+<stdlib.h>
+<string>
+<unordered_map>
+<vector>
+<mutex>
+<stdexcept>
+<unistd.h>
+<chrono>
+<thread>
+<cerrno>
+<cstdio>
+<arpa/inet.h>
+<dlfcn.h>
+<netinet/in.h>
+<sys/socket.h>
+<sys/types.h>
+<memory>
+<atomic>
+<csignal>
+<ctime>
+<optional>
+<utility>
+<endian.h>
+<functional>
+<cassert>
+<netdb.h>
+<netinet/sctp.h>
+<random>
+<cctype>
+<regex>
+<iomanip>
+<queue>
+<stack>
+<dirent.h>
+<net/if.h>
+<sys/ioctl.h>
+<sys/stat.h>
+<pthread.h>
+<errno.h>
+<limits.h>	
+<stdio.h>
+<cmath>
+<cstdint>
+<unordered_set>
+<array>
+<cstdarg>
+<fcntl.h>
+<ifaddrs.h>
+<linux/if_tun.h>
+<sys/select.h>
+<sys/time.h>
+<sys/wait.h>
+<string.h>
+<string.h> 
+<iterator>      
     )
     add_library(
       stdlib_pch${build_profile_suffix} OBJECT

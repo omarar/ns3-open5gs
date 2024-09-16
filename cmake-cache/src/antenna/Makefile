@@ -57,13 +57,23 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omar/Desktop/git_repo/ns3-open5gs
+CMAKE_SOURCE_DIR = /home/omar/ns-3-dev
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache
+CMAKE_BINARY_DIR = /home/omar/ns-3-dev/cmake-cache
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -132,14 +142,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -E cmake_progress_start /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/antenna//CMakeFiles/progress.marks
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/antenna/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles 0
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -E cmake_progress_start /home/omar/ns-3-dev/cmake-cache/CMakeFiles /home/omar/ns-3-dev/cmake-cache/src/antenna//CMakeFiles/progress.marks
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/antenna/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/omar/ns-3-dev/cmake-cache/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/antenna/clean
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/antenna/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,23 +158,23 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/antenna/preinstall
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/antenna/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/antenna/preinstall
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/antenna/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/VerifyGlobs.cmake
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/ns-3-dev/cmake-cache/CMakeFiles/VerifyGlobs.cmake
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/antenna/CMakeFiles/libantenna-obj.dir/rule:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/antenna/CMakeFiles/libantenna-obj.dir/rule
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/antenna/CMakeFiles/libantenna-obj.dir/rule
 .PHONY : src/antenna/CMakeFiles/libantenna-obj.dir/rule
 
 # Convenience name for target.
@@ -173,12 +183,12 @@ libantenna-obj: src/antenna/CMakeFiles/libantenna-obj.dir/rule
 
 # fast build rule for target.
 libantenna-obj/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/build
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/build
 .PHONY : libantenna-obj/fast
 
 # Convenience name for target.
 src/antenna/CMakeFiles/libantenna.dir/rule:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/antenna/CMakeFiles/libantenna.dir/rule
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/antenna/CMakeFiles/libantenna.dir/rule
 .PHONY : src/antenna/CMakeFiles/libantenna.dir/rule
 
 # Convenience name for target.
@@ -187,15 +197,29 @@ libantenna: src/antenna/CMakeFiles/libantenna.dir/rule
 
 # fast build rule for target.
 libantenna/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna.dir/build.make src/antenna/CMakeFiles/libantenna.dir/build
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna.dir/build.make src/antenna/CMakeFiles/libantenna.dir/build
 .PHONY : libantenna/fast
+
+# Convenience name for target.
+src/antenna/CMakeFiles/libantenna-test.dir/rule:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/antenna/CMakeFiles/libantenna-test.dir/rule
+.PHONY : src/antenna/CMakeFiles/libantenna-test.dir/rule
+
+# Convenience name for target.
+libantenna-test: src/antenna/CMakeFiles/libantenna-test.dir/rule
+.PHONY : libantenna-test
+
+# fast build rule for target.
+libantenna-test/fast:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-test.dir/build.make src/antenna/CMakeFiles/libantenna-test.dir/build
+.PHONY : libantenna-test/fast
 
 model/angles.o: model/angles.cc.o
 .PHONY : model/angles.o
 
 # target to build an object file
 model/angles.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/angles.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/angles.cc.o
 .PHONY : model/angles.cc.o
 
 model/angles.i: model/angles.cc.i
@@ -203,7 +227,7 @@ model/angles.i: model/angles.cc.i
 
 # target to preprocess a source file
 model/angles.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/angles.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/angles.cc.i
 .PHONY : model/angles.cc.i
 
 model/angles.s: model/angles.cc.s
@@ -211,7 +235,7 @@ model/angles.s: model/angles.cc.s
 
 # target to generate assembly for a file
 model/angles.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/angles.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/angles.cc.s
 .PHONY : model/angles.cc.s
 
 model/antenna-model.o: model/antenna-model.cc.o
@@ -219,7 +243,7 @@ model/antenna-model.o: model/antenna-model.cc.o
 
 # target to build an object file
 model/antenna-model.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/antenna-model.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/antenna-model.cc.o
 .PHONY : model/antenna-model.cc.o
 
 model/antenna-model.i: model/antenna-model.cc.i
@@ -227,7 +251,7 @@ model/antenna-model.i: model/antenna-model.cc.i
 
 # target to preprocess a source file
 model/antenna-model.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/antenna-model.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/antenna-model.cc.i
 .PHONY : model/antenna-model.cc.i
 
 model/antenna-model.s: model/antenna-model.cc.s
@@ -235,7 +259,7 @@ model/antenna-model.s: model/antenna-model.cc.s
 
 # target to generate assembly for a file
 model/antenna-model.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/antenna-model.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/antenna-model.cc.s
 .PHONY : model/antenna-model.cc.s
 
 model/cosine-antenna-model.o: model/cosine-antenna-model.cc.o
@@ -243,7 +267,7 @@ model/cosine-antenna-model.o: model/cosine-antenna-model.cc.o
 
 # target to build an object file
 model/cosine-antenna-model.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/cosine-antenna-model.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/cosine-antenna-model.cc.o
 .PHONY : model/cosine-antenna-model.cc.o
 
 model/cosine-antenna-model.i: model/cosine-antenna-model.cc.i
@@ -251,7 +275,7 @@ model/cosine-antenna-model.i: model/cosine-antenna-model.cc.i
 
 # target to preprocess a source file
 model/cosine-antenna-model.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/cosine-antenna-model.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/cosine-antenna-model.cc.i
 .PHONY : model/cosine-antenna-model.cc.i
 
 model/cosine-antenna-model.s: model/cosine-antenna-model.cc.s
@@ -259,7 +283,7 @@ model/cosine-antenna-model.s: model/cosine-antenna-model.cc.s
 
 # target to generate assembly for a file
 model/cosine-antenna-model.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/cosine-antenna-model.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/cosine-antenna-model.cc.s
 .PHONY : model/cosine-antenna-model.cc.s
 
 model/isotropic-antenna-model.o: model/isotropic-antenna-model.cc.o
@@ -267,7 +291,7 @@ model/isotropic-antenna-model.o: model/isotropic-antenna-model.cc.o
 
 # target to build an object file
 model/isotropic-antenna-model.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/isotropic-antenna-model.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/isotropic-antenna-model.cc.o
 .PHONY : model/isotropic-antenna-model.cc.o
 
 model/isotropic-antenna-model.i: model/isotropic-antenna-model.cc.i
@@ -275,7 +299,7 @@ model/isotropic-antenna-model.i: model/isotropic-antenna-model.cc.i
 
 # target to preprocess a source file
 model/isotropic-antenna-model.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/isotropic-antenna-model.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/isotropic-antenna-model.cc.i
 .PHONY : model/isotropic-antenna-model.cc.i
 
 model/isotropic-antenna-model.s: model/isotropic-antenna-model.cc.s
@@ -283,7 +307,7 @@ model/isotropic-antenna-model.s: model/isotropic-antenna-model.cc.s
 
 # target to generate assembly for a file
 model/isotropic-antenna-model.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/isotropic-antenna-model.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/isotropic-antenna-model.cc.s
 .PHONY : model/isotropic-antenna-model.cc.s
 
 model/parabolic-antenna-model.o: model/parabolic-antenna-model.cc.o
@@ -291,7 +315,7 @@ model/parabolic-antenna-model.o: model/parabolic-antenna-model.cc.o
 
 # target to build an object file
 model/parabolic-antenna-model.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/parabolic-antenna-model.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/parabolic-antenna-model.cc.o
 .PHONY : model/parabolic-antenna-model.cc.o
 
 model/parabolic-antenna-model.i: model/parabolic-antenna-model.cc.i
@@ -299,7 +323,7 @@ model/parabolic-antenna-model.i: model/parabolic-antenna-model.cc.i
 
 # target to preprocess a source file
 model/parabolic-antenna-model.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/parabolic-antenna-model.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/parabolic-antenna-model.cc.i
 .PHONY : model/parabolic-antenna-model.cc.i
 
 model/parabolic-antenna-model.s: model/parabolic-antenna-model.cc.s
@@ -307,7 +331,7 @@ model/parabolic-antenna-model.s: model/parabolic-antenna-model.cc.s
 
 # target to generate assembly for a file
 model/parabolic-antenna-model.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/parabolic-antenna-model.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/parabolic-antenna-model.cc.s
 .PHONY : model/parabolic-antenna-model.cc.s
 
 model/phased-array-model.o: model/phased-array-model.cc.o
@@ -315,7 +339,7 @@ model/phased-array-model.o: model/phased-array-model.cc.o
 
 # target to build an object file
 model/phased-array-model.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/phased-array-model.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/phased-array-model.cc.o
 .PHONY : model/phased-array-model.cc.o
 
 model/phased-array-model.i: model/phased-array-model.cc.i
@@ -323,7 +347,7 @@ model/phased-array-model.i: model/phased-array-model.cc.i
 
 # target to preprocess a source file
 model/phased-array-model.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/phased-array-model.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/phased-array-model.cc.i
 .PHONY : model/phased-array-model.cc.i
 
 model/phased-array-model.s: model/phased-array-model.cc.s
@@ -331,7 +355,7 @@ model/phased-array-model.s: model/phased-array-model.cc.s
 
 # target to generate assembly for a file
 model/phased-array-model.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/phased-array-model.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/phased-array-model.cc.s
 .PHONY : model/phased-array-model.cc.s
 
 model/three-gpp-antenna-model.o: model/three-gpp-antenna-model.cc.o
@@ -339,7 +363,7 @@ model/three-gpp-antenna-model.o: model/three-gpp-antenna-model.cc.o
 
 # target to build an object file
 model/three-gpp-antenna-model.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/three-gpp-antenna-model.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/three-gpp-antenna-model.cc.o
 .PHONY : model/three-gpp-antenna-model.cc.o
 
 model/three-gpp-antenna-model.i: model/three-gpp-antenna-model.cc.i
@@ -347,7 +371,7 @@ model/three-gpp-antenna-model.i: model/three-gpp-antenna-model.cc.i
 
 # target to preprocess a source file
 model/three-gpp-antenna-model.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/three-gpp-antenna-model.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/three-gpp-antenna-model.cc.i
 .PHONY : model/three-gpp-antenna-model.cc.i
 
 model/three-gpp-antenna-model.s: model/three-gpp-antenna-model.cc.s
@@ -355,7 +379,7 @@ model/three-gpp-antenna-model.s: model/three-gpp-antenna-model.cc.s
 
 # target to generate assembly for a file
 model/three-gpp-antenna-model.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/three-gpp-antenna-model.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/three-gpp-antenna-model.cc.s
 .PHONY : model/three-gpp-antenna-model.cc.s
 
 model/uniform-planar-array.o: model/uniform-planar-array.cc.o
@@ -363,7 +387,7 @@ model/uniform-planar-array.o: model/uniform-planar-array.cc.o
 
 # target to build an object file
 model/uniform-planar-array.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/uniform-planar-array.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/uniform-planar-array.cc.o
 .PHONY : model/uniform-planar-array.cc.o
 
 model/uniform-planar-array.i: model/uniform-planar-array.cc.i
@@ -371,7 +395,7 @@ model/uniform-planar-array.i: model/uniform-planar-array.cc.i
 
 # target to preprocess a source file
 model/uniform-planar-array.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/uniform-planar-array.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/uniform-planar-array.cc.i
 .PHONY : model/uniform-planar-array.cc.i
 
 model/uniform-planar-array.s: model/uniform-planar-array.cc.s
@@ -379,8 +403,152 @@ model/uniform-planar-array.s: model/uniform-planar-array.cc.s
 
 # target to generate assembly for a file
 model/uniform-planar-array.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/uniform-planar-array.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-obj.dir/build.make src/antenna/CMakeFiles/libantenna-obj.dir/model/uniform-planar-array.cc.s
 .PHONY : model/uniform-planar-array.cc.s
+
+test/test-angles.o: test/test-angles.cc.o
+.PHONY : test/test-angles.o
+
+# target to build an object file
+test/test-angles.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-test.dir/build.make src/antenna/CMakeFiles/libantenna-test.dir/test/test-angles.cc.o
+.PHONY : test/test-angles.cc.o
+
+test/test-angles.i: test/test-angles.cc.i
+.PHONY : test/test-angles.i
+
+# target to preprocess a source file
+test/test-angles.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-test.dir/build.make src/antenna/CMakeFiles/libantenna-test.dir/test/test-angles.cc.i
+.PHONY : test/test-angles.cc.i
+
+test/test-angles.s: test/test-angles.cc.s
+.PHONY : test/test-angles.s
+
+# target to generate assembly for a file
+test/test-angles.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-test.dir/build.make src/antenna/CMakeFiles/libantenna-test.dir/test/test-angles.cc.s
+.PHONY : test/test-angles.cc.s
+
+test/test-cosine-antenna.o: test/test-cosine-antenna.cc.o
+.PHONY : test/test-cosine-antenna.o
+
+# target to build an object file
+test/test-cosine-antenna.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-test.dir/build.make src/antenna/CMakeFiles/libantenna-test.dir/test/test-cosine-antenna.cc.o
+.PHONY : test/test-cosine-antenna.cc.o
+
+test/test-cosine-antenna.i: test/test-cosine-antenna.cc.i
+.PHONY : test/test-cosine-antenna.i
+
+# target to preprocess a source file
+test/test-cosine-antenna.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-test.dir/build.make src/antenna/CMakeFiles/libantenna-test.dir/test/test-cosine-antenna.cc.i
+.PHONY : test/test-cosine-antenna.cc.i
+
+test/test-cosine-antenna.s: test/test-cosine-antenna.cc.s
+.PHONY : test/test-cosine-antenna.s
+
+# target to generate assembly for a file
+test/test-cosine-antenna.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-test.dir/build.make src/antenna/CMakeFiles/libantenna-test.dir/test/test-cosine-antenna.cc.s
+.PHONY : test/test-cosine-antenna.cc.s
+
+test/test-degrees-radians.o: test/test-degrees-radians.cc.o
+.PHONY : test/test-degrees-radians.o
+
+# target to build an object file
+test/test-degrees-radians.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-test.dir/build.make src/antenna/CMakeFiles/libantenna-test.dir/test/test-degrees-radians.cc.o
+.PHONY : test/test-degrees-radians.cc.o
+
+test/test-degrees-radians.i: test/test-degrees-radians.cc.i
+.PHONY : test/test-degrees-radians.i
+
+# target to preprocess a source file
+test/test-degrees-radians.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-test.dir/build.make src/antenna/CMakeFiles/libantenna-test.dir/test/test-degrees-radians.cc.i
+.PHONY : test/test-degrees-radians.cc.i
+
+test/test-degrees-radians.s: test/test-degrees-radians.cc.s
+.PHONY : test/test-degrees-radians.s
+
+# target to generate assembly for a file
+test/test-degrees-radians.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-test.dir/build.make src/antenna/CMakeFiles/libantenna-test.dir/test/test-degrees-radians.cc.s
+.PHONY : test/test-degrees-radians.cc.s
+
+test/test-isotropic-antenna.o: test/test-isotropic-antenna.cc.o
+.PHONY : test/test-isotropic-antenna.o
+
+# target to build an object file
+test/test-isotropic-antenna.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-test.dir/build.make src/antenna/CMakeFiles/libantenna-test.dir/test/test-isotropic-antenna.cc.o
+.PHONY : test/test-isotropic-antenna.cc.o
+
+test/test-isotropic-antenna.i: test/test-isotropic-antenna.cc.i
+.PHONY : test/test-isotropic-antenna.i
+
+# target to preprocess a source file
+test/test-isotropic-antenna.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-test.dir/build.make src/antenna/CMakeFiles/libantenna-test.dir/test/test-isotropic-antenna.cc.i
+.PHONY : test/test-isotropic-antenna.cc.i
+
+test/test-isotropic-antenna.s: test/test-isotropic-antenna.cc.s
+.PHONY : test/test-isotropic-antenna.s
+
+# target to generate assembly for a file
+test/test-isotropic-antenna.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-test.dir/build.make src/antenna/CMakeFiles/libantenna-test.dir/test/test-isotropic-antenna.cc.s
+.PHONY : test/test-isotropic-antenna.cc.s
+
+test/test-parabolic-antenna.o: test/test-parabolic-antenna.cc.o
+.PHONY : test/test-parabolic-antenna.o
+
+# target to build an object file
+test/test-parabolic-antenna.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-test.dir/build.make src/antenna/CMakeFiles/libantenna-test.dir/test/test-parabolic-antenna.cc.o
+.PHONY : test/test-parabolic-antenna.cc.o
+
+test/test-parabolic-antenna.i: test/test-parabolic-antenna.cc.i
+.PHONY : test/test-parabolic-antenna.i
+
+# target to preprocess a source file
+test/test-parabolic-antenna.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-test.dir/build.make src/antenna/CMakeFiles/libantenna-test.dir/test/test-parabolic-antenna.cc.i
+.PHONY : test/test-parabolic-antenna.cc.i
+
+test/test-parabolic-antenna.s: test/test-parabolic-antenna.cc.s
+.PHONY : test/test-parabolic-antenna.s
+
+# target to generate assembly for a file
+test/test-parabolic-antenna.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-test.dir/build.make src/antenna/CMakeFiles/libantenna-test.dir/test/test-parabolic-antenna.cc.s
+.PHONY : test/test-parabolic-antenna.cc.s
+
+test/test-uniform-planar-array.o: test/test-uniform-planar-array.cc.o
+.PHONY : test/test-uniform-planar-array.o
+
+# target to build an object file
+test/test-uniform-planar-array.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-test.dir/build.make src/antenna/CMakeFiles/libantenna-test.dir/test/test-uniform-planar-array.cc.o
+.PHONY : test/test-uniform-planar-array.cc.o
+
+test/test-uniform-planar-array.i: test/test-uniform-planar-array.cc.i
+.PHONY : test/test-uniform-planar-array.i
+
+# target to preprocess a source file
+test/test-uniform-planar-array.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-test.dir/build.make src/antenna/CMakeFiles/libantenna-test.dir/test/test-uniform-planar-array.cc.i
+.PHONY : test/test-uniform-planar-array.cc.i
+
+test/test-uniform-planar-array.s: test/test-uniform-planar-array.cc.s
+.PHONY : test/test-uniform-planar-array.s
+
+# target to generate assembly for a file
+test/test-uniform-planar-array.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/antenna/CMakeFiles/libantenna-test.dir/build.make src/antenna/CMakeFiles/libantenna-test.dir/test/test-uniform-planar-array.cc.s
+.PHONY : test/test-uniform-planar-array.cc.s
 
 # Help Target
 help:
@@ -394,8 +562,10 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... libantenna"
 	@echo "... libantenna-obj"
+	@echo "... libantenna-test"
 	@echo "... model/angles.o"
 	@echo "... model/angles.i"
 	@echo "... model/angles.s"
@@ -420,6 +590,24 @@ help:
 	@echo "... model/uniform-planar-array.o"
 	@echo "... model/uniform-planar-array.i"
 	@echo "... model/uniform-planar-array.s"
+	@echo "... test/test-angles.o"
+	@echo "... test/test-angles.i"
+	@echo "... test/test-angles.s"
+	@echo "... test/test-cosine-antenna.o"
+	@echo "... test/test-cosine-antenna.i"
+	@echo "... test/test-cosine-antenna.s"
+	@echo "... test/test-degrees-radians.o"
+	@echo "... test/test-degrees-radians.i"
+	@echo "... test/test-degrees-radians.s"
+	@echo "... test/test-isotropic-antenna.o"
+	@echo "... test/test-isotropic-antenna.i"
+	@echo "... test/test-isotropic-antenna.s"
+	@echo "... test/test-parabolic-antenna.o"
+	@echo "... test/test-parabolic-antenna.i"
+	@echo "... test/test-parabolic-antenna.s"
+	@echo "... test/test-uniform-planar-array.o"
+	@echo "... test/test-uniform-planar-array.i"
+	@echo "... test/test-uniform-planar-array.s"
 .PHONY : help
 
 
@@ -431,7 +619,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/VerifyGlobs.cmake
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/ns-3-dev/cmake-cache/CMakeFiles/VerifyGlobs.cmake
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

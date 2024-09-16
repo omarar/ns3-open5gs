@@ -1,6 +1,6 @@
 ---- Summary of ns-3 settings:
 Build profile                 : default
-Build directory               : /home/omar/Desktop/git_repo/ns3-open5gs/build
+Build directory               : /home/omar/ns-3-dev/build
 Build with runtime asserts    : [32mON[0m
 Build with runtime logging    : [32mON[0m
 Build version embedding       : OFF (not requested)
@@ -8,7 +8,7 @@ BRITE Integration             : [31mOFF (missing dependency)[0m
 DES Metrics event collection  : OFF (not requested)
 DPDK NetDevice                : OFF (not requested)
 Emulation FdNetDevice         : [32mON[0m
-Examples                      : OFF (not requested)
+Examples                      : [32mON[0m
 File descriptor NetDevice     : [32mON[0m
 GNU Scientific Library (GSL)  : [32mON[0m
 GtkConfigStore                : [31mOFF (missing dependency)[0m
@@ -23,26 +23,26 @@ SQLite support                : [32mON[0m
 Eigen3 support                : [31mOFF (missing dependency)[0m
 Tap Bridge                    : [32mON[0m
 Tap FdNetDevice               : [32mON[0m
-Tests                         : OFF (not requested)
+Tests                         : [32mON[0m
 
 
 Modules configured to be built:
-antenna                   aodv                      applications              
-bridge                    buildings                 config-store              
-core                      csma                      csma-layout               
-dsdv                      dsr                       energy                    
-fd-net-device             flow-monitor              internet                  
-internet-apps             lr-wpan                   lte                       
-mesh                      mobility                  netanim                   
-network                   nix-vector-routing        nr                        
-olsr                      point-to-point            point-to-point-layout     
-propagation               sixlowpan                 spectrum                  
-stats                     tap-bridge                topology-read             
-traffic-control           uan                       virtual-net-device        
-wifi                      wimax                     
+NGAP                      antenna                   aodv                      
+applications              bridge                    buildings                 
+config-store              core                      csma                      
+csma-layout               dsdv                      dsr                       
+energy                    fd-net-device             flow-monitor              
+internet                  internet-apps             lr-wpan                   
+lte                       mesh                      mobility                  
+netanim                   network                   nix-vector-routing        
+nr                        olsr                      point-to-point            
+point-to-point-layout     propagation               sixlowpan                 
+spectrum                  stats                     tap-bridge                
+test                      topology-read             traffic-control           
+uan                       virtual-net-device        wifi                      
+wimax                     
 
 Modules that cannot be built:
 brite                     click                     mpi                       
-openflow                  test                      visualizer                
-
+openflow                  visualizer                
 

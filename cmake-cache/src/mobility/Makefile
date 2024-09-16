@@ -57,13 +57,23 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omar/Desktop/git_repo/ns3-open5gs
+CMAKE_SOURCE_DIR = /home/omar/ns-3-dev
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache
+CMAKE_BINARY_DIR = /home/omar/ns-3-dev/cmake-cache
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -132,14 +142,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -E cmake_progress_start /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/src/mobility//CMakeFiles/progress.marks
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/mobility/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles 0
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -E cmake_progress_start /home/omar/ns-3-dev/cmake-cache/CMakeFiles /home/omar/ns-3-dev/cmake-cache/src/mobility//CMakeFiles/progress.marks
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/mobility/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/omar/ns-3-dev/cmake-cache/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/mobility/clean
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/mobility/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,23 +158,23 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/mobility/preinstall
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/mobility/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/mobility/preinstall
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/mobility/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/VerifyGlobs.cmake
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/ns-3-dev/cmake-cache/CMakeFiles/VerifyGlobs.cmake
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/mobility/CMakeFiles/libmobility-obj.dir/rule:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/mobility/CMakeFiles/libmobility-obj.dir/rule
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/mobility/CMakeFiles/libmobility-obj.dir/rule
 .PHONY : src/mobility/CMakeFiles/libmobility-obj.dir/rule
 
 # Convenience name for target.
@@ -173,12 +183,12 @@ libmobility-obj: src/mobility/CMakeFiles/libmobility-obj.dir/rule
 
 # fast build rule for target.
 libmobility-obj/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/build
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/build
 .PHONY : libmobility-obj/fast
 
 # Convenience name for target.
 src/mobility/CMakeFiles/libmobility.dir/rule:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/mobility/CMakeFiles/libmobility.dir/rule
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/mobility/CMakeFiles/libmobility.dir/rule
 .PHONY : src/mobility/CMakeFiles/libmobility.dir/rule
 
 # Convenience name for target.
@@ -187,15 +197,29 @@ libmobility: src/mobility/CMakeFiles/libmobility.dir/rule
 
 # fast build rule for target.
 libmobility/fast:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility.dir/build.make src/mobility/CMakeFiles/libmobility.dir/build
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility.dir/build.make src/mobility/CMakeFiles/libmobility.dir/build
 .PHONY : libmobility/fast
+
+# Convenience name for target.
+src/mobility/CMakeFiles/libmobility-test.dir/rule:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/mobility/CMakeFiles/libmobility-test.dir/rule
+.PHONY : src/mobility/CMakeFiles/libmobility-test.dir/rule
+
+# Convenience name for target.
+libmobility-test: src/mobility/CMakeFiles/libmobility-test.dir/rule
+.PHONY : libmobility-test
+
+# fast build rule for target.
+libmobility-test/fast:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-test.dir/build.make src/mobility/CMakeFiles/libmobility-test.dir/build
+.PHONY : libmobility-test/fast
 
 helper/group-mobility-helper.o: helper/group-mobility-helper.cc.o
 .PHONY : helper/group-mobility-helper.o
 
 # target to build an object file
 helper/group-mobility-helper.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/helper/group-mobility-helper.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/helper/group-mobility-helper.cc.o
 .PHONY : helper/group-mobility-helper.cc.o
 
 helper/group-mobility-helper.i: helper/group-mobility-helper.cc.i
@@ -203,7 +227,7 @@ helper/group-mobility-helper.i: helper/group-mobility-helper.cc.i
 
 # target to preprocess a source file
 helper/group-mobility-helper.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/helper/group-mobility-helper.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/helper/group-mobility-helper.cc.i
 .PHONY : helper/group-mobility-helper.cc.i
 
 helper/group-mobility-helper.s: helper/group-mobility-helper.cc.s
@@ -211,7 +235,7 @@ helper/group-mobility-helper.s: helper/group-mobility-helper.cc.s
 
 # target to generate assembly for a file
 helper/group-mobility-helper.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/helper/group-mobility-helper.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/helper/group-mobility-helper.cc.s
 .PHONY : helper/group-mobility-helper.cc.s
 
 helper/mobility-helper.o: helper/mobility-helper.cc.o
@@ -219,7 +243,7 @@ helper/mobility-helper.o: helper/mobility-helper.cc.o
 
 # target to build an object file
 helper/mobility-helper.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/helper/mobility-helper.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/helper/mobility-helper.cc.o
 .PHONY : helper/mobility-helper.cc.o
 
 helper/mobility-helper.i: helper/mobility-helper.cc.i
@@ -227,7 +251,7 @@ helper/mobility-helper.i: helper/mobility-helper.cc.i
 
 # target to preprocess a source file
 helper/mobility-helper.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/helper/mobility-helper.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/helper/mobility-helper.cc.i
 .PHONY : helper/mobility-helper.cc.i
 
 helper/mobility-helper.s: helper/mobility-helper.cc.s
@@ -235,7 +259,7 @@ helper/mobility-helper.s: helper/mobility-helper.cc.s
 
 # target to generate assembly for a file
 helper/mobility-helper.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/helper/mobility-helper.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/helper/mobility-helper.cc.s
 .PHONY : helper/mobility-helper.cc.s
 
 helper/ns2-mobility-helper.o: helper/ns2-mobility-helper.cc.o
@@ -243,7 +267,7 @@ helper/ns2-mobility-helper.o: helper/ns2-mobility-helper.cc.o
 
 # target to build an object file
 helper/ns2-mobility-helper.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/helper/ns2-mobility-helper.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/helper/ns2-mobility-helper.cc.o
 .PHONY : helper/ns2-mobility-helper.cc.o
 
 helper/ns2-mobility-helper.i: helper/ns2-mobility-helper.cc.i
@@ -251,7 +275,7 @@ helper/ns2-mobility-helper.i: helper/ns2-mobility-helper.cc.i
 
 # target to preprocess a source file
 helper/ns2-mobility-helper.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/helper/ns2-mobility-helper.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/helper/ns2-mobility-helper.cc.i
 .PHONY : helper/ns2-mobility-helper.cc.i
 
 helper/ns2-mobility-helper.s: helper/ns2-mobility-helper.cc.s
@@ -259,7 +283,7 @@ helper/ns2-mobility-helper.s: helper/ns2-mobility-helper.cc.s
 
 # target to generate assembly for a file
 helper/ns2-mobility-helper.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/helper/ns2-mobility-helper.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/helper/ns2-mobility-helper.cc.s
 .PHONY : helper/ns2-mobility-helper.cc.s
 
 model/box.o: model/box.cc.o
@@ -267,7 +291,7 @@ model/box.o: model/box.cc.o
 
 # target to build an object file
 model/box.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/box.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/box.cc.o
 .PHONY : model/box.cc.o
 
 model/box.i: model/box.cc.i
@@ -275,7 +299,7 @@ model/box.i: model/box.cc.i
 
 # target to preprocess a source file
 model/box.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/box.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/box.cc.i
 .PHONY : model/box.cc.i
 
 model/box.s: model/box.cc.s
@@ -283,7 +307,7 @@ model/box.s: model/box.cc.s
 
 # target to generate assembly for a file
 model/box.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/box.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/box.cc.s
 .PHONY : model/box.cc.s
 
 model/constant-acceleration-mobility-model.o: model/constant-acceleration-mobility-model.cc.o
@@ -291,7 +315,7 @@ model/constant-acceleration-mobility-model.o: model/constant-acceleration-mobili
 
 # target to build an object file
 model/constant-acceleration-mobility-model.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/constant-acceleration-mobility-model.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/constant-acceleration-mobility-model.cc.o
 .PHONY : model/constant-acceleration-mobility-model.cc.o
 
 model/constant-acceleration-mobility-model.i: model/constant-acceleration-mobility-model.cc.i
@@ -299,7 +323,7 @@ model/constant-acceleration-mobility-model.i: model/constant-acceleration-mobili
 
 # target to preprocess a source file
 model/constant-acceleration-mobility-model.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/constant-acceleration-mobility-model.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/constant-acceleration-mobility-model.cc.i
 .PHONY : model/constant-acceleration-mobility-model.cc.i
 
 model/constant-acceleration-mobility-model.s: model/constant-acceleration-mobility-model.cc.s
@@ -307,7 +331,7 @@ model/constant-acceleration-mobility-model.s: model/constant-acceleration-mobili
 
 # target to generate assembly for a file
 model/constant-acceleration-mobility-model.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/constant-acceleration-mobility-model.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/constant-acceleration-mobility-model.cc.s
 .PHONY : model/constant-acceleration-mobility-model.cc.s
 
 model/constant-position-mobility-model.o: model/constant-position-mobility-model.cc.o
@@ -315,7 +339,7 @@ model/constant-position-mobility-model.o: model/constant-position-mobility-model
 
 # target to build an object file
 model/constant-position-mobility-model.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/constant-position-mobility-model.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/constant-position-mobility-model.cc.o
 .PHONY : model/constant-position-mobility-model.cc.o
 
 model/constant-position-mobility-model.i: model/constant-position-mobility-model.cc.i
@@ -323,7 +347,7 @@ model/constant-position-mobility-model.i: model/constant-position-mobility-model
 
 # target to preprocess a source file
 model/constant-position-mobility-model.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/constant-position-mobility-model.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/constant-position-mobility-model.cc.i
 .PHONY : model/constant-position-mobility-model.cc.i
 
 model/constant-position-mobility-model.s: model/constant-position-mobility-model.cc.s
@@ -331,7 +355,7 @@ model/constant-position-mobility-model.s: model/constant-position-mobility-model
 
 # target to generate assembly for a file
 model/constant-position-mobility-model.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/constant-position-mobility-model.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/constant-position-mobility-model.cc.s
 .PHONY : model/constant-position-mobility-model.cc.s
 
 model/constant-velocity-helper.o: model/constant-velocity-helper.cc.o
@@ -339,7 +363,7 @@ model/constant-velocity-helper.o: model/constant-velocity-helper.cc.o
 
 # target to build an object file
 model/constant-velocity-helper.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/constant-velocity-helper.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/constant-velocity-helper.cc.o
 .PHONY : model/constant-velocity-helper.cc.o
 
 model/constant-velocity-helper.i: model/constant-velocity-helper.cc.i
@@ -347,7 +371,7 @@ model/constant-velocity-helper.i: model/constant-velocity-helper.cc.i
 
 # target to preprocess a source file
 model/constant-velocity-helper.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/constant-velocity-helper.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/constant-velocity-helper.cc.i
 .PHONY : model/constant-velocity-helper.cc.i
 
 model/constant-velocity-helper.s: model/constant-velocity-helper.cc.s
@@ -355,7 +379,7 @@ model/constant-velocity-helper.s: model/constant-velocity-helper.cc.s
 
 # target to generate assembly for a file
 model/constant-velocity-helper.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/constant-velocity-helper.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/constant-velocity-helper.cc.s
 .PHONY : model/constant-velocity-helper.cc.s
 
 model/constant-velocity-mobility-model.o: model/constant-velocity-mobility-model.cc.o
@@ -363,7 +387,7 @@ model/constant-velocity-mobility-model.o: model/constant-velocity-mobility-model
 
 # target to build an object file
 model/constant-velocity-mobility-model.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/constant-velocity-mobility-model.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/constant-velocity-mobility-model.cc.o
 .PHONY : model/constant-velocity-mobility-model.cc.o
 
 model/constant-velocity-mobility-model.i: model/constant-velocity-mobility-model.cc.i
@@ -371,7 +395,7 @@ model/constant-velocity-mobility-model.i: model/constant-velocity-mobility-model
 
 # target to preprocess a source file
 model/constant-velocity-mobility-model.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/constant-velocity-mobility-model.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/constant-velocity-mobility-model.cc.i
 .PHONY : model/constant-velocity-mobility-model.cc.i
 
 model/constant-velocity-mobility-model.s: model/constant-velocity-mobility-model.cc.s
@@ -379,7 +403,7 @@ model/constant-velocity-mobility-model.s: model/constant-velocity-mobility-model
 
 # target to generate assembly for a file
 model/constant-velocity-mobility-model.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/constant-velocity-mobility-model.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/constant-velocity-mobility-model.cc.s
 .PHONY : model/constant-velocity-mobility-model.cc.s
 
 model/gauss-markov-mobility-model.o: model/gauss-markov-mobility-model.cc.o
@@ -387,7 +411,7 @@ model/gauss-markov-mobility-model.o: model/gauss-markov-mobility-model.cc.o
 
 # target to build an object file
 model/gauss-markov-mobility-model.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/gauss-markov-mobility-model.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/gauss-markov-mobility-model.cc.o
 .PHONY : model/gauss-markov-mobility-model.cc.o
 
 model/gauss-markov-mobility-model.i: model/gauss-markov-mobility-model.cc.i
@@ -395,7 +419,7 @@ model/gauss-markov-mobility-model.i: model/gauss-markov-mobility-model.cc.i
 
 # target to preprocess a source file
 model/gauss-markov-mobility-model.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/gauss-markov-mobility-model.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/gauss-markov-mobility-model.cc.i
 .PHONY : model/gauss-markov-mobility-model.cc.i
 
 model/gauss-markov-mobility-model.s: model/gauss-markov-mobility-model.cc.s
@@ -403,7 +427,7 @@ model/gauss-markov-mobility-model.s: model/gauss-markov-mobility-model.cc.s
 
 # target to generate assembly for a file
 model/gauss-markov-mobility-model.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/gauss-markov-mobility-model.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/gauss-markov-mobility-model.cc.s
 .PHONY : model/gauss-markov-mobility-model.cc.s
 
 model/geographic-positions.o: model/geographic-positions.cc.o
@@ -411,7 +435,7 @@ model/geographic-positions.o: model/geographic-positions.cc.o
 
 # target to build an object file
 model/geographic-positions.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/geographic-positions.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/geographic-positions.cc.o
 .PHONY : model/geographic-positions.cc.o
 
 model/geographic-positions.i: model/geographic-positions.cc.i
@@ -419,7 +443,7 @@ model/geographic-positions.i: model/geographic-positions.cc.i
 
 # target to preprocess a source file
 model/geographic-positions.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/geographic-positions.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/geographic-positions.cc.i
 .PHONY : model/geographic-positions.cc.i
 
 model/geographic-positions.s: model/geographic-positions.cc.s
@@ -427,7 +451,7 @@ model/geographic-positions.s: model/geographic-positions.cc.s
 
 # target to generate assembly for a file
 model/geographic-positions.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/geographic-positions.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/geographic-positions.cc.s
 .PHONY : model/geographic-positions.cc.s
 
 model/hierarchical-mobility-model.o: model/hierarchical-mobility-model.cc.o
@@ -435,7 +459,7 @@ model/hierarchical-mobility-model.o: model/hierarchical-mobility-model.cc.o
 
 # target to build an object file
 model/hierarchical-mobility-model.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/hierarchical-mobility-model.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/hierarchical-mobility-model.cc.o
 .PHONY : model/hierarchical-mobility-model.cc.o
 
 model/hierarchical-mobility-model.i: model/hierarchical-mobility-model.cc.i
@@ -443,7 +467,7 @@ model/hierarchical-mobility-model.i: model/hierarchical-mobility-model.cc.i
 
 # target to preprocess a source file
 model/hierarchical-mobility-model.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/hierarchical-mobility-model.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/hierarchical-mobility-model.cc.i
 .PHONY : model/hierarchical-mobility-model.cc.i
 
 model/hierarchical-mobility-model.s: model/hierarchical-mobility-model.cc.s
@@ -451,7 +475,7 @@ model/hierarchical-mobility-model.s: model/hierarchical-mobility-model.cc.s
 
 # target to generate assembly for a file
 model/hierarchical-mobility-model.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/hierarchical-mobility-model.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/hierarchical-mobility-model.cc.s
 .PHONY : model/hierarchical-mobility-model.cc.s
 
 model/mobility-model.o: model/mobility-model.cc.o
@@ -459,7 +483,7 @@ model/mobility-model.o: model/mobility-model.cc.o
 
 # target to build an object file
 model/mobility-model.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/mobility-model.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/mobility-model.cc.o
 .PHONY : model/mobility-model.cc.o
 
 model/mobility-model.i: model/mobility-model.cc.i
@@ -467,7 +491,7 @@ model/mobility-model.i: model/mobility-model.cc.i
 
 # target to preprocess a source file
 model/mobility-model.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/mobility-model.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/mobility-model.cc.i
 .PHONY : model/mobility-model.cc.i
 
 model/mobility-model.s: model/mobility-model.cc.s
@@ -475,7 +499,7 @@ model/mobility-model.s: model/mobility-model.cc.s
 
 # target to generate assembly for a file
 model/mobility-model.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/mobility-model.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/mobility-model.cc.s
 .PHONY : model/mobility-model.cc.s
 
 model/position-allocator.o: model/position-allocator.cc.o
@@ -483,7 +507,7 @@ model/position-allocator.o: model/position-allocator.cc.o
 
 # target to build an object file
 model/position-allocator.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/position-allocator.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/position-allocator.cc.o
 .PHONY : model/position-allocator.cc.o
 
 model/position-allocator.i: model/position-allocator.cc.i
@@ -491,7 +515,7 @@ model/position-allocator.i: model/position-allocator.cc.i
 
 # target to preprocess a source file
 model/position-allocator.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/position-allocator.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/position-allocator.cc.i
 .PHONY : model/position-allocator.cc.i
 
 model/position-allocator.s: model/position-allocator.cc.s
@@ -499,7 +523,7 @@ model/position-allocator.s: model/position-allocator.cc.s
 
 # target to generate assembly for a file
 model/position-allocator.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/position-allocator.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/position-allocator.cc.s
 .PHONY : model/position-allocator.cc.s
 
 model/random-direction-2d-mobility-model.o: model/random-direction-2d-mobility-model.cc.o
@@ -507,7 +531,7 @@ model/random-direction-2d-mobility-model.o: model/random-direction-2d-mobility-m
 
 # target to build an object file
 model/random-direction-2d-mobility-model.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/random-direction-2d-mobility-model.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/random-direction-2d-mobility-model.cc.o
 .PHONY : model/random-direction-2d-mobility-model.cc.o
 
 model/random-direction-2d-mobility-model.i: model/random-direction-2d-mobility-model.cc.i
@@ -515,7 +539,7 @@ model/random-direction-2d-mobility-model.i: model/random-direction-2d-mobility-m
 
 # target to preprocess a source file
 model/random-direction-2d-mobility-model.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/random-direction-2d-mobility-model.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/random-direction-2d-mobility-model.cc.i
 .PHONY : model/random-direction-2d-mobility-model.cc.i
 
 model/random-direction-2d-mobility-model.s: model/random-direction-2d-mobility-model.cc.s
@@ -523,7 +547,7 @@ model/random-direction-2d-mobility-model.s: model/random-direction-2d-mobility-m
 
 # target to generate assembly for a file
 model/random-direction-2d-mobility-model.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/random-direction-2d-mobility-model.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/random-direction-2d-mobility-model.cc.s
 .PHONY : model/random-direction-2d-mobility-model.cc.s
 
 model/random-walk-2d-mobility-model.o: model/random-walk-2d-mobility-model.cc.o
@@ -531,7 +555,7 @@ model/random-walk-2d-mobility-model.o: model/random-walk-2d-mobility-model.cc.o
 
 # target to build an object file
 model/random-walk-2d-mobility-model.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/random-walk-2d-mobility-model.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/random-walk-2d-mobility-model.cc.o
 .PHONY : model/random-walk-2d-mobility-model.cc.o
 
 model/random-walk-2d-mobility-model.i: model/random-walk-2d-mobility-model.cc.i
@@ -539,7 +563,7 @@ model/random-walk-2d-mobility-model.i: model/random-walk-2d-mobility-model.cc.i
 
 # target to preprocess a source file
 model/random-walk-2d-mobility-model.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/random-walk-2d-mobility-model.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/random-walk-2d-mobility-model.cc.i
 .PHONY : model/random-walk-2d-mobility-model.cc.i
 
 model/random-walk-2d-mobility-model.s: model/random-walk-2d-mobility-model.cc.s
@@ -547,7 +571,7 @@ model/random-walk-2d-mobility-model.s: model/random-walk-2d-mobility-model.cc.s
 
 # target to generate assembly for a file
 model/random-walk-2d-mobility-model.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/random-walk-2d-mobility-model.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/random-walk-2d-mobility-model.cc.s
 .PHONY : model/random-walk-2d-mobility-model.cc.s
 
 model/random-waypoint-mobility-model.o: model/random-waypoint-mobility-model.cc.o
@@ -555,7 +579,7 @@ model/random-waypoint-mobility-model.o: model/random-waypoint-mobility-model.cc.
 
 # target to build an object file
 model/random-waypoint-mobility-model.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/random-waypoint-mobility-model.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/random-waypoint-mobility-model.cc.o
 .PHONY : model/random-waypoint-mobility-model.cc.o
 
 model/random-waypoint-mobility-model.i: model/random-waypoint-mobility-model.cc.i
@@ -563,7 +587,7 @@ model/random-waypoint-mobility-model.i: model/random-waypoint-mobility-model.cc.
 
 # target to preprocess a source file
 model/random-waypoint-mobility-model.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/random-waypoint-mobility-model.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/random-waypoint-mobility-model.cc.i
 .PHONY : model/random-waypoint-mobility-model.cc.i
 
 model/random-waypoint-mobility-model.s: model/random-waypoint-mobility-model.cc.s
@@ -571,7 +595,7 @@ model/random-waypoint-mobility-model.s: model/random-waypoint-mobility-model.cc.
 
 # target to generate assembly for a file
 model/random-waypoint-mobility-model.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/random-waypoint-mobility-model.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/random-waypoint-mobility-model.cc.s
 .PHONY : model/random-waypoint-mobility-model.cc.s
 
 model/rectangle.o: model/rectangle.cc.o
@@ -579,7 +603,7 @@ model/rectangle.o: model/rectangle.cc.o
 
 # target to build an object file
 model/rectangle.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/rectangle.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/rectangle.cc.o
 .PHONY : model/rectangle.cc.o
 
 model/rectangle.i: model/rectangle.cc.i
@@ -587,7 +611,7 @@ model/rectangle.i: model/rectangle.cc.i
 
 # target to preprocess a source file
 model/rectangle.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/rectangle.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/rectangle.cc.i
 .PHONY : model/rectangle.cc.i
 
 model/rectangle.s: model/rectangle.cc.s
@@ -595,7 +619,7 @@ model/rectangle.s: model/rectangle.cc.s
 
 # target to generate assembly for a file
 model/rectangle.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/rectangle.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/rectangle.cc.s
 .PHONY : model/rectangle.cc.s
 
 model/steady-state-random-waypoint-mobility-model.o: model/steady-state-random-waypoint-mobility-model.cc.o
@@ -603,7 +627,7 @@ model/steady-state-random-waypoint-mobility-model.o: model/steady-state-random-w
 
 # target to build an object file
 model/steady-state-random-waypoint-mobility-model.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/steady-state-random-waypoint-mobility-model.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/steady-state-random-waypoint-mobility-model.cc.o
 .PHONY : model/steady-state-random-waypoint-mobility-model.cc.o
 
 model/steady-state-random-waypoint-mobility-model.i: model/steady-state-random-waypoint-mobility-model.cc.i
@@ -611,7 +635,7 @@ model/steady-state-random-waypoint-mobility-model.i: model/steady-state-random-w
 
 # target to preprocess a source file
 model/steady-state-random-waypoint-mobility-model.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/steady-state-random-waypoint-mobility-model.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/steady-state-random-waypoint-mobility-model.cc.i
 .PHONY : model/steady-state-random-waypoint-mobility-model.cc.i
 
 model/steady-state-random-waypoint-mobility-model.s: model/steady-state-random-waypoint-mobility-model.cc.s
@@ -619,7 +643,7 @@ model/steady-state-random-waypoint-mobility-model.s: model/steady-state-random-w
 
 # target to generate assembly for a file
 model/steady-state-random-waypoint-mobility-model.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/steady-state-random-waypoint-mobility-model.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/steady-state-random-waypoint-mobility-model.cc.s
 .PHONY : model/steady-state-random-waypoint-mobility-model.cc.s
 
 model/waypoint-mobility-model.o: model/waypoint-mobility-model.cc.o
@@ -627,7 +651,7 @@ model/waypoint-mobility-model.o: model/waypoint-mobility-model.cc.o
 
 # target to build an object file
 model/waypoint-mobility-model.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/waypoint-mobility-model.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/waypoint-mobility-model.cc.o
 .PHONY : model/waypoint-mobility-model.cc.o
 
 model/waypoint-mobility-model.i: model/waypoint-mobility-model.cc.i
@@ -635,7 +659,7 @@ model/waypoint-mobility-model.i: model/waypoint-mobility-model.cc.i
 
 # target to preprocess a source file
 model/waypoint-mobility-model.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/waypoint-mobility-model.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/waypoint-mobility-model.cc.i
 .PHONY : model/waypoint-mobility-model.cc.i
 
 model/waypoint-mobility-model.s: model/waypoint-mobility-model.cc.s
@@ -643,7 +667,7 @@ model/waypoint-mobility-model.s: model/waypoint-mobility-model.cc.s
 
 # target to generate assembly for a file
 model/waypoint-mobility-model.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/waypoint-mobility-model.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/waypoint-mobility-model.cc.s
 .PHONY : model/waypoint-mobility-model.cc.s
 
 model/waypoint.o: model/waypoint.cc.o
@@ -651,7 +675,7 @@ model/waypoint.o: model/waypoint.cc.o
 
 # target to build an object file
 model/waypoint.cc.o:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/waypoint.cc.o
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/waypoint.cc.o
 .PHONY : model/waypoint.cc.o
 
 model/waypoint.i: model/waypoint.cc.i
@@ -659,7 +683,7 @@ model/waypoint.i: model/waypoint.cc.i
 
 # target to preprocess a source file
 model/waypoint.cc.i:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/waypoint.cc.i
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/waypoint.cc.i
 .PHONY : model/waypoint.cc.i
 
 model/waypoint.s: model/waypoint.cc.s
@@ -667,8 +691,200 @@ model/waypoint.s: model/waypoint.cc.s
 
 # target to generate assembly for a file
 model/waypoint.cc.s:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/waypoint.cc.s
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-obj.dir/build.make src/mobility/CMakeFiles/libmobility-obj.dir/model/waypoint.cc.s
 .PHONY : model/waypoint.cc.s
+
+test/box-line-intersection-test.o: test/box-line-intersection-test.cc.o
+.PHONY : test/box-line-intersection-test.o
+
+# target to build an object file
+test/box-line-intersection-test.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-test.dir/build.make src/mobility/CMakeFiles/libmobility-test.dir/test/box-line-intersection-test.cc.o
+.PHONY : test/box-line-intersection-test.cc.o
+
+test/box-line-intersection-test.i: test/box-line-intersection-test.cc.i
+.PHONY : test/box-line-intersection-test.i
+
+# target to preprocess a source file
+test/box-line-intersection-test.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-test.dir/build.make src/mobility/CMakeFiles/libmobility-test.dir/test/box-line-intersection-test.cc.i
+.PHONY : test/box-line-intersection-test.cc.i
+
+test/box-line-intersection-test.s: test/box-line-intersection-test.cc.s
+.PHONY : test/box-line-intersection-test.s
+
+# target to generate assembly for a file
+test/box-line-intersection-test.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-test.dir/build.make src/mobility/CMakeFiles/libmobility-test.dir/test/box-line-intersection-test.cc.s
+.PHONY : test/box-line-intersection-test.cc.s
+
+test/geo-to-cartesian-test.o: test/geo-to-cartesian-test.cc.o
+.PHONY : test/geo-to-cartesian-test.o
+
+# target to build an object file
+test/geo-to-cartesian-test.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-test.dir/build.make src/mobility/CMakeFiles/libmobility-test.dir/test/geo-to-cartesian-test.cc.o
+.PHONY : test/geo-to-cartesian-test.cc.o
+
+test/geo-to-cartesian-test.i: test/geo-to-cartesian-test.cc.i
+.PHONY : test/geo-to-cartesian-test.i
+
+# target to preprocess a source file
+test/geo-to-cartesian-test.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-test.dir/build.make src/mobility/CMakeFiles/libmobility-test.dir/test/geo-to-cartesian-test.cc.i
+.PHONY : test/geo-to-cartesian-test.cc.i
+
+test/geo-to-cartesian-test.s: test/geo-to-cartesian-test.cc.s
+.PHONY : test/geo-to-cartesian-test.s
+
+# target to generate assembly for a file
+test/geo-to-cartesian-test.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-test.dir/build.make src/mobility/CMakeFiles/libmobility-test.dir/test/geo-to-cartesian-test.cc.s
+.PHONY : test/geo-to-cartesian-test.cc.s
+
+test/mobility-test-suite.o: test/mobility-test-suite.cc.o
+.PHONY : test/mobility-test-suite.o
+
+# target to build an object file
+test/mobility-test-suite.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-test.dir/build.make src/mobility/CMakeFiles/libmobility-test.dir/test/mobility-test-suite.cc.o
+.PHONY : test/mobility-test-suite.cc.o
+
+test/mobility-test-suite.i: test/mobility-test-suite.cc.i
+.PHONY : test/mobility-test-suite.i
+
+# target to preprocess a source file
+test/mobility-test-suite.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-test.dir/build.make src/mobility/CMakeFiles/libmobility-test.dir/test/mobility-test-suite.cc.i
+.PHONY : test/mobility-test-suite.cc.i
+
+test/mobility-test-suite.s: test/mobility-test-suite.cc.s
+.PHONY : test/mobility-test-suite.s
+
+# target to generate assembly for a file
+test/mobility-test-suite.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-test.dir/build.make src/mobility/CMakeFiles/libmobility-test.dir/test/mobility-test-suite.cc.s
+.PHONY : test/mobility-test-suite.cc.s
+
+test/mobility-trace-test-suite.o: test/mobility-trace-test-suite.cc.o
+.PHONY : test/mobility-trace-test-suite.o
+
+# target to build an object file
+test/mobility-trace-test-suite.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-test.dir/build.make src/mobility/CMakeFiles/libmobility-test.dir/test/mobility-trace-test-suite.cc.o
+.PHONY : test/mobility-trace-test-suite.cc.o
+
+test/mobility-trace-test-suite.i: test/mobility-trace-test-suite.cc.i
+.PHONY : test/mobility-trace-test-suite.i
+
+# target to preprocess a source file
+test/mobility-trace-test-suite.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-test.dir/build.make src/mobility/CMakeFiles/libmobility-test.dir/test/mobility-trace-test-suite.cc.i
+.PHONY : test/mobility-trace-test-suite.cc.i
+
+test/mobility-trace-test-suite.s: test/mobility-trace-test-suite.cc.s
+.PHONY : test/mobility-trace-test-suite.s
+
+# target to generate assembly for a file
+test/mobility-trace-test-suite.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-test.dir/build.make src/mobility/CMakeFiles/libmobility-test.dir/test/mobility-trace-test-suite.cc.s
+.PHONY : test/mobility-trace-test-suite.cc.s
+
+test/ns2-mobility-helper-test-suite.o: test/ns2-mobility-helper-test-suite.cc.o
+.PHONY : test/ns2-mobility-helper-test-suite.o
+
+# target to build an object file
+test/ns2-mobility-helper-test-suite.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-test.dir/build.make src/mobility/CMakeFiles/libmobility-test.dir/test/ns2-mobility-helper-test-suite.cc.o
+.PHONY : test/ns2-mobility-helper-test-suite.cc.o
+
+test/ns2-mobility-helper-test-suite.i: test/ns2-mobility-helper-test-suite.cc.i
+.PHONY : test/ns2-mobility-helper-test-suite.i
+
+# target to preprocess a source file
+test/ns2-mobility-helper-test-suite.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-test.dir/build.make src/mobility/CMakeFiles/libmobility-test.dir/test/ns2-mobility-helper-test-suite.cc.i
+.PHONY : test/ns2-mobility-helper-test-suite.cc.i
+
+test/ns2-mobility-helper-test-suite.s: test/ns2-mobility-helper-test-suite.cc.s
+.PHONY : test/ns2-mobility-helper-test-suite.s
+
+# target to generate assembly for a file
+test/ns2-mobility-helper-test-suite.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-test.dir/build.make src/mobility/CMakeFiles/libmobility-test.dir/test/ns2-mobility-helper-test-suite.cc.s
+.PHONY : test/ns2-mobility-helper-test-suite.cc.s
+
+test/rand-cart-around-geo-test.o: test/rand-cart-around-geo-test.cc.o
+.PHONY : test/rand-cart-around-geo-test.o
+
+# target to build an object file
+test/rand-cart-around-geo-test.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-test.dir/build.make src/mobility/CMakeFiles/libmobility-test.dir/test/rand-cart-around-geo-test.cc.o
+.PHONY : test/rand-cart-around-geo-test.cc.o
+
+test/rand-cart-around-geo-test.i: test/rand-cart-around-geo-test.cc.i
+.PHONY : test/rand-cart-around-geo-test.i
+
+# target to preprocess a source file
+test/rand-cart-around-geo-test.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-test.dir/build.make src/mobility/CMakeFiles/libmobility-test.dir/test/rand-cart-around-geo-test.cc.i
+.PHONY : test/rand-cart-around-geo-test.cc.i
+
+test/rand-cart-around-geo-test.s: test/rand-cart-around-geo-test.cc.s
+.PHONY : test/rand-cart-around-geo-test.s
+
+# target to generate assembly for a file
+test/rand-cart-around-geo-test.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-test.dir/build.make src/mobility/CMakeFiles/libmobility-test.dir/test/rand-cart-around-geo-test.cc.s
+.PHONY : test/rand-cart-around-geo-test.cc.s
+
+test/steady-state-random-waypoint-mobility-model-test.o: test/steady-state-random-waypoint-mobility-model-test.cc.o
+.PHONY : test/steady-state-random-waypoint-mobility-model-test.o
+
+# target to build an object file
+test/steady-state-random-waypoint-mobility-model-test.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-test.dir/build.make src/mobility/CMakeFiles/libmobility-test.dir/test/steady-state-random-waypoint-mobility-model-test.cc.o
+.PHONY : test/steady-state-random-waypoint-mobility-model-test.cc.o
+
+test/steady-state-random-waypoint-mobility-model-test.i: test/steady-state-random-waypoint-mobility-model-test.cc.i
+.PHONY : test/steady-state-random-waypoint-mobility-model-test.i
+
+# target to preprocess a source file
+test/steady-state-random-waypoint-mobility-model-test.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-test.dir/build.make src/mobility/CMakeFiles/libmobility-test.dir/test/steady-state-random-waypoint-mobility-model-test.cc.i
+.PHONY : test/steady-state-random-waypoint-mobility-model-test.cc.i
+
+test/steady-state-random-waypoint-mobility-model-test.s: test/steady-state-random-waypoint-mobility-model-test.cc.s
+.PHONY : test/steady-state-random-waypoint-mobility-model-test.s
+
+# target to generate assembly for a file
+test/steady-state-random-waypoint-mobility-model-test.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-test.dir/build.make src/mobility/CMakeFiles/libmobility-test.dir/test/steady-state-random-waypoint-mobility-model-test.cc.s
+.PHONY : test/steady-state-random-waypoint-mobility-model-test.cc.s
+
+test/waypoint-mobility-model-test.o: test/waypoint-mobility-model-test.cc.o
+.PHONY : test/waypoint-mobility-model-test.o
+
+# target to build an object file
+test/waypoint-mobility-model-test.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-test.dir/build.make src/mobility/CMakeFiles/libmobility-test.dir/test/waypoint-mobility-model-test.cc.o
+.PHONY : test/waypoint-mobility-model-test.cc.o
+
+test/waypoint-mobility-model-test.i: test/waypoint-mobility-model-test.cc.i
+.PHONY : test/waypoint-mobility-model-test.i
+
+# target to preprocess a source file
+test/waypoint-mobility-model-test.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-test.dir/build.make src/mobility/CMakeFiles/libmobility-test.dir/test/waypoint-mobility-model-test.cc.i
+.PHONY : test/waypoint-mobility-model-test.cc.i
+
+test/waypoint-mobility-model-test.s: test/waypoint-mobility-model-test.cc.s
+.PHONY : test/waypoint-mobility-model-test.s
+
+# target to generate assembly for a file
+test/waypoint-mobility-model-test.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f src/mobility/CMakeFiles/libmobility-test.dir/build.make src/mobility/CMakeFiles/libmobility-test.dir/test/waypoint-mobility-model-test.cc.s
+.PHONY : test/waypoint-mobility-model-test.cc.s
 
 # Help Target
 help:
@@ -682,8 +898,10 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... libmobility"
 	@echo "... libmobility-obj"
+	@echo "... libmobility-test"
 	@echo "... helper/group-mobility-helper.o"
 	@echo "... helper/group-mobility-helper.i"
 	@echo "... helper/group-mobility-helper.s"
@@ -744,6 +962,30 @@ help:
 	@echo "... model/waypoint.o"
 	@echo "... model/waypoint.i"
 	@echo "... model/waypoint.s"
+	@echo "... test/box-line-intersection-test.o"
+	@echo "... test/box-line-intersection-test.i"
+	@echo "... test/box-line-intersection-test.s"
+	@echo "... test/geo-to-cartesian-test.o"
+	@echo "... test/geo-to-cartesian-test.i"
+	@echo "... test/geo-to-cartesian-test.s"
+	@echo "... test/mobility-test-suite.o"
+	@echo "... test/mobility-test-suite.i"
+	@echo "... test/mobility-test-suite.s"
+	@echo "... test/mobility-trace-test-suite.o"
+	@echo "... test/mobility-trace-test-suite.i"
+	@echo "... test/mobility-trace-test-suite.s"
+	@echo "... test/ns2-mobility-helper-test-suite.o"
+	@echo "... test/ns2-mobility-helper-test-suite.i"
+	@echo "... test/ns2-mobility-helper-test-suite.s"
+	@echo "... test/rand-cart-around-geo-test.o"
+	@echo "... test/rand-cart-around-geo-test.i"
+	@echo "... test/rand-cart-around-geo-test.s"
+	@echo "... test/steady-state-random-waypoint-mobility-model-test.o"
+	@echo "... test/steady-state-random-waypoint-mobility-model-test.i"
+	@echo "... test/steady-state-random-waypoint-mobility-model-test.s"
+	@echo "... test/waypoint-mobility-model-test.o"
+	@echo "... test/waypoint-mobility-model-test.i"
+	@echo "... test/waypoint-mobility-model-test.s"
 .PHONY : help
 
 
@@ -755,7 +997,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache/CMakeFiles/VerifyGlobs.cmake
-	cd /home/omar/Desktop/git_repo/ns3-open5gs/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -P /home/omar/ns-3-dev/cmake-cache/CMakeFiles/VerifyGlobs.cmake
+	cd /home/omar/ns-3-dev/cmake-cache && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

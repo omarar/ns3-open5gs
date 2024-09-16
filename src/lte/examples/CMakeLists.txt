@@ -23,7 +23,7 @@ set(base_examples
     lena-x2-handover
     lena-x2-handover-measures
 )
-
+find_library(LIBRT rt)
 foreach(
   example
   ${base_examples}
@@ -33,6 +33,7 @@ foreach(
     SOURCE_FILES ${example}.cc
     LIBRARIES_TO_LINK ${liblte}
                       ${libconfig-store}
+                      ${LIBRT}
   )
 endforeach()
 
@@ -44,5 +45,6 @@ if(${ENABLE_EMU})
       ${liblte}
       ${fd-net-device}
       ${libconfig-store}
+      ${LIBRT}
   )
 endif()

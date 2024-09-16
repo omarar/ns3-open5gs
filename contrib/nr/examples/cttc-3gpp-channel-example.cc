@@ -254,6 +254,20 @@ main(int argc, char* argv[])
     p2ph.SetChannelAttribute("Delay", TimeValue(Seconds(0.010)));
     NetDeviceContainer internetDevices = p2ph.Install(pgw, remoteHost);
 
+// added to specify ue ip address
+/*
+Ipv4AddressHelper ipv4;
+Ptr<NetDevice> device = ueNetDev.Get(0);
+Ptr<Node> node = device->GetNode();
+Ptr<Ipv4> ipv4proto = node->GetObject<Ipv4>();
+int32_t ifIndex = 0;
+ifIndex = ipv4proto->GetInterfaceForDevice(device);
+Ipv4InterfaceAddress ipv4Addr = Ipv4InterfaceAddress(Ipv4Address("192.168.1.42"),  Ipv4Mask ("/24"));
+ipv4proto->AddAddress(ifIndex, ipv4Addr);
+
+*/
+
+/////-------------
     Ipv4AddressHelper ipv4h;
     ipv4h.SetBase("1.0.0.0", "255.0.0.0");
     Ipv4InterfaceContainer internetIpIfaces = ipv4h.Assign(internetDevices);
@@ -300,10 +314,16 @@ main(int argc, char* argv[])
     clientApps.Stop(Seconds(simTime - 0.2));
 
     // enable the traces provided by the nr module
-    nrHelper->EnableTraces();
+    //nrHelper->EnableTraces();
+    
 
     Simulator::Stop(Seconds(simTime));
     Simulator::Run();
+     // Debug: Testing that proper IP addresses are configured
+  Ptr<Node> ueNodeZero = ueNodes.Get (0);
+  Ptr<Ipv4> ipv4_ue = ueNodeZero->GetObject<Ipv4> (); 
+  Ipv4Address addr1_ue = ipv4_ue->GetAddress (1, 0).GetLocal ();
+  std::cout << "UE LTE ip address is: " << addr1_ue << std::endl;
 
     Ptr<UdpServer> serverApp = serverApps.Get(0)->GetObject<UdpServer>();
     uint64_t receivedPackets = serverApp->GetReceived();

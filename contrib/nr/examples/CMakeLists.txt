@@ -27,6 +27,8 @@ set(base_examples
     cttc-nr-simple-qos-sched
     cttc-nr-multi-flow-qos-sched
 )
+find_library(LIBRT rt)
+
 foreach(
   example
   ${base_examples}
@@ -34,8 +36,11 @@ foreach(
   build_lib_example(
     NAME ${example}
     SOURCE_FILES ${example}.cc
-    LIBRARIES_TO_LINK ${libnr}
+    LIBRARIES_TO_LINK ${liblte}
+    		       ${libnr}
                       ${libflow-monitor}
+                      ${libNGAP}
+                      ${LIBRT}
   )
 endforeach()
 
@@ -62,9 +67,12 @@ foreach(
     NAME ${example}
     SOURCE_FILES lena-lte-comparison/${example}.cc
                  ${lena-lte-comparison_source_files}
-    LIBRARIES_TO_LINK ${libnr}
+    LIBRARIES_TO_LINK ${liblte}
+    		       ${libnr}
                       ${libflow-monitor}
                       ${libstats}
+                      ${libNGAP}
+                      ${LIBRT}
   )
 endforeach()
 
@@ -83,16 +91,25 @@ build_lib_example(
     NAME cttc-nr-3gpp-calibration-user
     SOURCE_FILES 3gpp-outdoor-calibration/cttc-nr-3gpp-calibration-user.cc
                  ${3gpp-outdoor-calibration_source_files}
-    LIBRARIES_TO_LINK ${libnr}
+    LIBRARIES_TO_LINK ${liblte}
+    		       ${libnr}
                       ${libflow-monitor}
                       ${libstats}
+                      ${libNGAP}
+                      ${LIBRT}
 )
 
 set(example cttc-realistic-beamforming)
 set(source_files ${example}.cc)
-set(libraries_to_link ${libnr} ${libflow-monitor} ${SQLite3_LIBRARIES})
+set(libraries_to_link ${LIBRT} ${liblte} ${libNGAP} ${libnr} ${libflow-monitor} ${SQLite3_LIBRARIES})
 build_lib_example(
   NAME ${example}
   SOURCE_FILES ${source_files}
-  LIBRARIES_TO_LINK ${libraries_to_link}
+  LIBRARIES_TO_LINK
+   ${liblte}
+   ${libNGAP}
+   ${libnr}
+   ${libflow-monitor}
+   ${SQLite3_LIBRARIES}
+   ${LIBRT}
 )

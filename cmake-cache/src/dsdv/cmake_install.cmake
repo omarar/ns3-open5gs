@@ -1,4 +1,4 @@
-# Install script for directory: /home/omar/Desktop/git_repo/ns3-open5gs/src/dsdv
+# Install script for directory: /home/omar/ns-3-dev/src/dsdv
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -49,12 +49,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-dsdv-default.so"
          RPATH "/usr/local/lib:$ORIGIN/:$ORIGIN/../lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/omar/Desktop/git_repo/ns3-open5gs/build/lib/libns3.39-dsdv-default.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/omar/ns-3-dev/build/lib/libns3.39-dsdv-default.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-dsdv-default.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-dsdv-default.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-dsdv-default.so"
-         OLD_RPATH "/home/omar/Desktop/git_repo/ns3-open5gs/build/lib:"
+         OLD_RPATH "/home/omar/ns-3-dev/build/lib:::::::::"
          NEW_RPATH "/usr/local/lib:$ORIGIN/:$ORIGIN/../lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.39-dsdv-default.so")
@@ -67,12 +67,18 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/ns3" TYPE FILE FILES
-    "/home/omar/Desktop/git_repo/ns3-open5gs/src/dsdv/helper/dsdv-helper.h"
-    "/home/omar/Desktop/git_repo/ns3-open5gs/src/dsdv/model/dsdv-packet-queue.h"
-    "/home/omar/Desktop/git_repo/ns3-open5gs/src/dsdv/model/dsdv-packet.h"
-    "/home/omar/Desktop/git_repo/ns3-open5gs/src/dsdv/model/dsdv-routing-protocol.h"
-    "/home/omar/Desktop/git_repo/ns3-open5gs/src/dsdv/model/dsdv-rtable.h"
-    "/home/omar/Desktop/git_repo/ns3-open5gs/build/include/ns3/dsdv-module.h"
+    "/home/omar/ns-3-dev/src/dsdv/helper/dsdv-helper.h"
+    "/home/omar/ns-3-dev/src/dsdv/model/dsdv-packet-queue.h"
+    "/home/omar/ns-3-dev/src/dsdv/model/dsdv-packet.h"
+    "/home/omar/ns-3-dev/src/dsdv/model/dsdv-routing-protocol.h"
+    "/home/omar/ns-3-dev/src/dsdv/model/dsdv-rtable.h"
+    "/home/omar/ns-3-dev/build/include/ns3/dsdv-module.h"
     )
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for each subdirectory.
+  include("/home/omar/ns-3-dev/cmake-cache/src/dsdv/examples/cmake_install.cmake")
+
 endif()
 
