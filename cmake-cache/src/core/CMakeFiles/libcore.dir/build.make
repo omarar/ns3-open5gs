@@ -76,7 +76,6 @@ libcore_OBJECTS =
 libcore_EXTERNAL_OBJECTS = \
 "/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/int64x64-128.cc.o" \
 "/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/unix-fd-reader.cc.o" \
-"/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/model/example-as-test.cc.o" \
 "/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/helper/csv-reader.cc.o" \
 "/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/helper/random-variable-stream-helper.cc.o" \
 "/home/omar/ns-3-dev/cmake-cache/src/core/CMakeFiles/libcore-obj.dir/helper/event-garbage-collector.cc.o" \
@@ -146,7 +145,6 @@ libcore_EXTERNAL_OBJECTS = \
 
 ../build/lib/libns3.39-core-default.so: src/core/CMakeFiles/libcore-obj.dir/model/int64x64-128.cc.o
 ../build/lib/libns3.39-core-default.so: src/core/CMakeFiles/libcore-obj.dir/model/unix-fd-reader.cc.o
-../build/lib/libns3.39-core-default.so: src/core/CMakeFiles/libcore-obj.dir/model/example-as-test.cc.o
 ../build/lib/libns3.39-core-default.so: src/core/CMakeFiles/libcore-obj.dir/helper/csv-reader.cc.o
 ../build/lib/libns3.39-core-default.so: src/core/CMakeFiles/libcore-obj.dir/helper/random-variable-stream-helper.cc.o
 ../build/lib/libns3.39-core-default.so: src/core/CMakeFiles/libcore-obj.dir/helper/event-garbage-collector.cc.o

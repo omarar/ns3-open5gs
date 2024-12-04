@@ -42,6 +42,10 @@
 #include <ns3/packet.h>
 #include <ns3/pointer.h>
 #include <ns3/simulator.h>
+#include "../../../../ns-3-dev/contrib/nr/model/pdcp/pdcp.h"
+
+//#include "../../../../ns-3-dev/contrib/NGAP/src/gnb/rls/ctl_task.hpp"
+//#include "../../../../ns-3-dev/contrib/NGAP/src/gnb/rls/task.hpp"
 
 namespace ns3
 {
@@ -232,9 +236,31 @@ UeManager::DoInitialize()
         Ptr<LtePdcp> pdcp = CreateObject<LtePdcp>();
         pdcp->SetRnti(m_rnti);
         pdcp->SetLcId(lcid);
+        std::cout << "ns3 lte-enb-rrc.cc PDCP Object Created:" << std::endl;
+        std::cout << "ns3 lte-enb-rrc.cc RNTI: " << m_rnti << std::endl;
+        std::cout << "ns3 lte-enb-rrc.cc LCID: " << static_cast<int>(lcid) << std::endl;
         pdcp->SetLtePdcpSapUser(m_drbPdcpSapUser);
         pdcp->SetLteRlcSapProvider(rlc->GetLteRlcSapProvider());
         rlc->SetLteRlcSapUser(pdcp->GetLteRlcSapUser());
+
+        std::cout << "ns3 lte-enb-rrc.cc before pdcp.setpdcp: " <<  std::endl;
+        int ueId = static_cast<int>(m_rnti);
+
+        //Ptr<Pdcp> m_pdcpManager = Pdcp::GetInstance(); // Use shared singleton instance
+        //Ptr<Pdcp> m_pdcpManager = CreateObject<Pdcp>();
+
+        Pdcp::GetInstance().SetPdcp(ueId, pdcp);
+        std::cout << "ns3 lte-enb-rrc.cc SetPdcp for pdcp SAP provider = "<< pdcp->GetLtePdcpSapProvider()<< " ueID =" <<ueId <<  std::endl;
+
+
+        Pdcp::GetInstance().GetMapSize();
+        std::cout << "ns3 lte-enb-rrc.cc %%%%%%%%%%%%%%%%%%%%%%%%%%%% Current size of m_UeId_PdcpMap: " << Pdcp::GetInstance().GetMapSize() << std::endl;
+
+
+        std::cout << "ns3 lte-enb-rrc.cc ueID: " << ueId <<  std::endl;
+        //m_pdcpManager->SetPdcp(ueId, pdcp);
+        std::cout << "ns3 lte-enb-rrc.cc after pdcp.setpdcp: " <<  std::endl;
+
 
         m_srb1 = CreateObject<LteSignalingRadioBearerInfo>();
         m_srb1->m_rlc = rlc;

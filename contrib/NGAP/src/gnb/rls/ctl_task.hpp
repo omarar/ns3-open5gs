@@ -15,6 +15,7 @@
 #include <../../../ns-3-dev/contrib/NGAP/src/gnb/rrc/task.hpp>
 
 
+
 namespace nr::gnb
 {
 
@@ -28,9 +29,12 @@ class RlsControlTask : public NtsTask
     RlsUdpTask *m_udpTask;
     std::unordered_map<uint32_t, rls::PduInfo> m_pduMap;
     std::unordered_map<int, std::vector<uint32_t>> m_pendingAck;
-    std::unordered_map<uint32_t, ns3::Pdcp> m_pdcpMap;  // Map to hold PDCP instances for UEs
-    std::map<int, bool> m_ueAttachmentState;       // Add a member to track attachment state
+    //std::unordered_map<uint32_t, ns3::Ptr<ns3::LtePdcp>> m_pdcpMap;  // Map to hold PDCP instances for UEs
+    //std::map<int, bool> m_ueAttachmentState;       // Add a member to track attachment state
 
+    ns3::Ptr<ns3::LtePdcp> m_pdcp;
+    //ns3::LtePdcp m_pdcp;
+    //ns3::Ptr<ns3::Pdcp> m_pdcpManager;
 
 
   public:
@@ -44,6 +48,9 @@ class RlsControlTask : public NtsTask
 
   public:
     void initialize(NtsTask *mainTask, RlsUdpTask *udpTask);
+  //  void SetPdcp(ns3::Ptr<ns3::LtePdcp> pdcp);
+
+   // ns3::Ptr<ns3::LtePdcp> GetPdcp();
 
   private:
     void handleSignalDetected(int ueId);

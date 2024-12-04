@@ -8,6 +8,6 @@ URL:
 Version: 3.39
 Requires:  ns3-internet
 Requires.private: 
-Cflags: -I"${includedir}" -I/usr/include -I/usr; -I/usr/include/libxml2
+Cflags: -I"${includedir}" -I/usr/include -I/usr; -I/usr/include/eigen3 -I/usr/include/libxml2
 Libs: -L"${libdir}" -lns3.39-dsdv-default  -lns3.39-internet-default
 Libs.private: -L"${libdir}" 

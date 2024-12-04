@@ -1,11 +1,17 @@
 
 #include "server.hpp"
 
-#include <cstring>
 #include <ns3/common.hpp>
+
+#include <cstring>
+#include <iostream>
 
 namespace udp
 {
+
+
+//// Define a map to store messages by address
+//mutable std::unordered_map<InetAddress, std::vector<uint8_t>> messageStore;
 
 UdpServer::UdpServer() : sockets{Socket::CreateUdp4(), Socket::CreateUdp6()}
 {
@@ -25,6 +31,7 @@ int UdpServer::Receive(uint8_t *buffer, size_t bufferSize, int timeoutMs, InetAd
 
 void UdpServer::Send(const InetAddress &address, const uint8_t *buffer, size_t bufferSize) const
 {
+
     int version = address.getIpVersion();
     if (version != 4 && version != 6)
         throw std::runtime_error{"UdpServer::Send failure: Invalid IP version"};
@@ -39,7 +46,13 @@ void UdpServer::Send(const InetAddress &address, const uint8_t *buffer, size_t b
     }
 
     throw std::runtime_error{"UdpServer::Send failure: No IP socket found"};
+
+
 }
+
+//
+
+//
 
 UdpServer::~UdpServer()
 {

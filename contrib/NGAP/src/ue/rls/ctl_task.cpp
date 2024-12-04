@@ -282,11 +282,11 @@ void RlsControlTask::handleUplinkRrcDelivery(int cellId, uint32_t pduId, rrc::Rr
     }
     ///////////
     // PDCP Layer integration: Transmit PDCP SDU
-    std::cout << "UE UPLINK 'ctl_task.cpp' data.length(): " << data.length() << std::endl;
-    std::cout << "UE UPLINK 'ctl_task.cpp' Cell ID: " << cellId << std::endl;
+    //std::cout << "UE UPLINK 'ctl_task.cpp' data.length(): " << data.length() << std::endl;
+    //std::cout << "UE UPLINK 'ctl_task.cpp' Cell ID: " << cellId << std::endl;
 
     if (data.length() > 0)
-    {
+    {  /*
         auto it = m_pdcpMap.find(cellId);
         if (it == m_pdcpMap.end())
         {
@@ -307,7 +307,7 @@ void RlsControlTask::handleUplinkRrcDelivery(int cellId, uint32_t pduId, rrc::Rr
             dfTag.Enable();
             packet->AddPacketTag(dfTag);
 
-            std::cout << "UERANSIM pdcp.TransmitPacket(packet);" << std::endl;
+            std::cout << "UERANSIM handleUplinkRrcDelivery pdcp.TransmitPacket(packet);" << std::endl;
             pdcp.TransmitPacket(packet);
             std::cout << " SAP TransmitPacket FROM RRC UERANSIM" << std::endl;
         }
@@ -315,6 +315,7 @@ void RlsControlTask::handleUplinkRrcDelivery(int cellId, uint32_t pduId, rrc::Rr
         {
             m_logger->err("PDCP instance not available for cell: %d", cellId);
         }
+        */
     }
     ///////////
     rls::RlsPduTransmission msg{m_shCtx->sti};
@@ -329,11 +330,11 @@ void RlsControlTask::handleUplinkRrcDelivery(int cellId, uint32_t pduId, rrc::Rr
 void RlsControlTask::handleUplinkDataDelivery(int psi, OctetString &&data)
 {
     // PDCP Layer integration: Transmit PDCP SDU
-    std::cout << "UE UPLINK 'handleUplinkDataDelivery' data.length(): " << data.length() << std::endl;
-    std::cout << "UE UPLINK 'handleUplinkDataDelivery' Serving Cell ID: " << m_servingCell << std::endl;
+    //std::cout << "UE UPLINK 'handleUplinkDataDelivery' data.length(): " << data.length() << std::endl;
+    //std::cout << "UE UPLINK 'handleUplinkDataDelivery' Serving Cell ID: " << m_servingCell << std::endl;
 
     if (data.length() > 0)
-    {
+    {   /*
         auto it = m_pdcpMap.find(m_servingCell);
         if (it == m_pdcpMap.end())
         {
@@ -362,6 +363,7 @@ void RlsControlTask::handleUplinkDataDelivery(int psi, OctetString &&data)
         {
             m_logger->err("PDCP instance not available for the serving cell: %d", m_servingCell);
         }
+        */
     }
 
     // Create and populate the RlsPduTransmission message
@@ -378,6 +380,7 @@ void RlsControlTask::handleUplinkDataDelivery(int psi, OctetString &&data)
 
 void RlsControlTask::onAckControlTimerExpired()
 {
+/*
     int64_t current = utils::CurrentTimeMillis();
 
     std::vector<uint32_t> transmissionFailureIds;
@@ -402,6 +405,7 @@ void RlsControlTask::onAckControlTimerExpired()
         w->pduList = std::move(transmissionFailures);
         m_mainTask->push(std::move(w));
     }
+*/
 }
 
 void RlsControlTask::onAckSendTimerExpired()
@@ -419,6 +423,7 @@ void RlsControlTask::onAckSendTimerExpired()
 
         m_udpTask->send(item.first, msg);
     }
+
 }
 
 /*

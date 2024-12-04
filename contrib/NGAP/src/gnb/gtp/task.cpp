@@ -136,8 +136,8 @@ void GtpTask::onStart()
     try
     {
 		std::string deviceName("enp0s9"); // Replace with the appropriate interface name
-        std::string localAddress("192.168.56.108"); // Replace with the appropriate IP address
-        std::string localGateway("192.168.56.108");
+        std::string localAddress("192.168.33.3"); // Replace with the appropriate IP address
+        std::string localGateway("192.168.33.3");
         uint16_t port = 2152; // GTP-U port
         ns3::Ipv4Address localIp(localAddress.c_str());
         ns3::Ipv4Mask localMask("255.255.255.0");
@@ -150,7 +150,7 @@ void GtpTask::onStart()
         helper = raw;
         ns3::NetDeviceContainer devices = helper->Install(node);
 		ns3::Ptr<ns3::NetDevice> device = devices.Get(0);
-		device->SetAttribute("Address", ns3::Mac48AddressValue(ns3::Mac48Address("08:00:27:a0:58:ef"))); // Replace with the appropriate MAC address
+		device->SetAttribute("Address", ns3::Mac48AddressValue(ns3::Mac48Address("08:00:27:1b:34:42"))); // Replace with the appropriate MAC address
 
 		ns3::InternetStackHelper internetStackHelper;
 		internetStackHelper.Install(node);

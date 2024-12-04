@@ -10,7 +10,7 @@
 
 #include "../../../ns-3-dev/contrib/NGAP/src/ue/app/task.hpp" 
 #include "../../../ns-3-dev/contrib/NGAP/src/ue/nas/task.hpp" 
-#include "../../../ns-3-dev/contrib/NGAP/src/ue/rls/task.hpp" 
+#include "../../../ns-3-dev/contrib/NGAP/src/ue/rls/task.hpp"
 #include "../../../ns-3-dev/contrib/NGAP/src/ue/rrc/task.hpp" 
 
 namespace nr::ue

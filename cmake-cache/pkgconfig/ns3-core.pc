@@ -8,6 +8,6 @@ URL:
 Version: 3.39
 Requires: 
 Requires.private: 
-Cflags: -I"${includedir}" -I/usr/include -I/usr; -I/usr/include/libxml2
+Cflags: -I"${includedir}" -I/usr/include -I/usr; -I/usr/include/eigen3 -I/usr/include/libxml2
 Libs: -L"${libdir}" -lns3.39-core-default  /usr/lib/x86_64-linux-gnu/libgsl.so /usr/lib/x86_64-linux-gnu/libgslcblas.so
 Libs.private: -L"${libdir}" 

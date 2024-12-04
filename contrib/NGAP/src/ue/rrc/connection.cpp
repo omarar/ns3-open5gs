@@ -6,12 +6,10 @@
 // See README, LICENSE, and CONTRIBUTING files for licensing details.
 //
 
+#include "../../../ns-3-dev/contrib/NGAP/src/lib/rrc/encode.hpp"
+#include "../../../ns-3-dev/contrib/NGAP/src/ue/nas/task.hpp"
+#include "../../../ns-3-dev/contrib/NGAP/src/ue/nts.hpp"
 #include "task.hpp"
-
-#include "../../../ns-3-dev/contrib/NGAP/src/lib/rrc/encode.hpp" 
-#include "../../../ns-3-dev/contrib/NGAP/src/ue/nas/task.hpp" 
-#include "../../../ns-3-dev/contrib/NGAP/src/ue/nts.hpp" 
-#include <ns3/random.hpp>
 
 #include <ns3/ASN_RRC_RRCSetup-IEs.h>
 #include <ns3/ASN_RRC_RRCSetup.h>
@@ -19,6 +17,9 @@
 #include <ns3/ASN_RRC_RRCSetupComplete.h>
 #include <ns3/ASN_RRC_RRCSetupRequest-IEs.h>
 #include <ns3/ASN_RRC_RRCSetupRequest.h>
+#include <ns3/random.hpp>
+
+#include <iostream>
 
 namespace nr::ue
 {
@@ -26,6 +27,7 @@ namespace nr::ue
 static ASN_RRC_UL_CCCH_Message *ConstructSetupRequest(ASN_RRC_InitialUE_Identity_t initialUeId,
                                                       ASN_RRC_EstablishmentCause_t establishmentCause)
 {
+    std::cout << "Constructing RRC Setup Request with Initial UE Identity" << std::endl;
     auto *pdu = asn::New<ASN_RRC_UL_CCCH_Message>();
     pdu->message.present = ASN_RRC_UL_CCCH_MessageType_PR_c1;
     pdu->message.choice.c1 = asn::NewFor(pdu->message.choice.c1);
@@ -41,9 +43,13 @@ static ASN_RRC_UL_CCCH_Message *ConstructSetupRequest(ASN_RRC_InitialUE_Identity
 
 void UeRrcTask::startConnectionEstablishment(OctetString &&nasPdu)
 {
+    std::cout << "Starting RRC Connection Establishment" << std::endl;
+
     /* Check the protocol state */
     if (m_state != ERrcState::RRC_IDLE)
     {
+        std::cout << "RRC establishment could not start, UE not in RRC-IDLE state" << std::endl;
+
         m_logger->err("RRC establishment could not start, UE not in RRC-IDLE state");
         handleEstablishmentFailure();
         return;
@@ -53,6 +59,7 @@ void UeRrcTask::startConnectionEstablishment(OctetString &&nasPdu)
     int activeCell = m_base->shCtx.currentCell.get<int>([](auto &item) { return item.cellId; });
     if (activeCell == 0)
     {
+        std::cout << "RRC establishment could not start, no active cell" << std::endl;
         m_logger->err("RRC establishment could not start, no active cell");
         handleEstablishmentFailure();
         return;
@@ -65,6 +72,7 @@ void UeRrcTask::startConnectionEstablishment(OctetString &&nasPdu)
 
     if (gutiOrTmsi)
     {
+        std::cout << "Using S-TMSI for Initial UE Identity" << std::endl;
         m_initialId.present = ASN_RRC_InitialUE_Identity_PR_ng_5G_S_TMSI_Part1;
         asn::SetBitStringLong<39>(static_cast<int64_t>(gutiOrTmsi->tmsi) |
                                       (static_cast<int64_t>(gutiOrTmsi->amfPointer & 0b1111111) << 32ull),
@@ -81,6 +89,8 @@ void UeRrcTask::startConnectionEstablishment(OctetString &&nasPdu)
 
     /* Send the message */
     m_logger->debug("Sending RRC Setup Request");
+    std::cout << "Sending RRC Setup Request" << std::endl;
+
 
     auto *rrcSetupRequest =
         ConstructSetupRequest(m_initialId, static_cast<ASN_RRC_EstablishmentCause_t>(m_establishmentCause));
@@ -90,6 +100,8 @@ void UeRrcTask::startConnectionEstablishment(OctetString &&nasPdu)
 
 void UeRrcTask::receiveRrcSetup(int cellId, const ASN_RRC_RRCSetup &msg)
 {
+    std::cout << "Received RRC Setup from Cell ID: " << cellId << std::endl;
+
     if (!isActiveCell(cellId))
         return;
 
@@ -129,6 +141,9 @@ void UeRrcTask::receiveRrcSetup(int cellId, const ASN_RRC_RRCSetup &msg)
     asn::Free(asn_DEF_ASN_RRC_UL_DCCH_Message, pdu);
 
     m_logger->info("RRC connection established");
+    std::cout << "RRC Connection established, switching to RRC_CONNECTED state" << std::endl;
+
+
     switchState(ERrcState::RRC_CONNECTED);
     m_base->nasTask->push(std::make_unique<NmUeRrcToNas>(NmUeRrcToNas::RRC_CONNECTION_SETUP));
 }
@@ -146,12 +161,15 @@ void UeRrcTask::receiveRrcReject(int cellId, const ASN_RRC_RRCReject &msg)
 void UeRrcTask::receiveRrcRelease(const ASN_RRC_RRCRelease &msg)
 {
     m_logger->debug("RRC Release received");
+    std::cout << "RRC Connection Released" << std::endl;
+
     m_state = ERrcState::RRC_IDLE;
     m_base->nasTask->push(std::make_unique<NmUeRrcToNas>(NmUeRrcToNas::RRC_CONNECTION_RELEASE));
 }
 
 void UeRrcTask::handleEstablishmentFailure()
 {
+    std::cout << "RRC Connection Establishment Failed" << std::endl;
     m_base->nasTask->push(std::make_unique<NmUeRrcToNas>(NmUeRrcToNas::RRC_ESTABLISHMENT_FAILURE));
 }
 

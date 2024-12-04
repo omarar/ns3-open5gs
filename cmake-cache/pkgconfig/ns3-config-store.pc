@@ -8,6 +8,6 @@ URL:
 Version: 3.39
 Requires:  ns3-core ns3-network
 Requires.private: 
-Cflags: -I"${includedir}" -I/usr/include -I/usr; -I/usr/include/libxml2
+Cflags: -I"${includedir}" -I/usr/include -I/usr; -I/usr/include/eigen3 -I/usr/include/libxml2
 Libs: -L"${libdir}" -lns3.39-config-store-default  -lns3.39-core-default -lns3.39-network-default /usr/lib/x86_64-linux-gnu/libxml2.so
 Libs.private: -L"${libdir}" 

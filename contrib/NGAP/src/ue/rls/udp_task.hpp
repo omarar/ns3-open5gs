@@ -15,7 +15,8 @@
 #include <ns3/rls_pdu.hpp>
 #include "../../../ns-3-dev/contrib/NGAP/src/lib/udp/server.hpp" 
 #include "../../../ns-3-dev/contrib/NGAP/src/ue/types.hpp" 
-#include "../../../ns-3-dev/contrib/NGAP/src/utils/nts.hpp" 
+#include "../../../ns-3-dev/contrib/NGAP/src/utils/nts.hpp"
+//#include "../../../ns-3-dev/contrib/nr/model/pdcp/pdcp.h"
 
 namespace nr::ue
 {
@@ -42,6 +43,13 @@ class RlsUdpTask : public NtsTask
     int64_t m_lastLoop;
     Vector3 m_simPos;
     int m_cellIdCounter;
+
+    std::queue<std::vector<uint8_t>> messageQueue;
+    std::mutex queueMutex;
+
+
+    //std::unordered_map<std::string, std::vector<uint8_t>> messageMap;
+
 
     friend class UeCmdHandler;
 

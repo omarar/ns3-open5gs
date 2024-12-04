@@ -11,6 +11,11 @@
 #include <map>
 
 #include "ns3/socket.h"
+#include "../../../ns-3-dev/contrib/nr/model/pdcp/pdcp.cpp"
+
+#include "ns3/lte-enb-rrc.h"
+
+
 
 static constexpr const size_t MAX_PDU_COUNT = 4096;
 static constexpr const int MAX_PDU_TTL = 3000;
@@ -24,18 +29,34 @@ static constexpr const int TIMER_PERIOD_ACK_SEND = 2250;
 namespace nr::gnb
 {
 
+
+// Modify the constructor to accept the PDCP reference
 RlsControlTask::RlsControlTask(TaskBase* base, uint64_t sti)
     : m_sti{sti},
       m_mainTask{},
       m_udpTask{},
       m_pduMap{},
-      m_pendingAck{}
+      m_pendingAck{},
+      m_pdcp(nullptr)
 
 {
     m_logger = base->logBase->makeUniqueLogger("rls-ctl");
 
 }
 
+// Add the setter for PDCP
+/*
+void
+RlsControlTask::SetPdcp(ns3::Ptr<ns3::LtePdcp> pdcp)
+{
+    m_pdcp=pdcp;
+}
+
+ns3::Ptr<ns3::LtePdcp> RlsControlTask::GetPdcp()
+{
+    return m_pdcp;  // Return the PDCP instance
+}
+*/
 void
 RlsControlTask::initialize(NtsTask* mainTask, RlsUdpTask* udpTask)
 {
@@ -208,6 +229,13 @@ RlsControlTask::onLoop()
     {
     case NtsMessageType::GNB_RLS_TO_RLS: {
         auto& w = dynamic_cast<NmGnbRlsToRls&>(*msg);
+        /*
+        // Check PDCP map size before processing DOWNLINK_RRC
+        if (w.present == NmGnbRlsToRls::DOWNLINK_RRC && ns3::Pdcp::GetMapSize() == 0) {
+            std::cout << "Waiting for PDCP instances to be created..." << std::endl;
+            return;  // Exit without processing until the PDCP map has instances
+        }*/
+
         switch (w.present)
         {
         case NmGnbRlsToRls::SIGNAL_DETECTED:
@@ -262,8 +290,8 @@ RlsControlTask::handleSignalDetected(int ueId)
     auto w = std::make_unique<NmGnbRlsToRls>(NmGnbRlsToRls::SIGNAL_DETECTED);
     w->ueId = ueId;
     // Update the attachment state
-    std::cerr << "m_ueAttachmentState UE " << ueId << " is  attached." << std::endl;
-    m_ueAttachmentState[ueId] = true;
+    std::cerr << "handleSignalDetected UE " << ueId << std::endl;
+
     m_mainTask->push(std::move(w));
 }
 
@@ -323,6 +351,24 @@ RlsControlTask::handleDownlinkRrcDelivery(int ueId,
                                           rrc::RrcChannel channel,
                                           OctetString&& data)
 {
+
+    std::cout << "°°°°°°°°°°°°°°°°°°°°°°°°°°°RlsControlTask::handleDownlinkRrcDelivery  for UE ID: " << ueId << std::endl;
+
+    //ns3::Ptr<ns3::Pdcp> pdcpManager = ns3::Pdcp::GetInstance();  // Get the shared PDCP manager instance
+
+    size_t mapSize = ns3::Pdcp::GetMapSize();  // Get the current map size
+    //std::cout << "GNB CTL TASK %%%%%%%%%%%%%%%%%%%%%%%%%%%% Current size of m_UeId_PdcpMap: " << mapSize << std::endl;
+    ns3::Pdcp& pdcpManager = ns3::Pdcp::GetInstance();
+    pdcpManager.GetMapSize();
+    //std::cout << "GNB CTL TASK %%%%%%%%%%%%%%%%%%%%%%%%%%%% Current size of m_UeId_PdcpMap: " << pdcpManager.GetMapSize() << std::endl;
+
+    if (pdcpManager.HasPdcp(ueId)) {
+        ns3::Ptr<ns3::LtePdcp> pdcp = pdcpManager.GetPdcp(ueId);
+        std::cout << "************************************Retrieved PDCP for UE ID: " << ueId << std::endl;
+    } else {
+        std::cout << "No PDCP instance found for UE ID: " << ueId << std::endl;
+    }
+
     std::cout << "__________________________PDU Info:" << data.length() << std::endl;
     //std::cout << "End Point ID: " << m_pduMap[pduId].endPointId << std::endl;
     //std::cout << "PDU ID: " << m_pduMap[pduId].id << std::endl;
@@ -372,33 +418,18 @@ RlsControlTask::handleDownlinkRrcDelivery(int ueId,
         std::cout << "handleDownlinkRrcDelivery Sent Time: " << m_pduMap[pduId].sentTime << std::endl;
     }
     //////////
-    /* if (m_ueAttachmentState.find(ueId) == m_ueAttachmentState.end() || !m_ueAttachmentState[ueId])
-    {
-        std::cerr << "UE " << ueId << " is not attached. Cannot deliver downlink data." << std::endl;
-        return;
-    }*/
+
     //////////
     // PDCP Layer integration: Transmit PDCP SDU
     std::cout << "gNB RLS 'ctl_task.cpp' data.length(): " << data.length() << std::endl;
     std::cout << "gNB RLS 'ctl_task.cpp' UE ID: " << ueId << std::endl;
-    std::cout << "gNB RLS 'ctl_task.cpp' m_ueAttachmentState[ueId] : " << m_ueAttachmentState[ueId] << std::endl;
 
-    if (data.length() > 0 && m_ueAttachmentState[ueId])
+    // Find the PDCP instance in the pdcp map for further processing
+    if (data.length() > 0 && pdcpManager.HasPdcp(ueId))
     {
-        auto it = m_pdcpMap.find(ueId);
-        if (it == m_pdcpMap.end())
-        {
-            //
-            std::cout << "Create a new PDCP instance for this UE =" << ueId << std::endl;
-            ns3::Pdcp newPdcp;
-            m_pdcpMap[ueId] = newPdcp;
-            it = m_pdcpMap.find(ueId);
-        }
-        // /*
-        if (it != m_pdcpMap.end())
-        {
-            std::cout << "RRC TO PDCP DOWNLINK for this UE =" << it->first << std::endl;
-            auto& pdcp = it->second;
+
+            std::cout << "RRC TO PDCP DOWNLINK for this UE = " << ueId << std::endl;
+            ns3::Ptr<ns3::LtePdcp> pdcp = pdcpManager.GetPdcp(ueId);
             ns3::Ptr<ns3::Packet> packet = ns3::Create<ns3::Packet>(data.data(), data.length());
 
             // Add Don't Fragment tag
@@ -406,16 +437,43 @@ RlsControlTask::handleDownlinkRrcDelivery(int ueId,
             dfTag.Enable();
             packet->AddPacketTag(dfTag);
 
-            std::cout << "UERANSIM pdcp.TransmitPacket(packet);" << std::endl;
-            pdcp.TransmitPacket(packet);
-            std::cout << "9999 FINISH UERANSIM SAP  TransmitPacket FROM RRC UERANSIM" << std::endl;
+            std::cout << "UERANSIM handleDownlinkRrcDelivery pdcp.TransmitPacket(packet);" << std::endl;
+
+            std::cout <<"// Prepare parameters for PDCP transmission"<< std::endl;
+            ns3::LtePdcpSapProvider::TransmitPdcpSduParameters params;
+            params.pdcpSdu = packet;
+            std::cout << "// Use LtePdcpSapProvider to transmit packet"<< std::endl;
+            std::cout << " UERANSIM RRC pdcpManager.GetPdcp(ueId)->GetLtePdcpSapProvider() = " << pdcpManager.GetPdcp(ueId)->GetLtePdcpSapProvider()<< std::endl;
+
+            //pdcpManager.GetPdcp(ueId)->GetLtePdcpSapProvider()->TransmitPdcpSdu(params);
+
+            //pdcp.TransmitPacket(packet);
+
+            //pdcp->TransmitPacket GetLtePdcpSapProvider()->TransmitPdcpSdu(params);
+            //pdcpUERANSIM->GetLtePdcpSapProvider()->TransmitPdcpSdu(params);
+            std::cout << "FINISH UERANSIM SAP  TransmitPacket FROM RRC UERANSIM" << std::endl;
+        } else {
+            std::cout << "Failed to find PDCP instance for UE ID: " << ueId << std::endl;
         }
-        else
+
+        /////// 14/10/2024
+/*
+        // Assuming ueInfoMap is obtained via Pdcp instance:
+        auto& ueInfoMap = ns3::Pdcp::GetInstance().GetUeInfoMap();
+
+        // Check if `ueId` is already present, otherwise create a new entry
+        if (ueInfoMap.find(ueId) == ueInfoMap.end())
         {
-            m_logger->err("PDCP instance not available for UE: %d", ueId);
+            ueInfoMap[ueId] = ns3::UeInfo();  // Create an empty UeInfo entry for the `ueId`
+            ns3::UeInfo ueInfo;
+            ueInfoMap[ueId] = std::move(ueInfo);
         }
-        //*/
-    }
+
+        // Set or update the required information for the UE
+        ns3::UeInfo& ueInfo = ueInfoMap[ueId];
+*/
+
+
     ////  ////
     // Create and populate the RlsPduTransmission message
     rls::RlsPduTransmission msg{m_sti};
@@ -432,7 +490,7 @@ RlsControlTask::handleDownlinkRrcDelivery(int ueId,
     //std::cout << "____Payload: " << msg.payload << std::endl;
     //std::cout << "____PDU ID: " << msg.pduId << std::endl;
     // OMAR
-    /*
+/*
     // Check if UE is attached
     if (m_ueAttachmentState.find(ueId) != m_ueAttachmentState.end() && m_ueAttachmentState[ueId])
     {
@@ -468,8 +526,14 @@ RlsControlTask::handleDownlinkRrcDelivery(int ueId,
             m_logger->err("PDCP instance not available for UE: %d", ueId);
         }
     }
-}*/
-    //m_udpTask->send(ueId, msg);
+}
+*/
+
+
+    std::cout << "handleDownlinkDataDelivery PDU Size: "  << msg.pdu.length() << "   - ueId" << ueId<< std::endl;
+
+
+    m_udpTask->send(ueId, msg);  //RLS
 }
 
 /*
@@ -491,16 +555,16 @@ void RlsControlTask::handleDownlinkDataDelivery(int ueId, int psi, OctetString &
     // PDCP Layer integration: Transmit PDCP SDU
     std::cout << " ___UserPlane___handleDownlinkDataDelivery PDU Size: " << data.length() << std::endl;
     std::cout << "___UserPlane___handleDownlinkDataDelivery UE ID: " << ueId << std::endl;
-    std::cout << "___UserPlane___handleDownlinkDataDelivery m_ueAttachmentState[ueId]: " << m_ueAttachmentState[ueId] << std::endl;
 
-    if (data.length() > 0 && m_ueAttachmentState[ueId])
+    if (data.length() > 0 ) //&& m_ueAttachmentState[ueId]
     {
+        /*
         auto it = m_pdcpMap.find(ueId);
         if (it == m_pdcpMap.end())
         {
             std::cout << "___UserPlane___Create a new PDCP instance for this UE: " << ueId << std::endl;
-            ns3::Pdcp newPdcp;
-            m_pdcpMap[ueId] = newPdcp;
+            //ns3::Pdcp newPdcp;
+            m_pdcpMap[ueId] = m_pdcp;
             it = m_pdcpMap.find(ueId);
         }
 
@@ -516,12 +580,13 @@ void RlsControlTask::handleDownlinkDataDelivery(int ueId, int psi, OctetString &
             packet->AddPacketTag(dfTag);
 
             std::cout << "___UserPlane___UERANSIM pdcp.TransmitPacket(packet);" << std::endl;
-            pdcp.TransmitPacket(packet);
+            //pdcp.TransmitPacket(packet);
         }
         else
         {
             m_logger->err("___UserPlane___PDCP instance not available for UE: %d", ueId);
         }
+         */
     }
 
     ////////
@@ -533,11 +598,12 @@ void RlsControlTask::handleDownlinkDataDelivery(int ueId, int psi, OctetString &
     msg.payload = static_cast<uint32_t>(psi);
     msg.pduId = 0;
 
-    //m_udpTask->send(ueId, msg);  // RLS
+    m_udpTask->send(ueId, msg);  // RLS
 }
 
 void RlsControlTask::onAckControlTimerExpired()
 {
+
     int64_t current = utils::CurrentTimeMillis();
 
     std::vector<uint32_t> transmissionFailureIds;
@@ -562,10 +628,12 @@ void RlsControlTask::onAckControlTimerExpired()
         w->pduList = std::move(transmissionFailures);
         m_mainTask->push(std::move(w));
     }
+
 }
 
 void RlsControlTask::onAckSendTimerExpired()
 {
+
     auto copy = m_pendingAck;
     m_pendingAck.clear();
 
@@ -577,9 +645,12 @@ void RlsControlTask::onAckSendTimerExpired()
         rls::RlsPduTransmissionAck msg{m_sti};
         msg.pduIds = std::move(item.second);
 
-        //m_udpTask->send(item.first, msg);
+        m_udpTask->send(item.first, msg); //RLS
     }
+
 }
+
+
 
 } // namespace nr::gnb
 

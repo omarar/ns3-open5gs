@@ -45,9 +45,7 @@ $ ./ns3 run "cttc-nr-demo --PrintHelp"
 #include "ns3/network-module.h"
 #include "ns3/nr-module.h"
 #include "ns3/point-to-point-module.h"
-#include "mbedtls/aes.h"
-#include "mbedtls/cmac.h"
-#include "mbedtls/md.h"
+
 /*
  * Use, always, the namespace ns3. All the NR classes are inside such namespace.
  */
@@ -69,7 +67,7 @@ main(int argc, char* argv[])
      */
     // Scenario parameters (that we will use inside this script):
     uint16_t gNbNum = 1;
-    uint16_t ueNumPergNb = 1;
+    uint16_t ueNumPergNb = 2;
     bool logging = false;
     bool doubleOperationalBand = true;
 

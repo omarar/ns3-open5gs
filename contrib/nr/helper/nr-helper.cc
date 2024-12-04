@@ -1101,7 +1101,27 @@ NrHelper::AttachToEnb(const Ptr<NetDevice>& ueDevice, const Ptr<NetDevice>& gnbD
         ueNetDev->GetPhy(i)->SetNumerology(enbNetDev->GetPhy(i)->GetNumerology());
         ueNetDev->GetPhy(i)->SetPattern(enbNetDev->GetPhy(i)->GetPattern());
         Ptr<EpcUeNas> ueNas = ueNetDev->GetNas();
-        ueNas->Connect(enbNetDev->GetBwpId(i), enbNetDev->GetEarfcn(i));
+        //
+        // Print information about the current NAS state (before connection)
+        std::cout << "Before connection: NAS state = " << ueNas->GetState() << std::endl;
+
+        // Print the BWP ID and EARFCN of the target eNB (useful for debugging)
+        uint16_t bwpId = enbNetDev->GetBwpId(i);
+        uint16_t earfcn = enbNetDev->GetEarfcn(i);
+        std::cout << "Connecting UE to eNB with BWP ID: " << bwpId << std::endl;
+        std::cout << "Connecting UE to eNB with EARFCN: " << earfcn << std::endl;
+
+        // Optional: Print out additional information about the UE NAS (if available)
+        std::cout << "nr-helper.cc UE NAS IMSI: " << ueNetDev->GetImsi() << std::endl; // If available
+        std::cout << "nr-helper.cc UE NAS CellId: " << ueNetDev->GetCellId() << std::endl; // If available
+
+        // Perform the connection
+        std::cout << "Attempting to connect UE NAS to eNB..." << std::endl;
+        ueNas->Connect(bwpId, earfcn);
+
+
+////
+        //ueNas->Connect(enbNetDev->GetBwpId(i), enbNetDev->GetEarfcn(i));
     }
 
     if (m_epcHelper)
@@ -1123,6 +1143,7 @@ NrHelper::AttachToEnb(const Ptr<NetDevice>& ueDevice, const Ptr<NetDevice>& gnbD
     {
         m_beamformingHelper->AddBeamformingTask(enbNetDev, ueNetDev);
     }
+
     std::cout << "_____NrHelper:: END AttachToEnb with success !" << std::endl;
 }
 

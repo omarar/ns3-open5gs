@@ -452,7 +452,7 @@ void NrGnbNetDevice::generateIPAddress(uint16_t x, std::string& ngapIp, std::str
 		gtpIp ="192.168.33.3";  //192.168.56.108
 		}
     else{
-		ngapIp = "192.168.56.110"; //192.168.56.110
+		ngapIp = "192.168.100.4"; //192.168.56.110
 		gtpIp ="192.168.33.3"; //192.168.56.108
 		}
  std::string ipBase = "127.0.0."; //this part of the function is obselete whatever it does is then discarded

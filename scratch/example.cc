@@ -60,12 +60,18 @@ int
 main(int argc, char* argv[])
 {
     // enable logging or not
-    bool logging = false;
+    bool logging = true;
     if (logging)
     {
-        LogComponentEnable("UdpClient", LOG_LEVEL_INFO);
-        LogComponentEnable("UdpServer", LOG_LEVEL_INFO);
-        LogComponentEnable("LtePdcp", LOG_LEVEL_INFO);
+
+        //LogComponentEnable("NrHelper", LOG_LEVEL_ALL); // Enable logging for NrHelper
+        //LogComponentEnable("EpcHelper", LOG_LEVEL_ALL); // Enable logging for EPC Helper //EpcUeNas
+        //LogComponentEnable("NrGnbNetDevice", LOG_LEVEL_ALL); // Enable logging for PDU Session Management
+        //LogComponentEnable("NrUeNetDevice", LOG_LEVEL_ALL); // Enable logging for PDU Session Management
+
+        //LogComponentEnable("UdpClient", LOG_LEVEL_INFO);
+        //LogComponentEnable("UdpServer", LOG_LEVEL_INFO);
+        //LogComponentEnable("LtePdcp", LOG_LEVEL_INFO);
     }
 
     // set simulation time and mobility
@@ -347,7 +353,14 @@ main(int argc, char* argv[])
         ueStaticRouting->SetDefaultRoute(epcHelper->GetUeDefaultGatewayAddress(), 1);
     }
 
+    // attach UEs to the closest eNB
+    nrHelper->AttachToClosestEnb(ueNetDev, gNbNetDev);
 
+    // Instead of using std::this_thread::sleep_for, which pauses the real-time execution of the program (not the simulation time),
+    // We use ns-3 simulation events:
+
+
+    /*
     // setup GNB 
       for (auto it = gNbNetDev.Begin(); it != gNbNetDev.End(); ++it)
     {
@@ -364,18 +377,38 @@ main(int argc, char* argv[])
 
   
     }
+*/
+    // Updated Code Using ns-3 Simulation Events
+
+    // Setup gNBs
+    Time connectTime = Seconds(0.1); // Initial time to start connections
+    int gnbIndex = 0;
+
+    for (auto it = gNbNetDev.Begin(); it != gNbNetDev.End(); ++it, ++gnbIndex)
+    {
+        Ptr<NrGnbNetDevice> gnbDevice = DynamicCast<NrGnbNetDevice>(*it);
+        Time scheduleTime = connectTime + Seconds(1.0 * gnbIndex); // Schedule each gNB connection 1 second apart
+        Simulator::Schedule(scheduleTime, &NrGnbNetDevice::ConnectOpen5gs, gnbDevice);
+    }
+
+    // Connect UEs to core
+    connectTime = Seconds(0.1); // Reset initial time for UEs
+    int ueIndex = 0;
+
+    for (auto it = ueNetDev.Begin(); it != ueNetDev.End(); ++it, ++ueIndex)
+    {
+        Ptr<NrUeNetDevice> ueDevice = DynamicCast<NrUeNetDevice>(*it);
+        Time scheduleTime = connectTime + Seconds(1.0 * ueIndex); // Schedule each UE connection 1 second apart
+        Simulator::Schedule(scheduleTime, &NrUeNetDevice::ConnectOpen5gs, ueDevice);
+    }
+
 
     std::cout << "gNbNetDev size: " << gNbNetDev.GetN() << std::endl;
     std::cout << "ueNetDev size: " << ueNetDev.GetN() << std::endl;
 
 
-    // attach UEs to the closest eNB
-    nrHelper->AttachToClosestEnb(ueNetDev, gNbNetDev);
-
-
     // When all the configuration is done, explicitly call UpdateConfig ()
 
-   
     for (auto it = gNbNetDev.Begin(); it != gNbNetDev.End(); ++it)
     {
         DynamicCast<NrGnbNetDevice>(*it)->UpdateConfig();
@@ -452,6 +485,7 @@ main(int argc, char* argv[])
 
     // enable the traces provided by the nr module
     // nrHelper->EnableTraces();
+    nrHelper->EnablePdcpE2eTraces();
 
     FlowMonitorHelper flowmonHelper;
     NodeContainer endpointNodes;
@@ -485,7 +519,7 @@ main(int argc, char* argv[])
         std::cout << "  Mean jitter: " << (i->second.jitterSum.GetSeconds() / i->second.rxPackets) << " s\n";
     }
 
-    Simulator::Destroy();
+    //Simulator::Destroy();
 
 
 }

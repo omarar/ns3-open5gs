@@ -1023,6 +1023,8 @@ LteUeRrc::DoRecvSystemInformation(LteRrcSap::SystemInformation msg)
 void
 LteUeRrc::DoRecvRrcConnectionSetup(LteRrcSap::RrcConnectionSetup msg)
 {
+    std::cout << " NS3 lte-ue-rrc.cc ________RRC Connection Setup received, state: " << m_state << std::endl;
+
     NS_LOG_FUNCTION(this << " RNTI " << m_rnti);
     switch (m_state)
     {

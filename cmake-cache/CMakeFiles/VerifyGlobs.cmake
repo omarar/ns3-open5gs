@@ -5,10 +5,9 @@ cmake_policy(SET CMP0009 NEW)
 # single_source_file_scratches at scratch/CMakeLists.txt:67 (file)
 file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/omar/ns-3-dev/scratch/[^.]*.cc")
 set(OLD_GLOB
-  "/home/omar/ns-3-dev/scratch/cttc-nr-demo.cc"
+  "/home/omar/ns-3-dev/scratch/UDPcapture.cc"
   "/home/omar/ns-3-dev/scratch/cttc-nr-mimo-demo-open5gs-1gnb.cc"
   "/home/omar/ns-3-dev/scratch/cttc-nr-mimo-demo-open5gs-1ue.cc"
-  "/home/omar/ns-3-dev/scratch/cttc-nr-mimo-demo.cc"
   "/home/omar/ns-3-dev/scratch/example.cc"
   "/home/omar/ns-3-dev/scratch/gnb.cc"
   "/home/omar/ns-3-dev/scratch/grid_example.cc"
@@ -47,10 +46,9 @@ endif()
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES true "/home/omar/ns-3-dev/scratch/**")
 set(OLD_GLOB
   "/home/omar/ns-3-dev/scratch/CMakeLists.txt"
-  "/home/omar/ns-3-dev/scratch/cttc-nr-demo.cc"
+  "/home/omar/ns-3-dev/scratch/UDPcapture.cc"
   "/home/omar/ns-3-dev/scratch/cttc-nr-mimo-demo-open5gs-1gnb.cc"
   "/home/omar/ns-3-dev/scratch/cttc-nr-mimo-demo-open5gs-1ue.cc"
-  "/home/omar/ns-3-dev/scratch/cttc-nr-mimo-demo.cc"
   "/home/omar/ns-3-dev/scratch/example.cc"
   "/home/omar/ns-3-dev/scratch/gnb.cc"
   "/home/omar/ns-3-dev/scratch/grid_example.cc"

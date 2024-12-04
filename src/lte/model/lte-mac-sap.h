@@ -234,10 +234,9 @@ template <class C>
 void
 EnbMacMemberLteMacSapProvider<C>::ReportBufferStatus(ReportBufferStatusParameters params)
 {
-   // m_mac->DoReportBufferStatus(params);
+    //m_mac->DoReportBufferStatus(params);
 }
 
 } // namespace ns3
 
 #endif // LTE_MAC_SAP_H
-

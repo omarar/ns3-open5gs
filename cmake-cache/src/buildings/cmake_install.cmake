@@ -85,9 +85,3 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     )
 endif()
 
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for each subdirectory.
-  include("/home/omar/ns-3-dev/cmake-cache/src/buildings/examples/cmake_install.cmake")
-
-endif()
-

@@ -17,8 +17,9 @@
 
 struct InetAddress
 {
-  private:
     sockaddr_storage storage;
+
+  private:
     socklen_t len;
 
   public:

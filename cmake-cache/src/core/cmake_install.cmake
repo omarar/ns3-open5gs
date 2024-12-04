@@ -68,7 +68,6 @@ endif()
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/ns3" TYPE FILE FILES
     "/home/omar/ns-3-dev/src/core/model/int64x64-128.h"
-    "/home/omar/ns-3-dev/src/core/model/example-as-test.h"
     "/home/omar/ns-3-dev/src/core/helper/csv-reader.h"
     "/home/omar/ns-3-dev/src/core/helper/event-garbage-collector.h"
     "/home/omar/ns-3-dev/src/core/helper/random-variable-stream-helper.h"
@@ -172,11 +171,5 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     "/home/omar/ns-3-dev/build/include/ns3/core-config.h"
     "/home/omar/ns-3-dev/build/include/ns3/core-module.h"
     )
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for each subdirectory.
-  include("/home/omar/ns-3-dev/cmake-cache/src/core/examples/cmake_install.cmake")
-
 endif()
 

@@ -65,16 +65,6 @@ CMAKE_BINARY_DIR = /home/omar/ns-3-dev/cmake-cache
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-.PHONY : test/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -173,18 +163,18 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-scratch/CMakeFiles/scratch_cttc-nr-demo.dir/rule:
-	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_cttc-nr-demo.dir/rule
-.PHONY : scratch/CMakeFiles/scratch_cttc-nr-demo.dir/rule
+scratch/CMakeFiles/scratch_UDPcapture.dir/rule:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_UDPcapture.dir/rule
+.PHONY : scratch/CMakeFiles/scratch_UDPcapture.dir/rule
 
 # Convenience name for target.
-scratch_cttc-nr-demo: scratch/CMakeFiles/scratch_cttc-nr-demo.dir/rule
-.PHONY : scratch_cttc-nr-demo
+scratch_UDPcapture: scratch/CMakeFiles/scratch_UDPcapture.dir/rule
+.PHONY : scratch_UDPcapture
 
 # fast build rule for target.
-scratch_cttc-nr-demo/fast:
-	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-demo.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-demo.dir/build
-.PHONY : scratch_cttc-nr-demo/fast
+scratch_UDPcapture/fast:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_UDPcapture.dir/build.make scratch/CMakeFiles/scratch_UDPcapture.dir/build
+.PHONY : scratch_UDPcapture/fast
 
 # Convenience name for target.
 scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs-1gnb.dir/rule:
@@ -213,20 +203,6 @@ scratch_cttc-nr-mimo-demo-open5gs-1ue: scratch/CMakeFiles/scratch_cttc-nr-mimo-d
 scratch_cttc-nr-mimo-demo-open5gs-1ue/fast:
 	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs-1ue.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs-1ue.dir/build
 .PHONY : scratch_cttc-nr-mimo-demo-open5gs-1ue/fast
-
-# Convenience name for target.
-scratch/CMakeFiles/scratch_cttc-nr-mimo-demo.dir/rule:
-	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_cttc-nr-mimo-demo.dir/rule
-.PHONY : scratch/CMakeFiles/scratch_cttc-nr-mimo-demo.dir/rule
-
-# Convenience name for target.
-scratch_cttc-nr-mimo-demo: scratch/CMakeFiles/scratch_cttc-nr-mimo-demo.dir/rule
-.PHONY : scratch_cttc-nr-mimo-demo
-
-# fast build rule for target.
-scratch_cttc-nr-mimo-demo/fast:
-	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-mimo-demo.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-mimo-demo.dir/build
-.PHONY : scratch_cttc-nr-mimo-demo/fast
 
 # Convenience name for target.
 scratch/CMakeFiles/scratch_example.dir/rule:
@@ -340,29 +316,29 @@ scratch_subdir_scratch-subdir/fast:
 	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/build.make scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/build
 .PHONY : scratch_subdir_scratch-subdir/fast
 
-cttc-nr-demo.o: cttc-nr-demo.cc.o
-.PHONY : cttc-nr-demo.o
+UDPcapture.o: UDPcapture.cc.o
+.PHONY : UDPcapture.o
 
 # target to build an object file
-cttc-nr-demo.cc.o:
-	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-demo.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-demo.dir/cttc-nr-demo.cc.o
-.PHONY : cttc-nr-demo.cc.o
+UDPcapture.cc.o:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_UDPcapture.dir/build.make scratch/CMakeFiles/scratch_UDPcapture.dir/UDPcapture.cc.o
+.PHONY : UDPcapture.cc.o
 
-cttc-nr-demo.i: cttc-nr-demo.cc.i
-.PHONY : cttc-nr-demo.i
+UDPcapture.i: UDPcapture.cc.i
+.PHONY : UDPcapture.i
 
 # target to preprocess a source file
-cttc-nr-demo.cc.i:
-	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-demo.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-demo.dir/cttc-nr-demo.cc.i
-.PHONY : cttc-nr-demo.cc.i
+UDPcapture.cc.i:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_UDPcapture.dir/build.make scratch/CMakeFiles/scratch_UDPcapture.dir/UDPcapture.cc.i
+.PHONY : UDPcapture.cc.i
 
-cttc-nr-demo.s: cttc-nr-demo.cc.s
-.PHONY : cttc-nr-demo.s
+UDPcapture.s: UDPcapture.cc.s
+.PHONY : UDPcapture.s
 
 # target to generate assembly for a file
-cttc-nr-demo.cc.s:
-	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-demo.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-demo.dir/cttc-nr-demo.cc.s
-.PHONY : cttc-nr-demo.cc.s
+UDPcapture.cc.s:
+	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_UDPcapture.dir/build.make scratch/CMakeFiles/scratch_UDPcapture.dir/UDPcapture.cc.s
+.PHONY : UDPcapture.cc.s
 
 cttc-nr-mimo-demo-open5gs-1gnb.o: cttc-nr-mimo-demo-open5gs-1gnb.cc.o
 .PHONY : cttc-nr-mimo-demo-open5gs-1gnb.o
@@ -411,30 +387,6 @@ cttc-nr-mimo-demo-open5gs-1ue.s: cttc-nr-mimo-demo-open5gs-1ue.cc.s
 cttc-nr-mimo-demo-open5gs-1ue.cc.s:
 	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs-1ue.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-mimo-demo-open5gs-1ue.dir/cttc-nr-mimo-demo-open5gs-1ue.cc.s
 .PHONY : cttc-nr-mimo-demo-open5gs-1ue.cc.s
-
-cttc-nr-mimo-demo.o: cttc-nr-mimo-demo.cc.o
-.PHONY : cttc-nr-mimo-demo.o
-
-# target to build an object file
-cttc-nr-mimo-demo.cc.o:
-	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-mimo-demo.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-mimo-demo.dir/cttc-nr-mimo-demo.cc.o
-.PHONY : cttc-nr-mimo-demo.cc.o
-
-cttc-nr-mimo-demo.i: cttc-nr-mimo-demo.cc.i
-.PHONY : cttc-nr-mimo-demo.i
-
-# target to preprocess a source file
-cttc-nr-mimo-demo.cc.i:
-	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-mimo-demo.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-mimo-demo.dir/cttc-nr-mimo-demo.cc.i
-.PHONY : cttc-nr-mimo-demo.cc.i
-
-cttc-nr-mimo-demo.s: cttc-nr-mimo-demo.cc.s
-.PHONY : cttc-nr-mimo-demo.s
-
-# target to generate assembly for a file
-cttc-nr-mimo-demo.cc.s:
-	cd /home/omar/ns-3-dev/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_cttc-nr-mimo-demo.dir/build.make scratch/CMakeFiles/scratch_cttc-nr-mimo-demo.dir/cttc-nr-mimo-demo.cc.s
-.PHONY : cttc-nr-mimo-demo.cc.s
 
 example.o: example.cc.o
 .PHONY : example.o
@@ -664,9 +616,7 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... test"
-	@echo "... scratch_cttc-nr-demo"
-	@echo "... scratch_cttc-nr-mimo-demo"
+	@echo "... scratch_UDPcapture"
 	@echo "... scratch_cttc-nr-mimo-demo-open5gs-1gnb"
 	@echo "... scratch_cttc-nr-mimo-demo-open5gs-1ue"
 	@echo "... scratch_example"
@@ -677,18 +627,15 @@ help:
 	@echo "... scratch_udp-test"
 	@echo "... scratch_udpcapture"
 	@echo "... scratch_ue"
-	@echo "... cttc-nr-demo.o"
-	@echo "... cttc-nr-demo.i"
-	@echo "... cttc-nr-demo.s"
+	@echo "... UDPcapture.o"
+	@echo "... UDPcapture.i"
+	@echo "... UDPcapture.s"
 	@echo "... cttc-nr-mimo-demo-open5gs-1gnb.o"
 	@echo "... cttc-nr-mimo-demo-open5gs-1gnb.i"
 	@echo "... cttc-nr-mimo-demo-open5gs-1gnb.s"
 	@echo "... cttc-nr-mimo-demo-open5gs-1ue.o"
 	@echo "... cttc-nr-mimo-demo-open5gs-1ue.i"
 	@echo "... cttc-nr-mimo-demo-open5gs-1ue.s"
-	@echo "... cttc-nr-mimo-demo.o"
-	@echo "... cttc-nr-mimo-demo.i"
-	@echo "... cttc-nr-mimo-demo.s"
 	@echo "... example.o"
 	@echo "... example.i"
 	@echo "... example.s"

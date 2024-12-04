@@ -1,4 +1,3 @@
-/home/omar/ns-3-dev/scratch/cttc-nr-demo.cc
 /home/omar/ns-3-dev/scratch/udp-test.cc
 /home/omar/ns-3-dev/scratch/ue.cc
 /home/omar/ns-3-dev/scratch/gnb.cc
@@ -7,7 +6,7 @@
 /home/omar/ns-3-dev/scratch/gtp-test.cc
 /home/omar/ns-3-dev/scratch/cttc-nr-mimo-demo-open5gs-1gnb.cc
 /home/omar/ns-3-dev/scratch/cttc-nr-mimo-demo-open5gs-1ue.cc
-/home/omar/ns-3-dev/scratch/cttc-nr-mimo-demo.cc
+/home/omar/ns-3-dev/scratch/UDPcapture.cc
 /home/omar/ns-3-dev/scratch/udpcapture.cc
 /home/omar/ns-3-dev/scratch/subdir/scratch-subdir-additional-header.cc
 /home/omar/ns-3-dev/scratch/subdir/scratch-subdir.cc
